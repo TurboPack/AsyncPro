@@ -1,0 +1,2332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Lasat 560 V Int"
+     Manufacturer = "Lasat"
+     Model = "*LASF441"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Websetgo 56 Voice PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LASC040"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Websetgo 56 Voice"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM17C11317"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Credit 560 Voice K56Flex &amp; V.90"
+     Manufacturer = "Lasat"
+     Model = "PCMCIA\LASAT_COMMUNICATIONS_A/S-LASAT_Credit_560_Voice-6D7E  ;V90"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "56000"
+     PowerDelay = "1500"
+     ConfigDelay = "1500">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Internet 560 Voice PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LASC044"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Internet 560 Voice"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEMEDB9C2EB"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "A1"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 560 Voice PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LASF444"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "E5"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 560 Voice"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEMC947A2CA"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     ForwardDelay = "88"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+       <DateResponses>&lt;cr&gt;&lt;lf&gt;DATE = </DateResponses>
+       <TimeResponses>&lt;cr&gt;&lt;lf&gt;TIME = </TimeResponses>
+       <NumberResponses>&lt;cr&gt;&lt;lf&gt;NMBR = </NumberResponses>
+       <NameResponses>&lt;cr&gt;&lt;lf&gt;NAME = </NameResponses>
+       <MessageResponses>&lt;cr&gt;&lt;lf&gt;MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">&lt;cr&gt;&lt;lf&gt;RING1&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">&lt;cr&gt;&lt;lf&gt;RING2&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">&lt;cr&gt;&lt;lf&gt;RING3&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "E5"
+       HandsetCloseDelay = "1e"
+       SpeakerPhoneSpecs = "0A"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;&lt;cr&gt;"
+       VoiceMixerMid = "16"
+       VoiceMixerPid = "15"
+       VoiceMixerLineID = "00">
+       <CloseHandset Sequence = "1">at#vls=0&lt;cr&gt;</CloseHandset>
+       <CloseHandset Sequence = "2">at#cls=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">at&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">at-sdr=7&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">at#vts=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">at#vls=2&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">at#vls=3&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">at#vsr=7200&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">at#vbs=4&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">at#vls=0&lt;cr&gt;</LineSetPlayFormat>
+       <OpenHandset Sequence = "1">at#cls=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">at#vls=2&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">&quot;at#spk=0</SpeakerPhoneDisable>
+       <SpeakerPhoneDisable Sequence = "2">at#vls=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">at#cls=8&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "2">at#vls=6&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneEnable Sequence = "3">&quot;at#spk=1</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneMute Sequence = "2">&quot;at#spk=0</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneSetVolumeGain Sequence = "2">&quot;at#spk=</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">at#vls=6&lt;cr&gt;</SpeakerPhoneUnMute>
+       <SpeakerPhoneUnMute Sequence = "2">&quot;at#spk=1</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">at#vtx&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">at#vrx&lt;cr&gt;</StartRecord>
+       <VoiceAnswer Sequence = "1">at#cls=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">at#vls=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">at#vbt=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">at#vsr=7200&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "5">at#vbs=4&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "6">ats30=60&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "7">ata&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">at#cls=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">at#vls=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">at#vrn=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">at#vbt=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "5">at#vsr=7200&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "6">at#vbs=4&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "7">ats30=60&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">at#cls=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ata&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "LASATVoiceModemWave">
+         <WaveFormat ChipSet = "Rockwell ADPCM" Speed = "7200" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Credit 336"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEMAFB8CA7C"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 560"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM27BB9E34"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 560 PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LAS4540"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "60000">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 336"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEMD8EBFE7D"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "33600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Lasat Safire 336  PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LAS5440"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "33600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT Internet 33600"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM2D23883C"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "33600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT Internet 33600 PnP"
+     Manufacturer = "Lasat"
+     Model = "SERENUM\LAS4040"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "33600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT CREDIT 288"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM63BCEE7B"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT CREDIT 144"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM77AF074B"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT PCM144 Fax"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM8C70D25B"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT unique 24-96"
+     Manufacturer = "Lasat"
+     Model = "LASAT_Modem3"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "19200"
+     MaxDCERate = "2400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT unique SAFIRE 144"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEME07B8BCB"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "LASAT unique SAFIRE 288"
+     Manufacturer = "Lasat"
+     Model = "UNIMODEM3CCDE23D"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F E0 V1 &amp;S0 &amp;C1 &amp;D2 W2 S95=47 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

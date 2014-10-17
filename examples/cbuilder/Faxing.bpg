@@ -1,0 +1,82 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Cvt2Fax EXFAXB EXFAXL ExFaxMr ExFaxOd EXFAXR EXFAXS EXFLIST ExFOdR \
+  ExFOdS FaxMon FaxServr FAXSERVX RCVFAX Sendfax VIEWFAX EXFPRN0 EXFPRN2 ExAdapt \
+  EXTAPIF EXVIEW
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Cvt2Fax: Cvt2Fax.bpr
+  $(MAKE)
+
+EXFAXB: EXFAXB.bpr
+  $(MAKE)
+
+EXFAXL: EXFAXL.bpr
+  $(MAKE)
+
+ExFaxMr: ExFaxMr.bpr
+  $(MAKE)
+
+ExFaxOd: ExFaxOd.bpr
+  $(MAKE)
+
+EXFAXR: EXFAXR.bpr
+  $(MAKE)
+
+EXFAXS: EXFAXS.bpr
+  $(MAKE)
+
+EXFLIST: EXFLIST.bpr
+  $(MAKE)
+
+ExFOdR: ExFOdR.bpr
+  $(MAKE)
+
+ExFOdS: ExFOdS.bpr
+  $(MAKE)
+
+FaxMon: FaxMon.bpr
+  $(MAKE)
+
+FaxServr: FaxServr.bpr
+  $(MAKE)
+
+FAXSERVX: FAXSERVX.bpr
+  $(MAKE)
+
+RCVFAX: RCVFAX.bpr
+  $(MAKE)
+
+Sendfax: Sendfax.bpr
+  $(MAKE)
+
+VIEWFAX: VIEWFAX.bpr
+  $(MAKE)
+
+EXFPRN0: EXFPRN0.bpr
+  $(MAKE)
+
+EXFPRN2: EXFPRN2.bpr
+  $(MAKE)
+
+ExAdapt: ExAdapt.bpr
+  $(MAKE)
+
+EXTAPIF: EXTAPIF.bpr
+  $(MAKE)
+
+EXVIEW: EXVIEW.bpr
+  $(MAKE)
+
+

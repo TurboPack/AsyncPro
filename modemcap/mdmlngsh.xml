@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "14.4K 9600 bps External Modem Fax"
+     Manufacturer = "LONGSHINE"
+     Model = "UNIMODEM18BCD5F8"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "38400"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;OK&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CED&lt;cr&gt;&lt;lf&gt; </NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;ERROR SERIAL SPEED SETUP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT &amp;F V1 W1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N5"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <Options>V.42</Options>
+     <Options>T V.42</Options>
+     <Options>NORMAL</Options>
+     <Options>RELIABLE</Options>
+     <Options>T RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>REL</Options>
+     <Options>V42</Options>
+     <Options>MNP5</Options>
+     <Options>75</Options>
+     <Options>V42BIS</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>REL 1</Options>
+     <Options>REL 2</Options>
+     <Options>REL 3</Options>
+     <Options>REL 4</Options>
+     <Options>REL 5</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Pocket FAX-DATA Modem 9600-2400"
+     Manufacturer = "LONGSHINE"
+     Model = "UNIMODEM2AB2EA9D"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;OK&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CED&lt;cr&gt;&lt;lf&gt; </NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;ERROR SERIAL SPEED SETUP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "&amp;E4"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N7"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <Options>V.42</Options>
+     <Options>T V.42</Options>
+     <Options>NORMAL</Options>
+     <Options>RELIABLE</Options>
+     <Options>T RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>REL</Options>
+     <Options>V42</Options>
+     <Options>MNP5</Options>
+     <Options>75</Options>
+     <Options>V42BIS</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>REL 1</Options>
+     <Options>REL 2</Options>
+     <Options>REL 3</Options>
+     <Options>REL 4</Options>
+     <Options>REL 5</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "PCMCIA FAX-Modem CARD 9600-2400"
+     Manufacturer = "LONGSHINE"
+     Model = "PCMCIA\LONGSHINE-FAX/MODEM_9600/2400-4DAB"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;OK&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CED&lt;cr&gt;&lt;lf&gt; </NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;ERROR SERIAL SPEED SETUP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N5"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <Options>V.42</Options>
+     <Options>T V.42</Options>
+     <Options>NORMAL</Options>
+     <Options>RELIABLE</Options>
+     <Options>T RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>REL</Options>
+     <Options>V42</Options>
+     <Options>MNP5</Options>
+     <Options>75</Options>
+     <Options>V42BIS</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>REL 1</Options>
+     <Options>REL 2</Options>
+     <Options>REL 3</Options>
+     <Options>REL 4</Options>
+     <Options>REL 5</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "FAX-DATA MODEM 9600-2400 INTERN"
+     Manufacturer = "LONGSHINE"
+     Model = "lngsh_Modem4"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;OK&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CED&lt;cr&gt;&lt;lf&gt; </NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;ERROR SERIAL SPEED SETUP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N7"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <Options>V.42</Options>
+     <Options>T V.42</Options>
+     <Options>NORMAL</Options>
+     <Options>RELIABLE</Options>
+     <Options>T RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>REL</Options>
+     <Options>V42</Options>
+     <Options>MNP5</Options>
+     <Options>75</Options>
+     <Options>V42BIS</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>REL 1</Options>
+     <Options>REL 2</Options>
+     <Options>REL 3</Options>
+     <Options>REL 4</Options>
+     <Options>REL 5</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

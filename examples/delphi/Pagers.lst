@@ -1,0 +1,13 @@
+; TAP Format: {Pager Owner Identifier}=TAP|{TAP Paging Server PhoneNumber},{Pager ID}
+; SNPP Format: {Pager Owner Identifier}=SNPP|{SNPP Paging Server IPAddress}:{SNPP Server Port#},{Pager ID}
+
+[PAGERS]
+John Q. Public=TAP|555-1212,123456
+Jane Doe=TAP|555-6666,22229999
+Marcie Doats=TAP|555-1411,232323
+Jerry Mungo=SNPP|snpp.myservice.net:2222,122122
+Bilbo Baggins=TAP|555-2333,999333999
+Waldo Pepper=TAP|(800)555-8888,3334455
+Mary Q. Contrary=SNPP|snpp.bignet.com:9999,11133
+Baba Wawa=TAP|(999)555-1122,393939
+Roger Wilco=SNPP|SNPP.paging.com:4455,233332

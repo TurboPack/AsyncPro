@@ -1,0 +1,45 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ExAuto EXPLOG EXPROT EXSTAT ExWPackt EXWZRECV EXWZSEND EXZRECV \
+  EXZSEND
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ExAuto: ExAuto.bpr
+  $(MAKE)
+
+EXPLOG: EXPLOG.bpr
+  $(MAKE)
+
+EXPROT: EXPROT.bpr
+  $(MAKE)
+
+EXSTAT: EXSTAT.bpr
+  $(MAKE)
+
+ExWPackt: ExWPackt.bpr
+  $(MAKE)
+
+EXWZRECV: EXWZRECV.bpr
+  $(MAKE)
+
+EXWZSEND: EXWZSEND.bpr
+  $(MAKE)
+
+EXZRECV: EXZRECV.bpr
+  $(MAKE)
+
+EXZSEND: EXZSEND.bpr
+  $(MAKE)
+
+

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Compaq SpeedPaq GSM Radio Card Modem"
+     Manufacturer = "Compaq"
+     Model = "UNIMODEMD2AD9686"
+     Reset = "ATZ&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "38400"
+     MaxDCERate = "9600">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR: REL ASYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR: ASYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR: REL SYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR: SYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR:RELASYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR:ASYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR:RELSYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+CR:SYNC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: LAPM&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER:NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER:LAPM&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER:ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B RD&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B TD&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR:NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR:V42B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR:V42BRD&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR:V42BTD&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+DR:MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 38400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 31200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 33600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:38400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:31200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR:33600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V22B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V22&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V21&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V32&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V22B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V22&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V21&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32T&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: B212&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V23C&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V23S&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: VB103&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V32T&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V32B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:B212&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V23C&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:V23S&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR:VB103&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 31200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 33600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 38400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:31200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:33600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR:38400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NOCARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F+CFUN=1&lt;cr&gt;</Init>
+     <Init Sequence = "3">ATV1E0&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT&amp;D2&amp;C1&lt;cr&gt;</Init>
+     <Init Sequence = "5">ATS7=60S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "6">AT+ER=1+DR=1+MR=1+CR=1&lt;cr&gt;</Init>
+     <Init Sequence = "7">&quot;AT+CBST=7</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L=3"
+        SpeakerVolume_Low = "L=0"
+        SpeakerVolume_Med = "L=1"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&quot;+IFC=2"
+        FlowControl_Off = "&quot;+IFC=0"
+        FlowControl_Soft = "&quot;+IFC=1"
+        ErrorControl_Forced = "&quot;+ES=3"
+        ErrorControl_Off = "&quot;+ES=1"
+        ErrorControl_On = "&quot;+ES=3"
+        Compression_Off= "&quot;+DS=0"
+        Compression_On = "&quot;+DS=3"
+        Pulse = "P"
+        Tone = "T"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "&quot;*IACT=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>33600</BaudRates>
+     <BaudRates>31200</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>300</BaudRates>
+     <ISDN>
+     </ISDN>
+     <GSM>
+       <Protocol Protocol = "V110_9DOT6K" Command = "&quot;AT+CBST=71"/>
+       <Protocol Protocol = "ANALOG_RLP" Command = "&quot;AT+CBST=7"/>
+       <Protocol Protocol = "ANALOG_NRLP" Command = "&quot;AT+CBST=7"/>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson DC33 PCMCIA Digital Cellular"
+     Manufacturer = "Ericsson"
+     Model = "PCMCIA\MODEM-CARD_DNT_3012-2A6A"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "180"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800"
+     PowerDelay = "2000"
+     ConfigDelay = "2000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+       <OtherResponses Type = "1D">&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1D">&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1B">&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1B">&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1 S0=0 &amp;C1 &amp;D2 \V1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "DT"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Off = "\N0"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Blind_Off = "X2"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <Options>REL</Options>
+     <Options>RLP</Options>
+     <ISDN>
+       <Protocol Protocol = "ANALOG_V34" Command = "AT&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+       <Protocol Protocol = "V110_9DOT6K" Command = "&quot;AT+CBST=71"/>
+       <Protocol Protocol = "ANALOG_RLP" Command = "&quot;AT+CBST=7"/>
+       <Protocol Protocol = "ANALOG_NRLP" Command = "&quot;AT+CBST=7"/>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson DC23 PCMCIA Digital Cellular"
+     Manufacturer = "Ericsson"
+     Model = "PCMCIA\ERICSSON-MODEM__DC23-24F7"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "9600">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: LAPM&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ER: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 38400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 57600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+ILRR: 115200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V22B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V22&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V21&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32T&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V32B&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: B212&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V23C&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: V23S&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MCR: VB103&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 31200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;+MRR: 33600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;+DR: NONE&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B RD&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;+DR: V42B TD&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;+DR: MNP5&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT &amp;D2&amp;C1&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT E0&lt;cr&gt;</Init>
+     <Init Sequence = "5">AT V1 S7=50 S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "6">AT +ER=3 +DR=3 &lt;cr&gt;</Init>
+     <Init Sequence = "7">AT +MR=3 &lt;cr&gt;</Init>
+     <Init Sequence = "8">&quot;AT +CBST=7</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L=3"
+        SpeakerVolume_Low = "L=0"
+        SpeakerVolume_Med = "L=1"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&quot;+IFC=2"
+        FlowControl_Off = "&quot;+IFC=0"
+        FlowControl_Soft = "&quot;+IFC=1"
+        ErrorControl_Forced = "&quot;+ES=3"
+        ErrorControl_Off = "&quot;+ES=1"
+        ErrorControl_On = "&quot;+ES=3"
+        Compression_Off= "&quot;+DS=0"
+        Compression_On = "&quot;+DS=3"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X=4"
+        Blind_On = "X=2"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "&quot;*IACT=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+       <Protocol Protocol = "V110_9DOT6K" Command = "&quot;AT+CBST=71"/>
+       <Protocol Protocol = "ANALOG_RLP" Command = "&quot;AT+CBST=7"/>
+       <Protocol Protocol = "ANALOG_NRLP" Command = "&quot;AT+CBST=7"/>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson DC12 PCMCIA Digital Cellular"
+     Manufacturer = "Ericsson"
+     Model = "PCMCIA\ERICSSON-MODEM__TYPE_4040010-34A5">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson GC25 Data Card Modem"
+     Manufacturer = "Ericsson"
+     Model = "UNIMODEMCBC60F9C">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

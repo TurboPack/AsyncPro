@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExSend - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/ExSend.res" /d "_DEBUG" /d "_AFXDLL" "C:\ApaxExamples\ExSend\ExSend\ExSend.rc"" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP57.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ExSend.pdb" /debug /machine:I386 /out:"Debug/ExSend.exe" /pdbtype:sept 
+.\Debug\apax.obj
+.\Debug\ExSend.obj
+.\Debug\ExSendDlg.obj
+.\Debug\font.obj
+.\Debug\StdAfx.obj
+.\Debug\ExSend.res
+.\Debug\commondialog.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP57.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+ExSend.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

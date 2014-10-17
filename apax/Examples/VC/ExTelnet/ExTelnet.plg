@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExTelnet - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/ExTelnet.res" /d "_DEBUG" /d "_AFXDLL" "C:\ApaxExamples\ExTelnet\ExTelnet\ExTelnet.rc"" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSPBF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ExTelnet.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\ApaxExamples\ExTelnet\ExTelnet\ExTelnet.cpp"
+"C:\ApaxExamples\ExTelnet\ExTelnet\ExTelnetDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSPBF.tmp" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSPC0.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ExTelnet.pdb" /debug /machine:I386 /out:"Debug/ExTelnet.exe" /pdbtype:sept 
+.\Debug\apax.obj
+.\Debug\ExTelnet.obj
+.\Debug\ExTelnetDlg.obj
+.\Debug\font.obj
+.\Debug\StdAfx.obj
+.\Debug\ExTelnet.res
+]
+Creating command line "link.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSPC0.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+ExTelnetDlg.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+ExTelnet.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ExTelnet.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

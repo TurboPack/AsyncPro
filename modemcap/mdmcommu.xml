@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Communicate Atlas GSM"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION__GSM_-3B85"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "9600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Communicate Connexion 2880"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION_2880-FC46"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Communicate Connexion 2880C"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION_2880C-272E"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Communicate Connexion 2496"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION_2496-DE53"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "9600">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Communicate Connexion 1440"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION_1440-5672"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Communicate Connexion 1440C"
+     Manufacturer = "Communicate"
+     Model = "PCMCIA\COMMUNICATE-CONNEXION_1440C-CD02"
+     Reset = "AT&amp;FS0=0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "1"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F0 &amp;D2 &amp;C1 E0 -K0 %%E2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT V1 W1 S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

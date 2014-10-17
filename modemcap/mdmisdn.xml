@@ -1,0 +1,2253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Modem1PnP"
+     Manufacturer = "3Com"
+     Model = "SERENUM\TCM8820"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT E0 V1 &amp;D2 &amp;C1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">&quot;ATS51=%s&lt;cr&gt;&quot;  ; phone #1</DirectoryNo>
+       <DirectoryNo Sequence = "2">&quot;ATS53=%s&lt;cr&gt;&quot;  ; phone #2</DirectoryNo>
+       <SetSpid Sequence = "1">&quot;ATS52=%s&lt;cr&gt;&quot;  ; spid #1</SetSpid>
+       <SetSpid Sequence = "2">&quot;ATS54=%s&lt;cr&gt;&quot;  ; spid #2</SetSpid>
+       <NvSave Sequence = "1">AT &amp;WZ&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_UNKNOWN" Command = "&quot;ATS50=0&quot; ;US-Unknown"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;ATS50=1&lt;cr&gt;&quot; ;AT&amp;T 5ESS Customm"/>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;ATS50=6&lt;cr&gt;&quot; ;Northern TelecomDMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;ATS50=3&lt;cr&gt;&quot; ;National ISDN 1"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "ATS60=56S71=1S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "ATS60=64S71=1S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "ATS60=56S71=1S80=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "ATS60=64S71=1S80=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "ATS60=56S71=2S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "ATS60=64S71=2S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "ATS60=64S71=1S80=1S84=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "ATS60=64S71=1S80=1S84=1&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "3ComImpact IQ"
+     Manufacturer = "3Com"
+     Model = "UNIMODEM08DACAD5"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT E0 V1 &amp;D2 &amp;C1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">&quot;ATS51=%s&lt;cr&gt;&quot;  ; phone #1</DirectoryNo>
+       <DirectoryNo Sequence = "2">&quot;ATS53=%s&lt;cr&gt;&quot;  ; phone #2</DirectoryNo>
+       <SetSpid Sequence = "1">&quot;ATS52=%s&lt;cr&gt;&quot;  ; spid #1</SetSpid>
+       <SetSpid Sequence = "2">&quot;ATS54=%s&lt;cr&gt;&quot;  ; spid #2</SetSpid>
+       <NvSave Sequence = "1">AT &amp;WZ&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_UNKNOWN" Command = "&quot;ATS50=0&quot; ;US-Unknown"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;ATS50=1&lt;cr&gt;&quot; ;AT&amp;T 5ESS Customm"/>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;ATS50=6&lt;cr&gt;&quot; ;Northern TelecomDMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;ATS50=3&lt;cr&gt;&quot; ;National ISDN 1"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "ATS60=56S71=1S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "ATS60=64S71=1S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "ATS60=56S71=1S80=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "ATS60=64S71=1S80=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "ATS60=56S71=2S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "ATS60=64S71=2S80=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "ATS60=64S71=1S80=1S84=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "ATS60=64S71=1S80=1S84=1&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Modem5PNP"
+     Manufacturer = "Eicon Technology"
+     Model = "SERENUM\EICA411"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CARRIER 128</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CARRIER 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 115200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>66&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>60&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F&amp;D2&amp;C1V0S0=0E0W2X4&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">AT!N1=%s&lt;cr&gt;</DirectoryNo>
+       <DirectoryNo Sequence = "2">AT!N2=%s&lt;cr&gt;</DirectoryNo>
+       <SetSpid Sequence = "1">AT!C6=%s&lt;cr&gt;</SetSpid>
+       <SetSpid Sequence = "2">AT!C7=%s&lt;cr&gt;</SetSpid>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT!N2=%s&lt;cr&gt;</SetMSN>
+       <SetEAZ Sequence = "1">AT!N1=%s&lt;cr&gt;</SetEAZ>
+       <SetEAZ Sequence = "2">AT!N2=%s&lt;cr&gt;</SetEAZ>
+       <NvSave Sequence = "1">AT&amp;W0&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">ATZ0&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;AT!C1=0&lt;cr&gt;&quot; ;National ISDN 1"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;AT!C1=1&lt;cr&gt;&quot; ;AT&amp;T 5ESS Custom"/>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "&quot;AT!C1=2&lt;cr&gt;&quot; ;DSS1 (Euro-ISDN)"/>
+       <SwitchType Switch = "SWITCH_AUS1" Command = "&quot;AT!C1=3&lt;cr&gt;&quot; ;Australian NationalTPH"/>
+       <SwitchType Switch = "SWITCH_INS64" Command = "&quot;AT!C1=4&lt;cr&gt;&quot; ;NTT INS64 - Japan"/>
+       <SwitchType Switch = "SWITCH_UNKNOWN" Command = "&quot;AT!C1=9&lt;cr&gt;&quot; ;Auto-detect"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%%A2=95&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;AT%%A2=96&lt;cr&gt;&quot; ; default of 128K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;AT&amp;W0Z0&lt;cr&gt;&quot;    ;requires reset to update protocol"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_1DOT2K" Command = "AT%%A2=4!V1=1200&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_1DOT2K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "AT%%A2=4!V1=2400&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "AT%%A2=4!V1=4800&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "AT%%A2=4!V1=9600&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%%A2=4!V1=19200&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT&amp;WZ0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Eicon DIVA T-A ISDN Modem"
+     Manufacturer = "Eicon Technology"
+     Model = "UNIMODEM9E75CADB"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CARRIER 128</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CARRIER 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 115200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>66&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>60&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F&amp;D2&amp;C1V0S0=0E0W2X4&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">AT!N1=%s&lt;cr&gt;</DirectoryNo>
+       <DirectoryNo Sequence = "2">AT!N2=%s&lt;cr&gt;</DirectoryNo>
+       <SetSpid Sequence = "1">AT!C6=%s&lt;cr&gt;</SetSpid>
+       <SetSpid Sequence = "2">AT!C7=%s&lt;cr&gt;</SetSpid>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT!N2=%s&lt;cr&gt;</SetMSN>
+       <SetEAZ Sequence = "1">AT!N1=%s&lt;cr&gt;</SetEAZ>
+       <SetEAZ Sequence = "2">AT!N2=%s&lt;cr&gt;</SetEAZ>
+       <NvSave Sequence = "1">AT&amp;W0&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">ATZ0&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;AT!C1=0&lt;cr&gt;&quot; ;National ISDN 1"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;AT!C1=1&lt;cr&gt;&quot; ;AT&amp;T 5ESS Custom"/>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "&quot;AT!C1=2&lt;cr&gt;&quot; ;DSS1 (Euro-ISDN)"/>
+       <SwitchType Switch = "SWITCH_AUS1" Command = "&quot;AT!C1=3&lt;cr&gt;&quot; ;Australian NationalTPH"/>
+       <SwitchType Switch = "SWITCH_INS64" Command = "&quot;AT!C1=4&lt;cr&gt;&quot; ;NTT INS64 - Japan"/>
+       <SwitchType Switch = "SWITCH_UNKNOWN" Command = "&quot;AT!C1=9&lt;cr&gt;&quot; ;Auto-detect"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%%A2=95&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;AT%%A2=96&lt;cr&gt;&quot; ; default of 128K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;AT&amp;W0Z0&lt;cr&gt;&quot;    ;requires reset to update protocol"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_1DOT2K" Command = "AT%%A2=4!V1=1200&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_1DOT2K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "AT%%A2=4!V1=2400&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "AT%%A2=4!V1=4800&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "AT%%A2=4!V1=9600&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "AT&amp;W0Z0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%%A2=4!V1=19200&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT&amp;WZ0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola BitSURFR PRO Plug &amp; Play"
+     Manufacturer = "Motorola"
+     Model = "SERENUM\MOT1116"
+     Reset = "AT&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;DIALING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 128000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: PPPC&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: ISDN&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: V.120&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: BOND&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;C1 &amp;D2 E0 V1 W0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <DirectoryNo Sequence = "1">&quot;AT!N1=%s&lt;cr&gt;&quot;    ; data directory number</DirectoryNo>
+       <DirectoryNo Sequence = "2">&quot;AT*1!N1=%s&lt;cr&gt;&quot;    ; voice directory #1</DirectoryNo>
+       <SetSpid Sequence = "1">&quot;AT!C6=%s&lt;cr&gt;&quot;  ; data spid</SetSpid>
+       <SetSpid Sequence = "2">&quot;AT*1!C6=%s&lt;cr&gt;&quot;   ; voice spid1</SetSpid>
+       <NvSave Sequence = "1">&quot;AT&gt;W&lt;cr&gt;&quot;   ; save switch &amp; global options</NvSave>
+       <NvSave Sequence = "2">&quot;AT&gt;Z&lt;cr&gt;&quot; ; restore switch &amp; global options</NvSave>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;AT!C0=0&lt;cr&gt;&quot;   ;AT&amp;T 5ESS Customm"/>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;AT!C0=1&lt;cr&gt;&quot;   ;Northern Telecom DMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;AT!C0=2&lt;cr&gt;&quot;   ;National ISDN 1"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%%A4=1%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%%A4=0%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%%A4=1%%A2=95&amp;M1@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%%A4=0%%A2=95&amp;M1@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%%A4=1%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%%A4=0%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=M&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola BitSURFR PRO"
+     Manufacturer = "Motorola"
+     Model = "UNIMODEM6904ECE8"
+     Reset = "AT&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;DIALING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 128000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: PPPC&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: ISDN&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: V.120&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: BOND&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;C1 &amp;D2 E0 V1 W0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <DirectoryNo Sequence = "1">&quot;AT!N1=%s&lt;cr&gt;&quot;    ; data directory number</DirectoryNo>
+       <DirectoryNo Sequence = "2">&quot;AT*1!N1=%s&lt;cr&gt;&quot;    ; voice directory #1</DirectoryNo>
+       <SetSpid Sequence = "1">&quot;AT!C6=%s&lt;cr&gt;&quot;  ; data spid</SetSpid>
+       <SetSpid Sequence = "2">&quot;AT*1!C6=%s&lt;cr&gt;&quot;   ; voice spid1</SetSpid>
+       <NvSave Sequence = "1">&quot;AT&gt;W&lt;cr&gt;&quot;   ; save switch &amp; global options</NvSave>
+       <NvSave Sequence = "2">&quot;AT&gt;Z&lt;cr&gt;&quot; ; restore switch &amp; global options</NvSave>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;AT!C0=0&lt;cr&gt;&quot;   ;AT&amp;T 5ESS Customm"/>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;AT!C0=1&lt;cr&gt;&quot;   ;Northern Telecom DMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;AT!C0=2&lt;cr&gt;&quot;   ;National ISDN 1"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%%A4=1%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%%A4=0%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%%A4=1%%A2=95&amp;M1@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%%A4=0%%A2=95&amp;M1@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%%A4=1%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%%A4=0%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%%A4=0%%A2=3&amp;M1@B0=2@M2=M&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola BitSURFR PRO Internal PnP"
+     Manufacturer = "Motorola"
+     Model = "*MOT1170"
+     Reset = "AT&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;DIALING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 128000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: PPPC&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: ISDN&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: V.120&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL: BOND&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;C1 &amp;D2 E0 V1 W0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <DirectoryNo Sequence = "1">&quot;AT!N1=%s&lt;cr&gt;&quot;    ; data directory number</DirectoryNo>
+       <DirectoryNo Sequence = "2">&quot;AT*1!N1=%s&lt;cr&gt;&quot;    ; voice directory #1</DirectoryNo>
+       <SetSpid Sequence = "1">&quot;AT!C6=%s&lt;cr&gt;&quot;  ; data spid</SetSpid>
+       <SetSpid Sequence = "2">&quot;AT*1!C6=%s&lt;cr&gt;&quot;   ; voice spid1</SetSpid>
+       <NvSave Sequence = "1">&quot;AT&gt;W&lt;cr&gt;&quot;   ; save switch &amp; global options</NvSave>
+       <NvSave Sequence = "2">&quot;AT&gt;Z&lt;cr&gt;&quot; ; restore switch &amp; global options</NvSave>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;AT!C0=0&lt;cr&gt;&quot;   ;AT&amp;T 5ESS Customm"/>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;AT!C0=1&lt;cr&gt;&quot;   ;Northern Telecom DMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;AT!C0=2&lt;cr&gt;&quot;   ;National ISDN 1"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%%A4=1%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%%A4=0%%A2=95@B0=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%%A4=1%%A2=95@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%%A4=0%%A2=95@B0=2&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%%A4=0%%A2=3@B0=2@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%%A4=1%%A2=2&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%%A4=0%%A2=2&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Hayes Accura ISDN Standard PnP"
+     Manufacturer = "Hayes"
+     Model = "SERENUM\HAY0AFF"
+     Reset = "ATZ0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "460800"
+     MaxDCERate = "57600">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Please Save(by AT&amp;Wn)&amp; Reset Modem(Power On/Off)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : Northern Telecom DMS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : NI1(2 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : NI1(1 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-point</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-multipoint(1 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-multipoint(2 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>SPID correct!</NegotiationProgressResponses>
+       <NegotiationProgressResponses>WARNING: No Channel(SPID) Available</NegotiationProgressResponses>
+       <NegotiationProgressResponses>9&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>WARNING: Layer 1 Not Active</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>ERROR </ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH0&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">ATZ0&lt;cr&gt;</Init>
+     <Init Sequence = "2">ATE0X7V1&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L7"
+        SpeakerVolume_Low = "L1"
+        SpeakerVolume_Med = "L4"
+        FlowControl_Hard = "&amp;H3"
+        FlowControl_Off = "&amp;H0"
+        FlowControl_Soft = "&amp;H4"
+        Compression_Off= "&amp;K00"
+        Compression_On = "&amp;K44"
+        SpeedNegotitiation_On = "&amp;E1"
+        SpeedNegotitiation_Off = "&amp;E0"
+        Pulse = "I"
+        Tone = "I"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S50=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>112</BaudRates>
+     <BaudRates>128</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <Options>NONE</Options>
+     <Options>V110</Options>
+     <Options>PPP</Options>
+     <Options>SLIP</Options>
+     <Options>ARQ</Options>
+     <Options>X.75</Options>
+     <Options>LAPB</Options>
+     <Options>V42b</Options>
+     <Options>V120</Options>
+     <Options>LAPD</Options>
+     <Options>K</Options>
+     <Options>X.75M</Options>
+     <Options>V120M</Options>
+     <Options>BTX</Options>
+     <Options>X.75C</Options>
+     <Options>V120C</Options>
+     <Options>V42</Options>
+     <Options>MP</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</DirectoryNo>
+       <DirectoryNo Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</DirectoryNo>
+       <SetSpid Sequence = "1">ATSPID0=%s&lt;cr&gt;</SetSpid>
+       <SetSpid Sequence = "2">ATSPID1=%s&lt;cr&gt;</SetSpid>
+       <SetMSN Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</SetMSN>
+       <SetEAZ Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</SetEAZ>
+       <SetEAZ Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</SetEAZ>
+       <NvSave Sequence = "1">AT&amp;W0Z0&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;ATP0&lt;cr&gt;&quot;   ;Northern Telecom DMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;ATP2&lt;cr&gt;&quot;   ;National ISDN 1"/>
+       <SwitchType Switch = "SWITCH_ATT_PTMP" Command = "&quot;ATP6&lt;cr&gt;&quot; ;AT&amp;T Point-to-MP"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;ATP4&lt;cr&gt;&quot; ;AT&amp;T 5ESS Custom"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT&amp;E1B40&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT&amp;E0B40&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT&amp;E1B40&amp;J3&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT&amp;E0B40&amp;J3&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT&amp;E1B20&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT&amp;E0B20&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "X75_64K" Command = "ATB00&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "ATB13&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "ATB14&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "ATB15&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_14DOT4K" Command = "ATB16&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "ATB17&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "ATB18&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_57DOT6K" Command = "ATB19&amp;J0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Hayes Accura ISDN Standard"
+     Manufacturer = "Hayes"
+     Model = "UNIMODEM1E7F326E"
+     Reset = "ATZ0&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "460800"
+     MaxDCERate = "57600">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <OKResponses>OK</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RRING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 56000P</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 64000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER 128000</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Please Save(by AT&amp;Wn)&amp; Reset Modem(Power On/Off)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : Northern Telecom DMS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : NI1(2 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : NI1(1 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-point</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-multipoint(1 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>Switch Type : AT&amp;T 5ESS point-to-multipoint(2 SPID)</NegotiationProgressResponses>
+       <NegotiationProgressResponses>SPID correct!</NegotiationProgressResponses>
+       <NegotiationProgressResponses>WARNING: No Channel(SPID) Available</NegotiationProgressResponses>
+       <NegotiationProgressResponses>9&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>DIALING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>CARRIER</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+F4</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>WARNING: Layer 1 Not Active</ErrorResponses>
+       <ErrorResponses>ERROR</ErrorResponses>
+       <ErrorResponses>+FCERROR</ErrorResponses>
+       <ErrorResponses>ERROR </ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoCarrierResponses>NO CARRIER</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIAL TONE</NoDialToneResponses>
+       <NoDialToneResponses>NO DIALTONE</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <BusyResponses>BUSY</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <NoAnswerResponses>NO ANSWER</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <RingResponses>RING</RingResponses>
+       <RingResponses>RINGING</RingResponses>
+       <VoiceResponses>VOICE</VoiceResponses>
+       <FaxResponses>FAX</FaxResponses>
+       <DataResponses>DATA</DataResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+       <OtherResponses Type = "1D">DELAYED</OtherResponses>
+       <OtherResponses Type = "1C">BLACKLISTED</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH0&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">ATZ0&lt;cr&gt;</Init>
+     <Init Sequence = "2">ATE0X7V1&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L7"
+        SpeakerVolume_Low = "L1"
+        SpeakerVolume_Med = "L4"
+        FlowControl_Hard = "&amp;H3"
+        FlowControl_Off = "&amp;H0"
+        FlowControl_Soft = "&amp;H4"
+        Compression_Off= "&amp;K00"
+        Compression_On = "&amp;K44"
+        SpeedNegotitiation_On = "&amp;E1"
+        SpeedNegotitiation_Off = "&amp;E0"
+        Pulse = "I"
+        Tone = "I"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S50=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>112</BaudRates>
+     <BaudRates>128</BaudRates>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200RX</Options>
+     <Options>NONE</Options>
+     <Options>V110</Options>
+     <Options>PPP</Options>
+     <Options>SLIP</Options>
+     <Options>ARQ</Options>
+     <Options>X.75</Options>
+     <Options>LAPB</Options>
+     <Options>V42b</Options>
+     <Options>V120</Options>
+     <Options>LAPD</Options>
+     <Options>K</Options>
+     <Options>X.75M</Options>
+     <Options>V120M</Options>
+     <Options>BTX</Options>
+     <Options>X.75C</Options>
+     <Options>V120C</Options>
+     <Options>V42</Options>
+     <Options>MP</Options>
+     <ISDN>
+       <DirectoryNo Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</DirectoryNo>
+       <DirectoryNo Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</DirectoryNo>
+       <SetSpid Sequence = "1">ATSPID0=%s&lt;cr&gt;</SetSpid>
+       <SetSpid Sequence = "2">ATSPID1=%s&lt;cr&gt;</SetSpid>
+       <SetMSN Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</SetMSN>
+       <SetEAZ Sequence = "1">AT&amp;ZI3=%s&lt;cr&gt;</SetEAZ>
+       <SetEAZ Sequence = "2">AT&amp;ZI4=%s&lt;cr&gt;</SetEAZ>
+       <NvSave Sequence = "1">AT&amp;W0Z0&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DMS100" Command = "&quot;ATP0&lt;cr&gt;&quot;   ;Northern Telecom DMS-100"/>
+       <SwitchType Switch = "SWITCH_NI1" Command = "&quot;ATP2&lt;cr&gt;&quot;   ;National ISDN 1"/>
+       <SwitchType Switch = "SWITCH_ATT_PTMP" Command = "&quot;ATP6&lt;cr&gt;&quot; ;AT&amp;T Point-to-MP"/>
+       <SwitchType Switch = "SWITCH_ATT1" Command = "&quot;ATP4&lt;cr&gt;&quot; ;AT&amp;T 5ESS Custom"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT&amp;E1B40&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT&amp;E0B40&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT&amp;E1B40&amp;J3&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT&amp;E0B40&amp;J3&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT&amp;E1B20&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT&amp;E0B20&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "X75_64K" Command = "ATB00&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_2DOT4K" Command = "ATB13&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_4DOT8K" Command = "ATB14&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_9DOT6K" Command = "ATB15&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_14DOT4K" Command = "ATB16&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "ATB17&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "ATB18&amp;J0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_57DOT6K" Command = "ATB19&amp;J0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express XR Plug and Play"
+     Manufacturer = "ADTRAN"
+     Model = "SERENUM\ADN0040"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express XRT Plug and Play"
+     Manufacturer = "ADTRAN"
+     Model = "SERENUM\ADN0041"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express XRT S-T Plug and Play"
+     Manufacturer = "ADTRAN"
+     Model = "SERENUM\ADN0043"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S36=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "&quot;AT_S4&lt;cr&gt;&quot;  ;DSS1 Euro-ISDN"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+       <Protocol Protocol = "V110_57DOT6K" Command = "ATS54=5S53=2S27=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express 3000 Plug and Play"
+     Manufacturer = "ADTRAN"
+     Model = "SERENUM\ADN0042"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S36=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express XR"
+     Manufacturer = "ADTRAN"
+     Model = "UNIMODEM6DCFEEFF"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Xrt1Gen"
+     Manufacturer = "ADTRAN"
+     Model = "UNIMODEM26DFAE2F"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express XRT S-T"
+     Manufacturer = "ADTRAN"
+     Model = "UNIMODEM7E6E4851"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S36=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "&quot;AT_S4&lt;cr&gt;&quot;  ;DSS1 Euro-ISDN"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+       <Protocol Protocol = "V110_57DOT6K" Command = "ATS54=5S53=2S27=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ADTRAN Express 3000"
+     Manufacturer = "ADTRAN"
+     Model = "UNIMODEM1E90D16C"
+     Reset = "AT&amp;FS0=1&lt;cr&gt;"
+     DCB = "1C"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;D2&amp;C1&amp;F0E0Q0V1X1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3 &amp;R0"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S36=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <ISDN>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "&quot;ATS53=2S54=12S27=0&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "&quot;ATS53=3S54=12S27=0&lt;cr&gt;&quot;  ; 64K PPP"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "&quot;ATS53=2S54=12S27=1&lt;cr&gt;&quot;  ; 56K"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "&quot;ATS53=3S54=12S27=1&lt;cr&gt;&quot;  ; 64K"/>
+       <Protocol Protocol = "V120_56K" Command = "&quot;ATS54=6S53=2S27=0&lt;cr&gt;&quot;   ; 56k"/>
+       <Protocol Protocol = "V120_64K" Command = "&quot;ATS54=6S53=3S27=0&lt;cr&gt;&quot;   ; 64k"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

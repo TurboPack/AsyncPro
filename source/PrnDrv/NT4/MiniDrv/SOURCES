@@ -1,0 +1,10 @@
+TARGETNAME=apfpdent
+TARGETPATH=$(BASEDIR)\lib
+TARGETTYPE=DYNLINK
+
+DLLBASE=0x20200000
+
+INCLUDES=..\..\inc
+
+SOURCES=apfpdent.rc      \
+  code.c

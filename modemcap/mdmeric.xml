@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Ericsson V.34CC PCMCIA"
+     Manufacturer = "Ericsson"
+     Model = "PCMCIA\INTELLIGENT-ERICSSON_AS-B8E8                    ; V34CC"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: CLASS 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V.42bis&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: LAP-M&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 4&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT-CELLULAR&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75TX/1200RX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75RX/1200TX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200/75&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75/1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 19200 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21600 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 W1 S0=0 S7=50&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT &amp;C1 &amp;D2 \V1&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0&quot;&quot;H0"
+        Compression_On = "%%C1&quot;&quot;H3"
+        Modulation_Bell = "B1 "
+        Modulation_CCITT = "B0 "
+        Modulation_CCITT_V23 = "B0 B2 "
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "&quot;Ericsson V.34CC PCMCIA Analogue Cellular&quot;     ; V34CC"
+     Manufacturer = "Ericsson"
+     Model = "Eric_V34CC                                             ; V34CC Cellular"
+     Reset = "AT&amp;F5&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: CLASS 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V.42bis&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: LAP-M&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 4&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT-CELLULAR&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75TX/1200RX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75RX/1200TX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200/75&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75/1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 19200 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21600 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 W1 S0=0 S7=50&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT &amp;C1 &amp;D2 \V1&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F5 &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0&quot;&quot;H0"
+        Compression_On = "%%C1&quot;&quot;H3"
+        Modulation_Bell = "B1 "
+        Modulation_CCITT = "B0 "
+        Modulation_CCITT_V23 = "B0 B2 "
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson 14.4CC PCMCIA"
+     Manufacturer = "Ericsson"
+     Model = "PCMCIA\INTELLIGENT-ERICSSON_14.4CC_FAX/MODEM-7ECF      ; 144CC"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: CLASS 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V.42bis&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: LAP-M&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 4&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT-CELLULAR&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75TX/1200RX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75RX/1200TX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200/75&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75/1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 19200 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21600 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT W1 S7=50 X4&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N6"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N7"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1 "
+        Modulation_CCITT = "B0 "
+        Modulation_CCITT_V23 = "B0 B2 "
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S40=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson V.34DT"
+     Manufacturer = "Ericsson"
+     Model = "UNIMODEMFC8C167B                                       ; V34DT"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "45"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CONNECT 26400 RELIABLE COMPRESSED&lt;cR&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F &lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 S0=0 S25=20&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;E4"
+        FlowControl_Off = "&amp;E3"
+        FlowControl_Soft = "&amp;E5"
+        ErrorControl_Forced = "&amp;E2"
+        ErrorControl_Off = "&amp;E0"
+        ErrorControl_On = "&amp;E1"
+        Compression_Off= "&amp;E14"
+        Compression_On = "&amp;E15"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "$MB75 "
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <Options>RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>LAPM</Options>
+     <Options>LAPM COMPRESSED</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ericsson SBN and ZAT models"
+     Manufacturer = "Ericsson"
+     Model = "UNIMODEMA2A1A049"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "38400"
+     MaxDCERate = "19200">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 &amp;D2 V1 \Q3 +M2 \N3&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT S0=0 S7=50 +Q1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N2"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B0"
+        SpeedNegotitiation_On = "+M2"
+        SpeedNegotitiation_Off = "+M0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "+S8=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <Options>REL</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "&quot;Ericsson V.34TZ Pocket Modem&quot;                  ; V34TZ"
+     Manufacturer = "Ericsson"
+     Model = "Eric_V34CC                                             ; V34TZ"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: CLASS 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V.42bis&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: LAP-M&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 4&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT-CELLULAR&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75TX/1200RX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75RX/1200TX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200/75&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75/1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 19200 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21600 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 W1 S0=0 S7=50&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT &amp;C1 &amp;D2 \V1&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0&quot;&quot;H0"
+        Compression_On = "%%C1&quot;&quot;H3"
+        Modulation_Bell = "B1 "
+        Modulation_CCITT = "B0 "
+        Modulation_CCITT_V23 = "B0 B2 "
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "&quot;Ericsson V.34TZ Pocket Modem Analogue Cellular&quot;; V34TZ"
+     Manufacturer = "Ericsson"
+     Model = "Eric_V34CC                                             ; V34TZ"
+     Reset = "AT&amp;F5&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <OKResponses>0&lt;cr&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;RINGING&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: CLASS 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: MNP5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V.42bis&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;COMPRESSION: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: NONE&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: LAP-M&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 4&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP 3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: V42BIS&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: MNP REL 5&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL: ALT-CELLULAR&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 300&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75TX/1200RX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75RX/1200TX&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 1200/75&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 75/1200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 2400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 4800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 7200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 9600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 12000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 14400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 16800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 19200&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 21600&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 24000&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 26400&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 28800&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 19200 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 19200 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21600 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 21600 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 21400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 24000 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 24000 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 26400 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 26400 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CARRIER Transmit: 28800 Receive: 28800 V.34&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;DELAYED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;BLACKLISTED NUMBER&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;+FCERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>4&lt;cr&gt;</ErrorResponses>
+       <NoCarrierResponses>&lt;cr&gt;&lt;lf&gt;NO CARRIER&lt;cr&gt;&lt;lf&gt;</NoCarrierResponses>
+       <NoCarrierResponses>3&lt;cr&gt;</NoCarrierResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIALTONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>&lt;cr&gt;&lt;lf&gt;NO DIAL TONE&lt;cr&gt;&lt;lf&gt;</NoDialToneResponses>
+       <NoDialToneResponses>6&lt;cr&gt;</NoDialToneResponses>
+       <BusyResponses>&lt;cr&gt;&lt;lf&gt;BUSY&lt;cr&gt;&lt;lf&gt;</BusyResponses>
+       <BusyResponses>7&lt;cr&gt;</BusyResponses>
+       <NoAnswerResponses>&lt;cr&gt;&lt;lf&gt;NO ANSWER&lt;cr&gt;&lt;lf&gt;</NoAnswerResponses>
+       <NoAnswerResponses>8&lt;cr&gt;</NoAnswerResponses>
+       <RingResponses>&lt;cr&gt;&lt;lf&gt;RING&lt;cr&gt;&lt;lf&gt;</RingResponses>
+       <RingResponses>2&lt;cr&gt;</RingResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VOICE&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <FaxResponses>&lt;cr&gt;&lt;lf&gt;FAX&lt;cr&gt;&lt;lf&gt;</FaxResponses>
+       <DataResponses>&lt;cr&gt;&lt;lf&gt;DATA&lt;cr&gt;&lt;lf&gt;</DataResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT E0 V1 W1 S0=0 S7=50&lt;cr&gt;</Init>
+     <Init Sequence = "4">AT &amp;C1 &amp;D2 \V1&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F5 &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0&quot;&quot;H0"
+        Compression_On = "%%C1&quot;&quot;H3"
+        Modulation_Bell = "B1 "
+        Modulation_CCITT = "B0 "
+        Modulation_CCITT_V23 = "B0 B2 "
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "P"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>75</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>1200</Options>
+     <Options>75</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

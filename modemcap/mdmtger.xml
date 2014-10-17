@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Multitech MT1432MG"
+     Manufacturer = "MultiTech Systems"
+     Model = "UNIMODEM7896F369"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;NUMBER DELAYED:TIMER&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;NUMBER LOCKED OUT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CALL LOCKED:BLACKLISTED&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <OtherResponses Type = "1D">&lt;cr&gt;&lt;lf&gt;DALAYED&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 &amp;C1 &amp;D2 V1 S0=0 S25=20&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;E4"
+        FlowControl_Off = "&amp;E3"
+        FlowControl_Soft = "&amp;E5"
+        ErrorControl_Forced = "&amp;E2"
+        ErrorControl_Off = "&amp;E0"
+        ErrorControl_On = "&amp;E1"
+        Compression_Off= "&amp;E14"
+        Compression_On = "&amp;E15"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <Options>RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>LAPM</Options>
+     <Options>LAPM COMPRESSED</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Multitech MT1432BG"
+     Manufacturer = "MultiTech Systems"
+     Model = "UNIMODEM7130E8D2"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "38400"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;NUMBER DELAYED:TIMER&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;NUMBER LOCKED OUT&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CALL LOCKED:BLACKLISTED&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <OtherResponses Type = "1D">&lt;cr&gt;&lt;lf&gt;DALAYED&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 &amp;C1 &amp;D2 V1 S0=0 S25=20&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;E4"
+        FlowControl_Off = "&amp;E3"
+        FlowControl_Soft = "&amp;E5"
+        ErrorControl_Forced = "&amp;E2"
+        ErrorControl_Off = "&amp;E0"
+        ErrorControl_On = "&amp;E1"
+        Compression_Off= "&amp;E14"
+        Compression_On = "&amp;E15"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <Options>RELIABLE</Options>
+     <Options>RELIABLE COMPRESSED</Options>
+     <Options>LAPM</Options>
+     <Options>LAPM COMPRESSED</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

@@ -1,0 +1,65 @@
+/****************************************************************/
+/* Note that entry 1 in the string table has been moved to each */
+/* specific driver's RC file.  It must be copied back into this */
+/* string table before loading the project into UniTool (and    */
+/* removed after UniTool has updated the project).  An example  */
+/* entry for entry 1 in the string table is :                   */
+/*      1                  "APF Fax"                            */
+/****************************************************************/
+
+#define VERSIONINFO_1   1
+#define VOS_DOS_WINDOWS16       0x00010001L             /* !!.10 */
+#define VFT_APP                 0x00000001L             /* !!.10 */
+
+VERSIONINFO_1 VERSIONINFO
+FILEVERSION 3, 01, 0, 0
+PRODUCTVERSION 3, 01, 0, 0
+FILEOS VOS_DOS_WINDOWS16
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "TurboPower Software Company\000\000"
+   VALUE "FileDescription", "APF Fax Printer Driver Engine\000\000"
+   VALUE "FileVersion", "4.06.0.0\000\000"
+   VALUE "InternalName", "APFPDENT.DLL\000\000"
+   VALUE "LegalCopyright", "Copyright © TurboPower Software Company 1998-2000\000\000"
+   VALUE "OriginalFilename", "APFPDENT.DLL\000\000"
+   VALUE "ProductName", "Async Professional\000\000"
+   VALUE "ProductVersion", "4.06\000\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}
+
+#include <MinDrvRC.h>
+
+/****************************************************************/
+/* These following resources are maintained by the Windows SDK  */
+/* program UniTool.  The string table cannot have any other     */
+/* user-defined data or else UniTool will reject the file.  The */
+/* existing string table entries can be edited, but the numeric */
+/* values must not be changed.                                  */
+/****************************************************************/
+
+1      RC_TABLES   PRELOAD MOVEABLE        APFPDENT.GPC
+
+1      RC_FONT     LOADONCALL DISCARDABLE  STANDARD.PFM
+
+
+STRINGTABLE
+
+BEGIN
+       1                  "Print To Fax (AP)"
+       257                "High"
+       258                "Standard"
+       259                "Fax"
+END

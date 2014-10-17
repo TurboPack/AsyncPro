@@ -1,0 +1,3694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Discovery 1414 CX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMDE1E49B3"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 1414 HX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMDE1E49B3"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 1442 AM  1414 AX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM44CA0C8A"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 1942AM 1914AX V32terbo"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM44CA0C8A"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 A 2nd rev"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM51DB330E"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "19200">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 C"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMD29BEDF5"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S39=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 C Send Only Fax"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM51DB330E"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 HM"
+     Manufacturer = "Discovery"
+     Model = "Disco_Modem12"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 H"
+     Manufacturer = "Discovery"
+     Model = "Disco_Modem13"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 H Send Only Fax"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM69E0B87D"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 PM"
+     Manufacturer = "Discovery"
+     Model = "Disco_Modem16"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 P"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM306C1087"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "4800"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 P Send Only Fax"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMC91B4DB6"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 VM"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM1DF1EB88"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 V 2nd rev"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM1DF1EB88"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "4800"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2496 CX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM4E7288FD"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1 &amp;C1 &amp;D2 \V4 S0=0 \C1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\J0\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2496 HX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM0A75EEDD"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2496 PX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEME47FF7AD"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 AM MNP  V.42(bis)"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM49A19B4C"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0 \V4 \C1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\J0\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 CM QM MNP &amp; V.42(bis)"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM49A19B4C"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 CM QM MNP"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMD6BCD4BA"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E1 V1 &amp;C1 &amp;D2 \V4 \C1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery-Victory 28.8K modem"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM322437AF"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1&amp;C1 &amp;D2 \V2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 9632 AM-AX V32bis"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM935D30A1"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E1 V1 &amp;C1 &amp;D2 \V4 \C1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 9632 AM-AX V32"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM935D30A1"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery-Victory 14.4K modem"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEMDE1E49B3"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400V-2400VM"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM1DF1EB88"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "2400"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 AM-CM-QM MNP &amp; V.42(bis)"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM49A19B4C"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "9600"
+     MaxDCERate = "2400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0 \V4 \C1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\J0\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 9632 AM-AX V32-V32bis"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM935D30A1"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E1 V1 &amp;C1 &amp;D2 \V4 \C1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 1414AX-1442AM-1914AX-1942AM"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM44CA0C8A"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "1"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0 \V4 \C1&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\J0\N4"
+        ErrorControl_Off = "\J0\N0"
+        ErrorControl_On = "\J0\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Modulation_CCITT_V23 = "B2"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2400 A-2400 C"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM51DB330E"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "19200">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F  E0 V1 &amp;C1 &amp;D2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2814 CX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM322437AF"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1 &amp;C1 &amp;D2 \V2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Discovery 2814 HX"
+     Manufacturer = "Discovery"
+     Model = "UNIMODEM322437AF"
+     Reset = "AT Z&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "0"
+     SupportsSetSoftwareFlowControl= "0"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&quot;&lt;cr&gt;&lt;lf&gt;CONNECT 115</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F E0 V1 &amp;C1 &amp;D2 \V2 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        ErrorControl_Forced = "\N4"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N3"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>300</BaudRates>
+     <BaudRates>600</BaudRates>
+     <BaudRates>0600</BaudRates>
+     <BaudRates>1200</BaudRates>
+     <BaudRates>75</BaudRates>
+     <BaudRates>2400</BaudRates>
+     <BaudRates>4800</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>9600</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>14400</BaudRates>
+     <BaudRates>16800</BaudRates>
+     <BaudRates>19200</BaudRates>
+     <BaudRates>21600</BaudRates>
+     <BaudRates>24000</BaudRates>
+     <BaudRates>26400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>115200</BaudRates>
+     <Options>REL COMP</Options>
+     <Options>V42</Options>
+     <Options>NOR</Options>
+     <Options>75</Options>
+     <Options>TX</Options>
+     <Options>75RX</Options>
+     <Options>1200</Options>
+     <Options>1200RX</Options>
+     <Options>V42BIS</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

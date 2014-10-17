@@ -1,0 +1,11 @@
+APRO v4.07
+Compiler : Unknown
+Operating System : WinNT 6.0 Service Pack 1
+Device: COM3
+Date/time: 13.04.09, 22:36:32
+Time      Type      SubType       Data      OtherData
+--------  --------  ------------  --------  ---------
+0000.002  TrDatChg  Avail         00000001  
+0000.002  TrgHdAlc  Window        00190FBE  
+0000.002  TrgHdAlc  Method        00000000  
+0002.524  Dispatch  WriteCom      00000001  a

@@ -1,0 +1,45 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ExConApp EXMDI EXMDI02 EXTCAP EXTMAIN EXWZRECV EXWZSEND EXZRECV \
+  EXZSEND
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ExConApp: ExConApp.bpr
+  $(MAKE)
+
+EXMDI: EXMDI.bpr
+  $(MAKE)
+
+EXMDI02: EXMDI02.bpr
+  $(MAKE)
+
+EXTCAP: EXTCAP.bpr
+  $(MAKE)
+
+EXTMAIN: EXTMAIN.bpr
+  $(MAKE)
+
+EXWZRECV: EXWZRECV.bpr
+  $(MAKE)
+
+EXWZSEND: EXWZSEND.bpr
+  $(MAKE)
+
+EXZRECV: EXZRECV.bpr
+  $(MAKE)
+
+EXZSEND: EXZSEND.bpr
+  $(MAKE)
+
+

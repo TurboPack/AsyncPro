@@ -1,0 +1,161 @@
+ ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is TurboPower Async Professional
+ *
+ * The Initial Developer of the Original Code is
+ * TurboPower Software
+ *
+ * Portions created by the Initial Developer are Copyright (C) 1991-2002
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK *****
+
+**********************************************************************
+* Async Professional: ADCHSVT1.TXT 4.06                              *
+**********************************************************************
+* Terminal: VT100 charset map for standard Windows fonts             *
+**********************************************************************
+
+* Notes: this file defines five mappings for the VT100
+*          - UK (VT100-UK)
+*          - USASCII (VT100-USASCII)
+*          - linedraw (VT100-linedraw)
+*          - alternate character ROM (VT100-ROM1)
+*          - alternate linedraw character ROM (VT100-ROM2)
+*
+*        UK is the standard ASCII character set, but with the '#'
+*        glyph replaced by the '£' glyph.
+*        USASCII is the standard ASCII character set.
+*        Linedraw is uppercase alphabet, numbers, plus special
+*        graphics for the rest.
+*        The first ROM character set is the same as USASCII
+*        The second ROM character set is the same as linedraw.
+*
+
+* The entries here have been written assuming that the <Default> font
+* is an ANSI font and not an OEM font. Hence, the use of the Terminal
+* font to display all the llinedraw characters. If you are going to be
+* using a font that has OEM glyphs, the entries become much easier.
+
+* The format of this file is as follows
+*   - any completely blank line is ignored
+*   - any line starting with a * is a comment
+*   - any line starting with at least one space is a detail line. A
+*     detail line consists of five 'words', where a word is a set of
+*     up to 63 characters without a space, or as a set of up to 63
+*     characters enclosed in quotes (single or double). A word is case
+*     sensitive. Words are separated by spaces (NOT tabs).
+*     \xnn, where nn is a hex number, represents that ASCII character.
+*     Any other characters after the five words is a comment and is
+*     ignored.
+*     Any detail line that cannot be parsed is simply ignored.
+*   - any line that doesn't match the above is ignored.
+
+* Warning: notice that the parser that reads this file does not emit
+*          any warnings or errors whatsoever. It will just ignore
+*          anything it doesn't understand. So, if something is not
+*          working in the terminal character set emulation, check the
+*          format of this file first.
+
+
+*=====================================================================
+* the UK character set
+  VT100-UK       \x20 \x22 <Default> \x20   space, !, "
+  VT100-UK       \x23 \x23 <Default> \xA3   the pound sterling sign    #
+  VT100-UK       \x24 ~    <Default> \x24   the rest from $ to ~
+
+*=====================================================================
+* the USASCII character set
+  VT100-USASCII  \x20 ~    <Default> \x20   all from space to ~
+  VT100-USASCII  \x80 \xFF Terminal  \x80   upper ASCII
+
+*=====================================================================
+* the linedraw character set
+  VT100-linedraw \x20 ^    Terminal  \x20   all from space to ^
+  VT100-linedraw \x5F \x5F Terminal  \x20   another space              _
+  VT100-linedraw \x60 \x60 Terminal  \x04   diamond                    `
+  VT100-linedraw \x61 \x61 Terminal  \xB1   checkerboard               a
+  VT100-linedraw \x62 \x62 Terminal  \x10   digraph HT                 b
+  VT100-linedraw \x63 \x63 Terminal  \x17   digraph FF                 c
+  VT100-linedraw \x64 \x64 Terminal  \x11   digraph CR                 d
+  VT100-linedraw \x65 \x65 Terminal  \x1F   digraph LF                 e
+  VT100-linedraw \x66 \x66 Terminal  \xF8   degree symbol              f
+  VT100-linedraw \x67 \x67 Terminal  \xF1   +/- symbol                 g
+  VT100-linedraw \x68 \x68 Terminal  \x1B   digraph NL                 h
+  VT100-linedraw \x69 \x69 Terminal  \x19   digraph VT                 i
+  VT100-linedraw \x6A \x6A Terminal  \xD9   lower right corner         j
+  VT100-linedraw \x6B \x6B Terminal  \xBF   upper right corner         k
+  VT100-linedraw \x6C \x6C Terminal  \xDA   upper left corner          l
+  VT100-linedraw \x6D \x6D Terminal  \xC0   lower left corner          m
+  VT100-linedraw \x6E \x6E Terminal  \xC5   crossing lines             n
+  VT100-linedraw \x6F \x6F Terminal  \xC4   scan line 1                o
+  VT100-linedraw \x70 \x70 Terminal  \xC4   scan line 3                p
+  VT100-linedraw \x71 \x71 Terminal  \xC4   scan line 5                q
+  VT100-linedraw \x72 \x72 Terminal  \xC4   scan line 7                r
+  VT100-linedraw \x73 \x73 Terminal  \xC4   scan line 9                s
+  VT100-linedraw \x74 \x74 Terminal  \xC3   left join T                t
+  VT100-linedraw \x75 \x75 Terminal  \xB4   right join T               u
+  VT100-linedraw \x76 \x76 Terminal  \xC1   bottom join T              v
+  VT100-linedraw \x77 \x77 Terminal  \xC2   top join T                 w
+  VT100-linedraw \x78 \x78 Terminal  \xB3   vertical line              x
+  VT100-linedraw \x79 \x79 Terminal  \xF3   less than/equal symbol     y
+  VT100-linedraw \x7A \x7A Terminal  \xF2   greater than/equal symbol  z
+  VT100-linedraw \x7B \x7B Terminal  \xE3   pi symbol                  {
+  VT100-linedraw \x7C \x7C Terminal  \xD8   not equal symbol           |
+  VT100-linedraw \x7D \x7D Terminal  \x9C   the pound sterling sign    }
+  VT100-linedraw \x7E \x7E Terminal  \xFA   centered dot               ~
+
+*=====================================================================
+* the first ROM character set
+  VT100-ROM1     \x20 ~    <Default> \x20   all from space to ~
+
+
+*=====================================================================
+* the second ROM character set
+  VT100-ROM2     \x20 ^    Terminal  \x20   all from space to ^
+  VT100-ROM2     \x5F \x5F Terminal  \x20   another space              _
+  VT100-ROM2     \x60 \x60 Terminal  \x04   diamond                    `
+  VT100-ROM2     \x61 \x61 Terminal  \xB1   checkerboard               a
+  VT100-ROM2     \x62 \x62 Terminal  \x10   digraph HT                 b
+  VT100-ROM2     \x63 \x63 Terminal  \x17   digraph FF                 c
+  VT100-ROM2     \x64 \x64 Terminal  \x11   digraph CR                 d
+  VT100-ROM2     \x65 \x65 Terminal  \x1F   digraph LF                 e
+  VT100-ROM2     \x66 \x66 Terminal  \xF8   degree symbol              f
+  VT100-ROM2     \x67 \x67 Terminal  \xF1   +/- symbol                 g
+  VT100-ROM2     \x68 \x68 Terminal  \x1B   digraph NL                 h
+  VT100-ROM2     \x69 \x69 Terminal  \x19   digraph VT                 i
+  VT100-ROM2     \x6A \x6A Terminal  \xD9   lower right corner         j
+  VT100-ROM2     \x6B \x6B Terminal  \xBF   upper right corner         k
+  VT100-ROM2     \x6C \x6C Terminal  \xDA   upper left corner          l
+  VT100-ROM2     \x6D \x6D Terminal  \xC0   lower left corner          m
+  VT100-ROM2     \x6E \x6E Terminal  \xC5   crossing lines             n
+  VT100-ROM2     \x6F \x6F Terminal  \xC4   scan line 1                o
+  VT100-ROM2     \x70 \x70 Terminal  \xC4   scan line 3                p
+  VT100-ROM2     \x71 \x71 Terminal  \xC4   scan line 5                q
+  VT100-ROM2     \x72 \x72 Terminal  \xC4   scan line 7                r
+  VT100-ROM2     \x73 \x73 Terminal  \xC4   scan line 9                s
+  VT100-ROM2     \x74 \x74 Terminal  \xC3   left join T                t
+  VT100-ROM2     \x75 \x75 Terminal  \xB4   right join T               u
+  VT100-ROM2     \x76 \x76 Terminal  \xC1   bottom join T              v
+  VT100-ROM2     \x77 \x77 Terminal  \xC2   top join T                 w
+  VT100-ROM2     \x78 \x78 Terminal  \xB3   vertical line              x
+  VT100-ROM2     \x79 \x79 Terminal  \xF3   less than/equal symbol     y
+  VT100-ROM2     \x7A \x7A Terminal  \xF2   greater than/equal symbol  z
+  VT100-ROM2     \x7B \x7B Terminal  \xE3   pi symbol                  {
+  VT100-ROM2     \x7C \x7C Terminal  \xD8   not equal symbol           |
+  VT100-ROM2     \x7D \x7D Terminal  \x9C   the pound sterling sign    }
+  VT100-ROM2     \x7E \x7E Terminal  \xFA   centered dot               ~
+

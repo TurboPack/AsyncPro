@@ -1,0 +1,7 @@
+LIBRARY APFMON40
+
+DESCRIPTION 'APF WinNT 4.0 fax print monitor'
+
+EXPORTS
+    DllEntryPoint
+    InitializePrintMonitor

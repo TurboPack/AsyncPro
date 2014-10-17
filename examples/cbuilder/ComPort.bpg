@@ -1,0 +1,63 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ExAdapt ExAuto ExCom ExConApp EXDPORT EXHOST EXLOG EXLOGIN ExSlave \
+  ExMaster EXMDI EXMDI02 EXTHAN EXTRIG QryMdm
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ExAdapt: ExAdapt.bpr
+  $(MAKE)
+
+ExAuto: ExAuto.bpr
+  $(MAKE)
+
+ExCom: ExCom.bpr
+  $(MAKE)
+
+ExConApp: ExConApp.bpr
+  $(MAKE)
+
+EXDPORT: EXDPORT.bpr
+  $(MAKE)
+
+EXHOST: EXHOST.bpr
+  $(MAKE)
+
+EXLOG: EXLOG.bpr
+  $(MAKE)
+
+EXLOGIN: EXLOGIN.bpr
+  $(MAKE)
+
+ExMaster: ExMaster.bpr
+  $(MAKE)
+
+EXMDI: EXMDI.bpr
+  $(MAKE)
+
+EXMDI02: EXMDI02.bpr
+  $(MAKE)
+
+ExSlave: ExSlave.bpr
+  $(MAKE)
+
+EXTHAN: EXTHAN.bpr
+  $(MAKE)
+
+EXTRIG: EXTRIG.bpr
+  $(MAKE)
+
+QryMdm: QryMdm.bpr
+  $(MAKE)
+
+

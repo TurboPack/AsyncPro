@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExZmodem - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/ExZmodem.res" /d "_DEBUG" /d "_AFXDLL" "C:\APAXEXAMPLES\EXZMODEM\ExZmodem\ExZmodem.rc"" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP179.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/ExZmodem.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\APAXEXAMPLES\EXZMODEM\ExZmodem\apax.cpp"
+"C:\APAXEXAMPLES\EXZMODEM\ExZmodem\ExZmodem.cpp"
+"C:\APAXEXAMPLES\EXZMODEM\ExZmodem\ExZmodemDlg.cpp"
+"C:\APAXEXAMPLES\EXZMODEM\ExZmodem\font.cpp"
+"C:\ApaxExamples\ExZmodem\ExZmodem\commondialog.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP179.tmp" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP17A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/ExZmodem.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\APAXEXAMPLES\EXZMODEM\ExZmodem\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP17A.tmp" 
+Creating temporary file "C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP17B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ExZmodem.pdb" /debug /machine:I386 /out:"Debug/ExZmodem.exe" /pdbtype:sept 
+.\Debug\apax.obj
+.\Debug\ExZmodem.obj
+.\Debug\ExZmodemDlg.obj
+.\Debug\font.obj
+.\Debug\StdAfx.obj
+.\Debug\ExZmodem.res
+.\Debug\commondialog.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\TimS\LOCALS~1\Temp\RSP17B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+apax.cpp
+ExZmodem.cpp
+ExZmodemDlg.cpp
+font.cpp
+commondialog.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/ExZmodem.bsc"  .\Debug\StdAfx.sbr .\Debug\apax.sbr .\Debug\ExZmodem.sbr .\Debug\ExZmodemDlg.sbr .\Debug\font.sbr .\Debug\commondialog.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+ExZmodem.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

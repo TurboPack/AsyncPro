@@ -1,0 +1,187 @@
+;
+; Sample combination printer INF for NT 4.0 and Win95.
+;
+; (This inf should work for both OS's, but not all sections apply to both.)
+;
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%MS%
+LayoutFile=layout.inf
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+
+[ClassInstall]
+AddReg=ClassAddReg
+DelReg=ClassDelReg
+
+[ClassDelReg]
+HKLM,"System\CurrentControlSet\Services\Class\Printer","NoUseClass"
+
+[ClassAddReg]
+HKR,,,,%CLASSNAME%
+HKR,,Installer,,MSPRINT.DLL
+HKR,,Icon,,-4
+HKR,,NoDisplayClass,,1
+
+[Environment]
+UpdateInis=Environment_Ini
+AddReg=Environment_Reg
+
+[Environment_Ini]
+win.ini,Ports,"LPT1.DOS=",
+win.ini,Ports,"LPT2.DOS=",
+win.ini,Ports,"LPT3.DOS=",
+win.ini,Ports,"LPT1.OS2=",
+win.ini,Ports,"LPT2.OS2=",
+win.ini,Ports,"LPT3.OS2=",
+win.ini,windows,"Spooler=",
+win.ini,windows,"DosPrint=",
+win.ini,windows,"DeviceNotSelectedTimeout=",
+win.ini,windows,"TransmissionRetryTimeout=",
+
+[Environment_Reg]
+HKLM,"System\CurrentControlSet\Control\Print\Environments\Windows 4.0","Directory",,"CHICAGO"
+HKLM,"System\CurrentControlSet\Control\Print\Environments\Windows 4.0\Drivers",,,
+HKLM,"System\CurrentControlSet\Control\Print\Environments\Windows 4.0\Print Processors",,,
+HKLM,"System\CurrentControlSet\Control\Print\Monitors",,,
+HKLM,"System\CurrentControlSet\Control\Print\Printers",,,
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot",1,01,00,00,00
+HKLM,"System\CurrentControlSet\Control\Print\Providers",,,
+
+;
+; Manufacturer Sections
+;
+; This section lists all of the manufacturers that we will
+; display in the Dialog box.
+;
+[Manufacturer]
+"!OEM"
+
+;
+; Model Sections
+;
+; These sections correspond with an entry listed in the
+; [Manufacturer] section above. The models will be displayed in the order
+; that they appear here.
+;
+[!OEM]
+"TPS APW Fax Printer"              = APFPDENT.DLL
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. The section name will be assumed to be the driver data
+; file, unless there is an explicit DataFile section listed.
+;
+; Also note the ".NT" or ".WIN" notation. This is done to allow for a single INF to
+; work on Win9x and WinNT. When this format is used, the DataFile must be declared explicitly.
+; Win95 does not support this notation, so the old format is used.
+; See the latest WinNT DDK for more info.
+;
+
+[APFPDENT.DLL.NT]
+CopyFiles=@APFPDENT.DLL,RASDD_NT
+DataFile=APFPDENT.DLL
+DataSection=RASDD_DATA_NT
+
+[APFPDENT.DLL]
+CopyFiles=@APFPDENT.DLL,PSCRIPT_Win
+DataSection=PSCRIPT_DATA_Win
+
+
+; Copy Sections
+;
+; Lists of files that are actually copied. These sections are referenced
+; from the installer sections above. Only create a section if it contains
+; two or more files (if we only copy a single file, identify it in the
+; installer section, using the @filename notation) or if it's a color
+; profile (since the DestinationDirs can only handle sections, and not
+; individual files).
+;
+
+[PSCRIPT_NT]
+PSCRIPT.DLL
+PSCRPTUI.DLL
+PSCRIPT.HLP
+
+[PSCRIPT_Win]
+PSCRIPT.DRV
+PSCRIPT.HLP
+PSCRIPT.INI
+TESTPS.TXT
+APPLE380.SPD
+FONTS.MFM
+ICONLIB.DLL
+PSMON.DLL
+
+[RASDD_NT]
+APFPDENT.DLL
+RASDD.DLL
+RASDDUI.DLL
+RASDDUI.HLP
+
+[PLOTTER_NT]
+PLOTTER.DLL
+PLOTUI.DLL
+PLOTUI.HLP
+
+;
+; Data Sections
+;
+; These sections contain data that is shared between devices.
+;
+
+[PSCRIPT_DATA_NT]
+DriverFile=PSCRIPT.DLL
+ConfigFile=PSCRPTUI.DLL
+HelpFile=PSCRIPT.HLP
+
+[PSCRIPT_DATA_Win]
+DriverFile=PSCRIPT.DRV
+HelpFile=PSCRIPT.HLP
+LanguageMonitor=%PJL_MONITOR%
+
+[RASDD_DATA_NT]
+DriverFile=RASDD.DLL
+ConfigFile=RASDDUI.DLL
+HelpFile=RASDDUI.HLP
+
+[PLOTTER_DATA_NT]
+DriverFile=PLOTTER.DLL
+ConfigFile=PLOTUI.DLL
+HelpFile=PLOTUI.HLP
+
+;
+; Call SetupSetDirectoryId with 66000 to set the target directory at runtime
+; (depending on which environment drivers are getting installed)
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+;
+; diskid = description,tagfile,unused,subdir
+;
+[SourceDisksNames]
+4 = %Floppy%,,,""
+
+;
+; filename_on_source = diskid,subdir,size,checksum,spare,spare
+; extra fields are nt-specific
+;   bootmediaord,targetdirectory,upgradedisposition,textmodedisposition,targetname
+;
+[SourceDisksFiles]
+APFPDENT.DLL = 4,,,,,,,11,3
+
+;
+; Localizable Strings
+;
+[Strings]
+MS="Microsoft"
+Floppy="TPS Fax Driver Printer Disk"
+CLASSNAME="Printer"
+PJL_MONITOR="PJL Language Monitor,PJLMON.DLL"
+PS_MONITOR="PostScript Language Monitor,PSMON.DLL"

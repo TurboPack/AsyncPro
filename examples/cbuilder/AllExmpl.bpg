@@ -1,0 +1,210 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Cvt2Fax ExAdapt ExAnswer ExAuto ExClient ExCom ExConApp EXCTL \
+  EXDPORT EXFAXB EXFAXL ExFaxMr ExFaxOd EXFAXR EXFAXS EXFLIST ExFOdR ExFOdS \
+  EXFPRN0 EXFPRN2 EXLOG EXLOGIN EXMDI EXMDI02 EXPLOG EXPNDX EXPROT ExRecord \
+  EXSERVER ExSlave ExMaster EXSTAT EXTAPI EXTAPIA EXTAPID EXTAPIF EXTCAP EXTHAN \
+  EXTMAIN EXTRIG EXVIEW ExVoice ExWPackt EXWZRECV EXWZSEND EXZRECV EXZSEND FaxMon \
+  FaxServr FAXSERVX QryMdm RCVFAX Sendfax VIEWFAX WSTELNET ExScript ExFtpDir \
+  ExPaging FxClnt FxServr RasDemo
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Cvt2Fax: Cvt2Fax.bpr
+  $(MAKE)
+
+ExAdapt: ExAdapt.bpr
+  $(MAKE)
+
+ExAnswer: ExAnswer.bpr
+  $(MAKE)
+
+ExAuto: ExAuto.bpr
+  $(MAKE)
+
+ExClient: ExClient.bpr
+  $(MAKE)
+
+ExCom: ExCom.bpr
+  $(MAKE)
+
+ExConApp: ExConApp.bpr
+  $(MAKE)
+
+EXCTL: EXCTL.bpr
+  $(MAKE)
+
+EXDPORT: EXDPORT.bpr
+  $(MAKE)
+
+EXFAXB: EXFAXB.bpr
+  $(MAKE)
+
+EXFAXL: EXFAXL.bpr
+  $(MAKE)
+
+ExFaxMr: ExFaxMr.bpr
+  $(MAKE)
+
+ExFaxOd: ExFaxOd.bpr
+  $(MAKE)
+
+EXFAXR: EXFAXR.bpr
+  $(MAKE)
+
+EXFAXS: EXFAXS.bpr
+  $(MAKE)
+
+EXFLIST: EXFLIST.bpr
+  $(MAKE)
+
+ExFOdR: ExFOdR.bpr
+  $(MAKE)
+
+ExFOdS: ExFOdS.bpr
+  $(MAKE)
+
+EXFPRN0: EXFPRN0.bpr
+  $(MAKE)
+
+EXFPRN2: EXFPRN2.bpr
+  $(MAKE)
+
+EXLOG: EXLOG.bpr
+  $(MAKE)
+
+EXLOGIN: EXLOGIN.bpr
+  $(MAKE)
+
+ExMaster: ExMaster.bpr
+  $(MAKE)
+
+EXMDI: EXMDI.bpr
+  $(MAKE)
+
+EXMDI02: EXMDI02.bpr
+  $(MAKE)
+
+EXPLOG: EXPLOG.bpr
+  $(MAKE)
+
+EXPNDX: EXPNDX.bpr
+  $(MAKE)
+
+EXPROT: EXPROT.bpr
+  $(MAKE)
+
+ExRecord: ExRecord.bpr
+  $(MAKE)
+
+EXSERVER: EXSERVER.bpr
+  $(MAKE)
+
+ExSlave: ExSlave.bpr
+  $(MAKE)
+
+EXSTAT: EXSTAT.bpr
+  $(MAKE)
+
+EXTAPI: EXTAPI.bpr
+  $(MAKE)
+
+EXTAPIA: EXTAPIA.bpr
+  $(MAKE)
+
+EXTAPID: EXTAPID.bpr
+  $(MAKE)
+
+EXTAPIF: EXTAPIF.bpr
+  $(MAKE)
+
+EXTCAP: EXTCAP.bpr
+  $(MAKE)
+
+EXTHAN: EXTHAN.bpr
+  $(MAKE)
+
+EXTMAIN: EXTMAIN.bpr
+  $(MAKE)
+
+EXTRIG: EXTRIG.bpr
+  $(MAKE)
+
+EXVIEW: EXVIEW.bpr
+  $(MAKE)
+
+ExVoice: ExVoice.bpr
+  $(MAKE)
+
+ExWPackt: ExWPackt.bpr
+  $(MAKE)
+
+EXWZRECV: EXWZRECV.bpr
+  $(MAKE)
+
+EXWZSEND: EXWZSEND.bpr
+  $(MAKE)
+
+EXZRECV: EXZRECV.bpr
+  $(MAKE)
+
+EXZSEND: EXZSEND.bpr
+  $(MAKE)
+
+FaxMon: FaxMon.bpr
+  $(MAKE)
+
+FaxServr: FaxServr.bpr
+  $(MAKE)
+
+FAXSERVX: FAXSERVX.bpr
+  $(MAKE)
+
+QryMdm: QryMdm.bpr
+  $(MAKE)
+
+RCVFAX: RCVFAX.bpr
+  $(MAKE)
+
+VIEWFAX: VIEWFAX.bpr
+  $(MAKE)
+
+WSTELNET: WSTELNET.bpr
+  $(MAKE)
+
+BatchDel: BatchDel.bat
+  call $**
+
+
+Sendfax: Sendfax.bpr
+  $(MAKE)
+
+ExScript: ExScript.bpr
+  $(MAKE)
+
+ExFtpDir: ExFtpDir.bpr
+  $(MAKE)
+
+ExPaging: ExPaging.bpr
+  $(MAKE)
+
+FxClnt: FxClnt.bpr
+  $(MAKE)
+
+FxServr: FxServr.bpr
+  $(MAKE)
+
+RasDemo: RasDemo.bpr
+  $(MAKE)
+
+

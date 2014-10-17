@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "ApxLibModem"
+  GeneratorVersion = "v4.04"
+  GeneratorDate = "2002.08.26">  <Modem
+    ForwardDelay = "1242320"
+    CallSetupFailTimeout = "5665480"
+    InactivityTimeout = "32"
+    SupportsWaitForBongTone = "1"
+    SupportsWaitForQuiet = "1"
+    SupportsWaitForDialTone = "1"
+    SupportsSpeakerVolumeLow = "0"
+    SupportsSpeakerVolumeMed = "1"
+    SupportsSpeakerVolumeHigh = "0"
+    SupportsSpeakerModeOff = "0"
+    SupportsSpeakerModeDial = "1"
+    SupportsSpeakerModeOn = "1"
+    SupportsSpeakerModeSetup = "1"
+    SupportsSetDataCompressionNegot = "1"
+    SupportsSetErrorControlProtNegot = "1"
+    SupportsSetForcedErrorControl = "1"
+    SupportsSetCellular = "1"
+    SupportsSetHardwareFlowControl = "1"
+    SupportsSetSoftwareFlowControl = "1"
+    SupportsCCITTBellToggle = "1"
+    SupportsSetSpeedNegotiation = "1"
+    SupportsSetTonePulse = "1"
+    SupportsBlindDial = "1"
+    SupportsSetV21V23 = "1"
+    SupportsModemDiagnostics = "0"
+    MaxDTERate = "48401"
+    MaxDCERate = "4206264"
+    PowerDelay = "4362996"
+    ConfigDelay = "48401">
+    <Responses>
+      <OKResponses></OKResponses>
+
+</ModemList>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "U.S. Robotics 56k Voice Faxmodem USB"
+     Manufacturer = "3Com"
+     Model = "USB\VID_04C1&amp;PID_0097"
+     Reset = "ATZ&lt;cr&gt;"
+     VariableTerminator = "&lt;cr&gt;&lt;lf&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <DateResponses>DATE = </DateResponses>
+       <TimeResponses>TIME = </TimeResponses>
+       <NumberResponses>NMBR = </NumberResponses>
+       <NameResponses>NAME = </NameResponses>
+       <MessageResponses>MESG = </MessageResponses>
+       <VoiceResponses>&lt;cr&gt;&lt;lf&gt;VCON&lt;cr&gt;&lt;lf&gt;</VoiceResponses>
+       <OtherResponses Type = "18">RING A&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "19">RING B&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+       <OtherResponses Type = "1A">RING C&lt;cr&gt;&lt;lf&gt;</OtherResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice
+       VoiceProfile = "27"
+       SpeakerPhoneSpecs = "FF"
+       AbortPlay = "&lt;h10&gt;&lt;h18&gt;"
+       CallerIDOutSide = "O"
+       CallerIDPrivate = "P"
+       TerminatePlay = "&lt;h10&gt;&lt;h03&gt;"
+       TerminateRecord = "&lt;h10&gt;"
+       VoiceManufacturerID = "01"
+       VoiceProductIDWaveIn = "80"
+       VoiceProductIDWaveOut = "81">
+       <CloseHandset Sequence = "1">AT#CLS=0&lt;cr&gt;</CloseHandset>
+       <EnableCallerID Sequence = "1">AT#CID=1&lt;cr&gt;</EnableCallerID>
+       <EnableDistinctiveRing Sequence = "1">ATS41=1&lt;cr&gt;</EnableDistinctiveRing>
+       <GenerateDigit Sequence = "1">AT#VTS=&lt;Digit&gt;&lt;cr&gt;</GenerateDigit>
+       <HandsetPlayFormat Sequence = "1">AT#VSR=8000&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "2">AT#VBS=4&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetPlayFormat Sequence = "3">AT#VLS=1&lt;cr&gt;</HandsetPlayFormat>
+       <HandsetRecordFormat Sequence = "1">AT#VSR=8000&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "2">AT#VBS=4&lt;cr&gt;</HandsetRecordFormat>
+       <HandsetRecordFormat Sequence = "3">AT#VLS=1&lt;cr&gt;</HandsetRecordFormat>
+       <LineSetPlayFormat Sequence = "1">AT#VSR=8000&lt;cr&gt;</LineSetPlayFormat>
+       <LineSetPlayFormat Sequence = "2">AT#VBS=4&lt;cr&gt;</LineSetPlayFormat>
+       <LineSetPlayFormat Sequence = "3">AT#VLS=0&lt;cr&gt;</LineSetPlayFormat>
+       <LineSetRecordFormat Sequence = "1">AT#VSR=8000&lt;cr&gt;</LineSetRecordFormat>
+       <LineSetRecordFormat Sequence = "2">AT#VBS=4&lt;cr&gt;</LineSetRecordFormat>
+       <LineSetRecordFormat Sequence = "3">AT#VLS=0&lt;cr&gt;</LineSetRecordFormat>
+       <OpenHandset Sequence = "1">AT#CLS=8&lt;cr&gt;</OpenHandset>
+       <OpenHandset Sequence = "2">AT#VLS=1&lt;cr&gt;</OpenHandset>
+       <SpeakerPhoneDisable Sequence = "1">AT#VLS=0&lt;cr&gt;</SpeakerPhoneDisable>
+       <SpeakerPhoneEnable Sequence = "1">AT#VLS=6a&lt;cr&gt;</SpeakerPhoneEnable>
+       <SpeakerPhoneMute Sequence = "1">AT#VLS=0&lt;cr&gt;</SpeakerPhoneMute>
+       <SpeakerPhoneSetVolumeGain Sequence = "1">AT#VGR=&lt;Vol&gt;#VGT=&lt;Gain&gt;&lt;cr&gt;</SpeakerPhoneSetVolumeGain>
+       <SpeakerPhoneUnMute Sequence = "1">AT#VLS=6A&lt;cr&gt;</SpeakerPhoneUnMute>
+       <StartPlay Sequence = "1">&quot;AT#VSM=130</StartPlay>
+       <StartPlay Sequence = "2">AT#VTX&lt;cr&gt;</StartPlay>
+       <StartRecord Sequence = "1">&quot;AT#VSM=130</StartRecord>
+       <StartRecord Sequence = "2">AT#VRX&lt;cr&gt;</StartRecord>
+       <StopPlay Sequence = "1">AT#BDR=0&lt;cr&gt;</StopPlay>
+       <StopRecord Sequence = "1">AT#BDR=0&lt;cr&gt;</StopRecord>
+       <VoiceAnswer Sequence = "1">AT#CLS=8&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "2">AT#VLS=0&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "3">AT#VBT=1&lt;cr&gt;</VoiceAnswer>
+       <VoiceAnswer Sequence = "4">ATA&lt;cr&gt;</VoiceAnswer>
+       <VoiceDialNumberSetup Sequence = "1">AT#CLS=8&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "2">AT#VLS=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "3">AT#VRN=0&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceDialNumberSetup Sequence = "4">AT#VBT=1&lt;cr&gt;</VoiceDialNumberSetup>
+       <VoiceToDataAnswer Sequence = "1">AT#CLS=0&lt;cr&gt;</VoiceToDataAnswer>
+       <VoiceToDataAnswer Sequence = "2">ATA&lt;cr&gt;</VoiceToDataAnswer>
+       <WaveDriver
+          BaudRate = "00,c2,01,00"
+          WaveHardwareID = "RockwellADPCMVoiceModemWave">
+         <WaveFormat ChipSet = "IMA ADPCM" Speed = "8000" SampleSize = "4"/>
+       </WaveDriver>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F1 E0 Q0 V1 &amp;C1 &amp;D2 &amp;A3 &amp;S0 &amp;B1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;H1&amp;R2&amp;I0"
+        FlowControl_Off = "&amp;H0&amp;I0&amp;R1"
+        FlowControl_Soft = "&amp;H2&amp;I2&amp;R1"
+        ErrorControl_Forced = "&amp;M5"
+        ErrorControl_Off = "&amp;M0"
+        ErrorControl_On = "&amp;M4"
+        Compression_Off= "&amp;K0"
+        Compression_On = "&amp;K1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S19=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "3Com OfficeConnect Analog USB"
+     Manufacturer = "3Com"
+     Model = "USB\VID_04C1&amp;PID_0082"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "230400"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F1 E0 Q0 V1 &amp;C1 &amp;D2 &amp;A3 &amp;S0 &amp;B1 S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;H1&amp;R2&amp;I0"
+        FlowControl_Off = "&amp;H0&amp;I0&amp;R1"
+        FlowControl_Soft = "&amp;H2&amp;I2&amp;R1"
+        ErrorControl_Forced = "&amp;M5"
+        ErrorControl_Off = "&amp;M0"
+        ErrorControl_On = "&amp;M4"
+        Compression_Off= "&amp;K0"
+        Compression_On = "&amp;K1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S19=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "3Com U.S. Robotics Pro ISDN TA"
+     Manufacturer = "3Com"
+     Model = "UNIMODEM9F3505CD"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "255"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "64000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;F1&amp;B1&amp;C1&amp;D2E0Q0V1&amp;A1S0=0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;H1&amp;R2&amp;I0"
+        FlowControl_Off = "&amp;H0&amp;I0&amp;R1"
+        FlowControl_Soft = "&amp;H2&amp;I2&amp;R1"
+        ErrorControl_Forced = "&amp;M5"
+        ErrorControl_Off = "&amp;M0"
+        ErrorControl_On = "&amp;M4"
+        Compression_Off= "&amp;K0"
+        Compression_On = "&amp;K1"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S19=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+       <SetMSN Sequence = "1">AT*P2=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT*P1=%s&lt;cr&gt;</SetMSN>
+       <NvSave Sequence = "1">AT&amp;W&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">ATZ!&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "AT*W=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT*VI=1*VO=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT*VI=5*VO=5*PPP=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT*VI=5*VO=5*PPP=3&lt;cr&gt;"/>
+       <Protocol Protocol = "AUTO_2CH" Command = "AT*VI=5*VO=5&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

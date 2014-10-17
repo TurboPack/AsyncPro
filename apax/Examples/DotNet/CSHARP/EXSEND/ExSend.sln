@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExSend", "ExSend.csproj", "{CB8AD040-9301-46DD-9C9F-CAB50C0CF420}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CB8AD040-9301-46DD-9C9F-CAB50C0CF420}.Debug.ActiveCfg = Debug|.NET
+		{CB8AD040-9301-46DD-9C9F-CAB50C0CF420}.Debug.Build.0 = Debug|.NET
+		{CB8AD040-9301-46DD-9C9F-CAB50C0CF420}.Release.ActiveCfg = Release|.NET
+		{CB8AD040-9301-46DD-9C9F-CAB50C0CF420}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

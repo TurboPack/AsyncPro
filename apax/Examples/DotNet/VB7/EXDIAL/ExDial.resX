@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+            Microsoft ResX Schema 
+        
+            Version 1.3
+                
+            The primary goals of this format is to allow a simple XML format 
+            that is mostly human readable. The generation and parsing of the 
+            various data types are done through the TypeConverter classes 
+            associated with the data types.
+        
+            Example:
+        
+                ... ado.net/XML headers & schema ...
+                <resheader name="resmimetype">text/microsoft-resx</resheader>
+                <resheader name="version">1.3</resheader>
+                <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+                <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                <data name="Name1">this is my long string</data>
+                <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+                <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+                    [base64 mime encoded serialized .NET Framework object]
+                </data>
+                <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+                    [base64 mime encoded string representing a byte array form of the .NET Framework object]
+                </data>
+        
+            There are any number of "resheader" rows that contain simple 
+            name/value pairs.
+            
+            Each data row contains a name, and value. The row also contains a 
+            type or mimetype. Type corresponds to a .NET class that support 
+            text/value conversion through the TypeConverter architecture. 
+            Classes that don't support this are serialized and stored with the 
+            mimetype set.
+                     
+            The mimetype is used for serialized objects, and tells the 
+            ResXResourceReader how to depersist the object. This is currently not 
+            extensible. For a given mimetype the value must be set accordingly:
+        
+            Note - application/x-microsoft.net.object.binary.base64 is the format 
+                   that the ResXResourceWriter will generate, however the reader can 
+                   read any of the formats listed below.
+        
+            mimetype: application/x-microsoft.net.object.binary.base64
+            value   : The object must be serialized with 
+                    : System.Serialization.Formatters.Binary.BinaryFormatter
+                    : and then encoded with base64 encoding.
+        
+            mimetype: application/x-microsoft.net.object.soap.base64
+            value   : The object must be serialized with 
+                    : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+                    : and then encoded with base64 encoding.
+            mimetype: application/x-microsoft.net.object.bytearray.base64
+            value   : The object must be serialized into a byte array 
+                    : using a System.ComponentModel.TypeConverter
+                    : and then encoded with base64 encoding.
+        -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ToolTip1.Location" type="System.Drawing.Point, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </data>
+  <data name="ToolTip1.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="Apax1.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="Apax1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFpTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0xLjAuMzMw
+        MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFT
+        eXN0ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA8AgA
+        AAIBAAAAAQAAAAAmAAAAezIxM0UwQjFGLTM0NjQtNDJBQy1BMkI1LUNFOTAzOUVENzg1Mn0AAAAAtQgA
+        AFRQRjAMVEFweFRlcm1pbmFsAARMZWZ0AgADVG9wAlgFV2lkdGgDUQEGSGVpZ2h0A9kABEJhdWQDAEsJ
+        Q29tTnVtYmVyAgAKRGV2aWNlVHlwZQcGZHRUQVBJCERhdGFCaXRzAggDRFRSCQxIV0Zsb3dVc2VEVFII
+        DEhXRmxvd1VzZVJUUwgQSFdGbG93UmVxdWlyZURTUggQSFdGbG93UmVxdWlyZUNUUwgKSW5CdWZmU2l6
+        ZQMAEAlMb2dBbGxIZXgIB0xvZ2dpbmcHBXRsT2ZmBkxvZ0hleAkHTG9nTmFtZQYIQVBSTy5MT0cHTG9n
+        U2l6ZQMQJwtPdXRCdWZmU2l6ZQMAEAZQYXJpdHkHBXBOb25lDVByb21wdEZvclBvcnQJCVJTNDg1TW9k
+        ZQgDUlRTCQhTdG9wQml0cwIBDVNXRmxvd09wdGlvbnMHB3N3Zk5vbmUIWE9mZkNoYXICEwdYT25DaGFy
+        AhELV2luc29ja01vZGUHCHdzQ2xpZW50C1dpbnNvY2tQb3J0BgZ0ZWxuZXQIV3NUZWxuZXQJDEFuc3dl
+        ck9uUmluZwICC0VuYWJsZVZvaWNlCAtNYXhBdHRlbXB0cwIDDUludGVycnVwdFdhdmUJEE1heE1lc3Nh
+        Z2VMZW5ndGgCPBBTaWxlbmNlVGhyZXNob2xkAjINVGFwaVJldHJ5V2FpdAI8C1RyaW1TZWNvbmRzAgIR
+        VGFwaVN0YXR1c0Rpc3BsYXkJDFVzZVNvdW5kQ2FyZAgLQ2FwdHVyZUZpbGUGDEFQUk9URVJNLkNBUAtD
+        YXB0dXJlTW9kZQcFY21PZmYFQ29sb3IHBmNsTmF2eQdDb2x1bW5zAlAJRW11bGF0aW9uBwV0ZVRUWQxG
+        b250LkNoYXJzZXQHC09FTV9DSEFSU0VUCkZvbnQuQ29sb3IHCGNsU2lsdmVyC0ZvbnQuSGVpZ2h0AvQJ
+        Rm9udC5OYW1lBghUZXJtaW5hbApGb250LlN0eWxlCwAEUm93cwIYEVNjcm9sbGJhY2tFbmFibGVkCA5T
+        Y3JvbGxiYWNrUm93cwPIAA5UZXJtaW5hbEFjdGl2ZQkRVGVybWluYWxCbGlua1RpbWUD9AESVGVybWlu
+        YWxIYWxmRHVwbGV4CBVUZXJtaW5hbExhenlCeXRlRGVsYXkDyAAVVGVybWluYWxMYXp5VGltZURlbGF5
+        AmQWVGVybWluYWxVc2VMYXp5RGlzcGxheQkTVGVybWluYWxXYW50QWxsS2V5cwkHVmVyc2lvbgYLMS4x
+        MSBCZXRhIDEVUHJvdG9jb2xTdGF0dXNEaXNwbGF5CQhQcm90b2NvbAcIcHRabW9kZW0OQWJvcnROb0Nh
+        cnJpZXIIDkFzY2lpQ2hhckRlbGF5AgASQXNjaWlDUlRyYW5zbGF0aW9uBwdhZXROb25lD0FzY2lpRU9G
+        VGltZW91dANsAQxBc2NpaUVPTENoYXICDRJBc2NpaUxGVHJhbnNsYXRpb24HB2FldE5vbmUOQXNjaWlM
+        aW5lRGVsYXkCABJBc2NpaVN1cHByZXNzQ3RybFoIEEJsb2NrQ2hlY2tNZXRob2QHCGJjbUNyYzMyCkZp
+        bmlzaFdhaXQDbAEOSGFuZHNoYWtlUmV0cnkCCg1IYW5kc2hha2VXYWl0A0QEDkhvbm9yRGlyZWN0b3J5
+        CBBJbmNsdWRlRGlyZWN0b3J5CA9LZXJtaXRDdGxQcmVmaXgCIxNLZXJtaXRIaWdoYml0UHJlZml4AlkM
+        S2VybWl0TWF4TGVuAlAQS2VybWl0TWF4V2luZG93cwIAEktlcm1pdFBhZENoYXJhY3RlcgIADktlcm1p
+        dFBhZENvdW50AgASS2VybWl0UmVwZWF0UHJlZml4An4SS2VybWl0U1dDVHVybkRlbGF5AgAQS2VybWl0
+        VGVybWluYXRvcgINEUtlcm1pdFRpbWVvdXRTZWNzAgUOUlRTTG93Rm9yV3JpdGUIDFNlbmRGaWxlTmFt
+        ZQYDKi4qDlN0YXR1c0ludGVydmFsAgoPVHJhbnNtaXRUaW1lb3V0A0QED1VwY2FzZUZpbGVOYW1lcwkP
+        V3JpdGVGYWlsQWN0aW9uBw13ZldyaXRlUmVuYW1lEFhZbW9kZW1CbG9ja1dhaXQCWwhabW9kZW04SwgR
+        Wm1vZGVtRmlsZU9wdGlvbnMHDXpmb1dyaXRlTmV3ZXIRWm1vZGVtRmluaXNoUmV0cnkCABRabW9kZW1P
+        cHRpb25PdmVycmlkZQgNWm1vZGVtUmVjb3ZlcggQWm1vZGVtU2tpcE5vRmlsZQgHQ2FwdGlvbgYKQVBB
+        WCB2MS4wMBBDYXB0aW9uQWxpZ25tZW50Bwh0YUNlbnRlcgxDYXB0aW9uV2lkdGgCZApMaWdodFdpZHRo
+        AigOTGlnaHRzTGl0Q29sb3IHBWNsUmVkEUxpZ2h0c05vdExpdENvbG9yBwZjbFRlYWwRU2hvd0xpZ2h0
+        Q2FwdGlvbnMJClNob3dMaWdodHMJDVNob3dTdGF0dXNCYXIJC1Nob3dUb29sQmFyCBNTaG93RGV2aWNl
+        U2VsQnV0dG9uCRJTaG93Q29ubmVjdEJ1dHRvbnMJE1Nob3dQcm90b2NvbEJ1dHRvbnMJE1Nob3dUZXJt
+        aW5hbEJ1dHRvbnMJDk1TQ29tbUNvbW1Qb3J0AgAQTVNDb21tQ29tcGF0aWJsZQgPTVNDb21tRFRSRW5h
+        YmxlCRFNU0NvbW1IYW5kc2hha2luZwIAEk1TQ29tbUluQnVmZmVyU2l6ZQMABA5NU0NvbW1JbnB1dExl
+        bgIAD01TQ29tbUlucHV0TW9kZQIAE01TQ29tbU91dEJ1ZmZlclNpemUDAAIPTVNDb21tUlRTRW5hYmxl
+        CRFNU0NvbW1SVFRocmVzaG9sZAIADk1TQ29tbVNldHRpbmdzBgsxOTIwMCxOLDgsMRBNU0NvbW1TVGhy
+        ZXNob2xkAgAAAAs=
+</value>
+  </data>
+  <data name="cmdCancel.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="edtPhoneNumber.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="cmdTapi.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="cmdDirect.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="Label1.Modifiers" type="System.CodeDom.MemberAttributes, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Public</value>
+  </data>
+  <data name="$this.Name">
+    <value>Form1</value>
+  </data>
+</root>

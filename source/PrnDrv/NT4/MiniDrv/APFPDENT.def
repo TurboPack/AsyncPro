@@ -1,0 +1,8 @@
+LIBRARY apfpdent
+
+DESCRIPTION '"APF Fax Printer Driver Engine'
+
+EXPORTS
+    bInitProc
+
+PROTMODE

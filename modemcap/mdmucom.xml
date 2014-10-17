@@ -1,0 +1,1963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "Ucom Nordic WM-3417CRN (V.34)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem12"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-1414CRN (V.32bis)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem11"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-3417ARN (V.34)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem10"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-1414ARN (V.32bis)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem9"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-3417CIA (V.34)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem8"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-1414CIA (V.32bis)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem7"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-3417CR (V.34)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem6"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-2814CR (V.FC)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem5"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-1414CR (V.32bis)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "Ucom_Modem4"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-3417AR (V.34)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "UNIMODEMB4612582"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-2814AR (V.FC)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "UNIMODEMF4207C7E"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Ucom Nordic WM-1414AR (V.32bis)"
+     Manufacturer = "Ucom AS (Nordic series)"
+     Model = "UNIMODEM37DAE127"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "1"
+     SupportsSetSpeedNegotiation = "1"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>81&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>RINGING</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: MNP5</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: V.42 BIS</NegotiationProgressResponses>
+       <NegotiationProgressResponses>COMPRESSION: ADC</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ERROR-CONTROL/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: X.25/LAPB/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/HDX</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAPM/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: LAP-M/AFT</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: ALT-CELLULAR</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP3</NegotiationProgressResponses>
+       <NegotiationProgressResponses>PROTOCOL: MNP4</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 1</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 2</NegotiationProgressResponses>
+       <NegotiationProgressResponses>AUTOSTREAM: LEVEL 3</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>9&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>40&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>44&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>45&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>46&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>47&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>48&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>49&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>50&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>51&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>52&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>53&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>54&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>55&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>56&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>57&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>58&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>59&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>+FC&lt;cr&gt;</ErrorResponses>
+       <NoAnswerResponses>24&lt;cr&gt;</NoAnswerResponses>
+       <NoAnswerResponses>32&lt;cr&gt;</NoAnswerResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1&amp;C1&amp;D2&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&amp;S0&amp;R1-K0S0=0S6=3S7=60S95=47&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "&amp;K3"
+        FlowControl_Off = "&amp;K0"
+        FlowControl_Soft = "&amp;K4"
+        ErrorControl_Forced = "&amp;Q5S36=4S48=128"
+        ErrorControl_Off = "&amp;Q5S36=3S48=7"
+        ErrorControl_On = "&amp;Q5S36=7S48=7"
+        Compression_Off= "S46=136%%C0"
+        Compression_On = "S46=138%%C3"
+        Modulation_Bell = "B1"
+        Modulation_CCITT = "B0"
+        SpeedNegotitiation_On = "N1"
+        SpeedNegotitiation_Off = "N0"
+        Pulse = "T"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <BaudRates>230400</BaudRates>
+     <Options>ARQ</Options>
+     <Options>REL</Options>
+     <Options>MNP</Options>
+     <Options>LAP-M</Options>
+     <Options>V42BIS</Options>
+     <Options>V42b</Options>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

@@ -1,0 +1,45 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ExFaxOd ExFOdR ExFOdS ExRecord EXTAPI EXTAPIA EXTAPID EXTAPIF ExVoice
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+ExFaxOd: ExFaxOd.bpr
+  $(MAKE)
+
+ExFOdR: ExFOdR.bpr
+  $(MAKE)
+
+ExFOdS: ExFOdS.bpr
+  $(MAKE)
+
+ExRecord: ExRecord.bpr
+  $(MAKE)
+
+EXTAPI: EXTAPI.bpr
+  $(MAKE)
+
+EXTAPIA: EXTAPIA.bpr
+  $(MAKE)
+
+EXTAPID: EXTAPID.bpr
+  $(MAKE)
+
+EXTAPIF: EXTAPIF.bpr
+  $(MAKE)
+
+ExVoice: ExVoice.bpr
+  $(MAKE)
+
+

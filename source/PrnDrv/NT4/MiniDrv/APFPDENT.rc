@@ -1,0 +1,89 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is TurboPower Async Professional
+ *
+ * The Initial Developer of the Original Code is
+ * TurboPower Software
+ *
+ * Portions created by the Initial Developer are Copyright (C) 1991-2002
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/****************************************************************/
+/* Note that entry 1 in the string table has been moved to each */
+/* specific driver's RC file.  It must be copied back into this */
+/* string table before loading the project into UniTool (and    */
+/* removed after UniTool has updated the project).  An example  */
+/* entry for entry 1 in the string table is :                   */
+/*      1                  "APF Fax"                            */
+/****************************************************************/
+
+#define VERSIONINFO_1   1
+#define VOS_NT_WINDOWS32        0x00040004L         
+#define VFT_APP                 0x00000001L         
+
+VERSIONINFO_1 VERSIONINFO
+FILEVERSION 4, 06, 0, 0
+PRODUCTVERSION 4, 06, 0, 0
+FILEOS VOS_NT_WINDOWS32        
+FILETYPE VFT_APP
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904E4"
+  {
+   VALUE "CompanyName", "TurboPower Software Company\000\000"
+   VALUE "FileDescription", "APF Fax Printer Driver Engine\000\000"
+   VALUE "FileVersion", "4.06.0.0\000\000"
+   VALUE "InternalName", "APFPDENT.DLL\000\000"
+   VALUE "LegalCopyright", "Copyright © TurboPower Software Company 1998-2002\000\000"
+   VALUE "OriginalFilename", "APFPDENT.DLL\000\000"
+   VALUE "ProductName", "Async Professional\000\000"
+   VALUE "ProductVersion", "4.06\000\000"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}
+
+#include <MinDrvRC.h>
+
+/****************************************************************/
+/* These following resources are maintained by the Windows SDK  */
+/* program UniTool.  The string table cannot have any other     */
+/* user-defined data or else UniTool will reject the file.  The */
+/* existing string table entries can be edited, but the numeric */
+/* values must not be changed.                                  */
+/****************************************************************/
+
+1      RC_TABLES   PRELOAD MOVEABLE        APFPDENT.GPC
+2      RC_TABLES   PRELOAD MOVEABLE        NT.GPC
+
+
+STRINGTABLE
+
+BEGIN
+       1                  "Print To Fax (AP)"
+       257                "High"
+       258                "Standard"
+       259                "Fax"
+END

@@ -1,0 +1,12 @@
+PRINTER DRIVER INSTALLATION USING INF FILES
+
+Copy the compiled printer driver files to the current directory.
+
+These INF files assume that the following Windows files are also available
+in the i386 subdirectory:
+
+RASDD.DLL
+RASDDUI.DLL
+RASDDUI.CNT
+RASDDUI.HLP
+

@@ -1,0 +1,26 @@
+TARGETNAME=apfmon40
+TARGETPATH=$(BASEDIR)\lib
+TARGETTYPE=DYNLINK
+
+TARGETLIBS=$(BASEDIR)\lib\*\$(DDKBUILDENV)\kernel32.lib     \
+           $(BASEDIR)\lib\*\$(DDKBUILDENV)\advapi32.lib     \
+           $(BASEDIR)\lib\*\$(DDKBUILDENV)\user32.lib       \
+           $(BASEDIR)\lib\*\$(DDKBUILDENV)\spoolss.lib
+
+C_DEFINES=-DUNICODE -DNO_STRICT
+
+DLLENTRY=DllEntryPoint
+DLLBASE=0x50500000
+
+INCLUDES=..\inc
+
+USE_CRTDLL=1
+
+SOURCES=apfmon40.c \
+        config.c   \
+        apfmon40.c \
+        util.c     \
+        winspool.c \
+        apfmon40.rc
+
+

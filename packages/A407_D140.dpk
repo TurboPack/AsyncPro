@@ -1,0 +1,45 @@
+package A407_D140;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'TurboPower Async Professional 4.07 Designtime Package - VCL140'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  designide,
+  rtl,
+  vclx,
+  A407_R140;
+
+contains
+  APROREG in '..\source\APROREG.PAS',
+  adabout in '..\source\adabout.pas' {ApdAboutForm},
+  adpacked in '..\source\adpacked.pas' {PacketEditor},
+  Adpedit0 in '..\source\Adpedit0.pas' {AdPEdit},
+  Adpeditt in '..\source\Adpeditt.pas',
+  AdPropEd in '..\source\AdPropEd.pas',
+  AdStatEd in '..\source\AdStatEd.pas' {frmStateEdit},
+  AdStatE0 in '..\source\AdStatE0.pas' {frmConditionEdit};
+
+end.

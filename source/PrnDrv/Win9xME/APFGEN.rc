@@ -1,0 +1,13 @@
+#include "PDRVINST.INC"
+
+STRINGTABLE 
+{
+ idDriverName, "Print to Fax"
+ idPortName, "PRINTFAX:"
+ idComment, "Print to this device to generate an APF file"
+ idSepFile, ""
+ idServerName, ""
+ idPrintProcessor, "WinPrint"
+ idDataType, "RAW"
+}
+

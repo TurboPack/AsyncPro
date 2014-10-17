@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExTapi", "ExTapi.csproj", "{6A24223C-4E79-453F-B2CA-F37EBDDF248D}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6A24223C-4E79-453F-B2CA-F37EBDDF248D}.Debug.ActiveCfg = Debug|.NET
+		{6A24223C-4E79-453F-B2CA-F37EBDDF248D}.Debug.Build.0 = Debug|.NET
+		{6A24223C-4E79-453F-B2CA-F37EBDDF248D}.Release.ActiveCfg = Release|.NET
+		{6A24223C-4E79-453F-B2CA-F37EBDDF248D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

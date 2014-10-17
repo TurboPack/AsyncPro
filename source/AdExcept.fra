@@ -1,0 +1,833 @@
+(***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is TurboPower Async Professional
+ *
+ * The Initial Developer of the Original Code is
+ * TurboPower Software
+ *
+ * Portions created by the Initial Developer are Copyright (C) 1991-2002
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK ***** *)
+
+{*********************************************************}
+{*                  ADEXCEPT.FRA 4.04                    *}
+{*     French string resources for errors and status     *}
+{*********************************************************}
+
+(*
+  All string resources have been moved into this resourcestring file in
+  APRO 4.03.  The APRO String Resource Manager is still available, but
+  not used by default.  Disable the {$DEFINE UseResourceStrings} define
+  in AwDefine.inc to revert back to the string resource manager if desired.
+  AdExcept.inc contains English strings
+  AdExcept.fra contains French strings
+  AdExcept.deu contains German strings
+  AdExcept.esp contains Spanish strings
+  AdExcept.sw contains Swedish strings
+  AdExcept.nor constains Norwegian strings
+  AdExcept.dk contains Danish strings
+
+  Where a translation was not available, the English version was used.
+  If you have a translation for the strings, please send them to us
+  through the mailsupport@turbopower.com email address, or through
+  the turbopower.public.third-party.internationalization newsgroup.
+  We will include the translation in the next release of APRO. Thanks.
+*)
+
+resourcestring
+{ Numbers in the comments correspond to the ErrorCode passed in many of our }
+{ events.  Strings without the numbers do not have corresponding ErrorCodes }
+  {No error}
+  secOK                             {   0} = 'OK';
+
+  {egDOS}
+  secFileNotFound                   {   2} = 'Fichier introuvable';
+  secPathNotFound                   {   3} = 'Chemin introuvable';
+  secTooManyFiles                   {   4} = 'Trop de fichiers ouverts';
+  secAccessDenied                   {   5} = 'Accès au fichier refusé';
+  secInvalidHandle                  {   6} = 'Handle de fichier incorrect';
+  secOutOfMemory                    {   8} = 'Mémoire insuffisante';
+  secInvalidDrive                   {  15} = 'Lecteur incorrect';
+  secNoMoreFiles                    {  18} = 'Plus de fichiers';
+  secDiskRead                       { 100} = 'Tentative de lire au-delà de la fin de fichier';
+  secDiskFull                       { 101} = 'Disque plein';
+  secNotAssigned                    { 102} = 'Fichier/périphérique non assigné';
+  secNotOpen                        { 103} = 'Fichier/périphérique non ouvert';
+  secNotOpenInput                   { 104} = 'Fichier/périphérique non ouvert en entrée';
+  secNotOpenOutput                  { 105} = 'Fichier/périphérique non ouvert en sortie';
+  secWriteProtected                 { 150} = 'Le disque est protégé en écriture';
+  secUnknownUnit                    { 151} = 'Unité de disque inconnue';
+  secDriveNotReady                  { 152} = 'Lecteur non prêt';
+  secUnknownCommand                 { 153} = 'Commande inconnue';
+  secCrcError                       { 154} = 'Erreur de données';
+  secBadStructLen                   { 155} = 'Mauvaise longueur de structure de requête';
+  secSeekError                      { 156} = 'Erreur de recherche';
+  secUnknownMedia                   { 157} = 'Type de support inconnu';
+  secSectorNotFound                 { 158} = 'Secteur du disque introuvable';
+  secOutOfPaper                     { 159} = 'Plus de papier';
+  secDeviceWrite                    { 160} = 'Erreur d''écriture sur le périphérique';
+  secDeviceRead                     { 161} = 'Erreur de lecture sur le périphérique';
+  secHardwareFailure                { 162} = 'Echec général';
+
+  {egGeneral}
+  secBadHandle                      {1001} = 'Mauvais handle passé à la fonction de communication';
+  secBadArgument                    {1002} = 'Mauvais argument passé à la fonction';
+  secGotQuitMsg                     {1003} = 'Reçu un message d''arrêt';
+  secBufferTooBig                   {1004} = 'Tampon du terminal buffer supérieur à 65521';
+  secPortNotAssigned                {1005} = 'Composant ComPort non assigné';
+  secInternal                       {1006} = 'Erreur interne lors de la création de la classe de fenêtre';
+  secModemNotAssigned               {1007} = 'Composant Modem non assigné';
+  secPhonebookNotAssigned           {1008} = 'Composant répertoire non assigné';
+  secCannotUseWithWinSock           {1009} = 'Composant incompatible avec WinSock';
+
+  {egOpenComm}
+  secBadId                          {2001} = 'ie_BadId - le port Com spécifié n''existe pas';
+  secBaudRate                       {2002} = 'ie_Baudrate - vitesse en baud non supportée';
+  secByteSize                       {2003} = 'ie_Bytesize - taille en octets incorrecte';
+  secDefault                        {2004} = 'ie_Default - erreur dans les paramètres par défaut';
+  secHardware                       {2005} = 'ie_Hardware - le port Com spécifié est en cours d''utilisation';
+  secMemory                         {2006} = 'ie_Memory - impossible d''allouer des files';
+  secCommNotOpen                    {2007} = 'ie_NOpen - périphérique non ouvert';
+  secAlreadyOpen                    {2008} = 'ie_Open - périphérique déjà open';
+  secNoHandles                      {2009} = 'Plus de handles, impossible d''ouvrir le port';
+  secNoTimers                       {2010} = 'Aucun timer disponible';
+  secNoPortSelected                 {2011} = 'La propriété ComNumber de TApdComPort n''a pas été initialisée';
+  secNotOpenedByTapi                {2012} = 'Comport was not opened by Tapi';
+
+  {egSerialIO}
+  secNullApi                        {3001} = 'Aucune couche de périphérique spécifiée';
+  secNotSupported                   {3002} = 'Fonction non supporté par le pilote';
+  secRegisterHandlerFailed          {3003} = 'Echec de EnableCommNotification';
+  secPutBlockFail                   {3004} = 'Echec d''écriture du bloc entier';
+  secGetBlockFail                   {3005} = 'Echec de lecture du bloc entier';
+  secOutputBufferTooSmall           {3006} = 'Tampon de sortie trop petit pour le bloc';
+  secBufferIsEmpty                  {3007} = 'Le tampon est vide';
+  secTracingNotEnabled              {3008} = 'Mode trace non activé';
+  secLoggingNotEnabled              {3009} = 'Journalisation non activée';
+  secBaseAddressNotSet              {3010} = 'Adresse de base non initialisée';
+
+  {Modem/Pager}
+  secModemNotStarted                {4001} = 'StartModem n''a pas été appelée';
+  secModemBusy                      {4002} = 'Le modem est occupé ailleurs';
+  secModemNotDialing                {4003} = 'Le modem ne compose pas le numéro';
+  secNotDialing                     {4004} = 'Le numéroteur ne numérote pas';
+  secAlreadyDialing                 {4005} = 'Le numéroteur numérote déjà';
+  secModemNotResponding             {4006} = 'Le modem ne répond pas';
+  secModemRejectedCommand           {4007} = 'Commande incorrecte envoyée au modem';
+  secModemStatusMismatch            {4008} = 'Le statut de modem demandé est erroné';
+
+  secDeviceNotSelected              {4009} = 'Device not selected';
+  secModemDetectedBusy              {4010} = 'Called number is busy';
+  secModemNoDialtone                {4011} = 'No dialtone';
+  secModemNoCarrier                 {4012} = 'No carrier';
+  secModemNoAnswer                  {4013} = 'No answer';
+
+  { Pager }                                                            
+  secInitFail                       {4014} = 'Modem Initialization Failure';
+  secLoginFail                      {4015} = 'Failed to Login';
+  secMinorSrvErr                    {4016} = 'Minor Server Error';
+  secFatalSrvErr                    {4017} = 'Fatal Server Error';
+
+  {LibModem}
+  secModemNotFound                  {4020} = 'Modem not found';
+  secInvalidFile                    {4021} = 'Invalid modemcap file';
+
+  {deprecated, duplicate values different names}
+  {TApdPhoneBookEditor}
+  spbeDeleteQuery                   {4101} = 'Etes-vous sûr(e) de vouloir supprimer cette entrée ?';
+  {TApdSModem}
+  sdsmMsgBase                       {4200} = '';
+  sdsmMsgReady                      {4201} = 'Prêt';
+  sdsmMsgInitialize                 {4202} = 'Initialisation du modem';
+  sdsmMsgInitializeTimeout          {4203} = 'Initialisation hors délais';
+  sdsmMsgAutoAnswerBackground       {4204} = 'AutoAnswer en arrière-plan';
+  sdsmMsgAutoAnswerWait             {4205} = 'Attente d''appel entrant';
+  sdsmMsgAnswerWait                 {4206} = 'Réponse à l''appel';
+  sdsmMsgDialWait                   {4207} = 'Numérotation';
+  sdsmMsgDialCycle                  {4208} = 'Attente de renumérotation';
+  sdsmMsgNoDialtone                 {4209} = 'Pas de tonalité';
+  sdsmMsgConnectWait                {4210} = 'Connecté en attente';
+  sdsmMsgConnected                  {4211} = 'Connecté';
+  sdsmMsgHangup                     {4212} = 'Déconnection';
+  sdsmMsgCancel                     {4213} = 'Annulation';
+  {TApdDialerDialog}
+  sdddCycling                       {4301} = 'Tentative de numérotation répétée . . .';
+  sdddRetryWaiting                  {4302} = 'Attente . . .';
+  sdddRetryWaitOver                 {4303} = 'Attente terminée, renumérotation . . .';
+  sdddDialing                       {4304} = 'Numérotation . . .';
+  sdddModemConnect                  {4305} = 'Modem connecté !';
+  sdddModemConnectAt                {4306} = 'Connecté à %d bauds';
+  sdddModemVoice                    {4307} = 'Résultat de la connection : liaison ''voix'';
+  sdddModemError                    {4308} = 'Résultat de la connection : le modem retourne une erreur';
+  sdddModemNoCarrier                {4309} = 'Résultat de la connection : pas de porteuse, échec de la connection';
+  sdddModemBusy                     {4310} = 'Résultat de la connection : correspondant occupé';
+  sdddModemNoDialTone               {4311} = 'Résultat de la connection : pas de porteuse, vérifiez les connections';
+  sdddDialTimedOut                  {4312} = 'Tentative de numérotation hors délais';
+  {TPhoneBookEntryForm}
+  sdpeMustEnterName                 {4401} = 'Vous devez saisir un nom d''entrée';
+  sdpeMustEnterNumber               {4402} = 'Vous devez saisir un numéro de téléphone';
+  sdpeNameExists                    {4403} = 'Une entrée de répertoire existe déjà sous ce nom';
+
+  {RAS connection status codes}
+  scsOpenPort                       {4500} = 'OpenPort';
+  scsPortOpened                     {4501} = 'PortOpened';
+  scsConnectDevice                  {4502} = 'ConnectDevice';
+  scsDeviceConnected                {4503} = 'DeviceConnected';
+  scsAllDevicesConnected            {4504} = 'AllDevicesConnected';
+  scsAuthenticate                   {4505} = 'Authenticate';
+  scsAuthNotify                     {4506} = 'AuthNotify';
+  scsAuthRetry                      {4507} = 'AuthRetry';
+  scsAuthCallback                   {4508} = 'AuthCallback';
+  scsAuthChangePassword             {4509} = 'AuthChangePassword';
+  scsAuthProject                    {4510} = 'AuthProject';
+  scsAuthLinkSpeed                  {4511} = 'AuthLinkSpeed';
+  scsAuthAck                        {4512} = 'AuthAck';
+  scsReAuthenticate                 {4513} = 'ReAuthenticate';
+  scsAuthenticated                  {4514} = 'Authenticated';
+  scsPrepareForCallback             {4515} = 'PrepareForCallback';
+  scsWaitForModemReset              {4516} = 'WaitForModemReset';
+  scsWaitForCallback                {4517} = 'WaitForCallback';
+  scsProjected                      {4518} = 'Projected';
+  scsStartAuthentication            {4519} = 'StartAuthentication';
+  scsCallbackComplete               {4520} = 'CallbackComplete';
+  scsLogonNetwork                   {4521} = 'LogonNetwork';
+  scsSubEntryConnected              {4522} = 'SubEntryConnected';
+  scsSubEntryDisconnected           {4523} = 'SubEntryDisconnected';
+  scsRasInteractive                 {4550} = 'Interactive';
+  scsRasRetryAuthentication         {4551} = 'RetryAuthentication';
+  scsRasCallbackSetByCaller         {4552} = 'CallbackSetByCaller';
+  scsRasPasswordExpired             {4553} = 'PasswordExpired';
+  scsRasDeviceConnected             {4599} = 'DeviceConnected';
+
+  { Pager TDialingStatus }
+  sPDS_NONE                         {4600} = '';
+  sPDS_OFFHOOK                      {4601} = 'Off Hook';
+  sPDS_DIALING                      {4602} = 'Dialing';
+  sPDS_RINGING                      {4603} = 'Ringing';
+  sPDS_WAITFORCONNECT               {4604} = 'Wait For Connect';
+  sPDS_CONNECTED                    {4605} = 'Connected';
+  sPDS_WAITINGTOREDIAL              {4606} = 'Waiting To Redial';
+  sPDS_REDIALING                    {4607} = 'Redialing';
+  sPDS_MSGNOTSENT                   {4608} = 'Message Not Sent';
+  sPDS_CANCELLING                   {4609} = 'Cancelling';
+  sPDS_DISCONNECT                   {4610} = 'Disconnect';
+  sPDS_CLEANUP                      {4611} = 'Cleanup';
+
+  { PDialingError }
+  sPDE_NONE                         {4630} = '';
+  sPDE_NODIALTONE                   {4631} = 'No Dial Tone';
+  sPDE_LINEBUSY                     {4632} = 'Busy';
+  sPDE_NOCONNECTION                 {4633} = 'No Connection';
+
+  { TTapStatus }
+  sTAPS_NONE                        {4660} = '';
+  sTAPS_LOGINPROMPT                 {4661} = 'Login Prompt';
+  sTAPS_LOGGEDIN                    {4662} = 'Logged In';
+  sTAPS_LOGINERR                    {4663} = 'Login Error';
+  sTAPS_LOGINFAIL                   {4664} = 'Login Fail';
+  sTAPS_MSGOKTOSEND                 {4665} = 'Message Ok To Send';
+  sTAPS_SENDINGMSG                  {4666} = 'Sending Message';
+  sTAPS_MSGACK                      {4667} = 'Message Acknowledged';
+  sTAPS_MSGNAK                      {4668} = 'Message Not Acknowledged';
+  sTAPS_MSGRS                       {4669} = 'Message Error';
+  sTAPS_MSGCOMPLETED                {4670} = 'Message Completed';
+  sTAPS_DONE                        {4671} = 'Done';
+
+  { Protocol status }
+  spsOK                             {4700} = 'OK';
+  spsProtocolHandshake              {4701} = 'Protocole de transfert en cours';
+  spsInvalidDate                    {4702} = 'Mauvais horodatage reçu et ignoré';
+  spsFileRejected                   {4703} = 'Fichier refusé';
+  spsFileRenamed                    {4704} = 'Fichier renommé';
+  spsSkipFile                       {4705} = 'Fichier ignoré';
+  spsFileDoesntExist                {4706} = 'Le fichier n''existe pas localement, ignoré';
+  spsCantWriteFile                  {4707} = 'Fichier ignoré';
+  spsTimeout                        {4708} = 'Dépassement de délai dans le protocole';
+  spsBlockCheckError                {4709} = 'Somme de contrôle ou CRC erroné';
+  spsLongPacket                     {4710} = 'Bloc trop long';
+  spsDuplicateBlock                 {4711} = 'Bloc reçu en double et ignoré ';
+  spsProtocolError                  {4712} = 'Erreur dans le protocole';
+  spsCancelRequested                {4713} = 'Annulation demandée';
+  spsEndFile                        {4714} = 'En fin de fichier';
+  spsResumeBad                      {4715} = 'L''hôte B+ a refusé la demande de reprise';
+  spsSequenceError                  {4716} = 'Bloc hors séquence';
+  spsAbortNoCarrier                 {4717} = 'Abandon sur perte de porteuse';
+
+  {Specific to certain protocols}
+  spsGotCrcE                        {4718} = 'Reçu paquet CrcE (Zmodem)';
+  spsGotCrcG                        {4719} = 'Reçu paquet CrcG (Zmodem)';
+  spsGotCrcW                        {4720} = 'Reçu paquet CrcW (Zmodem)';
+  spsGotCrcQ                        {4721} = 'Reçu paquet CrcQ (Zmodem)';
+  spsTryResume                      {4722} = 'B+ tente de reprendre le téléchargement';
+  spsHostResume                     {4723} = 'L''hôte B+ reprend';
+  spsWaitAck                        {4724} = 'Waiting for B+ ACK';
+
+  {Internal protocol codes}
+  spsNoHeader                       {4725} = '';
+  spsGotHeader                      {4726} = '';
+  spsGotData                        {4727} = '';
+  spsNoData                         {4728} = '';
+  spsAbort                          {4730} = '';
+
+  {Fax progress codes, sending}
+  sfpInitModem                      {4801} = 'Initialisation du modem pour l''envoi de fax';
+  sfpDialing                        {4802} = 'Numérotation';
+  sfpBusyWait                       {4803} = 'Occupé, attente de renumérotation...';
+  sfpSendPage                       {4804} = 'Envoi des données de la page';
+  sfpSendPageStatus                 {4805} = 'Envoi de EOP';
+  sfpPageError                      {4806} = 'Erreur d''envoi de la page';
+  sfpPageOK                         {4807} = 'Page acceptée par le correspondant';
+  sfpConnecting                     {4808} = 'Connection...';
+
+  {Fax progress codes, receiving}
+  sfpWaiting                        {4820} = 'Attente d''appel entrant';
+  sfpNoConnect                      {4821} = 'Pas de connection sur cet appel';
+  sfpAnswer                         {4822} = 'Réponse à l''appel entrant';
+  sfpIncoming                       {4823} = 'Appel entrant reconnu comme fax';
+  sfpGetPage                        {4824} = 'Réception des données de la page';
+  sfpGetPageResult                  {4825} = 'Réception du signal de fin de page';
+  sfpCheckMorePages                 {4826} = 'Réception du statut de fin de document';
+  sfpGetHangup                      {4827} = 'Réception de commande de raccrochage';
+  sfpGotHangup                      {4828} = 'Reçu code de classe 2 FHNG';
+
+  {Fax server codes }
+  sfpSwitchModes                    {4830} = 'Switching modes';
+  sfpMonitorEnabled                 {4831} = 'Monitoring for incoming faxes';
+  sfpMonitorDisabled                {4832} = 'Not monitoring for incoming faxes';
+
+  {Fax progress codes, common}
+  sfpSessionParams                  {4840} = 'Réception des paramètres de connection';
+  sfpGotRemoteID                    {4841} = 'Reçu l''ID de l''appelé';
+  sfpCancel                         {4842} = 'Abandonné par l''utilisateur';
+  sfpFinished                       {4843} = 'Terminé';
+
+  {Trigger errors}
+  secNoMoreTriggers                 {5001} = 'Plus trigger slots';
+  secTriggerTooLong                 {5002} = 'Data trigger trop long';
+  secBadTriggerHandle               {5003} = 'Bad trigger handle';
+
+  {Packet errors}
+  secStartStringEmpty               {5501} = 'La chaîne de start est vide';
+  secPacketTooSmall                 {5502} = 'La taille de paquet ne peut pas être plus petite que la chaîne de start';
+  secNoEndCharCount                 {5503} = 'Les paquets CharCount doivent avoir une condition de fin';
+  secEmptyEndString                 {5504} = 'La chaîne de fin est vide';
+  secZeroSizePacket                 {5505} = 'Le taille de paquet ne peut pas être nulle';
+  secPacketTooLong                  {5506} = 'Paquet trop long';
+
+  {Protocol errors}
+  secBadFileList                    {6001} = 'Mauvais format dans la liste de fichiers';
+  secNoSearchMask                   {6002} = 'Aucun masque de recherche spécifié pendant la transmission';
+  secNoMatchingFiles                {6003} = 'Aucun fichier ne correspond au masque de recherche';
+  secDirNotFound                    {6004} = 'Le répertoire dans le masque de recherche n''existe pas';
+  secCancelRequested                {6005} = 'Annulation demandée';
+  secTimeout                        {6006} = 'Dépassement de délai fatal';
+  secProtocolError                  {6007} = 'Evènement irrécupérable pendant le protocole';
+  secTooManyErrors                  {6008} = 'Trop d''erreurs pendant le protocole';
+  secSequenceError                  {6009} = 'Erreur de séquence de blocs dans Xmodem';
+  secNoFilename                     {6010} = 'Nom de fichier non spécifié dans le protocole reçu';
+  secFileRejected                   {6011} = 'Le fichier a été refusé';
+  secCantWriteFile                  {6012} = 'Impossible d''écrire le fichier';
+  secTableFull                      {6013} = 'La table de fenêtre Kermit est pleine, erreur fatale';
+  secAbortNoCarrier                 {6014} = 'Abandon par perte de porteuse';
+  secBadProtocolFunction            {6015} = 'Fonction non supportée par le protocole';
+  secProtocolAbort                  {6016} = 'Protocol aborted';
+
+  {INI database}
+  secKeyTooLong                     {7001} = 'Chaîne clé trop longue';
+  secDataTooLarge                   {7002} = 'Chaîne de données trop longue';
+  secNoFieldsDefined                {7003} = 'Aucun champ dans la base de données';
+  secIniWrite                       {7004} = 'Erreur d''écriture  dans le fichier INI générique';
+  secIniRead                        {7005} = 'Erreur de lecture  dans le fichier INI générique';
+  secNoIndexKey                     {7006} = 'Aucun index dans la base de données';
+  secRecordExists                   {7007} = 'L''enregistrement existe déjà';
+  secRecordNotFound                 {7008} = 'Enregistrement introuvable dans la base de données';
+  secMustHaveIdxVal                 {7009} = 'Nom de clé d''index incorrect';
+  secDatabaseFull                   {7010} = 'Nombre maximum (999) d''enregistrements de base de données atteint';
+  secDatabaseEmpty                  {7011} = 'Pas d''enregistrements dans la base de données';
+  secDatabaseNotPrepared            {7012} = 'iPrepareIniDatabase non appelé';
+  secBadFieldList                   {7013} = 'Mauvaise liste de champs dans le composant INI';
+  secBadFieldForIndex               {7014} = 'Mauvais index de champ dans le composant INI';
+
+  {State Machine}
+  secNoStateMachine                 {7500} = 'No state machine specified';
+  secNoStartState                   {7501} = 'StartState not set';
+  secNoSapiEngine                   {7502} = 'No SAPI engine specified';
+
+  { fax codes }
+  secFaxBadFormat                   {8001} = 'Le fichier n''est pas du type APF';
+  secBadGraphicsFormat              {8002} = 'Format de fichier graphique non supporté';
+  secConvertAbort                   {8003} = 'Conversion de fax abandonnée par l''utilisateur';
+  secUnpackAbort                    {8004} = 'Décompactage de fax abandonné par l''utilisateur';
+  secCantMakeBitmap                 {8005} = 'Echec de l''API CreateBitmapIndirect';
+  secNoImageLoaded                  {8050} = 'Aucune image chargée dans le visualisateur';
+  secNoImageBlockMarked             {8051} = 'Aucun bloc de l''image marqué';
+  secFontFileNotFound               {8052} = 'APFAX.FNT introuvable ou mauvaise ressource';
+  secInvalidPageNumber              {8053} = 'Le numéro de page de fax spécifié est incorrect';
+  secBmpTooBig                      {8054} = 'La taille du BMP dépasse la hauteur maximale Windows'' de 32767';
+  secEnhFontTooBig                  {8055} = 'La police sélectionnée pour le convertisseur de texte est trop grande';
+
+  secFaxBadMachine                  {8060} = 'Fax incompatible avec celui du correspondant';
+  secFaxBadModemResult              {8061} = 'Mauvaise réponse du modem';
+  secFaxTrainError                  {8062} = 'Echec de formation des modems';
+  secFaxInitError                   {8063} = 'Erreurpendant l''initialisation du modem';
+  secFaxBusy                        {8064} = 'Le numéro de fax appelé est occupé';
+  secFaxVoiceCall                   {8065} = 'Le numéro appelé est un numéro vocal';
+  secFaxDataCall                    {8066} = 'Appel données entrant';
+  secFaxNoDialTone                  {8067} = 'Pas de tonalité';
+  secFaxNoCarrier                   {8068} = 'Echec de la conection au fax distant';
+  secFaxSessionError                {8069} = 'Echec du fax en cours de session';
+  secFaxPageError                   {8070} = 'Echec du fax en fin de page';
+  secFaxGDIPrintError               {8071} = 'Erreur NextBand GDI dans le pilote d''impression fax';
+  secFaxMixedResolution             {8072} = 'Résolutions multiples dans une même session non supportées';
+  secFaxConverterInitFail           {8073} = 'Echec de l''initialisation du convertisseur de fax';
+  secNoAnswer                       {8074} = 'Le fax distant ne répond pas';
+  secAlreadyMonitored               {8075} = 'Directory already being monitored';
+
+  { Printer driver installation codes }
+  secUniAlreadyInstalled            {8080} = 'Support des fichiers Unidrv déjà installé';
+  secUniCannotGetSysDir             {8081} = 'Répertoire système Windows indéterminé';
+  secUniCannotGetWinDir             {8082} = 'Répertoire Windows indéterminé';
+  secUniUnknownLayout               {8083} = 'Environnement de fichier d''installation indéterminé';
+  secUniCannotInstallFile           {8085} = 'Impossible d''installer les fichiers Unidrv dans le répertoire système';
+  secDrvCopyError                   {8087} = 'Erreur pendant la copie du pilote d''imprimante';
+  secCannotAddPrinter               {8088} = 'Echec de l''appel 32-bit à AddPrinter';
+  secDrvBadResources                {8089} = 'Ressources défectueuses ou manquantes dans le pilote';
+  secDrvDriverNotFound              {8090} = 'Fichier du pilote introuvable';
+  secUniCannotGetPrinterDriverDir   {8091} = 'Répertoire du pilote d''impression Win NT indéterminé';
+  secInstallDriverFailed            {8092} = 'Echec de l''API AddPrinterDriver';
+
+  { TApdGSMPhone error codes }
+  secSMSBusy                        {8100} = 'Busy with another command';
+  secSMSTimedOut                    {8101} = 'Timed out, no response back';
+  secSMSTooLong                     {8102} = 'SMS message too long';
+  secSMSUnknownStatus               {8103} = 'Status unknown';
+  secMEFailure                      {8300} = 'Mobile equipment failure';
+  secServiceRes                     {8301} = 'SMS service of ME reserved';
+  secBadOperation                   {8302} = 'Operation not allowed';
+  secUnsupported                    {8303} = 'Operation not supported';
+  secInvalidPDU                     {8304} = 'Invalid PDU mode parameter';
+  secInvalidText                    {8305} = 'Invalid Text mode parameter';
+  secSIMInsert                      {8310} = 'SIM card not inserted';
+  secSIMPin                         {8311} = 'SIM PIN required';
+  secSIMPH                          {8312} = 'PH-SIM PIN required';
+  secSIMFailure                     {8313} = 'SIM failure';
+  secSIMBusy                        {8314} = 'SIM busy';
+  secSIMWrong                       {8315} = 'SIM wrong';
+  secSIMPUK                         {8316} = 'SIM PUK required';
+  secSIMPIN2                        {8317} = 'SIM PIN2 required';
+  secSIMPUK2                        {8318} = 'SIM PUK2 required';
+  secMemFail                        {8320} = 'Memory failure';
+  secInvalidMemIndex                {8321} = 'Invalid memory index';
+  secMemFull                        {8322} = 'Memory is full';
+  secSMSCAddUnknown                 {8330} = 'SMS Center Address unknown';
+  secNoNetwork                      {8331} = 'No network service';
+  secNetworkTimeout                 {8332} = 'Network timeout';
+  secCNMAAck                        {8340} = 'No +CNMA acknowledgement expected';
+  secUnknown                        {8500} = 'Unknown error';
+
+  { Winsock codes }
+  secADWSERROR                      {9001} = 'Erreur Async Professional';
+  secADWSLOADERROR                  {9002} = 'Erreur au chargement de la DLL Winsock';
+  secADWSVERSIONERROR               {9003} = 'Version de Winsock incorrecte';
+  secADWSNOTINIT                    {9004} = 'Winsock non initialisé - %s';
+  secADWSINVPORT                    {9005} = 'Le port spécifié n''est pas valide';
+  secADWSCANTCHANGE                 {9006} = 'Impossible de changer le paramètre pendant que le socket est connecté';
+  secADWSCANTRESOLVE                {9007} = 'Impossible de résoudre l''adresse de destination';
+
+  { All Windows Sockets error constants are biased by 10000 from the ';normal'; }
+  swsaBaseErr                       {10000} = '';
+  { Windows Sockets definitions of regular Microsoft C error constants }
+  swsaEIntr                         {10004} = 'Interrupted function call';
+  swsaEBadF                         {10009} = 'Bad file number';
+  swsaEAcces                        {10013} = 'Permission denied';
+  swsaEFault                        {10014} = 'Unknown error';
+  swsaEInVal                        {10022} = 'Invalid argument';
+  swsaEMFile                        {10024} = 'Too many open files';
+
+  { Windows Sockets definitions of regular Berkeley error constants }
+  swsaEWouldBlock                   {10035} = 'Warning : the socket would block on this call';
+  swsaEInProgress                   {10036} = 'A blocking call is in progress';
+  swsaEAlReady                      {10037} = 'WSAEALREADY: watch out, Al is ready';
+  swsaENotSock                      {10038} = 'Socket descriptor is (1) not a socket, or (2) is of wrong type';
+  swsaEDestAddrReq                  {10039} = 'The destination address is required for this operation';
+  swsaEMsgSize                      {10040} = 'The datagram was too large to fit into the buffer and was truncated';
+  swsaEPrototype                    {10041} = 'WSAEPROTOTYPE';
+  swsaENoProtoOpt                   {10042} = 'The option is unknown or not supported';
+  swsaEProtoNoSupport               {10043} = 'Either (1) not enough buffer space to create socket (2) protocol not supported';
+  swsaESocktNoSupport               {10044} = 'Specified socket type not supported in this address family';
+  swsaEOpNotSupp                    {10045} = 'Operation is not supported by this socket';
+  swsaEPfNoSupport                  {10046} = 'Specified protocol family is not supported';
+  swsaEAfNoSupport                  {10047} = 'Specified address family is not supported by this protocol';
+  swsaEAddrInUse                    {10048} = 'The address is already in use for this operation';
+  swsaEAddrNotAvail                 {10049} = 'The address is not available from this machine';
+  swsaENetDown                      {10050} = 'The network subsystem has failed';
+  swsaENetUnreach                   {10051} = 'The network is unreachable from this machine at this time';
+  swsaENetReset                     {10052} = 'The network has been reset';
+  swsaEConnAborted                  {10053} = 'The virtual circuit has been aborted due to timeout, etc';
+  swsaEConnReset                    {10054} = 'The virtual circuit has been reset by the partner';
+  swsaENoBufs                       {10055} = 'The descriptor is not a socket, or no buffer space is available';
+  swsaEIsConn                       {10056} = 'The socket is already connected';
+  swsaENotConn                      {10057} = 'The socket is not connected';
+  swsaEShutDown                     {10058} = 'The socket has been shutdown';
+  swsaETooManyRefs                  {10059} = 'WSAETOOMANYREFS';
+  swsaETimedOut                     {10060} = 'The operation timed out';
+  swsaEConnRefused                  {10061} = 'The attempt to connect was forcibly refused';
+  swsaELoop                         {10062} = 'WSAELOOP: see WSAELOOP';
+  swsaENameTooLong                  {10063} = 'The name is too long';
+  swsaEHostDown                     {10064} = 'The host machine is down';
+  swsaEHostUnreach                  {10065} = 'The host machine is unreachable';
+  swsaENotEmpty                     {10066} = 'WSAENOTEMPTY';
+  swsaEProcLim                      {10067} = 'WSAEPROCLIM';
+  swsaEUsers                        {10068} = 'WSAEUSERS';
+  swsaEDQuot                        {10069} = 'WSAEDQUOT';
+  swsaEStale                        {10070} = 'WSAESTALE';
+  swsaERemote                       {10071} = 'WSAEREMOTE';
+
+  { Extended Windows Sockets error constant definitions }
+  swsaSysNotReady                   {10091} = 'Network subsystem unusable';
+  swsaVerNotSupported               {10092} = 'Version requested by WSAStartUp not supported by loaded Winsock DLL';
+  swsaNotInitialised                {10093} = 'WSAStartUp not yet called';
+  swsaEDiscOn                       {10101} = 'WSAEDISCON';
+  swsaHost_Not_Found                {11001} = 'Host not found';
+  swsaTry_Again                     {11002} = 'Host not found, or SERVERFAIL, can try again';
+  swsaNo_Recovery                   {11003} = 'Non recoverable errors, FORMERR, REFUSED, NOTIMP';
+  swsaNo_Data                       {11004} = 'Valid name, but no data record of requested type';
+
+  { The string resource range 13500 - 13800 is used for TAPI }
+  { status messages, which do not require constants here     }
+  {TAPI CallState}
+  stcs_Idle                         {13501} = 'Line is idle';
+  stcs_Offering                     {13502} = 'Offering line...';
+  stcs_Accepted                     {13503} = 'Accepting call...';
+  stcs_Dialtone                     {13504} = 'Dialtone detected';
+  stcs_Dialing                      {13505} = 'Dialing...';
+  stcs_Ringback                     {13506} = 'Ringback detected';
+  stcs_Busy                         {13507} = 'Called number is busy';
+  stcs_SpecialInfo                  {13508} = 'Special info';
+  stcs_Connected                    {13509} = 'Connected!';
+  stcs_Proceeding                   {13510} = 'Proceeding...';
+  stcs_OnHold                       {13511} = 'On hold...';
+  stcs_Conferenced                  {13512} = 'Call conferenced';
+  stcs_OnHoldPendConf               {13513} = 'On hold pending conference...';
+  stcs_OnHoldPendTransfer           {13514} = 'On hold pending transfer...';
+  stcs_Disconnected                 {13515} = 'Call disconnected (%s)';
+  stcs_Unknown                      {13516} = 'Unknown state';
+  {TAPI DevState}
+  stds_Other                        {13533} = 'Other';
+  stds_Ringing                      {13534} = 'Ringing';
+  stds_Connected                    {13535} = 'Connected';
+  stds_Disconnected                 {13536} = 'Disconnected';
+  stds_MsgWaitOn                    {13537} = 'Message wait on';
+  stds_MsgWaitOff                   {13538} = 'Message wait off';
+  stds_InService                    {13539} = 'In service';
+  stds_OutOfService                 {13540} = 'Out of service';
+  stds_Maintenance                  {13541} = 'Maintenance change';
+  stds_Open                         {13542} = 'Ppen change';
+  stds_Close                        {13543} = 'Closed';
+  stds_NumCalls                     {13544} = 'Number of calls changed';
+  stds_NumCompletions               {13545} = 'Number of completions changed';
+  stds_Terminals                    {13546} = 'Terminals changed';
+  stds_RoamMode                     {13547} = 'Roam mode changed';
+  stds_Battery                      {13548} = 'Battery changed';
+  stds_Signal                       {13549} = 'Signal changed';
+  stds_DevSpecific                  {13550} = 'Device specific change';
+  stds_ReInit                       {13551} = 'Re-initialized';
+  stds_Lock                         {13552} = 'Lock change';
+  stds_CapsChange                   {13553} = 'Caps change';
+  stds_ConfigChange                 {13554} = 'Configuration change';
+  stds_TranslateChange              {13555} = 'Translate change';
+  stds_ComplCancel                  {13556} = 'Compltion cancel';
+  stds_Removed                      {13557} = 'Removed';
+
+  { TAPI APRO-specific }
+  sTAPILineReply                    {13565} = 'TAPI line reply';
+  sTAPIStateChange                  {13597} = 'TAPI state change';
+  sTAPICalledBusy                   {13598} = 'Called number is busy';
+  sTAPIDialFail                     {13599} = 'Dial failed/no connection';
+  sTAPIRetryWait                    {13600} = 'Waiting for retry in %d seconds';
+  sTAPIDeviceInUse                  {13601} = 'Device is in use by another application';
+
+  { TAPI Disconnect Reasons }
+  sTAPIDisconnect_Unspecified       {13650} = 'Reason Unspecified';
+  sTAPIDisconnect_Normal            {13651} = 'Normal Hangup by Remote';
+  sTAPIDisconnect_Unknown           {13652} = 'Reason Unknown';
+  sTAPIDisconnect_Reject            {13653} = 'Remote Rejected Call';
+  sTAPIDisconnect_PickUp            {13654} = 'Call Picked Up Elsewhere';
+  sTAPIDisconnect_Forwarded         {13655} = 'Call was Forwarded';
+  sTAPIDisconnect_Busy              {13656} = 'Line was Busy';
+  sTAPIDisconnect_NoAnswer          {13657} = 'No Answer by Remote';
+  sTAPIDisconnect_BadAddress        {13658} = 'Invalid Destination Address';
+  sTAPIDisconnect_Unreachable       {13659} = 'Remote Unreachable';
+  sTAPIDisconnect_Congestion        {13660} = 'Network Congestion';
+  sTAPIDisconnect_Incompatible      {13661} = 'Remote Equipment Incompatible';
+  sTAPIDisconnect_Unavail           {13662} = 'Reason Unavailable';
+  sTAPIDisconnect_NoDialtone        {13663} = 'No Dialtone';
+  sTAPIDisconnect_NumberChanged     {13664} = 'Number Changed';
+  sTAPIDisconnect_OutOfOrder        {13665} = 'Out of Order';
+  sTAPIDisconnect_TempFailure       {13666} = 'Temporary Failure';
+  sTAPIDisconnect_QOSUnavail        {13667} = 'Quality of Service Unavail';
+  sTAPIDisconnect_Blocked           {13668} = 'Blocked';
+  sTAPIDisconnect_DoNotDisturb      {13669} = 'Do Not Disturb';
+  sTAPIDisconnect_Cancelled         {13670} = 'Cancelled';
+
+  {Adjusted TAPI error codes}
+  secAllocated                      {13801} = 'Already allocated';
+  secBadDeviceID                    {13802} = 'Bad device ID';
+  secBearerModeUnavail              {13803} = 'Bearer mode unavailable';
+  secCallUnavail                    {13805} = 'Call unavailable';
+  secCompletionOverrun              {13806} = 'Completion overrun';
+  secConferenceFull                 {13807} = 'Conference full';
+  secDialBilling                    {13808} = 'Dial failed';
+  secDialDialtone                   {13809} = 'Dial failed, no dialtone';
+  secDialPrompt                     {13810} = 'Dial failed';
+  secDialQuiet                      {13811} = 'Dial failed';
+  secIncompatibleApiVersion         {13812} = 'Incompatible API version';
+  secIncompatibleExtVersion         {13813} = 'Incompatible EXT version';
+  secIniFileCorrupt                 {13814} = 'INI file corrupt';
+  secInUse                          {13815} = 'Resource in use';
+  secInvalAddress                   {13816} = 'Invalid address';
+  secInvalAddressID                 {13817} = 'Invalid address ID';
+  secInvalAddressMode               {13818} = 'Invalid address mode';
+  secInvalAddressState              {13819} = 'Invalid address state';
+  secInvalAppHandle                 {13820} = 'Invalid application handle';
+  secInvalAppName                   {13821} = 'Invalid Application name';
+  secInvalBearerMode                {13822} = 'Invalid bearer mode';
+  secInvalCallComplMode             {13823} = 'Invalid call completion mode';
+  secInvalCallHandle                {13824} = 'Invalid call handle';
+  secInvalCallParams                {13825} = 'Invalid call parameters';
+  secInvalCallPrivilege             {13826} = 'Invalid call privilege';
+  secInvalCallSelect                {13827} = 'Invalid call select';
+  secInvalCallState                 {13828} = 'Invalid call state';
+  secInvalCallStatelist             {13829} = 'Invalid call state list';
+  secInvalCard                      {13830} = 'Invalid card';
+  secInvalCompletionID              {13831} = 'Invalid completion ID';
+  secInvalConfCallHandle            {13832} = 'Invalid conference call handle';
+  secInvalConsultCallHandle         {13833} = 'Invalid consultation call handle';
+  secInvalCountryCode               {13834} = 'Invalid country code';
+  secInvalDeviceClass               {13835} = 'Invalid device class';
+  secInvalDeviceHandle              {13836} = 'Invalid device handle';
+  secInvalDialParams                {13837} = 'Invalid dial params';
+  secInvalDigitList                 {13838} = 'Invalid digit list';
+  secInvalDigitMode                 {13839} = 'Invalid digit mode';
+  secInvalDigits                    {13840} = 'Invalid digits';
+  secInvalExtVersion                {13841} = 'Invalid ext version';
+  secInvalGroupID                   {13842} = 'Invalid group ID';
+  secInvalLineHandle                {13843} = 'Invalid line handle';
+  secInvalLineState                 {13844} = 'Invalid line state';
+  secInvalLocation                  {13845} = 'Invalid location';
+  secInvalMediaList                 {13846} = 'Invalid media list';
+  secInvalMediaMode                 {13847} = 'Invalid media mode';
+  secInvalMessageID                 {13848} = 'Invalid message ID';
+  secInvalParam                     {13850} = 'Invalid parameter';
+  secInvalParkID                    {13851} = 'Invalid park ID';
+  secInvalParkMode                  {13852} = 'Invalid park mode';
+  secInvalPointer                   {13853} = 'Invalid pointer';
+  secInvalPrivSelect                {13854} = 'Invalid privilege select';
+  secInvalRate                      {13855} = 'Invalid rate';
+  secInvalRequestMode               {13856} = 'Invalid request mode';
+  secInvalTerminalID                {13857} = 'Invalid terminal ID';
+  secInvalTerminalMode              {13858} = 'Invalid terminal mode';
+  secInvalTimeout                   {13859} = 'Invalid timeout';
+  secInvalTone                      {13860} = 'Invalid tone';
+  secInvalToneList                  {13861} = 'Invalid tone list';
+  secInvalToneMode                  {13862} = 'Invalid tone mode';
+  secInvalTransferMode              {13863} = 'Invalid transfer mode';
+  secLineMapperFailed               {13864} = 'Line mapper failed';
+  secNoConference                   {13865} = 'No conference';
+  secNoDevice                       {13866} = 'No device';
+  secNoDriver                       {13867} = 'No driver';
+  secNoMem                          {13868} = 'No memory';
+  secNoRequest                      {13869} = 'No request';
+  secNotOwner                       {13870} = 'Not owner';
+  secNotRegistered                  {13871} = 'Not registered';
+  secOperationFailed                {13872} = 'Operation failed';
+  secOperationUnavail               {13873} = 'Operation unavailable';
+  secRateUnavail                    {13874} = 'Rate unavailable';
+  secResourceUnavail                {13875} = 'Resource unavailable';
+  secRequestOverrun                 {13876} = 'Request overrun';
+  secStructureTooSmall              {13877} = 'Structure too small';
+  secTargetNotFound                 {13878} = 'Target not found';
+  secTargetSelf                     {13879} = 'Target is self';
+  secUninitialized                  {13880} = 'Uninitialized';
+  secUserUserInfoTooBig             {13881} = 'User info too big';
+  secReinit                         {13882} = 'Reinit failed';
+  secAddressBlocked                 {13883} = 'Address blocked';
+  secBillingRejected                {13884} = 'Billing rejected';
+  secInvalFeature                   {13885} = 'Invalid feature';
+  secNoMultipleInstance             {13886} = 'No multiple instance';
+
+  {Apro encounters a few of its own TAPI errors, place these error
+   codes after the native TAPI error codes, but leave a little bit
+   of room for expansion of the TAPI error codes.}
+  secTapiBusy                       {13928} = 'TAPI already open, dialing or answering';
+  secTapiNotSet                     {13929} = 'TapiMode not set in TApdComPort';
+  secTapiNoSelect                   {13930} = 'No TAPI device selected';
+  secTapiLoadFail                   {13931} = 'Failed to find/load TAPI.DLL';
+  secTapiGetAddrFail                {13932} = 'Failed to get TAPI address';
+  sTAPIdisabled16bit                {13933} = 'TAPI disabled for 16-bit environments';
+  secTapiUnexpected                 {13934} = 'Unexpected TAPI error';
+  secTapiVoiceNotSupported          {13935} = 'TAPI device does not support voice extensions';
+  secTapiWaveFail                   {13936} = 'TAPI wave file error';
+  secTapiCIDBlocked                 {13937} = 'Caller ID Blocked';
+  secTapiCIDOutOfArea               {13938} = 'Out of Area Call';
+  secTapiWaveFormatError            {13939} = 'The selected file is not a wave file';
+  secTapiWaveReadError              {13940} = 'Unable to read wave file data';
+  secTapiWaveBadFormat              {13941} = 'Unsupported wave format';
+  secTapiTranslateFail              {13942} = 'Unable to translate address';
+  secTapiWaveDeviceInUse            {13943} = 'Wave device in use';
+  secTapiWaveFileExists             {13944} = 'Wave file already exists';
+  secTapiWaveNoData                 {13945} = 'No wave data available';
+
+  secVoIPNotSupported               {13950} = 'Voice over IP not available (requires Windows 2000 and above)';
+  secVoIPCallBusy                   {13951} = 'Remote was busy';
+  secVoIPBadAddress                 {13952} = 'Destination address bad';
+  secVoIPNoAnswer                   {13953} = 'Remote did not answer';
+  secVoIPCancelled                  {13954} = 'Cancelled';
+  secVoIPRejected                   {13955} = 'Remote rejected the call';
+  secVoIPFailed                     {13956} = 'General failure';
+  secVoIPTapi3NotInstalled          {13957} = 'ITTapi interface failure';
+  secVoIPH323NotFound               {13958} = 'H.323 line not found';
+  secVoIPTapi3EventFailure          {13959} = 'Event notify failure';
+
+  {RAS error codes}
+  secRasLoadFail                    {13980} = 'Failed to find/load RASAPI32.DLL';
+
+  { Logging - It is unlikely that these should change, these strings are }
+  { used in the dispatcher log.  Translating them into another language  }
+  { could make it difficult for TurboPower Tech Support to decipher it.  }
+  { Dispatch type. Instead of duplicating the strings in the different   }
+  { language include files, we'll just include a common file here.       }
+  {$I AdDispLog.inc}
+
+  {XML strings}
+  sIENotInstalled       = 'Cannot open WININET, Microsoft IE required';
+  sOpenFileFailed       = 'Impossible d''ouvrir le fichier ';
+  sFileNotFound         = 'File %s could not be found';
+  sAllocSrcMemFailed    = 'Impossible d''allouer la mémoire pour la source XML';
+  sHttpReadReqFailed    = 'Impossible de lire la requête HTTP';
+  sHttpDataNotAvail     = 'Données Http non disponibles';
+  sHttpReqSendFailed    = 'Impossible d''envoyer la requête HTTP';
+  sHttpReqOpenFailed    = 'Impossible d''ouvrir la requête HTTP';
+  sInetConnectFailed    = 'Impossible d''établir la connexion Internet';
+  sInetOpenFailed       = 'Impossible d''accéder à Internet';
+  sInvalidFtpLoc        = 'Localisation FTP incorrecte';
+  sInvalidFtpDir        = 'Répertoire FTP incorrect';
+  sFtpReadReqFailed     = 'Impossible de lire la requête FTP';
+  sFtpDataNotAvail      = 'Données FTP non disponibles';
+  sFtpOpenFileFailed    = 'Impossible d''ouvrir le fichier FTP';
+  sFtpPutFileFailed     = 'Could not save file via ftp to %s';
+  sSrcLoadFailed        = 'Impossible de charger la source ';
+  sInvalidMemPtr        = 'Pointeur incorrect';
+  sFmtErrorMsg          = 'Ligne: %d Colonne: %d Erreur: %s';
+  sIndexOutOfBounds     = 'ERREUR - INDEX HORS BORNES';
+  sExpMarkupDecl        = 'Markup de déclaration attendu';
+  sIllAttrType          = 'Type d''attribut invalide';
+  sIllAttrDefKeyw       = 'Valeur par défaut incorrecte';
+  sSysIdMissing         = 'Identificateur système manquant ';
+  sExtModifMissing      = 'Modificateur externe manquant ';
+  sIllCondSectStart     = 'Une section conditionnelle doit débuter par INCLUDE ou IGNORE';
+  sBadSepInModel        = 'Mauvais séparateur dans un modèle de contenu';
+  sExpCommentOrCDATA    = 'Commentaire ou section CDATA attendu ';
+  sUnexpectedEof        = 'Fin de fichier inattendue';
+  sMismatchEndTag       = 'Tag de fin sans correspondance ';
+  sIllCharInRef         = 'Caractère illegal dans la référence';
+  sUndeclaredEntity     = 'Référence à une entité non déclarée ';
+  sExpectedString       = 'Chaîne attendue ';
+  sSpaceExpectedAt      = 'Espace attendu en position ';
+  sUnexpEndOfInput      = 'Fin de données pendant la recherche du délimiteur ';
+  sQuoteExpected        = '" ou '' attendu';
+  sInvalidXMLVersion    = 'XMLPartner does not support XML specification greater than %s';
+  sUnableCreateStr      = 'Unable to create stream for input.';
+  sInvalidName          = 'Invalid XML name';
+  sInvalidCommentText   = 'Invalid comment text';
+  sCommentBeforeXMLDecl = 'Document cannot start with a comment if it also contains an XML declaration';
+  sInvalidCDataSection  = 'Invalid characters in CDATA section';
+  sRedefinedAttr        = 'Attributes cannot be redefined in a start tag';
+  sCircularEntRef       = 'Circular reference to: ';
+  sInvAttrChar          = 'Invalid character in attribute value: ';
+  sInvPCData            = 'Invalid characters in element''s character data: ';
+  sDataAfterValDoc      = 'There is invalid data after valid XML document';
+  sNoIntConditional     = 'Conditional sections not allowed in internal subset of document type declaration';
+  sNotationNotDeclared  = 'Notation not declared: ';
+  sInvPubIDChar         = 'Invalid PublicID character: ';
+  sNoNDATAInPeDecl      = 'NDATA not allowed in parameter entity declaration.';
+  sInvStandAloneVal     = 'Standalone value must equal ''yes'' or ''no''';
+  sInvEncName           = 'Invalid encoding declaration: ';
+  sInvVerNum            = 'Invalid XML version number: ';
+  sInvEntityValue       = 'Invalid character in entity value: ';
+  sNoCommentInMarkup    = 'Comments can not be placed within other markup';
+  sNoPEInIntDTD         = 'Parameter entities not allowed in DTD internal subset';
+  sXMLDecNotAtBeg       = 'The XML declaration must appear before the first element';
+  sInvalidElementName   = 'Invalid element name: ';
+  sBadParamEntNesting   = 'Parameter-entity text must be properly nested: ';
+  sInvalidCharEncoding  = 'Invalid character encoding specified.';
+  sAttrNotNum           = 'Attribute %s of element %s does not have an integer value.';
+
+  {xpchrstm related errors}
+  sInvalidXMLChar       = 'Invalid XML Character found';
+  sInvalidBEChar        = 'Invalid (big-endian) UTF-16 character encoding';
+  sInvalidLEChar        = 'Invalid (little-endian) UTF-16 character encoding';
+  sBadUTF8Char          = 'Badly formed UTF-8 character in stream';
+  sErrEndOfDocument     = 'Unexpected end of document stream';
+  sUCS_ISOConvertErr    = 'Cannot convert UCS-4 character to ISO-8859-1';
+  sUCS_U16ConvertErr    = 'Cannot convert UCS-4 character to UTF-16';
+  sUCS_U8ConverErr      = 'Cannot convert UCS-4 character to UTF-8';
+
+  {EModem error string resource}
+  sModemDetectedBusy    = 'Line is Busy';
+  sModemNoDialtone      = 'No Dialtone';
+  sModemNoCarrier       = 'No Carrier';
+    
+  {TApdPager string resource}
+  sInitFail             = 'Modem Initialization Failure';
+  sLoginFail            = 'Failed to Login';
+  sMinorSrvErr          = 'Minor Server Error';
+  sFatalSrvErr          = 'Fatal Server Error';
+  sConnected            = 'Modem Connected';
+  sCancelled            = 'Cancel Requested';
+  sLineBusy             = 'Line Busy';
+  sDisconnect           = 'Disconnecing';
+  sNoDialtone           = 'No Dialtone';
+  sMsgNotSent           = 'Message not sent';
+  sWaitingToRedial      = 'Waiting to Redial';
+  sLoginPrompt          = 'Received Prompt for Login';
+  sLoggedIn             = 'Successful Login';
+  sDialing              = 'Now Dialing';
+  sRedialing            = 'Now Redialing';
+  sLoginRetry           = 'Retry Password for Login';
+  sMsgOkToSend          = 'Ready to Send Message';
+  sSendingMsg           = 'Now sending Message';
+  sMsgAck               = 'Received, Send next block or end';
+  sMsgNak               = 'Received Error, Resend Message';
+  sMsgRs                = 'Unable to Send Page';
+  sMsgCompleted         = 'Page Complete - Logging out if done';
+  sSendTimedOut         = 'Timed Out - No Response';
+  sLoggingOut           = 'Logging Out';
+  sDone                 = 'Done with Page';
+
+  {TApdVoIP error string resource}
+  sVoIPNotAvailable     = 'Voice over IP not available (requires Windows 2000 and above)';
+
+  {TFaxLogCode description strings, used by TApdAbstractFax.LogMsg method}
+  slfaxNone             = 'none';
+  slfaxTransmitStart    = 'transmit started';
+  slfaxTransmitOk       = 'transmit finished okay';
+  slfaxTransmitFail     = 'transmit failed';
+  slfaxReceiveStart     = 'receive started';
+  slfaxReceiveOk        = 'receive finished okay';
+  slfaxReceiveSkip      = 'receive skipped on request';
+  slfaxReceiveFail      = 'receive failed';

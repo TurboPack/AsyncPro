@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "CIS 5614 International series V.90 Modem"
+     Manufacturer = "CIS"
+     Model = "PCI\VEN_127A&amp;DEV_1023&amp;SUBSYS_13031436&amp;REV_01	;CIS M3-5614PM3G">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "MDP3858V-U Data Fax Modem"
+     Manufacturer = "Aztech Systems"
+     Model = "PCI\VEN_127A&amp;DEV_1005&amp;SUBSYS_4010122D            ;mdp3858v-u USA">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "MDP3858-U Data Fax Modem"
+     Manufacturer = "Aztech Systems"
+     Model = "PCI\VEN_127A&amp;DEV_1002&amp;SUBSYS_4002122D            ;mdp3858-u USA">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "SupraExpress 56i PRO"
+     Manufacturer = "Diamond Multimedia"
+     Model = "PCI\VEN_127A&amp;DEV_1002&amp;SUBSYS_094C1092&amp;REV_01	;Diamond SUP2380">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "GVC 1156IV+ International series V.90 Modem"
+     Manufacturer = "GVC"
+     Model = "PCI\VEN_127A&amp;DEV_1003&amp;SUBSYS_014713E0&amp;REV_01	;GVC F-1156IV+/R3 Spain">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "HCF 56K PCI Modem"
+     Manufacturer = "SONY"
+     Model = "PCI\VEN_127A&amp;DEV_2005&amp;SUBSYS_8044104D&amp;REV_01">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "ELSA MicroLink 56K PCI Modem"
+     Manufacturer = "ELSA GmbH"
+     Model = "PCI\VEN_127A&amp;DEV_1004&amp;SUBSYS_15001048&amp;REV_01">
+     <Responses>
+     </Responses>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Settings/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>

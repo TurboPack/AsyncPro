@@ -1,0 +1,2267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ModemList SYSTEM "modemdetails.dtd">
+<ModemList
+  Generator = "inf2modemcap"
+  GeneratorVersion = "0.0.3.0"
+  GeneratorDate = "2001.01.04">
+  <Modem
+     FriendlyName = "BT Ignition ISDN PnP"
+     Manufacturer = "British Telecom"
+     Model = "SERENUM\MOT1117"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:PPPC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:ISDN&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.120&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.110&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1W0&amp;C1&amp;D2S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        Pulse = "P"
+        Tone = "T"/>
+     <Hardware/>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <ISDN>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT*1!N1=%s&lt;cr&gt;</SetMSN>
+       <NvSave Sequence = "1">AT&gt;W*&amp;W&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">AT&gt;Z&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "AT&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%A2=95@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%A2=95@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%A2=95@B0=2%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%A2=95@B0=2%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%A2=95@B0=2%A4=0@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%A2=95@B0=2%A4=0@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%A2=95@B0=2%A4=0@M2=M&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%A2=2@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%A2=2@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%A2=99@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "AT%A2=99@B0=1%A4=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "BT Ignition ISDN"
+     Manufacturer = "British Telecom"
+     Model = "UNIMODEM7ACCB983"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:PPPC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:ISDN&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.120&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.110&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1W0&amp;C1&amp;D2S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        Pulse = "P"
+        Tone = "T"/>
+     <Hardware/>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <ISDN>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT*1!N1=%s&lt;cr&gt;</SetMSN>
+       <NvSave Sequence = "1">AT&gt;W*&amp;W&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">AT&gt;Z&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "AT&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%A2=95@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%A2=95@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%A2=95@B0=2%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%A2=95@B0=2%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%A2=95@B0=2%A4=0@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%A2=95@B0=2%A4=0@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%A2=95@B0=2%A4=0@M2=M&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%A2=2@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%A2=2@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%A2=99@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "AT%A2=99@B0=1%A4=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3265"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem12"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3267"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem11"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3268"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem10"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3265FAST"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem9"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "24000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3267FAST"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem8"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "24000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3268FAST"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem7"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "24000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3265FAST (V.34)"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem6"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3267FAST (V.34)"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem5"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3268FAST (V.34)"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem4"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3266"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem3"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3266FAST"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem2"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "90"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "24000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola Codex 3266FAST (V.34)"
+     Manufacturer = "Motorola International"
+     Model = "codex_Modem1"
+     Reset = "ATZ&lt;cr&gt;"
+     CallSetupFailTimeout = "60"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "1"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "28800">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>56&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>57&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>58&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>59&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>60&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>16&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>17&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>19&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>20&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>21&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>27&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>30&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>32&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>33&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>35&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>36&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>37&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>38&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>39&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>41&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>42&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>61&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>62&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>63&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>64&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>76&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>77&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>78&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>79&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>80&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>81&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>82&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>83&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>84&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>85&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>86&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F V0 E0&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "*FL3"
+        FlowControl_Off = "*FL0"
+        FlowControl_Soft = "*FL1"
+        ErrorControl_Forced = "*SM2"
+        ErrorControl_Off = "*SM1"
+        ErrorControl_On = "*SM3"
+        Compression_Off= "*DC0"
+        Compression_On = "*DC1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "S30=&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola BitSURFR PRO ISDN Euro PnP"
+     Manufacturer = "Motorola International"
+     Model = "SERENUM\MOT1107"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:PPPC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:ISDN&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.120&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.110&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1W0&amp;C1&amp;D2S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        Pulse = "P"
+        Tone = "T"/>
+     <Hardware/>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <ISDN>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT*1!N1=%s&lt;cr&gt;</SetMSN>
+       <NvSave Sequence = "1">AT&gt;W*&amp;W&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">AT&gt;Z&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "AT&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%A2=95@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%A2=95@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%A2=95@B0=2%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%A2=95@B0=2%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%A2=95@B0=2%A4=0@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%A2=95@B0=2%A4=0@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%A2=95@B0=2%A4=0@M2=M&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%A2=2@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%A2=2@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%A2=99@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "AT%A2=99@B0=1%A4=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola BitSURFR PRO Euro ISDN"
+     Manufacturer = "Motorola International"
+     Model = "UNIMODEM82B4EA8B"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "0"
+     InactivityTimeout = "0"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "0"
+     SupportsSpeakerVolumeLow = "0"
+     SupportsSpeakerVolumeMed= "0"
+     SupportsSpeakerVolumeHigh = "0"
+     SupportsSpeakerModeOff= "0"
+     SupportsSpeakerModeDial = "0"
+     SupportsSpeakerModeOn = "0"
+     SupportsSpeakerModeSetup= "0"
+     SupportsSetDataCompressionNegot = "0"
+     SupportsSetErrorControlProtNegot = "0"
+     SupportsSetForcedErrorControl= "0"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "0"
+     SupportsBlindDial= "0"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "115200"
+     MaxDCERate = "128000">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:PPPC&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:ISDN&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.120&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;PROTOCOL:V.110&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;CHANNEL B2&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>&lt;cr&gt;&lt;lf&gt;SESSION ID: 1&lt;cr&gt;&lt;lf&gt;</NegotiationProgressResponses>
+       <ConnectResponses>&lt;StandardConnect&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 56000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ConnectResponses>&lt;cr&gt;&lt;lf&gt;CARRIER 64000&lt;cr&gt;&lt;lf&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT&amp;FE0V1W0&amp;C1&amp;D2S0=0&lt;cr&gt;</Init>
+     <Init Sequence = "3">AT&lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        FlowControl_Hard = "\Q3"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1"
+        Pulse = "P"
+        Tone = "T"/>
+     <Hardware/>
+     <BaudRates>56000</BaudRates>
+     <BaudRates>57600</BaudRates>
+     <BaudRates>64000</BaudRates>
+     <BaudRates>112000</BaudRates>
+     <BaudRates>128000</BaudRates>
+     <BaudRates>7200</BaudRates>
+     <BaudRates>12000</BaudRates>
+     <BaudRates>230400</BaudRates>
+     <BaudRates>38400</BaudRates>
+     <BaudRates>28800</BaudRates>
+     <BaudRates>48000</BaudRates>
+     <ISDN>
+       <SetMSN Sequence = "1">AT!N1=%s&lt;cr&gt;</SetMSN>
+       <SetMSN Sequence = "2">AT*1!N1=%s&lt;cr&gt;</SetMSN>
+       <NvSave Sequence = "1">AT&gt;W*&amp;W&lt;cr&gt;</NvSave>
+       <NvSave Sequence = "2">AT&gt;Z&lt;cr&gt;</NvSave>
+       <SwitchType Switch = "SWITCH_DSS1" Command = "AT&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_56K" Command = "AT%A2=95@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_64K" Command = "AT%A2=95@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_112K" Command = "AT%A2=95@B0=2%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K" Command = "AT%A2=95@B0=2%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_PAP" Command = "AT%A2=95@B0=2%A4=0@M2=P&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_CHAP" Command = "AT%A2=95@B0=2%A4=0@M2=C&lt;cr&gt;"/>
+       <Protocol Protocol = "HDLC_PPP_128K_MSCHAP" Command = "AT%A2=95@B0=2%A4=0@M2=M&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_56K" Command = "AT%A2=2@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V120_64K" Command = "AT%A2=2@B0=1%A4=0&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_19DOT2K" Command = "AT%A2=99@B0=1%A4=1&lt;cr&gt;"/>
+       <Protocol Protocol = "V110_38DOT4K" Command = "AT%A2=99@B0=1%A4=0&lt;cr&gt;"/>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+  <Modem
+     FriendlyName = "Motorola V.32b42i"
+     Manufacturer = "Motorola International"
+     Model = "UNIMODEM6F8F3C1D"
+     Reset = "AT&amp;F&lt;cr&gt;"
+     CallSetupFailTimeout = "90"
+     InactivityTimeout = "255"
+     SupportsWaitForBongTone = "0"
+     SupportsWaitForQuiet = "0"
+     SupportsWaitForDialTone = "1"
+     SupportsSpeakerVolumeLow = "1"
+     SupportsSpeakerVolumeMed= "1"
+     SupportsSpeakerVolumeHigh = "1"
+     SupportsSpeakerModeOff= "1"
+     SupportsSpeakerModeDial = "1"
+     SupportsSpeakerModeOn = "1"
+     SupportsSpeakerModeSetup= "1"
+     SupportsSetDataCompressionNegot = "1"
+     SupportsSetErrorControlProtNegot = "1"
+     SupportsSetForcedErrorControl= "1"
+     SupportsSetCellular= "0"
+     SupportsSetHardwareFlowControl = "1"
+     SupportsSetSoftwareFlowControl= "1"
+     SupportsCCITTBellToggle = "0"
+     SupportsSetSpeedNegotiation = "0"
+     SupportsSetTonePulse= "1"
+     SupportsBlindDial= "1"
+     SupportsSetV21V23= "0"
+     SupportsModemDiagnostics = "0"
+     MaxDTERate = "57600"
+     MaxDCERate = "14400">
+     <Responses>
+       <OKResponses>&lt;cr&gt;&lt;lf&gt;OK&lt;cr&gt;&lt;lf&gt;</OKResponses>
+       <NegotiationProgressResponses>36&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>37&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>38&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>40&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>44&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>45&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>46&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>47&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>48&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>49&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>50&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>51&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>52&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>53&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>54&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>55&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>66&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>67&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>68&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>69&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>70&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>71&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>72&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>73&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>74&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>75&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>76&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>77&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>78&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>79&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>80&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>91&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>92&lt;cr&gt;</NegotiationProgressResponses>
+       <NegotiationProgressResponses>93&lt;cr&gt;</NegotiationProgressResponses>
+       <ConnectResponses>1&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>5&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>10&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>11&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>12&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>13&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>14&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>15&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>18&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>22&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>23&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>24&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>25&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>26&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>28&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>29&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>31&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>34&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>60&lt;cr&gt;</ConnectResponses>
+       <ConnectResponses>65&lt;cr&gt;</ConnectResponses>
+       <ErrorResponses>&lt;cr&gt;&lt;lf&gt;ERROR&lt;cr&gt;&lt;lf&gt;</ErrorResponses>
+       <ErrorResponses>33&lt;cr&gt;</ErrorResponses>
+       <ErrorResponses>35&lt;cr&gt;</ErrorResponses>
+     </Responses>
+     <Answer Sequence = "1">ATA&lt;cr&gt;</Answer>
+     <FaxDetails>
+       <Class1>
+       </Class1>
+       <Class2>
+       </Class2>
+       <Class2_0>
+       </Class2_0>
+     </FaxDetails>
+     <Voice>
+       <WaveDriver/>
+     </Voice>
+     <Hangup Sequence = "1">ATH&lt;cr&gt;</Hangup>
+     <Init Sequence = "1">AT&lt;cr&gt;</Init>
+     <Init Sequence = "2">AT &amp;F &lt;cr&gt;</Init>
+     <Init Sequence = "3">ATY0L3&amp;C1&amp;D2&amp;S1&amp;R\Q3\V1S39=32S95=47V1E0 &lt;cr&gt;</Init>
+     <Monitor Sequence = "1">ATS0=0&lt;cr&gt;</Monitor>
+     <Settings
+        Prefix = "AT"
+        Terminator = "&lt;cr&gt;"
+        DialPrefix = "D"
+        DialSuffix = ";"
+        SpeakerVolume_High = "L3"
+        SpeakerVolume_Low = "L0"
+        SpeakerVolume_Med = "L2"
+        SpeakerMode_Dial = "M1"
+        SpeakerMode_Off = "M0"
+        SpeakerMode_On = "M2"
+        SpeakerMode_Setup = "M3"
+        FlowControl_Hard = "\Q3\Q6"
+        FlowControl_Off = "\Q0"
+        FlowControl_Soft = "\Q1\Q5"
+        ErrorControl_Forced = "\N6"
+        ErrorControl_Off = "\N0"
+        ErrorControl_On = "\N7"
+        Compression_Off= "%%C0"
+        Compression_On = "%%C1"
+        Pulse = "P"
+        Tone = "T"
+        Blind_Off = "X4"
+        Blind_On = "X3"
+        CallSetupFailTimer = "S7=&lt;#&gt;"
+        InactivityTimeout = "\T&lt;#&gt;"/>
+     <Hardware/>
+     <ISDN>
+     </ISDN>
+     <GSM>
+     </GSM>
+  </Modem>
+</ModemList>
