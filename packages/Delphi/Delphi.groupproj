@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{B527FC27-0137-4690-A624-1D4453BAE7BA}</ProjectGuid>
+        <ProjectGuid>{AB4D99F2-4D2F-4359-81C9-6D3DD97F94BE}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
         <Projects Include="AsyncProDR.dproj">
