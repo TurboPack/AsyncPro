@@ -710,104 +710,66 @@ type
 // Forward declaration of types defined in TypeLibrary
 // *********************************************************************//
   ITCollection = interface;
-  ITCollectionDisp = dispinterface;
   ITCallStateEvent = interface;
-  ITCallStateEventDisp = dispinterface;
   ITCallInfo = interface;
-  ITCallInfoDisp = dispinterface;
   ITAddress = interface;
-  ITAddressDisp = dispinterface;
   ITTAPI = interface;
-  ITTAPIDisp = dispinterface;
   IEnumAddress = interface;
   IEnumCallHub = interface;
   ITCallHub = interface;
-  ITCallHubDisp = dispinterface;
   IEnumCall = interface;
   IEnumUnknown = interface;
   ITBasicCallControl = interface;
-  ITBasicCallControlDisp = dispinterface;
   ITForwardInformation = interface;
-  ITForwardInformationDisp = dispinterface;
   ITCallNotificationEvent = interface;
-  ITCallNotificationEventDisp = dispinterface;
   ITTAPIEventNotification = interface;
   ITBasicAudioTerminal = interface;
-  ITBasicAudioTerminalDisp = dispinterface;
   ITCallHubEvent = interface;
   ITAddressCapabilities = interface;
-  ITAddressCapabilitiesDisp = dispinterface;
   IEnumBstr = interface;
   ITQOSEvent = interface;
   ITAddressEvent = interface;
   ITTerminal = interface;
-  ITTerminalDisp = dispinterface;
   ITCallMediaEvent = interface;
-  ITCallMediaEventDisp = dispinterface;
   ITStream = interface;
-  ITStreamDisp = dispinterface;
   IEnumTerminal = interface;
   ITTAPIObjectEvent = interface;
-  ITTAPIObjectEventDisp = dispinterface;
   ITAddressTranslation = interface;
-  ITAddressTranslationDisp = dispinterface;
   ITAddressTranslationInfo = interface;
-  ITAddressTranslationInfoDisp = dispinterface;
   IEnumLocation = interface;
   ITLocationInfo = interface;
-  ITLocationInfoDisp = dispinterface;
   IEnumCallingCard = interface;
   ITCallingCard = interface;
-  ITCallingCardDisp = dispinterface;
   ITAgent = interface;
-  ITAgentDisp = dispinterface;
   IEnumAgentSession = interface;
   ITAgentSession = interface;
-  ITAgentSessionDisp = dispinterface;
   ITACDGroup = interface;
-  ITACDGroupDisp = dispinterface;
   IEnumQueue = interface;
   ITQueue = interface;
-  ITQueueDisp = dispinterface;
   ITAgentEvent = interface;
-  ITAgentEventDisp = dispinterface;
   ITAgentSessionEvent = interface;
-  ITAgentSessionEventDisp = dispinterface;
   ITACDGroupEvent = interface;
-  ITACDGroupEventDisp = dispinterface;
   ITQueueEvent = interface;
-  ITQueueEventDisp = dispinterface;
   ITTAPICallCenter = interface;
-  ITTAPICallCenterDisp = dispinterface;
   IEnumAgentHandler = interface;
   ITAgentHandler = interface;
-  ITAgentHandlerDisp = dispinterface;
   IEnumACDGroup = interface;
   ITAgentHandlerEvent = interface;
-  ITAgentHandlerEventDisp = dispinterface;
   ITCallInfoChangeEvent = interface;
   ITRequestEvent = interface;
   ITMediaSupport = interface;
-  ITMediaSupportDisp = dispinterface;
   ITTerminalSupport = interface;
-  ITTerminalSupportDisp = dispinterface;
   IEnumTerminalClass = interface;
   ITStreamControl = interface;
-  ITStreamControlDisp = dispinterface;
   IEnumStream = interface;
   ITSubStreamControl = interface;
-  ITSubStreamControlDisp = dispinterface;
   ITSubStream = interface;
-  ITSubStreamDisp = dispinterface;
   IEnumSubStream = interface;
   ITLegacyAddressMediaControl = interface;
   ITLegacyCallMediaControl = interface;
   ITDigitDetectionEvent = interface;
   ITDigitGenerationEvent = interface;
-  ITDigitGenerationEventDisp = dispinterface;
   ITPrivateEvent = interface;
-  ITPrivateEventDisp = dispinterface;
-  ITTAPIDispatchEventNotification = dispinterface;
   ITDispatchMapper = interface;
   ITRequest = interface;
 
@@ -840,18 +802,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITCollectionDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5EC5ACF2-9C02-11D0-8362-00AA003CCABD}
-// *********************************************************************//
-  ITCollectionDisp = dispinterface
-    ['{5EC5ACF2-9C02-11D0-8362-00AA003CCABD}']
-    property Count: Integer readonly dispid 1610743808;
-    property Item[Index: Integer]: OleVariant readonly dispid 0; default;
-    property _NewEnum: IUnknown readonly dispid -4;
-  end;
-
-// *********************************************************************//
 // Interface: ITCallStateEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {62F47097-95C9-11D0-835D-00AA003CCABD}
@@ -866,19 +816,6 @@ type
     property State: CALL_STATE read Get_State;
     property Cause: CALL_STATE_EVENT_CAUSE read Get_Cause;
     property CallbackInstance: Integer read Get_CallbackInstance;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallStateEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {62F47097-95C9-11D0-835D-00AA003CCABD}
-// *********************************************************************//
-  ITCallStateEventDisp = dispinterface
-    ['{62F47097-95C9-11D0-835D-00AA003CCABD}']
-    property Call: ITCallInfo readonly dispid 1;
-    property State: CALL_STATE readonly dispid 2;
-    property Cause: CALL_STATE_EVENT_CAUSE readonly dispid 3;
-    property CallbackInstance: Integer readonly dispid 4;
   end;
 
 // *********************************************************************//
@@ -910,27 +847,6 @@ type
     property CallInfoLong[CallInfoLong: CALLINFO_LONG]: Integer read Get_CallInfoLong write Set_CallInfoLong;
     property CallInfoString[CallInfoString: CALLINFO_STRING]: WideString read Get_CallInfoString write Set_CallInfoString;
     property CallInfoBuffer[CallInfoBuffer: CALLINFO_BUFFER]: OleVariant read Get_CallInfoBuffer write Set_CallInfoBuffer;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallInfoDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {350F85D1-1227-11D3-83D4-00C04FB6809F}
-// *********************************************************************//
-  ITCallInfoDisp = dispinterface
-    ['{350F85D1-1227-11D3-83D4-00C04FB6809F}']
-    property Address: ITAddress readonly dispid 65537;
-    property CallState: CALL_STATE readonly dispid 65538;
-    property Privilege: CALL_PRIVILEGE readonly dispid 65539;
-    property CallHub: ITCallHub readonly dispid 65540;
-    property CallInfoLong[CallInfoLong: CALLINFO_LONG]: Integer dispid 65541;
-    property CallInfoString[CallInfoString: CALLINFO_STRING]: WideString dispid 65542;
-    property CallInfoBuffer[CallInfoBuffer: CALLINFO_BUFFER]: OleVariant dispid 65543;
-    procedure GetCallInfoBuffer(CallInfoBuffer: CALLINFO_BUFFER; out pdwSize: DWORD;
-                                out ppCallInfoBuffer: {??PByte1}OleVariant); dispid 65544;
-    procedure SetCallInfoBuffer(CallInfoBuffer: CALLINFO_BUFFER; dwSize: DWORD;
-                                var pCallInfoBuffer: Byte); dispid 65545;
-    procedure ReleaseUserUserInfo; dispid 65546;
   end;
 
 // *********************************************************************//
@@ -967,28 +883,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITAddressDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC386-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITAddressDisp = dispinterface
-    ['{B1EFC386-9355-11D0-835C-00AA003CCABD}']
-    property State: ADDRESS_STATE readonly dispid 65537;
-    property AddressName: WideString readonly dispid 65538;
-    property ServiceProviderName: WideString readonly dispid 65539;
-    property TAPIObject: ITTAPI readonly dispid 65540;
-    function  CreateCall(const pDestAddress: WideString; lAddressType: Integer; lMediaTypes: Integer): ITBasicCallControl; dispid 65541;
-    property Calls: OleVariant readonly dispid 65542;
-    function  EnumerateCalls: IEnumCall; dispid 65543;
-    property DialableAddress: WideString readonly dispid 65544;
-    function  CreateForwardInfoObject: ITForwardInformation; dispid 65546;
-    procedure Forward(const pForwardInfo: ITForwardInformation; const pCall: ITBasicCallControl); dispid 65547;
-    property CurrentForwardInfo: ITForwardInformation readonly dispid 65548;
-    property MessageWaiting: WordBool dispid 65550;
-    property DoNotDisturb: WordBool dispid 65551;
-  end;
-
-// *********************************************************************//
 // Interface: ITTAPI
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {B1EFC382-9355-11D0-835C-00AA003CCABD}
@@ -1019,34 +913,6 @@ type
     property CallHubs: OleVariant read Get_CallHubs;
     property PrivateTAPIObjects: OleVariant read Get_PrivateTAPIObjects;
     property EventFilter: Integer read Get_EventFilter write Set_EventFilter;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITTAPIDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC382-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITTAPIDisp = dispinterface
-    ['{B1EFC382-9355-11D0-835C-00AA003CCABD}']
-    procedure Initialize; dispid 65549;
-    procedure Shutdown; dispid 65550;
-    property Addresses: OleVariant readonly dispid 65537;
-    function  EnumerateAddresses: IEnumAddress; dispid 65538;
-    function  RegisterCallNotifications(const pAddress: ITAddress; fMonitor: WordBool;
-                                        fOwner: WordBool; lMediaTypes: Integer;
-                                        lCallbackInstance: Integer): Integer; dispid 65539;
-    procedure UnregisterNotifications(lRegister: Integer); dispid 65540;
-    property CallHubs: OleVariant readonly dispid 65541;
-    function  EnumerateCallHubs: IEnumCallHub; dispid 65542;
-    procedure SetCallHubTracking(pAddresses: OleVariant; bTracking: WordBool); dispid 65543;
-    procedure EnumeratePrivateTAPIObjects(out ppEnumUnknown: IEnumUnknown); dispid 65544;
-    property PrivateTAPIObjects: OleVariant readonly dispid 65545;
-    procedure RegisterRequestRecipient(lRegistrationInstance: Integer; lRequestMode: Integer;
-                                       fEnable: WordBool); dispid 65546;
-    procedure SetAssistedTelephonyPriority(const pAppFilename: WideString; fPriority: WordBool); dispid 65547;
-    procedure SetApplicationPriority(const pAppFilename: WideString; lMediaType: Integer;
-                                     fPriority: WordBool); dispid 65548;
-    property EventFilter: Integer dispid 65551;
   end;
 
 // *********************************************************************//
@@ -1090,20 +956,6 @@ type
     property Calls: OleVariant read Get_Calls;
     property NumCalls: Integer read Get_NumCalls;
     property State: CALLHUB_STATE read Get_State;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallHubDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {A3C1544E-5B92-11D1-8F4E-00C04FB6809F}
-// *********************************************************************//
-  ITCallHubDisp = dispinterface
-    ['{A3C1544E-5B92-11D1-8F4E-00C04FB6809F}']
-    procedure Clear; dispid 1;
-    function  EnumerateCalls: IEnumCall; dispid 2;
-    property Calls: OleVariant readonly dispid 3;
-    property NumCalls: Integer readonly dispid 4;
-    property State: CALLHUB_STATE readonly dispid 5;
   end;
 
 // *********************************************************************//
@@ -1160,33 +1012,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITBasicCallControlDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC389-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITBasicCallControlDisp = dispinterface
-    ['{B1EFC389-9355-11D0-835C-00AA003CCABD}']
-    procedure Connect(fSync: WordBool); dispid 131075;
-    procedure Answer; dispid 131076;
-    procedure Disconnect(code: DISCONNECT_CODE); dispid 131077;
-    procedure Hold(fHold: WordBool); dispid 131078;
-    procedure HandoffDirect(const pApplicationName: WideString); dispid 131079;
-    procedure HandoffIndirect(lMediaType: Integer); dispid 131080;
-    procedure Conference(const pCall: ITBasicCallControl; fSync: WordBool); dispid 131081;
-    procedure Transfer(const pCall: ITBasicCallControl; fSync: WordBool); dispid 131082;
-    procedure BlindTransfer(const pDestAddress: WideString); dispid 131083;
-    procedure SwapHold(const pCall: ITBasicCallControl); dispid 131084;
-    procedure ParkDirect(const pParkAddress: WideString); dispid 131085;
-    function  ParkIndirect: WideString; dispid 131086;
-    procedure Unpark; dispid 131087;
-    procedure SetQOS(lMediaType: Integer; ServiceLevel: QOS_SERVICE_LEVEL); dispid 131088;
-    procedure Pickup(const pGroupID: WideString); dispid 131091;
-    procedure Dial(const pDestAddress: WideString); dispid 131092;
-    procedure Finish(finishMode: FINISH_MODE); dispid 131093;
-    procedure RemoveFromConference; dispid 131094;
-  end;
-
-// *********************************************************************//
 // Interface: ITForwardInformation
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {449F659E-88A3-11D1-BB5D-00C04FB6809F}
@@ -1208,23 +1033,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITForwardInformationDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {449F659E-88A3-11D1-BB5D-00C04FB6809F}
-// *********************************************************************//
-  ITForwardInformationDisp = dispinterface
-    ['{449F659E-88A3-11D1-BB5D-00C04FB6809F}']
-    property NumRingsNoAnswer: Integer dispid 1;
-    procedure SetForwardType(ForwardType: Integer; const pDestAddress: WideString;
-                             const pCallerAddress: WideString); dispid 2;
-    property ForwardTypeDestination[ForwardType: Integer]: WideString readonly dispid 3;
-    property ForwardTypeCaller[ForwardType: Integer]: WideString readonly dispid 4;
-    procedure GetForwardType(ForwardType: Integer; out ppDestinationAddress: WideString;
-                             out ppCallerAddress: WideString); dispid 5;
-    procedure Clear; dispid 6;
-  end;
-
-// *********************************************************************//
 // Interface: ITCallNotificationEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {895801DF-3DD6-11D1-8F30-00C04FB6809F}
@@ -1237,18 +1045,6 @@ type
     property Call: ITCallInfo read Get_Call;
     property Event: CALL_NOTIFICATION_EVENT read Get_Event;
     property CallbackInstance: Integer read Get_CallbackInstance;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallNotificationEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {895801DF-3DD6-11D1-8F30-00C04FB6809F}
-// *********************************************************************//
-  ITCallNotificationEventDisp = dispinterface
-    ['{895801DF-3DD6-11D1-8F30-00C04FB6809F}']
-    property Call: ITCallInfo readonly dispid 1;
-    property Event: CALL_NOTIFICATION_EVENT readonly dispid 2;
-    property CallbackInstance: Integer readonly dispid 3;
   end;
 
 // *********************************************************************//
@@ -1274,17 +1070,6 @@ type
     function  Get_Balance: Integer; safecall;
     property Volume: Integer read Get_Volume write Set_Volume;
     property Balance: Integer read Get_Balance write Set_Balance;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITBasicAudioTerminalDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC38D-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITBasicAudioTerminalDisp = dispinterface
-    ['{B1EFC38D-9355-11D0-835C-00AA003CCABD}']
-    property Volume: Integer dispid 1;
-    property Balance: Integer dispid 2;
   end;
 
 // *********************************************************************//
@@ -1319,23 +1104,6 @@ type
     property CallTreatments: OleVariant read Get_CallTreatments;
     property CompletionMessages: OleVariant read Get_CompletionMessages;
     property DeviceClasses: OleVariant read Get_DeviceClasses;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAddressCapabilitiesDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {8DF232F5-821B-11D1-BB5C-00C04FB6809F}
-// *********************************************************************//
-  ITAddressCapabilitiesDisp = dispinterface
-    ['{8DF232F5-821B-11D1-BB5C-00C04FB6809F}']
-    property AddressCapability[AddressCap: ADDRESS_CAPABILITY]: Integer readonly dispid 131073;
-    property AddressCapabilityString[AddressCapString: ADDRESS_CAPABILITY_STRING]: WideString readonly dispid 131074;
-    property CallTreatments: OleVariant readonly dispid 131075;
-    function  EnumerateCallTreatments: IEnumBstr; dispid 131076;
-    property CompletionMessages: OleVariant readonly dispid 131077;
-    function  EnumerateCompletionMessages: IEnumBstr; dispid 131078;
-    property DeviceClasses: OleVariant readonly dispid 131079;
-    function  EnumerateDeviceClasses: IEnumBstr; dispid 131080;
   end;
 
 // *********************************************************************//
@@ -1397,21 +1165,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITTerminalDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC38A-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITTerminalDisp = dispinterface
-    ['{B1EFC38A-9355-11D0-835C-00AA003CCABD}']
-    property Name: WideString readonly dispid 1;
-    property State: TERMINAL_STATE readonly dispid 2;
-    property TerminalType: TERMINAL_TYPE readonly dispid 3;
-    property TerminalClass: WideString readonly dispid 4;
-    property MediaType: Integer readonly dispid 5;
-    property Direction: TERMINAL_DIRECTION readonly dispid 6;
-  end;
-
-// *********************************************************************//
 // Interface: ITCallMediaEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {FF36B87F-EC3A-11D0-8EE4-00C04FB6809F}
@@ -1430,21 +1183,6 @@ type
     property Terminal: ITTerminal read Get_Terminal;
     property Stream: ITStream read Get_Stream;
     property Cause: CALL_MEDIA_EVENT_CAUSE read Get_Cause;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallMediaEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {FF36B87F-EC3A-11D0-8EE4-00C04FB6809F}
-// *********************************************************************//
-  ITCallMediaEventDisp = dispinterface
-    ['{FF36B87F-EC3A-11D0-8EE4-00C04FB6809F}']
-    property Call: ITCallInfo readonly dispid 1;
-    property Event: CALL_MEDIA_EVENT readonly dispid 2;
-    property Error: HResult readonly dispid 3;
-    property Terminal: ITTerminal readonly dispid 4;
-    property Stream: ITStream readonly dispid 5;
-    property Cause: CALL_MEDIA_EVENT_CAUSE readonly dispid 6;
   end;
 
 // *********************************************************************//
@@ -1468,25 +1206,6 @@ type
     property Direction: TERMINAL_DIRECTION read Get_Direction;
     property Name: WideString read Get_Name;
     property Terminals: OleVariant read Get_Terminals;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITStreamDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {EE3BD605-3868-11D2-A045-00C04FB6809F}
-// *********************************************************************//
-  ITStreamDisp = dispinterface
-    ['{EE3BD605-3868-11D2-A045-00C04FB6809F}']
-    property MediaType: Integer readonly dispid 1;
-    property Direction: TERMINAL_DIRECTION readonly dispid 2;
-    property Name: WideString readonly dispid 3;
-    procedure StartStream; dispid 4;
-    procedure PauseStream; dispid 5;
-    procedure StopStream; dispid 6;
-    procedure SelectTerminal(const pTerminal: ITTerminal); dispid 7;
-    procedure UnselectTerminal(const pTerminal: ITTerminal); dispid 8;
-    procedure EnumerateTerminals(out ppEnumTerminal: IEnumTerminal); dispid 9;
-    property Terminals: OleVariant readonly dispid 10;
   end;
 
 // *********************************************************************//
@@ -1520,19 +1239,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITTAPIObjectEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {F4854D48-937A-11D1-BB58-00C04FB6809F}
-// *********************************************************************//
-  ITTAPIObjectEventDisp = dispinterface
-    ['{F4854D48-937A-11D1-BB58-00C04FB6809F}']
-    property TAPIObject: ITTAPI readonly dispid 1;
-    property Event: TAPIOBJECT_EVENT readonly dispid 2;
-    property Address: ITAddress readonly dispid 3;
-    property CallbackInstance: Integer readonly dispid 4;
-  end;
-
-// *********************************************************************//
 // Interface: ITAddressTranslation
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {0C4D8F03-8DDB-11D1-A09E-00805FC147D3}
@@ -1548,22 +1254,6 @@ type
     function  Get_CallingCards: OleVariant; safecall;
     property Locations: OleVariant read Get_Locations;
     property CallingCards: OleVariant read Get_CallingCards;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAddressTranslationDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {0C4D8F03-8DDB-11D1-A09E-00805FC147D3}
-// *********************************************************************//
-  ITAddressTranslationDisp = dispinterface
-    ['{0C4D8F03-8DDB-11D1-A09E-00805FC147D3}']
-    function  TranslateAddress(const pAddressToTranslate: WideString; lCard: Integer;
-                               lTranslateOptions: Integer): ITAddressTranslationInfo; dispid 262145;
-    procedure TranslateDialog(hwndOwner: Integer; const pAddressIn: WideString); dispid 262146;
-    function  EnumerateLocations: IEnumLocation; dispid 262147;
-    property Locations: OleVariant readonly dispid 262148;
-    function  EnumerateCallingCards: IEnumCallingCard; dispid 262149;
-    property CallingCards: OleVariant readonly dispid 262150;
   end;
 
 // *********************************************************************//
@@ -1583,20 +1273,6 @@ type
     property CurrentCountryCode: Integer read Get_CurrentCountryCode;
     property DestinationCountryCode: Integer read Get_DestinationCountryCode;
     property TranslationResults: Integer read Get_TranslationResults;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAddressTranslationInfoDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {AFC15945-8D40-11D1-A09E-00805FC147D3}
-// *********************************************************************//
-  ITAddressTranslationInfoDisp = dispinterface
-    ['{AFC15945-8D40-11D1-A09E-00805FC147D3}']
-    property DialableString: WideString readonly dispid 1;
-    property DisplayableString: WideString readonly dispid 2;
-    property CurrentCountryCode: Integer readonly dispid 3;
-    property DestinationCountryCode: Integer readonly dispid 4;
-    property TranslationResults: Integer readonly dispid 5;
   end;
 
 // *********************************************************************//
@@ -1644,26 +1320,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITLocationInfoDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {0C4D8EFF-8DDB-11D1-A09E-00805FC147D3}
-// *********************************************************************//
-  ITLocationInfoDisp = dispinterface
-    ['{0C4D8EFF-8DDB-11D1-A09E-00805FC147D3}']
-    property PermanentLocationID: Integer readonly dispid 1;
-    property CountryCode: Integer readonly dispid 2;
-    property CountryID: Integer readonly dispid 3;
-    property Options: Integer readonly dispid 4;
-    property PreferredCardID: Integer readonly dispid 5;
-    property LocationName: WideString readonly dispid 6;
-    property CityCode: WideString readonly dispid 7;
-    property LocalAccessCode: WideString readonly dispid 8;
-    property LongDistanceAccessCode: WideString readonly dispid 9;
-    property TollPrefixList: WideString readonly dispid 10;
-    property CancelCallWaitingCode: WideString readonly dispid 11;
-  end;
-
-// *********************************************************************//
 // Interface: IEnumCallingCard
 // Flags:     (16) Hidden
 // GUID:      {0C4D8F02-8DDB-11D1-A09E-00805FC147D3}
@@ -1697,22 +1353,6 @@ type
     property SameAreaDialingRule: WideString read Get_SameAreaDialingRule;
     property LongDistanceDialingRule: WideString read Get_LongDistanceDialingRule;
     property InternationalDialingRule: WideString read Get_InternationalDialingRule;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITCallingCardDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {0C4D8F00-8DDB-11D1-A09E-00805FC147D3}
-// *********************************************************************//
-  ITCallingCardDisp = dispinterface
-    ['{0C4D8F00-8DDB-11D1-A09E-00805FC147D3}']
-    property PermanentCardID: Integer readonly dispid 1;
-    property NumberOfDigits: Integer readonly dispid 2;
-    property Options: Integer readonly dispid 3;
-    property CardName: WideString readonly dispid 4;
-    property SameAreaDialingRule: WideString readonly dispid 5;
-    property LongDistanceDialingRule: WideString readonly dispid 6;
-    property InternationalDialingRule: WideString readonly dispid 7;
   end;
 
 // *********************************************************************//
@@ -1752,31 +1392,6 @@ type
     property TotalACDCallTime: Integer read Get_TotalACDCallTime;
     property TotalWrapUpTime: Integer read Get_TotalWrapUpTime;
     property AgentSessions: OleVariant read Get_AgentSessions;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAgentDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5770ECE5-4B27-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITAgentDisp = dispinterface
-    ['{5770ECE5-4B27-11D1-BF80-00805FC147D3}']
-    function  EnumerateAgentSessions: IEnumAgentSession; dispid 1;
-    function  CreateSession(const pACDGroup: ITACDGroup; const pAddress: ITAddress): ITAgentSession; dispid 2;
-    function  CreateSessionWithPIN(const pACDGroup: ITACDGroup; const pAddress: ITAddress;
-                                   const pPIN: WideString): ITAgentSession; dispid 3;
-    property ID: WideString readonly dispid 4;
-    property User: WideString readonly dispid 5;
-    property State: AGENT_STATE dispid 6;
-    property MeasurementPeriod: Integer dispid 7;
-    property OverallCallRate: Currency readonly dispid 8;
-    property NumberOfACDCalls: Integer readonly dispid 9;
-    property NumberOfIncomingCalls: Integer readonly dispid 10;
-    property NumberOfOutgoingCalls: Integer readonly dispid 11;
-    property TotalACDTalkTime: Integer readonly dispid 12;
-    property TotalACDCallTime: Integer readonly dispid 13;
-    property TotalWrapUpTime: Integer readonly dispid 14;
-    property AgentSessions: OleVariant readonly dispid 15;
   end;
 
 // *********************************************************************//
@@ -1835,31 +1450,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITAgentSessionDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC3147-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITAgentSessionDisp = dispinterface
-    ['{5AFC3147-4BCC-11D1-BF80-00805FC147D3}']
-    property Agent: ITAgent readonly dispid 1;
-    property Address: ITAddress readonly dispid 2;
-    property ACDGroup: ITACDGroup readonly dispid 3;
-    property State: AGENT_SESSION_STATE dispid 4;
-    property SessionStartTime: TDateTime readonly dispid 5;
-    property SessionDuration: Integer readonly dispid 6;
-    property NumberOfCalls: Integer readonly dispid 7;
-    property TotalTalkTime: Integer readonly dispid 8;
-    property AverageTalkTime: Integer readonly dispid 9;
-    property TotalCallTime: Integer readonly dispid 10;
-    property AverageCallTime: Integer readonly dispid 11;
-    property TotalWrapUpTime: Integer readonly dispid 12;
-    property AverageWrapUpTime: Integer readonly dispid 13;
-    property ACDCallRate: Currency readonly dispid 14;
-    property LongestTimeToAnswer: Integer readonly dispid 15;
-    property AverageTimeToAnswer: Integer readonly dispid 16;
-  end;
-
-// *********************************************************************//
 // Interface: ITACDGroup
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {5AFC3148-4BCC-11D1-BF80-00805FC147D3}
@@ -1871,18 +1461,6 @@ type
     function  Get_Queues: OleVariant; safecall;
     property Name: WideString read Get_Name;
     property Queues: OleVariant read Get_Queues;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITACDGroupDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC3148-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITACDGroupDisp = dispinterface
-    ['{5AFC3148-4BCC-11D1-BF80-00805FC147D3}']
-    property Name: WideString readonly dispid 1;
-    function  EnumerateQueues: IEnumQueue; dispid 2;
-    property Queues: OleVariant readonly dispid 3;
   end;
 
 // *********************************************************************//
@@ -1931,26 +1509,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITQueueDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC3149-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITQueueDisp = dispinterface
-    ['{5AFC3149-4BCC-11D1-BF80-00805FC147D3}']
-    property MeasurementPeriod: Integer dispid 1;
-    property TotalCallsQueued: Integer readonly dispid 2;
-    property CurrentCallsQueued: Integer readonly dispid 3;
-    property TotalCallsAbandoned: Integer readonly dispid 4;
-    property TotalCallsFlowedIn: Integer readonly dispid 5;
-    property TotalCallsFlowedOut: Integer readonly dispid 6;
-    property LongestEverWaitTime: Integer readonly dispid 7;
-    property CurrentLongestWaitTime: Integer readonly dispid 8;
-    property AverageWaitTime: Integer readonly dispid 9;
-    property FinalDisposition: Integer readonly dispid 10;
-    property Name: WideString readonly dispid 11;
-  end;
-
-// *********************************************************************//
 // Interface: ITAgentEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {5AFC314A-4BCC-11D1-BF80-00805FC147D3}
@@ -1961,17 +1519,6 @@ type
     function  Get_Event: AGENT_EVENT; safecall;
     property Agent: ITAgent read Get_Agent;
     property Event: AGENT_EVENT read Get_Event;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAgentEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC314A-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITAgentEventDisp = dispinterface
-    ['{5AFC314A-4BCC-11D1-BF80-00805FC147D3}']
-    property Agent: ITAgent readonly dispid 1;
-    property Event: AGENT_EVENT readonly dispid 2;
   end;
 
 // *********************************************************************//
@@ -1988,17 +1535,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITAgentSessionEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC314B-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITAgentSessionEventDisp = dispinterface
-    ['{5AFC314B-4BCC-11D1-BF80-00805FC147D3}']
-    property Session: ITAgentSession readonly dispid 1;
-    property Event: AGENT_SESSION_EVENT readonly dispid 2;
-  end;
-
-// *********************************************************************//
 // Interface: ITACDGroupEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {297F3032-BD11-11D1-A0A7-00805FC147D3}
@@ -2009,17 +1545,6 @@ type
     function  Get_Event: ACDGROUP_EVENT; safecall;
     property Group: ITACDGroup read Get_Group;
     property Event: ACDGROUP_EVENT read Get_Event;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITACDGroupEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {297F3032-BD11-11D1-A0A7-00805FC147D3}
-// *********************************************************************//
-  ITACDGroupEventDisp = dispinterface
-    ['{297F3032-BD11-11D1-A0A7-00805FC147D3}']
-    property Group: ITACDGroup readonly dispid 1;
-    property Event: ACDGROUP_EVENT readonly dispid 2;
   end;
 
 // *********************************************************************//
@@ -2036,17 +1561,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITQueueEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {297F3033-BD11-11D1-A0A7-00805FC147D3}
-// *********************************************************************//
-  ITQueueEventDisp = dispinterface
-    ['{297F3033-BD11-11D1-A0A7-00805FC147D3}']
-    property Queue: ITQueue readonly dispid 1;
-    property Event: ACDQUEUE_EVENT readonly dispid 2;
-  end;
-
-// *********************************************************************//
 // Interface: ITTAPICallCenter
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {5AFC3154-4BCC-11D1-BF80-00805FC147D3}
@@ -2056,17 +1570,6 @@ type
     function  EnumerateAgentHandlers: IEnumAgentHandler; safecall;
     function  Get_AgentHandlers: OleVariant; safecall;
     property AgentHandlers: OleVariant read Get_AgentHandlers;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITTAPICallCenterDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {5AFC3154-4BCC-11D1-BF80-00805FC147D3}
-// *********************************************************************//
-  ITTAPICallCenterDisp = dispinterface
-    ['{5AFC3154-4BCC-11D1-BF80-00805FC147D3}']
-    function  EnumerateAgentHandlers: IEnumAgentHandler; dispid 131073;
-    property AgentHandlers: OleVariant readonly dispid 131074;
   end;
 
 // *********************************************************************//
@@ -2102,22 +1605,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITAgentHandlerDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {587E8C22-9802-11D1-A0A4-00805FC147D3}
-// *********************************************************************//
-  ITAgentHandlerDisp = dispinterface
-    ['{587E8C22-9802-11D1-A0A4-00805FC147D3}']
-    property Name: WideString readonly dispid 1;
-    function  CreateAgent: ITAgent; dispid 2;
-    function  CreateAgentWithID(const pID: WideString; const pPIN: WideString): ITAgent; dispid 3;
-    function  EnumerateACDGroups: IEnumACDGroup; dispid 4;
-    function  EnumerateUsableAddresses: IEnumAddress; dispid 5;
-    property ACDGroups: OleVariant readonly dispid 6;
-    property UsableAddresses: OleVariant readonly dispid 7;
-  end;
-
-// *********************************************************************//
 // Interface: IEnumACDGroup
 // Flags:     (16) Hidden
 // GUID:      {5AFC3157-4BCC-11D1-BF80-00805FC147D3}
@@ -2141,17 +1628,6 @@ type
     function  Get_Event: AGENTHANDLER_EVENT; safecall;
     property AgentHandler: ITAgentHandler read Get_AgentHandler;
     property Event: AGENTHANDLER_EVENT read Get_Event;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITAgentHandlerEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {297F3034-BD11-11D1-A0A7-00805FC147D3}
-// *********************************************************************//
-  ITAgentHandlerEventDisp = dispinterface
-    ['{297F3034-BD11-11D1-A0A7-00805FC147D3}']
-    property AgentHandler: ITAgentHandler readonly dispid 1;
-    property Event: AGENTHANDLER_EVENT readonly dispid 2;
   end;
 
 // *********************************************************************//
@@ -2194,17 +1670,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITMediaSupportDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC384-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITMediaSupportDisp = dispinterface
-    ['{B1EFC384-9355-11D0-835C-00AA003CCABD}']
-    property MediaTypes: Integer readonly dispid 196609;
-    function  QueryMediaType(lMediaType: Integer): WordBool; dispid 196610;
-  end;
-
-// *********************************************************************//
 // Interface: ITTerminalSupport
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {B1EFC385-9355-11D0-835C-00AA003CCABD}
@@ -2220,22 +1685,6 @@ type
     function  GetDefaultStaticTerminal(lMediaType: Integer; Direction: TERMINAL_DIRECTION): ITTerminal; safecall;
     property StaticTerminals: OleVariant read Get_StaticTerminals;
     property DynamicTerminalClasses: OleVariant read Get_DynamicTerminalClasses;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITTerminalSupportDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {B1EFC385-9355-11D0-835C-00AA003CCABD}
-// *********************************************************************//
-  ITTerminalSupportDisp = dispinterface
-    ['{B1EFC385-9355-11D0-835C-00AA003CCABD}']
-    property StaticTerminals: OleVariant readonly dispid 393217;
-    function  EnumerateStaticTerminals: IEnumTerminal; dispid 393218;
-    property DynamicTerminalClasses: OleVariant readonly dispid 393219;
-    function  EnumerateDynamicTerminalClasses: IEnumTerminalClass; dispid 393220;
-    function  CreateTerminal(const pTerminalClass: WideString; lMediaType: Integer; 
-                             Direction: TERMINAL_DIRECTION): ITTerminal; dispid 393221;
-    function  GetDefaultStaticTerminal(lMediaType: Integer; Direction: TERMINAL_DIRECTION): ITTerminal; dispid 393222;
   end;
 
 // *********************************************************************//
@@ -2266,19 +1715,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITStreamControlDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {EE3BD604-3868-11D2-A045-00C04FB6809F}
-// *********************************************************************//
-  ITStreamControlDisp = dispinterface
-    ['{EE3BD604-3868-11D2-A045-00C04FB6809F}']
-    function  CreateStream(lMediaType: Integer; td: TERMINAL_DIRECTION): ITStream; dispid 262145;
-    procedure RemoveStream(const pStream: ITStream); dispid 262146;
-    procedure EnumerateStreams(out ppEnumStream: IEnumStream); dispid 262147;
-    property Streams: OleVariant readonly dispid 262148;
-  end;
-
-// *********************************************************************//
 // Interface: IEnumStream
 // Flags:     (16) Hidden
 // GUID:      {EE3BD606-3868-11D2-A045-00C04FB6809F}
@@ -2306,19 +1742,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITSubStreamControlDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {EE3BD607-3868-11D2-A045-00C04FB6809F}
-// *********************************************************************//
-  ITSubStreamControlDisp = dispinterface
-    ['{EE3BD607-3868-11D2-A045-00C04FB6809F}']
-    function  CreateSubStream: ITSubStream; dispid 1;
-    procedure RemoveSubStream(const pSubStream: ITSubStream); dispid 2;
-    procedure EnumerateSubStreams(out ppEnumSubStream: IEnumSubStream); dispid 3;
-    property SubStreams: OleVariant readonly dispid 4;
-  end;
-
-// *********************************************************************//
 // Interface: ITSubStream
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {EE3BD608-3868-11D2-A045-00C04FB6809F}
@@ -2335,23 +1758,6 @@ type
     function  Get_Stream: ITStream; safecall;
     property Terminals: OleVariant read Get_Terminals;
     property Stream: ITStream read Get_Stream;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITSubStreamDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {EE3BD608-3868-11D2-A045-00C04FB6809F}
-// *********************************************************************//
-  ITSubStreamDisp = dispinterface
-    ['{EE3BD608-3868-11D2-A045-00C04FB6809F}']
-    procedure StartSubStream; dispid 1;
-    procedure PauseSubStream; dispid 2;
-    procedure StopSubStream; dispid 3;
-    procedure SelectTerminal(const pTerminal: ITTerminal); dispid 4;
-    procedure UnselectTerminal(const pTerminal: ITTerminal); dispid 5;
-    procedure EnumerateTerminals(out ppEnumTerminal: IEnumTerminal); dispid 6;
-    property Terminals: OleVariant readonly dispid 7;
-    property Stream: ITStream readonly dispid 8;
   end;
 
 // *********************************************************************//
@@ -2426,19 +1832,6 @@ type
   end;
 
 // *********************************************************************//
-// DispIntf:  ITDigitGenerationEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {80D3BFAD-57D9-11D2-A04A-00C04FB6809F}
-// *********************************************************************//
-  ITDigitGenerationEventDisp = dispinterface
-    ['{80D3BFAD-57D9-11D2-A04A-00C04FB6809F}']
-    property Call: ITCallInfo readonly dispid 1;
-    property GenerationTermination: Integer readonly dispid 2;
-    property TickCount: Integer readonly dispid 3;
-    property CallbackInstance: Integer readonly dispid 4;
-  end;
-
-// *********************************************************************//
 // Interface: ITPrivateEvent
 // Flags:     (4416) Dual OleAutomation Dispatchable
 // GUID:      {0E269CD0-10D4-4121-9C22-9C85D625650D}
@@ -2455,30 +1848,6 @@ type
     property CallHub: ITCallHub read Get_CallHub;
     property EventCode: Integer read Get_EventCode;
     property EventInterface: IDispatch read Get_EventInterface;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITPrivateEventDisp
-// Flags:     (4416) Dual OleAutomation Dispatchable
-// GUID:      {0E269CD0-10D4-4121-9C22-9C85D625650D}
-// *********************************************************************//
-  ITPrivateEventDisp = dispinterface
-    ['{0E269CD0-10D4-4121-9C22-9C85D625650D}']
-    property Address: ITAddress readonly dispid 1;
-    property Call: ITCallInfo readonly dispid 2;
-    property CallHub: ITCallHub readonly dispid 3;
-    property EventCode: Integer readonly dispid 4;
-    property EventInterface: IDispatch readonly dispid 5;
-  end;
-
-// *********************************************************************//
-// DispIntf:  ITTAPIDispatchEventNotification
-// Flags:     (4096) Dispatchable
-// GUID:      {9F34325B-7E62-11D2-9457-00C04F8EC888}
-// *********************************************************************//
-  ITTAPIDispatchEventNotification = dispinterface
-    ['{9F34325B-7E62-11D2-9457-00C04F8EC888}']
-    procedure Event(TapiEvent: TAPI_EVENT; const pEvent: IDispatch); dispid 1;
   end;
 
 // *********************************************************************//
