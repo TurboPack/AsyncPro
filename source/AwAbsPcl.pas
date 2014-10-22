@@ -1707,19 +1707,15 @@ ExitPoint:
 
 procedure InitializeUnit;
 var
-  TmpDateSeparator : char;
-  TmpDateFormat : string[15];
+  pSettings: TFormatSettings;
   TmpDateTime : TDateTime;
 begin
   {Set Unix days base}
-  TmpDateFormat := ShortDateFormat;
-  TmpDateSeparator := DateSeparator;
-  DateSeparator := '/';
-  ShortDateFormat := 'mm/dd/yyyy';
-  TmpDateTime := StrToDateTime('01/01/1970');
+  pSettings := FormatSettings;
+  pSettings.DateSeparator := '/';
+  pSettings.ShortDateFormat := 'mm/dd/yyyy';
+  TmpDateTime := StrToDateTime('01/01/1970', pSettings);
   UnixDaysBase := Trunc(TmpDateTime);
-  DateSeparator := TmpDateSeparator;
-  ShortDateFormat := TmpDateFormat;
 
   {$IFNDEF Win32}
   Crc32TableOfs := Ofs(Crc32Table);

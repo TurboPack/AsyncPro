@@ -127,8 +127,8 @@ begin
     Result := mrAbort;
     Exit;
   end;
-  lblDateSample.Caption := '( ' + LowerCase(ShortDateFormat) + ' )';
-  lblTimeSample.Caption := '( ' + ShortTimeFormat + ' )';
+  lblDateSample.Caption := '( ' + LowerCase(FormatSettings.ShortDateFormat) + ' )';
+  lblTimeSample.Caption := '( ' + FormatSettings.ShortTimeFormat + ' )';
   JobInfoStream := nil;
   try
     JobInfoStream := TMemoryStream.Create;
