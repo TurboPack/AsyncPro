@@ -1,4 +1,4 @@
-package A407_D;
+package AsyncProDD;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -33,7 +33,7 @@ requires
   designide,
   rtl,
   vclx,
-  A407_R;
+  AsyncProDR;
 
 contains
   APROREG in '..\..\source\APROREG.pas',
