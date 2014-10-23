@@ -1027,6 +1027,8 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
 
 const
   BeatInterval = 100;
@@ -5091,7 +5093,7 @@ begin
                WorkRect.Top,
                ETO_OPAQUE,
                @WorkRect,
-               FDisplayStr,
+               PChar(FDisplayStr),
                TextStrLen,
                @FCellWidths^);
 
@@ -5274,7 +5276,7 @@ procedure TAdVT100Emulator.KeyDown(var Key : word; Shift: TShiftState);
     Hex := '$  ';
     Hex[2] := S[aInx];
     Hex[3] := S[aInx+1];
-    Val(Hex, Value, ec);
+    Val(string(Hex), Value, ec);
     if (ec = 0) then
       Result := AnsiChar(Value)
     else
@@ -5308,7 +5310,7 @@ begin
   {we need to convert this keystroke into a VT100 string to pass back
    to the server; this is a three step process...}
   {first, convert the keystroke to its name}
-  VKKey := Format('\x%.2x', [Key]);
+  VKKey := AnsiString(Format('\x%.2x', [Key]));
   VKKey := KeyboardMapping.Get(VKKey);
   {if we can continue, add the shift state in the order shift, ctrl,
    then alt}
@@ -5958,14 +5960,14 @@ begin
     Canvas.Brush.Color := BackColor;
 
     {ask the charset mapping to create a draw script for this text}
-    FCharSetMapping.GenerateDrawScript(
-       VT100CharSetNames[Walker^.pnCSet], FDisplayStr);
+    FCharSetMapping.GenerateDrawScript(ShortString(
+       VT100CharSetNames[Walker^.pnCSet]), FDisplayStr);
 
     {while the charset mapping passes us back draw commands, draw}
     TextCol := Walker^.pnStart - OriginCol;
     while FCharSetMapping.GetNextDrawCommand(FontName, FDisplayStr) do begin
       {calculate the length of this bit o' text}
-      PartTextLen := StrLen(FDisplayStr);
+      PartTextLen := AnsiStrings.StrLen(FDisplayStr);
 
       {calculate the left and right values for the rect}
       WorkRect.Left := (TextCol * CharWidth) + OffsetCol;
@@ -5975,7 +5977,7 @@ begin
       if (FontName = DefaultFontName) then
         Canvas.Font := Font
       else begin
-        FSecondaryFont.Name := FontName;
+        FSecondaryFont.Name := string(FontName);
         Canvas.Font := FSecondaryFont;
       end;
       Canvas.Font.Color := ForeColor;
@@ -5993,7 +5995,7 @@ begin
                  WorkRect.Top,
                  ETO_OPAQUE,
                  @WorkRect,
-                 FDisplayStr,
+                 PChar(FDisplayStr),
                  PartTextLen,
                  @FCellWidths^);
 
@@ -6357,8 +6359,8 @@ begin
             if (Parser.Argument[0] = 5) then
               Terminal.ComPort.PutString(VT100StatusRpt)
             else if (Parser.Argument[0] = 6) then
-              Terminal.ComPort.PutString(
-                 Format(VT100CursorPos, [Buffer.Row, Buffer.Col]));
+              Terminal.ComPort.PutString(AnsiString(
+                 Format(VT100CursorPos, [Buffer.Row, Buffer.Col])));
         end;
       end;
     eCHT :
@@ -6529,7 +6531,7 @@ begin
          attached to the same comport, the host would get several
          responses}
         if (Terminal.ComPort.MasterTerminal = Terminal) then begin
-          Terminal.ComPort.PutString(Answerback);
+          Terminal.ComPort.PutString(AnsiString(Answerback));
         end;
       end;
     eBel :
@@ -6619,7 +6621,7 @@ begin
             else if (Arg > 1) then
               Arg := 1;
           end;
-          Terminal.ComPort.PutString(vttGenerateDECREPTPARM(Arg));
+          Terminal.ComPort.PutString(AnsiString(vttGenerateDECREPTPARM(Arg)));
         end;
       end;
     eDECSWL :

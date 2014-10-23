@@ -582,7 +582,7 @@ begin
   I := 1;
   Result := 0;
   while (Result = 0) and (I <= Length(Addr)) do begin
-    if Addr[I] in ['A'..'Z', 'a'..'z'] then
+    if CharInSet(Addr[I], ['A'..'Z', 'a'..'z']) then
       Result := LINEADDRESSTYPE_DOMAINNAME;
     if Addr[I] = '.' then
       inc(DotCnt);

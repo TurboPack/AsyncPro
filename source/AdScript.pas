@@ -362,6 +362,9 @@ const
 
 implementation
 
+uses
+  AnsiStrings;
+
 type
   StringBuffer = array[0..MaxCommandLength - 1] of AnsiChar;
 
@@ -738,7 +741,7 @@ var
     Result := True;
     for I := 0 to CommandNodes.Count-1 do
       with TApdScriptNode(CommandNodes[I]) do
-        if (Command = scLabel) and (Data = Name) then
+        if (Command = scLabel) and (string(Data) = Name) then
           Exit;
     Result := False;
   end;
@@ -750,7 +753,7 @@ begin
         case Command of
           scIf,
           scGoto:
-            if not FoundLabel(Data) then begin
+            if not FoundLabel(string(Data)) then begin
               raise EApdScriptError.Create(ecInvalidLabel, 0);
             end;
         end;
@@ -778,7 +781,7 @@ begin
   CurrentLine := 0;
   for I := 0 to ScriptCommands.Count-1 do begin
     Inc(CurrentLine);
-    AddToScript(FScriptCommands[I]);
+    AddToScript(AnsiString(FScriptCommands[I]));
   end;
 
   { Make sure all referenced labels really exist }
@@ -787,7 +790,7 @@ begin
   {$IFDEF DebugScript}
   WriteLn(Dbg,'script file ', FScriptFile, ' loaded');
   {$ENDIF}
-  AddDispatchLogEntry ('Script file ' + FScriptFile + 'loaded ');
+  AddDispatchLogEntry (AnsiString('Script file ' + FScriptFile + 'loaded '));
 end;
 
 { Create command node }
@@ -852,7 +855,7 @@ var
   var
     TempStr: string;
   begin
-    TempStr := UpperCase(Data2);
+    TempStr := UpperCase(string(Data2));
     if (TempStr = 'TRUE') or (TempStr = 'ON') then
       Timeout := Cardinal(True)
     else if (TempStr = 'FALSE') or (TempStr = 'OFF') then
@@ -866,7 +869,7 @@ var
   var
     TempStr: string;
   begin
-    TempStr := UpperCase(Data1);
+    TempStr := UpperCase(string(Data1));
     if TempStr = 'BAUD' then begin
       Option := oBaud;
       Data := ValidateBaud(Data2);
@@ -887,7 +890,7 @@ var
       SetTrueFalse;
     end else if TempStr = 'RETRY' then begin
       Option := oSetRetry;
-      if not Str2Card(Data2, Timeout) then
+      if not Str2Card(string(Data2), Timeout) then
         raise EApdScriptError.Create(ecBadFormat2, CurrentLine);
     end else if TempStr = 'DIRECTORY' then begin
       Option := oSetDirectory;
@@ -956,7 +959,7 @@ begin
     scInitPort:
       begin
         Data := Data1;
-        if CheckComPort(Data1) = 0 then
+        if CheckComPort(string(Data1)) = 0 then
           raise EApdScriptError.Create(ecBadFormat1, CurrentLine);
       end;
 
@@ -973,13 +976,13 @@ begin
     scWait:
       begin
         ConvertCtlChars(Data1);
-        if not Str2Card(Data2, Timeout) then
+        if not Str2Card(string(Data2), Timeout) then
           raise EApdScriptError.Create(ecBadFormat2, CurrentLine);
       end;
 
     scIf:
       begin
-        Condition := ClassifyCondition(Data1);
+        Condition := ClassifyCondition(string(Data1));
         if Condition = ccNone then
           raise EApdScriptError.Create(ecBadFormat1, CurrentLine);
         Data := UpperCase(Data2);
@@ -992,11 +995,11 @@ begin
       Data := UpperCase(Data1);
 
     scSendBreak:
-      if not Str2Card(Data1, Timeout) then
+      if not Str2Card(string(Data1), Timeout) then
         raise EApdScriptError.Create(ecBadFormat2, CurrentLine);
 
     scDelay:
-      if not Str2Card(Data1, Timeout) then
+      if not Str2Card(string(Data1), Timeout) then
         raise EApdScriptError.Create(ecBadFormat2, CurrentLine);
 
     scSetOption:
@@ -1004,7 +1007,7 @@ begin
 
     scUpload,
     scDownload:
-      if ValidateProtocol(Data1) = ptNoProtocol then
+      if ValidateProtocol(string(Data1)) = ptNoProtocol then
         raise EApdScriptError.Create(ecBadFormat2, CurrentLine)
       else
         Data := UpperCase(Data1);
@@ -1017,9 +1020,9 @@ begin
     scWaitMulti:
       begin
         Data := UpperCase(Data1);
-        if not Str2Card(Data2, TimeOut) then
+        if not Str2Card(string(Data2), TimeOut) then
           raise EApdScriptError.Create(ecBadFormat2, CurrentLine);
-        if not ValidateWaitMulti(Data1) then
+        if not ValidateWaitMulti(string(Data1)) then
           raise EApdScriptError.Create(ecTooManyStr, CurrentLine);
       end;
 
@@ -1186,7 +1189,7 @@ begin
 
   { Process tokens }
   if CmdType <> scComment then
-    CmdType := ClassifyToken(Cmd);
+    CmdType := ClassifyToken(string(Cmd));
   case CmdType of
     scComment: { Comment, ignore line }
       ;
@@ -1231,7 +1234,7 @@ var
 begin
   Result := UpperCase(Baud);
   for I := 1 to Length(Result) do begin
-    if Pos(Result[I], '1234567890') <> 0 then Continue;
+    if Pos(Result[I], AnsiString('1234567890')) <> 0 then Continue;
     raise EApdScriptError.Create(ecBadOption, CurrentLine);
   end;
 end;
@@ -1310,12 +1313,12 @@ begin
     APW_TRIGGERDATA  : S := 'APW_TRIGGERDATA';
     APW_TRIGGERTIMER : S := 'APW_TRIGGERTIMER';
     APW_TRIGGERSTATUS: S := 'APW_TRIGGERSTATUS';
-    else                S := IntToStr(Msg);
+    else                S := AnsiString(IntToStr(Msg));
   end;
 
-  AddDispatchLogEntry ('Entering AllTrigers' + S + ' ' +
+  AddDispatchLogEntry (AnsiString('Entering AllTrigers' + string(S) + ' ' +
                        IntToStr (TriggerHandle) + ' ' +
-                       IntToStr (Data));
+                       IntToStr (Data)));
 
   {$IFDEF DebugScript}
   WriteLn(Dbg,'entering AllTriggers: ', S, ' ',
@@ -1439,12 +1442,12 @@ procedure TApdCustomScript.LogCommand (      Index   : Cardinal;
                                              Command : TApdScriptCommand;
                                        const Node    : TApdScriptNode);
 begin
-  AddDispatchLogEntry ('Index: ' + IntToStr(Index) +
+  AddDispatchLogEntry (AnsiString('Index: ' + IntToStr(Index) +
       '  Command: ' +
       ScriptStr[TApdScriptNode(CommandNodes[Index]).Command] +
-      ' ' + TApdScriptNode(CommandNodes[Index]).Data +
+      ' ' + string(TApdScriptNode(CommandNodes[Index]).Data) +
       ' ' + IntToStr(TApdScriptNode(CommandNodes[Index]).TimeOut) +
-      ' ' + IntToStr(TApdScriptNode(CommandNodes[Index]).Condition));
+      ' ' + IntToStr(TApdScriptNode(CommandNodes[Index]).Condition)));
 end;
 
 { Process a script command }
@@ -1462,7 +1465,7 @@ var
   begin
     for I := 0 to CommandNodes.Count-1 do
       with TApdScriptNode(CommandNodes[I]) do begin
-        if (Command = scLabel) and (Data = Name) then begin
+        if (Command = scLabel) and (string(Data) = Name) then begin
           Result := I;
           Exit;
         end;
@@ -1482,7 +1485,7 @@ var
     FillChar(DataTrigger, SizeOf(DataTrigger), 0);
     TriggerCount := 0;
     repeat
-      SepPos := Pos(CmdSepChar, S);
+      SepPos := Pos(CmdSepChar, string(S));
       if SepPos = 0 then
         Len := 255
       else
@@ -1531,7 +1534,7 @@ begin
           OpenedPort := True;
           SaveOpen := ComPort.Open;
           ComPort.DeviceLayer := dlWin32;
-          ComPort.ComNumber := CheckComPort(tData);
+          ComPort.ComNumber := CheckComPort(string(tData));
           ComPort.Open := True;
         end;
 
@@ -1540,7 +1543,7 @@ begin
           OpenedPort := True;
           SaveOpen := ComPort.Open;
           if CheckWinsockPort then begin
-            ParseURL(tData, Addr, Port);
+            ParseURL(string(tData), Addr, Port);
             TApdCustomWinsockPort(ComPort).DeviceLayer := dlWinsock;
             TApdCustomWinsockPort(ComPort).WsAddress := Addr;
             TApdCustomWinsockPort(ComPort).WsPort := Port;
@@ -1605,7 +1608,7 @@ begin
         { If processing }
         if Condition = LastCondition then begin
           { Matches last condition, jump to specified label }
-          NextIndex := FindLabel(tData);
+          NextIndex := FindLabel(string(tData));
           {$IFDEF DebugScript}
           WriteLn(Dbg,'  matched  ');
           {$ENDIF}
@@ -1620,19 +1623,19 @@ begin
       scSetOption:
         case Option of
           oBaud:
-            TApdCustomComPort(Comport).Baud := StrToInt(tData);
+            TApdCustomComPort(Comport).Baud := StrToInt(string(tData));
 
           oDataBits:
-            TApdCustomComPort(Comport).DataBits := StrToInt(tData);
+            TApdCustomComPort(Comport).DataBits := StrToInt(string(tData));
 
           oFlow:
-            SetFlow(tData);
+            SetFlow(string(tData));
 
           oParity:
-            SetParity(tData);
+            SetParity(string(tData));
 
           oStopBits:
-            TApdCustomComPort(Comport).StopBits := StrToInt(tData);
+            TApdCustomComPort(Comport).StopBits := StrToInt(string(tData));
 
           oWsTelnet:
             if CheckWinsockPort then
@@ -1647,7 +1650,7 @@ begin
 
           oSetFileMask:
             if CheckProtocol then
-              Protocol.FileMask := tData;
+              Protocol.FileMask := string(tData);
 
           oSetDirectory:
             if CheckProtocol then
@@ -1688,7 +1691,7 @@ begin
           { Set a finish hook }
           SaveProtocolFinish := Protocol.OnProtocolFinish;
           Protocol.OnProtocolFinish := ScriptProtocolFinish;
-          Protocol.ProtocolType := ValidateProtocol(tData);
+          Protocol.ProtocolType := ValidateProtocol(string(tData));
           { Deactivate terminal }
           if Assigned(FTerminal) then begin
             if FTerminal is TAdCustomTerminal then begin
@@ -1710,14 +1713,14 @@ begin
         ComPort.SendBreak(Timeout, False);
 
       scChDir:
-        ChDir(tData);
+        ChDir(string(tData));
 
       scDelete:
-        DeleteFiles(tData);
+        DeleteFiles(string(tData));
 
       scGoto:
         { Goto label }
-        NextIndex := FindLabel(tData);
+        NextIndex := FindLabel(string(tData));
 
       scDisplay:
         ScriptDisplay(tData);
@@ -1731,7 +1734,7 @@ begin
         end;
 
       scRun:
-        ExecuteExternal(tData, Boolean(Timeout));
+        ExecuteExternal(string(tData), Boolean(Timeout));
 
       scUserFunction:
         begin
@@ -1750,7 +1753,7 @@ begin
             StopScript (ccFail)
           else begin
             try
-              StopScript (StrToInt (tData));
+              StopScript (StrToInt (string(tData)));
             except
               on EConvertError do
                 StopScript (ccBadExitCode);
@@ -1831,8 +1834,8 @@ begin
   {$IFDEF DebugScript}
   WriteLn(Dbg,'leaving ProcessTillWait: ' + IntToStr(Ord(ScriptState)));
   {$ENDIF}
-  AddDispatchLogEntry ('Leaving ProcessTillWait ' +
-                       IntToStr(Ord(ScriptState)));
+  AddDispatchLogEntry (AnsiString('Leaving ProcessTillWait ' +
+                       IntToStr(Ord(ScriptState))));
 end;
 
 { Start processing the script in the background }

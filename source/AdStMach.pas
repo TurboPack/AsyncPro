@@ -769,7 +769,7 @@ end;
 procedure TApdStateComPortSource.Output (AString : string);
 begin
   if Assigned (FComPort) then
-    FComPort.Output := AString;
+    FComPort.Output := AnsiString(AString);
 end;
 
 procedure TApdStateComPortSource.OutputBlock (ABlock : Pointer;
@@ -812,9 +812,9 @@ end;
 
 procedure TApdStateComPortSource.StateActivate (State : TApdCustomState);
 begin
-  FComPort.AddStringToLog(Name+ ': Activate');
+  FComPort.AddStringToLog(AnsiString(Name+ ': Activate'));
   if State.OutputOnActivate <> '' then
-    FComPort.Output := State.OutputOnActivate;
+    FComPort.Output := AnsiString(State.OutputOnActivate);
 end;
 
 procedure TApdStateComPortSource.StateChange (
@@ -851,14 +851,14 @@ begin
     OnTimeout := PacketTimeout;
 
     { set up the Start and End conditions }
-    StartString := State.Conditions[Index].StartString;
+    StartString := AnsiString(State.Conditions[Index].StartString);
     if StartString = '' then
       StartCond := scAnyData
     else
       StartCond := scString;
 
     EndCond := [];
-    EndString := State.Conditions[Index].EndString;
+    EndString := AnsiString(State.Conditions[Index].EndString);
     if EndString <> '' then
       EndCond := EndCond + [ecString];
     PacketSize := State.Conditions[Index].PacketSize;
@@ -1012,7 +1012,7 @@ end;
 procedure TApdStateComPortSource.StateDeactivate (State : TApdCustomState);
 begin
   if FComPort.Open then                                                  {!!.06}
-    FComPort.AddStringToLog (Name + ': Deactivate');
+    FComPort.AddStringToLog (AnSiString(Name + ': Deactivate'));
 end;
 
 { TApdCustomStateMachine }

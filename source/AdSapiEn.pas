@@ -368,6 +368,7 @@ type
 
   { Exceptions }
 
+{$M+}
   EApdSapiEngineException = class (Exception)
     private
       FErrorCode : Integer;
@@ -380,9 +381,11 @@ type
     published
       property ErrorCode : Integer read FErrorCode;
   end;
+{$M-}
 
   { TApdSSVoices }
   
+{$M+}
   TApdSSVoices = class (TObject)
     private
       FCurrentVoice : Integer;
@@ -431,9 +434,11 @@ type
       property CurrentVoice : Integer
                read GetCurrentVoice write SetCurrentVoice;
   end;
+{$M-}
 
   { TApdSREngines }
-  
+
+{$M+}
   TApdSREngines = class (TObject)
     private
       FCurrentEngine : Integer;
@@ -482,6 +487,7 @@ type
                read GetCurrentEngine write SetCurrentEngine;
 
   end;
+{$M-}
 
   { TApdCustomSapiEngine }
 
@@ -1843,12 +1849,12 @@ procedure TApdCustomSapiEngine.SpeakStream (Stream : TStream;
                                             FileName : string);
 
   type
-    TApdCharSet = Set of Char;
+    TApdCharSet = Set of AnsiChar;
 
   function FindCharReverse (Buffer : PChar; StartAt : Integer;
                             c : TApdCharSet) : Integer;
   begin
-    while (StartAt >= 0) and (not (Buffer[StartAt] in c)) do
+    while (StartAt >= 0) and (not CharInSet(Buffer[StartAt], c)) do
       Dec (StartAt, 1);
     Result := StartAt + 1;
   end;

@@ -230,7 +230,7 @@ implementation
         dpAttempt.Caption := IntToStr(Attempt);
         dpTotalAttempts.Caption := IntToStr(MaxAttempts);
       end else begin
-        dpDialing.Caption := 'Caller ID: ' + CallerID;
+        dpDialing.Caption := 'Caller ID: ' + string(CallerID);
         dpAttempt.Caption := '1';
         dpTotalAttempts.Caption := '1';
       end;
