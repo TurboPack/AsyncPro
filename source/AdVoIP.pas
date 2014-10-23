@@ -275,7 +275,7 @@ type
     FHandle : HWND;              { handle to our wndproc }
     FErrorCode : Integer;        { the last error value }
     FTapiInitialized : Boolean;  { initialized or not }
-    FConnectTimer : Integer;     { Timer used to control connect wait }  {!!.04}
+    FConnectTimer : NativeUInt;  { Timer used to control connect wait }  {!!.04}
 
     { event generation methods }
     procedure DoConnectEvent;
@@ -638,7 +638,7 @@ begin
     KillTimer(FHandle, FConnectTimer);                                   {!!.04}
     FConnectTimer := 0;                                                  {!!.04}
   end;                                                                   {!!.04}
-  FEventLog.AddLogString(False, 'Failed (' + IntToStr(FErrorCode) + ')');
+  FEventLog.AddLogString(False, AnsiString('Failed (' + IntToStr(FErrorCode) + ')'));
   if Assigned(FOnFail) then begin
     FOnFail(Self, FErrorCode);
   end;
@@ -657,9 +657,9 @@ begin
     Addr := FCallerIDName
   else
     Addr := FCallerIDNumber;
-  FEventLog.AddLogString(True, 'Incoming call, DisplayName: ' + FCallerDisplayName);
-  FEventLog.AddLogString(True, 'Incoming call, CallerIDNumber: ' + FCallerIDNumber);
-  FEventLog.AddLogString(True, 'Incoming call, CallerIDName: ' + FCallerIDName);
+  FEventLog.AddLogString(True, AnsiString('Incoming call, DisplayName: ' + FCallerDisplayName));
+  FEventLog.AddLogString(True, AnsiString('Incoming call, CallerIDNumber: ' + FCallerIDNumber));
+  FEventLog.AddLogString(True, AnsiString('Incoming call, CallerIDName: ' + FCallerIDName));
   if Assigned(FOnIncomingCall) then
     FOnIncomingCall(Self, Addr, Accept);
   if Accept then begin
@@ -676,9 +676,9 @@ end;
 procedure TApdCustomVoIP.DoStatusEvent(TapiEvent, Status, SubStatus : Word);
   { generate the OnStatus event }
 begin
-  FEventLog.AddLogString(True, 'DoStatusEvent (TapiEvent=' +
+  FEventLog.AddLogString(True, AnsiString('DoStatusEvent (TapiEvent=' +
     IntToStr(TapiEvent) + ', Status=' + IntToStr(Status) +
-    ', SubStatus=' + IntToStr(SubStatus) + ')');
+    ', SubStatus=' + IntToStr(SubStatus) + ')'));
   if Assigned(FOnStatus) then begin
     FOnStatus(Self, TapiEvent, Status, SubStatus);
   end;
@@ -1653,7 +1653,7 @@ begin
       else
         LogStream := TFileStream.Create(FLogName, fmCreate or fmShareDenyNone);
       LogStream.Seek(0, soFromEnd);
-      TimeStamp := FormatDateTime('dd/mm/yy : hh:mm:ss - ', Now) + S + #13#10;
+      TimeStamp := AnsiString(FormatDateTime('dd/mm/yy : hh:mm:ss - ', Now) + string(S) + #13#10);
       LogStream.WriteBuffer(TimeStamp[1], Length(TimeStamp));
       LogStream.Free;
     end;

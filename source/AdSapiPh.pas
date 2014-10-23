@@ -261,6 +261,7 @@ type
     response.  This handles getting help, repeating prompts and related
     items }
 
+{$M+}
   TApdSapiAskForInfo = class (TObject)
     private
       FReplyHandle   : THandle;
@@ -320,6 +321,7 @@ type
       property SapiEngine : TApdCustomSapiEngine
                read FSapiEngine write FSapiEngine;
   end;
+{$M-}
 
   TApdCustomSapiPhone = class (TApdCustomTapiDevice)
     private
@@ -585,7 +587,7 @@ procedure TokenizePhrase (Phrase : string;
   procedure AddWord (Tokens : TStringList; var NewWord : ShortString);
   begin
     if NewWord <> '' then
-      Tokens.Add (NewWord);
+      Tokens.Add (string(NewWord));
     NewWord := '';
   end;
   
@@ -613,24 +615,24 @@ begin
         end else if Phrase[i] = '"' then begin
           State := psInQuote;
           AddWord (Tokens, WorkString);
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
         end else
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
       psColSpace :
         if Phrase[i] = '"' then begin
           State := psInQuote;
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
         end else if Phrase[i] <> ' ' then begin
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
           State := psColChars;
         end;
       psInQuote :
         if Phrase[i] = '"' then begin
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
           AddWord (Tokens, WorkString);
           State := psColChars;
         end else
-          WorkString := WorkString + Phrase[i];
+          WorkString := WorkString + ShortString(Phrase[i]);
     end;
     Inc (i);
   end;
@@ -1562,7 +1564,6 @@ begin
     FExtension := FExtension + LastPhrase;
     FDigitCount := FDigitCount + 1;
     if FDigitCount >= NumDigits then begin
-      OutExtension := nil;
       GetMem (OutExtension, (Length (FExtension) + 1) * SizeOf(Char));  //@@@ SZ (was length(OutExtension) 17.04.2008
       StrPCopy (OutExtension, FExtension);
       ExitAskFor (prOk, OutExtension, LastPhrase);

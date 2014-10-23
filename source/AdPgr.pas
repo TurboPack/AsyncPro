@@ -586,17 +586,17 @@ procedure TApdCustomPager.AddInitModemDataTrigs;
   { TAP: Add Data Trigger unless we have it already }
 begin
   if OKTrig = 0 then
-    OKTrig := FPort.AddDataTrigger(FapOKTrig, True);
+    OKTrig := FPort.AddDataTrigger(ShortString(FapOKTrig), True);
   if ErrorTrig = 0 then
-    ErrorTrig := FPort.AddDataTrigger(FapErrorTrig, True);
+    ErrorTrig := FPort.AddDataTrigger(ShortString(FapErrorTrig), True);
   if ConnectTrig = 0 then
-    ConnectTrig := FPort.AddDataTrigger(FapConnectTrig, True);
+    ConnectTrig := FPort.AddDataTrigger(ShortString(FapConnectTrig), True);
   if BusyTrig = 0 then
-    BusyTrig := FPort.AddDataTrigger(FapBusyTrig, True);
+    BusyTrig := FPort.AddDataTrigger(ShortString(FapBusyTrig), True);
   if NoCarrierTrig = 0 then
-    NoCarrierTrig := FPort.AddDataTrigger(FapNoCarrierTrig, True);
+    NoCarrierTrig := FPort.AddDataTrigger(ShortString(FapNoCarrierTrig), True);
   if NoDialtoneTrig = 0 then
-    NoDialtoneTrig := FPort.AddDataTrigger(FapNoDialtoneTrig, True);
+    NoDialtoneTrig := FPort.AddDataTrigger(ShortString(FapNoDialtoneTrig), True);
 end;
 
 procedure TApdCustomPager.BuildTapMessages;
@@ -827,7 +827,7 @@ procedure TApdCustomPager.DoCurMessageBlock;
 begin
   DoPageStatus(psSendingMsg);
   Inc(FDialAttempt);
-  FPort.Output := FMsgBlockList[FMsgIdx];
+  FPort.Output := AnsiString(FMsgBlockList[FMsgIdx]);
 end;
 
 procedure TApdCustomPager.DoDial;
@@ -871,7 +871,7 @@ begin
       tpModemInitTimer.Interval := 10000; // ten seconds                 {!!.06}
       tpModemInitTimer.OnTimer := ModemInitTimerOnTimer;                 {!!.06}
       tpModemInitTimer.Enabled := True;                                  {!!.06}
-      FPort.Output := FModemInit + #13;                                  {!!.06}
+      FPort.Output := AnsiString(FModemInit + #13);                      {!!.06}
       repeat                                                             {!!.06}
         Res := SafeYield;                                                {!!.06}
       until mpGotOkay or FAborted or FCancelled or (Res = wm_Quit);      {!!.06}
@@ -889,7 +889,7 @@ begin
       S := 'AT' + FTonePrefix + FDialPrefix + FPhoneNumber + #13;
     end;
     { Dialing phone here }
-    FPort.Output := S;
+    FPort.Output := AnsiString(S);
   end; { Done dialing }
 end;
 
@@ -982,7 +982,7 @@ var
 begin
   FOkayToSend := False;
 
-  PutString(SNPP_CMD_DATA + ' ' + FMessage[0] + atpCRLF);
+  PutString(AnsiString(SNPP_CMD_DATA + ' ' + FMessage[0] + atpCRLF));
 
   repeat
     FEventLog.AddLogString(True, 'Waiting to Output');
@@ -990,7 +990,7 @@ begin
   until FOkayToSend or FCancelled;
 
   for i := 0 to Pred(FMessage.Count) do
-    PutString(FMessage[i] + atpCRLF);
+    PutString(AnsiString(FMessage[i] + atpCRLF));
   PutString(SNPP_DATA_TERMINATE);
 end;
 
@@ -1149,15 +1149,15 @@ var
   Code: Integer;
   Msg: Ansistring;
 begin
-  Code := StrToInt(Copy(Data,1,3));
+  Code := StrToInt(Copy(string(Data),1,3));
   Msg  := Copy(Data, 5, Length(Data)-4);
   Data := Copy(Data, 1, Length(Data) - 1);
-  FEventLog.AddLogString(True, Data);
+  FEventLog.AddLogString(True, string(Data));
   if not FGotSuccess then begin
     FGotSuccess := True;
   end else begin
     if Assigned(FOnPageFinish) then
-      FOnPageFinish(self, Code, Msg);
+      FOnPageFinish(self, Code, string(Msg));
   end;
 end;
 
@@ -1237,25 +1237,25 @@ end;
 procedure TApdCustomPager.InitLoginTriggers;
   { TAP: Add Triggers for logging on the TAP server }
 begin
-  FtrgIDPrompt   := FPort.AddDataTrigger(TAP_ID_PROMPT,    False);
-  FtrgLoginSucc  := FPort.AddDataTrigger(TAP_LOGIN_ACK,    False);
-  FtrgLoginFail  := FPort.AddDataTrigger(TAP_LOGIN_FAIL,   False);
-  FtrgLoginRetry := FPort.AddDataTrigger(TAP_LOGIN_NAK,    False);
+  FtrgIDPrompt   := FPort.AddDataTrigger(ShortString(TAP_ID_PROMPT),    False);
+  FtrgLoginSucc  := FPort.AddDataTrigger(ShortString(TAP_LOGIN_ACK),    False);
+  FtrgLoginFail  := FPort.AddDataTrigger(ShortString(TAP_LOGIN_FAIL),   False);
+  FtrgLoginRetry := FPort.AddDataTrigger(ShortString(TAP_LOGIN_NAK),    False);
 end;
 
 procedure TApdCustomPager.InitLogoutTriggers;
   { TAP: Add Triggers to Logout of TAP server }
 begin
-  FtrgDCon := FPort.AddDataTrigger(TAP_DISCONNECT, False);
+  FtrgDCon := FPort.AddDataTrigger(ShortString(TAP_DISCONNECT), False);
 end;
 
 procedure TApdCustomPager.InitMsgTriggers;
   { TAP: Add Triggers used for TAP Server Page results from message }
 begin   
-  FtrgOkToSend  := FPort.AddDataTrigger(TAP_MSG_OKTOSEND, False);
-  FtrgMsgAck    := FPort.AddDataTrigger(TAP_MSG_ACK, True);
-  FtrgMsgNak    := FPort.AddDataTrigger(TAP_MSG_NAK, True);
-  FtrgMsgRs     := FPort.AddDataTrigger(TAP_MSG_RS,  True);
+  FtrgOkToSend  := FPort.AddDataTrigger(ShortString(TAP_MSG_OKTOSEND), False);
+  FtrgMsgAck    := FPort.AddDataTrigger(ShortString(TAP_MSG_ACK), True);
+  FtrgMsgNak    := FPort.AddDataTrigger(ShortString(TAP_MSG_NAK), True);
+  FtrgMsgRs     := FPort.AddDataTrigger(ShortString(TAP_MSG_RS),  True);
 end;
 
 procedure TApdCustomPager.InitPackets;
@@ -1274,7 +1274,7 @@ procedure TApdCustomPager.LogOutTAP;
 begin
   DoPageStatus(psLoggingOut);
   if Assigned(FPort) and FPort.Open then
-    FPort.Output := TAP_LOGOUT;
+    FPort.Output := AnsiString(TAP_LOGOUT);
 end;
 
 procedure TApdCustomPager.MakePacket(ThePacket: TApdDataPacket; StartStr,
@@ -1284,9 +1284,9 @@ begin
   if not Assigned(ThePacket) then begin
     ThePacket := TApdDataPacket.Create(self);
     ThePacket.ComPort := FPort;
-    ThePacket.StartString := StartStr;
+    ThePacket.StartString := AnsiString(StartStr);
     ThePacket.StartCond := scString;
-    ThePacket.EndString := EndStr;
+    ThePacket.EndString := AnsiString(EndStr);
     ThePacket.EndCond := [];
     if EndStr <> '' then
       ThePacket.EndCond := [ecString];
@@ -1337,7 +1337,7 @@ begin
   if FMessage.Count > 1 then
     DoMultiLine
   else
-    PutString(SNPP_CMD_MESSAGE + ' ' + FMessage[0] + atpCRLF);
+    PutString(AnsiString(SNPP_CMD_MESSAGE + ' ' + FMessage[0] + atpCRLF));
 end;
 
 procedure TApdCustomPager.PutQuit;
@@ -1417,7 +1417,7 @@ begin
 
       if not FCancelled then begin
         FGotSuccess := False;
-        PutString(SNPP_CMD_PAGEREQ + ' ' + FPagerID + atpCRLF);
+        PutString(AnsiString(SNPP_CMD_PAGEREQ + ' ' + FPagerID + atpCRLF));
         repeat
           DelayTicks(2, True);
         until FGotSuccess or FCancelled;
@@ -1528,7 +1528,7 @@ begin
     FPacket.Timeout := 91; { 5 second timeout }
 
     {assume ModemHangup = '+++~~~ATH' }
-    TheCommand := FModemHangup;
+    TheCommand := AnsiString(FModemHangup);
 
     for I := 1 to Length(TheCommand) do
       if TheCommand[3] = '~' then
@@ -1670,9 +1670,9 @@ begin
             FEventLog.AddLogString(True, sLoginPrompt);
           DonePingTimer;
           if FPassword <> '' then
-            FPort.Output := TAP_AUTO_LOGIN + FPassword + cCr
+            FPort.Output := AnsiString(TAP_AUTO_LOGIN + FPassword + cCr)
           else
-            FPort.Output := TAP_AUTO_LOGIN + cCr;
+            FPort.Output := AnsiString(TAP_AUTO_LOGIN + cCr);
         end;
 
         psLoggedIn: begin
@@ -1703,9 +1703,9 @@ begin
         psLoginRetry: begin
           if FLoginRetry then begin
             if FPassword <> '' then
-              FPort.Output := TAP_AUTO_LOGIN + FPassword + cCr
+              FPort.Output := AnsiString(TAP_AUTO_LOGIN + FPassword + cCr)
             else
-              FPort.Output := TAP_AUTO_LOGIN + cCr;
+              FPort.Output := AnsiString(TAP_AUTO_LOGIN + cCr);
             FLoginRetry := False;
           end else begin
             if self.EventLog.FVerboseLog then
@@ -1949,8 +1949,8 @@ procedure TApdPgrLog.AddLogString(Verbose: Boolean;
 var
   DestAddr : string;
   LogStream : TFileStream;
-  TimeStamp : AnsiString;
-
+  TimeStamp : string;
+  pBytes: TBytes;
 begin
   if FEnabled then
     if Verbose and FVerboseLog then begin
@@ -1968,7 +1968,8 @@ begin
       TimeStamp := FormatDateTime('dd/mm/yy : hh:mm:ss - ', Now) + ' ' +
                    FOwner.FPageMode + ' page to ' + FOwner.FPagerID + ' at ' +
                    DestAddr + StatusString + #13#10;
-      LogStream.WriteBuffer(TimeStamp[1], Length(TimeStamp));
+      pBytes := TEncoding.ANSI.GetBytes(TimeStamp);
+      LogStream.WriteBuffer(pBytes, Length(pBytes));
       LogStream.Free;
     end;
 end;
