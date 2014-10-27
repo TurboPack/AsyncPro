@@ -1847,7 +1847,7 @@ const
       {Should we use its directory or ours?}
       if not FlagIsSet(aFlags, apHonorDirectory) then begin
         S := StrPas(aPathname);
-        Name := ExtractFileName(S);
+        Name := ShortString(ExtractFileName(string(S)));
         StrPCopy(NameExt, Name);
         AddBackSlashZ(aPathName, aDestDir);
         StrLCat(aPathName, NameExt, SizeOf(aPathName));

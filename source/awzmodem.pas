@@ -126,6 +126,9 @@ procedure zpReceive(Msg, wParam : Cardinal; lParam : LongInt);
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   {For various hex char manipulations}
   HexDigits : array[0..15] of AnsiChar = '0123456789abcdef';
@@ -246,7 +249,7 @@ const
       {Does the file exist already?}
       aSaveMode := FileMode;
       FileMode := 0;
-      Assign(aWorkFile, aPathName);
+      Assign(aWorkFile, string(aPathName));
       Reset(aWorkFile, 1);
       Result := IOResult;
       FileMode := aSaveMode;
@@ -339,7 +342,7 @@ const
       end;
 
       {Rewrite or append to file}
-      Assign(aWorkFile, aPathname);
+      Assign(aWorkFile, string(aPathname));
       if SeekPoint = 0 then begin
         {New or overwriting destination file}
         Rewrite(aWorkFile, 1);
@@ -714,7 +717,7 @@ const
         aHC.FlushOutBuffer;
 
         {Send the cancel string}
-        aHC.PutBlock(CancelStr, StrLen(CancelStr));
+        aHC.PutBlock(CancelStr, AnsiStrings.StrLen(CancelStr));
       end;
       aProtocolStatus := psCancelRequested;
       aForceStatus := True;
@@ -1318,14 +1321,14 @@ Hex:
       if Length(S) > 255 then
         SetLength(S, 255);
       {$ENDIF}
-      StrPCopy(aPathname, S);
+      AnsiStrings.StrPCopy(aPathname, S);
 
       {Should we use its directory or ours?}
       if not FlagIsSet(aFlags, apHonorDirectory) then begin
         Name := ExtractFileName(S);
-        StrPCopy(NameExt, Name);
+        AnsiStrings.StrPCopy(NameExt, Name);
         AddBackSlashZ(aPathName, aDestDir);
-        StrLCat(aPathName, NameExt, SizeOf(aPathName));
+        AnsiStrings.StrLCat(aPathName, NameExt, SizeOf(aPathName));
       end;
 
       {Extract the file size}
@@ -1342,7 +1345,7 @@ Hex:
       if S1Len = 0 then
         aSrcFileLen := 0
       else begin
-        Val(S1, aSrcFileLen, Code);
+        Val(string(S1), aSrcFileLen, Code);
         if Code <> 0 then
           {Invalid date format, just ignore}
           aSrcFileLen := 0;
@@ -2257,15 +2260,15 @@ Hex:
       FillChar(aDataBlock^, SizeOf(TDataBlock) , 0);
 
       {Fill in the file name}
-      S := StrPas(aPathName);
+      S := AnsiStrings.StrPas(aPathName);
       Name := ExtractFileName(S);
       if FlagIsSet(aFlags, apIncludeDirectory) then
-        StrPCopy(CA, S)
+        AnsiStrings.StrPCopy(CA, S)
       else
-        StrPCopy(CA, Name);
+        AnsiStrings.StrPCopy(CA, Name);
 
       {Change name to lower case, change '\' to '/'}
-      Len := StrLen(CA);
+      Len := AnsiStrings.StrLen(CA);
       AnsiLowerBuff(CA, Len);
       for I := 0 to Len-1 do begin
         {CA[I] := LoCaseMac(CA[I]);}

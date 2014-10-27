@@ -284,7 +284,8 @@ const
 
 implementation
 
-uses AdProtcl;                                                              // SWB
+uses
+  AnsiStrings, AdProtcl;
 
 const
   Separator = ';';
@@ -326,7 +327,7 @@ const
         aActCPS := Baud div 10;
       end else
         aActCPS := 0;
-      StrPCopy(aSearchMask, '*.*');
+      AnsiStrings.StrPCopy(aSearchMask, '*.*');
 
       {Assign file handling methods}
       apResetReadWriteHooks(P);
@@ -417,14 +418,14 @@ const
       {Search for the current end of the list}
       NewP := Pointer(FL);
       Inc(NewP, 2);
-      NewP := StrScan(NewP, EndOfListMark);
+      NewP := AnsiStrings.StrScan(NewP, EndOfListMark);
       if NewP = nil then begin
         apAddFileToList := ecBadFileList;
         Exit;
       end;
 
       {Enough room?}
-      if StrLen(PName)+1 > MaxList then begin
+      if AnsiStrings.StrLen(PName)+1 > MaxList then begin
         apAddFileToList := ecOutOfMemory;
         Exit;
       end;
@@ -436,7 +437,7 @@ const
       end;
 
       {Add the string}
-      StrCopy(NewP, PName);
+      AnsiStrings.StrCopy(NewP, PName);
       apAddFileToList := ecOK;
     end;
   end;
@@ -460,7 +461,7 @@ const
       {Search for a matching file}
       if aFindingFirst then begin
         DosError :=
-          Abs(FindFirst(aSearchMask, AnyFileButDir, aCurRec));
+          Abs(FindFirst(string(aSearchMask), AnyFileButDir, aCurRec));
         aFFOpen := True;
         {$IFDEF WIN32}
         if DosError <> 0 then
@@ -494,11 +495,11 @@ const
         JustPathNameZ(FName, aSearchMask);
         if FName[0] <> #0 then begin
           AddBackSlashZ(FName, FName);
-          StrPCopy(PName, aCurRec.Name);
-          StrCat(FName, PName);
+          AnsiStrings.StrPCopy(PName, AnsiString(aCurRec.Name));
+          AnsiStrings.StrCat(FName, PName);
         end else begin
-          StrPCopy(PName, aCurRec.Name);
-          StrCopy(FName, PName);
+          AnsiStrings.StrPCopy(PName, AnsiString(aCurRec.Name));
+          AnsiStrings.StrCopy(FName, PName);
         end;
         apNextFileMask := True;
       end;
@@ -650,7 +651,7 @@ const
       piStatus           := aProtocolStatus;
       piError            := aProtocolError;
       piProtocolType     := aCurProtocol;
-      StrLCopy(piFileName, aPathName, Length(piFileName));
+      AnsiStrings.StrLCopy(piFileName, aPathName, Length(piFileName));
       piFileSize         := aSrcFileLen;
       piBytesTransferred := apGetBytesTransferred(P);
       piBytesRemaining   := apGetBytesRemaining(P);
@@ -671,7 +672,7 @@ const
   procedure apSetFileMask(P : PProtocolData; NewMask : PAnsiChar);
     {-Set the search mask}
   begin
-    StrLCopy(P^.aSearchMask, NewMask, Length(P^.aSearchMask));
+    AnsiStrings.StrLCopy(P^.aSearchMask, NewMask, Length(P^.aSearchMask));
   end;
 
   procedure apSetReceiveFilename(P : PProtocolData; FName : PAnsiChar);
@@ -680,20 +681,20 @@ const
     Temp : TCharArray;
   begin
     with P^ do begin
-      if StrScan(FName, '\') = nil then begin
+      if AnsiStrings.StrScan(FName, '\') = nil then begin
         {Set aPathname to DestDir path + FName}
-        StrLCopy(aPathname, AddBackSlashZ(Temp, aDestDir), Length(aPathname));
-        StrLCat(aPathname, FName, Length(aPathname));
+        AnsiStrings.StrLCopy(aPathname, AddBackSlashZ(Temp, aDestDir), Length(aPathname));
+        AnsiStrings.StrLCat(aPathname, FName, Length(aPathname));
       end else
         {Set aPathname directly to FName}
-        StrLCopy(aPathName, FName, Length(aPathname));
+        AnsiStrings.StrLCopy(aPathName, FName, Length(aPathname));
     end;
   end;
 
   procedure apSetDestinationDirectory(P : PProtocolData; Dir : PAnsiChar);
     {-Set the directory used to hold received files}
   begin
-    StrLCopy(P^.aDestDir, Dir, Length(P^.aDestDir));
+    AnsiStrings.StrLCopy(P^.aDestDir, Dir, Length(P^.aDestDir));
   end;
 
   procedure apSetHandshakeWait(P : PProtocolData; NewHandshake, NewRetry : Cardinal);
@@ -989,7 +990,7 @@ const
         BPlus       : DT := dtBPlus;
         else          DT := dtNone;
       end;
-      ErrMsg := 'ErrorCode:' + IntToStr(aProtocolError);
+      ErrMsg := AnsiString('ErrorCode:' + IntToStr(aProtocolError));
       aHC.ValidDispatcher.AddDispatchEntry(DT, dstStatus, 0,
         @ErrMsg[1], Length(ErrMsg));
       PostMessage(aHWindow, apw_ProtocolFinish,
@@ -1021,7 +1022,7 @@ const
       {Open up the previously specified file}
       aSaveMode := FileMode;
       FileMode := fmOpenRead or fmShareDenyWrite;
-      Assign(aWorkFile, aPathName);
+      Assign(aWorkFile, string(aPathName));
       Reset(aWorkFile, 1);
       FileMode := aSaveMode;
       Res := IOResult;
@@ -1155,7 +1156,7 @@ const
       {Does the file exist already?}
       aSaveMode := FileMode;
       FileMode := 0;
-      Assign(aWorkFile, aPathName);
+      Assign(aWorkFile, string(aPathName));
       Reset(aWorkFile, 1);
       FileMode := aSaveMode;
       Res := IOResult;
@@ -1178,19 +1179,19 @@ const
 
       {Change the file name if it already exists and the option is WriteRename}
       if (Res = 0) and (aWriteFailOpt = wfcWriteRename) then begin
-        S := StrPas(aPathName);
+        S := AnsiStrings.StrPas(aPathName);
         Dir := ExtractFilePath(S);
         Name := ExtractFileName(S);
         Name[1] := '$';
         S := Dir + Name;
-        StrPCopy(aPathName, S);
+        AnsiStrings.StrPCopy(aPathName, S);
       end;
 
       {Give status a chance to show that the file was renamed}
       apShowStatus(P, 0);
 
       {Ok to rewrite file now}
-      Assign(aWorkFile, aPathname);
+      Assign(aWorkFile, string(aPathname));
       Rewrite(aWorkFile, 1);
       Res := IOResult;
       if Res <> 0 then begin
@@ -1498,7 +1499,7 @@ ExitPoint:
         {Open the file}
         aSaveMode := FileMode;
         FileMode := fmOpenRead or fmShareDenyWrite;
-        Assign(F, FName);
+        Assign(F, string(FName));
         Reset(F, 1);
         FileMode := aSaveMode;
         Res := IOResult;

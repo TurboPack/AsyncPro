@@ -803,6 +803,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   FileSkipMask = $80;   {Skip file if dest doesn't exist}
   FileRecover  = $03;   {Resume interrupted file transfer}
@@ -961,18 +964,18 @@ var
               FName := '';
               apwProtocolNextFile(P, FName);
               if FName <> '' then begin
-                StrPCopy(PAnsiChar(lParam), FName);  // SZ: 30.01.2010 (http://www.delphimaster.ru/cgi-bin/forum.pl?id=1263549006&n=3)
+                AnsiStrings.StrPCopy(PAnsiChar(lParam), FName);  // SZ: 30.01.2010 (http://www.delphimaster.ru/cgi-bin/forum.pl?id=1263549006&n=3)
                 Result := 1;
               end else
                 Result := 0;
             end;
           APW_PROTOCOLACCEPTFILE  :
             begin
-              FName := StrPas(PAnsiChar(lParam));     //SZ: 30.01.2010 (as reported by mail from Kolan)
+              FName := AnsiStrings.StrPas(PAnsiChar(lParam));     //SZ: 30.01.2010 (as reported by mail from Kolan)
               apwProtocolAccept(P, Accept, FName);
               if Accept then begin
                 if FileName <> '' then
-                  StrPCopy(PAnsiChar(lParam), FName);
+                  AnsiStrings.StrPCopy(PAnsiChar(lParam), FName);
                 Result := 1;
               end else
                 Result := 0;
@@ -1237,20 +1240,20 @@ var
   function TApdCustomProtocol.GetDestinationDirectory : AnsiString;
     {-Return the destination directory}
   begin
-    Result := StrPas(PData^.aDestDir);
+    Result := AnsiStrings.StrPas(PData^.aDestDir);
   end;
 
   procedure TApdCustomProtocol.SetDestinationDirectory(const NewDir : AnsiString);
     {-Set a new destination directory}
   begin
     with PData^ do
-      StrPCopy(aDestDir, NewDir);
+      AnsiStrings.StrPCopy(aDestDir, NewDir);
   end;
 
   function TApdCustomProtocol.GetFileMask : TFileName;
     {-Return the current file mask}
   begin
-    Result := StrPas(PData^.aSearchMask);
+    Result := string(AnsiStrings.StrPas(PData^.aSearchMask));
   end;
 
   procedure TApdCustomProtocol.SetFileMask(const NewFileMask : TFileName);
@@ -1263,10 +1266,10 @@ var
       if Length(NewFileMask) > 255 then begin
         S := NewFileMask;
         SetLength(S, 255);
-        StrPCopy(aSearchMask, S);
+        AnsiStrings.StrPCopy(aSearchMask, AnsiString(S));
       end else
       {$ENDIF}
-        StrPCopy(aSearchMask, NewFileMask);
+        AnsiStrings.StrPCopy(aSearchMask, AnsiString(NewFileMask));
   end;
 
   function TApdCustomProtocol.GetBatch : Boolean;
@@ -1385,7 +1388,7 @@ var
   function TApdCustomProtocol.GetFileName : AnsiString;
     {-Return the current file name}
   begin
-    Result := StrPas(PData^.aPathname);
+    Result := AnsiStrings.StrPas(PData^.aPathname);
   end;
 
   procedure TApdCustomProtocol.SetFileName(const NewName : AnsiString);
@@ -1402,10 +1405,10 @@ var
         if Length(NewName) > 255 then begin
           S := NewName;
           SetLength(S, 255);
-          StrPCopy(P, S);
+          AnsiStrings.StrPCopy(P, S);
         end else
         {$ENDIF}
-          StrPCopy(P, NewName);
+          AnsiStrings.StrPCopy(P, NewName);
         apSetReceiveFileName(PData, P);
       end;
     end;
@@ -2309,7 +2312,7 @@ var
     else begin
       FillChar(P, SizeOf(P), 0);
       if apNextFileMask(PData, P) then
-        FName := StrPas(P)
+        FName := AnsiStrings.StrPas(P)
       else
         FName := '';
     end;
@@ -2550,7 +2553,7 @@ var
     P : array[0..MaxMessageLen] of AnsiChar;
   begin
     apStatusMsg(P, Status);
-    Result := StrPas(P);
+    Result := AnsiStrings.StrPas(P);
   end;
 
   procedure TApdCustomProtocol.StartTransmit;
@@ -2753,7 +2756,7 @@ var
 
     {Create or open the history file}
     try
-      AssignFile(HisFile, FHistoryName);
+      AssignFile(HisFile, string(FHistoryName));
       Append(HisFile);
     except
       on E : EInOutError do
@@ -2810,11 +2813,11 @@ var
                 {Leave the partial file intact} ;
               dfAlways :
                 if aProtocolError <> ecCantWriteFile then
-                  DeleteFile(FileName);
+                  DeleteFile(string(FileName));
               dfNonRecoverable :
                 if (ProtocolType <> ptZmodem) and
                    (aProtocolError <> ecCantWriteFile) then
-                  DeleteFile(FileName);
+                  DeleteFile(string(FileName));
             end;
           end;
 
@@ -2839,9 +2842,9 @@ var
     {-Return a string of the protocol type}
   begin
     if (ProtocolType >= ptNoProtocol) and (ProtocolType <= ptAscii) then
-      Result := StrPas(ProtocolString[Ord(ProtocolType)])
+      Result := AnsiStrings.StrPas(ProtocolString[Ord(ProtocolType)])
     else
-      Result := StrPas(ProtocolString[0]);
+      Result := AnsiStrings.StrPas(ProtocolString[0]);
   end;
 
   function CheckNameString(const Check : TBlockCheckMethod) : AnsiString;
@@ -2868,7 +2871,7 @@ var
     Str(Sec:2, S);
     if S[1] = ' ' then
       S[1] := '0';
-    FormatMinSec := LeftPad(IntToStr(Min) + ':' + S, 6);
+    FormatMinSec := LeftPad(AnsiString(IntToStr(Min) + ':' + string(S)), 6);
   end;
 
 {$IFNDEF Win32}

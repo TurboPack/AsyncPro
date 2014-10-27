@@ -103,6 +103,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 {TStandardStatus}
 
   constructor TStandardDisplay.Create(Owner : TComponent);
@@ -134,9 +137,9 @@ implementation
   begin
     with Protocol do begin
       {Left top block}
-      psProtocol.Caption        := ProtocolName(ProtocolType);
-      psBlockCheck.Caption      := CheckNameString(BlockCheckMethod);
-      psFileName.Caption        := ExtractFileName(FileName);
+      psProtocol.Caption        := string(ProtocolName(ProtocolType));
+      psBlockCheck.Caption      := string(CheckNameString(BlockCheckMethod));
+      psFileName.Caption        := string(ExtractFileName(FileName));
       {$IFDEF Win32}
       if Length(psFileName.Caption) > MaxShowSize then begin
         S := psFileName.Caption;
@@ -165,11 +168,11 @@ implementation
 
       {Left bottom block}
       psEstimatedTime.Caption   :=
-        FormatMinSec(EstimateTransferSecs(FileLength));
+        string(FormatMinSec(EstimateTransferSecs(FileLength)));
       psElapsedTime.Caption     :=
-        FormatMinSec(Ticks2Secs(ElapsedTicks));
+        string(FormatMinSec(Ticks2Secs(ElapsedTicks)));
       psRemainingTime.Caption   :=
-        FormatMinSec(EstimateTransferSecs(BytesRemaining));
+        string(FormatMinSec(EstimateTransferSecs(BytesRemaining)));
 
       {Right bottom block: throughput}
       if ElapsedTicks > 0 then begin
@@ -188,7 +191,7 @@ implementation
       psKermitWindows.Caption   := IntToStr(KermitWindowsUsed);
 
       {Status message}
-      psStatusMsg.Caption       := StatusMsg(ProtocolStatus);
+      psStatusMsg.Caption       := string(StatusMsg(ProtocolStatus));
 
       {Progress bar}
       if FileLength <> 0 then
