@@ -115,6 +115,7 @@ contains
   AdStSapi in '..\..\source\AdStSapi.pas',
   adstst in '..\..\source\adstst.pas',
   LNSWin32 in '..\..\source\LNSWin32.pas',
-  LNSQueue in '..\..\source\LNSQueue.pas';
+  LNSQueue in '..\..\source\LNSQueue.pas',
+  AdAnsiStrings in '..\..\source\AdAnsiStrings.pas';
 
 end.

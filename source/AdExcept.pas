@@ -394,6 +394,7 @@ type
     {-Translate an exception into an error code}
 
   function AproLoadStr(const ErrorCode : SmallInt) : string;
+  function AproLoadAnsiStr(const ErrorCode : SmallInt) : AnsiString;
 
   function AproLoadZ(P : PAnsiChar; Code : Integer) : PAnsiChar;    // --sm ansi
 
@@ -418,7 +419,7 @@ uses
   function AproLoadZ(P : PAnsiChar; Code : Integer) : PAnsiChar;
   begin
     {$IFDEF UseResourceStrings}
-    Result := StrPCopy(P, AproLoadStr(Code));
+    Result := StrPCopy(P, AproLoadAnsiStr(Code));
     {$ELSE}
     Result := AproStrRes.GetAsciiZ(Abs(Code), P, MaxMessageLen);
     {$ENDIF}
@@ -435,6 +436,11 @@ uses
 
     if Result = '' then
       Result := SysErrorMessage(ErrorCode);
+  end;
+
+  function AproLoadAnsiStr(const ErrorCode : SmallInt) : AnsiString;
+  begin
+    Result := AnsiString(AproLoadStr(ErrorCode));
   end;
 
   {Alias for function above}

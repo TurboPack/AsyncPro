@@ -69,6 +69,9 @@ procedure ypReceive(Msg, wParam : Cardinal; lParam : LongInt);
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   aDataTrigger = 0;
   LogYModemState : array[TYmodemState] of TDispatchSubType = (        
@@ -329,22 +332,22 @@ const
                   end;
 
                   {Save the file name and length}
-                  StrLCopy(ySaveName, aPathName, SizeOf(ySaveName));
+                  AnsiStrings.StrLCopy(ySaveName, aPathName, SizeOf(ySaveName));
                   ySaveLen := aSrcFileLen;
 
                   {Make a Ymodem file header record}
                   FillChar(yFileHeader^, SizeOf(yFileHeader^)+XmodemOverhead, 0);
 
                   {Fill in the file name}
-                  S := StrPas(aPathName);
+                  S := AnsiStrings.StrPas(aPathName);
                   Name := ExtractFileName(S);
                   if FlagIsSet(aFlags, apIncludeDirectory) then
-                    StrPCopy(S1, S)
+                    AnsiStrings.StrPCopy(S1, S)
                   else
-                    StrPCopy(S1, Name);
+                    AnsiStrings.StrPCopy(S1, Name);
 
                   {Change name to lower case, change '\' to '/'}
-                  Len := StrLen(S1);
+                  Len := AnsiStrings.StrLen(S1);
                   AnsiLowerBuff(S1, Len);
                   for I := 0 to Len-1 do begin
                     {S1[I] := LoCaseMac(S1[I]);}
@@ -441,7 +444,7 @@ const
                   {Restore the pathname and file size}
                   if aUpcaseFileNames then
                     AnsiUpper(ySaveName);
-                  StrLCopy(aPathname, ySaveName, SizeOf(aPathname));
+                  AnsiStrings.StrLCopy(aPathname, ySaveName, SizeOf(aPathname));
                   aSrcFileLen := ySaveLen;
                   aBytesRemaining := ySaveLen;
 
@@ -824,13 +827,13 @@ const
                       AnsiUpperBuff(@S[1], SLen);
                       {$ENDIF}
                     end;
-                    StrPCopy(aPathname, S);
+                    AnsiStrings.StrPCopy(aPathname, S);
 
                     if not FlagIsSet(aFlags, apHonorDirectory) then begin
                       Name := ExtractFileName(S);
-                      StrPCopy(NameExt, Name);
+                      AnsiStrings.StrPCopy(NameExt, Name);
                       AddBackSlashZ(aPathName, aDestDir);
-                      StrLCat(aPathName, NameExt, SizeOf(aPathName));
+                      AnsiStrings.StrLCat(aPathName, NameExt, SizeOf(aPathName));
                     end;
 
                     {Extract the file size}
@@ -849,7 +852,7 @@ const
                     if S1Len = 0 then
                       aSrcFileLen := 0
                     else begin
-                      Val(S1, aSrcFileLen, Code);
+                      Val(string(S1), aSrcFileLen, Code);
                       if Code <> 0 then
                         aSrcFileLen := 0;
                     end;
@@ -922,7 +925,7 @@ const
                   if XState = 1 then begin
                     if aProtocolError = ecOK then begin
                       {If this is a file, check for truncation and file date}
-                      Assign(F, aPathname);
+                      Assign(F, string(aPathname));
                       Reset(F, 1);
                       if IOResult = 0 then begin
                         {If a new file size was supplied, truncate to that length}

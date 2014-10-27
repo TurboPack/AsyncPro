@@ -592,6 +592,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings, AdAnsiStrings;
+
 const
   { string resource offsets }
   STRRES_DIAL_STATUS = TDS_NONE;  {MODEM/Dialing status messages}
@@ -611,7 +614,7 @@ begin
     Trigger := 0;
   end else
   if (Trigger <> 0) then
-    raise Exception.Create('Unable to free trigger: ' + TriggerName);
+    raise Exception.Create('Unable to free trigger: ' + string(TriggerName));
 end;
 
 function FormatLogEntry(PageMode, ID, Dest, Reason: AnsiString;
@@ -624,8 +627,8 @@ begin
     pcDone:   S := ' Completed  ';
     pcError:  S := ' Failed: Reason: ' ;
   end;
-  Result := FormatDateTime('mm/dd/yyyy hh:mm:ss ', Now ) + ' ' + PageMode +
-    ' page to ' + ID + ' at ' + Dest + S + Reason;
+  Result := AnsiString(FormatDateTime('mm/dd/yyyy hh:mm:ss ', Now ) + ' ' + string(PageMode) +
+    ' page to ' + string(ID) + ' at ' + string(Dest) + string(S) + string(Reason));
 end;
 
 {TApdAbstractPager}
@@ -781,8 +784,8 @@ var
       if BlindDial then begin
       { Make BlindDial prefix }
         if Pos('X', FDialPrefix) > 0 then exit;
-        S := Copy(FDialPrefix, 1, Pos('T', FDialPrefix)) + adpgDefBlindInit +
-                  Copy(FDialPrefix, Pos('T', FDialPrefix), Length(FDialPrefix));
+        S := AnsiString(Copy(FDialPrefix, 1, Pos('T', FDialPrefix)) + adpgDefBlindInit +
+                  Copy(FDialPrefix, Pos('T', FDialPrefix), Length(FDialPrefix)));
         FPort.Output := S + FPhoneNumber + cCR;                          {!!.05}
       end else
       begin
@@ -1137,9 +1140,9 @@ function TApdCustomModemPager.DialStatusMsg(
 begin
   case Status of
     {TDialingStatus} dsNone..dsCleanup:
-      Result := AproLoadStr(Ord(Status) + STRRES_DIAL_STATUS);
+      Result := AproLoadAnsiStr(Ord(Status) + STRRES_DIAL_STATUS);
     {TDialError} deNone..deNoConnection:
-      Result := AproLoadStr(Ord(Status) + STRRES_DIAL_ERROR);
+      Result := AproLoadAnsiStr(Ord(Status) + STRRES_DIAL_ERROR);
   end;
 end;
 
@@ -1216,7 +1219,7 @@ end;
 function BuildTAPCtrlChar(C: AnsiChar): AnsiString;
 {add "SUB" character + C shifted up by 64 chars (^A -> "A")}
 begin
-  Result := cSub + Chr(Ord(c) + $40);
+  Result := AnsiString(cSub + Chr(Ord(c) + $40));
 end;
 
 function MakeCtrlChar(const S: AnsiString): Ansichar;

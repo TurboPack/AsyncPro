@@ -2236,7 +2236,8 @@ type
     procedure Next;
     procedure Prev;
 
-    procedure Append(const Text: string);
+    procedure Append(const Text: string); overload;
+    procedure Append(const Text: AnsiString); overload;
     procedure AppendTAdStr(TS: TAdStr);
     procedure AppendBuff(Buff: PChar);
     procedure Clear;
@@ -3184,6 +3185,11 @@ begin
   StrCat(FString, Buff);
   StrDispose(Buff);
   FLen := StrLen(FString);
+end;
+
+procedure TAdStr.Append(const Text: AnsiString);
+begin
+  Append(string(Text));
 end;
 
 procedure TAdStr.AppendBuff(Buff: PChar);
