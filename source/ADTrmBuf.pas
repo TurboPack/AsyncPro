@@ -426,7 +426,8 @@ type
 
       {write character/string}
       procedure WriteChar(aCh : AnsiChar);
-      procedure WriteString(const aSt : Ansistring);
+      procedure WriteString(const aSt : string); overload;
+      procedure WriteString(const aSt : AnsiString); overload;
 
       {miscellaneous special processing}
       procedure DoBackspace;
@@ -2566,7 +2567,12 @@ begin
     FBeyondMargin := true;
 end;
 {--------}
-procedure TAdTerminalBuffer.WriteString(const aSt : Ansistring);
+procedure TAdTerminalBuffer.WriteString(const aSt : string);
+begin
+  WriteString(AnsiString(ASt));
+end;
+{--------}
+procedure TAdTerminalBuffer.WriteString(const aSt : AnsiString);
 var
   i : integer;
 begin

@@ -222,6 +222,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 {===TAdTerminalParser================================================}
 constructor TAdTerminalParser.Create(aUseWideChar : boolean);
 begin
@@ -789,7 +792,7 @@ begin
         inc(FArgCount);
       end
       else begin
-        Val(TempStr, FArgs^[FArgCount], ec);
+        Val(string(TempStr), FArgs^[FArgCount], ec);
         if (ec <> 0) then
           Exit;
         inc(FArgCount);
@@ -811,7 +814,7 @@ begin
     inc(FArgCount);
   end
   else begin
-    Val(TempStr, FArgs^[FArgCount], ec);
+    Val(string(TempStr), FArgs^[FArgCount], ec);
     if (ec <> 0) then
       Exit;
     inc(FArgCount);

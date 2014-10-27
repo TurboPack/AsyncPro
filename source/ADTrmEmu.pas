@@ -570,7 +570,8 @@ type
       function GetTotalCharHeight : Integer;                             {!!.06}
       procedure HideSelection;
       procedure WriteChar(aCh : AnsiChar);
-      procedure WriteString(const aSt : AnsiString);
+      procedure WriteString(const aSt : string); overload;
+      procedure WriteString(const aSt : AnsiString); overload;
       procedure WriteCharSource(aCh : AnsiChar; Source:TAdCharSource);      // SWB
       procedure WriteStringSource(const aSt : AnsiString; Source:TAdCharSource);// SWB
       function HasFocus : Boolean;
@@ -2487,7 +2488,7 @@ begin                                                                    {!!.04}
   Clipboard.Open;                                                        {!!.04}
   try                                                                    {!!.04}
     if Clipboard.HasFormat (CF_TEXT) then begin                          {!!.04}
-      ClipboardText := Clipboard.AsText;                                 {!!.04}
+      ClipboardText := AnsiString(Clipboard.AsText);                     {!!.04}
       ClipboardLen  := Length (ClipboardText);                           {!!.04}
 
       if FPasteToScreen and FPasteToPort and                             {!!.04}
@@ -2897,7 +2898,7 @@ begin
       TempFont.CharSet := DEFAULT_CHARSET;
       {$ENDIF}
       for i := 0 to pred(FontList.Count) do begin
-        if (FontList[i] = DefaultFontName) then
+        if (FontList[i] = string(DefaultFontName)) then
           TempFont.Name := Font.Name
         else
           TempFont.Name := FontList[i];
@@ -4026,10 +4027,15 @@ begin
                Integer (TAdCharSource (csWriteChar)), 0);              {!!.04}
 end;
 {--------}
+procedure TAdCustomTerminal.WriteString(const aSt : string);
+begin
+  WriteString(AnsiString(ASt));
+end;
+{--------}
 procedure TAdCustomTerminal.WriteString(const aSt : AnsiString);
 begin
   {stuff the data into the byte queue}
-  TaaByteQueue(FByteQueue).Put(aSt[1], length(aSt));
+  TaaByteQueue(FByteQueue).Put(ASt[1], length(ASt));
   {tell ourselves that we have more data}
   PostMessage (Handle, APW_TERMSTUFF,                                  {!!.04}
                Integer (TAdCharSource (csWriteChar)), 0);              {!!.04}
@@ -4645,7 +4651,7 @@ begin
       { responses                                                     }  {!!.06}
       if (Assigned (Terminal)) then                                      {!!.06}
         if (Terminal.ComPort.MasterTerminal = Terminal) then begin       {!!.06}
-          Terminal.ComPort.PutString (FAnswerback);                      {!!.06}
+          Terminal.ComPort.PutString (AnsiString(FAnswerback));          {!!.06}
       end;                                                               {!!.06}
     end;                                                                 {!!.06}
     ecCursorOff : begin                                                  {!!.06}

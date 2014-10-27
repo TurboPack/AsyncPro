@@ -422,7 +422,7 @@ begin
           Exit;
         TestSt := Copy(aLine, CharInx+1, 3);
         TestSt[1]:= '$';
-        Val(TestSt, AsciiCh, ec);
+        Val(string(TestSt), AsciiCh, ec);
         if (ec <> 0) then
           Exit;
         Chars[i] := AnsiChar(AsciiCh);
@@ -580,7 +580,7 @@ begin
     Lines.LoadFromFile(aFileName);
     for LineInx := 0 to pred(Lines.Count) do begin
       {get this line}
-      Line := Lines[LineInx];
+      Line := ShortString(Lines[LineInx]);
       {remove trailing spaces}
       ActualLen := length(Line);
       for i := ActualLen downto 1 do
@@ -1004,8 +1004,8 @@ begin
   for i := 0 to pred(CSHashTableSize) do begin
     Node := FTable[i];
     while (Node <> nil) do begin
-      if (CompareText(Node^.csnFont^, PrevFont) <> 0) then begin
-        PrevFont := Node^.csnFont^;
+      if (CompareText(string(Node^.csnFont^), PrevFont) <> 0) then begin
+        PrevFont := string(Node^.csnFont^);
         if (aList.IndexOf(PrevFont) = -1) then
           aList.Add(PrevFont);
       end;
@@ -1062,7 +1062,7 @@ begin
     Lines.LoadFromFile(aFileName);
     for LineInx := 0 to pred(Lines.Count) do begin
       {get this line}
-      Line := Lines[LineInx];
+      Line := ShortString(Lines[LineInx]);
       {remove trailing spaces}
       ActualLen := length(Line);
       for i := ActualLen downto 1 do

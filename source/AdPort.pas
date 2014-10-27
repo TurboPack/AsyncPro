@@ -489,7 +489,8 @@ type
       {-Return the next block of data}
     procedure PutChar(const C : AnsiChar);
       {-Add C to the output buffer}
-    procedure PutString(const S : AnsiString);
+    procedure PutString(const S : string); overload;
+    procedure PutString(const S : AnsiString); overload;
       {-Add S to the output buffer}
     function PutBlock(const Block; const Len : Word) : Integer;
       {-Add Block to the output buffer}
@@ -2668,6 +2669,11 @@ var
   begin
     if (PortState = psShuttingDown) then Exit;
     CheckException(Self, ValidDispatcher.PutChar(C));
+  end;
+
+  procedure TApdCustomComPort.PutString(const S : string);
+  begin
+    PutString(AnsiString(S));
   end;
 
   procedure TApdCustomComPort.PutString(const S : AnsiString);
