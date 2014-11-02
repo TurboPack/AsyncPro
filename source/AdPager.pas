@@ -152,7 +152,8 @@ type
     FPagerLog  : TApdPagerLog;  {Logging component}
     FExitOnError: Boolean;
     FPageMode, FFailReason: AnsiString;
-    procedure WriteToEventLog(const S: AnsiString);
+    procedure WriteToEventLog(const S: AnsiString); overload;
+    procedure WriteToEventLog(const S: string); overload;
   protected
     procedure Notification(AComponent: TComponent; Operation: TOperation);
       override;
@@ -429,6 +430,7 @@ type
     procedure FreeMsgTriggers;
     procedure FreeResponseTriggers;
     function HandleToTrigger(TriggerHandle: Word): AnsiString;
+    function HandleToTriggerUni(TriggerHandle: Word): string;
     procedure InitLoginTriggers;
     procedure InitLogoutTriggers;
     procedure InitMsgTriggers;
@@ -617,18 +619,24 @@ begin
     raise Exception.Create('Unable to free trigger: ' + string(TriggerName));
 end;
 
-function FormatLogEntry(PageMode, ID, Dest, Reason: AnsiString;
-                        Condition                 : TPageLogCondition): AnsiString;
+function FormatLogEntry(PageMode, ID, Dest, Reason: string;
+                        Condition                 : TPageLogCondition): string; overload;
 var
-  S: AnsiString;
+  S: string;
 begin
   case Condition of
     pcStart:  S := ' Started    ';
     pcDone:   S := ' Completed  ';
     pcError:  S := ' Failed: Reason: ' ;
   end;
-  Result := AnsiString(FormatDateTime('mm/dd/yyyy hh:mm:ss ', Now ) + ' ' + string(PageMode) +
-    ' page to ' + string(ID) + ' at ' + string(Dest) + string(S) + string(Reason));
+  Result := FormatDateTime('mm/dd/yyyy hh:mm:ss ', Now ) + ' ' + PageMode +
+    ' page to ' + ID + ' at ' + Dest + S + Reason;
+end;
+
+function FormatLogEntry(PageMode, ID, Dest, Reason: AnsiString;
+                        Condition                 : TPageLogCondition): AnsiString; overload;
+begin
+  Result := AnsiString(FormatLogEntry(PageMode, ID, Dest, Reason, Condition));
 end;
 
 {TApdAbstractPager}
@@ -679,6 +687,11 @@ procedure TApdAbstractPager.WriteToEventLog(const S: AnsiString);
 begin
   if Assigned(FPagerLog) then
     FPagerLog.UpdateLog(S);
+end;
+
+procedure TApdAbstractPager.WriteToEventLog(const S: string);
+begin
+  WriteToEventLog(AnsiString(S));
 end;
 
 
@@ -881,7 +894,7 @@ begin
   if not FSent then
     DoFailedToSend
   else
-    WriteToEventLog(FormatLogEntry(FPageMode, PagerID, PhoneNumber, '', pcDone));
+    WriteToEventLog(FormatLogEntry(FPageMode, PagerID, PhoneNumber, EmptyAnsiStr, pcDone));
 end;
 
 { rewritten to use TApdDataPacket.WaitForString !!.04 }
@@ -1216,6 +1229,11 @@ begin
   Result := Chr1 + Chr2 + Chr3;
 end;
 
+function CheckSumUni(N: LongInt): string;
+begin
+  Result := string(CheckSum(N));
+end;
+
 function BuildTAPCtrlChar(C: AnsiChar): AnsiString;
 {add "SUB" character + C shifted up by 64 chars (^A -> "A")}
 begin
@@ -1335,14 +1353,24 @@ begin
   Result := Start + Tail;
 end;
 
-function ExpandCtrlChars(const S: AnsiString): AnsiString;
+function ExpandCtrlChars(const S: AnsiString): AnsiString; overload;
 begin
   Result := ProcessCtrlChars(S, False);
 end;
 
-function StripCtrlChars(const S: AnsiString): AnsiString;
+function ExpandCtrlChars(const S: string): AnsiString; overload;
+begin
+  Result := ProcessCtrlChars(AnsiString(S), False);
+end;
+
+function StripCtrlChars(const S: AnsiString): AnsiString; overload;
 begin
   Result := ProcessCtrlChars(S, True);
+end;
+
+function StripCtrlChars(const S: string): AnsiString; overload;
+begin
+  Result := ProcessCtrlChars(AnsiString(S), True);
 end;
 
 procedure BuildTapMessages
@@ -1388,14 +1416,14 @@ begin
         {at end of field: insert <ETB> + CheckSum + <CR> }
         OutMsg.Insert(cEtb, Ct);
         Inc(Ct);
-        OutMsg.Insert(CheckSum(SumChars(OutMsg.Copy(1,Ct-1))) + cCr, Ct);
+        OutMsg.Insert(CheckSum(SumChars(OutMsg.CopyAnsi(1,Ct-1))) + cCr, Ct);
       end
 
       else begin
       {inside a field: insert <US> + CheckSum + <CR>}
         OutMsg.Insert(cUs, Ct);
         Inc(Ct);
-        OutMsg.Insert(CheckSum(SumChars(OutMsg.Copy(1,Ct-1))) + cCr, Ct);
+        OutMsg.Insert(CheckSum(SumChars(OutMsg.CopyAnsi(1,Ct-1))) + cCr, Ct);
       end;
 
       { save block into block list }
@@ -1413,7 +1441,7 @@ begin
     { at end of message: append <ETX> + CheckSum + <CR> }
       OutMsg.Append(cEtx);
       Inc(Ct);
-      Blocks.Add(OutMsg.Copy(1,Ct) + CheckSum(SumChars(OutMsg.Copy(1,Ct))) + cCr);
+      Blocks.Add(OutMsg.Copy(1,Ct) + CheckSumUni(SumChars(OutMsg.CopyAnsi(1,Ct))) + cCr);
       EOMsg := True;
     end
 
@@ -1468,7 +1496,7 @@ procedure TApdTAPPager.DoCurMessageBlock;
 begin
   DoTAPStatus(psSendingMsg);
   Inc(tpTAPRetries);
-  FPort.Output := FBlocks[FMsgIdx];
+  FPort.OutputUni := FBlocks[FMsgIdx];
 end;
 
 procedure TApdTAPPager.DoNextMessageBlock;
@@ -1535,7 +1563,12 @@ begin
   else if TriggerHandle = FtrgMsgNak    then  Result := 'FtrgMsgNak'
   else if TriggerHandle = FtrgMsgRs     then  Result := 'FtrgMsgRs'
   else if TriggerHandle = FtrgDCon      then  Result := 'FtrgDCon'
-  else Result := 'Unknown Trigger: ' + IntToStr(TriggerHandle);
+  else Result := 'Unknown Trigger: ' + AdAnsiStrings.IntToStr(TriggerHandle);
+end;
+
+function TApdTAPPager.HandleToTriggerUni(TriggerHandle: Word): string;
+begin
+  Result := string(HandleToTrigger(TriggerHandle));
 end;
 
 procedure TApdTAPPager.InitLoginTriggers;
@@ -1781,7 +1814,7 @@ begin
     except
 
       on EBadTriggerHandle do
-        ShowMessage('Bad Trigger: ' + HandleToTrigger(wParam));
+        ShowMessage('Bad Trigger: ' + HandleToTriggerUni(wParam));
     end;
   end;
 
@@ -1808,7 +1841,7 @@ end;
 function TApdTAPPager.TAPStatusMsg(Status: TTAPStatus): AnsiString;
 begin
   case Status of
-    {TTAPStatus} psNone..psDone: Result := AproLoadStr(Ord(Status) + STRRES_TAP_STATUS);
+    {TTAPStatus} psNone..psDone: Result := AproLoadAnsiStr(Ord(Status) + STRRES_TAP_STATUS);
   end;
 end;
 
@@ -2037,7 +2070,7 @@ end;
 
 procedure TApdSNPPPager.Send;
 begin
-  WriteToEventLog(FormatLogEntry(FPageMode, PagerID, Port.WsAddress + ':' +
+  WriteToEventLog(FormatLogEntry(string(FPageMode), string(PagerID), Port.WsAddress + ':' +
     Port.wsPort, '', pcStart));
 
   FSessionOpen := False;
@@ -2088,11 +2121,11 @@ begin
   end;
 
   if FQuit then
-    WriteToEventLog(FormatLogEntry(FPageMode, PagerID, Port.WsAddress + ':' +
+    WriteToEventLog(FormatLogEntry(string(FPageMode), string(PagerID), Port.WsAddress + ':' +
       Port.wsPort, '', pcDone))
   else
-    WriteToEventLog(FormatLogEntry(FPageMode, PagerID, Port.WsAddress + ':' +
-      Port.wsPort, FFailReason, pcError));
+    WriteToEventLog(FormatLogEntry(FPageMode, PagerID, AnsiString(Port.WsAddress) + AnsiString(':') +
+      AnsiString(Port.wsPort), FFailReason, pcError));
 
   DoClose;
   FreePackets;
@@ -2120,7 +2153,7 @@ var
 begin
   FOkayToSend := False;
 
-  PutString(SNPP_CMD_DATA + ' ' + FMessage[0] + atpCRLF);
+  PutString(AnsiString(SNPP_CMD_DATA + ' ' + FMessage[0] + atpCRLF));
 
   repeat
     WriteToEventLog('Waiting to Output');

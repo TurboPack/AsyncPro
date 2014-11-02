@@ -653,6 +653,7 @@ type
     {I/O properties}
     property Output : AnsiString
       write PutString;
+    property OutputUni : string write PutString;
 
     {TComHandle, read only}
     property Dispatcher : TApdBaseDispatcher

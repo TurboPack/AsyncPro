@@ -2241,12 +2241,15 @@ type
     procedure AppendTAdStr(TS: TAdStr);
     procedure AppendBuff(Buff: PChar);
     procedure Clear;
-    function Copy(Index, SegLen: Integer): string;
+    function Copy(Index, SegLen: Integer): string; overload;
+    function CopyAnsi(Index, SegLen: Integer): AnsiString; overload;
     procedure Delete(Index, SegLen: Integer);
-    procedure Insert(const Text: string; Index: Integer);
+    procedure Insert(const Text: string; Index: Integer); overload;
+    procedure Insert(const Text: AnsiString; Index: Integer); overload;
     function Pos(const SubStr: string): Cardinal;
     function PosIdx(const SubStr: string; Index: Integer): Cardinal;
-    procedure Prepend(const Text: string);
+    procedure Prepend(const Text: string); overload;
+    procedure Prepend(const Text: AnsiString); overload;
     procedure Resize(NewLen: Integer);
   end;
 
@@ -3259,6 +3262,11 @@ begin
   StrDispose(P);
 end;
 
+function TAdStr.CopyAnsi(Index, SegLen: Integer): AnsiString;
+begin
+  Result := AnsiString(Copy(Index, SegLen));
+end;
+
 procedure TAdStr.Delete(Index, SegLen: Integer);
 var
   Src: PChar;
@@ -3330,6 +3338,11 @@ begin
   StrCat(FString, Buff);           { add rest of string back on }
   StrDispose(Buff);
   FLen := StrLen(FString);
+end;
+
+procedure TAdStr.Insert(const Text: AnsiString; Index: Integer);
+begin
+  Insert(string(Text), Index);
 end;
 
 procedure TAdStr.Last;
@@ -3407,6 +3420,11 @@ end;
 procedure TAdStr.Prepend(const Text: string);
 begin
   Insert(Text,1);
+end;
+
+procedure TAdStr.Prepend(const Text: AnsiString);
+begin
+  Insert(string(Text), 1);
 end;
 
 procedure TAdStr.Prev;
