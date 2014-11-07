@@ -2161,7 +2161,7 @@ begin
   until FOkayToSend or FCancelled;
 
   for i := 0 to Pred(FMessage.Count) do
-    PutString(FMessage[i] + atpCRLF);
+    PutString(AnsiString(FMessage[i] + atpCRLF));
   PutString(SNPP_DATA_TERMINATE);
 end;
 
@@ -2170,7 +2170,7 @@ begin
   if FMessage.Count > 1 then
     DoMultiLine
   else
-    PutString(SNPP_CMD_MESSAGE + ' ' + FMessage[0] + atpCRLF);
+    PutString(AnsiString(SNPP_CMD_MESSAGE + ' ' + FMessage[0] + atpCRLF));
 end;
 
 procedure TApdSNPPPager.PutPagerID;
@@ -2228,7 +2228,7 @@ begin
 
   {Create or open the history file}
   try
-    AssignFile(HisFile, FHistoryName);
+    AssignFile(HisFile, string(FHistoryName));
     Append(HisFile);
   except
     on E : EInOutError do
