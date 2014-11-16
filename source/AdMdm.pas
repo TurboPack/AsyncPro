@@ -404,8 +404,7 @@ type
 implementation
 
 uses
-  AdMdmCfg,
-  AdMdmDlg;
+  AnsiStrings, AdAnsiStrings, AdMdmCfg, AdMdmDlg;
 
 { TApdModemNameProp }
 
@@ -470,13 +469,13 @@ begin
       begin
         ResponsePacket.Enabled := True;
         if FModemConfig.ToneDial then                                    {!!.06}
-          FComPort.Output := ConvertXML(LmModem.Settings.Prefix +
+          FComPort.OutputUni := ConvertXML(LmModem.Settings.Prefix +
                                         LMModem.Settings.DialPrefix +
                                         LmModem.Settings.Tone +          {!!.06}
                                         FPhoneNumber +
                                         LmModem.Settings.Terminator)
         else
-          FComPort.Output := ConvertXML(LmModem.Settings.Prefix +
+          FComPort.OutputUni := ConvertXML(LmModem.Settings.Prefix +
                                         LMModem.Settings.DialPrefix +
                                         LmModem.Settings.Pulse +         {!!.06}
                                         FPhoneNumber +
@@ -573,11 +572,11 @@ var
 
   function CheckIt : Boolean;
   begin
-    Psn := Pos(S, Response);
+    Psn := System.Pos(S, Response);
     if Psn > 0 then begin
       Result := True;
-      S := Copy(Response, Psn + Length(S) + 1, Length(Response));
-      S := Copy(S, 1, Length(S) - 2);
+      S := System.Copy(Response, Psn + Length(S) + 1, Length(Response));
+      S := System.Copy(S, 1, Length(S) - 2);
     end else
       Result := False;
   end;
@@ -697,10 +696,10 @@ function TAdCustomModem.CheckResponses(const Response, DefResponse: string;
     { strip out the CR/LF prefix and suffix }
   begin
     Result := S;
-    while Pos(#13, Result) > 0 do
-      Delete(Result, Pos(#13, Result), 1);
-    while Pos(#10, Result) > 0 do
-      Delete(Result, Pos(#10, Result), 1);
+    while System.Pos(#13, Result) > 0 do
+      Delete(Result, System.Pos(#13, Result), 1);
+    while System.Pos(#10, Result) > 0 do
+      Delete(Result, System.Pos(#10, Result), 1);
   end;
 var
   I : Integer;
@@ -717,13 +716,13 @@ begin
       end;
       if S = '<StandardConnect>' then                                    {!!.05}
         Result := ParseStandardConnect(Response);                        {!!.05}
-      if Result then Break;                                              {!!.05}                                                     
+      if Result then Break;                                              {!!.05}
     end;
     if not Result then
-      Result := Pos(DefResponse, Response) > 0;
+      Result := System.Pos(DefResponse, Response) > 0;
   end else
     { see if the default response is at the beginning of the response }
-    Result := Pos(DefResponse, Response) > 0;                            {!!.04}
+    Result := System.Pos(DefResponse, Response) > 0;                            {!!.04}
 end;
 
 procedure TAdCustomModem.ConfigAndOpen;
@@ -746,19 +745,19 @@ var
   Psn : Integer;
 begin
   Result := S;
-  while Pos('<CR>', AnsiUpperCase(Result)) > 0 do begin
-    Psn := Pos('<CR>', AnsiUpperCase(Result));
+  while System.Pos('<CR>', AnsiUpperCase(Result)) > 0 do begin
+    Psn := System.Pos('<CR>', AnsiUpperCase(Result));
     Delete(Result, Psn, Length('<CR>'));
     Insert(#13, Result, Psn);
   end;
-  while Pos('<LF>', AnsiUpperCase(Result)) > 0 do begin
-    Psn := Pos('<LF>', AnsiUpperCase(Result));
+  while System.Pos('<LF>', AnsiUpperCase(Result)) > 0 do begin
+    Psn := System.Pos('<LF>', AnsiUpperCase(Result));
     Delete(Result, Psn, Length('<LF>'));
     Insert(#10, Result, Psn);
   end;
   { XML also doubles any '%' char, strip that }
-  while Pos('%%', Result) > 0 do
-    Delete(Result, Pos('%%', Result), 1);
+  while System.Pos('%%', Result) > 0 do
+    Delete(Result, System.Pos('%%', Result), 1);
 end;
 
 constructor TAdCustomModem.Create(AOwner: TComponent);
@@ -841,13 +840,13 @@ begin
     Parity := pNone;
     StopBits := 1;
     if Assigned(FComPort) then
-      AttachedTo := FComPort.Dispatcher.DeviceName
+      AttachedTo := ShortString(FComPort.Dispatcher.DeviceName)
     else
       AttachedTo := 'unknown';
 
-    Manufacturer := LmModem.Manufacturer;
-    ModemName := LmModem.FriendlyName;
-    ModemModel := LmModem.Model;
+    Manufacturer := ShortString(LmModem.Manufacturer);
+    ModemName := ShortString(LmModem.FriendlyName);
+    ModemModel := ShortString(LmModem.Model);
     { speaker options }
     SpeakerVolume :=  svMed;
     SpeakerMode := smDial;
@@ -1079,13 +1078,13 @@ procedure TAdCustomModem.Initialize;
     I : Integer;
   begin
     Result := str;
-    I := Pos('<#>', Result);
+    I := System.Pos('<#>', Result);
     if (I <> 0) then                                                        // SWB
     begin                                                                   // SWB
         { remove the '<#>' }
         Delete(Result, I, 3);
         { add the value }
-        Insert(IntToStr(Value), Result, I);
+        Insert(SysUtils.IntToStr(Value), Result, I);
     end;                                                                    // SWB
   end;
 var
@@ -1162,7 +1161,7 @@ begin
       {$IFDEF AdModemDebug}
       FComPort.AddStringToLog('Init 2');
       {$ENDIF}
-      SendCommand(ConvertXML(ExtraSettings + #13));
+      SendCommand(ConvertXML(string(ExtraSettings) + #13));
     end;
   end;
   Initialized := True;
@@ -1292,11 +1291,11 @@ begin
       {$IFDEF AdModemDebug}
       FComPort.AddStringToLog('Informative response');
       {$ENDIF}
-      FNegotiationResponses.Add(Data);
+      FNegotiationResponses.Add(string(Data));
     end;
   end;
 
-  Res := CheckErrors(Data);
+  Res := CheckErrors(string(Data));
   if Res <> ecOK then begin
     ErrorResponse := True;
     WaitingForResponse := False;
@@ -1310,7 +1309,7 @@ begin
 
   { check for caller ID tags }
   if FModemState in [msAutoAnswerBackground, msAutoAnswerWait, msAnswerWait] then begin
-    CheckCallerID(Data);
+    CheckCallerID(string(Data));
     ResponsePacket.Enabled := True;
   end;
 
@@ -1325,7 +1324,7 @@ begin
       end;
     msInitializing : { anything here should be a OK or ERROR response }
       begin
-        if CheckResponses(Data, ApxDefOKResponse, LmModem.Responses.OK) then begin
+        if CheckResponses(string(Data), ApxDefOKResponse, LmModem.Responses.OK) then begin
           { it's an OK }
           {$IFDEF AdModemDebug}
           FComPort.AddStringToLog('OKResponse');
@@ -1333,7 +1332,7 @@ begin
           OKResponse := True;
           WaitingForResponse := False;
         end else
-          if Pos(LastCommand, Data) > 0 then begin
+          if System.Pos(LastCommand, string(Data)) > 0 then begin
             {$IFDEF AdModemDebug}
             FComPort.AddStringToLog('EchoResponse');
             {$ENDIF}
@@ -1348,7 +1347,7 @@ begin
       end;
     msAutoAnswerBackground :
       begin
-        if CheckResponses(Data, ApxDefRingResponse, LmModem.Responses.Ring) then begin
+        if CheckResponses(string(Data), ApxDefRingResponse, LmModem.Responses.Ring) then begin
           { it's the first RING }
           if not FCallerIDProvided and CallerIDInfo.HasData then begin
             DoCallerID;
@@ -1367,7 +1366,7 @@ begin
       end;
     msAutoAnswerWait : { looking for more RINGs }
       begin
-        if CheckResponses(Data, ApxDefRingResponse, LmModem.Responses.Ring) then begin
+        if CheckResponses(string(Data), ApxDefRingResponse, LmModem.Responses.Ring) then begin
           { it's another RING }
           inc(FRingCount);
           if not FCallerIDProvided and CallerIDInfo.HasData then begin
@@ -1401,7 +1400,7 @@ begin
     msDial,
     msConnectWait : { waiting for connect or error }
       begin
-        if CheckResponses(Data, ApxDefConnectResponse, LmModem.Responses.Connect) then begin
+        if CheckResponses(string(Data), ApxDefConnectResponse, LmModem.Responses.Connect) then begin
           { it's a CONNECT }
           ConnectResponse := True;
           OKResponse := True;
@@ -1497,7 +1496,7 @@ begin
   if Command = '<DTR>' then                                              {!!.05}
     FComPort.DTR := False                                                {!!.05}
   else                                                                   {!!.05}
-    FComPort.Output := ConvertXML(Command);                              {!!.04}
+    FComPort.OutputUni := ConvertXML(Command);                              {!!.04}
 
   { wait for the response }
   //if ModemState = msHangup then                                          {!!.05}
@@ -1642,17 +1641,17 @@ var
   Psn : Integer;
 begin
   Result := S;
-  while Pos('<CR>', AnsiUpperCase(Result)) > 0 do begin
-    Psn := Pos('<CR>', AnsiUpperCase(Result));
+  while System.Pos('<CR>', AnsiUpperCase(Result)) > 0 do begin
+    Psn := System.Pos('<CR>', AnsiUpperCase(Result));
     Delete(Result, Psn, Length('<CR>'));
   end;
-  while Pos('<LF>', AnsiUpperCase(Result)) > 0 do begin
-    Psn := Pos('<LF>', AnsiUpperCase(Result));
+  while System.Pos('<LF>', AnsiUpperCase(Result)) > 0 do begin
+    Psn := System.Pos('<LF>', AnsiUpperCase(Result));
     Delete(Result, Psn, Length('<LF>'));
   end;
   { XML also doubles any '%' char, strip that }
-  while Pos('%%', Result) > 0 do
-    Delete(Result, Pos('%%', Result), 1);
+  while System.Pos('%%', Result) > 0 do
+    Delete(Result, System.Pos('%%', Result), 1);
 end;
 
 function TAdCustomModem.GetDeviceSelected: Boolean;                      {!!.04}
@@ -1683,8 +1682,8 @@ var
       Inc (Position);
 
     while (Position <= Len) and
-          ((Copy (Response, Position, 4) = '<cr>') or
-           (Copy (Response, Position, 4) = '<lf>')) do
+          ((System.Copy (Response, Position, 4) = '<cr>') or
+           (System.Copy (Response, Position, 4) = '<lf>')) do
       inc(Position, 4);
 
     while (Position <= Len) and (Response[Position] = ' ') do
@@ -1703,7 +1702,7 @@ begin
 
   // Look for the all important CONNECT keyword.
 
-  if Copy (Response, Position, 7) <> 'CONNECT' then
+  if System.Copy (Response, Position, 7) <> 'CONNECT' then
     Exit;
 
   // Assume now that this WILL be a Connection
@@ -1716,10 +1715,10 @@ begin
   // extract the baud rate
 
   SavedPosition := Position;
-  while (Position <= Len) and (Response[Position] in ['0'..'9']) do
+  while (Position <= Len) and CharInSet(Response[Position], ['0'..'9']) do
     Inc (Position);
   if SavedPosition <> Position then begin
-    S := Copy (Response, SavedPosition, Position - SavedPosition);
+    S := System.Copy (Response, SavedPosition, Position - SavedPosition);
     FBPSRate := StrToIntDef(S, FBPSRate);
   end;
 end;
@@ -1806,7 +1805,7 @@ begin
     MdmCfgDlg := TApdModemConfigDialog.Create(nil);
     MdmCfgDlg.LmModem := LmModem;
     if FModemConfig.AttachedTo = '' then
-      FModemConfig.AttachedTo := FComPort.Dispatcher.DeviceName;
+      FModemConfig.AttachedTo := ShortString(FComPort.Dispatcher.DeviceName);
     MdmCfgDlg.ModemConfig := GetDevConfig;                             {!!.02}
     Result := MdmCfgDlg.ShowModal = mrOK;
     if Result then begin
