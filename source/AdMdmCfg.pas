@@ -147,7 +147,7 @@ begin
   else
     Result.Modulation := smCCITT;
 
-  Result.ExtraSettings := edtExtraSettings.Text;
+  Result.ExtraSettings := ShortString(edtExtraSettings.Text);
 end;
 
 procedure TApdModemConfigDialog.SetLmModem(const Value: TLmModem);
@@ -184,12 +184,12 @@ end;
 procedure TApdModemConfigDialog.SetModemConfig(
   const Value: TApdModemConfig);
 begin
-  Caption := Value.ModemName;
+  Caption := string(Value.ModemName);
   { General tab }
-  lblModemName.Caption := 'Modem name: ' + Value.ModemName;
-  lblModemModel.Caption := 'Modem model: ' + Value.ModemModel;
-  lblModemManufacturer.Caption := 'Manufacturer: ' + Value.Manufacturer;
-  lblAttachedTo.Caption := 'Attached to: ' + Value.AttachedTo;
+  lblModemName.Caption := 'Modem name: ' + string(Value.ModemName);
+  lblModemModel.Caption := 'Modem model: ' + string(Value.ModemModel);
+  lblModemManufacturer.Caption := 'Manufacturer: ' + string(Value.Manufacturer);
+  lblAttachedTo.Caption := 'Attached to: ' + string(Value.AttachedTo);
 
   case Value.SpeakerMode of
     smOff  : rbSpeakerOff.Checked := True;
@@ -223,7 +223,7 @@ begin
     smCCITT_V23 : rbModCCITTV23.Checked := True;
   end;
 
-  edtExtraSettings.Text := Value.ExtraSettings;
+  edtExtraSettings.Text := string(Value.ExtraSettings);
 end;
 
 end.
