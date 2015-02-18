@@ -381,6 +381,8 @@ const
 
 implementation
 
+uses
+  AnsiStrings;
 
 const
   {For calculating minimum bytes per line}
@@ -447,6 +449,11 @@ const
      dstrfComplete, dstrfAbort, dstrfDone);
 
 {General purpose}
+
+function Pos(const Substr: string; const S: TModemResponse): Integer;
+begin
+  Result := System.Pos(SubStr, string(S));
+end;
 
   function TrimStationID(S : ShortString) : ShortString;
   begin

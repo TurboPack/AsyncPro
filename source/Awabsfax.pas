@@ -458,10 +458,12 @@ const
   DefFaxFileExt = 'APF';                        {Default extension}
 
   {Misc constants}
-  DosDelimSet : set of Char = ['\', ':', #0];
+  DosDelimSet : set of AnsiChar = ['\', ':', #0];
 
 implementation
 
+uses
+  AnsiStrings;
 {General routines}
 
   procedure AnsiUpCheck(B : PAnsiChar; Len : Word);
@@ -481,14 +483,14 @@ implementation
 
 {Date routines}
 
-  function TodayString : ShortString;
+  function TodayString : string;
     {-return today's date}
   begin
     {Get the system date}
     Result := DateToStr(SysUtils.Date);
   end;
 
-  function NowString : ShortString;
+  function NowString : string;
     {-return the current time as a "HH:MMpm" string}
   begin
     Result := TimeToStr(Now);
@@ -725,7 +727,7 @@ implementation
     {$ENDIF}
   begin
     with FP^, aPData^ do begin
-      StrPCopy(P, RemoteName);
+      StrPCopy(P, string(RemoteName));
       {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXACCEPT, 0, LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
@@ -746,7 +748,7 @@ implementation
   begin
     with FP^, aPData^ do begin
       {walk thru the string, converting tags to appropriate data}
-      I := Pos('$', S);
+      I := Pos('$', string(S));
       while I > 0 do begin
         {get length of tag}
         N := I;
@@ -755,7 +757,7 @@ implementation
         Dec(N, I);
 
         {preserve and delete tag from the main string}
-        T := Copy(S, I, N);
+        T := Copy(string(S), I, N);
         Delete(S, I, N);
 
         {which tag?}
@@ -767,28 +769,30 @@ implementation
             T := NowString;
 
           'I':  {insert station Id}
-            T := aStationID;
+            T := string(aStationID);
 
           'S':  {insert Sender (Title)}
-            T := aTitle;
+            T := string(aTitle);
 
           'P':  {insert current Page number}
             if aCoverCount > 0 then
               if aSendingCover then
                 T := '1'
               else
-                Str(aCurrPage+1, T)
+              begin
+                (aCurrPage + 1).ToString;
+              end
             else
-              Str(aCurrPage, T);
+              T := aCurrPage.ToString;
 
           'N':  {insert Number of pages}
-            Str(aPageCount+aCoverCount, T);
+            T := (aPageCount+aCoverCount).ToString;
 
           'F' : {insert from name}
-            T := aSender;
+            T := string(aSender);
 
           'R' : {insert recipient's name}
-            T := aRecipient;
+            T := string(aRecipient);
 
           '$' : {insert a dollar sign}                                   {!!.01}
             T := #1;                                                     {!!.01}
@@ -796,13 +800,13 @@ implementation
           else  {invalid tag, do nothing}
             T := '';
         end;
-        Insert(T, S, I);
+        Insert(ShortString(T), S, I);
 
         {find next tag}
-        I := Pos('$', S);
+        I := Pos('$', string(S));
       end;
-      while Pos(#1, S) > 0 do                                            {!!.01}
-        S[Pos(#1, S)] := '$';                                            {!!.01}
+      while Pos(#1, string(S)) > 0 do                                            {!!.01}
+        S[Pos(#1, string(S))] := '$';                                            {!!.01}
       afConvertHeaderString := S;
     end;
   end;
@@ -1078,7 +1082,7 @@ implementation
       repeat
         Inc(I);
         MakeFileName(I);
-      until not FileExists(FName) or (I = 10000);
+      until not FileExists(string(FName)) or (I = 10000);
 
       if I < 10000 then begin
         MakeFileName(I);
@@ -1117,7 +1121,7 @@ implementation
       repeat
         Inc(I);
         MakeFileName(I);
-      until not FileExists(FName) or (I = 10000);
+      until not FileExists(string(FName)) or (I = 10000);
 
       if I < 10000 then begin
         MakeFileName(I);

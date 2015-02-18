@@ -3676,10 +3676,10 @@ const
   function Long2StrZ(Dest : PChar; L : LongInt) : PChar;
     {-Convert a long/Cardinal/integer/byte/shortint to a string}
   var
-    S : string;
+    S : ShortString;
   begin
     Str(L, S);
-    Result := StrPCopy(Dest, S);
+    Result := StrPCopy(Dest, string(S));
   end;
   {$ENDIF}
 
@@ -3967,7 +3967,7 @@ type
     IsQuoted := DirName[Length(DirName)] = '"';
     if IsQuoted then
       Result := Copy(DirName, 1, Length(DirName) - 1);
-    if not(Result[Length(Result)] in DosDelimSet) then
+    if not CharInSet(Result[Length(Result)], DosDelimSet) then
       Result := Result+'\';                                            
     if IsQuoted then                                                   
       Result := Result + '"';                                          

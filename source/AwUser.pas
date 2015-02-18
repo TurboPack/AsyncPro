@@ -4029,12 +4029,12 @@ end;
       {$ENDIF}
 
       {write operating system to log}
-      S := GetOSVersion;
+      S := ShortString(GetOSVersion());
       WriteLn(DumpFile, 'Operating System : ', S);
 
       WriteLn(DumpFile, 'Device: ', DeviceName);
 
-      S := FormatDateTime('dd/mm/yy, hh:mm:ss', Now);                    {!!.02}
+      S := ShortString(FormatDateTime('dd/mm/yy, hh:mm:ss', Now));       {!!.02}
       WriteLn(DumpFile, 'Date/time: ', S);                               {!!.02}
 
       WriteLn(DumpFile, AproLoadStr(Header1));
@@ -4055,8 +4055,8 @@ end;
               if drType = dtTelnet then begin
                 S := ' [';
                 if drData <= MaxTelnetTag then
-                  S := S + AproLoadStr(TelnetBase + ord(drData));
-                Write(DumpFile, trim(S),']');
+                  S := S + ShortString(AproLoadStr(TelnetBase + ord(drData)));
+                Write(DumpFile, trim(string(S)),']');
               end;
 
               WriteLn(DumpFile)
@@ -4112,8 +4112,8 @@ end;
                 S := ' (';
                 for I := 0 to 7 do
                   if Odd(drData shr I) then
-                    S := S + AproLoadStr(MSTagBase + I);
-                Write(DumpFile, trim(S),')');
+                    S := S + ShortString(AproLoadStr(MSTagBase + I));
+                Write(DumpFile, trim(string(S)),')');
               end;
 
               WriteLn(DumpFile);

@@ -4,7 +4,7 @@ interface
 
 function Copy(const AStr: AnsiString; AIndex, ACount: Integer): AnsiString;
 function IntToStr(Value: Integer): AnsiString; overload;
-function Pos(const ASubStr, AStr: AnsiString): Integer;
+function Pos(const ASubStr, AStr: AnsiString): Integer; overload;
 function StrToInt(const S: AnsiString): Integer;
 
 implementation

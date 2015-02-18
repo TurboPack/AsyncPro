@@ -389,6 +389,8 @@ function awIsAnAPFFile(FName : string) : Bool;
 
 implementation
 
+uses
+  AnsiStrings;
 
 {$IFDEF BindFaxFont}
 {$IFDEF Win32}
@@ -2619,7 +2621,7 @@ end;
         if (Row = 1) then begin
           CHandle := Bitmap.Canvas.Handle;
           PatBlt(CHandle, 0, 0, Bitmap.Width, Bitmap.Height, WHITENESS);
-          TextOutA(CHandle, 0, 0, St, StrLen(St));
+          TextOutA(CHandle, 0, 0, St, AnsiStrings.StrLen(St));
           PatBlt(CHandle, 0, 0, Bitmap.Width, Bitmap.Height, DSTINVERT);
           GetBitmapBits(Bitmap.Handle, ImageSize, ImageData);
           Offset := 0;
@@ -2633,7 +2635,7 @@ end;
         YW := (Row - 1) * FontRec.Width;
         LByteOfs := 0;
         LBitOfs  := 0;
-        SLen := StrLen(St);
+        SLen := AnsiStrings.StrLen(St);
         if (SLen > 0) then
           for I := 0 to Pred(SLen) do
             fcAddRasterChar(FontPtr^[Byte(St[I])*FontRec.Bytes+YW],
@@ -2794,7 +2796,7 @@ end;
 
         {read the line from the input file}
         if FFPending then begin
-          St := Pending;
+          St := AnsiString(Pending);
           Pending := '';
           FFPending    := False;
           FFWasPending := True;
@@ -2805,9 +2807,9 @@ end;
         end;
 
         {check for form feeds}
-        FFPos := pos(#12, St);
+        FFPos := pos(#12, string(St));
         if (FFPos <> 0) then begin
-          Pending := Copy(St,FFPos+1,255);
+          Pending := Copy(string(St),FFPos+1,255);
           {$IFDEF Windows}
           St[0] := Chr(FFPos-1);
           {$ELSE}
@@ -2828,7 +2830,7 @@ end;
         if not IsExtended then begin
           {adjust the string length, accounting for margins}
           {this is handled automagically by the bitmap size in extended text mode}
-          SLen := StrLen(CurStr);
+          SLen := AnsiStrings.StrLen(CurStr);
           C := LeftMargin div FontRec.PWidth;
           MaxLen := Integer(ResWidth div FontRec.PWidth) - C;
           if (SLen > Cardinal(MaxLen)) then
@@ -2852,7 +2854,7 @@ end;
       if IsExtended then begin
         Len := ResWidth div 8;
       end else begin
-        Len := FontRec.PWidth * StrLen(CurStr);
+        Len := FontRec.PWidth * AnsiStrings.StrLen(CurStr);
         Len := (Len div 8) + Ord((Len mod 8) <> 0);
       end;
       fcRasterizeText(Cvt, CurStr, CurRow, Data);

@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{A31F9BA0-7036-4EC7-9794-2A17DEF90903}</ProjectGuid>
         <MainSource>AsyncProDR.dpk</MainSource>
-        <ProjectVersion>16.0</ProjectVersion>
+        <ProjectVersion>16.1</ProjectVersion>
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
