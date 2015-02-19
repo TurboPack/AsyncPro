@@ -1442,7 +1442,7 @@ function TAdCustomModem.SelectDevice: Boolean;
 begin
   try
     Result := False;                                                     {!!.06}
-    if not DirectoryExists(FModemCapFolder) then                         {!!.06}
+    if not SysUtils.DirectoryExists(FModemCapFolder) then                         {!!.06}
       raise EInOutError.CreateFmt(                                       {!!.06}
         'Modemcap folder not found'#13#10'(%s)', [FModemCapFolder]);     {!!.06}
         

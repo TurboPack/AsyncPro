@@ -2403,7 +2403,7 @@ end;
         CurRow := 1;
 
         {expand the tabs in the line of text}
-        AppendStr(St,#0);
+        St := St + #0;
         fcDetab(CurStr, pAnsiChar(St), TabStop, High(CurStr));               {!!.04}
 
         if not IsExtended then begin

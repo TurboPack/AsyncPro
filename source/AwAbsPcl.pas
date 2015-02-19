@@ -403,7 +403,7 @@ const
   function apNextFileMask(P : PProtocolData; FName : PAnsiChar) : Bool;
     {-Built-in function that works with file mask fields}
   const
-    AnyFileButDir = faAnyFile and not (faDirectory or faVolumeID);
+    AnyFileButDir = faAnyFile and not (faDirectory);
   var
     DosError : Integer;
     PName    : array[0..255] of AnsiChar;
@@ -1303,7 +1303,7 @@ ExitPoint:
     with P^ do begin
       SendMessageTimeout(aHWindow, apw_ProtocolError, Cardinal(ErrorCode),
                          0, SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
       aProtocolError := ErrorCode;
     end;
   end;
@@ -1491,7 +1491,7 @@ ExitPoint:
     with P^ do
       SendMessageTimeout(aHWindow, apw_ProtocolStatus, Options,
                          Integer(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
   end;
 
   function apMsgNextFile(P : PProtocolData; FName : PAnsiChar) : Bool;
@@ -1503,7 +1503,7 @@ ExitPoint:
       SendMessageTimeout(aHWindow, apw_ProtocolNextFile, 0,
                          Integer(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
       apMsgNextFile := Res <> 0;
     end;
   end;
@@ -1517,7 +1517,7 @@ ExitPoint:
       SendMessageTimeout(aHWindow, apw_ProtocolLog,
                          Cardinal(Log), Integer(P),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
   end;
 
   function apMsgAcceptFile(P : PProtocolData; FName : PAnsiChar) : Bool;
@@ -1529,7 +1529,7 @@ ExitPoint:
       SendMessageTimeout(aHWindow, apw_ProtocolAcceptFile,
                          0, Integer(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
       apMsgAcceptFile := Res = 1;
     end;
   end;

@@ -654,7 +654,7 @@ uses
                          StartMask[Starting] or EndMask[Ending],
                          Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
   end;
 
   function afNextFax(FP : PFaxRec) : Boolean;
@@ -666,7 +666,7 @@ uses
     with FP^, aPData^ do
       SendMessageTimeout(aHWindow, APW_FAXNEXTFILE, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         2000, Res);
+                         2000, @Res);
       afNextFax := Boolean(Res);
   end;
 
@@ -678,7 +678,7 @@ uses
     with FP^, aPData^ do
       SendMessageTimeout(aHWindow, APW_FAXLOG, Integer(Log), Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
   end;
 
   procedure afFaxName(FP : PFaxRec);
@@ -689,7 +689,7 @@ uses
     with FP^, aPData^ do
       SendMessageTimeout(aHWindow, APW_FAXNAME, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
   end;
 
   function afAcceptFax(FP : PFaxRec; RemoteName : Str20) : Boolean;
@@ -702,7 +702,7 @@ uses
       StrPCopy(P, string(RemoteName));
       SendMessageTimeout(aHWindow, APW_FAXACCEPT, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
       afAcceptFax := Boolean(Res);
     end;
   end;
@@ -863,7 +863,7 @@ uses
       aFaxError := ErrorCode;
       SendMessageTimeout(aHWindow, APW_FAXERROR, ErrorCode, 0,
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         1000, Res);
+                         1000, @Res);
     end;
   end;
 

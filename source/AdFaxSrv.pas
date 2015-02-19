@@ -2163,6 +2163,7 @@ begin
       if I = -1 then begin
         { the file name has not been logged }
         AddFileInfo := True;
+{$WARN SYMBOL_DEPRECATED OFF}
       end else if SR.Time <> TFaxListObj(FFaxList.Objects[I]).FileTime then begin
         { the file name has been logged, but the timestamp has changed }
         { delete the old list item and add the new one }
@@ -2174,6 +2175,7 @@ begin
       if AddFileInfo then begin
         NewFaxListObj := TFaxListObj.Create;
         NewFaxListObj.FileTime := SR.Time;
+{$WARN SYMBOL_DEPRECATED ON}
         GetJobHeader(TPassString(string(FMonitorDir) + SR.Name), NewFaxListObj.JobHeader);
         if NewFaxListObj.JobHeader.Status = stPartial then begin
           if FFirstGetJob then begin

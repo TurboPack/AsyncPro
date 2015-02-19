@@ -456,6 +456,9 @@ function PortIn(Address: Word): Byte;                                       // S
 
 implementation
 
+uses
+  AnsiStrings;
+
 var
   PortListSection : TRTLCriticalSection;
 
@@ -2181,7 +2184,7 @@ end;
 
             if not thDeleted then
               SendMessageTimeout(thWnd, Msg, Trigger, lParam,
-                SMTO_BLOCK, 3000, Res);
+                SMTO_BLOCK, 3000, @Res);
 
             if ClosePending then begin
               {Port was closed by event handler, bail out}
@@ -3074,7 +3077,7 @@ end;
                            IgnoreCase : Boolean) : Integer;
     {-Add a data trigger, data is any ASCIIZ string so no embedded nulls}
   begin
-    Result := AddDataTriggerLen(Data, IgnoreCase, StrLen(Data));
+    Result := AddDataTriggerLen(Data, IgnoreCase, AnsiStrings.StrLen(Data));
   end;
 
   function TApdBaseDispatcher.AddStatusTrigger(SType : Cardinal) : Integer;

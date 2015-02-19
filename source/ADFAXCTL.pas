@@ -260,8 +260,7 @@ begin
               try
 
                 {Start monitor thread}
-                Resume;
-
+                Start;
                 {Check if we were started by driver}
                 Semaphore := OpenSemaphore(EVENT_ALL_ACCESS, False, ApdSemaphoreName);
                 if Semaphore <> 0 then

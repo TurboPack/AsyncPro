@@ -65,11 +65,6 @@ uses
   SysUtils,
   Messages;
 
-{ need this for the 16-bit printer drivers }
-{$IFNDEF UseResourceStrings}
-  {$R APRO.R32}
-{$ENDIF}
-
 const
   ApVersionStr = 'v5.00';
   {$IFDEF Apax}
@@ -2872,6 +2867,9 @@ procedure Assign(var F: TextFile; const FileName: string); overload;
 
 implementation
 
+uses
+  AnsiStrings;
+
 function StrLenW(const Str: PWideChar): Cardinal;
 asm  
   cmp word ptr [eax], 0
@@ -2967,15 +2965,15 @@ begin
   Result := '';
   repeat
     Done := True;
-    EOL := StrScan(ReadPtr,#13);
+    EOL := AnsiStrings.StrScan(ReadPtr,#13);
     if EOL <> nil then begin
       EOL^ := #0;
-      Result := Result + StrPas(ReadPtr);
+      Result := Result + AnsiStrings.StrPas(ReadPtr);
       ReadPtr := EOL;
       inc(ReadPtr);
       if ReadPtr^ = #10 then inc(ReadPtr);
     end else begin
-      Result := Result + StrPas(ReadPtr);
+      Result := Result + AnsiStrings.StrPas(ReadPtr);
       ReadPage;
       Done := EOLF;
     end;
@@ -3557,7 +3555,7 @@ type
     I : Integer;
 
   begin
-    I := StrLen(PathName);
+    I := AnsiStrings.StrLen(PathName);
     repeat
       Dec(I);
     until (I = -1) or (PathName[I] in DosDelimSet);
@@ -3587,7 +3585,7 @@ type
   var
     I : Cardinal;
   begin
-    I := StrLen(PathName);
+    I := AnsiStrings.StrLen(PathName);
     while (I > 0) and (not (PathName[I-1] in DosDelimSet)) do
       Dec(I);
     Dest := StrStCopy(Dest, PathName, I, MaxLen);
@@ -3613,7 +3611,7 @@ type
     Len : Cardinal;
 
   begin
-    Len := StrLen(S);
+    Len := AnsiStrings.StrLen(S);
     if Pos < Len then begin
       if (Len-Pos) < Count then
         Count := Len-Pos;
@@ -3653,8 +3651,8 @@ type
     L : Cardinal;
   begin
     Result := Dest;
-    StrCopy(Dest, DirName);
-    L := StrLen(DirName);
+    AnsiStrings.StrCopy(Dest, DirName);
+    L := AnsiStrings.StrLen(DirName);
     if (L > 0) and not(DirName[L-1] in DosDelimSet) then begin
       Dest[L] := '\';
       Dest[L+1] := #0;

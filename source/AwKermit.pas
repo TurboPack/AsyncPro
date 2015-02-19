@@ -149,6 +149,9 @@ procedure kpTransmit(Msg, wParam : Cardinal;
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   {'S' - SendInit packet option index}
   MaxL    = 1;     {Max packet length sender can receive (Def = none)}
@@ -1775,11 +1778,11 @@ const
 
       {Should we use its directory or ours?}
       if not FlagIsSet(aFlags, apHonorDirectory) then begin
-        S := StrPas(aPathname);
+        S := AnsiStrings.StrPas(aPathname);
         Name := ShortString(ExtractFileName(string(S)));
-        StrPCopy(NameExt, Name);
+        AnsiStrings.StrPCopy(NameExt, Name);
         AddBackSlashZ(aPathName, aDestDir);
-        StrLCat(aPathName, NameExt, SizeOf(aPathName));
+        AnsiStrings.StrLCat(aPathName, NameExt, SizeOf(aPathName));
       end;
     end;
   end;
@@ -1893,10 +1896,10 @@ const
     with P^ do begin
       {Send the data field}
       if FlagIsSet(aFlags, apIncludeDirectory) then
-        StrCopy(S, aPathname)
+        AnsiStrings.StrCopy(S, aPathname)
       else
         JustFileNameZ(S, aPathname);
-      kDataLen := StrLen(S);
+      kDataLen := AnsiStrings.StrLen(S);
 
       {Truncate if aPathname is a long filename greater than blocksize}
       if kDataLen > aBlockLen then

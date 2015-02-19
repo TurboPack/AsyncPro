@@ -167,6 +167,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   {The hash table sizes: these are prime numbers that suit these
    particular implementations}
@@ -246,7 +249,7 @@ var
 begin
   if (FLen = FSize-1) then begin
     GetMem(NewQ, FSize + CharQueueDelta);
-    StrCopy(NewQ, FText);
+    AnsiStrings.StrCopy(NewQ, FText);
     FreeMem(FText, FSize);
     inc(FSize, CharQueueDelta);
     FText := NewQ;
@@ -265,7 +268,7 @@ end;
 function TCharQueue.cqGetDupText : PAnsiChar;
 begin
   GetMem(Result, FLen+1);
-  StrCopy(Result, FText);
+  AnsiStrings.StrCopy(Result, FText);
 end;
 {====================================================================}
 
@@ -899,7 +902,7 @@ begin
   while (Walker <> nil) do begin
     Temp := Walker;
     Walker := Walker^.snNext;
-    FreeMem(Temp^.snText, StrLen(Temp^.snText));
+    FreeMem(Temp^.snText, AnsiStrings.StrLen(Temp^.snText));
     {NOTE: we do NOT free the font name: it's a copy of an allocated
      string in the mapping hash table}
     Temp^.snNext := FScriptFreeList;
@@ -949,7 +952,7 @@ var
   ThisChar : AnsiChar;
 begin
   {nothing to do if the string is empty}
-  TextLen := StrLen(aText);
+  TextLen := AnsiStrings.StrLen(aText);
   if (TextLen = 0) then
     Exit;
   {destroy any current script}
@@ -1023,12 +1026,12 @@ begin
   Result := true;
   {return the data from the top node}
   aFont := PScriptNode(FScript)^.snFont^;
-  StrCopy(aText, PScriptNode(FScript)^.snText);
+  AnsiStrings.StrCopy(aText, PScriptNode(FScript)^.snText);
   {unlink the top node}
   Temp := PScriptNode(FScript);
   FScript := Temp^.snNext;
   {free the unlinked top node}
-  FreeMem(Temp^.snText, StrLen(Temp^.snText));
+  FreeMem(Temp^.snText, AnsiStrings.StrLen(Temp^.snText));
   {NOTE: we do NOT free the font name: it's a copy of an allocated
    string in the mapping hash table}
   Temp^.snNext := FScriptFreeList;

@@ -34,6 +34,8 @@ namespace Adisapi
 //-- type declarations -------------------------------------------------------
 typedef __int64 QWORD;
 
+typedef int LongWord;
+
 struct DECLSPEC_DRECORD SDATA
 {
 public:
@@ -109,9 +111,9 @@ typedef void __fastcall (__closure *TDirectSRUtteranceEnd)(System::TObject* Send
 
 typedef void __fastcall (__closure *TDirectSRVUMeter)(System::TObject* Sender, int beginhi, int beginlo, int level);
 
-typedef void __fastcall (__closure *TDirectSRError)(System::TObject* Sender, unsigned warning, const System::WideString Details, const System::WideString Message);
+typedef void __fastcall (__closure *TDirectSRError)(System::TObject* Sender, int warning, const System::WideString Details, const System::WideString Message);
 
-typedef void __fastcall (__closure *TDirectSRwarning)(System::TObject* Sender, unsigned warning, const System::WideString Details, const System::WideString Message);
+typedef void __fastcall (__closure *TDirectSRwarning)(System::TObject* Sender, int warning, const System::WideString Details, const System::WideString Message);
 
 typedef void __fastcall (__closure *TDirectSSClickIn)(System::TObject* Sender, int x, int y);
 
@@ -135,9 +137,9 @@ typedef void __fastcall (__closure *TDirectSSTextDataDone)(System::TObject* Send
 
 typedef void __fastcall (__closure *TDirectSSActiveVoiceStartup)(System::TObject* Sender, int init, int init2);
 
-typedef void __fastcall (__closure *TDirectSSError)(System::TObject* Sender, unsigned warning, const System::WideString Details, const System::WideString Message);
+typedef void __fastcall (__closure *TDirectSSError)(System::TObject* Sender, int warning, const System::WideString Details, const System::WideString Message);
 
-typedef void __fastcall (__closure *TDirectSSwarning)(System::TObject* Sender, unsigned warning, const System::WideString Details, const System::WideString Message);
+typedef void __fastcall (__closure *TDirectSSwarning)(System::TObject* Sender, int warning, const System::WideString Details, const System::WideString Message);
 
 typedef void __fastcall (__closure *TDirectSSVisualFuture)(System::TObject* Sender, int milliseconds, int timehi, int timelo, short Phoneme, short EnginePhoneme, int hints, short MouthHeight, short bMouthWidth, short bMouthUpturn, short bJawOpen, short TeethUpperVisible, short TeethLowerVisible, short TonguePosn, short LipTension);
 
@@ -307,7 +309,7 @@ public:
 	virtual HRESULT __safecall RevertSpeaker(const System::WideString Speaker) = 0 ;
 	virtual HRESULT __safecall Get_SpeakerInfoChanged(int &filetimehi, int &filetimelo, int &__Get_SpeakerInfoChanged_result) = 0 ;
 	virtual HRESULT __safecall TrainPhrasesDlg(int hwnd, const System::WideString title) = 0 ;
-	virtual HRESULT __safecall LexAddTo(unsigned lex, int charset, const System::WideString text, const System::WideString pronounce, int partofspeech, int EngineInfo, int engineinfosize) = 0 ;
+	virtual HRESULT __safecall LexAddTo(int lex, int charset, const System::WideString text, const System::WideString pronounce, int partofspeech, int EngineInfo, int engineinfosize) = 0 ;
 	virtual HRESULT __safecall LexGetFrom(int lex, int charset, const System::WideString text, int sense, System::WideString &pronounce, int &partofspeech, int &EngineInfo, int &sizeofengineinfo) = 0 ;
 	virtual HRESULT __safecall LexRemoveFrom(int lex, const System::WideString text, int sense) = 0 ;
 	virtual HRESULT __safecall QueryLexicons(int f, int &pdw) = 0 ;
@@ -619,7 +621,7 @@ public:
 	void __fastcall CommitSpeaker(void);
 	void __fastcall RevertSpeaker(const System::WideString Speaker);
 	void __fastcall TrainPhrasesDlg(int hwnd, const System::WideString title);
-	void __fastcall LexAddTo(unsigned lex, int charset, const System::WideString text, const System::WideString pronounce, int partofspeech, int EngineInfo, int engineinfosize);
+	void __fastcall LexAddTo(int lex, int charset, const System::WideString text, const System::WideString pronounce, int partofspeech, int EngineInfo, int engineinfosize);
 	void __fastcall LexGetFrom(int lex, int charset, const System::WideString text, int sense, System::WideString &pronounce, int &partofspeech, int &EngineInfo, int &sizeofengineinfo);
 	void __fastcall LexRemoveFrom(int lex, const System::WideString text, int sense);
 	void __fastcall QueryLexicons(int f, int &pdw);
@@ -837,7 +839,7 @@ public:
 	virtual HRESULT __safecall Set_AttributeString(int Attrib, const System::WideString pVal) = 0 ;
 	virtual HRESULT __safecall Get_AttributeMemory(int Attrib, int &size, int &__Get_AttributeMemory_result) = 0 ;
 	virtual HRESULT __safecall Set_AttributeMemory(int Attrib, int &size, int pVal) = 0 ;
-	virtual HRESULT __safecall LexAddTo(unsigned lex, int charset, const System::WideString text, const System::WideString Pronounce, int PartOfSpeech, int EngineInfo, int engineinfosize) = 0 ;
+	virtual HRESULT __safecall LexAddTo(int lex, int charset, const System::WideString text, const System::WideString Pronounce, int PartOfSpeech, int EngineInfo, int engineinfosize) = 0 ;
 	virtual HRESULT __safecall LexGetFrom(int lex, int charset, const System::WideString text, int Sense, System::WideString &Pronounce, int &PartOfSpeech, int &EngineInfo, int &sizeofengineinfo) = 0 ;
 	virtual HRESULT __safecall LexRemoveFrom(int lex, const System::WideString text, int Sense) = 0 ;
 	virtual HRESULT __safecall QueryLexicons(int f, int &pdw) = 0 ;
@@ -1081,7 +1083,7 @@ public:
 	void __fastcall InitAudioDestDirect(int direct);
 	void __fastcall InitAudioDestObject(int object_);
 	int __fastcall Find(const System::WideString RankList);
-	void __fastcall LexAddTo(unsigned lex, int charset, const System::WideString text, const System::WideString Pronounce, int PartOfSpeech, int EngineInfo, int engineinfosize);
+	void __fastcall LexAddTo(int lex, int charset, const System::WideString text, const System::WideString Pronounce, int PartOfSpeech, int EngineInfo, int engineinfosize);
 	void __fastcall LexGetFrom(int lex, int charset, const System::WideString text, int Sense, System::WideString &Pronounce, int &PartOfSpeech, int &EngineInfo, int &sizeofengineinfo);
 	void __fastcall LexRemoveFrom(int lex, const System::WideString text, int Sense);
 	void __fastcall QueryLexicons(int f, int &pdw);

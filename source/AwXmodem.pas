@@ -106,6 +106,9 @@ const
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   {Compile-time constants}
   DefBlockWait = 91;             {Normal between-block wait time (5 sec)}
@@ -394,7 +397,7 @@ const
         aHC.FlushOutBuffer;
 
         {Cancel with three CANCEL chars}
-        aHC.PutBlock(CanStr, StrLen(CanStr));
+        aHC.PutBlock(CanStr, AnsiStrings.StrLen(CanStr));
       end;
       aForceStatus := True;
     end;

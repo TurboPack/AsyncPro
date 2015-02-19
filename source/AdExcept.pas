@@ -46,9 +46,6 @@ uses
   Windows,
   SysUtils,
   Classes,
-  {$IFNDEF UseResourceStrings}
-  AdSrmgr,
-  {$ENDIF}
   OoMisc;
 
 { The design of the string resources has changed for APRO 4.04.  We no longer  }
@@ -403,19 +400,15 @@ type
   {.Z-}
 
 
-{$IFNDEF UseResourceStrings}
-var                                                                      {!!.02}
-  AproStrRes : TAdStringResource;                                        {!!.02}
-{$ENDIF}
 implementation
 
 { include AdStrMap here to prevent circular references in AdStrMap }
 uses
-  AdStrMap;
+  AnsiStrings, AdStrMap;
 
   function AproLoadZ(P : PAnsiChar; Code : Integer) : PAnsiChar;
   begin
-    Result := StrPCopy(P, AproLoadAnsiStr(Code));
+    Result := AnsiStrings.StrPCopy(P, AproLoadAnsiStr(Code));
   end;
 
   function AproLoadStr(const ErrorCode : SmallInt) : string;
@@ -763,15 +756,5 @@ begin
 
   FErrorCode := ErrCode;
 end;
-
-{$IFNDEF UseResourceStrings}
-{ only need these if we're using the string resource manager }
-initialization
-  InitializeUnit;
-
-  finalization
-    FinalizeUnit;
-
-{$ENDIF}
 
 end.

@@ -64,8 +64,8 @@
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <DCC_HppOutput>..\..\source\hpp</DCC_HppOutput>
-        <IncludePath>..\..\source\;C:\Projects\EMBT\AsyncPro-New\packages\CBuilder\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>..\..\source\;C:\Projects\EMBT\AsyncPro-New\packages\CBuilder\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>..\..\source\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>..\..\source\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <_TCHARMapping>char</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
@@ -425,22 +425,22 @@
             <BuildOrder>83</BuildOrder>
         </DelphiCompile>
         <FormResources Include="..\..\source\AdVoipEd.dfm"/>
-        <FormResources Include="..\..\source\Adxport.dfm"/>
+        <FormResources Include="..\..\source\AdTStat.dfm"/>
         <FormResources Include="..\..\source\Adxdial.dfm"/>
         <FormResources Include="..\..\source\Adxdown.dfm"/>
-        <FormResources Include="..\..\source\AdTStat.dfm"/>
         <FormResources Include="..\..\source\adtsel.dfm"/>
-        <FormResources Include="..\..\source\Adxprot.dfm"/>
         <FormResources Include="..\..\source\Adxup.dfm"/>
-        <FormResources Include="..\..\source\AdMdmDlg.dfm"/>
-        <FormResources Include="..\..\source\AdMdmCfg.dfm"/>
-        <FormResources Include="..\..\source\AdLibMdm.dfm"/>
+        <FormResources Include="..\..\source\Adxprot.dfm"/>
+        <FormResources Include="..\..\source\Adxport.dfm"/>
         <FormResources Include="..\..\source\Adfstat.dfm"/>
         <FormResources Include="..\..\source\AdFIDlg.dfm"/>
         <FormResources Include="..\..\source\Adfpstat.dfm"/>
+        <FormResources Include="..\..\source\AdLibMdm.dfm"/>
+        <FormResources Include="..\..\source\AdMdmCfg.dfm"/>
         <FormResources Include="..\..\source\AdSelCom.dfm"/>
-        <FormResources Include="..\..\source\AdPStat.dfm"/>
         <FormResources Include="..\..\source\AdRStat.dfm"/>
+        <FormResources Include="..\..\source\AdMdmDlg.dfm"/>
+        <FormResources Include="..\..\source\AdPStat.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -468,6 +468,7 @@
                     <Source Name="MainSource">AsyncProCR.cpp</Source>
                 </Source>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclIntraweb_140_210.bpl">IntraWeb 14.0 Design Package for RAD Studio XE6</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k210.bpl">Embarcadero C++Builder-Package für Office 2000-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp210.bpl">Embarcadero C++Builder-Package für Office XP-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k210.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>

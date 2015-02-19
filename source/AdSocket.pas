@@ -192,7 +192,7 @@ type
 implementation
 
 uses
-  AdExcept;
+  AnsiStrings, AdExcept;
 
 { - Winsock exception stuff }
 constructor EApdSocketException.CreateNoInit(ErrCode : Integer; Dummy : PChar);
@@ -420,7 +420,7 @@ var
 begin
   Result := '';
   CheckLoaded;
-  StrCopy(TempStr, @SockFuncs.INet_NtoA(InAddr)^);
+  AnsiStrings.StrCopy(TempStr, @SockFuncs.INet_NtoA(InAddr)^);
   Result := string(TempStr);
 end;
 
@@ -431,7 +431,7 @@ var
 begin
   FillChar(Result, SizeOf(Result), #0);
   CheckLoaded;
-  StrPLCopy(TempStr, AnsiString(S), IPStrSize);
+  AnsiStrings.StrPLCopy(TempStr, AnsiString(S), IPStrSize);
   Result.S_addr := SockFuncs.INet_Addr(@TempStr);
 end;
 
@@ -447,7 +447,7 @@ begin
   CheckLoaded;
   HostEnt := SockFuncs.GetHostByAddr(InAddr, SizeOf(InAddr), PF_INET);
   if Assigned(HostEnt) then
-    Result := string(StrCopy(TempStr, @HostEnt^.h_name^));
+    Result := string(AnsiStrings.StrCopy(TempStr, @HostEnt^.h_name^));
 end;
 
 { -Returns an IP address for a name }

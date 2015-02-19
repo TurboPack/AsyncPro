@@ -55,7 +55,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <IncludePath>..\..\source\;C:\Projects\EMBT\AsyncPro-New\packages\CBuilder\;$(IncludePath)</IncludePath>
+        <IncludePath>..\..\source\;$(IncludePath)</IncludePath>
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <DCC_AdditionalSwitches>-LUDesignIDE</DCC_AdditionalSwitches>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
@@ -63,7 +63,7 @@
         <_TCHARMapping>char</_TCHARMapping>
         <ProjectType>CppPackage</ProjectType>
         <Multithreaded>true</Multithreaded>
-        <ILINK_LibraryPath>..\..\source\;C:\Projects\EMBT\AsyncPro-New\packages\CBuilder\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <ILINK_LibraryPath>..\..\source\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <VerInfo_Locale>1031</VerInfo_Locale>
         <DCC_HppOutput>..\..\source\hpp</DCC_HppOutput>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -131,12 +131,24 @@
         <TASM_Debugging>None</TASM_Debugging>
     </PropertyGroup>
     <ItemGroup>
-        <PackageImport Include="designide.bpi">
-            <BuildOrder>14</BuildOrder>
-        </PackageImport>
         <CppCompile Include="AsyncProCD.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
+        <PackageImport Include="AsyncProCR.bpi">
+            <BuildOrder>2</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="designide.bpi">
+            <BuildOrder>14</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="rtl.bpi">
+            <BuildOrder>1</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="vcl.bpi">
+            <BuildOrder>13</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="vclx.bpi">
+            <BuildOrder>12</BuildOrder>
+        </PackageImport>
         <DelphiCompile Include="..\..\source\adabout.pas">
             <Form>ApdAboutForm</Form>
             <FormType>dfm</FormType>
@@ -174,23 +186,11 @@
         <DelphiCompile Include="..\..\source\AproReg.pas">
             <BuildOrder>10</BuildOrder>
         </DelphiCompile>
-        <PackageImport Include="AsyncProCR.bpi">
-            <BuildOrder>2</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="rtl.bpi">
-            <BuildOrder>1</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="vcl.bpi">
-            <BuildOrder>13</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="vclx.bpi">
-            <BuildOrder>12</BuildOrder>
-        </PackageImport>
+        <FormResources Include="..\..\source\AdStatEd.dfm"/>
+        <FormResources Include="..\..\source\AdStatE0.dfm"/>
         <FormResources Include="..\..\source\adabout.dfm"/>
         <FormResources Include="..\..\source\adpacked.dfm"/>
         <FormResources Include="..\..\source\Adpedit0.dfm"/>
-        <FormResources Include="..\..\source\AdStatE0.dfm"/>
-        <FormResources Include="..\..\source\AdStatEd.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -209,6 +209,7 @@
         <BorlandProject>
             <CPlusPlusBuilder.Personality>
                 <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclIntraweb_140_210.bpl">IntraWeb 14.0 Design Package for RAD Studio XE6</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k210.bpl">Embarcadero C++Builder-Package für Office 2000-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp210.bpl">Embarcadero C++Builder-Package für Office XP-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k210.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
@@ -231,6 +232,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="..\..\..\..\..\Public\Documents\Embarcadero\Studio\15.0\BPL\Package1.tds" Configuration="Debug" Class="DebugSymbols"/>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin\cc32160mt.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>
@@ -242,6 +244,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\15.0\BPL\AsyncProCD.bpl" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>AsyncProCD.bpl</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="..\..\..\..\..\Public\Documents\Embarcadero\Studio\15.0\BPL\AsyncProCD.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>AsyncProCD.bpl</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -266,12 +274,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\..\..\..\Public\Documents\Embarcadero\Studio\15.0\BPL\AsyncProCD.bpl" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>AsyncProCD.bpl</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgstl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
@@ -282,7 +284,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\..\..\..\..\Public\Documents\Embarcadero\Studio\15.0\BPL\Package1.tds" Configuration="Debug" Class="DebugSymbols"/>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32160.dll" Class="DependencyModule">
                     <Platform Name="Win32">
                         <Overwrite>true</Overwrite>

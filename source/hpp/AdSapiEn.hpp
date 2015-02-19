@@ -80,7 +80,7 @@ enum DECLSPEC_DENUM Adsapien__7 : unsigned char { ttCurrentMic, ttCurrentGrammar
 
 typedef System::Set<Adsapien__7, Adsapien__7::ttCurrentMic, Adsapien__7::ttGeneral> TApdSRTrainingType;
 
-typedef void __fastcall (__closure *TApdOnSapiError)(System::TObject* Sender, unsigned Error, const System::UnicodeString Details, const System::UnicodeString Message);
+typedef void __fastcall (__closure *TApdOnSapiError)(System::TObject* Sender, int Error, const System::UnicodeString Details, const System::UnicodeString Message);
 
 typedef void __fastcall (__closure *TApdSapiNotifyEvent)(System::TObject* Sender);
 
@@ -329,11 +329,11 @@ protected:
 	void __fastcall TriggerPhraseHypothesis(System::TObject* Sender, int flags, int beginhi, int beginlo, int endhi, int endlo, const System::WideString Phrase, int results);
 	void __fastcall TriggerSpeakStart(System::TObject* Sender, int beginhi, int beginlo);
 	void __fastcall TriggerSpeakStop(System::TObject* Sender, int beginhi, int beginlo, int endhi, int endlo);
-	void __fastcall TriggerSRError(System::TObject* Sender, unsigned Error, const System::WideString Details, const System::WideString Message);
-	void __fastcall TriggerSRWarning(System::TObject* Sender, unsigned Error, const System::WideString Details, const System::WideString Message);
+	void __fastcall TriggerSRError(System::TObject* Sender, int Error, const System::WideString Details, const System::WideString Message);
+	void __fastcall TriggerSRWarning(System::TObject* Sender, int Error, const System::WideString Details, const System::WideString Message);
 	void __fastcall TriggerSSAttribChanged(System::TObject* Sender, int Attribute);
-	void __fastcall TriggerSSError(System::TObject* Sender, unsigned Error, const System::WideString Details, const System::WideString Message);
-	void __fastcall TriggerSSWarning(System::TObject* Sender, unsigned Error, const System::WideString Details, const System::WideString Message);
+	void __fastcall TriggerSSError(System::TObject* Sender, int Error, const System::WideString Details, const System::WideString Message);
+	void __fastcall TriggerSSWarning(System::TObject* Sender, int Error, const System::WideString Details, const System::WideString Message);
 	void __fastcall TriggerTrainingRequested(System::TObject* Sender, int train);
 	void __fastcall TriggerVUMeter(System::TObject* Sender, int beginhi, int beginlo, int level);
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
