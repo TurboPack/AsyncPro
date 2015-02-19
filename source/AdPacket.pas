@@ -330,7 +330,7 @@ type
 implementation
 
 uses
-  AnsiStrings;
+  Types, AnsiStrings;
 
 var
   PacketManagerList : TApdDataPacketManagerList;

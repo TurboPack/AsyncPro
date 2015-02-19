@@ -115,7 +115,7 @@ implementation
 {$R *.DFM}
 
 uses
-  AnsiStrings, AdFaxSrv, AdExcept;
+  UITypes, AnsiStrings, AdFaxSrv, AdExcept;
 
 { TAdFIDlgForm }
 

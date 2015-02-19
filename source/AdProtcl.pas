@@ -804,7 +804,7 @@ type
 implementation
 
 uses
-  AnsiStrings;
+  Types, AnsiStrings;
 
 const
   FileSkipMask = $80;   {Skip file if dest doesn't exist}

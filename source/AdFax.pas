@@ -739,7 +739,7 @@ type
 implementation
 
 uses
-  AnsiStrings;
+  Types, AnsiStrings;
 
 type
   {A list of active TApdXxxFax components}

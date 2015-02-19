@@ -122,6 +122,9 @@ type
 
 implementation
 
+uses
+  Types, UITypes;
+
 type
   TAdRotationAngle = (ra0, ra90, ra180, ra270);
 

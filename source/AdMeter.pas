@@ -172,6 +172,9 @@ type
 
 implementation
 
+uses
+  Types;
+
 constructor TApdMeter.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
