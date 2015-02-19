@@ -129,9 +129,9 @@ type
     cDialWait     : Integer;            {ticks timeout for dialing}
     cAnswerOnRing : Integer;            {ring on which to answer phone}
     cRingCounter  : Integer;            {count of rings seen}
-    cSessionBPS   : LongInt;            {Remote/session BPS}
-    cNormalBaud   : LongInt;            {Normal baud rate}
-    cInitBaud     : LongInt;            {Initialization baud rate}
+    cSessionBPS   : Integer;            {Remote/session BPS}
+    cNormalBaud   : Integer;            {Normal baud rate}
+    cInitBaud     : Integer;            {Initialization baud rate}
     cDataBuffer   : PFaxDataBuffer;     {buffer for received data}
     cInFile       : File;               {received data file}
     cFaxHeader    : TFaxHeaderRec;      {fax file header block}
@@ -227,7 +227,7 @@ function fSetClassType(FP : PFaxRec; CT : ClassType) : ClassType;
   {-Set type of modem, return detected or set type}
 
 procedure fSetInitBaudRate(FP : PFaxRec;
-                           InitRate, NormalRate : LongInt;
+                           InitRate, NormalRate : Integer;
                            DoIt : Boolean);
   {-Set baud rate to use when initializing modem}
 
@@ -236,11 +236,11 @@ function fGetModemInfo(FP : PFaxRec; var FaxClass : AnsiChar;
                        Reset : Boolean) : Boolean;
   {-Get specific data from modem}
 
-function fGetModemFeatures(FP : PFaxRec; var BPS : LongInt;
+function fGetModemFeatures(FP : PFaxRec; var BPS : Integer;
                            var Correction : AnsiChar) : Integer;
   {-Return highest possible codes}
 
-procedure fSetModemFeatures(FP : PFaxRec; BPS : LongInt;
+procedure fSetModemFeatures(FP : PFaxRec; BPS : Integer;
                             Correction : AnsiChar);
   {-Set modem features for this session}
 
@@ -251,7 +251,7 @@ function fGetRemoteID(FP : PFaxRec) : ShortString;
   {-Return remote station ID}
 
 procedure fGetSessionParams(FP : PFaxRec;
-                            var BPS : LongInt;
+                            var BPS : Integer;
                             var Resolution : Boolean;
                             var Correction : Boolean);
   {-Return remote/session parameters}
@@ -262,8 +262,8 @@ function fGetHangupResult(FP : PFaxRec) : Word;
 procedure fGetPageInfoC12(FP : PFaxRec;
                           var Pages : Word;
                           var Page : Word;
-                          var BytesTransferred : LongInt;
-                          var PageLength : LongInt);
+                          var BytesTransferred : Integer;
+                          var PageLength : Integer);
 
 
 {C12Send init/destroy routines}
@@ -315,7 +315,7 @@ procedure fSetSafeMode(FP : PFaxRec; SafeMode : Boolean);
 
 
 procedure fFaxTransmit(Msg, wParam : Cardinal;
-                      lParam : LongInt);
+                      lParam : Integer);
   {-Perform one increment of a fax transmit session}
 
 
@@ -351,7 +351,7 @@ procedure fSetOneFax(FP : PFaxRec; OnOff : Boolean);
 
 
 procedure fFaxReceive(Msg, wParam : Cardinal;
-                     lParam : LongInt);
+                     lParam : Integer);
   {-Perform one increment of a fax transmit session}
 
 
@@ -481,7 +481,7 @@ end;
     end;
   end;
 
-  function GetPackedDateTime : LongInt;
+  function GetPackedDateTime : Integer;
     {-Return today's date/time in file packed date format}
   begin
     Result := DateTimeToFileDate(Now);
@@ -715,7 +715,7 @@ end;
   end;
 
   procedure fSetInitBaudRate(FP : PFaxRec;
-                             InitRate, NormalRate : LongInt;
+                             InitRate, NormalRate : Integer;
                              DoIt : Boolean);
     {-Set baud rate to use when initializing modem}
   var
@@ -739,7 +739,7 @@ end;
   function caLocatePage(FP : PFaxRec; PgNo : Word) : Integer;
   var
     W : Word;
-    L : LongInt;
+    L : Integer;
     P : TPageHeaderRec;
   begin
     with PC12FaxData(FP)^, fCData^, fPData^ do begin
@@ -1217,7 +1217,7 @@ end;
     end;
   end;
 
-  function fGetModemFeatures(FP : PFaxRec; var BPS : LongInt;
+  function fGetModemFeatures(FP : PFaxRec; var BPS : Integer;
                              var Correction : AnsiChar) : Integer;
     {-Return highest possible codes}
   var
@@ -1273,7 +1273,7 @@ end;
     end;
   end;
 
-  procedure fSetModemFeatures(FP : PFaxRec; BPS : LongInt;
+  procedure fSetModemFeatures(FP : PFaxRec; BPS : Integer;
                                Correction : AnsiChar);
     {-Set modem features for this session}
   begin
@@ -1301,8 +1301,8 @@ end;
   procedure fGetPageInfoC12(FP : PFaxRec;
                             var Pages : Word;
                             var Page : Word;
-                            var BytesTransferred : LongInt;
-                            var PageLength : LongInt);
+                            var BytesTransferred : Integer;
+                            var PageLength : Integer);
   var
     OutBuf : Word;
   begin
@@ -1348,7 +1348,7 @@ end;
   end;
 
   procedure fGetSessionParams(FP : PFaxRec;
-                              var BPS : LongInt;
+                              var BPS : Integer;
                               var Resolution : Boolean;
                               var Correction : Boolean);
     {-Return remote or session parameters}
@@ -2318,7 +2318,7 @@ end;
     InState : Boolean = False;                                        
 
   procedure fFaxTransmit(Msg, wParam : Cardinal;
-                        lParam : LongInt);
+                        lParam : Integer);
     {-Perform one increment of a fax transmit}
   label
     ExitPoint;
@@ -4227,7 +4227,7 @@ ExitPoint:
     {-Update the contents of the main header in the file}
   var
     I : Integer;
-    L : LongInt;
+    L : Integer;
     W : Integer;
   begin
     with PC12ReceiveFax(FP)^, fCData^, fPData^ do begin
@@ -4277,7 +4277,7 @@ ExitPoint:
   var
     I : Integer;
     W : Integer;
-    L : LongInt;
+    L : Integer;
   begin
     with PC12ReceiveFax(FP)^, fCData^, fPData^ do begin
       {save current file position for later}
@@ -4356,7 +4356,7 @@ ExitPoint:
   {$ENDIF}
 
   procedure fFaxReceive(Msg, wParam : Cardinal;
-                       lParam : LongInt);
+                       lParam : Integer);
     {-Perform one increment of a fax receive}
   label
     ExitPoint;
@@ -4886,7 +4886,7 @@ ExitPoint:
                   cResponse := cDLE;                                     {!!.04}
                   if C = cETX then begin
                     {Calculate amount of valid training data}
-                    PercentBad := (cBadData * LongInt(100)) div aDataCount;
+                    PercentBad := (cBadData * Integer(100)) div aDataCount;
                     if PercentBad < MaxBadPercent then begin
                       fState := rf1FinishTrain;
                       caPrepResponse(FP);

@@ -121,8 +121,8 @@ function zpSetZmodemFinishWait(P : PProtocolData;
 {Control}
 procedure zpPrepareTransmit(P : PProtocolData);
 procedure zpPrepareReceive(P : PProtocolData);
-procedure zpTransmit(Msg, wParam : Cardinal; lParam : LongInt);
-procedure zpReceive(Msg, wParam : Cardinal; lParam : LongInt);
+procedure zpTransmit(Msg, wParam : Cardinal; lParam : Integer);
+procedure zpReceive(Msg, wParam : Cardinal; lParam : Integer);
 
 implementation
 
@@ -204,11 +204,11 @@ const
     FileExists     : Bool;
     FileSkip       : Bool;
     Result         : Cardinal;
-    FileLen        : LongInt;
-    FileDate       : LongInt;
-    SeekPoint      : LongInt;
-    FileStartOfs   : LongInt;
-    YMTSrcFileDate : LongInt;
+    FileLen        : Integer;
+    FileDate       : Integer;
+    SeekPoint      : Integer;
+    FileStartOfs   : Integer;
+    YMTSrcFileDate : Integer;
     FileOpt        : Byte;
 
     procedure ErrorCleanup;
@@ -221,13 +221,13 @@ const
     end;
 
     { Allows a 1 sec fudge to compensate for FAT timestamp rounding }
-    function YMStampEqual(YMStamp1, YMStamp2 : LongInt) : Boolean;
+    function YMStampEqual(YMStamp1, YMStamp2 : Integer) : Boolean;
     begin
       Result := abs(YMStamp1 - YMStamp2) <= 1;
     end;
 
     { Allows a 1 sec fudge to compensate for FAT timestamp rounding }
-    function YMStampLessOrEqual(YMStamp1, YMStamp2 : LongInt) : Boolean;
+    function YMStampLessOrEqual(YMStamp1, YMStamp2 : Integer) : Boolean;
     begin
       Result := YMStampEqual(YMStamp1, YMStamp2) or (YMStamp1 < YMStamp2);
     end;
@@ -1157,7 +1157,7 @@ Hex:
           case zLastFrame of
             ZrPos, ZAck, ZData, ZEof :
               {Header contained a reported file position}
-              zLastFileOfs := LongInt(zRcvHeader);
+              zLastFileOfs := Integer(zRcvHeader);
           end;
 
           {Note frame type for status}
@@ -1401,7 +1401,7 @@ Hex:
   end;
 
   procedure zpReceive(Msg, wParam : Cardinal;
-                     lParam : LongInt);
+                     lParam : Integer);
     {-Performs one increment of a Zmodem receive}
   label
     ExitPoint;
@@ -1410,7 +1410,7 @@ Hex:
     P           : PProtocolData;
     Finished    : Bool;
     C           : AnsiChar;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     Dispatcher      : TApdBaseDispatcher;
   begin
     Finished := False;                                                   {!!.01}
@@ -1499,7 +1499,7 @@ Hex:
                   zCanCount := 0;
 
                   {Init pos/flag bytes to zero}
-                  LongInt(zTransHeader) := 0;
+                  Integer(zTransHeader) := 0;
 
                   {Set our receive options}
                   zTransHeader[ZF0] := CanFdx or     {Full duplex}
@@ -1631,7 +1631,7 @@ Hex:
 
                         ZFreeCnt : {Sender is requesting a count of our freespace}
                           begin
-                            LongInt(zTransHeader) := DiskFree(0);
+                            Integer(zTransHeader) := DiskFree(0);
                             zpPutHexHeader(P, ZAck);
                           end;
 
@@ -1735,7 +1735,7 @@ Hex:
                   FlushInBuffer;
 
                   {Insert file size into header and send to remote}
-                  LongInt(zTransHeader) := aFileOfs;
+                  Integer(zTransHeader) := aFileOfs;
                   zpPutHexHeader(P, ZrPos);
 
                   {Set status info}
@@ -1829,7 +1829,7 @@ Hex:
                           zpWriteDataBlock(P);
                           if aProtocolError = ecOK then begin
                             {Acknowledge with the current file position}
-                            LongInt(zTransHeader) := aFileOfs;
+                            Integer(zTransHeader) := aFileOfs;
                             zpPutHexHeader(P, ZAck);
                             zZmodemState := rzStartData;
                             zHeaderState := hsNone;
@@ -1843,7 +1843,7 @@ Hex:
                           {Write this block}
                           zpWriteDataBlock(P);
                           if aProtocolError = ecOK then begin
-                            LongInt(zTransHeader) := aFileOfs;
+                            Integer(zTransHeader) := aFileOfs;
                             zpPutHexHeader(P, ZAck);
                             {Don't change state - will get next data subpacket}
                           end else begin
@@ -1961,7 +1961,7 @@ Hex:
               rzSendFinish :
                 begin
                   {Insert file position into header}
-                  LongInt(zTransHeader) := aFileOfs;
+                  Integer(zTransHeader) := aFileOfs;
                   zpPutHexHeader(P, ZFin);
                   zZmodemState := rzCollectFinish;
                   SetTimerTrigger(aTimeoutTrigger, aFinishWait, True);
@@ -2309,7 +2309,7 @@ Hex:
     with P^ do begin
       Inc(aBlockErrors);
       Inc(aTotalErrors);
-      aFileOfs := LongInt(zRcvHeader);
+      aFileOfs := Integer(zRcvHeader);
       if aFileOfs > aSrcFileLen then
         aFileOfs := aSrcFileLen;
       aBytesTransferred := aFileOfs;
@@ -2354,7 +2354,7 @@ Hex:
   end;
 
   procedure zpTransmit(Msg, wParam : Cardinal;
-                      lParam : LongInt);
+                      lParam : Integer);
     {-Performs one increment of a Zmodem transmit}
   label
     ExitPoint;
@@ -2365,10 +2365,10 @@ Hex:
     TriggerID   : Cardinal absolute wParam;
     NewInterval : Cardinal;
     Finished    : Bool;
-    Crc32       : LongInt;
+    Crc32       : Integer;
     P           : PProtocolData;
-    Secs        : LongInt;
-    StatusTicks : LongInt;
+    Secs        : Integer;
+    StatusTicks : Integer;
     StartTick   : DWORD;
     Dispatcher  : TApdBaseDispatcher;
     saveCrc32   : Boolean;                                                  // SWB
@@ -2484,7 +2484,7 @@ Hex:
                   FillChar(zAttentionStr, SizeOf(zAttentionStr), 0);
 
                   {Send ZrQinit header (requests receiver's ZrInit)}
-                  LongInt(zTransHeader) := zZRQINITValue;
+                  Integer(zTransHeader) := zZRQINITValue;
                   zpPutHexHeader(P, ZrQInit);
                   aBlockErrors := 0;
                   aTotalErrors := 0;
@@ -2530,7 +2530,7 @@ Hex:
 
               tzSInit:                                                      // SWB
                 begin                                                       // SWB
-                  LongInt(zTransHeader) := 0;                               // SWB
+                  Integer(zTransHeader) := 0;                               // SWB
                   if (zEscapeControl and (not zEscapeAll)) then             // SWB
                       zTransHeader[ZF0] := TESCtl;                          // SWB
                   zpPutHexHeader(P, ZSInit);                                // SWB
@@ -2597,7 +2597,7 @@ Hex:
                   aTimerStarted := True;
 
                   {Build the header data area}
-                  LongInt(zTransHeader) := 0;
+                  Integer(zTransHeader) := 0;
                   zTransHeader[ZF1] := zFileMgmtOpts;
                   if zReceiverRecover then
                     zTransHeader[ZF0] := FileRecover;
@@ -2637,7 +2637,7 @@ Hex:
                         begin
                           Crc32 := apCrc32OfFile(P, aPathName, 0);
                           if aProtocolError = ecOK then begin
-                            LongInt(zTransHeader) := Crc32;
+                            Integer(zTransHeader) := Crc32;
                             zpPutHexHeader(P, ZCrc);
                           end else
                             zZmodemState := tzError;
@@ -2657,7 +2657,7 @@ Hex:
                       ZrPos :  {Receiver tells us where to seek in our file}
                         begin
                           {Get file offset}
-                          aFileOfs := LongInt(zRcvHeader);
+                          aFileOfs := Integer(zRcvHeader);
                           aBytesTransferred := aFileOfs;
                           aInitFilePos := aFileOfs;
                           aBytesRemaining := aSrcFileLen - aBytesTransferred;
@@ -2693,7 +2693,7 @@ Hex:
                   aBlockErrors := 0;
 
                   {Send ZData header}
-                  LongInt(zTransHeader) := aFileOfs;
+                  Integer(zTransHeader) := aFileOfs;
                   zpPutBinaryHeader(P, ZData);
 
                   zZmodemState := tzEscapeData;
@@ -2768,7 +2768,7 @@ Hex:
               tzSendEof :
                 begin
                   {Send the eof}
-                  LongInt(zTransHeader) := aFileOfs;
+                  Integer(zTransHeader) := aFileOfs;
                   zpPutBinaryHeader(P, ZEof);
                   zZmodemState := tzDrainEof;
                   Dispatcher.SetStatusTrigger(aOutBuffUsedTrigger, 0, True);
@@ -2845,7 +2845,7 @@ Hex:
                           begin
                             Inc(aBlockErrors);
                             Inc(aTotalErrors);
-                            aFileOfs := LongInt(zRcvHeader);
+                            aFileOfs := Integer(zRcvHeader);
                             aBytesTransferred := aFileOfs;
                             aBytesRemaining := aSrcFileLen - aBytesTransferred;
 
@@ -2884,7 +2884,7 @@ Hex:
 
               tzSendFinish :
                 begin
-                  LongInt(zTransHeader) := aFileOfs;
+                  Integer(zTransHeader) := aFileOfs;
                   zpPutHexHeader(P, ZFin);
                   Dispatcher.SetTimerTrigger(aTimeoutTrigger, aFinishWait, True);
                   aBlockErrors := 0;

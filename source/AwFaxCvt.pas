@@ -893,7 +893,7 @@ begin
     end;
 end;
 
-function SeekOutFile(var F : PBufferedOutputFile; Posn : LongInt) : Integer;
+function SeekOutFile(var F : PBufferedOutputFile; Posn : Integer) : Integer;
 var
   Code : Integer;
 
@@ -911,7 +911,7 @@ begin
   SeekOutFile := Code;
 end;
 
-function OutFilePosn(var F : PBufferedOutputFile) : LongInt;
+function OutFilePosn(var F : PBufferedOutputFile) : Integer;
 begin
   with F^ do
     OutFilePosn := FilePos(OutFile) + BufPos;
@@ -1355,7 +1355,7 @@ end;
 
     with Cvt^ do begin
       if (StatusWnd <> 0) then begin
-        if (SendMessage(StatusWnd, apw_FaxCvtStatus, StatFlags, LongInt(Cvt)) <> 0) then
+        if (SendMessage(StatusWnd, apw_FaxCvtStatus, StatFlags, Integer(Cvt)) <> 0) then
           acConvertStatus := ecConvertAbort;
       end else if (@StatusFunc <> nil) then
         if StatusFunc(Cvt, StatFlags, BytesRead, BytesToRead) then
@@ -1457,7 +1457,7 @@ end;
 
     var
       Code : Integer;
-      L    : LongInt;
+      L    : Integer;
 
     begin
       with Cvt^ do begin
@@ -1579,7 +1579,7 @@ end;
   var
     Code : Integer;
 
-    function GetPackedDateTime : LongInt;
+    function GetPackedDateTime : Integer;
       {-Get the current date and time in BP7 packed date format}
     var
       DT : TDateTime;
@@ -1595,7 +1595,7 @@ end;
 
     var
       Code : Integer;
-      L    : LongInt;
+      L    : Integer;
       SLen : Cardinal;
 
     begin
@@ -1965,7 +1965,7 @@ end;
         FontRec := StandardFontRec;
       end else
         FontRec := SmallFontRec;
-      Len := LongInt(FontHandle) * 256;
+      Len := Integer(FontHandle) * 256;
 
       {get font data}
       Move(P^, FontPtr^, Len);
@@ -2084,7 +2084,7 @@ end;
   function fcSetFont(Cvt : PAbsFaxCvt; Font : TFont; HiRes : Boolean) : Integer;
     {-Set font for extended text converter}
   var
-    NewImageSize : LongInt;
+    NewImageSize : Integer;
     NewLineBytes : Cardinal;
     BmpInfo : TBitmap;
   begin
@@ -2100,7 +2100,7 @@ end;
 
       GetObject(Bitmap.Handle, SizeOf(TBitmap), @BmpInfo);
       NewLineBytes := BmpInfo.bmWidthBytes;
-      NewImageSize := LongInt(NewLineBytes) * BmpInfo.bmHeight;
+      NewImageSize := Integer(NewLineBytes) * BmpInfo.bmHeight;
 
       if NewImageSize > (64*1024) then begin
         Result := ecEnhFontTooBig;
@@ -2526,7 +2526,7 @@ end;
       W := B[2] + Word(B[1] shl 8);
   end;
 
-  function tcGetLong(Cvt : PAbsFaxCvt; var L : LongInt) : Integer;
+  function tcGetLong(Cvt : PAbsFaxCvt; var L : Integer) : Integer;
     {-Read a long integer from a TIFF file}
   var
     B    : array[1..4] of Byte;
@@ -2545,15 +2545,15 @@ end;
 
     tcGetLong := ecOK;
     if PTiffFaxData(Cvt^.UserData)^.Intel then
-      Move(B[1], L, SizeOf(LongInt))
+      Move(B[1], L, SizeOf(Integer))
     else
-      L := LongInt(B[1]) shl 24 +
-           LongInt(B[2]) shl 16 +
-           LongInt(B[3]) shl 8  +
-           LongInt(B[4]);
+      L := Integer(B[1]) shl 24 +
+           Integer(B[2]) shl 16 +
+           Integer(B[3]) shl 8  +
+           Integer(B[4]);
   end;
 
-  function tcSeek(Cvt : PAbsFaxCvt; NewOfs : LongInt) : Integer;
+  function tcSeek(Cvt : PAbsFaxCvt; NewOfs : Integer) : Integer;
   begin
     with PTiffFaxData(Cvt^.UserData)^ do begin
       {seek to location in input file}
@@ -2580,7 +2580,7 @@ end;
     var
       C1 : AnsiChar;
       C2 : AnsiChar;
-      L  : LongInt;
+      L  : Integer;
 
     label
       ValidError;
@@ -2638,8 +2638,8 @@ end;
       Tag     : Word;
       TagType : Word;
       Dummy   : Word;
-      Len     : LongInt;
-      Offset  : LongInt;
+      Len     : Integer;
+      Offset  : Integer;
       Code    : Integer;
 
       function Pixels2Bytes(W : Cardinal) : Cardinal;
@@ -3405,8 +3405,8 @@ end;
     I        : Cardinal;
     J        : Cardinal;
     PJ       : Cardinal;
-    Pivot    : LongInt;
-    Sz       : LongInt;
+    Pivot    : Integer;
+    Sz       : Integer;
     SaveMode : Integer;
 
   begin
@@ -3448,7 +3448,7 @@ end;
         Inc(DcxNumPag);
       Dec(DcxNumPag);
 
-      Move(DcxHeader.Offsets, DcxPgSz, SizeOf(LongInt) * DcxNumPag);
+      Move(DcxHeader.Offsets, DcxPgSz, SizeOf(Integer) * DcxNumPag);
       if (DcxNumPag > 1) then begin
         {sort the index}
         repeat
@@ -3732,7 +3732,7 @@ end;
     {-Open bitmap "file"}
   var
     BmpInfo : TBitmap;
-    Sz      : LongInt;
+    Sz      : Integer;
     COffset : integer;
 
   begin
@@ -3746,7 +3746,7 @@ end;
       GetObject(BmpHandle, SizeOf(TBitmap), @BmpInfo);
       BytesPerLine := BmpInfo.bmWidthBytes;
       Width        := BmpInfo.bmWidth;
-      Sz           := LongInt(BytesPerLine) * BmpInfo.bmHeight;
+      Sz           := Integer(BytesPerLine) * BmpInfo.bmHeight;
       BytesToRead  := Sz;
       NumLines     := BmpInfo.bmHeight;
       OnLine       := 1;
@@ -3760,7 +3760,7 @@ end;
 
       if FlagIsSet(Flags, fcDoubleWidth) then
         DoubleWidth := not UseHighRes and
-          ((BmpInfo.bmWidth * 2) <= LongInt(ResWidth - (LeftMargin*2)));
+          ((BmpInfo.bmWidth * 2) <= Integer(ResWidth - (LeftMargin*2)));
                                           {section rewritten }
       HalfHeight := not UseHighRes and not DoubleWidth and
         FlagIsSet(Flags, fcHalfHeight);
@@ -3771,12 +3771,12 @@ end;
       if FlagIsSet(Flags, fcCenterImage) then begin
         {only center if at least one byte on each side}
         if DoubleWidth then
-          COffset := (LongInt(ResWidth) -
-                      (longint(BmpInfo.bmWidth) + longint(LeftMargin))*2) div 32
+          COffset := (Integer(ResWidth) -
+                      (Integer(BmpInfo.bmWidth) + Integer(LeftMargin))*2) div 32
         else
-          COffset := (LongInt(ResWidth) -
-                      longint(BmpInfo.bmWidth) -
-                      longint(LeftMargin)) div 16;
+          COffset := (Integer(ResWidth) -
+                      Integer(BmpInfo.bmWidth) -
+                      Integer(LeftMargin)) div 16;
         if (COffset < 0) then
           CenterOfs := 0
         else
@@ -3845,15 +3845,15 @@ end;
        'white' or 1, and (2) set the last full byte (if it exists!) to
        white as well.}
       ActBytesPerLine := (Width + 7) div 8;
-      if (ActBytesPerLine <> longint(BytesPerLine)) then
-        TByteArray(Data)[longint(CenterOfs) + ActBytesPerLine] := $FF;
+      if (ActBytesPerLine <> Integer(BytesPerLine)) then
+        TByteArray(Data)[Integer(CenterOfs) + ActBytesPerLine] := $FF;
       ActiveBits := Width mod 8;
       if (ActiveBits <> 0) then begin
         Mask := 0;
         for i := ActiveBits to 7 do
           Mask := (Mask shl 1) or 1;
-        TByteArray(Data)[longint(CenterOfs) + (ActBytesPerLine-1)] :=
-          TByteArray(Data)[longint(CenterOfs) + (ActBytesPerLine-1)] or Mask;
+        TByteArray(Data)[Integer(CenterOfs) + (ActBytesPerLine-1)] :=
+          TByteArray(Data)[Integer(CenterOfs) + (ActBytesPerLine-1)] or Mask;
       end;
                                           { end new }
 
@@ -4312,7 +4312,7 @@ end;
   function upGetPageHeader(Unpack : PUnpackFax; FName : string; Page : Cardinal; var PH : TPageHeaderRec) : Integer;
     {-Return header for Page in fax FName}
   var
-    Offset   : LongInt;
+    Offset   : Integer;
     I        : Cardinal;
     SaveMode : Integer;
     Code     : Integer;
@@ -4554,7 +4554,7 @@ end;
     CurOfs      : Cardinal;
     EndOfs      : Cardinal;
     ActRead     : Cardinal;
-    TotRead     : Longint;
+    TotRead     : Integer;
     RunLen      : Cardinal;
     CurByte     : Byte;
     CurMask     : Byte;
@@ -4654,7 +4654,7 @@ end;
       {-Find the page to unpack}
     var
       Code : Integer;
-      Posn : LongInt;
+      Posn : Integer;
       X    : Cardinal;
 
     begin
@@ -4855,7 +4855,7 @@ end;
           { If the page image ends within this buffer, mark the end-of-image offset relative to the start of the buffer
             so we don't decode past it if the page terminating sequence of blank lines is missing.
             The current value of TotRead is the buffer start position relative to the start of the page. }
-          EndOfs := LongInt(PageHeader.ImgLength) - Totread;
+          EndOfs := Integer(PageHeader.ImgLength) - Totread;
 
           Inc(TotRead, ActRead);
           Inc(ImgRead, ActRead);
@@ -4958,7 +4958,7 @@ end;
   function upOutputBuffer(Unpack : PUnpackFax) : Integer;
     {-Output a memory bitmap buffer to user callback}
   var
-    I    : LongInt;
+    I    : Integer;
     Code : Integer;
 
   begin
@@ -4973,7 +4973,7 @@ end;
 
       {output each line of the buffer to the output function}
       for I := 0 to Pred(Height) do begin
-        Move(GetPtr(Lines, LongInt(Width) * I)^, LineBuffer^, Width);
+        Move(GetPtr(Lines, Integer(Width) * I)^, LineBuffer^, Width);
         Code := upOutputLine(Unpack, 0);
         if (Code < ecOK) then begin
           upOutputBuffer := Code;
@@ -5248,7 +5248,7 @@ end;
   var
     NewHandle : Cardinal;
     P         : Pointer;
-    Offset    : LongInt;
+    Offset    : Integer;
 
     function InitOutputBitmap : Integer;
     begin
@@ -5303,7 +5303,7 @@ end;
 
         OutputLineToBitmap := ecOK;
 
-        Offset := LongInt(Height) * LongInt(MaxWid);
+        Offset := Integer(Height) * Integer(MaxWid);
         if (Len > 0) then begin
           P := GetPtr(Lines, Offset);
           Move(Data, P^, Len);
@@ -5334,7 +5334,7 @@ end;
       {-Calculate the optimum number of bytes per line and arrange
         the raster lines on that boundary}
     var
-      I         : LongInt;
+      I         : Integer;
       W         : Cardinal;
       Pad       : Bool;
       Src       : PByteArray;
@@ -5365,7 +5365,7 @@ end;
           Width := W;
 
           GlobalUnlock(Handle);
-          NewHandle := GlobalRealloc(Handle, LongInt(Width) * LongInt(Height), gmem_ZeroInit);
+          NewHandle := GlobalRealloc(Handle, Integer(Width) * Integer(Height), gmem_ZeroInit);
           if (NewHandle = 0) then begin
             GlobalFree(Handle);
             PackImage := ecOutOfMemory;
@@ -5491,7 +5491,7 @@ end;
     function FinishBitmap : Integer;
     var
       Code      : Integer;
-      CopyBytes : LongInt;
+      CopyBytes : Integer;
 
     begin
       with Unpack^ do begin
@@ -5666,7 +5666,7 @@ type
   PPcxUnpackData = ^TPcxUnpackData;
   TPcxUnpackData = record
     PBOfs      : Cardinal;
-    PcxOfs     : LongInt;
+    PcxOfs     : Integer;
     OutFile    : PBufferedOutputFile;
     PackBuffer : array[0..511] of Byte;
   end;
@@ -5816,7 +5816,7 @@ type
 
         {go through each line and write it}
         for I := 0 to Pred(Height) do begin
-          Move(GetPtr(Lines, LongInt(Width) * LongInt(I))^, OutLine^, Width);
+          Move(GetPtr(Lines, Integer(Width) * Integer(I))^, OutLine^, Width);
           CompressLine(Unpack, @Data, OutLine);
           Code := WriteOutFile(OutFile, PackBuffer, PBOfs);
           if (Code < ecOK) then begin
@@ -6140,7 +6140,7 @@ type
     TTiffHeader = packed record
       ByteOrder                : array[1..2] of AnsiChar;
       Version                  : Word;
-      ImgDirStart              : LongInt;
+      ImgDirStart              : Integer;
       NumTags                  : Word;
       SubFileTag               : Word;
       SubFileTagType           : Word;
@@ -6162,29 +6162,29 @@ type
       PhotoMetricInterpData    : array[1..4] of Word;
       StripOffsetsTag          : Word;
       StripOffsetsTagType      : Word;
-      StripOffsetsData         : array[1..2] of LongInt;
+      StripOffsetsData         : array[1..2] of Integer;
       RowsPerStripTag          : Word;
       RowsPerStripTagType      : Word;
-      RowsPerStripData         : array[1..2] of LongInt;
+      RowsPerStripData         : array[1..2] of Integer;
       StripByteCountsTag       : Word;
       StripByteCountsTagType   : Word;
-      StripByteCountsData      : array[1..2] of LongInt;
+      StripByteCountsData      : array[1..2] of Integer;
       XResolutionTag           : Word;                                      // SWB
       XResolutionTagType       : Word;                                      // SWB
-      XResolutionCount         : Longint;                                   // SWB
-      XResolutionOffset        : Longint;                                   // SWB
+      XResolutionCount         : Integer;                                   // SWB
+      XResolutionOffset        : Integer;                                   // SWB
       YResolutionTag           : Word;                                      // SWB
       YResolutionTagType       : Word;                                      // SWB
-      YResolutionCount         : Longint;                                   // SWB
-      YResolutionOffset        : Longint;                                   // SWB
+      YResolutionCount         : Integer;                                   // SWB
+      YResolutionOffset        : Integer;                                   // SWB
 
       ResolutionUnitTag        : Word;                                      // SWB
       ResolutionUnitTagType    : Word;                                      // SWB
       ResolutionUnitData       : array [1..4] of Word;                      // SWB
 
-      XResolutionData          : array [1..2] of Longint;                   // SWB
-      YResolutionData          : array [1..2] of Longint;                   // SWB
-      OffsetOfNextDirectory    : LongInt;
+      XResolutionData          : array [1..2] of Integer;                   // SWB
+      YResolutionData          : array [1..2] of Integer;                   // SWB
+      OffsetOfNextDirectory    : Integer;
     end;
 
   const
@@ -6263,7 +6263,7 @@ type
     OutLine     : Pointer;
     CompBuf     : Pointer;
     CompLen     : Cardinal;
-    Bytes       : LongInt;
+    Bytes       : Integer;
     OutFileName : string; //array[0..255] of AnsiChar;
 
     procedure Cleanup;
@@ -6315,7 +6315,7 @@ type
       FastZero(CompBuf^, Width * 2);
       Bytes := 0;
       for OnLine := 0 to Pred(Height) do begin
-        Move(GetPtr(Lines, LongInt(Width) * LongInt(OnLine))^, OutLine^, Width);
+        Move(GetPtr(Lines, Integer(Width) * Integer(OnLine))^, OutLine^, Width);
         TiffEncode(OutLine^, Width, CompBuf^, CompLen);
         Inc(Bytes, CompLen);
         Code := WriteOutFile(OutFile, CompBuf^, CompLen);
@@ -6417,7 +6417,7 @@ type
       FastZero(InfoHeader, SizeOf(TBitmapInfoHeader));
       with InfoHeader do begin
         biSize        := SizeOf(TBitmapInfoHeader);
-        biWidth       := LongInt(Width) * 8;
+        biWidth       := Integer(Width) * 8;
         biHeight      := Height;
         biPlanes      := 1;
         biBitCount    := 1;
@@ -6447,7 +6447,7 @@ type
       FastZero(OutLine^, LineBytes);
       NotBuffer(OutLine^, LineBytes);
       for OnLine := Pred(Height) downto 0 do begin
-        Move(GetPtr(Lines, LongInt(Width) * Integer(OnLine))^, OutLine^, Width);
+        Move(GetPtr(Lines, Integer(Width) * Integer(OnLine))^, OutLine^, Width);
         NotBuffer(OutLine^, Width);
         Code := WriteOutFile(OutFile, OutLine^, LineBytes);
         if (Code < ecOK) then begin

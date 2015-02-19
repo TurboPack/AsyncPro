@@ -170,7 +170,7 @@ type
       procedure PacketTimeout(Sender: TObject);
       procedure Notification (AComponent : TComponent;
                               Operation : TOperation); override;
-      procedure TriggerHandler (Msg, wParam : Cardinal; lParam : Longint);
+      procedure TriggerHandler (Msg, wParam : Cardinal; lParam : Integer);
 
     public
       constructor Create (AOwner : TComponent); override;
@@ -910,7 +910,7 @@ begin
 end;
 
 procedure TApdStateComPortSource.TriggerHandler (Msg, wParam : Cardinal;
-                                                 lParam : Longint);
+                                                 lParam : Integer);
 var
   Count  : Word absolute wParam;
 

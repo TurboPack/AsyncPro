@@ -175,11 +175,11 @@ type
     MonitoringPending : Boolean;
 
     {timeouts}
-    FErrorOffTimeout  : LongInt;
-    FBreakOffTimeout  : LongInt;
-    FRXDOffTimeout    : LongInt;
-    FTXDOffTimeout    : LongInt;
-    FRingOffTimeout   : LongInt;
+    FErrorOffTimeout  : Integer;
+    FBreakOffTimeout  : Integer;
+    FRXDOffTimeout    : Integer;
+    FTXDOffTimeout    : Integer;
+    FRingOffTimeout   : Integer;
 
     {lights}
     FLights           : TLightSet;
@@ -264,15 +264,15 @@ type
       read FComPort write SetComPort;
 
     {timeout values}
-    property ErrorOffTimeout : LongInt
+    property ErrorOffTimeout : Integer
       read FErrorOffTimeout write FErrorOffTimeout default adsDefErrorOffTimeout;
-    property BreakOffTimeout : LongInt
+    property BreakOffTimeout : Integer
       read FBreakOffTimeout write FBreakOffTimeout default adsDefBreakOffTimeout;
-    property RXDOffTimeout : LongInt
+    property RXDOffTimeout : Integer
       read FRXDOffTimeout write FRXDOffTimeout default adsDefRXDOffTimeout;
-    property TXDOffTimeout : LongInt
+    property TXDOffTimeout : Integer
       read FTXDOffTimeout write FTXDOffTimeout default adsDefTXDOffTimeout;
-    property RingOffTimeout : LongInt
+    property RingOffTimeout : Integer
       read FRingOffTimeout write FRingOffTimeout default adsDefRingOffTimeout;
 
     {complete set of lights}

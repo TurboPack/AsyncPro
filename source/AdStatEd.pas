@@ -43,7 +43,7 @@ uses
 type
   TApdStringGrid = class(TStringGrid)
   public
-    procedure DrawCell(ACol, ARow: Longint; ARect: TRect;
+    procedure DrawCell(ACol, ARow: Integer; ARect: TRect;
   AState: TGridDrawState); override;
   end;
 

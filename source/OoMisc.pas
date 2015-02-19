@@ -138,8 +138,8 @@ type
 
   {Standard event timer record structure used by all timing routines}
   EventTimer = record
-    StartTicks : LongInt;  {Tick count when timer was initialized}
-    ExpireTicks : LongInt; {Tick count when timer will expire}
+    StartTicks : Integer;  {Tick count when timer was initialized}
+    ExpireTicks : Integer; {Tick count when timer will expire}
   end;
 
 {$IFNDEF PRNDRV}                                                         {!!.06}
@@ -394,9 +394,9 @@ type
 
   {NotifyProc type, same as a window procedure}
   TApdNotifyProc = procedure(Msg, wParam : Cardinal;
-                         lParam : Longint);
+                         lParam : Integer);
   TApdNotifyEvent = procedure(Msg, wParam : Cardinal;
-                         lParam : Longint) of object;
+                         lParam : Integer) of object;
 const
   {Avoid requiring WIN31}
   ev_CTSS   = $0400;           {CTS state}
@@ -1233,12 +1233,12 @@ type
     piTotalErrors      : Cardinal;
     piBlockSize        : Cardinal;
     piBlockNum         : Cardinal;
-    piFileSize         : LongInt;
-    piBytesTransferred : LongInt;
-    piBytesRemaining   : LongInt;
-    piInitFilePos      : LongInt;
-    piElapsedTicks     : LongInt;
-    piFlags            : LongInt;
+    piFileSize         : Integer;
+    piBytesTransferred : Integer;
+    piBytesRemaining   : Integer;
+    piInitFilePos      : Integer;
+    piElapsedTicks     : Integer;
+    piFlags            : Integer;
     piBlockCheck       : Cardinal;
     piFileName         : TPathCharArrayA;
     piError            : Integer;
@@ -1603,7 +1603,7 @@ type
     NumComps    : Cardinal;
     Compression : TTagArrayZ;
     LockDTE     : Bool;
-    DefBaud     : LongInt;
+    DefBaud     : Integer;
   end;
 
   PModemXFer = ^TModemXFer;
@@ -1826,32 +1826,32 @@ type
   {APRO fax file header record}
   TFaxHeaderRec = packed record
     Signature  : TSigArray;              {APRO FAX signature}
-    FDateTime  : LongInt;                {Date and time in DOS format}
+    FDateTime  : Integer;                {Date and time in DOS format}
     SenderID   : Str20;                  {Station ID of sender}
     Filler     : Byte;                   {Alignment byte, unused}
     PageCount  : Word;                   {Number of pages in this file}
-    PageOfs    : LongInt;                {Offset in file of first page}
+    PageOfs    : Integer;                {Offset in file of first page}
     Padding    : Array[39..64] of Byte;  {Expansion room}
   end;
 
   {APRO fax page header record}
   TPageHeaderRec = packed record
-    ImgLength : LongInt;                 {Bytes of image data in this page}
+    ImgLength : Integer;                 {Bytes of image data in this page}
     ImgFlags  : Word;                    {Image flags for width, res, etc}
     Padding   : Array[7..16] of Byte;    {Expansion room}
   end;
 
   {APRO fax server job header}
   TFaxJobHeaderRec = packed record
-    ID       : LongInt;          {APRO fax job signature}
+    ID       : Integer;          {APRO fax job signature}
     Status   : Byte;             {0=none sent, 1=some sent, 2=all sent, 3=paused}
     JobName  : Str20;            {Friendly name of fax job}
     Sender   : String[40];       {Name of sender (same as HeaderSender)}
     SchedDT  : TDateTime;        {TDateTime the first job should be sent}
     NumJobs  : Byte;             {Number of FaxJobInfoRecs for this job}
     NextJob  : Byte;             {The index of the next FaxJobInfo to send}
-    CoverOfs : LongInt;          {Offset in file of text CoverFile data}
-    FaxHdrOfs: LongInt;          {Offset in file of TFaxHeaderRec}
+    CoverOfs : Integer;          {Offset in file of text CoverFile data}
+    FaxHdrOfs: Integer;          {Offset in file of TFaxHeaderRec}
     Padding  : Array[86..128] of Byte; {Expansion room}
   end;
 
@@ -1890,11 +1890,11 @@ type
     Filler    : Array[1..58] of Byte;  {pad to 128 bytes}
   end;
 
-  TDcxOfsArray = array[1..1024] of LongInt;
+  TDcxOfsArray = array[1..1024] of Integer;
 
   PDcxHeaderRec = ^TDcxHeaderRec;
   TDcxHeaderRec = packed record
-    ID      : LongInt;
+    ID      : Integer;
     Offsets : TDcxOfsArray;
   end;
 
@@ -1925,7 +1925,7 @@ type
 
   {callback function for status information}
   TCvtStatusCallback = function(Cvt : PAbsFaxCvt; StatFlags : Word;
-                                BytesRead, BytesToRead : LongInt) : Bool;
+                                BytesRead, BytesToRead : Integer) : Bool;
 
   {base converter data}
   TAbsFaxCvt = record
@@ -1941,12 +1941,12 @@ type
     CurrPage    : Cardinal;           {Current page being processed}
     CurrLine    : Cardinal;           {Number of text/raster lines cvted}
     LastPage    : Cardinal;           {Last page number used in file cvt}
-    CurPagePos  : LongInt;            {file offset of current page}
+    CurPagePos  : Integer;            {file offset of current page}
     CenterOfs   : Cardinal;           {Offset of center of bitmap}
     UserData    : Pointer;            {Data needed by higher level cvters}
     OtherData   : Pointer;            {Other, miscellaneous data}
-    BytesRead   : LongInt;
-    BytesToRead : LongInt;
+    BytesRead   : Integer;
+    BytesToRead : Integer;
     DataLine    : PByteArray;         {Buffered line of compressed data}
     TmpBuffer   : PByteArray;         {Temp compression buffer}
     GetLine     : TGetLineCallback;   {Callback function to get a raster line}
@@ -1985,7 +1985,7 @@ type
     case Integer of                                                      {!!.06}
       0 : (S_un_b : SunB);                                               {!!.06}
       1 : (S_un_w : SunW);                                               {!!.06}
-      2 : (S_addr : LongInt);                                            {!!.06}
+      2 : (S_addr : Integer);                                            {!!.06}
   end;                                                                   {!!.06}
 
   { XML support }
@@ -1993,76 +1993,76 @@ const
   {The following constants are the tokens needed to parse an XML
    document. The tokens are stored in UCS-4 format to reduce the
    number of conversions needed by the filter.}
-  Xpc_BracketAngleLeft : array[0..0] of Longint = (60); {<}
-  Xpc_BracketAngleRight : array[0..0] of Longint = (62); {>}
-  Xpc_BracketSquareLeft : array[0..0] of Longint = (91); {[}
-  Xpc_BracketSquareRight : array[0..0] of Longint = (93); {]}
+  Xpc_BracketAngleLeft : array[0..0] of Integer = (60); {<}
+  Xpc_BracketAngleRight : array[0..0] of Integer = (62); {>}
+  Xpc_BracketSquareLeft : array[0..0] of Integer = (91); {[}
+  Xpc_BracketSquareRight : array[0..0] of Integer = (93); {]}
   Xpc_CDATAStart :
-    array[0..5] of Longint = (67, 68, 65, 84, 65, 91); {CDATA[}
-  Xpc_CharacterRef : array[0..0] of Longint = (35); {#}
-  Xpc_CharacterRefHex : array[0..0] of Longint = (120); {x}
-  Xpc_CommentEnd : array[0..2] of Longint = (45, 45, 62); {-->}
-  Xpc_CommentStart : array[0..3] of Longint = (60, 33, 45, 45); {<!--}
-  Xpc_ConditionalEnd : array[0..2] of Longint = (93, 93, 62); {]]>}
+    array[0..5] of Integer = (67, 68, 65, 84, 65, 91); {CDATA[}
+  Xpc_CharacterRef : array[0..0] of Integer = (35); {#}
+  Xpc_CharacterRefHex : array[0..0] of Integer = (120); {x}
+  Xpc_CommentEnd : array[0..2] of Integer = (45, 45, 62); {-->}
+  Xpc_CommentStart : array[0..3] of Integer = (60, 33, 45, 45); {<!--}
+  Xpc_ConditionalEnd : array[0..2] of Integer = (93, 93, 62); {]]>}
   Xpc_ConditionalIgnore :
-    array[0..5] of Longint = (73, 71, 78, 79, 82, 69); {IGNORE}
+    array[0..5] of Integer = (73, 71, 78, 79, 82, 69); {IGNORE}
   Xpc_ConditionalInclude :
-    array[0..6] of Longint = (73, 78, 67, 76, 85, 68, 69); {INCLUDE}
+    array[0..6] of Integer = (73, 78, 67, 76, 85, 68, 69); {INCLUDE}
   Xpc_ConditionalStart :
-    array[0..2] of Longint = (60, 33, 91); {<![}
-  Xpc_Dash : array[0..0] of Longint = (45); {-}
+    array[0..2] of Integer = (60, 33, 91); {<![}
+  Xpc_Dash : array[0..0] of Integer = (45); {-}
   Xpc_DTDAttFixed :
-    array[0..4] of Longint = (70, 73, 88, 69, 68); {FIXED}
+    array[0..4] of Integer = (70, 73, 88, 69, 68); {FIXED}
   Xpc_DTDAttImplied :
-    array[0..6] of Longint = (73, 77, 80, 76, 73, 69, 68); {IMPLIED}
+    array[0..6] of Integer = (73, 77, 80, 76, 73, 69, 68); {IMPLIED}
   Xpc_DTDAttlist :
-    array[0..8] of Longint =
+    array[0..8] of Integer =
       (60, 33, 65, 84, 84, 76, 73, 83, 84); {<!ATTLIST}
   Xpc_DTDAttRequired :
-    array[0..7] of Longint =
+    array[0..7] of Integer =
       (82, 69, 81, 85, 73, 82, 69, 68); {REQUIRED}
   Xpc_DTDDocType :
-    array[0..8] of Longint =
+    array[0..8] of Integer =
       (60, 33, 68, 79, 67, 84, 89, 80, 69); {<!DOCTYPE}
   Xpc_DTDElement :
-    array[0..8] of Longint =
+    array[0..8] of Integer =
       (60, 33, 69, 76, 69, 77, 69, 78, 84); {<!ELEMENT}
-  Xpc_DTDElementAny : array[0..2] of Longint = (65, 78, 89); {ANY}
+  Xpc_DTDElementAny : array[0..2] of Integer = (65, 78, 89); {ANY}
   Xpc_DTDElementCharData :
-    array[0..6] of Longint = (35, 80, 67, 68, 65, 84, 65); {#PCDATA}
+    array[0..6] of Integer = (35, 80, 67, 68, 65, 84, 65); {#PCDATA}
   Xpc_DTDElementEmpty :
-    array[0..4] of Longint = (69, 77, 80, 84, 89); {EMPTY}
+    array[0..4] of Integer = (69, 77, 80, 84, 89); {EMPTY}
   Xpc_DTDEntity :
-    array[0..7] of Longint =
+    array[0..7] of Integer =
       (60, 33, 69, 78, 84, 73, 84, 89); {<!ENTITY}
   Xpc_DTDNotation :
-    array[0..9] of Longint =
+    array[0..9] of Integer =
       (60, 33, 78, 79, 84, 65, 84, 73, 79, 78); {<!NOTATION}
-  Xpc_Encoding : array[0..7] of Longint =
+  Xpc_Encoding : array[0..7] of Integer =
     (101, 110, 99, 111, 100, 105, 110, 103); {encoding}
-  Xpc_Equation : array[0..0] of Longint = (61); {=}
+  Xpc_Equation : array[0..0] of Integer = (61); {=}
   Xpc_ExternalPublic :
-    array[0..5] of Longint = (80, 85, 66, 76, 73, 67); {PUBLIC}
+    array[0..5] of Integer = (80, 85, 66, 76, 73, 67); {PUBLIC}
   Xpc_ExternalSystem :
-    array[0..5] of Longint = (83, 89, 83, 84, 69, 77); {SYSTEM}
-  Xpc_GenParsedEntityEnd : array[0..0] of Longint = (59); {;}
-  Xpc_ListOperator : array[0..0] of Longint = (124); {|}
-  Xpc_MixedEnd : array[0..1] of Longint = (41, 42); {)*}
-  Xpc_OneOrMoreOpr : array[0..0] of Longint = (42); {*}
-  Xpc_ParamEntity : array[0..0] of Longint = (37); {%}
-  Xpc_ParenLeft : array[0..0] of Longint = (40); {(}
-  Xpc_ParenRight : array[0..0] of Longint = (41); {)}
-  Xpc_ProcessInstrEnd : array[0..1] of Longint = (63, 62); {?>}
-  Xpc_ProcessInstrStart : array[0..1] of Longint = (60, 63); {<?}
-  Xpc_QuoteDouble : array[0..0] of Longint = (34); {"}
-  Xpc_QuoteSingle : array[0..0] of Longint = (39); {'}
+    array[0..5] of Integer = (83, 89, 83, 84, 69, 77); {SYSTEM}
+  Xpc_GenParsedEntityEnd : array[0..0] of Integer = (59); {;}
+  Xpc_ListOperator : array[0..0] of Integer = (124); {|}
+  Xpc_MixedEnd : array[0..1] of Integer = (41, 42); {)*}
+  Xpc_OneOrMoreOpr : array[0..0] of Integer = (42); {*}
+  Xpc_ParamEntity : array[0..0] of Integer = (37); {%}
+  Xpc_ParenLeft : array[0..0] of Integer = (40); {(}
+  Xpc_ParenRight : array[0..0] of Integer = (41); {)}
+  Xpc_ProcessInstrEnd : array[0..1] of Integer = (63, 62); {?>}
+  Xpc_ProcessInstrStart : array[0..1] of Integer = (60, 63); {<?}
+  Xpc_QuoteDouble : array[0..0] of Integer = (34); {"}
+  Xpc_QuoteSingle : array[0..0] of Integer = (39); {'}
   Xpc_Standalone :
-    array[0..9] of Longint =
+    array[0..9] of Integer =
       (115, 116, 97, 110, 100, 97, 108, 111, 110, 101); {standalone}
   Xpc_UnparsedEntity :
-    array[0..4] of Longint = (78, 68, 65, 84, 65); {NDATA}
+    array[0..4] of Integer = (78, 68, 65, 84, 65); {NDATA}
   Xpc_Version :
-    array[0..6] of Longint =
+    array[0..6] of Integer =
       (118, 101, 114, 115, 105, 111, 110); {version}
 
 const
@@ -2126,15 +2126,15 @@ type
       fEOLF : Boolean;
       ReadPtr : PAnsiChar;
       fStream : TStream;
-      fBytesRead : LongInt;
-      fFileSize : LongInt;
+      fBytesRead : Integer;
+      fFileSize : Integer;
       procedure ReadPage;
     public
-      property BytesRead : LongInt read fBytesRead;
+      property BytesRead : Integer read fBytesRead;
       constructor Create(Stream : TStream);
       destructor Destroy; override;
       property EOLF : Boolean read fEOLF;
-      property FileSize : LongInt read fFileSize;
+      property FileSize : Integer read fFileSize;
       function NextLine : AnsiString;
   end;
 
@@ -2184,7 +2184,7 @@ type
     procedure First;
     procedure GotoPos(Index: Cardinal);
     procedure Last;
-    procedure MoveBy(IndexBy: LongInt);
+    procedure MoveBy(IndexBy: Integer);
     procedure Next;
     procedure Prev;
 
@@ -2230,7 +2230,7 @@ type
       1: (Bitmap     : Graphics.TBitmap;       {Memory bitmap for rendering text}
           LineBytes  : Cardinal;               {Bytes per raster line}
           Offset     : Cardinal;               {Current offset in the bitmap}
-          ImageSize  : LongInt;                {Size of image structure}
+          ImageSize  : Integer;                {Size of image structure}
           ImageData  : Pointer);               {Image data}
   end;
 
@@ -2238,8 +2238,8 @@ type
   {TIFF strip information}
   PStripRecord = ^TStripRecord;
   TStripRecord = packed record
-    Offset : LongInt;
-    Length : LongInt;
+    Offset : Integer;
+    Length : Integer;
   end;
 
   PStripInfo = ^TStripInfo;
@@ -2263,11 +2263,11 @@ type
     CompMethod  : Word;                {compression type}
     PhotoMet    : Word;                {photometric conversion type}
     RowStrip    : DWORD;               {raster lines per image strip}
-    StripOfs    : LongInt;             {offset in file to first strip}
+    StripOfs    : Integer;             {offset in file to first strip}
     StripCnt    : DWORD;               {number of strips}
     StripInfo   : PStripInfo;          {strip offsets/lengths}
-    ByteCntOfs  : LongInt;             {offset to byte count list}
-    ImgStart    : LongInt;             {start of image data in file}
+    ByteCntOfs  : Integer;             {offset to byte count list}
+    ImgStart    : Integer;             {start of image data in file}
     ReadBuffer  : PByteArray;          {buffer for reads}
     InFile      : File;                {input file}
   end;
@@ -2305,7 +2305,7 @@ type
     Width           : Cardinal;
     NumLines        : Cardinal;
     OnLine          : Cardinal;
-    Offset          : LongInt;
+    Offset          : Integer;
     BitmapBufHandle : THandle;
     BitmapBuf       : Pointer;
     NeedsDithering  : Boolean;
@@ -2357,7 +2357,7 @@ type
 
   {callback for outputting status information}
   TUnpackStatusCallback = procedure(Unpack : PUnpackFax; FaxFile : string;
-    PageNum : Cardinal; BytesUnpacked, BytesToUnpack : LongInt);
+    PageNum : Cardinal; BytesUnpacked, BytesToUnpack : Integer);
 
   {memory bitmap descriptor}
   PMemoryBitmapDesc = ^TMemoryBitmapDesc;
@@ -2383,8 +2383,8 @@ type
     TreeLast   : Integer;
     TreeNext   : Integer;
     Match      : Integer;
-    ImgBytes   : LongInt;
-    ImgRead    : LongInt;
+    ImgBytes   : Integer;
+    ImgRead    : Integer;
     WhiteTree  : PTreeArray;          {Tree of white runlength codes}
     BlackTree  : PTreeArray;          {Tree of black runlength codes}
     LineBuffer : PByteArray;          {Buffer for decompression}
@@ -2416,7 +2416,7 @@ type
     PBOfs       : Cardinal;
     Lines       : Cardinal;
     LastPage    : Cardinal;
-    PCXOfs      : LongInt;
+    PCXOfs      : Integer;
     FileOpen    : Bool;
     DcxUnpack   : Bool;
     OutFile     : File;
@@ -2658,7 +2658,7 @@ type
   TTimerTrigger = record
     tHandle : Cardinal;
     tET     : EventTimer;
-    tTicks  : LongInt;
+    tTicks  : Integer;
     tValid  : Bool;
     tActive : Bool;
   end;
@@ -2739,20 +2739,20 @@ function AddWordToPtr(P : Pointer; W : Cardinal) : Pointer;
 
 function AdTimeGetTime : DWord;
 
-function Ticks2Secs(Ticks : LongInt) : LongInt;
-function Secs2Ticks(Secs : LongInt) : LongInt;
-function MSecs2Ticks(MSecs : LongInt) : LongInt;
-procedure NewTimer(var ET : EventTimer; Ticks : LongInt);
-procedure NewTimerSecs(var ET : EventTimer; Secs : LongInt);
+function Ticks2Secs(Ticks : Integer) : Integer;
+function Secs2Ticks(Secs : Integer) : Integer;
+function MSecs2Ticks(MSecs : Integer) : Integer;
+procedure NewTimer(var ET : EventTimer; Ticks : Integer);
+procedure NewTimerSecs(var ET : EventTimer; Secs : Integer);
 function TimerExpired(ET : EventTimer) : Bool;
-function ElapsedTime(ET : EventTimer) : LongInt;
-function ElapsedTimeInSecs(ET : EventTimer) : LongInt;
-function RemainingTime(ET : EventTimer) : LongInt;
-function RemainingTimeInSecs(ET : EventTimer) : LongInt;
-function DelayTicks(Ticks: LongInt; Yield : Bool) : Longint;
+function ElapsedTime(ET : EventTimer) : Integer;
+function ElapsedTimeInSecs(ET : EventTimer) : Integer;
+function RemainingTime(ET : EventTimer) : Integer;
+function RemainingTimeInSecs(ET : EventTimer) : Integer;
+function DelayTicks(Ticks: Integer; Yield : Bool) : Integer;
 {$IFNDEF PrnDrv}
-function Long2StrZ(Dest : PChar; L : LongInt) : PChar;
-function Str2LongZ(S : PChar; var I : LongInt) : Bool;
+function Long2StrZ(Dest : PChar; L : Integer) : PChar;
+function Str2LongZ(S : PChar; var I : Integer) : Bool;
 {$ENDIF}
 function JustPathnameZ(out Dest : string; PathName : string) : string; overload;
 function JustPathnameZ(Dest : PAnsiChar; PathName : PAnsiChar) : PAnsiChar; overload;
@@ -2769,7 +2769,7 @@ function ExistFileZ(FName : string) : Bool; overload;
 {$ENDIF}
 function ForceExtensionZ(out Dest : string; Name, Ext : string) : string; overload;
 function DefaultExtensionZ(out Dest : string; Name, Ext : string) : string; overload;
-function GetPtr(P : Pointer; O : LongInt) : Pointer;
+function GetPtr(P : Pointer; O : Integer) : Pointer;
 procedure NotBuffer(var Buf; Len : Cardinal);
 
 {$IFNDEF Win32}
@@ -2778,7 +2778,7 @@ function Trim(const S : string) : string;
 
 function DelayMS(MS : Cardinal) : Cardinal;
 
-function SafeYield : LongInt;
+function SafeYield : Integer;
 
 {$IFNDEF PrnDrv}
 function JustName(PathName : String) : String;
@@ -2938,7 +2938,7 @@ const
   MaxTicks    = 39045157;   {Max ticks, 24.8 days}
 
   {Clock frequency of 1193180/65536 is reduced to 1675/92. This}
-  {allows longint conversions of Ticks values upto TicksPerDay}
+  {allows Integer conversions of Ticks values upto TicksPerDay}
   TicksFreq = 1675;
   SecsFreq  = 92;
   MSecsFreq = 92000;
@@ -3215,7 +3215,7 @@ begin
   FLen := StrLen(FString)
 end;
 
-procedure TAdStr.MoveBy(IndexBy: LongInt);
+procedure TAdStr.MoveBy(IndexBy: Integer);
 begin
   if IndexBy < 0 then
     Dec(FCur, IndexBy)
@@ -3361,7 +3361,7 @@ const
 
   MaxPCharLen = $7FFFFFFF;
 
-  function SafeYield : LongInt;
+  function SafeYield : Integer;
     {-Allow other processes a chance to run}
   var
     Msg : TMsg;
@@ -3386,25 +3386,25 @@ const
     Result := timeGetTime;                                                  // SWB
   end;
 
-  function Ticks2Secs(Ticks : LongInt) : LongInt;
+  function Ticks2Secs(Ticks : Integer) : Integer;
     {-Returns seconds value for Ticks Ticks}
   begin
     Ticks2Secs := ((Ticks + 9) * SecsFreq) div TicksFreq;
   end;
 
-  function Secs2Ticks(Secs : LongInt) : LongInt;
+  function Secs2Ticks(Secs : Integer) : Integer;
     {-Returns Ticks value for Secs seconds}
   begin
     Secs2Ticks := (Secs * TicksFreq) div SecsFreq;
   end;
 
-  function MSecs2Ticks(MSecs : LongInt) : LongInt;
+  function MSecs2Ticks(MSecs : Integer) : Integer;
     {-Returns Ticks value for msecs}
   begin
     Result := (MSecs * TicksFreq) div MSecsFreq;
   end;
 
-  procedure NewTimer(var ET : EventTimer; Ticks : LongInt);
+  procedure NewTimer(var ET : EventTimer; Ticks : Integer);
     {-Returns a set EventTimer that will expire in Ticks}
   begin
     {Max acceptable value is MaxTicks}
@@ -3417,7 +3417,7 @@ const
     end;
   end;
 
-  procedure NewTimerSecs(var ET : EventTimer; Secs : LongInt);
+  procedure NewTimerSecs(var ET : EventTimer; Secs : Integer);
     {-Returns a set EventTimer}
   begin
     NewTimer(ET, Secs2Ticks(Secs));
@@ -3426,7 +3426,7 @@ const
   function TimerExpired(ET : EventTimer) : Bool;
     {-Returns True if ET has expired}
   var
-    CurTicks : LongInt;
+    CurTicks : Integer;
   begin
     with ET do begin
       {Get current Ticks; assume timer has expired}
@@ -3445,10 +3445,10 @@ const
     end;
   end;
 
-  function ElapsedTime(ET : EventTimer) : LongInt;
+  function ElapsedTime(ET : EventTimer) : Integer;
     {-Returns elapsed time, in Ticks, for this timer}
   var
-    CurTicks : LongInt;
+    CurTicks : Integer;
   begin
     with ET do begin
       CurTicks := AdTimeGetTime div 55;
@@ -3461,17 +3461,17 @@ const
     end;
   end;
 
-  function ElapsedTimeInSecs(ET : EventTimer) : LongInt;
+  function ElapsedTimeInSecs(ET : EventTimer) : Integer;
     {-Returns elapsed time, in seconds, for this timer}
   begin
     ElapsedTimeInSecs := Ticks2Secs(ElapsedTime(ET));
   end;
 
-  function RemainingTime(ET : EventTimer) : LongInt;
+  function RemainingTime(ET : EventTimer) : Integer;
     {-Returns remaining time, in Ticks, for this timer}
   var
-    CurTicks : LongInt;
-    RemainingTicks : LongInt;
+    CurTicks : Integer;
+    RemainingTicks : Integer;
   begin
     with ET do begin
       CurTicks := AdTimeGetTime div 55;
@@ -3488,17 +3488,17 @@ const
       RemainingTime := RemainingTicks;
   end;
 
-  function RemainingTimeInSecs(ET : EventTimer) : LongInt;
+  function RemainingTimeInSecs(ET : EventTimer) : Integer;
     {-Returns remaining time, in seconds, for this timer}
   begin
     RemainingTimeInSecs := Ticks2Secs(RemainingTime(ET));
   end;
 
-  function DelayTicks(Ticks : LongInt; Yield : Bool) : LongInt;
+  function DelayTicks(Ticks : Integer; Yield : Bool) : Integer;
     {-Delay for Ticks ticks}
   var
     ET : EventTimer;
-    Res : LongInt;
+    Res : Integer;
   begin
     if Ticks <= 0 then begin
       DelayTicks := 0;
@@ -3516,7 +3516,7 @@ const
   end;
 
   {$IFNDEF PrnDrv}
-  function Long2StrZ(Dest : PChar; L : LongInt) : PChar;
+  function Long2StrZ(Dest : PChar; L : Integer) : PChar;
     {-Convert a long/Cardinal/integer/byte/shortint to a string}
   var
     S : ShortString;
@@ -3534,8 +3534,8 @@ type
   TSmallArray = Array[0..MaxLen-1] of Char;
 
   {$IFNDEF PrnDrv}
-  function Str2LongZ(S : PChar; var I : LongInt) : Bool;
-    {-Convert a string to a longint, returning true if successful}
+  function Str2LongZ(S : PChar; var I : Integer) : Bool;
+    {-Convert a string to a Integer, returning true if successful}
   var
     Err : Integer;
   begin
@@ -3685,7 +3685,7 @@ type
     Result := S;
   end;
 
-  function GetPtr(P : Pointer; O : LongInt) : Pointer; assembler; register;
+  function GetPtr(P : Pointer; O : Integer) : Pointer; assembler; register;
   asm
     add   eax,edx   {eax = P; edx = Offset}
   end;
@@ -3722,8 +3722,8 @@ type
   function DelayMS(MS : Cardinal) : Cardinal;
   var
     CDelay: Cardinal;
-    CTime: LongInt;
-    LTime: LongInt;
+    CTime: Integer;
+    LTime: Integer;
   begin
     {Always return the delayed MS value}
     DelayMS := MS;

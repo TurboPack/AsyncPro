@@ -92,7 +92,7 @@ type
     Socket: TSocket;
     SelectEvent: Word;
     SelectError: Word;
-    Result: Longint;
+    Result: Integer;
   end;
 
   EApdSocketException = class(Exception)
@@ -144,9 +144,9 @@ type
     { Conversion routines }
     procedure CheckLoaded;
     procedure DefaultHandler(var Message); override;
-    function htonl(HostLong : LongInt) : LongInt;
+    function htonl(HostLong : Integer) : Integer;
     function htons(HostShort : Word) : Word;
-    function ntohl(NetLong : LongInt) : LongInt;
+    function ntohl(NetLong : Integer) : Integer;
     function ntohs(NetShort : Word) : Word;
     function NetAddr2String(InAddr : TInAddr) : string;
     function String2NetAddr(const S : string) : TInAddr;
@@ -158,8 +158,8 @@ type
     { Socket methods }
     function AcceptSocket(Socket : TSocket; var Address : TSockAddrIn) : TSocket;
     function BindSocket(Socket : TSocket; Address : TSockAddrIn) : Integer;
-    function CanReadSocket(Socket : TSocket; WaitTime : Longint) : Boolean;
-    function CanWriteSocket(Socket : TSocket; WaitTime : Longint) : Boolean;
+    function CanReadSocket(Socket : TSocket; WaitTime : Integer) : Boolean;
+    function CanWriteSocket(Socket : TSocket; WaitTime : Integer) : Boolean;
     function CloseSocket(Socket : TSocket) : Integer;
     function ConnectSocket(Socket : TSocket; Address : TSockAddrIn) : Integer;
     function CreateSocket : TSocket;
@@ -168,7 +168,7 @@ type
     function ShutdownSocket(Socket : TSocket; How : Integer) : Integer;
     function SetSocketOptions(Socket : TSocket; Level : Cardinal; OptName : Integer;
              var OptVal; OptLen : Integer): Integer;
-    function SetAsyncStyles(Socket : TSocket; lEvent : LongInt) : Integer;
+    function SetAsyncStyles(Socket : TSocket; lEvent : Integer) : Integer;
     function WriteSocket(Socket : TSocket; var Buf; BufSize, Flags : Integer) : Integer;
     { Properties }
     property Description : string read GetDescription;
@@ -385,8 +385,8 @@ end;
 
 { Conversion routines }
 
-{ -Converts LongInt from Intel to Internet byte order }
-function TApdSocket.htonl(HostLong : LongInt) : LongInt;
+{ -Converts Integer from Intel to Internet byte order }
+function TApdSocket.htonl(HostLong : Integer) : Integer;
 begin
   CheckLoaded;
   Result := SockFuncs.htonl(HostLong);
@@ -399,8 +399,8 @@ begin
   Result := SockFuncs.htons(HostShort);
 end;
 
-{ -Converts LongInt from Internet to Intel byte order }
-function TApdSocket.ntohl(NetLong : LongInt) : LongInt;
+{ -Converts Integer from Internet to Intel byte order }
+function TApdSocket.ntohl(NetLong : Integer) : Integer;
 begin
   CheckLoaded;
   Result := SockFuncs.ntohl(NetLong);
@@ -563,7 +563,7 @@ end;
 
 { -Wait until socket has data to read or timeout (milliseconds)}
 function TApdSocket.CanReadSocket(Socket : TSocket;
-                                  WaitTime : Longint) : Boolean;
+                                  WaitTime : Integer) : Boolean;
 var
   RFDS    : TFDSet;
   Timeout : TTimeVal;
@@ -578,7 +578,7 @@ end;
 
 { -Wait until socket can be written to or timeout (milliseconds)}
 function TApdSocket.CanWriteSocket(Socket : TSocket;
-                                   WaitTime : Longint) : Boolean;
+                                   WaitTime : Integer) : Boolean;
 var
   WFDS    : TFDSet;
   Timeout : TTimeVal;
@@ -605,7 +605,7 @@ begin
 end;
 
 { -Sets the Async Styles of a Socket }
-function TApdSocket.SetAsyncStyles(Socket : TSocket; lEvent : LongInt) : Integer;
+function TApdSocket.SetAsyncStyles(Socket : TSocket; lEvent : Integer) : Integer;
 begin
   CheckLoaded;
   Result := SockFuncs.WSAAsyncSelect(Socket, Handle, CM_APDSOCKETMESSAGE, lEvent);

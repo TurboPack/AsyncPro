@@ -271,19 +271,19 @@ end;
 type
   PSeq = ^TSeq;
   TSeq = packed record
-    sSize : longint;
-    sLen  : longint;
+    sSize : Integer;
+    sLen  : Integer;
     sText : array [1..10000] of AnsiChar;
   end;
 {--------}
-function ReAllocSeq(aSeq : PSeq; aSize : longint) : PSeq;
+function ReAllocSeq(aSeq : PSeq; aSize : Integer) : PSeq;
 var
   NewSeq : PSeq;
 begin
   if (aSize = 0) then
     NewSeq := nil
   else begin
-    GetMem(NewSeq, 2*sizeof(longint) + aSize);
+    GetMem(NewSeq, 2*sizeof(Integer) + aSize);
     NewSeq^.sSize := aSize;
     NewSeq^.sLen := 0;
     if (aSeq <> nil) then begin
@@ -292,7 +292,7 @@ begin
     end;
   end;
   if (aSeq <> nil) then
-    FreeMem(aSeq, 2*sizeof(longint) + aSeq^.sSize);
+    FreeMem(aSeq, 2*sizeof(Integer) + aSeq^.sSize);
   Result := NewSeq;
 end;
 {--------}

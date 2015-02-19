@@ -80,7 +80,7 @@ procedure apSetOverwriteOption(P : PProtocolData; Opt : Cardinal);
 procedure apSetEfficiencyParms(P : PProtocolData;
                                BlockOverhead, TurnAroundDelay : Cardinal);
 procedure apSetProtocolPort(P : PProtocolData; H : TApdCustomComPort);
-procedure apSetActualBPS(P : PProtocolData; BPS : LongInt);
+procedure apSetActualBPS(P : PProtocolData; BPS : Integer);
 procedure apSetStatusInterval(P : PProtocolData; NewInterval : Cardinal);
 procedure apOptionsOn(P : PProtocolData; OptionFlags : Cardinal);
 procedure apOptionsOff(P : PProtocolData; OptionFlags : Cardinal);
@@ -88,12 +88,12 @@ function apOptionsAreOn(P : PProtocolData; OptionFlags : Cardinal): Bool;
 
 {Status methods}
 function apSupportsBatch(P : PProtocolData) : Bool;
-function apGetInitialFilePos(P : PProtocolData) : LongInt;
-function apEstimateTransferSecs(P : PProtocolData; Size : LongInt) : LongInt;
+function apGetInitialFilePos(P : PProtocolData) : Integer;
+function apEstimateTransferSecs(P : PProtocolData; Size : Integer) : Integer;
 procedure apGetProtocolInfo(P : PProtocolData; var Info : TProtocolInfo);
 
-function apGetBytesTransferred(P : PProtocolData) : LongInt;
-function apGetBytesRemaining(P : PProtocolData) : LongInt;
+function apGetBytesTransferred(P : PProtocolData) : Integer;
+function apGetBytesRemaining(P : PProtocolData) : Integer;
 
 {Finish control}
 procedure apSignalFinish(P : PProtocolData);
@@ -117,7 +117,7 @@ procedure apStartProtocol(P : PProtocolData;
                           StartProc : TPrepareProc;
                           ProtFunc : TProtocolFunc);
 procedure apStopProtocol(P : PProtocolData);
-function apCrc32OfFile(P : PProtocolData; FName : PAnsiChar; Len : Longint) : LongInt;
+function apCrc32OfFile(P : PProtocolData; FName : PAnsiChar; Len : Integer) : Integer;
 procedure apResetStatus(P : PProtocolData);
 procedure apShowFirstStatus(P : PProtocolData);
 procedure apShowLastStatus(P : PProtocolData);
@@ -148,15 +148,15 @@ const
 
 {Ymodem/Zmodem timestamp routines interfaced but not exported}
 function apTrimZeros(S : AnsiString) : AnsiString;
-function apCurrentTimeStamp : LongInt;
-function apOctalStr(L : LongInt) : AnsiString;
-function apOctalStr2Long(S : AnsiString) : LongInt;
-function apPackToYMTimeStamp(RawTime : LongInt) : LongInt;
-function apYMTimeStampToPack(YMTime : LongInt) : LongInt;
+function apCurrentTimeStamp : Integer;
+function apOctalStr(L : Integer) : AnsiString;
+function apOctalStr2Long(S : AnsiString) : Integer;
+function apPackToYMTimeStamp(RawTime : Integer) : Integer;
+function apYMTimeStampToPack(YMTime : Integer) : Integer;
 
 const
   { UnixDaysBase gets "overwritten" in the this unit's init code for Delphi }
-  UnixDaysBase : LongInt = 719163;{Days between 1/1/1 and 1/1/1970}
+  UnixDaysBase : Integer = 719163;{Days between 1/1/1 and 1/1/1970}
   SecsPerDay = 86400;             {Number of seconds in one day}
 
 const
@@ -205,7 +205,7 @@ const
 var
   Crc32TableOfs : Cardinal;
 
-  function apUpdateCrc32(CurByte : Byte; CurCrc : LongInt) : LongInt;
+  function apUpdateCrc32(CurByte : Byte; CurCrc : Integer) : Integer;
     {-Returns an updated crc32}
 
 const
@@ -259,7 +259,7 @@ const
     {-Allocates and initializes a protocol control block with options}
   var
     Parity   : Word;
-    Baud     : LongInt;
+    Baud     : Integer;
     DataBits : TDataBits;
     StopBits : TStopBits;
   begin
@@ -495,7 +495,7 @@ const
         Inc(aFileListIndex);
 
       {Define how far to look for the next marker}
-      if LongInt(aFileListIndex) + MaxLen > Integer(MaxSize) then    
+      if Integer(aFileListIndex) + MaxLen > Integer(MaxSize) then
         MaxNext := MaxSize
       else
         MaxNext := aFileListIndex + MaxLen;
@@ -521,12 +521,12 @@ const
     end;
   end;
 
-  function apGetBytesTransferred(P : PProtocolData) : LongInt;
+  function apGetBytesTransferred(P : PProtocolData) : Integer;
     {-Returns bytes already transferred}
   var
     TotalOverhead : Cardinal;
     OutBuff       : Cardinal;
-    BT            : LongInt;
+    BT            : Integer;
   begin
     with P^ do begin
       if aHC = nil then begin
@@ -550,10 +550,10 @@ const
     end;
   end;
 
-  function apGetBytesRemaining(P : PProtocolData) : LongInt;
+  function apGetBytesRemaining(P : PProtocolData) : Integer;
     {-Return bytes not yet transferred}
   var
-    BR : Longint;
+    BR : Integer;
   begin
     with P^ do begin
       BR := aSrcFileLen - apGetBytesTransferred(P);
@@ -569,25 +569,25 @@ const
     apSupportsBatch := P^.aBatchProtocol;
   end;
 
-  function apGetInitialFilePos(P : PProtocolData) : LongInt;
+  function apGetInitialFilePos(P : PProtocolData) : Integer;
     {-Returns the file position at the start of resumed file transfer}
   begin
     apGetInitialFilePos := P^.aInitFilePos;
   end;
 
-  function apEstimateTransferSecs(P : PProtocolData; Size : LongInt) : LongInt;
+  function apEstimateTransferSecs(P : PProtocolData; Size : Integer) : Integer;
     {-Return estimated seconds to transfer Size bytes}
   var
-    Efficiency   : LongInt;
-    EffectiveCPS : LongInt;
+    Efficiency   : Integer;
+    EffectiveCPS : Integer;
   begin
     with P^ do begin
       if Size = 0 then
         apEstimateTransferSecs := 0
       else begin
         {Calculate efficiency of this protocol}
-        Efficiency := (Integer(aBlockLen) * LongInt(100)) div
-                      Longint(aBlockLen + aOverHead +
+        Efficiency := (Integer(aBlockLen) * Integer(100)) div
+                      Integer(aBlockLen + aOverHead +
                       (DWORD(aTurnDelay * aActCPS) div 1000));
         EffectiveCPS := (aActCPS * DWORD(Efficiency)) div 100;       
 
@@ -687,10 +687,10 @@ const
       P^.aWriteFailOpt := Opt;
   end;
 
-  procedure apSetActualBPS(P : PProtocolData; BPS : LongInt);
+  procedure apSetActualBPS(P : PProtocolData; BPS : Integer);
     {-Sets actual BPS rate (only needed if modem differs from port)}
   var
-    Baud     : LongInt;
+    Baud     : Integer;
     Parity   : Word;
     Bits     : Word;
     Databits : TDatabits;
@@ -741,7 +741,7 @@ const
                             ProtFunc : TProtocolFunc);
     {-Setup standard protocol triggers}
   var
-    lParam : LongInt;
+    lParam : Integer;
   begin
     with P^ do begin
       {Note the protocol}
@@ -950,7 +950,7 @@ const
       aHC.ValidDispatcher.AddDispatchEntry(DT, dstStatus, 0,
         @ErrMsg[1], Length(ErrMsg));
       PostMessage(aHWindow, apw_ProtocolFinish,
-                  Cardinal(aProtocolError), Longint(P));
+                  Cardinal(aProtocolError), Integer(P));
     end;
   end;
 
@@ -1321,7 +1321,7 @@ ExitPoint:
     Result := Copy(S, J, (I-J)+1);
   end;
 
-  function apOctalStr(L : LongInt) : AnsiString;
+  function apOctalStr(L : Integer) : AnsiString;
     {-Convert L to octal base string}
   const
     Digits : array[0..7] of AnsiChar = '01234567';
@@ -1335,18 +1335,18 @@ ExitPoint:
     end;
   end;
 
-  function apOctalStr2Long(S : AnsiString) : LongInt;
-    {-Convert S from an octal string to a longint}
+  function apOctalStr2Long(S : AnsiString) : Integer;
+    {-Convert S from an octal string to a Integer}
   const
     HiMag = 11;
-    Magnitude : array[1..HiMag] of LongInt = (1, 8, 64, 512, 4096,
+    Magnitude : array[1..HiMag] of Integer = (1, 8, 64, 512, 4096,
       32768, 262144, 2097152, 16777216, 134217728, 1073741824);
   var
     Len  : Byte;
     I    : Integer;
     J    : Integer;
-    Part : LongInt;
-    Res  : LongInt;
+    Part : Integer;
+    Res  : Integer;
   begin
     {Assume failure}
     apOctalStr2Long := 0;
@@ -1372,11 +1372,11 @@ ExitPoint:
     apOctalStr2Long := Res
   end;
 
-  function apPackToYMTimeStamp(RawTime : LongInt) : LongInt;
+  function apPackToYMTimeStamp(RawTime : Integer) : Integer;
     {-Return date/time stamp as seconds since 1/1/1970 00:00 GMT}
   var
-    Days  : LongInt;
-    Secs  : LongInt;
+    Days  : Integer;
+    Secs  : Integer;
     DT    : TDateTime;
   begin
     try
@@ -1392,7 +1392,7 @@ ExitPoint:
     end;
   end;
 
-  function apYMTimeStampToPack(YMTime : LongInt) : LongInt;
+  function apYMTimeStampToPack(YMTime : Integer) : Integer;
     {-Return a file time stamp in packed format from a Ymodem time stamp}
   var
     DT : TDateTime;
@@ -1409,13 +1409,13 @@ ExitPoint:
     end;
   end;
 
-  function apCurrentTimeStamp : LongInt;
+  function apCurrentTimeStamp : Integer;
     {-Return a Ymodem format file time stamp of the current date/time}
   begin
     Result := apPackToYMTimeStamp(DateTimeToFileDate(Now));
   end;
 
-  function apCrc32OfFile(P : PProtocolData; FName : PAnsiChar; Len : Longint) : LongInt;
+  function apCrc32OfFile(P : PProtocolData; FName : PAnsiChar; Len : Integer) : Integer;
     {-Returns Crc32 of FName}
   const
     BufSize = 8192;
@@ -1425,7 +1425,7 @@ ExitPoint:
     I         : Cardinal;
     BytesRead : Integer;
     Res       : Cardinal;
-    FileLoc   : LongInt;
+    FileLoc   : Integer;
     Buffer    : ^BufArray;
     F         : File;
 
@@ -1490,7 +1490,7 @@ ExitPoint:
   begin
     with P^ do
       SendMessageTimeout(aHWindow, apw_ProtocolStatus, Options,
-                         Longint(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
+                         Integer(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
   end;
 
@@ -1501,7 +1501,7 @@ ExitPoint:
   begin
     with P^ do begin
       SendMessageTimeout(aHWindow, apw_ProtocolNextFile, 0,
-                         Longint(FName),
+                         Integer(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
       apMsgNextFile := Res <> 0;
@@ -1515,7 +1515,7 @@ ExitPoint:
   begin
     with P^ do
       SendMessageTimeout(aHWindow, apw_ProtocolLog,
-                         Cardinal(Log), Longint(P),
+                         Cardinal(Log), Integer(P),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
   end;
@@ -1527,7 +1527,7 @@ ExitPoint:
   begin
     with P^ do begin
       SendMessageTimeout(aHWindow, apw_ProtocolAcceptFile,
-                         0, Longint(FName),
+                         0, Integer(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
       apMsgAcceptFile := Res = 1;
@@ -1610,7 +1610,7 @@ ExitPoint:
     {nothing}
   end;
 
-  function apUpdateCrc32(CurByte : Byte; CurCrc : LongInt) : LongInt;
+  function apUpdateCrc32(CurByte : Byte; CurCrc : Integer) : Integer;
     {-Return the updated 32bit CRC}
     {-Normally a good candidate for basm, but Delphi32's code
       generation couldn't be beat on this one!}

@@ -54,7 +54,7 @@ type
   {Fax notification function}
   TFaxFunc = procedure(
                       Msg, wParam : Cardinal;
-                      lParam : LongInt);
+                      lParam : Integer);
 
   {Abstract fax data}
   PFaxData = ^TFaxData;
@@ -83,8 +83,8 @@ type
     aCurrPage           : Integer;     {counter for pages}
     aPageCount          : Integer;     {total pages in document}
     aCoverCount         : Integer;     {Number of cover pages, 0 or 1}
-    aDataCount          : LongInt;     {count of received "real" data bytes}
-    aPageSize           : LongInt;     {size of page file in bytes}
+    aDataCount          : Integer;     {count of received "real" data bytes}
+    aPageSize           : Integer;     {size of page file in bytes}
     aFaxListHead        : PFaxEntry;   {Head of fax entry list}
     aFaxListTail        : PFaxEntry;   {Tail of fax entry list}
     aFaxListNode        : PFaxEntry;   {Current node of fax entry list}
@@ -652,7 +652,7 @@ uses
     with FP^, aPData^ do
       SendMessageTimeout(aHWindow, APW_FAXSTATUS,
                          StartMask[Starting] or EndMask[Ending],
-                         LongInt(FP),
+                         Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
   end;
@@ -664,7 +664,7 @@ uses
     Res : DWORD;
   begin
     with FP^, aPData^ do
-      SendMessageTimeout(aHWindow, APW_FAXNEXTFILE, 0, LongInt(FP),
+      SendMessageTimeout(aHWindow, APW_FAXNEXTFILE, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          2000, Res);
       afNextFax := Boolean(Res);
@@ -676,7 +676,7 @@ uses
     Res : DWORD;
   begin
     with FP^, aPData^ do
-      SendMessageTimeout(aHWindow, APW_FAXLOG, Integer(Log), LongInt(FP),
+      SendMessageTimeout(aHWindow, APW_FAXLOG, Integer(Log), Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
   end;
@@ -687,7 +687,7 @@ uses
     Res : DWORD;
   begin
     with FP^, aPData^ do
-      SendMessageTimeout(aHWindow, APW_FAXNAME, 0, LongInt(FP),
+      SendMessageTimeout(aHWindow, APW_FAXNAME, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
   end;
@@ -700,7 +700,7 @@ uses
   begin
     with FP^, aPData^ do begin
       StrPCopy(P, string(RemoteName));
-      SendMessageTimeout(aHWindow, APW_FAXACCEPT, 0, LongInt(FP),
+      SendMessageTimeout(aHWindow, APW_FAXACCEPT, 0, Integer(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
       afAcceptFax := Boolean(Res);
@@ -879,7 +879,7 @@ uses
       aPort.AddDispatchEntry(dtFax, dstStatus, 0,
         @ErrMsg[1], Length(ErrMsg));                               
 
-      PostMessage(aHWindow, apw_FaxFinish, Word(aFaxError), Longint(FP));
+      PostMessage(aHWindow, apw_FaxFinish, Word(aFaxError), Integer(FP));
     end;
   end;
 
@@ -888,7 +888,7 @@ uses
                        FaxFunc : TFaxFunc);
     {-Setup standard fax triggers}
   {var}
-    {lParam : LongInt;}                                                  {!!.04}
+    {lParam : Integer;}                                                  {!!.04}
   begin
     with FP^, aPData^ do begin
 

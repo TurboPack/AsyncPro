@@ -312,7 +312,7 @@ type
     procedure TerminatePage;
     procedure DoFailedToSend;
     procedure LogOutTAP;
-    procedure DataTriggerHandler(Msg, wParam: Cardinal; lParam: LongInt);
+    procedure DataTriggerHandler(Msg, wParam: Cardinal; lParam: Integer);
     procedure DoPageStatusTrig(Trig: Cardinal);
     procedure FreeLoginTriggers;
     procedure FreeLogoutTriggers;
@@ -602,10 +602,10 @@ end;
 procedure TApdCustomPager.BuildTapMessages;
   { TAP: Build a string list of the TAP message using TStringList }
 
-  function SumChars(const S: string): LongInt;
+  function SumChars(const S: string): Integer;
     {sum ASCII values of chars in string (for checksum)}
   var
-    Ct,CurChar: LongInt;
+    Ct,CurChar: Integer;
   begin
     Result := 0;
     for Ct := 1 to Length(S) do begin
@@ -615,10 +615,10 @@ procedure TApdCustomPager.BuildTapMessages;
     end;
   end;
 
-  function CheckSum(N: LongInt): string;
+  function CheckSum(N: Integer): string;
     { Bit check }
   var
-    Sum, nTemp: LongInt;
+    Sum, nTemp: Integer;
     Chr1,Chr2,Chr3: char;
   begin
     Sum := N;

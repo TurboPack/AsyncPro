@@ -816,8 +816,8 @@ var
   Info        : PBitmapInfo;
   ImageSize   : DWord;
   InfoSize    : DWord;
-  PrintWidth  : LongInt;
-  PrintHeight : LongInt;
+  PrintWidth  : Integer;
+  PrintHeight : Integer;
   FaxPageRect : TRect;
   FaxSizeRect : TRect;
   Bitmap      : TBitmap;

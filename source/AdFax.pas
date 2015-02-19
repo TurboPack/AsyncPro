@@ -160,7 +160,7 @@ type
     FModemModel    : TPassString;  {Modem model string}
     FModemChip     : TPassString;  {Modem chip string}
     FModemRevision : TPassString;  {Modem revision string}
-    FModemBPS      : LongInt;      {Highest BPS supported by modem}
+    FModemBPS      : Integer;      {Highest BPS supported by modem}
     FCorrection    : Boolean;      {True if modem supports ECM}
     FComPort       : TApdCustomComport;     {ComPort component}
     FTapiDevice    : TApdCustomTapiDevice;  {TapiDevice component}
@@ -211,12 +211,12 @@ type
     function GetModemModel : TPassString;
     function GetModemRevision : TPassString;
     function GetModemChip : TPassString;
-    function GetModemBPS : LongInt;
+    function GetModemBPS : Integer;
     function GetModemECM : Boolean;
     function GetTotalPages : Word;
     function GetCurrentPage : Word;
-    function GetBytesTransferred : LongInt;
-    function GetPageLength : LongInt;
+    function GetBytesTransferred : Integer;
+    function GetPageLength : Integer;
     function GetAbortNoConnect : Boolean;
     procedure SetAbortNoConnect (NewValue : Boolean);
     function GetExitOnError : Boolean;
@@ -329,7 +329,7 @@ type
       read GetModemRevision;
     property ModemChip : TPassString
       read GetModemChip;
-    property ModemBPS : LongInt
+    property ModemBPS : Integer
       read GetModemBPS;
     property ModemECM : Boolean
       read GetModemECM;
@@ -337,9 +337,9 @@ type
       read GetTotalPages;
     property CurrentPage : Word
       read GetCurrentPage;
-    property BytesTransferred : LongInt
+    property BytesTransferred : Integer
       read GetBytesTransferred;
-    property PageLength : LongInt
+    property PageLength : Integer
       read GetPageLength;
     property RemoteID : TStationID
       read GetRemoteID;
@@ -522,7 +522,7 @@ type
     procedure UnprepareTapi; override;
     procedure TapiPassiveAnswer;
     procedure FaxTapiStatus(CP: TObject; First, Last: Boolean;
-      Device, Message, Param1, Param2, Param3: LongInt);
+      Device, Message, Param1, Param2, Param3: Integer);
 
   public
     {Creation/destruction}
@@ -750,10 +750,10 @@ var
   end;
 
   function FaxMessageHandler(hWindow : TApdHwnd; Msg, wParam : Integer;
-                             lParam : LongInt) : LongInt; stdcall; export;
+                             lParam : Integer) : Integer; stdcall; export;
     {-Window procedure for all APW_FAXXxx messages}
   const
-    BoolRes : array[Boolean] of LongInt = (0, 1);
+    BoolRes : array[Boolean] of Integer = (0, 1);
   var
     P         : TApdCustomAbstractFax;
     Accept    : Boolean;
@@ -1220,7 +1220,7 @@ var
     Result := FModemChip;
   end;
 
-  function TApdCustomAbstractFax.GetModemBPS : LongInt;
+  function TApdCustomAbstractFax.GetModemBPS : Integer;
     {-Return the highest BPS support by the modem}
   var
     C : AnsiChar;
@@ -1249,7 +1249,7 @@ var
     {-Return total pages to transmit, returns 0 when receiving}
   var
     Junk1 : Word;
-    Junk2 : LongInt;
+    Junk2 : Integer;
   begin
     fGetPageInfoC12(Fax, Result, Junk1, Junk2, Junk2)
   end;
@@ -1258,25 +1258,25 @@ var
     {-Return the current page, 0 for cover}
   var
     Junk1 : Word;
-    Junk2 : LongInt;
+    Junk2 : Integer;
   begin
     fGetPageInfoC12(Fax, Junk1, Result, Junk2, Junk2)
   end;
 
-  function TApdCustomAbstractFax.GetBytesTransferred : LongInt;
+  function TApdCustomAbstractFax.GetBytesTransferred : Integer;
     {-Return the bytes transferred for this page}
   var
     Junk1 : Word;
-    Junk2 : LongInt;
+    Junk2 : Integer;
   begin
     fGetPageInfoC12(Fax, Junk1, Junk1, Result, Junk2)
   end;
 
-  function TApdCustomAbstractFax.GetPageLength : LongInt;
+  function TApdCustomAbstractFax.GetPageLength : Integer;
     {-Return the total bytes for this page, 0 when receiving}
   var
     Junk1 : Word;
-    Junk2 : LongInt;
+    Junk2 : Integer;
   begin
     fGetPageInfoC12(Fax, Junk1, Junk1, Junk2, Result)
   end;
@@ -1448,7 +1448,7 @@ var
     {-Cancel the fax session}
   begin
     if (@FaxFunc <> nil) and (Fax^.aPData^.aInProgress) then
-      FaxFunc(APW_FAXCANCEL, 0, LongInt(ComPort.Dispatcher.Handle) shl 16);
+      FaxFunc(APW_FAXCANCEL, 0, Integer(ComPort.Dispatcher.Handle) shl 16);
   end;
 
   function TApdCustomAbstractFax.StatusMsg(const Status : Word) : TPassString;
@@ -1839,7 +1839,7 @@ const
   end;
 
   procedure TApdCustomReceiveFax.FaxTapiStatus(CP: TObject; First, Last: Boolean;
-      Device, Message, Param1, Param2, Param3: LongInt);
+      Device, Message, Param1, Param2, Param3: Integer);
   begin
     if Assigned(FUserOnTapiStatus) then
       FUserOnTapiStatus(CP, First, Last, Device, Message, Param1, Param2, Param3);

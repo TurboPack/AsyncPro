@@ -551,96 +551,96 @@ const
 
   { These values are directly used to get error strings from the resource  }
   { Refer to the TapiErrorBase constant in ADTAPI.PAS and the strings in APW.STR }
-  LineErr_Allocated                   = LongInt($80000001);
-  LineErr_BadDeviceID                 = LongInt($80000002);
-  LineErr_BearerModeUnavail           = LongInt($80000003);
-  LineErr_CallUnavail                 = LongInt($80000005);
-  LineErr_CompletionOverRun           = LongInt($80000006);
-  LineErr_ConferenceFull              = LongInt($80000007);
-  LineErr_DialBilling                 = LongInt($80000008);
-  LineErr_DialDialtone                = LongInt($80000009);
-  LineErr_DialPrompt                  = LongInt($8000000A);
-  LineErr_DialQuiet                   = LongInt($8000000B);
-  LineErr_IncompatibleApiVersion      = LongInt($8000000C);
-  LineErr_IncompatibleExtVersion      = LongInt($8000000D);
-  LineErr_IniFileCorrupt              = LongInt($8000000E);
-  LineErr_InUse                       = LongInt($8000000F);
-  LineErr_InvalAddress                = LongInt($80000010);
-  LineErr_InvalAddressID              = LongInt($80000011);
-  LineErr_InvalAddressMode            = LongInt($80000012);
-  LineErr_InvalAddressState           = LongInt($80000013);
-  LineErr_InvalAppHandle              = LongInt($80000014);
-  LineErr_InvalAppName                = LongInt($80000015);
-  LineErr_InvalBearerMode             = LongInt($80000016);
-  LineErr_InvalCallComplMode          = LongInt($80000017);
-  LineErr_InvalCallHandle             = LongInt($80000018);
-  LineErr_InvalCallParams             = LongInt($80000019);
-  LineErr_InvalCallPrivilege          = LongInt($8000001A);
-  LineErr_InvalCallSelect             = LongInt($8000001B);
-  LineErr_InvalCallState              = LongInt($8000001C);
-  LineErr_InvalCallStateList          = LongInt($8000001D);
-  LineErr_InvalCard                   = LongInt($8000001E);
-  LineErr_InvalCompletionID           = LongInt($8000001F);
-  LineErr_InvalConfCallHandle         = LongInt($80000020);
-  LineErr_InvalConsultCallHandle      = LongInt($80000021);
-  LineErr_InvalCountryCode            = LongInt($80000022);
-  LineErr_InvalDeviceClass            = LongInt($80000023);
-  LineErr_InvalDeviceHandle           = LongInt($80000024);
-  LineErr_InvalDialParams             = LongInt($80000025);            
-  LineErr_InvalDigitList              = LongInt($80000026);            
-  LineErr_InvalDigitMode              = LongInt($80000027);            
-  LineErr_InvalDigits                 = LongInt($80000028);            
-  LineErr_InvalExtVersion             = LongInt($80000029);            
-  LineErr_InvalGroupID                = LongInt($8000002A);            
-  LineErr_InvalLineHandle             = LongInt($8000002B);            
-  LineErr_InvalLineState              = LongInt($8000002C);            
-  LineErr_InvalLocation               = LongInt($8000002D);            
-  LineErr_InvalMediaList              = LongInt($8000002E);            
-  LineErr_InvalMediaMode              = LongInt($8000002F);            
-  LineErr_InvalMessageID              = LongInt($80000030);            
-  LineErr_InvalParam                  = LongInt($80000032);            
-  LineErr_InvalParkID                 = LongInt($80000033);            
-  LineErr_InvalParkMode               = LongInt($80000034);            
-  LineErr_InvalPointer                = LongInt($80000035);            
-  LineErr_InvalPrivSelect             = LongInt($80000036);            
-  LineErr_InvalRate                   = LongInt($80000037);            
-  LineErr_InvalRequestMode            = LongInt($80000038);            
-  LineErr_InvalTerminalID             = LongInt($80000039);            
-  LineErr_InvalTerminalMode           = LongInt($8000003A);            
-  LineErr_InvalTimeout                = LongInt($8000003B);            
-  LineErr_InvalTone                   = LongInt($8000003C);            
-  LineErr_InvalToneList               = LongInt($8000003D);            
-  LineErr_InvalToneMode               = LongInt($8000003E);            
-  LineErr_InvalTransferMode           = LongInt($8000003F);            
-  LineErr_LineMapperFailed            = LongInt($80000040);            
-  LineErr_NoConference                = LongInt($80000041);            
-  LineErr_NoDevice                    = LongInt($80000042);            
-  LineErr_NoDriver                    = LongInt($80000043);            
-  LineErr_NoMem                       = LongInt($80000044);            
-  LineErr_NoRequest                   = LongInt($80000045);            
-  LineErr_NotOwner                    = LongInt($80000046);            
-  LineErr_NotRegistered               = LongInt($80000047);            
-  LineErr_OperationFailed             = LongInt($80000048);            
-  LineErr_OperationUnavail            = LongInt($80000049);            
-  LineErr_RateUnavail                 = LongInt($8000004A);            
-  LineErr_ResourceUnavail             = LongInt($8000004B);            
-  LineErr_RequestOverRun              = LongInt($8000004C);            
-  LineErr_StructureTooSmall           = LongInt($8000004D);
-  LineErr_TargetNotFound              = LongInt($8000004E);            
-  LineErr_TargetSelf                  = LongInt($8000004F);            
-  LineErr_Uninitialized               = LongInt($80000050);            
-  LineErr_UserUserInfoTooBig          = LongInt($80000051);            
-  LineErr_ReInit                      = LongInt($80000052);            
-  LineErr_AddressBlocked              = LongInt($80000053);            
-  LineErr_BillingRejected             = LongInt($80000054);            
-  LineErr_InvalFeature                = LongInt($80000055);            
-  LineErr_NoMultipleInstance          = LongInt($80000056);            
-  LineErr_InvalAgentID                = LongInt($80000057);  {2.0}     
-  LineErr_InvalAgentGroup             = LongInt($80000058);  {2.0}     
-  LineErr_InvalPassword               = LongInt($80000059);  {2.0}     
-  LineErr_InvalAgentState             = LongInt($8000005A);  {2.0}     
-  LineErr_InvalAgentActivity          = LongInt($8000005B);  {2.0}     
-  LineErr_DialVoiceDetect             = LongInt($8000005C);  {2.0}     
+  LineErr_Allocated                   = Integer($80000001);
+  LineErr_BadDeviceID                 = Integer($80000002);
+  LineErr_BearerModeUnavail           = Integer($80000003);
+  LineErr_CallUnavail                 = Integer($80000005);
+  LineErr_CompletionOverRun           = Integer($80000006);
+  LineErr_ConferenceFull              = Integer($80000007);
+  LineErr_DialBilling                 = Integer($80000008);
+  LineErr_DialDialtone                = Integer($80000009);
+  LineErr_DialPrompt                  = Integer($8000000A);
+  LineErr_DialQuiet                   = Integer($8000000B);
+  LineErr_IncompatibleApiVersion      = Integer($8000000C);
+  LineErr_IncompatibleExtVersion      = Integer($8000000D);
+  LineErr_IniFileCorrupt              = Integer($8000000E);
+  LineErr_InUse                       = Integer($8000000F);
+  LineErr_InvalAddress                = Integer($80000010);
+  LineErr_InvalAddressID              = Integer($80000011);
+  LineErr_InvalAddressMode            = Integer($80000012);
+  LineErr_InvalAddressState           = Integer($80000013);
+  LineErr_InvalAppHandle              = Integer($80000014);
+  LineErr_InvalAppName                = Integer($80000015);
+  LineErr_InvalBearerMode             = Integer($80000016);
+  LineErr_InvalCallComplMode          = Integer($80000017);
+  LineErr_InvalCallHandle             = Integer($80000018);
+  LineErr_InvalCallParams             = Integer($80000019);
+  LineErr_InvalCallPrivilege          = Integer($8000001A);
+  LineErr_InvalCallSelect             = Integer($8000001B);
+  LineErr_InvalCallState              = Integer($8000001C);
+  LineErr_InvalCallStateList          = Integer($8000001D);
+  LineErr_InvalCard                   = Integer($8000001E);
+  LineErr_InvalCompletionID           = Integer($8000001F);
+  LineErr_InvalConfCallHandle         = Integer($80000020);
+  LineErr_InvalConsultCallHandle      = Integer($80000021);
+  LineErr_InvalCountryCode            = Integer($80000022);
+  LineErr_InvalDeviceClass            = Integer($80000023);
+  LineErr_InvalDeviceHandle           = Integer($80000024);
+  LineErr_InvalDialParams             = Integer($80000025);
+  LineErr_InvalDigitList              = Integer($80000026);
+  LineErr_InvalDigitMode              = Integer($80000027);
+  LineErr_InvalDigits                 = Integer($80000028);
+  LineErr_InvalExtVersion             = Integer($80000029);
+  LineErr_InvalGroupID                = Integer($8000002A);
+  LineErr_InvalLineHandle             = Integer($8000002B);
+  LineErr_InvalLineState              = Integer($8000002C);
+  LineErr_InvalLocation               = Integer($8000002D);
+  LineErr_InvalMediaList              = Integer($8000002E);
+  LineErr_InvalMediaMode              = Integer($8000002F);
+  LineErr_InvalMessageID              = Integer($80000030);
+  LineErr_InvalParam                  = Integer($80000032);
+  LineErr_InvalParkID                 = Integer($80000033);
+  LineErr_InvalParkMode               = Integer($80000034);
+  LineErr_InvalPointer                = Integer($80000035);
+  LineErr_InvalPrivSelect             = Integer($80000036);
+  LineErr_InvalRate                   = Integer($80000037);
+  LineErr_InvalRequestMode            = Integer($80000038);
+  LineErr_InvalTerminalID             = Integer($80000039);
+  LineErr_InvalTerminalMode           = Integer($8000003A);
+  LineErr_InvalTimeout                = Integer($8000003B);
+  LineErr_InvalTone                   = Integer($8000003C);
+  LineErr_InvalToneList               = Integer($8000003D);
+  LineErr_InvalToneMode               = Integer($8000003E);
+  LineErr_InvalTransferMode           = Integer($8000003F);
+  LineErr_LineMapperFailed            = Integer($80000040);
+  LineErr_NoConference                = Integer($80000041);
+  LineErr_NoDevice                    = Integer($80000042);
+  LineErr_NoDriver                    = Integer($80000043);
+  LineErr_NoMem                       = Integer($80000044);
+  LineErr_NoRequest                   = Integer($80000045);
+  LineErr_NotOwner                    = Integer($80000046);
+  LineErr_NotRegistered               = Integer($80000047);
+  LineErr_OperationFailed             = Integer($80000048);
+  LineErr_OperationUnavail            = Integer($80000049);
+  LineErr_RateUnavail                 = Integer($8000004A);
+  LineErr_ResourceUnavail             = Integer($8000004B);
+  LineErr_RequestOverRun              = Integer($8000004C);
+  LineErr_StructureTooSmall           = Integer($8000004D);
+  LineErr_TargetNotFound              = Integer($8000004E);
+  LineErr_TargetSelf                  = Integer($8000004F);
+  LineErr_Uninitialized               = Integer($80000050);
+  LineErr_UserUserInfoTooBig          = Integer($80000051);
+  LineErr_ReInit                      = Integer($80000052);
+  LineErr_AddressBlocked              = Integer($80000053);
+  LineErr_BillingRejected             = Integer($80000054);
+  LineErr_InvalFeature                = Integer($80000055);
+  LineErr_NoMultipleInstance          = Integer($80000056);
+  LineErr_InvalAgentID                = Integer($80000057);  {2.0}
+  LineErr_InvalAgentGroup             = Integer($80000058);  {2.0}
+  LineErr_InvalPassword               = Integer($80000059);  {2.0}
+  LineErr_InvalAgentState             = Integer($8000005A);  {2.0}
+  LineErr_InvalAgentActivity          = Integer($8000005B);  {2.0}
+  LineErr_DialVoiceDetect             = Integer($8000005C);  {2.0}
 
 const
 
@@ -889,28 +889,28 @@ type
 
   {Data for a single country}
   TLineCountryEntry = record
-    CountryID               : LongInt;
-    CountryCode             : LongInt;
-    NextCountryID           : LongInt;
-    CountryNameSize         : LongInt;
-    CountryNameOffset       : LongInt;
-    SameAreaRuleSize        : LongInt;
-    SameAreaRuleOffset      : LongInt;
-    LongDistanceRuleSize    : LongInt;
-    LongDistanceRuleOffset  : LongInt;
-    InternationalRuleSize   : LongInt;
-    InternationalRuleOffset : LongInt;
+    CountryID               : Integer;
+    CountryCode             : Integer;
+    NextCountryID           : Integer;
+    CountryNameSize         : Integer;
+    CountryNameOffset       : Integer;
+    SameAreaRuleSize        : Integer;
+    SameAreaRuleOffset      : Integer;
+    LongDistanceRuleSize    : Integer;
+    LongDistanceRuleOffset  : Integer;
+    InternationalRuleSize   : Integer;
+    InternationalRuleOffset : Integer;
   end;
 
   {List of countries}
   PLineCountryList = ^TLineCountryList;
   TLineCountryList = record
-    TotalSize         : LongInt;
-    NeededSize        : Longint;
-    UsedSize          : Longint;
-    NumCountries      : Longint;
-    CountryListSize   : Longint;
-    CountryListOffset : Longint;
+    TotalSize         : Integer;
+    NeededSize        : Integer;
+    UsedSize          : Integer;
+    NumCountries      : Integer;
+    CountryListSize   : Integer;
+    CountryListOffset : Integer;
     case Integer of
       0: (Buffer  :
             array[0..MaxCountries] of TLineCountryEntry);
@@ -1132,11 +1132,11 @@ type
   end;
 
   {Other types}
-  TLineApp  = LongInt;
+  TLineApp  = Integer;
   PLineApp  = ^TLineApp;
-  TLine     =  LongInt;
+  TLine     =  Integer;
   PLine     = ^TLine;
-  TCall     = LongInt;
+  TCall     = Integer;
   PCall     = ^TCall;
 
   {Line call information}
@@ -1290,12 +1290,12 @@ type
   end;
 
   {Callback procedure type}
-  TLineCallback = procedure(Device   : LongInt;
-                            Message  : LongInt;
-                            Instance : LongInt;
-                            Param1   : LongInt;
-                            Param2   : LongInt;
-                            Param3   : LongInt)
+  TLineCallback = procedure(Device   : Integer;
+                            Message  : Integer;
+                            Instance : Integer;
+                            Param1   : Integer;
+                            Param2   : Integer;
+                            Param3   : Integer)
                             stdcall;
 
   {Tapi function types}
@@ -1303,24 +1303,24 @@ type
                              Instance : THandle;
                              Callback : TLineCallback;
                              AppName : PAnsiChar; // --SZ OK (must be ANSI for now unless we import the wide functions)
-                             var NumDevs : DWORD) : LongInt
+                             var NumDevs : DWORD) : Integer
                              stdcall;
 
-  TLineShutdown = function(LineApp : TLineApp) : LongInt stdcall;
+  TLineShutdown = function(LineApp : TLineApp) : Integer stdcall;
 
   TLineNegotiateApiVersion = function (LineApp : TLineApp;
-                                      DeviceID : LongInt;
-                                      APILowVersion : LongInt;
-                                      APIHighVersion : LongInt;
-                                      var ApiVersion : LongInt;
-                                      var LE : TLineExtensionID) : LongInt
+                                      DeviceID : Integer;
+                                      APILowVersion : Integer;
+                                      APIHighVersion : Integer;
+                                      var ApiVersion : Integer;
+                                      var LE : TLineExtensionID) : Integer
                                       stdcall;
 
   TLineGetDevCaps = function(LineApp : TLineApp;
                              DeviceID : DWORD;
                              ApiVersion : DWORD;
                              ExtVersion : DWORD;
-                             LineDevCaps : PLineDevCaps) : LongInt
+                             LineDevCaps : PLineDevCaps) : Integer
                              stdcall;
 
   TLineOpen = function(LineApp : TLineApp;
@@ -1331,43 +1331,43 @@ type
                        CallbackInstance : DWORD;
                        Privleges : DWORD;
                        MediaModes : DWORD;
-                       CallParams : DWORD) : LongInt
+                       CallParams : DWORD) : Integer
                        stdcall;
 
   TLineMakeCall = function(Line : TLine;
                            var Call : TCall;
                            DestAddress : PAnsiChar; // --SZ OK
                            CountryCode : DWORD;
-                           const CallParams : PLineCallParams) : LongInt
+                           const CallParams : PLineCallParams) : Integer
                            stdcall;
 
   TLineAccept = function(Call : TCall;
                          UserUserInfo : PAnsiChar; // --SZ OK
-                         Size : DWORD) : LongInt
+                         Size : DWORD) : Integer
                          stdcall;
 
   TLineAnswer = function(Call : TCall;
                          UserUserInfo : PAnsiChar;
-                         Size : DWORD) : LongInt
+                         Size : DWORD) : Integer
                          stdcall;
 
-  TLineDeallocateCall = function(Call : TCall) : LongInt
+  TLineDeallocateCall = function(Call : TCall) : Integer
                                 stdcall;
 
-  TLineDrop = function(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : LongInt
+  TLineDrop = function(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : Integer
                        stdcall;
 
-  TLineClose = function(Line : TLine) : LongInt
+  TLineClose = function(Line : TLine) : Integer
                         stdcall;
 
-  TLineGetCountry = function(CountryID : LongInt;
-                            ApiVersion : LongInt;
-                            LineCountryList : PLineCountryList) : LongInt
+  TLineGetCountry = function(CountryID : Integer;
+                            ApiVersion : Integer;
+                            LineCountryList : PLineCountryList) : Integer
                             stdcall;
 
   TLineConfigDialog = function(DeviceID : DWORD;
                                Owner : HWND;
-                               DeviceClass : PAnsiChar) : LongInt  // --SZ OK
+                               DeviceClass : PAnsiChar) : Integer  // --SZ OK
                                stdcall;
 
   TLineConfigDialogEdit = function(DeviceID : DWORD;
@@ -1375,7 +1375,7 @@ type
                                    DeviceClass : PAnsiChar;
                                    const inDevConfig;
                                    Size : DWORD;
-                                   var DevConfig : TVarString) : LongInt
+                                   var DevConfig : TVarString) : Integer
                                    stdcall;
 
   TLineGetID = function(Line : TLine;
@@ -1383,17 +1383,17 @@ type
                         Call : TCall;
                         Select : DWORD;
                         var DeviceID : TVarString;
-                        DeviceClass : PAnsiChar) : LongInt
+                        DeviceClass : PAnsiChar) : Integer
                         stdcall;
 
   TLineSetStatusMessages = function(Line : TLine;
                                     LineStates : DWORD;
-                                    AddressStates : DWORD) : LongInt
+                                    AddressStates : DWORD) : Integer
                                     stdcall;
 
   TLineGetStatusMessages = function(Line : TLine;
                                     var LineStates : DWORD;
-                                    var AddressStates : DWORD) : LongInt
+                                    var AddressStates : DWORD) : Integer
                                     stdcall;
 
   TLineGetAddressCaps = function(LineApp : TLineApp;                     {!!.06}
@@ -1401,59 +1401,59 @@ type
                              AddressId   : DWORD;
                              ApiVersion  : DWORD;
                              ExtVersion  : DWORD;
-                             LineAddressCaps : PLineAddressCaps) : LongInt
+                             LineAddressCaps : PLineAddressCaps) : Integer
                              stdcall;
 
   TLineGetAddressStatus = function(Line : TLine;
                                    AddressID : DWORD;
                                    var AddressStatus : TLineAddressStatus)
-                                   : LongInt
+                                   : Integer
                                    stdcall;
 
   TLineGetLineDevStatus = function(Line : TLine;                         {!!.02}
                                    var DevStatus : TLineDevStatus)
-                                   : LongInt stdcall;
+                                   : Integer stdcall;
 
   TLineGetDevConfig = function (DeviceID : DWORD;
                                 var DeviceConfig : TVarString;
-                                DeviceClass : PAnsiChar) : LongInt
+                                DeviceClass : PAnsiChar) : Integer
                                 stdcall;
 
   TLineSetDevConfig = function (DeviceID : DWORD;
                                 const DeviceConfig;
                                 Size : DWORD;
-                                DeviceClass : PAnsiChar) : LongInt
+                                DeviceClass : PAnsiChar) : Integer
                                 stdcall;
 
   TLineGetCallInfo = function(Call : TCall;
-                              CallInfo : PCallInfo) : LongInt
+                              CallInfo : PCallInfo) : Integer
                               stdcall;
 
 
   TLineGetCallStatus = function(Call : TCall;
-                                CallStatus : PCallStatus) : LongInt
+                                CallStatus : PCallStatus) : Integer
                                 stdcall;
 
-  TLineSetMediaMode = function(Call : TCall; MediaModes : DWORD) : LongInt
+  TLineSetMediaMode = function(Call : TCall; MediaModes : DWORD) : Integer
                                 stdcall;
 
-  TLineMonitorDigits = function(Call : TCall; DigitModes : DWORD): LongInt
+  TLineMonitorDigits = function(Call : TCall; DigitModes : DWORD): Integer
                                  stdcall;
 
   TLineGenerateDigits = function(Call : TCall; DigitModes : DWORD;
-                                 Digits : PAnsiChar; Duration : DWORD): LongInt
+                                 Digits : PAnsiChar; Duration : DWORD): Integer
                                  stdcall;
 
-  TLineMonitorMedia = function(Call : TCall; MediaModes : DWORD) : LongInt
+  TLineMonitorMedia = function(Call : TCall; MediaModes : DWORD) : Integer
                                 stdcall;
 
   TLineHandoff = function(Call : TCall; FileName: PAnsiChar;
-                          MediaMode : DWORD) : LongInt
+                          MediaMode : DWORD) : Integer
                           stdcall;
 
   TLineSetCallParams = function(Call : TCall; BearerMode, MinRate,
                                 MaxRate : DWORD;
-                                DialParams : PLineDialParams) : LongInt
+                                DialParams : PLineDialParams) : Integer
                                 stdcall;
 
   TLineTranslateAddress = function(Line : TLine; DeviceID : DWORD;
@@ -1461,92 +1461,92 @@ type
                                    AddressIn : PAnsiChar; Card : DWORD;
                                    TranslateOptions : DWORD;
                                    TranslateOutput : PLineTranslateOutput)
-                                   : LongInt
+                                   : Integer
                                    stdcall;
 
   TLineTranslateDialog = function(Line : TLine; DeviceID : DWORD;
                                   APIVersion : DWORD; HwndOwner : HWND;
-                                  AddressIn : PAnsiChar) : LongInt
+                                  AddressIn : PAnsiChar) : Integer
                                   stdcall;
 
   TLineSetCurrentLocation = function(Line : TLine;
-                                     Location : DWORD) : LongInt
+                                     Location : DWORD) : Integer
                                     stdcall;
 
   TLineSetTollList = function (Line : TLine; DeviceID : DWORD;
                                AddressIn : PAnsiChar;
-                               TollListOption : DWORD) : LongInt
+                               TollListOption : DWORD) : Integer
                                stdcall;
 
   TLineGetTranslateCaps = function(Line : TLine; APIVersion : DWORD;
                                    TranslateCaps : PLineTranslateCaps)
-                                   : LongInt
+                                   : Integer
                                    stdcall;
 
   TLineMonitorTones = function(Call : TCall; const LINEMONITORTONE;
-                               NumEntries : DWORD): LongInt
+                               NumEntries : DWORD): Integer
                                stdcall;
 
   TLineGenerateTones = function(Call : TCall; ToneMode, Duration,
-                                NumTones : DWORD; const LINEGENERATETONE): LongInt
+                                NumTones : DWORD; const LINEGENERATETONE): Integer
                                 stdcall;
 
-  TLineHold = function(Call:TCall) : LongInt                             {!!.06}
+  TLineHold = function(Call:TCall) : Integer                             {!!.06}
                            stdcall;
 
-  TLineUnhold = function(Call:TCall) : LongInt                           {!!.06}
+  TLineUnhold = function(Call:TCall) : Integer                           {!!.06}
                            stdcall;
 
   TLineTransfer = function(Call:TCall; DestAddress:PAnsiChar;                {!!.06}
-                           CountryCode:DWord) : LongInt                  {!!.06}
+                           CountryCode:DWord) : Integer                  {!!.06}
                            stdcall;                                      {!!.06}
 
 
  {TAPI functions exported by this unit}
   function tuLineGenerateTones(Call : TCall; ToneMode, Duration,
-                               NumTones : DWORD; const LINEGENERATETONE): LongInt;
+                               NumTones : DWORD; const LINEGENERATETONE): Integer;
 
   function tuLineMonitorTones(Call : TCall; const LINEMONITORTONE;
-                              NumEntries : DWORD): LongInt;
+                              NumEntries : DWORD): Integer;
 
   function tuLineSetCallParams(Call : TCall; BearerMode, MinRate,
                                MaxRate : DWORD;
-                               DialParams : PLineDialParams) : LongInt;
+                               DialParams : PLineDialParams) : Integer;
 
   function tuLineHandoff(Call : TCall; FileName: PAnsiChar;
-                          MediaMode : DWORD) : LongInt;
+                          MediaMode : DWORD) : Integer;
 
-  function tuLineMonitorMedia(Call : TCall; MediaModes : DWORD) : LongInt;
+  function tuLineMonitorMedia(Call : TCall; MediaModes : DWORD) : Integer;
 
   function tuLineGenerateDigits(Call : TCall; DigitModes : DWORD;
-                                Digits : PAnsiChar; Duration : DWORD): LongInt;
+                                Digits : PAnsiChar; Duration : DWORD): Integer;
 
   function tuLineMonitorDigits(Call : TCall;
-                               DigitModes : DWORD): LongInt;
+                               DigitModes : DWORD): Integer;
 
   function tuLineInitialize(var LineApp : TLineApp;
                             Instance : THandle;
                             Callback : TLineCallback;
                             AppName : PAnsiChar;
-                            var NumDevs : DWORD) : LongInt;
+                            var NumDevs : DWORD) : Integer;
     {-Initialize a line device}
 
-  function tuLineShutdown(LineApp : TLineApp) : LongInt;
+  function tuLineShutdown(LineApp : TLineApp) : Integer;
     {-Shutdown a line device}
 
   function tuLineNegotiateApiVersion(LineApp : TLineApp;
-                                     DeviceID : LongInt;
-                                     APILowVersion : LongInt;
-                                     APIHighVersion : LongInt;
-                                     var ApiVersion : LongInt;
-                                     var LE : TLineExtensionID) : LongInt;
+                                     DeviceID : Integer;
+                                     APILowVersion : Integer;
+                                     APIHighVersion : Integer;
+                                     var ApiVersion : Integer;
+                                     var LE : TLineExtensionID) : Integer;
     {-Negotiate and return the API level to use}
 
   function tuLineGetDevCaps(LineApp : TLineApp;
                             DeviceID : DWORD;
                             ApiVersion : DWORD;
                             ExtVersion : DWORD;
-                            LineDevCaps : PLineDevCaps) : LongInt;
+                            LineDevCaps : PLineDevCaps) : Integer;
     {-Return the capabilities of a line device}
 
   function tuLineOpen(LineApp : TLineApp;
@@ -1557,43 +1557,43 @@ type
                       CallbackInstance : DWORD;
                       Privleges : DWORD;
                       MediaModes : DWORD;
-                      CallParams : DWORD) : LongInt;
+                      CallParams : DWORD) : Integer;
     {-Open a line device}
 
   function tuLineMakeCall(Line : TLine;
                           var Call : TCall;
                           DestAddress : PAnsiChar;
                           CountryCode : DWORD;
-                          const CallParams : PLineCallParams) : LongInt;
+                          const CallParams : PLineCallParams) : Integer;
     {-Make an outgoing call on a line device}
 
   function tuLineAccept(Call : TCall;
                         UserUserInfo : PAnsiChar;
-                        Size : DWORD) : LongInt;
+                        Size : DWORD) : Integer;
     {-Accept an incoming call}
 
   function tuLineAnswer(Call : TCall;
                         UserUserInfo : PAnsiChar;
-                        Size : DWORD) : LongInt;
+                        Size : DWORD) : Integer;
     {-Answer an incoming call}
 
-  function tuLineDeallocateCall(Call : TCall) : LongInt;
+  function tuLineDeallocateCall(Call : TCall) : Integer;
     {-Deallocate a call}
 
-  function tuLineDrop(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : LongInt;
+  function tuLineDrop(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : Integer;
     {-Drop (abort) the call in progress}
 
-  function tuLineClose(Line : TLine) : LongInt;
+  function tuLineClose(Line : TLine) : Integer;
     {-Close a call}
 
-  function tuLineGetCountry(CountryID : LongInt;
-                            ApiVersion : LongInt;
-                            LineCountryList : PLineCountryList) : LongInt;
+  function tuLineGetCountry(CountryID : Integer;
+                            ApiVersion : Integer;
+                            LineCountryList : PLineCountryList) : Integer;
     {-Return country information}
 
   function tuLineConfigDialog(DeviceID : DWORD;
                               Owner : HWND;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Display the line configuration dialog}
 
   function tuLineConfigDialogEdit(DeviceID : DWORD;
@@ -1601,7 +1601,7 @@ type
                                   DeviceClass : PAnsiChar;
                                   const inDevConfig;
                                   Size : DWORD;
-                                  var DevConfig : TVarString) : LongInt;
+                                  var DevConfig : TVarString) : Integer;
     {-Display the line configuration dialog to get config struct}
 
   function tuLineGetID(Line : TLine;
@@ -1609,17 +1609,17 @@ type
                        Call : TCall;
                        Select : DWORD;
                        var DeviceID : TVarString;
-                       DeviceClass : PAnsiChar) : LongInt;
+                       DeviceClass : PAnsiChar) : Integer;
     {-Return the line ID}
 
   function tuLineSetStatusMessages(Line : TLine;
                                    LineStates : DWORD;
-                                   AddressStates : DWORD) : LongInt;
+                                   AddressStates : DWORD) : Integer;
     {-Specify which status messages to generate}
 
   function tuLineGetStatusMessages(Line : TLine;
                                    var LineStates : DWORD;
-                                   var AddressStates : DWORD) : LongInt;
+                                   var AddressStates : DWORD) : Integer;
     {-Get which status messages are generated}
 
   function tuLineGetAddressCaps(LineApp : TLineApp;                      {!!.06}
@@ -1627,47 +1627,47 @@ type
                                 AddressId : DWORD;
                                 ApiVersion : DWORD;
                                 ExtVersion : DWORD;
-                                LineAddressCaps : PLineAddressCaps) : LongInt;
+                                LineAddressCaps : PLineAddressCaps) : Integer;
     {-Get the address capabilities}
 
 
   function tuLineGetAddressStatus(Line : TLine;
                                   AddressID : DWORD;
                                   var AddressStatus : TLineAddressStatus)
-                                  : LongInt;
+                                  : Integer;
     {-Return the line address status}
 
   function tuLineGetLineDevStatus(Line : TLine;                          {!!.02}
-                                  var DevStatus : PLineDevStatus) : LongInt;
+                                  var DevStatus : PLineDevStatus) : Integer;
     {-Return the line device status }
 
   function tuLineGetDevConfig(DeviceID : DWORD;
                               var DeviceConfig : TVarString;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Return the device configuration}
 
   function tuLineSetDevConfig(DeviceID : DWORD;
                               const DeviceConfig;
                               Size : DWORD;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Set the device configuration}
 
-  function tuLineGetCallInfo(Call : TCall; CallInfo : PCallInfo) : LongInt;
+  function tuLineGetCallInfo(Call : TCall; CallInfo : PCallInfo) : Integer;
     {-Get information about the current call}
 
   function tuLineGetCallStatus(Call : TCall;
-                               CallStatus : PCallStatus) : LongInt;
+                               CallStatus : PCallStatus) : Integer;
     {-Get information about the current call}
 
-  function tuLineSetMediaMode(Call : TCall; MediaModes : DWORD) : LongInt;
+  function tuLineSetMediaMode(Call : TCall; MediaModes : DWORD) : Integer;
     {-Set the new media mode to use}
 
   function tuLineSetCurrentLocation(Line : TLine;
-                                    Location : DWORD) : LongInt;
+                                    Location : DWORD) : Integer;
 
   function tuLineSetTollList (Line : TLine; DeviceID : DWORD;
                               AddressIn : PAnsiChar;
-                              TollListOption : DWORD) : LongInt;
+                              TollListOption : DWORD) : Integer;
 
 {Memory handling wrappers}
 
@@ -1675,21 +1675,21 @@ type
                                DeviceID : DWORD;
                                ApiVersion : DWORD;
                                ExtVersion : DWORD;
-                               var LineDevCaps : PLineDevCaps) : LongInt;
+                               var LineDevCaps : PLineDevCaps) : Integer;
     {-Return the capabilities of a line device, with reallocating}
 
   function tuLineGetLineDevStatusDyn(Line : TLine;                       {!!.02}
                                      var DevStatus : PLineDevStatus)
-                                     : LongInt;
+                                     : Integer;
     {-Return the status of a device, with reallocating }
 
 
   function tuLineGetCallInfoDyn(Call : TCall;
-                                var CallInfo : PCallInfo) : LongInt;
+                                var CallInfo : PCallInfo) : Integer;
     {-Get information about the current call}
 
   function tuLineGetCallStatusDyn(Call : TCall;
-                                  var CallStatus : PCallStatus) : LongInt;
+                                  var CallStatus : PCallStatus) : Integer;
     {-Get information about the current call}
 
   function tuLineTranslateAddressDyn(Line : TLine;
@@ -1698,22 +1698,22 @@ type
                                      AddressIn : String; Card : DWORD;
                                      TranslateOptions : DWORD;
                                      var TranslateOutput : PLineTranslateOutput)
-                                     : LongInt;
+                                     : Integer;
 
   function tuLineTranslateDialog(Line : TLine; DeviceID : DWORD;
                                  APIVersion : DWORD; HwndOwner : HWND;
-                                 AddressIn : string) : LongInt;
+                                 AddressIn : string) : Integer;
 
 
-  function tuLineHold(var Call : TCall) : LongInt;                       {!!.06}
+  function tuLineHold(var Call : TCall) : Integer;                       {!!.06}
     {-Place the call on hold}
 
-  function tuLineUnhold(var Call : TCall) : LongInt;                     {!!.06}
+  function tuLineUnhold(var Call : TCall) : Integer;                     {!!.06}
     {-Remove the call from hold}
 
   function tuLineTransfer(var Call:TCall;                                {!!.06}
                           DestAddress:PAnsiChar;                             {!!.06}
-                          CountryCode:DWord) : LongInt;                  {!!.06}
+                          CountryCode:DWord) : Integer;                  {!!.06}
     {-Transfer the call to another line}
 
 {$IFDEF TapiDebug}
@@ -1881,7 +1881,7 @@ var
   end;
 
 {$IFDEF TapiDebug}
-procedure WriteResult(Res : LongInt);
+procedure WriteResult(Res : Integer);
 
   function ResFunc : string;
   begin
@@ -1992,7 +1992,7 @@ end;
 {TAPI routines}
   function tuLineGenerateTones(Call : TCall; ToneMode, Duration,
                                NumTones : DWORD;
-                               const LINEGENERATETONE): LongInt;
+                               const LINEGENERATETONE): Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2013,7 +2013,7 @@ end;
   end;
 
   function tuLineMonitorTones(Call : TCall; const LINEMONITORTONE;
-                              NumEntries : DWORD): LongInt;
+                              NumEntries : DWORD): Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2035,7 +2035,7 @@ end;
 
   function tuLineSetCallParams(Call : TCall; BearerMode, MinRate,
                                MaxRate : DWORD;
-                               DialParams : PLineDialParams) : LongInt;
+                               DialParams : PLineDialParams) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2056,7 +2056,7 @@ end;
   end;
 
   function tuLineHandoff(Call : TCall; FileName: PAnsiChar;
-                          MediaMode : DWORD) : LongInt;
+                          MediaMode : DWORD) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2080,7 +2080,7 @@ end;
   end;
 
   function tuLineMonitorMedia(Call : TCall;
-                              MediaModes : DWORD) : LongInt;
+                              MediaModes : DWORD) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2100,7 +2100,7 @@ end;
   end;
 
   function tuLineGenerateDigits(Call : TCall; DigitModes : DWORD;
-                                Digits : PAnsiChar; Duration : DWORD): LongInt;
+                                Digits : PAnsiChar; Duration : DWORD): Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2125,7 +2125,7 @@ end;
   end;
 
   function tuLineMonitorDigits(Call : TCall;
-                               DigitModes : DWORD): LongInt;
+                               DigitModes : DWORD): Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2148,7 +2148,7 @@ end;
                             Instance : THandle;
                             Callback : TLineCallback;
                             AppName : PAnsiChar;
-                            var NumDevs : DWORD) : LongInt;
+                            var NumDevs : DWORD) : Integer;
     {-Initialize a line device}
   begin
     if not TapiLoaded then begin
@@ -2172,7 +2172,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineShutdown(LineApp : TLineApp) : LongInt;
+  function tuLineShutdown(LineApp : TLineApp) : Integer;
     {-Shutdown a line device}
   begin
     if not TapiLoaded then begin
@@ -2193,11 +2193,11 @@ end;
   end;
 
   function tuLineNegotiateApiVersion(LineApp : TLineApp;
-                                     DeviceID : LongInt;
-                                     APILowVersion : LongInt;
-                                     APIHighVersion : LongInt;
-                                     var ApiVersion : LongInt;
-                                     var LE : TLineExtensionID) : LongInt;
+                                     DeviceID : Integer;
+                                     APILowVersion : Integer;
+                                     APIHighVersion : Integer;
+                                     var ApiVersion : Integer;
+                                     var LE : TLineExtensionID) : Integer;
     {-Negotiate and return the API level to use}
   begin
     if not TapiLoaded then begin
@@ -2224,7 +2224,7 @@ end;
                             DeviceID : DWORD;
                             ApiVersion : DWORD;
                             ExtVersion : DWORD;
-                            LineDevCaps : PLineDevCaps) : LongInt;
+                            LineDevCaps : PLineDevCaps) : Integer;
     {-Return the capabilities of a line device}
   begin
     if not TapiLoaded then begin
@@ -2253,7 +2253,7 @@ end;
                       CallbackInstance : DWORD;
                       Privleges : DWORD;
                       MediaModes : DWORD;
-                      CallParams : DWORD) : LongInt;
+                      CallParams : DWORD) : Integer;
     {-Open a line device}
     begin
     if not TapiLoaded then begin
@@ -2282,7 +2282,7 @@ end;
                           var Call : TCall;
                           DestAddress : PAnsiChar;
                           CountryCode : DWORD;
-                          const CallParams : PLineCallParams) : LongInt;
+                          const CallParams : PLineCallParams) : Integer;
     {-Make an outgoing call on a line device}
   begin
     if not TapiLoaded then begin
@@ -2311,7 +2311,7 @@ end;
 
   function tuLineAccept(Call : TCall;
                         UserUserInfo : PAnsiChar;
-                        Size : DWORD) : LongInt;
+                        Size : DWORD) : Integer;
     {-Accept an incoming call}
   begin
     if not TapiLoaded then begin
@@ -2337,7 +2337,7 @@ end;
 
   function tuLineAnswer(Call : TCall;
                         UserUserInfo : PAnsiChar;
-                        Size : DWORD) : LongInt;
+                        Size : DWORD) : Integer;
     {-Answer an incoming call}
   begin
     if not TapiLoaded then begin
@@ -2361,7 +2361,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineDeallocateCall(Call : TCall) : LongInt;
+  function tuLineDeallocateCall(Call : TCall) : Integer;
     {-Deallocate a call}
   begin
     if not TapiLoaded then begin
@@ -2381,7 +2381,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineDrop(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : LongInt;
+  function tuLineDrop(Call : TCall; UserInfo : PAnsiChar; Size : DWORD) : Integer;
     {-Drop (abort) the call in progress}
   begin
     if not TapiLoaded then begin
@@ -2401,7 +2401,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineClose(Line : TLine) : LongInt;
+  function tuLineClose(Line : TLine) : Integer;
     {-Close a call}
   begin
     if not TapiLoaded then begin
@@ -2421,9 +2421,9 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineGetCountry(CountryID : LongInt;
-                            ApiVersion : LongInt;
-                            LineCountryList : PLineCountryList) : LongInt;
+  function tuLineGetCountry(CountryID : Integer;
+                            ApiVersion : Integer;
+                            LineCountryList : PLineCountryList) : Integer;
     {-Return country information}
   begin
     if not TapiLoaded then begin
@@ -2445,7 +2445,7 @@ end;
 
   function tuLineConfigDialog(DeviceID : DWORD;
                               Owner : HWND;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Display the line configuration dialog}
   begin
     if not TapiLoaded then begin
@@ -2474,7 +2474,7 @@ end;
                                   DeviceClass : PAnsiChar;
                                   const inDevConfig;
                                   Size : DWORD;
-                                  var DevConfig : TVarString) : LongInt;
+                                  var DevConfig : TVarString) : Integer;
     {-Display the line configuration dialog to get config struct}
   begin
     if not TapiLoaded then begin
@@ -2504,7 +2504,7 @@ end;
                        Call : TCall;
                        Select : DWORD;
                        var DeviceID : TVarString;
-                       DeviceClass : PAnsiChar) : LongInt;
+                       DeviceClass : PAnsiChar) : Integer;
     {-Return the line ID}
   begin
     if not TapiLoaded then begin
@@ -2531,7 +2531,7 @@ end;
 
   function tuLineSetStatusMessages(Line : TLine;
                                    LineStates : DWORD;
-                                   AddressStates : DWORD) : LongInt;
+                                   AddressStates : DWORD) : Integer;
     {-Specify which status messages to generate}
   begin
     if not TapiLoaded then begin
@@ -2553,7 +2553,7 @@ end;
 
   function tuLineGetStatusMessages(Line : TLine;
                                    var LineStates : DWORD;
-                                   var AddressStates : DWORD) : LongInt;
+                                   var AddressStates : DWORD) : Integer;
     {-Get which status messages are generated}
   begin
     if not TapiLoaded then begin
@@ -2581,7 +2581,7 @@ end;
                              AddressId   : DWORD;
                              ApiVersion  : DWORD;
                              ExtVersion  : DWORD;
-                             LineAddressCaps : PLineAddressCaps) : LongInt;
+                             LineAddressCaps : PLineAddressCaps) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2605,7 +2605,7 @@ end;
   function tuLineGetAddressStatus(Line : TLine;
                                   AddressID : DWORD;
                                   var AddressStatus : TLineAddressStatus)
-                                  : LongInt;
+                                  : Integer;
     {-Return the line address status}
   begin
     if not TapiLoaded then begin
@@ -2626,7 +2626,7 @@ end;
   end;
 
   function tuLineGetLineDevStatus(Line : TLine;                          {!!.02}
-                                  var DevStatus : PLineDevStatus) : LongInt;
+                                  var DevStatus : PLineDevStatus) : Integer;
     {-Return the line device status }
   begin
     if not TapiLoaded then begin
@@ -2648,7 +2648,7 @@ end;
 
   function tuLineGetDevConfig(DeviceID : DWORD;
                               var DeviceConfig : TVarString;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Return the device configuration}
   begin
     if not TapiLoaded then begin
@@ -2675,7 +2675,7 @@ end;
   function tuLineSetDevConfig(DeviceID : DWORD;
                               const DeviceConfig;
                               Size : DWORD;
-                              DeviceClass : PAnsiChar) : LongInt;
+                              DeviceClass : PAnsiChar) : Integer;
     {-Set the device configuration}
   begin
    if not TapiLoaded then begin
@@ -2699,7 +2699,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineGetCallInfo(Call : TCall; CallInfo : PCallInfo) : LongInt;
+  function tuLineGetCallInfo(Call : TCall; CallInfo : PCallInfo) : Integer;
     {-Get information about the current call}
   begin
     if not TapiLoaded then begin
@@ -2720,7 +2720,7 @@ end;
   end;
 
   function tuLineGetCallStatus(Call : TCall;
-                               CallStatus : PCallStatus) : LongInt;
+                               CallStatus : PCallStatus) : Integer;
     {-Return information about the current call}
   begin
     if not TapiLoaded then begin
@@ -2741,7 +2741,7 @@ end;
   end;
 
   function tuLineSetMediaMode(Call : TCall;
-                              MediaModes : DWORD) : LongInt;
+                              MediaModes : DWORD) : Integer;
     {-Set new media modes}
   begin
     if not TapiLoaded then begin
@@ -2762,7 +2762,7 @@ end;
   end;
 
   function tuLineSetCurrentLocation(Line : TLine;
-                                    Location : DWORD) : LongInt;
+                                    Location : DWORD) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2782,7 +2782,7 @@ end;
 
   function tuLineSetTollList(Line : TLine; DeviceID : DWORD;
                              AddressIn : PAnsiChar;
-                             TollListOption : DWORD) : LongInt;
+                             TollListOption : DWORD) : Integer;
   begin
     if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -2807,7 +2807,7 @@ end;
                                DeviceID : DWORD;
                                ApiVersion : DWORD;
                                ExtVersion : DWORD;
-                               var LineDevCaps : PLineDevCaps) : LongInt;
+                               var LineDevCaps : PLineDevCaps) : Integer;
     {-Return the capabilities of a line device, with reallocating}
   var
     Size : DWORD;
@@ -2866,7 +2866,7 @@ end;
   end;
 
   function tuLineGetLineDevStatusDyn(Line : TLine;                         {!!.02}
-                                     var DevStatus : PLineDevStatus) : LongInt;
+                                     var DevStatus : PLineDevStatus) : Integer;
   var
     Size : DWORD;
   begin
@@ -2919,7 +2919,7 @@ end;
   end;
 
   function tuLineGetCallInfoDyn(Call : TCall;
-                                var CallInfo : PCallInfo) : LongInt;
+                                var CallInfo : PCallInfo) : Integer;
     {-Get information about the current call}
   var
     Size : DWORD;
@@ -2977,7 +2977,7 @@ end;
   end;
 
   function tuLineGetCallStatusDyn(Call : TCall;
-                                  var CallStatus : PCallStatus) : LongInt;
+                                  var CallStatus : PCallStatus) : Integer;
     {-Get information about the current call}
   var
     Size : DWORD;
@@ -3038,7 +3038,7 @@ end;
                                      AddressIn : String; Card : DWORD;
                                      TranslateOptions : DWORD;
                                      var TranslateOutput : PLineTranslateOutput)
-                                     : LongInt;
+                                     : Integer;
   var
     Temp    : array[0..100] of AnsiChar;
     NewSize : Integer;
@@ -3088,7 +3088,7 @@ end;
 
   function tuLineTranslateDialog(Line : TLine; DeviceID : DWORD;
                                  APIVersion : DWORD; HwndOwner : HWND;
-                                 AddressIn : string) : LongInt;
+                                 AddressIn : string) : Integer;
   var
     Temp : array[0..100] of AnsiChar;
   begin
@@ -3103,7 +3103,7 @@ end;
   end;
 
   {begin .06 addition}                                                   {!!.06}
-  function tuLineHold(var Call : TCall):LongInt;
+  function tuLineHold(var Call : TCall):Integer;
   begin
    if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -3119,7 +3119,7 @@ end;
       Result := ecTapiGetAddrFail;
   end;
 
-  function tuLineUnhold(var Call : TCall):LongInt;
+  function tuLineUnhold(var Call : TCall):Integer;
   begin
    if not TapiLoaded then begin
       Result := ecTapiLoadFail;
@@ -3137,7 +3137,7 @@ end;
 
   function tuLineTransfer(var Call:TCall;
                           DestAddress:PAnsiChar;
-                          CountryCode:DWord) : LongInt;
+                          CountryCode:DWord) : Integer;
     {-Transfer the call to another line}
    begin
     if not TapiLoaded then
@@ -3173,12 +3173,12 @@ begin
   LTO := nil;
   TC  := nil;
   DS  := nil;
-  DevCapsFixed       := LongInt(@LDC^.EndMark) - LongInt(@LDC^.TotalSize);
-  CallInfoFixed      := LongInt(@CI^.EndMark) - LongInt(@CI^.TotalSize);
-  CallStatusFixed    := LongInt(@CS^.EndMark) - LongInt(@CS^.TotalSize);
-  LineTranslateFixed := LongInt(@LTO^.EndMark) - LongInt(@LTO^.TotalSize);
-  TranslateCapsFixed := LongInt(@TC^.EndMark) - LongInt(@TC^.TotalSize);
-  DevStatusFixed     := LongInt(@DS^.EndMark) - LongInt(@DS^.TotalSize);
+  DevCapsFixed       := Integer(@LDC^.EndMark) - Integer(@LDC^.TotalSize);
+  CallInfoFixed      := Integer(@CI^.EndMark) - Integer(@CI^.TotalSize);
+  CallStatusFixed    := Integer(@CS^.EndMark) - Integer(@CS^.TotalSize);
+  LineTranslateFixed := Integer(@LTO^.EndMark) - Integer(@LTO^.TotalSize);
+  TranslateCapsFixed := Integer(@TC^.EndMark) - Integer(@TC^.TotalSize);
+  DevStatusFixed     := Integer(@DS^.EndMark) - Integer(@DS^.TotalSize);
 end;
 
 procedure UnloadTapiDLL;

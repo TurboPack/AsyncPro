@@ -125,14 +125,14 @@ type
   TApdDispatcherThread = class(TThread)
     private
       pMsg, pTrigger : Cardinal;
-      plParam : LongInt;
+      plParam : Integer;
       pTriggerEvent : TApdNotifyEvent;
       procedure SyncEvent;
     protected
       H : TApdBaseDispatcher;                                               // SWB
     public
       constructor Create(Disp : TApdBaseDispatcher);
-      procedure SyncNotify(Msg, Trigger : Cardinal; lParam : LongInt; Event : TApdNotifyEvent);
+      procedure SyncNotify(Msg, Trigger : Cardinal; lParam : Integer; Event : TApdNotifyEvent);
       procedure Sync(Method: TThreadMethod);
       property ReturnValue;                                                 // SWB
   end;
@@ -163,7 +163,7 @@ type
       ModemStatus       : Cardinal;   {Modem status register}
       ComStatus         : TComStat;   {Results of last call for com status}
       DCB               : TDCB;       {Results of last call for DCB}
-      LastBaud          : LongInt;    {Last baud set}
+      LastBaud          : Integer;    {Last baud set}
       Flags             : Cardinal;   {Option flags}
       DTRState          : Boolean;    {Last set DTR state}
       DTRAuto           : Boolean;    {True if in handshake mode}
@@ -254,7 +254,7 @@ type
       ActiveThreads : Integer;
       CloseComActive : Boolean;                                             // SWB
 
-      function EscapeComFunction(Func : Integer) : LongInt; virtual; abstract;
+      function EscapeComFunction(Func : Integer) : Integer; virtual; abstract;
       function FlushCom(Queue : Integer) : Integer; virtual; abstract;
       function GetComError(var Stat : TComStat) : Integer; virtual; abstract;
       function GetComEventMask(EvtMask : Integer) : Cardinal; virtual; abstract;
@@ -348,7 +348,7 @@ type
       function AppendTrace(FName : string;
                             InHex, AllHEx : Boolean) : Integer;
       procedure BufferSizes(var InSize, OutSize : Cardinal);
-      function ChangeBaud(NewBaud : LongInt) : Integer;
+      function ChangeBaud(NewBaud : Integer) : Integer;
       procedure ChangeLengthTrigger(Length : Cardinal);
       function CheckCTS : Boolean;
       function CheckDCD : Boolean;
@@ -370,7 +370,7 @@ type
       function DumpDispatchLog(FName : string; InHex, AllHex : Boolean) : Integer;
       function DumpTrace(FName : string; InHex, AllHex : Boolean) : Integer;
       function ExtendTimer(TriggerHandle : Cardinal;
-        Ticks : LongInt) : Integer;
+        Ticks : Integer) : Integer;
       function FlushInBuffer : Integer;
       function FlushOutBuffer : Integer;
       function CharReady : Boolean;
@@ -380,7 +380,7 @@ type
       function GetDataPointer(var P : Pointer; Index : Cardinal) : Integer;
       function GetFlowOptions(var HWOpts, SWOpts, BufferFull,
         BufferResume : Cardinal; var OnChar, OffChar : AnsiChar): Integer;
-      procedure GetLine(var Baud : LongInt; var Parity : Word;
+      procedure GetLine(var Baud : Integer; var Parity : Word;
         var DataBits : TDatabits; var StopBits : TStopbits);
       function GetLineError : Integer;
       function GetModemStatus : Byte;
@@ -390,7 +390,7 @@ type
       function InBuffUsed : Cardinal;
       function InBuffFree : Cardinal;
       procedure InitDispatchLogging(QueueSize : Cardinal);
-      function InitPort(AComName : PChar; Baud : LongInt;
+      function InitPort(AComName : PChar; Baud : Integer;
         Parity : Cardinal; DataBits : TDatabits; StopBits : TStopbits;
         InSize, OutSize : Cardinal; FlowOpts : DWORD) : Integer;
       function InitSocket(InSize, OutSize : Cardinal) : Integer;
@@ -423,13 +423,13 @@ type
       procedure SetEventBusy(var WasOn : Boolean; SetOn : Boolean);
       procedure SetRS485Mode(OnOff : Boolean);
       function SetRts(OnOff : Boolean) : Integer;
-      function SetLine(Baud : LongInt; Parity : Cardinal;
+      function SetLine(Baud : Integer; Parity : Cardinal;
         DataBits : TDatabits; StopBits : TStopbits) : Integer;
       function SetModem(DTR, RTS : Boolean) : Integer;
       function SetStatusTrigger(TriggerHandle : Cardinal;
         Value : Cardinal; Activate : Boolean) : Integer;
       function SetTimerTrigger(TriggerHandle : Cardinal;
-        Ticks : LongInt; Activate : Boolean) : Integer;
+        Ticks : Integer; Activate : Boolean) : Integer;
       function SetCommBuffers(InSize, OutSize : Integer) : Integer;
       procedure StartDispatchLogging;
       procedure StartTracing;
@@ -441,7 +441,7 @@ type
         Options : Cardinal) : Integer;
       function SWFlowState : Integer;
       function TimerTicksRemaining(TriggerHandle : Cardinal;
-        var TicksRemaining : Longint) : Integer;
+        var TicksRemaining : Integer) : Integer;
       procedure UpdateHandlerFlags(FlagUpdate : TApHandlerFlagUpdate); virtual;
   end;
 
@@ -862,7 +862,7 @@ end;
 
   function TApdBaseDispatcher.InitPort(
                          AComName : PChar;
-                         Baud : LongInt;
+                         Baud : Integer;
                          Parity : Cardinal;
                          DataBits : TDatabits;
                          StopBits : TStopbits;
@@ -1092,15 +1092,15 @@ end;
       DonePortPrim;
   end;
 
-  function ActualBaud(BaudCode : LongInt) : Longint;
+  function ActualBaud(BaudCode : Integer) : Integer;
   const
-    BaudTable : array[0..23] of LongInt =
+    BaudTable : array[0..23] of Integer =
       (110,    300,    600,    1200,    2400,    4800,    9600,    14400,
        19200,  0,      0,      38400,   0,       0,       0,       56000,
        0,      0,      0,      128000,  0,       0,       0,       256000);
   var
     Index : Cardinal;
-    Baud : LongInt;
+    Baud : Integer;
   begin
     if BaudCode = $FEFF then
       {COMM.DRV's 115200 hack}
@@ -1131,7 +1131,7 @@ end;
   procedure TApdBaseDispatcher.WaitTxSent;
   var
     BitsPerChar     : DWORD;
-    BPS             : Longint;
+    BPS             : Integer;
     MicroSecsPerBit : DWORD;
     MicroSecs       : DWORD;
     MilliSecs       : DWORD;
@@ -1167,7 +1167,7 @@ end;
   end;
 
   function TApdBaseDispatcher.SetLine(
-                    Baud : LongInt;
+                    Baud : Integer;
                     Parity : Cardinal;
                     DataBits : TDatabits;
                     StopBits : TStopbits) : Integer;
@@ -1176,7 +1176,7 @@ end;
     NewParity    : Cardinal;
     NewByteSize  : TDatabits;
     NewStopBits  : Byte;
-    NewFlags     : Longint;                                                 // SWB
+    NewFlags     : Integer;                                                 // SWB
     {-Set or change the line parameters}
   begin
     Result := ecOK;
@@ -1262,7 +1262,7 @@ end;
   end;
 
   procedure TApdBaseDispatcher.GetLine(
-                    var Baud : LongInt;
+                    var Baud : Integer;
                     var Parity : Word;
                     var DataBits : TDatabits;
                     var StopBits : TStopbits);
@@ -2445,8 +2445,8 @@ end;
           {Send len message up to first matching char}
           if (LenTrigger <> 0) and
             (NotifyTail <> I) and
-            (LongInt(CharCount(I, 0))-
-             LongInt(MatchSize) >= LongInt(LenTrigger))
+            (Integer(CharCount(I, 0))-
+             Integer(MatchSize) >= Integer(LenTrigger))
             then begin
 
             {Generate len message for preceding data}
@@ -3131,7 +3131,7 @@ end;
   end;
 
   function TApdBaseDispatcher.SetTimerTrigger(TriggerHandle : Cardinal;
-                            Ticks : LongInt; Activate : Boolean) : Integer;
+                            Ticks : Integer; Activate : Boolean) : Integer;
   const
     DeactivateStr : Ansistring = 'Deactivated';
   var
@@ -3166,7 +3166,7 @@ end;
   end;
 
   function TApdBaseDispatcher.ExtendTimer(TriggerHandle : Cardinal;
-                        Ticks : LongInt) : Integer;
+                        Ticks : Integer) : Integer;
   var
     Trigger : PTimerTrigger;
     T : TTriggerType;
@@ -3190,7 +3190,7 @@ end;
   end;
 
   function TApdBaseDispatcher.TimerTicksRemaining(TriggerHandle : Cardinal;
-                                var TicksRemaining : Longint) : Integer;
+                                var TicksRemaining : Integer) : Integer;
   var
     Trigger : PTimerTrigger;
     T : TTriggerType;
@@ -3419,7 +3419,7 @@ end;
     end;
   end;
 
-  function TApdBaseDispatcher.ChangeBaud(NewBaud : LongInt) : Integer;
+  function TApdBaseDispatcher.ChangeBaud(NewBaud : Integer) : Integer;
     {-Change the baud rate of port H to NewBaud}
   begin
     Result := SetLine(NewBaud, DontChangeParity, DontChangeDatabits,
@@ -4215,7 +4215,7 @@ end;
   end;
 
   procedure TApdDispatcherThread.SyncNotify(Msg, Trigger : Cardinal;
-    lParam : LongInt; Event : TApdNotifyEvent);
+    lParam : Integer; Event : TApdNotifyEvent);
   begin
     pMsg := Msg;
     pTrigger := Trigger;
@@ -4473,7 +4473,7 @@ end;
     {-Wait for and process communications events}
   var
     Junk     : DWORD;
-    LastMask : LongInt;
+    LastMask : Integer;
     Timeouts : TCommTimeouts;
     ComOL    : TOverlapped;       {For com event waiting}
   begin

@@ -258,7 +258,7 @@ type
     FZmodemFileOption : TZmodemFileOptions; {File mgmt options}
     FZmodemRecover    : Boolean;         {True to enable crash recovery}
     FZmodem8K         : Boolean;         {True to enable 8K zmodem}
-    FZmodemZRQINITValue : LongInt;       {Optional ZRQINIT data}
+    FZmodemZRQINITValue : Integer;       {Optional ZRQINIT data}
     FZmodemFinishRetry : Cardinal;           {Number of ZFin retries}
     FZmodemEscControl : Boolean;         {Escape all control chars}         // SWB
     FKermitMaxLen     : Cardinal;            {Max normal packet len}
@@ -315,8 +315,8 @@ type
     procedure SetTransmitTimeout(const NewTimeout : Cardinal);
     function GetFinishWait : Cardinal;
     procedure SetFinishWait(const NewWait : Cardinal);
-    function GetActualBPS : LongInt;
-    procedure SetActualBPS(const NewBPS : Longint);
+    function GetActualBPS : Integer;
+    procedure SetActualBPS(const NewBPS : Integer);
     function GetTurnDelay : Cardinal;
     procedure SetTurnDelay(const NewDelay : Cardinal);
     function GetOverhead : Cardinal;
@@ -325,9 +325,9 @@ type
     procedure SetWriteFailAction(const NewAction : TWriteFailAction);
     function GetProtocolStatus : Cardinal;
     function GetProtocolError : SmallInt;
-    function GetFileLength : LongInt;
+    function GetFileLength : Integer;
     function GetFileDate : TDateTime;
-    function GetInitialPosition : LongInt;
+    function GetInitialPosition : Integer;
     function GetStatusInterval : Cardinal;
     procedure SetStatusInterval(const NewInterval : Cardinal);
     procedure SetStatusDisplay(const NewDisplay : TApdAbstractStatus);
@@ -335,9 +335,9 @@ type
     function GetInProgress : Boolean;
     function GetBlockErrors : Cardinal;
     function GetTotalErrors : Cardinal;
-    function GetBytesRemaining : LongInt;
-    function GetBytesTransferred : LongInt;
-    function GetElapsedTicks : LongInt;
+    function GetBytesRemaining : Integer;
+    function GetBytesTransferred : Integer;
+    function GetElapsedTicks : Integer;
     function GetFileName : AnsiString;
     procedure SetFileName(const NewName : AnsiString);
     function GetXYmodemBlockWait : Cardinal;
@@ -354,8 +354,8 @@ type
     procedure SetZmodemRecover(const NewRecover : Boolean);
     function GetZmodem8K : Boolean;
     procedure SetZmodem8K(const New8K : Boolean);
-    function GetZmodemZRQINITValue : LongInt;
-    procedure SetZmodemZRQINITValue(const NewZRQINITValue : LongInt); 
+    function GetZmodemZRQINITValue : Integer;
+    procedure SetZmodemZRQINITValue(const NewZRQINITValue : Integer);
     function GetZmodemFinishRetry : Cardinal;
     procedure SetZmodemFinishRetry(const NewRetry : Cardinal);
     function GetZmodemEscControl : Boolean;                                 // SWB
@@ -434,7 +434,7 @@ type
     procedure Assign(Source : TPersistent); override;
       {-Assign fields from TApdProtocol object specified by Source}
     {.Z-}
-    function EstimateTransferSecs(const Size : Longint) : Longint;
+    function EstimateTransferSecs(const Size : Integer) : Integer;
       {-Return the number of seconds to transmit Size bytes}
     function StatusMsg(const Status : Cardinal) : AnsiString;
       {-Return a status message for Status}
@@ -467,7 +467,7 @@ type
       read GetTransmitTimeout write SetTransmitTimeout default awpDefTransTimeout;
     property FinishWait : Cardinal
       read GetFinishWait write SetFinishWait default awpDefFinishWait;
-    property ActualBPS : Longint
+    property ActualBPS : Integer
       read GetActualBPS write SetActualBPS;
     property TurnDelay : Cardinal
       read GetTurnDelay write SetTurnDelay default awpDefTurnDelay;
@@ -511,11 +511,11 @@ type
       read GetProtocolStatus;
     property ProtocolError : SmallInt
       read GetProtocolError;
-    property FileLength : LongInt
+    property FileLength : Integer
       read GetFileLength;
     property FileDate : TDateTime
       read GetFileDate;
-    property InitialPosition : LongInt
+    property InitialPosition : Integer
       read GetInitialPosition;
 
     {Status properties}
@@ -531,11 +531,11 @@ type
       read GetBlockErrors;
     property TotalErrors : Cardinal
       read GetTotalErrors;
-    property BytesRemaining : LongInt
+    property BytesRemaining : Integer
       read GetBytesRemaining;
-    property BytesTransferred : LongInt
+    property BytesTransferred : Integer
       read GetBytesTransferred;
-    property ElapsedTicks : LongInt
+    property ElapsedTicks : Integer
       read GetElapsedTicks;
     property FileName : AnsiString
       read GetFileName write SetFileName;
@@ -562,7 +562,7 @@ type
       read GetZmodemRecover write SetZmodemRecover default awpDefZmodemRecover;
     property Zmodem8K : Boolean
       read GetZmodem8K write SetZmodem8K default awpDefZmodem8K;
-    property ZmodemZRQINITValue : LongInt                            
+    property ZmodemZRQINITValue : Integer
       read GetZmodemZRQINITValue write SetZmodemZRQINITValue
       default awpDefZmodemZRQINITValue;
     property ZmodemFinishRetry : Cardinal
@@ -793,7 +793,7 @@ type
 
   {Miscellaneous functions}
   function CheckNameString(const Check : TBlockCheckMethod) : AnsiString;
-  function FormatMinSec(const TotalSecs : LongInt) : AnsiString;
+  function FormatMinSec(const TotalSecs : Integer) : AnsiString;
   {.Z-}
   function ProtocolName(const ProtocolType : TProtocolType) : AnsiString;
 
@@ -938,7 +938,7 @@ var
   end;
 
   function MessageHandler(hWindow : TApdHwnd; Msg, wParam : Integer;
-                          lParam : Longint) : Longint; stdcall; export;
+                          lParam : Integer) : Integer; stdcall; export;
     {-Window function for all apw_ProtXxx messages}
   var
     P : TApdCustomProtocol;
@@ -1283,7 +1283,7 @@ var
     Result := PData^.aProtocolError;
   end;
 
-  function TApdCustomProtocol.GetFileLength : LongInt;
+  function TApdCustomProtocol.GetFileLength : Integer;
     {-Return the file length}
   begin
     Result := PData^.aSrcFileLen;
@@ -1295,7 +1295,7 @@ var
     Result := FileDateToDateTime(PData^.aSrcFileDate);
   end;
 
-  function TApdCustomProtocol.GetInitialPosition : LongInt;
+  function TApdCustomProtocol.GetInitialPosition : Integer;
     {-Return the initial file position}
   begin
     Result := PData^.aInitFilePos;
@@ -1354,19 +1354,19 @@ var
     Result := PData^.aTotalErrors;
   end;
 
-  function TApdCustomProtocol.GetBytesRemaining : LongInt;
+  function TApdCustomProtocol.GetBytesRemaining : Integer;
     {-Return the number of bytes remaining to be transferred}
   begin
     Result := apGetBytesRemaining(PData);
   end;
 
-  function TApdCustomProtocol.GetBytesTransferred : LongInt;
+  function TApdCustomProtocol.GetBytesTransferred : Integer;
     {-Return the number of bytes transferred so far}
   begin
     Result := apGetBytesTransferred(PData);
   end;
 
-  function TApdCustomProtocol.GetElapsedTicks : LongInt;
+  function TApdCustomProtocol.GetElapsedTicks : Integer;
     {-Return the ticks elapsed for this transfer}
   begin
     Result := PData^.aElapsedTicks;
@@ -1552,7 +1552,7 @@ var
     end;
   end;
 
-  function TApdCustomProtocol.GetZmodemZRQINITValue : LongInt;       
+  function TApdCustomProtocol.GetZmodemZRQINITValue : Integer;
     {-Return the Zmodem's ZRQINIT value}
   begin
     if PData^.aCurProtocol = Ord(ptZmodem) then
@@ -1560,7 +1560,7 @@ var
     Result := FZmodemZRQINITValue;
   end;
 
-  procedure TApdCustomProtocol.SetZmodemZRQINITValue(const NewZRQINITValue : LongInt);
+  procedure TApdCustomProtocol.SetZmodemZRQINITValue(const NewZRQINITValue : Integer);
     {-Set the Zmodem's ZRQINIT value}
   begin
     if (NewZRQINITValue <> FZmodemZRQINITValue) or Force then begin
@@ -2187,13 +2187,13 @@ var
         aFinishWait := NewWait;
   end;
 
-  function TApdCustomProtocol.GetActualBPS : LongInt;
+  function TApdCustomProtocol.GetActualBPS : Integer;
     {-Return actual CPS for protocol}
   begin
-    Result := LongInt(PData^.aActCPS) * 10;                         
+    Result := Integer(PData^.aActCPS) * 10;
   end;
 
-  procedure TApdCustomProtocol.SetActualBPS(const NewBPS : LongInt);
+  procedure TApdCustomProtocol.SetActualBPS(const NewBPS : Integer);
     {-Set the actual CPS for the protocol}
   begin
     with PData^ do begin
@@ -2507,7 +2507,7 @@ var
     end;
   end;
 
-  function TApdCustomProtocol.EstimateTransferSecs(const Size : Longint) : Longint;
+  function TApdCustomProtocol.EstimateTransferSecs(const Size : Integer) : Integer;
     {-Returns ticks to send Size bytess}
   begin
     Result := apEstimateTransferSecs(PData, Size);
@@ -2609,7 +2609,7 @@ var
   begin
     with PData^ do
       if (@ProtFunc <> nil) and InProgress then
-        ProtFunc(APW_PROTOCOLCANCEL, 0, LongInt(aHC.ValidDispatcher.handle) shl 16)  
+        ProtFunc(APW_PROTOCOLCANCEL, 0, Integer(aHC.ValidDispatcher.handle) shl 16)
   end;
 
 {TApdAbstractStatus}
@@ -2841,10 +2841,10 @@ var
     end;
   end;
 
-  function FormatMinSec(const TotalSecs : LongInt) : AnsiString;
+  function FormatMinSec(const TotalSecs : Integer) : AnsiString;
     {-Format TotalSecs as minutes:seconds, leftpadded to 6}
   var
-    Min, Sec : LongInt;
+    Min, Sec : Integer;
     S : AnsiString;
   begin
     Min := TotalSecs div 60;

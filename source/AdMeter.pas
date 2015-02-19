@@ -73,20 +73,20 @@ type
     FBevelColor1 : TColor;
     FBevelColor2 : TColor;
     FBevelStyle : TBevelStyle;
-    FMax : LongInt;
-    FMin : LongInt;
+    FMax : Integer;
+    FMin : Integer;
     FOnPosChange : TNotifyEvent;
-    FPosition : LongInt;
-    FSegments : LongInt;
-    FStep : LongInt;
+    FPosition : Integer;
+    FSegments : Integer;
+    FStep : Integer;
     NeedPartial : Boolean;
-    PartialSize : LongInt;
+    PartialSize : Integer;
     procedure SetBarColor(Value : TColor);
     procedure SetBevelStyle(Value : TBevelStyle);
     procedure SetBevelColor1(Value : TColor);
     procedure SetBevelColor2(Value : TColor);
-    procedure SetPosition(Value : LongInt);
-    procedure SetStep(Value : LongInt);
+    procedure SetPosition(Value : Integer);
+    procedure SetStep(Value : Integer);
   protected
     procedure DoOnPosChange; dynamic;
     procedure Paint; override;
@@ -120,24 +120,24 @@ type
       default bsLowered;
 
     { Value for maximum deflection of progress bar }
-    property Max : LongInt
+    property Max : Integer
       read FMax
       write FMax
       default admDefMax;
 
     { Value for minimum deflection of progress bar }
-    property Min : LongInt
+    property Min : Integer
       read FMin
       write FMin
       default admDefMin;
 
     { Current level of progress, relative to Min and Max }
-    property Position : LongInt
+    property Position : Integer
       read FPosition
       write SetPosition;
 
     { Width in pixels of each block on the progress bar }
-    property Step : LongInt
+    property Step : Integer
       read FStep
       write SetStep
       default admDefStep;
@@ -226,7 +226,7 @@ begin
   UpdatePosition(True);
 end;
 
-procedure TApdMeter.SetPosition(Value: LongInt);
+procedure TApdMeter.SetPosition(Value: Integer);
 begin
   if Value <> FPosition then begin
     FPosition := Value;
@@ -234,7 +234,7 @@ begin
   end;
 end;
 
-procedure TApdMeter.SetStep(Value: LongInt);
+procedure TApdMeter.SetStep(Value: Integer);
 begin
   if Value <> FStep then begin
     FStep := Value;
@@ -314,7 +314,7 @@ end;
 
 procedure TApdMeter.UpdatePosition(Force : Boolean);
 var
-  OldSegments : LongInt;
+  OldSegments : Integer;
   OldNeedPartial : Boolean;
 begin
   OldSegments := FSegments;

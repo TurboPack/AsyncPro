@@ -395,11 +395,11 @@ type
                                     SpokenData : string);
 
       function ConvertResponse (RCode : Integer ) : TApdSapiPhoneReply;
-      procedure DoLineCallState (Device, P1, P2, P3 : LongInt); override;
+      procedure DoLineCallState (Device, P1, P2, P3 : Integer); override;
       procedure ExitAskFor (Reply : TApdSapiPhoneReply;
                             Data : Pointer;
                             SpokenData : string);
-      function GetPhraseData (LParam : Longint) : string;
+      function GetPhraseData (LParam : Integer) : string;
       function FixNumerics (Phrase : string) : string;
       function InterpretDate (Phrase : string;
                               var Trusted : Boolean) : TDateTime; virtual;
@@ -1402,7 +1402,7 @@ begin
             StringData := StrAlloc (Length (Phrase) + 1);
             StrPCopy (StringData, Phrase);
             PostMessage (ReplyHandle, apw_SapiInfoPhrase,
-                         StrToInt (PhraseRule), LongInt (StringData));
+                         StrToInt (PhraseRule), Integer (StringData));
           end;
         except
           on EConvertError do
@@ -2047,11 +2047,11 @@ begin
   end;
 end;
 
-procedure TApdCustomSapiPhone.DoLineCallState (Device, P1, P2, P3 : LongInt);
+procedure TApdCustomSapiPhone.DoLineCallState (Device, P1, P2, P3 : Integer);
 
   procedure AssignWaveInDevice;
   var
-    Res             : Longint;
+    Res             : Integer;
     DeviceID        : DWORD;
     WaveFormat      : TWaveFormatEx;
     WaveId          : SDATA;
@@ -2155,7 +2155,7 @@ begin
   end;
 end;
 
-function TApdCustomSapiPhone.GetPhraseData (LParam : Longint) : string;
+function TApdCustomSapiPhone.GetPhraseData (LParam : Integer) : string;
 var
   TheString : PChar;
 begin

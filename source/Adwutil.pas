@@ -126,16 +126,16 @@ const
   ImpLink_HighExper = 158;
 
   { Get # bytes to read }
-  FiOnRead = Ioc_Out or ((LongInt(SizeOf(LongInt)) and IocParm_Mask) shl 16) or
-    (LongInt(Byte('f')) shl 8) or 127;
+  FiOnRead = Ioc_Out or ((Integer(SizeOf(Integer)) and IocParm_Mask) shl 16) or
+    (Integer(Byte('f')) shl 8) or 127;
 
   { Set/Clear non-blocking i/o }
-  FiOnBio  = Ioc_In or((LongInt(SizeOf(LongInt)) and IocParm_Mask) shl 16) or
-    (LongInt(Byte('f')) shl 8) or 126;
+  FiOnBio  = Ioc_In or((Integer(SizeOf(Integer)) and IocParm_Mask) shl 16) or
+    (Integer(Byte('f')) shl 8) or 126;
 
   { Set/Clear async i/o }
-  FioAsync = Ioc_In or ((LongInt(SizeOf(LongInt)) and IocParm_Mask) shl 16) or
-    (LongInt(Byte('f')) shl 8) or 125;
+  FioAsync = Ioc_In or ((Integer(SizeOf(Integer)) and IocParm_Mask) shl 16) or
+    (Integer(Byte('f')) shl 8) or 125;
 
   InAddr_Any       = $00000000;
   InAddr_LoopBack  = $7F000001;
@@ -362,8 +362,8 @@ type
 
   PTimeVal = ^TTimeVal;
   TTimeVal = packed record
-    tv_sec  : LongInt;
-    tv_usec : LongInt;
+    tv_sec  : Integer;
+    tv_usec : Integer;
   end;
 
 const
@@ -385,7 +385,7 @@ type
     case Integer of
       0 : (S_un_b : SunB);
       1 : (S_un_w : SunW);
-      2 : (S_addr : LongInt);
+      2 : (S_addr : Integer);
   end;}
 
   PAddrArray = ^TAddrArray;
@@ -411,7 +411,7 @@ type
     n_name     : PAnsiChar;
     n_aliases  : ^PAnsiChar;
     n_addrtype : SmallInt;
-    n_net      : LongInt;
+    n_net      : Integer;
   end;
 
   { Server Entity }
@@ -510,8 +510,8 @@ type
                                          stdcall;
 
   TfnIOCtlSocket              = function(S : TSocket;
-                                         Cmd : LongInt;
-                                         var Arg : LongInt) : Integer;
+                                         Cmd : Integer;
+                                         var Arg : Integer) : Integer;
                                          stdcall;
 
   TfnGetPeerName              = function(S : TSocket;
@@ -529,13 +529,13 @@ type
                                          var OptVal; var OptLen : Integer) : Integer;
                                          stdcall;
 
-  Tfnhtonl                    = function(HostLong : LongInt) : LongInt;
+  Tfnhtonl                    = function(HostLong : Integer) : Integer;
                                          stdcall;
 
   Tfnhtons                    = function(HostShort : Word) : Word;
                                          stdcall;
 
-  TfnINet_Addr                = function(Cp : PAnsiChar) : LongInt;
+  TfnINet_Addr                = function(Cp : PAnsiChar) : Integer;
                                          stdcall;
 
   TfnINet_NtoA                = function(InAddr : TInAddr) : PAnsiChar;
@@ -544,7 +544,7 @@ type
   TfnListen                   = function(S : TSocket; Backlog : Integer) : Integer;
                                          stdcall;
 
-  Tfnntohl                    = function(NetLong : LongInt) : LongInt;
+  Tfnntohl                    = function(NetLong : Integer) : Integer;
                                          stdcall;
 
   Tfnntohs                    = function(NetShort : Word) : Word;
@@ -563,7 +563,7 @@ type
   TfnSelect                   = function(Nfds : Integer;
                                          Readfds, Writefds,
                                          Exceptfds : PFDSet;
-                                         Timeout : PTimeVal) : LongInt;
+                                         Timeout : PTimeVal) : Integer;
                                          stdcall;
 
   TfnSend                     = function(S : TSocket; var Buf;
@@ -678,7 +678,7 @@ type
   TfnwsaAsyncSelect           = function(S : TSocket;
                                          HWindow : HWnd;
                                          wMsg : Integer;
-                                         lEvent : LongInt) : Integer;
+                                         lEvent : Integer) : Integer;
                                          stdcall;
 
   TfnwsaRecvEx                = function(S : TSocket;
@@ -748,12 +748,12 @@ type
   end;
 
 function LoadWinsock : Boolean;
-function wsaMakeSyncReply(Buflen, Error : Word) : LongInt;
-function wsaMakeSelectReply(Event, Error : Word) : LongInt;
-function wsaGetAsyncBuflen(Param : LongInt) : Word;
-function wsaGetAsyncError(Param : LongInt) : Word;
-function wsaGetSelectEvent(Param : LongInt) : Word;
-function wsaGetSelectError(Param : LongInt) : Word;
+function wsaMakeSyncReply(Buflen, Error : Word) : Integer;
+function wsaMakeSelectReply(Event, Error : Word) : Integer;
+function wsaGetAsyncBuflen(Param : Integer) : Word;
+function wsaGetAsyncError(Param : Integer) : Word;
+function wsaGetSelectEvent(Param : Integer) : Word;
+function wsaGetSelectError(Param : Integer) : Word;
 
 var
   SockFuncs : TSocketFuncs;
@@ -939,32 +939,32 @@ begin
   Result := True;
 end;
 
-function wsaMakeSyncReply(Buflen, Error : Word) : LongInt;
+function wsaMakeSyncReply(Buflen, Error : Word) : Integer;
 begin
   Result := MakeLong(Buflen, Error);
 end;
 
-function wsaMakeSelectReply(Event, Error : Word) : LongInt;
+function wsaMakeSelectReply(Event, Error : Word) : Integer;
 begin
   Result := MakeLong(Event, Error);
 end;
 
-function wsaGetAsyncBuflen(Param : LongInt) : Word;
+function wsaGetAsyncBuflen(Param : Integer) : Word;
 begin
   Result := LoWord(Param);
 end;
 
-function wsaGetAsyncError(Param : LongInt) : Word;
+function wsaGetAsyncError(Param : Integer) : Word;
 begin
   Result := HiWord(Param);
 end;
 
-function wsaGetSelectEvent(Param : LongInt) : Word;
+function wsaGetSelectEvent(Param : Integer) : Word;
 begin
   Result := LoWord(Param);
 end;
 
-function wsaGetSelectError(Param : LongInt) : Word;
+function wsaGetSelectError(Param : Integer) : Word;
 begin
   Result := HiWord(Param);
 end;

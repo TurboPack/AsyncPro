@@ -45,7 +45,7 @@ uses
 {===System functions=================================================}
 
 type
-  TApdUcs4Char = Longint;
+  TApdUcs4Char = Integer;
   TApdUtf8Char = string[6];
   DOMChar = WideChar;
   PDOMChar = PWideChar;
@@ -161,7 +161,7 @@ end;
 function ApxUcs4ToWideChar(const aInChar : TApdUcs4Char;
                             var aOutWS  : DOMChar) : Boolean;
 var
-  Temp : Longint;
+  Temp : Integer;
 begin
   Temp := abs(aInChar);
   if (Temp < $10000) then begin

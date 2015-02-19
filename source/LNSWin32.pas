@@ -146,7 +146,7 @@ type
   private
     FSerialEvent    : TEvent;
   protected
-    function  EscapeComFunction(Func : Integer) : LongInt; override;
+    function  EscapeComFunction(Func : Integer) : Integer; override;
     function  FlushCom(QueueProp : Integer) : Integer; override;
     function  GetComError(var Stat : TComStat) : Integer; override;
     function  GetComEventMask(EvtMask : Integer) : Cardinal; override;
@@ -335,7 +335,7 @@ begin
     end;
 end;
 
-function TApdWin32Dispatcher.EscapeComFunction(Func: Integer): LongInt;
+function TApdWin32Dispatcher.EscapeComFunction(Func: Integer): Integer;
 begin
     EscapeCommFunction(CidEx, Func);
     Result := 0;

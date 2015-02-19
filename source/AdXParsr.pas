@@ -183,7 +183,7 @@ type
       { Returns true if an XML declaration was found }
     procedure ParsePrim;
     procedure ParseProlog;
-    procedure ParseUntil(const S : array of Longint);
+    procedure ParseUntil(const S : array of Integer);
     procedure ParseWhitespace;
     procedure ParseXMLDeclaration;
     procedure PopDocument;
@@ -195,7 +195,7 @@ type
     function ReadLiteral(wFlags    : Integer;
                      var HasEntRef : Boolean) : DOMString;
     function ReadNameToken(aValFirst : Boolean) : DOMString;
-    procedure Require(const S : array of Longint);
+    procedure Require(const S : array of Integer);
     procedure RequireWhitespace;
     procedure SetAttribute(const sElemName,
                                  sName      : DOMString;
@@ -219,7 +219,7 @@ type
                                                           : DOMString);
     procedure SkipChar;
     procedure SkipWhitespace(aNextDoc : Boolean);
-    function TryRead(const S : array of Longint) : Boolean;
+    function TryRead(const S : array of Integer) : Boolean;
     procedure ValidateAttribute(const aValue    : DOMString;
                                       HasEntRef : Boolean);
     procedure ValidateCData(const CDATA : DOMString);
@@ -247,7 +247,7 @@ type
 
     function GetErrorMsg(wIdx : Integer) : DOMString;
     function ParseDataSource(const sSource : string) : Boolean;
-    function ParseMemory(var aBuffer; aSize : Longint) : Boolean;
+    function ParseMemory(var aBuffer; aSize : Integer) : Boolean;
     function ParseStream(oStream : TStream) : Boolean;
 
     property ErrorCount : Integer
@@ -1437,7 +1437,7 @@ begin
   SkipWhitespace(True);
 end;
 {--------}
-function TApdParser.ParseMemory(var aBuffer; aSize : Longint) : Boolean;
+function TApdParser.ParseMemory(var aBuffer; aSize : Integer) : Boolean;
 var
   MemStream  : TApdMemoryStream;
 begin
@@ -1532,8 +1532,8 @@ procedure TApdParser.ParsePCData(aInEntityRef : Boolean);
 var
   TempBuff   : DOMString;
   TempChar   : DOMChar;
-  CurrLength : Longint;
-  BuffLength : Longint;
+  CurrLength : Integer;
+  BuffLength : Integer;
   Added      : Boolean;
 begin
   Added := False;
@@ -1652,7 +1652,7 @@ begin
   Result := FErrors.Count = 0;
 end;
 {--------}
-procedure TApdParser.ParseUntil(const S : array of Longint);
+procedure TApdParser.ParseUntil(const S : array of Integer);
 var
   TempStr  : AnsiString;
   TempChar : AnsiChar;
@@ -2000,7 +2000,7 @@ begin
   SetLength(Result, CurrLen div 2);
 end;
 {--------}
-procedure TApdParser.Require(const S : array of Longint);
+procedure TApdParser.Require(const S : array of Integer);
 var
   TempStr  : AnsiString;
   TempChar : AnsiChar;
@@ -2148,7 +2148,7 @@ begin
  end;
 end;
 {--------}
-function TApdParser.TryRead(const S : array of Longint) : Boolean;
+function TApdParser.TryRead(const S : array of Integer) : Boolean;
 begin
   Result := False;
   if (not IsEndDocument) then begin

@@ -93,7 +93,7 @@ type
   TDeviceLayers = set of TDeviceLayer;
 
   {Baud type}
-  TBaudRate = LongInt;
+  TBaudRate = Integer;
 
   {Tapi modes}
   TTapiMode = (tmNone, tmAuto, tmOn, tmOff);
@@ -233,7 +233,7 @@ type
     FDeviceLayers    : TDeviceLayers;
     FDispatcher      : TApdBaseDispatcher;  {Handle to comm object}
     FComNumber       : Word;                {Com1 - ComWhatever}
-    FBaud            : LongInt;             {Baud rate}
+    FBaud            : Integer;             {Baud rate}
     FParity          : TParity;             {Parity}
     FDatabits        : Word;                {Data bits}
     FStopbits        : Word;                {Stop bits}
@@ -298,7 +298,7 @@ type
     {Property read/write methods}
     procedure SetDeviceLayer(const NewDevice : TDeviceLayer);
     procedure SetComNumber(const NewNumber : Word);
-    procedure SetBaud(const NewBaud : Longint);
+    procedure SetBaud(const NewBaud : Integer);
     procedure SetParity(const NewParity : TParity);
     procedure SetDatabits(const NewBits : Word);
     procedure SetStopbits(const NewBits : Word);
@@ -468,7 +468,7 @@ type
       {-Remove a trigger}
     procedure RemoveAllTriggers;
       {-Remove all triggers}
-    procedure SetTimerTrigger(const Handle : Word; const Ticks : LongInt;
+    procedure SetTimerTrigger(const Handle : Word; const Ticks : Integer;
                               const Activate : Boolean);
       {-Activate or deactivate a timer trigger}
     procedure SetStatusTrigger(const Handle : Word; const Value : Word;
@@ -501,10 +501,10 @@ type
                             IgnoreCase : Boolean) : Boolean;
       {-Compare C against a sequence of chars, looking for S}
     function WaitForString(const S : AnsiString;
-                           const Timeout : LongInt;
+                           const Timeout : Integer;
                            const Yield, IgnoreCase : Boolean) : Boolean;
       {-Wait for S}
-    function WaitForMultiString(const S : AnsiString; const Timeout : LongInt;
+    function WaitForMultiString(const S : AnsiString; const Timeout : Integer;
                                 const Yield, IgnoreCase : Boolean;
                                 const SepChar : AnsiChar) : Integer;
       {-Wait for S, which contains several substrings separated by ^}
@@ -519,7 +519,7 @@ type
       read FDeviceLayer write SetDeviceLayer default adpoDefDeviceLayer;
     property ComWindow : THandle
       read fComWindow;
-    property Baud : LongInt
+    property Baud : Integer
       read FBaud write SetBaud default adpoDefBaudRt;
     property Parity : TParity
       read FParity write SetParity default adpoDefParity;
@@ -765,7 +765,7 @@ const
   {Main trigger handler}
 
   function ComWindowProc(hWindow : TApdHwnd; Msg, wParam : Word;
-                         lParam : Longint) : Longint;
+                         lParam : Integer) : Integer;
                          stdcall; export;
     {-Receives all triggers, dispatches to event handlers}
   type
@@ -928,7 +928,7 @@ var
     end;
   end;
 
-  procedure TApdCustomComPort.SetBaud(const NewBaud : Longint);
+  procedure TApdCustomComPort.SetBaud(const NewBaud : Integer);
     {-Set a new baud rate}
   begin
     if NewBaud <> FBaud then begin
@@ -2009,7 +2009,7 @@ var
     {-Physically open the comport}
   var
     Res : Integer;
-    nBaud     : LongInt;
+    nBaud     : Integer;
     nParity   : Word;
     nDataBits : TDatabits;
     nStopBits : TStopbits;
@@ -2586,7 +2586,7 @@ var
   end;
 
   procedure TApdCustomComPort.SetTimerTrigger(const Handle : Word;
-                                              const Ticks : LongInt;
+                                              const Ticks : Integer;
                                               const Activate : Boolean);
     {-Set the timer for trigger Index}
   begin
@@ -2735,7 +2735,7 @@ var
   end;
 
   function TApdCustomComPort.WaitForString(const S : AnsiString;
-                                           const Timeout : LongInt;
+                                           const Timeout : Integer;
                                            const Yield, IgnoreCase : Boolean)
                                            : Boolean;
     {-Wait for data, generate ETimeout exception if not found}
@@ -2833,7 +2833,7 @@ var
   end;
 
   function TApdCustomComPort.WaitForMultiString(const S : AnsiString;
-                                                const Timeout : LongInt;
+                                                const Timeout : Integer;
                                                 const Yield : Boolean;
                                                 const IgnoreCase : Boolean;
                                                 const SepChar : AnsiChar) : Integer;

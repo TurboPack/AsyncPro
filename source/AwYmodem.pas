@@ -64,8 +64,8 @@ procedure ypDonePart(P : PProtocolData);
 {Control}
 procedure ypPrepareTransmit(P : PProtocolData);
 procedure ypPrepareReceive(P : PProtocolData);
-procedure ypTransmit(Msg, wParam : Cardinal; lParam : LongInt);
-procedure ypReceive(Msg, wParam : Cardinal; lParam : LongInt);
+procedure ypTransmit(Msg, wParam : Cardinal; lParam : Integer);
+procedure ypReceive(Msg, wParam : Cardinal; lParam : Integer);
 
 implementation
 
@@ -186,7 +186,7 @@ const
   end;
 
   procedure ypTransmit(Msg, wParam : Cardinal;
-                      lParam : LongInt);
+                      lParam : Integer);
     {-Perform one increment of Ymodem batch transmit}
   label
     ExitPoint;
@@ -194,7 +194,7 @@ const
     TriggerID   : Cardinal absolute wParam;
     XState      : Cardinal;
     Finished    : Boolean;
-    StatusTicks : Longint;                                         
+    StatusTicks : Integer;
     ExitStateMachine : Boolean;
     I           : Integer;
     P           : PProtocolData;
@@ -566,7 +566,7 @@ const
     end;
   end;
 
-  procedure ypReceive(Msg, wParam : Cardinal; lParam : LongInt);
+  procedure ypReceive(Msg, wParam : Cardinal; lParam : Integer);
     {-Ymodem receive state machine}
   label
     ExitPoint;
@@ -579,9 +579,9 @@ const
     BlockSize   : Cardinal;
     BlockPos    : Integer;
     I           : Integer;
-    CurSize     : LongInt;
+    CurSize     : Integer;
     Finished    : Boolean;
-    StatusTicks : LongInt;                                        
+    StatusTicks : Integer;
     ExitStateMachine : Boolean;
     C           : AnsiChar;
     F           : File;

@@ -60,15 +60,15 @@ procedure spDonePart(P : PProtocolData);
 {Options}
 function spSetDelays(P : PProtocolData; CharDelay, LineDelay : Cardinal) : Integer;
 function spSetEOLChar(P : PProtocolData; C : AnsiChar) : Integer;
-function spGetLineNumber(P : PProtocolData) : LongInt;
+function spGetLineNumber(P : PProtocolData) : Integer;
 function spSetEOLTranslation(P : PProtocolData; CR, LF : Cardinal) : Integer;
-function spSetEOFTimeout(P : PProtocolData; NewTimeout : LongInt) : Integer;
+function spSetEOFTimeout(P : PProtocolData; NewTimeout : Integer) : Integer;
 
 {Control}
 procedure spPrepareTransmit(P : PProtocolData);
 procedure spPrepareReceive(P : PProtocolData);
-procedure spTransmit(Msg, wParam : Cardinal; lParam : LongInt);
-procedure spReceive(Msg, wParam : Cardinal; lParam : LongInt);
+procedure spTransmit(Msg, wParam : Cardinal; lParam : Integer);
+procedure spReceive(Msg, wParam : Cardinal; lParam : Integer);
 
 implementation
 
@@ -208,7 +208,7 @@ const
       end;
   end;
 
-  function spGetLineNumber(P : PProtocolData) : LongInt;
+  function spGetLineNumber(P : PProtocolData) : Integer;
     {-Return the current line number}
   begin
     with P^ do
@@ -231,7 +231,7 @@ const
       end;
   end;
 
-  function spSetEOFTimeout(P : PProtocolData; NewTimeout : LongInt) : Integer;
+  function spSetEOFTimeout(P : PProtocolData; NewTimeout : Integer) : Integer;
     {-Set the EOF timeout, in ticks}
   begin
     with P^ do
@@ -459,13 +459,13 @@ const
   end;
 
   procedure spTransmit(Msg, wParam : Cardinal;
-                     lParam : LongInt);
+                     lParam : Integer);
     {-Performs one increment of an ASCII transmit}
   var
     TriggerID   : Cardinal absolute wParam;
     P           : PProtocolData;
     Finished    : Boolean;
-    StatusTicks : LongInt;                                        
+    StatusTicks : Integer;
     Dispatcher      : TApdBaseDispatcher;
   begin
     Finished := False;                                                 {!!.01}
@@ -662,7 +662,7 @@ const
   end;
 
   procedure spReceive(Msg, wParam : Cardinal;
-                     lParam : LongInt);
+                     lParam : Integer);
     {-Performs one increment of an Ascii receive}
   label
     ExitPoint;
@@ -672,7 +672,7 @@ const
     BlockSize   : Cardinal;
     Finished    : Boolean;
     Handshake   : AnsiChar;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     Dispatcher  : TApdBaseDispatcher;
 
     procedure Cleanup(DisposeBuffers : Boolean);

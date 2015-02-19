@@ -86,7 +86,7 @@ const
 
 type
   QWORD = Int64;
-  LongWord = Longint; 
+  LongWord = Integer;
   SDATA = record
     pData : pointer;
     dwSize : DWORD;

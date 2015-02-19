@@ -286,7 +286,7 @@ type {RAS Connect status}
 type {RAS phonebook entry name}
   PRasEntryName = ^TRasEntryName;
   TRasEntryName = record
-    dwSize      : LongInt;
+    dwSize      : Integer;
     szEntryName : array [0..RasMaxEntryName] of Char;
   end;
   PRasEntryNameArray = ^TRasEntryNameArray;
@@ -331,8 +331,8 @@ type {RAS dial dialog information - AdRasDialDlg}
     dwSize     : DWord;
     hwndOwner  : Hwnd;
     dwFlags    : DWord;
-    xDlg       : Longint;
-    yDlg       : Longint;
+    xDlg       : Integer;
+    yDlg       : Integer;
     dwSubEntry : DWord;
     dwError    : DWord;
     reserved   : DWord;
@@ -346,8 +346,8 @@ type {RAS monitor dialog information - AdRasMonitorDlg}
     hwndOwner   : HWnd;
     dwFlags     : DWord;
     dwStartPage : DWord;
-    xDlg        : Longint;
-    yDlg        : Longint;
+    xDlg        : Integer;
+    yDlg        : Integer;
     dwError     : DWord;
     reserved    : DWord;
     reserved2   : DWord;
@@ -359,8 +359,8 @@ type {RAS phonebook dialog information - AdRasPhonebookDlg}
     dwSize : DWord;
     hwndOwner : HWnd;
     dwFlags : DWord;
-    xDlg : Longint;
-    yDlg : Longint;
+    xDlg : Integer;
+    yDlg : Integer;
     dwCallbackId : DWord;
     pCallback : FARPROC;
     dwError : DWord;

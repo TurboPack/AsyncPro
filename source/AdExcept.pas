@@ -356,11 +356,11 @@ type
   {$M+}
   EAdStreamError = class(EXML)
   private
-    seFilePos : Longint;
+    seFilePos : Integer;
   public
-    constructor CreateError(const FilePos : Longint;
+    constructor CreateError(const FilePos : Integer;
                             const Reason  : DOMString);
-    property FilePos : Longint
+    property FilePos : Integer
        read seFilePos;
   end;
   {$M-}
@@ -368,23 +368,23 @@ type
   EAdFilterError = class(EAdStreamError)
   private
     feReason  : DOMString;
-    feLine    : Longint;
-    feLinePos : Longint;
+    feLine    : Integer;
+    feLinePos : Integer;
   public
-    constructor CreateError(const FilePos, Line, LinePos : Longint;
+    constructor CreateError(const FilePos, Line, LinePos : Integer;
                             const Reason : DOMString);
     property Reason : DOMString
        read feReason;
-    property Line : Longint
+    property Line : Integer
        read feLine;
-    property LinePos : Longint
+    property LinePos : Integer
        read feLinePos;
   end;
 
   EAdParserError = class(EAdFilterError)
   protected
   public
-    constructor CreateError(Line, LinePos : Longint;
+    constructor CreateError(Line, LinePos : Integer;
                             const Reason : DOMString);
   end;
 

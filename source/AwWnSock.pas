@@ -168,8 +168,8 @@ type
     FWsTerminal : ansistring;
     SockSection : TRTLCriticalSection;
   protected
-    function DoDispMessage(Socket : TSocket; Event : Cardinal; LP : LongInt) : LongInt;
-    function DoWsMessage(Socket : TSocket; Event : Cardinal; LP : LongInt) : LongInt;
+    function DoDispMessage(Socket : TSocket; Event : Cardinal; LP : Integer) : Integer;
+    function DoWsMessage(Socket : TSocket; Event : Cardinal; LP : Integer) : Integer;
     procedure DoAccept(Socket : TSocket); override;
     procedure DoConnect(Socket : TSocket); override;
     procedure DoDisconnect(Socket : TSocket); override;
@@ -194,7 +194,7 @@ type
     WsIsClient : Boolean;
     WsIsTelnet : Boolean;
   protected
-    function EscapeComFunction(Func : Integer) : LongInt; override;
+    function EscapeComFunction(Func : Integer) : Integer; override;
     function FlushCom(Queue : Integer) : Integer; override;
     function GetComError(var Stat : TComStat) : Integer; override;
     function GetComEventMask(EvtMask : Integer) : Cardinal; override;
@@ -208,12 +208,12 @@ type
     function WaitComEvent(var EvtMask : DWORD;
       lpOverlapped : POverlapped) : Boolean; override;
     function Dispatcher(Msg : Cardinal;
-                         wParam : Cardinal; lParam : LongInt) : Cardinal;
+                         wParam : Cardinal; lParam : Integer) : Cardinal;
     function OutBufUsed: Cardinal; override;                                // SWB
     function InQueueUsed : Cardinal; override;                              // SWB
   public
     function CloseCom : Integer; override;
-    procedure InitSocketData(LocalAddress, Address : Longint; Port : Cardinal;
+    procedure InitSocketData(LocalAddress, Address : Integer; Port : Cardinal;
       IsClient, IsTelnet : Boolean);
     function OpenCom(ComName: PChar; InQueue,
       OutQueue : Cardinal) : Integer; override;
@@ -734,7 +734,7 @@ begin
       if FInEnd >= FInStart then
         Result := FInEnd - FInStart
       else
-        Result := LongInt(FInSize) - (FInStart - FInEnd);
+        Result := Integer(FInSize) - (FInStart - FInEnd);
   end;
 end;
 
@@ -1003,7 +1003,7 @@ begin
   inherited Destroy;
 end;
 
-function TApdDeviceSocket.DoDispMessage(Socket: TSocket; Event : Cardinal; LP : LongInt) : LongInt;
+function TApdDeviceSocket.DoDispMessage(Socket: TSocket; Event : Cardinal; LP : Integer) : Integer;
 var
   ComRec : Pointer;
 begin
@@ -1013,7 +1013,7 @@ begin
     Result := SendMessage(TApdBaseDispatcher(ComRec).DispatcherWindow, CM_APDSOCKETMESSAGE, Socket, LP);
 end;
 
-function TApdDeviceSocket.DoWsMessage(Socket : TSocket; Event : Cardinal; LP : LongInt) : LongInt;
+function TApdDeviceSocket.DoWsMessage(Socket : TSocket; Event : Cardinal; LP : Integer) : Integer;
 var
   ComRec : TApdBaseDispatcher;
 begin
@@ -1054,7 +1054,7 @@ begin
         ApdSocket.CloseSocket(TempSocket);
         Exit;
       end;
-      if DoWsMessage(Socket, FD_ACCEPT, LongInt(WsSockAddr.sin_addr)) = 1 then begin
+      if DoWsMessage(Socket, FD_ACCEPT, Integer(WsSockAddr.sin_addr)) = 1 then begin
         { Accept connection }
         ConnectionState := wcsConnected;
       end else begin
@@ -1224,7 +1224,7 @@ begin
   end;
 end;
 
-function TApdWinsockDispatcher.EscapeComFunction(Func : Integer) : LongInt;
+function TApdWinsockDispatcher.EscapeComFunction(Func : Integer) : Integer;
   { -Perform the extended comm function Func }
 begin
   Result := 0;
@@ -1372,7 +1372,7 @@ begin
 end;
 
 function TApdWinsockDispatcher.Dispatcher(Msg : Cardinal;
-                       wParam : Cardinal; lParam : LongInt) : Cardinal;
+                       wParam : Cardinal; lParam : Integer) : Cardinal;
   {-Dispatch Winsock functions}
 
 begin
@@ -1415,7 +1415,7 @@ begin
 end;
 
 function WsCommTimer(H : TApdHwnd; Msg, wParam : Cardinal;
-                      lParam : LongInt) : Cardinal; stdcall; export;
+                      lParam : Integer) : Cardinal; stdcall; export;
   {-Dispatch COMM functions}
 var
   I : Integer;
@@ -1430,7 +1430,7 @@ begin
   Result := 0;
 end;
 
-procedure TApdWinsockDispatcher.InitSocketData(LocalAddress, Address : Longint;
+procedure TApdWinsockDispatcher.InitSocketData(LocalAddress, Address : Integer;
                        Port : Cardinal; IsClient, IsTelnet : Boolean);
 begin
   {Init Winsock data}
@@ -1479,7 +1479,7 @@ begin
 end;
 
 function DispatcherWndFunc(hWindow : TApdHwnd; Msg, wParam : Cardinal;
-                           lParam : Longint) : Longint; stdcall; export;
+                           lParam : Integer) : Integer; stdcall; export;
   {-Window function for wm_CommNotify or cw_ApdSocketMessage messages}
 var
   I : Integer;

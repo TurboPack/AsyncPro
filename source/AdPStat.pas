@@ -127,7 +127,7 @@ uses
     MaxShowSize = 18;
   var
     Progress : Word;
-    Blocks   : LongInt;
+    Blocks   : Integer;
     R        : Double;
     CPS      : Double;
     Efficiency : Double;
@@ -149,15 +149,15 @@ uses
         psTotalBlocks.Caption := '0'
       else
         psTotalBlocks.Caption :=
-          IntToStr(FileLength div LongInt(BlockLength));            
+          IntToStr(FileLength div Integer(BlockLength));
 
       {Right top block}
       psBytesTransferred.Caption  := IntToStr(BytesTransferred);
       psBytesRemaining.Caption  := IntToStr(BytesRemaining);
       psBlocksTransferred.Caption :=
-        IntToStr(BytesTransferred div LongInt(BlockLength));         
+        IntToStr(BytesTransferred div Integer(BlockLength));
       Blocks :=
-        (BytesRemaining+LongInt(Pred(BlockLength))) div LongInt(BlockLength);
+        (BytesRemaining+Integer(Pred(BlockLength))) div Integer(BlockLength);
       psBlocksRemaining.Caption := IntToStr(Blocks);
       psBlockErrors.Caption     := IntToStr(BlockErrors);
       psTotalErrors.Caption     := IntToStr(TotalErrors);

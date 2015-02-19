@@ -190,7 +190,7 @@ var
 begin
   if Executed then begin
     {Update ComPort from dialog controls}
-    FComPort.Baud := LongInt(BaudValues[Bauds.ItemIndex]) * 10;
+    FComPort.Baud := Integer(BaudValues[Bauds.ItemIndex]) * 10;
     FComPort.Parity := TParity(Paritys.ItemIndex);
     FComPort.Databits := 8-Databits.ItemIndex;
     FComPort.Stopbits := Succ(Stopbits.ItemIndex);

@@ -120,12 +120,12 @@ implementation
 
 {$R *.DFM}
 
-procedure TempCallback(Device   : LongInt;
-                       Message  : LongInt;                          
-                       Instance : LongInt;
-                       Param1   : LongInt;
-                       Param2   : LongInt;
-                       Param3   : Longint); stdcall;
+procedure TempCallback(Device   : Integer;
+                       Message  : Integer;
+                       Instance : Integer;
+                       Param1   : Integer;
+                       Param2   : Integer;
+                       Param3   : Integer); stdcall;
 begin
 end;
 
@@ -158,7 +158,7 @@ var
   Count      : DWORD;
   LineApp    : TLineApp;
   LineExt    : TLineExtensionID;
-  ApiVersion : LongInt;
+  ApiVersion : Integer;
   LineCaps   : PLineDevCaps;
   S          : AnsiString;
   VS         : TVarString;

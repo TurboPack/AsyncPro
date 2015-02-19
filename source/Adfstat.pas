@@ -122,10 +122,10 @@ implementation
 
   end;
 
-  function FormatMinSec(const TotalSecs : LongInt) : String;
+  function FormatMinSec(const TotalSecs : Integer) : String;
     {-Format TotalSecs as minutes:seconds, leftpadded to 6}
   var
-    Min, Sec : LongInt;
+    Min, Sec : Integer;
     S : ShortString;
   begin
     Min := TotalSecs div 60;

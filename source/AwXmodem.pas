@@ -72,10 +72,10 @@ function xpSetXmodemFinishWait(P : PProtocolData; NewFinishWait : Cardinal) : In
 {Control}
 procedure xpPrepareTransmit(P : PProtocolData);
 procedure xpPrepareReceive(P : PProtocolData);
-function xpTransmitPrim(Msg, wParam : Cardinal; lParam : LongInt) : LongInt;
-procedure xpTransmit(Msg, wParam : Cardinal; lParam : LongInt);
-function xpReceivePrim(Msg, wParam : Cardinal; lParam : LongInt) : LongInt;
-procedure xpReceive(Msg, wParam : Cardinal; lParam : LongInt);
+function xpTransmitPrim(Msg, wParam : Cardinal; lParam : Integer) : Integer;
+procedure xpTransmit(Msg, wParam : Cardinal; lParam : Integer);
+function xpReceivePrim(Msg, wParam : Cardinal; lParam : Integer) : Integer;
+procedure xpReceive(Msg, wParam : Cardinal; lParam : Integer);
 
 {Internal (but used by AWYMODEM)}
 function xpPrepHandshake(P : PProtocolData) : Boolean;
@@ -848,7 +848,7 @@ const
   end;
 
   function xpTransmitPrim(Msg, wParam : Cardinal;
-                      lParam : LongInt) : LongInt;
+                      lParam : Integer) : Integer;
     {-Perform one increment of an Xmodem transmit}
   var
     TriggerID   : Cardinal absolute wParam;
@@ -857,7 +857,7 @@ const
     BufSize     : Cardinal;
     Finished    : Bool;
     C           : AnsiChar;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     ValidDispatcher      : TApdBaseDispatcher;
 
     procedure PrepSendBlock;
@@ -1213,7 +1213,7 @@ const
     end;
   end;
 
-  procedure xpTransmit(Msg, wParam : Cardinal; lParam : LongInt);
+  procedure xpTransmit(Msg, wParam : Cardinal; lParam : Integer);
   begin
     xpTransmitPrim(Msg, wParam, lParam);
   end;
@@ -1233,7 +1233,7 @@ const
   end;
 
   function xpReceivePrim(Msg, wParam : Cardinal;
-                     lParam : LongInt) : LongInt;
+                     lParam : Integer) : Integer;
     {-Performs one increment of an Xmodem receive}
   label
     ExitPoint;
@@ -1243,7 +1243,7 @@ const
     DataPtr     : PDataBlock;
     Finished    : Boolean;
     C           : AnsiChar;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     ValidDispatcher      : TApdBaseDispatcher;
 
     procedure Cleanup(DisposeBuffers : Boolean);
@@ -1560,7 +1560,7 @@ const
     end;
   end;
 
-  procedure xpReceive(Msg, wParam : Cardinal; lParam : LongInt);
+  procedure xpReceive(Msg, wParam : Cardinal; lParam : Integer);
   begin
     xpReceivePrim(Msg, wParam, lParam);
   end;

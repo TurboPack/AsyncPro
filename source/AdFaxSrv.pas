@@ -342,7 +342,7 @@ type
     FDesiredBPS: Word;
     FDesiredECM: Boolean;
     FDetectBusy: Boolean;
-    FPageLength: LongInt;
+    FPageLength: Integer;
     FDelayBetweenSends: Word;
     FServerManager: TApdFaxServerManager;
     FSendQueryInterval: Integer;
@@ -411,15 +411,15 @@ type
     procedure SetEnhHeaderFont(const Value: TFont);
     procedure SetEnhTextEnabled(const Value: Boolean);
     procedure SetTapiDevice(const Value: TApdCustomTapiDevice);
-    function GetPageLength: LongInt;
-    function GetBytesTransferred: LongInt;
+    function GetPageLength: Integer;
+    function GetBytesTransferred: Integer;
     function GetCurrentPage: Word;
     function GetDialAttempt: Word;
     function GetDialAttempts: Word;
     function GetElapsedTime: DWORD;                                      {!!.02}
     function GetFaxProgress: Word;
     function GetHangupCode: Word;
-    function GetModemBPS: LongInt;
+    function GetModemBPS: Integer;
     function GetModemChip: string;
     function GetModemECM: Boolean;
     function GetModemModel: string;
@@ -510,7 +510,7 @@ type
       read FSendQueryInterval write SetSendQueryInterval;
 
     { general read-only properties }
-    property BytesTransferred: LongInt
+    property BytesTransferred: Integer
       read GetBytesTransferred;
     property CurrentPage: Word
       read GetCurrentPage;
@@ -520,7 +520,7 @@ type
       read GetFaxProgress;
     property HangupCode: Word
       read GetHangupCode;
-    property ModemBPS: LongInt
+    property ModemBPS: Integer
       read GetModemBPS;
     property ModemChip: string
       read GetModemChip;
@@ -530,7 +530,7 @@ type
       read GetModemModel;
     property ModemRevision: string
       read GetModemRevision;
-    property PageLength: LongInt
+    property PageLength: Integer
       read GetPageLength;
     property RemoteID: string
       read GetRemoteID;
@@ -1225,7 +1225,7 @@ begin
   FServerManager.Paused := OldPaused;                                    {!!.02}
 end;
 
-function TApdCustomFaxServer.GetBytesTransferred: LongInt;
+function TApdCustomFaxServer.GetBytesTransferred: Integer;
 begin
   if FFaxServerMode = fsmSend then
     Result := FSendFax.BytesTransferred
@@ -1278,7 +1278,7 @@ begin
     Result := 0;
 end;
 
-function TApdCustomFaxServer.GetModemBPS: LongInt;
+function TApdCustomFaxServer.GetModemBPS: Integer;
 begin
   if FFaxServerMode = fsmSend then
     Result := FSendFax.ModemBPS
@@ -1328,7 +1328,7 @@ begin
     Result := ''
 end;
 
-function TApdCustomFaxServer.GetPageLength: LongInt;
+function TApdCustomFaxServer.GetPageLength: Integer;
 var
   F: File;
 begin

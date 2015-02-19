@@ -431,7 +431,7 @@ type
   {Protocol notification function}
   TProtocolFunc = procedure(
                            Msg, wParam : Cardinal;
-                           lParam : LongInt);
+                           lParam : Integer);
 
   {Hook types}
   PrepFinishProc = procedure(P : PProtocolData);
@@ -501,10 +501,10 @@ type
     aProtocolStatus      : Cardinal;        {Holds last status}
     aLastBlockSize       : Cardinal;        {Last blocksize}
     aProtocolError       : Integer;         {Holds last error}
-    aSrcFileLen          : LongInt;         {Size of file (in bytes)}
-    aSrcFileDate         : LongInt;         {Timestamp of source file}
+    aSrcFileLen          : Integer;         {Size of file (in bytes)}
+    aSrcFileDate         : Integer;         {Timestamp of source file}
     aBlockCheck          : DWORD;           {Block check value}
-    aInitFilePos         : LongInt;         {Initial file pos during resumes}
+    aInitFilePos         : Integer;         {Initial file pos during resumes}
     aReplyTimer          : EventTimer;      {Track timeouts waiting replies}
     aDataBlock           : PDataBlock;      {Working data block}
     aCurProtFunc         : TProtocolFunc;   {Protocol function}
@@ -522,9 +522,9 @@ type
     aStatusInterval      : Cardinal;        {Ticks between status updates}
     aSaveStatus          : Cardinal;        {Save status at various points}
     aSaveError           : Integer;         {Save error at various points}
-    aBytesRemaining      : LongInt;         {Bytes not yet transferred}
-    aBytesTransferred    : LongInt;         {Bytes already transferred}
-    aElapsedTicks        : LongInt;         {Elapseds Ticks as of last block}
+    aBytesRemaining      : Integer;         {Bytes not yet transferred}
+    aBytesTransferred    : Integer;         {Bytes already transferred}
+    aElapsedTicks        : Integer;         {Elapseds Ticks as of last block}
     aStatusTimer         : EventTimer;      {How often to show status}
     aTimer               : EventTimer;      {Used to time a transfer}
 
@@ -535,11 +535,11 @@ type
     aLastBlock           : Bool;            {True at eof}
     aBlkIndex            : Cardinal;        {Index into received chars in DataBlock}
     aWriteFailOpt        : Integer;         {Rules for overwriting files}
-    aStartOfs            : LongInt;         {Holds starting offset of file}
-    aEndOfs              : LongInt;         {Holds ending offset of file}
-    aLastOfs             : LongInt;         {FileOfs of last Get/Put}
-    aFileOfs             : LongInt;         {Current file offset}
-    aEndOfDataOfs        : LongInt;         {Ofs of buffer of end-of-file}
+    aStartOfs            : Integer;         {Holds starting offset of file}
+    aEndOfs              : Integer;         {Holds ending offset of file}
+    aLastOfs             : Integer;         {FileOfs of last Get/Put}
+    aFileOfs             : Integer;         {Current file offset}
+    aEndOfDataOfs        : Integer;         {Ofs of buffer of end-of-file}
     aFileBuffer          : PFileBuffer;     {For reading/writing files}
     aSaveMode            : Cardinal;        {For saving file mode}
 
@@ -597,8 +597,8 @@ type
         xJunk            : Byte;            {Keep Cardinal aligned}
 
         {Unique Ymodem fields}
-        ySaveLen         : LongInt;         {Saved file length}
-        yNewDT           : LongInt;         {Date/time stamp}
+        ySaveLen         : Integer;         {Saved file length}
+        yNewDT           : Integer;         {Date/time stamp}
         ySaveName        : TPathCharArrayA;  {Saved file name}
         yFileHeader      : PDataBlock;      {Needed for file name block}
         y128BlockMode    : Bool;            {True to force 128 byte blocks}{!!.06}
@@ -633,7 +633,7 @@ type
         zHexChar         : Cardinal;        {Saved hex value}
         zCrcCnt          : Cardinal;        {Number of CRC bytes rcv'd}
         zOCnt            : Cardinal;        {Number of 'O's rcv'd}
-        zLastFileOfs     : LongInt;         {File position reported by remote}
+        zLastFileOfs     : Integer;         {File position reported by remote}
         zAttentionStr    : array[1..MaxAttentionLen] of Byte; {Attn string value}
         zEscapeControl   : Boolean;         {User request to escape all ctl}// SWB
 
@@ -644,7 +644,7 @@ type
 
         {Working buffers}
         zDataBlockLen    : Cardinal;        {Count of valid data in DataBlock}
-        zDataInTransit   : LongInt;         {Amount of unacked data in transit}
+        zDataInTransit   : Integer;         {Amount of unacked data in transit}
         zWorkBlock       : PWorkBlock;      {Holds fully escaped data block}
 
         {Receiving...}
@@ -655,7 +655,7 @@ type
         zRcvBuffLen      : Cardinal;        {Size of receiver's buffer}
         zLastChar        : AnsiChar;            {Last character sent}
         zTransHeader     : TPosFlags;       {Header to transmit}
-        zZRQINITValue    : LongInt);        {Optional ZRQINIT value}
+        zZRQINITValue    : Integer);        {Optional ZRQINIT value}
 
       Kermit : (
         {General}
@@ -709,7 +709,7 @@ type
         kGetLong         : Bool;            {True for long header}
         kLongCheck       : Integer;         {Long header checksum}
         kSaveCheck2      : Cardinal;        {Save incoming check between states}
-        kSaveCheck       : LongInt);        {Save incoming check between states}
+        kSaveCheck       : Integer);        {Save incoming check between states}
 
       BPlus : (
         bSaveC           : AnsiChar;            {Save last char between states}
@@ -738,7 +738,7 @@ type
         bSAMax           : Integer;         {Highest current sendahead cnt}
         bSAWaiting       : Integer;         {# of packets outstanding ACKs}
         bSAErrors        : Integer;         {Keep track of SendAhead errors}
-        bRPackets        : LongInt;         {Packets received}
+        bRPackets        : Integer;         {Packets received}
         bRBuffer         : PBPDataBlock;    {Receive buffer}
         bSBuffer         : TSPackets;       {Send buffers}
         bQuoteTable      : TQuoteTable;     {Active quoting table}

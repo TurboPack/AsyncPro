@@ -77,7 +77,7 @@ type
     case Integer of
       0 : (S_un_b : SunB);
       1 : (S_un_w : SunW);
-      2 : (S_addr : LongInt);
+      2 : (S_addr : Integer);
   end;}
 
   TApdSocksVersion = (svNone, svSocks4, svSocks4a, svSocks5);
@@ -138,7 +138,7 @@ type
   protected
     function ActivateDeviceLayer : TApdBaseDispatcher; override;
     procedure DeviceLayerChanged; override;
-    function  DoAccept(Addr : LongInt) : Boolean; virtual;
+    function  DoAccept(Addr : Integer) : Boolean; virtual;
     procedure DoConnect; virtual;
     procedure DoDisconnect; virtual;
     procedure DoError(ErrCode : Integer); virtual;
@@ -349,7 +349,7 @@ begin
     TapiMode := tmAuto;
 end;
 
-function TApdCustomWinsockPort.DoAccept(Addr : LongInt): Boolean;
+function TApdCustomWinsockPort.DoAccept(Addr : Integer): Boolean;
 begin
   Result := True;
   if Assigned(FOnWsAccept) then FOnWsAccept(Self, TInAddr(Addr), Result);
@@ -480,7 +480,7 @@ begin
       case wParam of
         FD_CONNECT : DoConnect;
         FD_CLOSE   : PostMessage(ComWindow, CM_APDSOCKETQUIT, 0, 0);
-        FD_ACCEPT  : Result := LongInt(DoAccept(LParam));
+        FD_ACCEPT  : Result := Integer(DoAccept(LParam));
         FD_CLOSE or FD_CONNECT : DoDisconnect;
       else
         DoError(wParam);
@@ -496,7 +496,7 @@ begin
   if (Assigned(FSockInstance)) then                                         // SWB
     FreeObjectInstance(FSockInstance);                                      // SWB
   FSockInstance := MakeObjectInstance(SockWndProc);
-  FComWindowProc := Pointer(SetWindowLong(ComWindow, GWL_WNDPROC, LongInt(FSockInstance)));
+  FComWindowProc := Pointer(SetWindowLong(ComWindow, GWL_WNDPROC, Integer(FSockInstance)));
   { Perform the SOCKS negotiation }
   if WsSocksServerInfo.SocksVersion <> svNone then
     ContinueSocksNegotiation;

@@ -423,7 +423,7 @@ type
     procedure SetPort(ThePort: TApdCustomComPort); override;
     procedure TerminatePage; override;                                   {!!.02}
 
-    procedure DataTriggerHandler(Msg, wParam: Cardinal; lParam: LongInt);
+    procedure DataTriggerHandler(Msg, wParam: Cardinal; lParam: Integer);
 
     procedure FreeLoginTriggers;
     procedure FreeLogoutTriggers;
@@ -1195,10 +1195,10 @@ end;                                                                     {!!.02}
 
 { TApdTAPPager }
 
-function SumChars(const S: AnsiString): LongInt;
+function SumChars(const S: AnsiString): Integer;
 {sum ASCII values of chars in string (for checksum)}
 var
-  Ct,CurChar: LongInt;
+  Ct,CurChar: Integer;
 begin
   Result := 0;
   for Ct := 1 to Length(S) do begin
@@ -1208,9 +1208,9 @@ begin
   end;
 end;
 
-function CheckSum(N: LongInt): AnsiString;
+function CheckSum(N: Integer): AnsiString;
 var
-  Sum, nTemp: LongInt;
+  Sum, nTemp: Integer;
   Chr1,Chr2,Chr3: AnsiChar;
 begin
   Sum := N;
@@ -1229,7 +1229,7 @@ begin
   Result := Chr1 + Chr2 + Chr3;
 end;
 
-function CheckSumUni(N: LongInt): string;
+function CheckSumUni(N: Integer): string;
 begin
   Result := string(CheckSum(N));
 end;
@@ -1627,7 +1627,7 @@ begin
   FreeTrigger(FPort,FtrgMsgRs,    HandleToTrigger(FtrgMsgRs));
 end;
 
-procedure TApdTAPPager.DataTriggerHandler(Msg, wParam: Cardinal; lParam: LongInt);
+procedure TApdTAPPager.DataTriggerHandler(Msg, wParam: Cardinal; lParam: Integer);
 var
   Done : Boolean;
   I : Integer;

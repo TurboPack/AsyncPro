@@ -173,7 +173,7 @@ const
   KBHashTableSize = 57;    {keyboard mapping hash table size}
   CSHashTableSize = 199;   {charset mapping hash table size}
 
-  OurSignature : longint = $33544841;
+  OurSignature : Integer = $33544841;
     {Note: $33544841 = AHT3 = APRO Hash Table, version 3}
 
 
@@ -209,8 +209,8 @@ const
 type
   TCharQueue = class
     private
-      FSize : longint;
-      FLen  : longint;
+      FSize : Integer;
+      FLen  : Integer;
       FText : PAnsiChar;
     protected
       function cqGetDupText : PAnsiChar;
@@ -274,15 +274,15 @@ end;
        For Programmers" by Andrew Binstock and John Rex, Addison
        Wesley, with modifications in Dr Dobbs Journal, April 1996.
        They're modified to suit this implementation.}
-function HashELF(const S : TAdKeyString) : longint;
+function HashELF(const S : TAdKeyString) : Integer;
 var
-  G : longint;
+  G : Integer;
   i : integer;
 begin
   Result := 0;
   for i := 1 to length(S) do begin
     Result := (Result shl 4) + ord(S[i]);
-    G := Result and longint($F0000000);
+    G := Result and Integer($F0000000);
     if (G <> 0) then
       Result := Result xor (G shr 24);
     Result := Result and (not G);
@@ -290,19 +290,19 @@ begin
 end;
 {--------}
 function HashELFPlusChar(const S : TAdKeyString;
-                               C : AnsiChar) : longint;
+                               C : AnsiChar) : Integer;
 var
-  G : longint;
+  G : Integer;
   i : integer;
 begin
   Result := ord(C);
-  G := Result and longint($F0000000);
+  G := Result and Integer($F0000000);
   if (G <> 0) then
     Result := Result xor (G shr 24);
   Result := Result and (not G);
   for i := 1 to length(S) do begin
     Result := (Result shl 4) + ord(S[i]);
-    G := Result and longint($F0000000);
+    G := Result and Integer($F0000000);
     if (G <> 0) then
       Result := Result xor (G shr 24);
     Result := Result and (not G);
@@ -648,9 +648,9 @@ var
   ResNameZ  : PChar;
   Res       : PByteArray;
   i         : integer;
-  Sig       : longint;
-  ResCount  : longint;
-  BytesRead : longint;
+  Sig       : Integer;
+  ResCount  : Integer;
+  BytesRead : Integer;
   Key       : TAdKeyString;
   Value     : TAdKeyString;
 begin
@@ -1086,9 +1086,9 @@ var
   ResNameZ  : PChar;
   Res       : PByteArray;
   i         : integer;
-  Sig       : longint;
-  ResCount  : longint;
-  BytesRead : longint;
+  Sig       : Integer;
+  ResCount  : Integer;
+  BytesRead : Integer;
   CharSet   : TAdKeyString;
   Font      : TAdKeyString;
   Ch        : AnsiChar;

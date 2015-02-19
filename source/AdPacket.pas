@@ -140,7 +140,7 @@ type
     procedure DisablePackets;
      {- Shut off data capture for all attached packets}
     procedure PacketTriggerHandler(Msg, wParam : Cardinal;
-                                 lParam : Longint);
+                                 lParam : Integer);
      {- process messages from dispatcher}
     procedure PortOpenClose(CP : TObject; Opening : Boolean);
      {- Event handler for the port open/close event}
@@ -267,7 +267,7 @@ type
     procedure Disable;
      {- Disable the packet}
 
-    procedure TriggerHandler(Msg, wParam : Cardinal; lParam : Longint);  {!!.04}
+    procedure TriggerHandler(Msg, wParam : Cardinal; lParam : Integer);  {!!.04}
      {- process messages from dispatcher, only used for the EnableTimeout}
   public
     constructor Create(AOwner : TComponent); override;
@@ -624,7 +624,7 @@ begin
 end;
 
 procedure TApdDataPacketManager.PacketTriggerHandler(Msg, wParam : Cardinal;
-                                 lParam : Longint);
+                                 lParam : Integer);
 var
   NewDataStart : Integer;
 begin
@@ -1436,7 +1436,7 @@ end;
 function TApdDataPacket.WaitForString(var Data : AnsiString) : Boolean;      {!!.01}
   { waits for the data match or timeout }
 var
-  Res : LongInt;
+  Res : Integer;
 begin
   AutoEnable := False;
   Enabled := True;
@@ -1459,7 +1459,7 @@ function TApdDataPacket.WaitForPacket(var Data: Pointer;                 {!!.01}
   var Size: Integer): Boolean;
   { Data and Size are returned and valid if Result is True }
 var
-  Res : LongInt;
+  Res : Integer;
 begin
   AutoEnable := False;
   Enabled := True;

@@ -119,14 +119,14 @@ type
   TTapiStatusEvent = procedure(CP : TObject;
                                First, Last : Boolean;
                                Device, Message,
-                               Param1, Param2, Param3 : LongInt) of object;
+                               Param1, Param2, Param3 : Integer) of object;
 
   {TAPI log event}
   TTapiLogEvent = procedure(CP : TObject; Log : TTapiLogCode) of object;
 
   {TAPI DTMF event}
   TTapiDTMFEvent = procedure(CP : TObject; Digit : Char;
-    ErrorCode: LongInt) of object;
+    ErrorCode: Integer) of object;
 
   {TAPI Caller ID event}
   TTapiCallerIDEvent =
@@ -206,9 +206,9 @@ type
     SelectedLine       : Integer;          {Device ID of selected line}
     VS                 : TVarString;       {Used to return Cid}
     DialTimer          : TTimer;           {Timer component}
-    RequestedId        : LongInt;          {ID being waited for}
-    AsyncReply         : LongInt;          {Requested reply}
-    CallState          : LongInt;          {Received CallState}
+    RequestedId        : Integer;          {ID being waited for}
+    AsyncReply         : Integer;          {Requested reply}
+    CallState          : Integer;          {Received CallState}
     ReplyReceived      : Boolean;          {True if Line Reply received}
     CallStateReceived  : Boolean;          {True if CallState received}
     TapiInUse          : Boolean;          {True means a call is active}
@@ -226,8 +226,8 @@ type
     WaveInHeader       : PWaveHdr;         {Wave header for recording}
     WaveOutHandle      : HWaveOut;         {Handle of the wave out device}
     WaveInHandle       : HWaveIn;          {Handle of the wave in  device}
-    BytesRecorded      : LongInt;          {Bytes recorded for this buffer}
-    TotalBytesRecorded : LongInt;          {Bytes recorded overall }
+    BytesRecorded      : Integer;          {Bytes recorded for this buffer}
+    TotalBytesRecorded : Integer;          {Bytes recorded overall }
     WaveInBuffer1      : Pointer;          {Buffer for wave recording}
     WaveInBuffer2      : Pointer;          {Buffer for wave recording}
     WaveOutBuffer1     : Pointer;          {Buffer for wave playing  }
@@ -241,21 +241,21 @@ type
     Channels           : Byte;             {# of channels for recording}
     BitsPerSample      : Byte;             {Bits per sample for recording}
     SamplesPerSecond   : Integer;          {Samples per sec for recording}
-    WaveInBufferSize   : LongInt;          {# of bytes in a wave in buffer}
-    BytesToPlay        : LongInt;          {# of bytes in the wave file}
-    BytesPlayed        : LongInt;          {# of bytes already played}
-    BytesInBuffer      : LongInt;          {# of bytes in current buffer}
+    WaveInBufferSize   : Integer;          {# of bytes in a wave in buffer}
+    BytesToPlay        : Integer;          {# of bytes in the wave file}
+    BytesPlayed        : Integer;          {# of bytes already played}
+    BytesInBuffer      : Integer;          {# of bytes in current buffer}
     ActiveWaveOutBuffer: Byte;             {The active wave out buffer}
-    WaveOutBufferSize  : LongInt;          {# of bytes in wave out buffer}
+    WaveOutBufferSize  : Integer;          {# of bytes in wave out buffer}
 
     {private data stores}
     FAvgWaveInAmplitude: Integer;         {Average amplitude for recording}
     FCancelled      : Boolean;            {True if call was cancelled}
     FDialing        : Boolean;            {True when dialing, False not}
-    FDialTime       : LongInt;            {Elapsed dial time}
+    FDialTime       : Integer;            {Elapsed dial time}
     FTapiDevices    : TStrings;           {List of tapi device names}
     FSelectedDevice : string;             {Name of selected device}
-    FApiVersion     : LongInt;            {Negotiated version}
+    FApiVersion     : Integer;            {Negotiated version}
     FDeviceCount    : DWORD;              {Number of supported TAPI devices}
     FTrueDeviceCount: DWORD;              {Total number of TAPI devices}
     FOpen           : Boolean;            {True to open a line device}
@@ -272,7 +272,7 @@ type
     FShowTapiDevices: Boolean;            {Show TAPI devices}
     FShowPorts      : Boolean;            {Show ports}
     FEnableVoice    : Boolean;            {Monitor DTMF Tones if capable}
-    FMaxMessageLength : LongInt;          {Max message length for wave recording}
+    FMaxMessageLength : Integer;          {Max message length for wave recording}
     FWaveFileName   : TFileName;          {Wave file name}
     FInterruptWave  : Boolean;            {Stops playing wave file on DTMF tone}
     FHandle         : HWnd;               {Window handle for hidden window}
@@ -299,30 +299,30 @@ type
     FOnTapiWaveSilence : TTapiWaveSilence;
 
     {Callback virtual methods}
-    procedure DoLineCallInfo(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineCallState(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineClose(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineCreate(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineDevState(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineGenerate(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineMonitorDigits(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineMonitorMedia(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineMonitorTone(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineReply(Device, P1, P2, P3 : LongInt); virtual;
-    procedure DoLineRequest(Device, P1, P2, P3 : LongInt); virtual;
+    procedure DoLineCallInfo(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineCallState(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineClose(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineCreate(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineDevState(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineGenerate(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineMonitorDigits(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineMonitorMedia(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineMonitorTone(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineReply(Device, P1, P2, P3 : Integer); virtual;
+    procedure DoLineRequest(Device, P1, P2, P3 : Integer); virtual;
 
-    function HandleLineErr(LineErr : LongInt): Boolean;
+    function HandleLineErr(LineErr : Integer): Boolean;
     function HangupCall(AbortRetries : Boolean) : Boolean;
-    procedure UpdateCallInfo(Device : LongInt);
-    function WaitForCallState(DesiredCallState : LongInt) : LongInt;
-    function WaitForReply(ID : LongInt) : LongInt;
+    procedure UpdateCallInfo(Device : Integer);
+    function WaitForCallState(DesiredCallState : Integer) : Integer;
+    function WaitForReply(ID : Integer) : Integer;
 
     {Property access methods}
     procedure SetOpen(NewOpen : Boolean);
 
     {Private methods}
     procedure AssureTapiReady;
-    function  CidFromTapiDevice : LongInt;
+    function  CidFromTapiDevice : Integer;
     procedure CheckVoiceCapable;
     procedure CheckWaveException(ErrorCode : Integer; Mode : Integer);
     procedure CheckWaveInSilence;
@@ -337,8 +337,8 @@ type
     function  GetSelectedLine : Integer;
     function  GetWaveDeviceId(const Play : Boolean) : DWORD;
     procedure LoadWaveOutBuffer;
-    procedure MonitorDTMF(var CallHandle: LongInt;
-      const DTMFMode: LongInt);
+    procedure MonitorDTMF(var CallHandle: Integer;
+      const DTMFMode: Integer);
     procedure OpenTapiPort;
     procedure OpenWaveFile;
     procedure PlayWaveOutBuffer;
@@ -378,7 +378,7 @@ type
     procedure TapiPortClose;
     procedure TapiConnect;
     procedure TapiFail;
-    procedure TapiDTMF(Digit : Char; ErrorCode: LongInt);
+    procedure TapiDTMF(Digit : Char; ErrorCode: Integer);
     procedure TapiCallerID(ID, IDName: string);
     procedure TapiWave(Msg : TWaveMessage);
 
@@ -409,7 +409,7 @@ type
       {-Allocate and return a CallInfo structure with current callinfo}
     function GetDevConfig : TTapiConfigRec;
       {-Gets configuration string that can be used with SetDevConfig}
-    function MontorTones(const Tones : array of TLineMonitorTones) : LongInt;
+    function MontorTones(const Tones : array of TLineMonitorTones) : Integer;
       {-Monitor for specific tones }
     procedure SetDevConfig(const Config : TTapiConfigRec);
       {-Sets config, requires string from GetDevConfig or ShowConfigDialogEdit }
@@ -447,17 +447,17 @@ type
     function  FailureCodeMsg(const FailureCode : Integer) : string;
     function  TranslateAddress(CanonicalAddr : AnsiString) : AnsiString;
     function  TranslateAddressEx(CanonicalAddr : Ansistring;
-                                 Flags : LongInt;
+                                 Flags : Integer;
                                  var DialableStr : Ansistring;
                                  var DisplayableStr : Ansistring;
-                                 var CurrentCountry : LongInt;
-                                 var DestCountry : LongInt;
-                                 var TranslateResults : LongInt) : LongInt;
+                                 var CurrentCountry : Integer;
+                                 var DestCountry : Integer;
+                                 var TranslateResults : Integer) : Integer;
     function  TranslateDialog(CanonicalAddr : string) : Boolean;
     function  TapiLogToString(const LogCode: TTapiLogCode) : string;
 
     {read-only properties}
-    property ApiVersion : LongInt
+    property ApiVersion : Integer
       read FApiVersion;
     property Attempt : Word
       read FAttempt;
@@ -530,7 +530,7 @@ type
       read GetTapiState;
     property WaveFileName : TFileName
       read FWaveFileName;
-    property MaxMessageLength : LongInt
+    property MaxMessageLength : Integer
       read FMaxMessageLength write FMaxMessageLength
       default DefMaxMessageLength;
     property WaveState : TWaveState
@@ -689,7 +689,7 @@ var
 
 {General purpose routines}
 
-  function TapiErrorCode(ErrorCode : LongInt) : LongInt;
+  function TapiErrorCode(ErrorCode : Integer) : Integer;
     {-Return an APW error code from a TAPI error code}
   begin
     if ErrorCode = 0  then
@@ -699,7 +699,7 @@ var
   end;
 
   procedure TapiException(const Ctl : TComponent;
-                          const Res : LongInt);
+                          const Res : Integer);
     {-Decode the TAPI result and call CheckException}
   begin
     CheckException(Ctl, -TapiErrorCode(Res));
@@ -906,15 +906,15 @@ type
     HexW[4] := Digits[lo(W) and $F];
   end;
 
-  function HexL(L : LongInt) : ShortString;
-    {-Return hex string for LongInt}
+  function HexL(L : Integer) : ShortString;
+    {-Return hex string for Integer}
   begin
     with Long(L) do
       HexL := HexW(HighWord)+HexW(LowWord);
   end;
 {$ENDIF}
 
-  procedure GenCallback(Device, Message, Instance, Param1, Param2, Param3 : LongInt);
+  procedure GenCallback(Device, Message, Instance, Param1, Param2, Param3 : Integer);
     stdcall;
   var
     TP : TApdTapiDevice absolute Instance;
@@ -1040,7 +1040,7 @@ type
     Result := FindTapiLog(C);
   end;
 
-  procedure TApdCustomTapiDevice.DoLineReply(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineReply(Device, P1, P2, P3 : Integer);
   begin
     if (RequestedId = P1) then begin
       ReplyReceived := True;
@@ -1048,7 +1048,7 @@ type
     end;
   end;
 
-  procedure TApdCustomTapiDevice.DoLineCallInfo(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineCallInfo(Device, P1, P2, P3 : Integer);
   begin
     { Update the CallInfo record }
     UpdateCallInfo(Device);
@@ -1062,7 +1062,7 @@ type
     TapiStatus(False, False, Device, Line_CallInfo, P1, P2, P3);         {!!.04}
   end;
 
-  procedure TApdCustomTapiDevice.DoLineCallState(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineCallState(Device, P1, P2, P3 : Integer);
   const
     OurMediaModes : array[Boolean] of DWORD = ((LINEMEDIAMODE_UNKNOWN or
       LINEMEDIAMODE_DATAMODEM or LINEMEDIAMODE_G3FAX),
@@ -1203,7 +1203,7 @@ type
     end;
   end;
 
-  procedure TApdCustomTapiDevice.DoLineClose(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineClose(Device, P1, P2, P3 : Integer);
   begin
     LineHandle := 0;
     CallHandle := 0;
@@ -1215,7 +1215,7 @@ type
     HangupCall(True);
   end;
 
-  procedure TApdCustomTapiDevice.DoLineDevState(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineDevState(Device, P1, P2, P3 : Integer);
   begin
     case P1 of
       LineDevState_Ringing : begin
@@ -1296,7 +1296,7 @@ type
     end;
   end;
 
-  procedure TApdCustomTapiDevice.DoLineCreate(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineCreate(Device, P1, P2, P3 : Integer);
   begin
     if (FDeviceCount <= DWORD(P1)) then
       FDeviceCount := P1 + 1;
@@ -1306,7 +1306,7 @@ type
     {$ENDIF}
   end;
 
-  procedure TApdCustomTapiDevice.DoLineMonitorDigits(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineMonitorDigits(Device, P1, P2, P3 : Integer);
   begin
     { A digit is detected and is available as an ASCII value in the low }
     { order byte of P1. Convert ASCII to character for OnTapiDTMF event }
@@ -1314,30 +1314,30 @@ type
     TapiLogging(ltapiReceivedDigit);
   end;
 
-  procedure TApdCustomTapiDevice.DoLineGenerate(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineGenerate(Device, P1, P2, P3 : Integer);
   begin
     { Do nothing, this event indicates the end of digit generation }
   end;
 
-  procedure TApdCustomTapiDevice.DoLineMonitorMedia(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineMonitorMedia(Device, P1, P2, P3 : Integer);
   begin
     { Generate the OnTapiStatus event }
     TapiStatus(False, False, Device, Line_MonitorMedia, P1, P2, P3);
   end;
 
-  procedure TApdCustomTapiDevice.DoLineMonitorTone(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineMonitorTone(Device, P1, P2, P3 : Integer);
   begin
     { Generate the OnTapiStatus event }
     TapiStatus(False, False, Device, Line_MonitorTone, P1, P2, P3);
   end;
 
-  procedure TApdCustomTapiDevice.DoLineRequest(Device, P1, P2, P3 : LongInt);
+  procedure TApdCustomTapiDevice.DoLineRequest(Device, P1, P2, P3 : Integer);
   begin
     { Generate the OnTapiStatus event }
     TapiStatus(False, False, Device, Line_Request, P1, P2, P3);
   end;
 
-  function TApdCustomTapiDevice.HandleLineErr(LineErr : LongInt): Boolean;
+  function TApdCustomTapiDevice.HandleLineErr(LineErr : Integer): Boolean;
   { This is a stub in case someone wants to handle line errors }
   begin
     Result := False;
@@ -1363,7 +1363,7 @@ type
 
   function TApdCustomTapiDevice.HangupCall(AbortRetries : Boolean) : Boolean;
   var
-    lReturn : LongInt;
+    lReturn : Integer;
     CloseEventPending : Boolean;
     FinalRetry : Boolean;
     Failure : Boolean;
@@ -1543,7 +1543,7 @@ type
     end;
   end;
 
-  procedure TApdCustomTapiDevice.UpdateCallInfo(Device : LongInt);
+  procedure TApdCustomTapiDevice.UpdateCallInfo(Device : Integer);
   begin
     {We can update callstate properties, first get rid of old...}
     if Assigned(FCallInfo) then begin
@@ -1554,7 +1554,7 @@ type
     tuLineGetCallInfoDyn(Device, FCallInfo);
   end;
 
-  function TApdCustomTapiDevice.WaitForCallState(DesiredCallState : LongInt) : LongInt;
+  function TApdCustomTapiDevice.WaitForCallState(DesiredCallState : Integer) : Integer;
   var
     TimeStart : DWORD;
   begin
@@ -1586,7 +1586,7 @@ type
     Result := Success;
   end;
 
-  function TApdCustomTapiDevice.WaitForReply(ID : LongInt) : LongInt;
+  function TApdCustomTapiDevice.WaitForReply(ID : Integer) : Integer;
   var
     TimeStart : DWORD;
   begin
@@ -1668,7 +1668,7 @@ type
     Count      : DWord;
     LineApp    : TLineApp;
     LineExt    : TLineExtensionID;
-    ApiVersion : LongInt;
+    ApiVersion : Integer;
     LineCaps   : PLineDevCaps;
   begin
     {Does the device support AutomatedVoice?}
@@ -1898,10 +1898,10 @@ type
   procedure TApdCustomTapiDevice.SetOpen(NewOpen : Boolean);
     {-Open or close the selected TAPI line device}
   const
-    CallPrivilege : array[Boolean] of LongInt =
+    CallPrivilege : array[Boolean] of Integer =
       (LINECALLPRIVILEGE_OWNER, LINECALLPRIVILEGE_NONE);
   var
-    InitMediaModes : LongInt;
+    InitMediaModes : Integer;
   begin
     StartTapi;
 
@@ -1919,7 +1919,7 @@ type
         TapiFailFired := False;
 
         TapiException(Self, tuLineOpen(LineApp, SelectedLine,
-          LineHandle, ApiVersion, 0, LongInt(Self),
+          LineHandle, ApiVersion, 0, Integer(Self),
           CallPrivilege[Dialing], InitMediaModes, 0));
 
         TapiInUse := True;
@@ -2019,7 +2019,7 @@ type
   function TApdCustomTapiDevice.StartTapi : Boolean;
     {-Initialize TAPI}
   var
-    lResult : LongInt;
+    lResult : Integer;
     AppName : array[0..255] of AnsiChar;
     TimeStart : DWORD;
     TryReInit : Boolean;
@@ -2246,7 +2246,7 @@ type
     Result := -1;
   end;
 
-  function TApdCustomTapiDevice.CidFromTapiDevice : LongInt;
+  function TApdCustomTapiDevice.CidFromTapiDevice : Integer;
     {-Return the CID from the current TAPI session}
   begin
     {Get a handle to the comm port}
@@ -2583,7 +2583,7 @@ type
   end;
 
   procedure TApdCustomTapiDevice.TapiDTMF(Digit : Char;                
-                                          ErrorCode: LongInt);
+                                          ErrorCode: Integer);
     {-Generate the TapiDTMF event}
   begin
     {Call the user's event handler}
@@ -2892,10 +2892,10 @@ type
     end;
   end;
 
-  procedure TApdCustomTapiDevice.MonitorDTMF(var CallHandle : LongInt;
-    const DTMFMode : LongInt);
+  procedure TApdCustomTapiDevice.MonitorDTMF(var CallHandle : Integer;
+    const DTMFMode : Integer);
   var
-    DTMFError: LongInt;
+    DTMFError: Integer;
   begin
     if FEnableVoice then begin
       DTMFError := tulineMonitorDigits(CallHandle, DTMFMode);
@@ -2908,7 +2908,7 @@ type
   end;
 
   function TApdCustomTapiDevice.MontorTones(
-    const Tones: array of TLineMonitorTones) : LongInt;
+    const Tones: array of TLineMonitorTones) : Integer;
     { monitors for specific tones, see the TAPI.HLP file for details}
     { returns 0 if successful }
   begin
@@ -3016,10 +3016,10 @@ type
     MmCkInfoSubchunk : TMMCkInfo;
     FormatSize       : DWORD;
     WaveFormat       : PWaveFormatEx;
-    Res              : LongInt;
+    Res              : Integer;
     WaveOutDevCaps   : TWaveOutCaps;
     DeviceId         : DWORD;
-    Flags            : LongInt;
+    Flags            : Integer;
   begin
     if FWaveState = wsRecording then
       raise ETapiWaveFail.Create(ecTapiWaveDeviceInUse, True);
@@ -3137,7 +3137,7 @@ type
 
   procedure TApdCustomTapiDevice.LoadWaveOutBuffer;
   var
-    Res   : LongInt;
+    Res   : Integer;
   begin
     { Determine how many bytes to read from the file }
     if (BytesPlayed + WaveOutBufferSize) <= BytesToPlay then
@@ -3160,7 +3160,7 @@ type
 
   procedure TApdCustomTapiDevice.PlayWaveOutBuffer;
   var
-    Res   : LongInt;
+    Res   : Integer;
   begin
     if ActiveWaveOutBuffer = 1 then begin
       WaveOutHeader^.lpData := PAnsiChar(WaveOutBuffer1);
@@ -3277,7 +3277,7 @@ type
   procedure TApdCustomTapiDevice.SetMonitorRecording(const Value: Boolean); 
   var
     WaveFormat       : TWaveFormatEx;
-    Res              : LongInt;
+    Res              : Integer;
   begin
     if (FWaveState = wsRecording) then begin
       { If we are recording and are already monitoring }
@@ -3321,9 +3321,9 @@ type
     { Start recording wave data. }
   var
     WaveFormat       : TWaveFormatEx;
-    Res              : LongInt;
+    Res              : Integer;
     DeviceId         : DWORD;
-    Flags            : LongInt;
+    Flags            : Integer;
   begin
     if (TapiState = tsIdle) then                                     
        SetOpen(True);
@@ -3756,9 +3756,9 @@ type
     PSmallIntArray = ^TSmallIntArray;
   var
     Buffer        : PSmallIntArray;
-    I             : LongInt;
-    J             : LongInt;
-    Total         : LongInt;
+    I             : Integer;
+    J             : Integer;
+    Total         : Integer;
     StopRecording : Boolean;
     Hangup        : Boolean;
   const
@@ -3827,8 +3827,8 @@ type
   end;
 
   function TApdCustomTapiDevice.TranslateAddressEx(CanonicalAddr : Ansistring;
-    Flags : LongInt; var DialableStr, DisplayableStr : Ansistring;
-    var CurrentCountry, DestCountry, TranslateResults : LongInt) : LongInt;
+    Flags : Integer; var DialableStr, DisplayableStr : Ansistring;
+    var CurrentCountry, DestCountry, TranslateResults : Integer) : Integer;
   var
     TranslateOutput : PLineTranslateOutput;
   begin

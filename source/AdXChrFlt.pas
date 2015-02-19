@@ -57,22 +57,22 @@ type
 
   TApdBaseCharFilter = class(TObject)
     protected
-      FBufSize : Longint;
+      FBufSize : Integer;
       FBuffer  : PAnsiChar;
-      FBufPos  : Longint;
+      FBufPos  : Integer;
       FFormat  : TApdStreamFormat; {The format of the incoming stream}
       FFreeStream : Boolean;
       FStream  : TStream;
-      FStreamPos : Longint;
-      FStreamSize : Longint;
+      FStreamPos : Integer;
+      FStreamSize : Integer;
     protected
-      function csGetSize : Longint; virtual;
+      function csGetSize : Integer; virtual;
       procedure csSetFormat(const aValue : TApdStreamFormat); virtual; abstract;
     public
-      constructor Create(aStream : TStream; const aBufSize : Longint); virtual;
+      constructor Create(aStream : TStream; const aBufSize : Integer); virtual;
       destructor Destroy; override;
 
-      property BufSize : Longint
+      property BufSize : Integer
          read FBufSize;
 
       property FreeStream : Boolean
@@ -85,13 +85,13 @@ type
 
   TApdInCharFilter = class(TApdBaseCharFilter)
     private
-      FBufEnd    : Longint;
+      FBufEnd    : Integer;
       FUCS4Char  : TApdUcs4Char;
-      FLine      : Longint;
-      FLinePos   : Longint;
+      FLine      : Integer;
+      FLinePos   : Integer;
       FLastChar  : DOMChar;
       FEOF       : Boolean;
-      FBufDMZ    : Longint;
+      FBufDMZ    : Integer;
       FInTryRead : Boolean;
     protected
       procedure csAdvanceLine;
@@ -109,7 +109,7 @@ type
                           var aIsLiteral : Boolean);
 
     public
-      constructor Create(aStream : TStream; const aBufSize : Longint); override;
+      constructor Create(aStream : TStream; const aBufSize : Integer); override;
 
       property Format : TApdStreamFormat
          read FFormat
@@ -118,12 +118,12 @@ type
          read FEOF;
     public
       procedure SkipChar;
-      function TryRead(const S : array of Longint) : Boolean;
+      function TryRead(const S : array of Integer) : Boolean;
       function ReadChar : DOMChar;
       function ReadAndSkipChar : DOMChar;
-      property Line : LongInt
+      property Line : Integer
          read FLine;
-      property LinePos : LongInt
+      property LinePos : Integer
          read FLinePos;
   end;
 
@@ -132,12 +132,12 @@ type
       FFormat : TApdStreamFormat;
       FSetUTF8Sig : Boolean;
     protected
-      function csGetSize : LongInt; override;
+      function csGetSize : Integer; override;
       procedure csPutUtf8Char(const aCh : TApdUcs4Char);
       procedure csSetFormat(const aValue : TApdStreamFormat); override;
       procedure csWriteBuffer;
     public
-      constructor Create(aStream : TStream; const aBufSize : Longint); override;
+      constructor Create(aStream : TStream; const aBufSize : Integer); override;
       destructor Destroy; override;
 
       procedure PutUCS4Char(aCh : TApdUcs4Char);
@@ -152,7 +152,7 @@ type
       property WriteUTF8Signature : Boolean
          read FSetUTF8Sig
          write FSetUTF8Sig;
-      property Size : LongInt
+      property Size : Integer
          read csGetSize;
 
   end;
@@ -166,7 +166,7 @@ const
 
 {====================================================================}
 constructor TApdBaseCharFilter.Create(aStream  : TStream;
-                               const aBufSize : Longint);
+                               const aBufSize : Integer);
 begin
   inherited Create;
   Assert(Assigned(aStream));
@@ -193,13 +193,13 @@ begin
   inherited Destroy;
 end;
 {--------}
-function TApdBaseCharFilter.csGetSize : LongInt;
+function TApdBaseCharFilter.csGetSize : Integer;
 begin
   Result := FStreamSize;
 end;
 {====================================================================}
 constructor TApdInCharFilter.Create(aStream  : TStream;
-                             const aBufSize : Longint);
+                             const aBufSize : Integer);
 begin
   inherited Create(aStream, aBufSize);
   if FStreamSize <= aBufSize then
@@ -432,16 +432,16 @@ begin
       csAdvanceLinePos;
 end;
 {--------}
-function TApdInCharFilter.TryRead(const S : array of Longint) : Boolean;
+function TApdInCharFilter.TryRead(const S : array of Integer) : Boolean;
 var
-  Idx         : Longint;
+  Idx         : Integer;
   Ch          : TApdUcs4Char;
   IL          : Boolean;
-  OldBufPos   : Longint;
+  OldBufPos   : Integer;
   OldChar     : DOMChar;
   OldUCS4Char : TApdUcs4Char;
-  OldLinePos  : Longint;
-  OldLine     : Longint;
+  OldLinePos  : Integer;
+  OldLine     : Integer;
 begin
   OldBufPos := FBufPos;
   OldChar := FLastChar;
@@ -524,7 +524,7 @@ begin
 end;
 
 {===TApdOutCharFilter=================================================}
-constructor TApdOutCharFilter.Create(aStream : TStream; const aBufSize : Longint);
+constructor TApdOutCharFilter.Create(aStream : TStream; const aBufSize : Integer);
 begin
   inherited Create(aStream, aBufSize);
   FSetUTF8Sig := True;
@@ -539,7 +539,7 @@ begin
   inherited Destroy;
 end;
 {--------}
-function TApdOutCharFilter.csGetSize : LongInt;
+function TApdOutCharFilter.csGetSize : Integer;
 begin
   Result := FStream.Size + FBufPos;
 end;

@@ -88,8 +88,8 @@ type
       vDragDrop     : Bool;             {TRUE if the window supports Drag&Drop}
 
       {display data}
-      vFGColor      : LongInt;          {foreground color}
-      vBGCOlor      : LongInt;          {background color}
+      vFGColor      : Integer;          {foreground color}
+      vBGCOlor      : Integer;          {background color}
       vScaledWidth  : Cardinal;         {scaled width of the image on the page}
       vScaledHeight : Cardinal;         {scaled height of the image on the page}
       vVScrollInc   : Integer;          {vertical scroll increment}
@@ -219,9 +219,9 @@ type
       {message response}
       function apwViewSetFile(FName : string) : Integer;
         {-Set the file name of the file to view}
-      procedure apwViewSetFG(Color : LongInt);
+      procedure apwViewSetFG(Color : Integer);
         {-Set the foreground color}
-      procedure apwViewSetBG(Color : LongInt);
+      procedure apwViewSetBG(Color : Integer);
         {-Set the background color}
       procedure apwViewSetScale(Settings : PScaleSettings);
         {-Set scaling factors}
@@ -265,13 +265,13 @@ type
         {-Set the cursor that is shown during length operations}
       procedure wmPaint(var Msg : wMsg);
         {-paint the window}
-      function wmSize(var Msg : wMsg) : LongInt;
+      function wmSize(var Msg : wMsg) : Integer;
         {-size the window}
-      function wmGetDlgCode(var Msg : wMsg) : LongInt;
+      function wmGetDlgCode(var Msg : wMsg) : Integer;
         {-respond to query about what input we want}
-      function wmKeyDown(var Msg : wMsg) : LongInt;
+      function wmKeyDown(var Msg : wMsg) : Integer;
         {-respond to key presses}
-      function wmKeyUp(var Msg : wMsg) : LongInt;
+      function wmKeyUp(var Msg : wMsg) : Integer;
         {-respond to key releases}
       procedure wmLButtonDown(var Msg : wMsg);
         {-respond to left button clicks}
@@ -1216,7 +1216,7 @@ implementation
 
     function AllocTemporary(var B : TMemoryBitmapDesc) : Boolean;
     var
-      Sz      : LongInt;
+      Sz      : Integer;
       BmpInfo : TBitmap;
 
     begin
@@ -1226,7 +1226,7 @@ implementation
         {get information about this bitmap}
         GetObject(B.Bitmap, SizeOf(TBitmap), @BmpInfo);
         BytesPerLine := BmpInfo.bmWidthBytes;
-        Sz           := LongInt(BytesPerLine) * LongInt(Height);    
+        Sz           := Integer(BytesPerLine) * Integer(Height);
 
         {allocate a buffer to hold the bitmap bits}
         BmpHandle := GlobalAlloc(gmem_Moveable or gmem_ZeroInit, Sz);
@@ -1251,7 +1251,7 @@ implementation
           NewBytesPerLine := BmpInfo.bmWidthBytes;
 
           {allocate temporary buffer to hold new bitmap}
-          Sz := LongInt(NewBytesPerLine) * LongInt(NewHeight);    
+          Sz := Integer(NewBytesPerLine) * Integer(NewHeight);
           NewHandle := GlobalAlloc(gmem_Moveable or gmem_ZeroInit, Sz);
           if (NewHandle = 0) then begin
             GlobalUnlock(BmpHandle);
@@ -1293,7 +1293,7 @@ implementation
 
     procedure Rotate90(var B : TMemoryBitmapDesc);
     var
-      I        : LongInt;                                         
+      I        : Integer;
       Col      : Cardinal;
       Bit      : Cardinal;
       ActBytes : Cardinal;
@@ -1310,7 +1310,7 @@ implementation
       {$ENDIF}
       {$Q-}
       for I := 0 to Pred(NewWidth) do begin 
-        BitBltRot90(DestCol, GetPtr(BmpPtr, LongInt(BytesPerLine) * I), Bit, NewBytesPerLine, ActBytes);
+        BitBltRot90(DestCol, GetPtr(BmpPtr, Integer(BytesPerLine) * I), Bit, NewBytesPerLine, ActBytes);
         if (Bit = 0) then begin
           Bit := 7;
           Dec(Col);
@@ -1319,7 +1319,7 @@ implementation
           Dec(Bit);
       end;
       for I := (B.Width - (B.Width mod 8)) to Pred(NewHeight) do
-        HugeFill(GetPtr(NewPtr, LongInt(NewBytesPerLine) * I), NewBytesPerLine, $FF);
+        HugeFill(GetPtr(NewPtr, Integer(NewBytesPerLine) * I), NewBytesPerLine, $FF);
       {$IFDEF QOn}
       {$Q+}
       {$ENDIF}
@@ -1329,17 +1329,17 @@ implementation
       DeleteObject(B.Bitmap);
       B.Bitmap := NewBitmap;
       SetBitmapBits(B.Bitmap,
-        LongInt(NewBytesPerLine) * LongInt(NewHeight), NewPtr);      
+        Integer(NewBytesPerLine) * Integer(NewHeight), NewPtr);
     end;
 
     procedure Rotate180(var B : TMemoryBitmapDesc);
     var
-      I         : LongInt;
-      J         : LongInt;
+      I         : Integer;
+      J         : Integer;
       ActBytes  : Cardinal;
-      Ofs       : LongInt;
-      IOfs      : LongInt;
-      JOfs      : LongInt;
+      Ofs       : Integer;
+      IOfs      : Integer;
+      JOfs      : Integer;
       Remaining : Byte;
       Mask      : Byte;
 
@@ -1355,8 +1355,8 @@ implementation
         Mask := 0;                                                  
 
       while (I < J) do begin
-        IOfs := LongInt(BytesPerLine) * I;
-        JOfs := LongInt(BytesPerLine) * J;
+        IOfs := Integer(BytesPerLine) * I;
+        JOfs := Integer(BytesPerLine) * J;
 
         Move(GetPtr(BmpPtr, IOfs)^, SrcBuf^, ActBytes);
         if (Remaining <> 0) then
@@ -1379,7 +1379,7 @@ implementation
 
       {if there's a stray line, reverse it}
       if Odd(B.Height) then begin
-        Ofs := LongInt(BytesPerLine) * LongInt(B.Height div 2);   
+        Ofs := Integer(BytesPerLine) * Integer(B.Height div 2);
 
         Move(GetPtr(BmpPtr, Ofs)^, SrcBuf^, BytesPerLine);
         if (Remaining <> 0) then
@@ -1390,12 +1390,12 @@ implementation
         Move(DestBuf^, GetPtr(BmpPtr, Ofs)^, BytesPerLine);
       end;
 
-      SetBitmapBits(B.Bitmap, LongInt(BytesPerLine) * LongInt(B.Height), BmpPtr);
+      SetBitmapBits(B.Bitmap, Integer(BytesPerLine) * Integer(B.Height), BmpPtr);
     end;
 
     procedure Rotate270(var B : TMemoryBitmapDesc);
     var
-      I        : LongInt;                                            
+      I        : Integer;
       Col      : Cardinal;
       Bit      : Cardinal;
       ActBytes : Cardinal;
@@ -1412,7 +1412,7 @@ implementation
       {$ENDIF}
       {$Q-}
       for I := 0 to Pred(NewWidth) do begin
-        BitBltRot270(DestCol, GetPtr(BmpPtr, LongInt(BytesPerLine) * I), Bit, NewBytesPerLine, ActBytes);
+        BitBltRot270(DestCol, GetPtr(BmpPtr, Integer(BytesPerLine) * I), Bit, NewBytesPerLine, ActBytes);
         if (Bit = 7) then begin
           Bit := 0;
           Inc(Col);
@@ -1422,7 +1422,7 @@ implementation
       end;
       if (NewHeight > (B.Width - (B.Width mod 8))) then
         for I := 0 to (NewHeight - (B.Width - (B.Width mod 8))) do
-          HugeFill(GetPtr(NewPtr, LongInt(NewBytesPerLine) * I), NewBytesPerLine, $FF);
+          HugeFill(GetPtr(NewPtr, Integer(NewBytesPerLine) * I), NewBytesPerLine, $FF);
       {$IFDEF QOn}
       {$Q+}
       {$ENDIF}
@@ -1431,7 +1431,7 @@ implementation
       B.Height := NewHeight;
       DeleteObject(B.Bitmap);
       B.Bitmap := NewBitmap;
-      SetBitmapBits(B.Bitmap, LongInt(NewBytesPerLine) * LongInt(NewHeight), NewPtr);
+      SetBitmapBits(B.Bitmap, Integer(NewBytesPerLine) * Integer(NewHeight), NewPtr);
     end;
 
   begin
@@ -1609,26 +1609,26 @@ implementation
 
     function ScaledCoordH(PT : Integer) : Integer;
     var
-      M : LongInt;
+      M : Integer;
       S : Integer;
 
     begin
-      M := PT * LongInt(vHDiv);
-      S := M div LongInt(vHMult);
-      if ((M mod LongInt(vHMult)) <> 0) then                        
+      M := PT * Integer(vHDiv);
+      S := M div Integer(vHMult);
+      if ((M mod Integer(vHMult)) <> 0) then
         Inc(S);
       ScaledCoordH := S;
     end;
 
     function ScaledCoordV(PT : Integer) : Integer;
     var
-      M : LongInt;
+      M : Integer;
       S : Integer;
 
     begin
-      M := LongInt(PT) * LongInt(vVDiv);
-      S := M div LongInt(vVMult);
-      if ((M mod LongInt(vVMult)) <> 0) then                         
+      M := Integer(PT) * Integer(vVDiv);
+      S := M div Integer(vVMult);
+      if ((M mod Integer(vVMult)) <> 0) then
         Inc(S);
       ScaledCoordV := S;
     end;
@@ -1668,7 +1668,7 @@ implementation
     VFill := PR;
     {calculate the width of the destination rectangle}
     Width := Succ(PR.Right - PR.Left);
-    if ((LongInt(vLeftOfs) + PR.Left + Width) > LongInt(vScaledWidth)) then begin
+    if ((Integer(vLeftOfs) + PR.Left + Width) > Integer(vScaledWidth)) then begin
       {fill in everything outside}
       VFill.Left := vScaledWidth - vLeftOfs;
       Inc(VFill.Right);
@@ -1676,12 +1676,12 @@ implementation
       FillRect(PaintDC, VFill, BackBrush);
 
       {adjust the width}
-      Dec(Width, (LongInt(vLeftOfs) + PR.Left + Width) - LongInt(vScaledWidth));  
+      Dec(Width, (Integer(vLeftOfs) + PR.Left + Width) - Integer(vScaledWidth));
     end;
 
     {calculate the height of the destination rectangle}
     Height := Succ(PR.Bottom - PR.Top);
-    if ((LongInt(vTopRow) + PR.Top + Height) > LongInt(vScaledHeight)) then begin 
+    if ((Integer(vTopRow) + PR.Top + Height) > Integer(vScaledHeight)) then begin
       HFill := PR;
       {fill in everything outside}
       HFill.Top := vScaledHeight - vTopRow;
@@ -1701,7 +1701,7 @@ implementation
       FillRect(PaintDC, HFill, BackBrush);
 
       {adjust the height}
-      Dec(Height, (LongInt(vTopRow) + PR.Top + Height) - LongInt(vScaledHeight)); 
+      Dec(Height, (Integer(vTopRow) + PR.Top + Height) - Integer(vScaledHeight));
     end;
 
     SafeYield;                                                         
@@ -1711,7 +1711,7 @@ implementation
 
       {paint the bitmap}
       BitBlt(PaintDC, PR.Left, PR.Top, Width, Height, MemDC,
-        LongInt(vLeftOfs) + PR.Left, LongInt(vTopRow) + PR.Top, SrcCopy);       
+        Integer(vLeftOfs) + PR.Left, Integer(vTopRow) + PR.Top, SrcCopy);
 
       if vMarked then
         InvertRect(MemDC, vMarkRect);
@@ -1719,20 +1719,20 @@ implementation
     end else if not vMarked then
       {scale and paint the bitmap}
       StretchBlt(PaintDC, PR.Left, PR.Top, Width, Height, MemDC,
-        (LongInt(vLeftOfs) + PR.Left) * LongInt(vHDiv) div LongInt(vHMult),
-        (LongInt(vTopRow) + PR.Top) * LongInt(vVDiv) div LongInt(vVMult),
-        LongInt(Width) * LongInt(vHDiv) div LongInt(vHMult),
-        LongInt(Height) * LongInt(vVDiv) div LongInt(vVMult), SrcCopy)
+        (Integer(vLeftOfs) + PR.Left) * Integer(vHDiv) div Integer(vHMult),
+        (Integer(vTopRow) + PR.Top) * Integer(vVDiv) div Integer(vVMult),
+        Integer(Width) * Integer(vHDiv) div Integer(vHMult),
+        Integer(Height) * Integer(vVDiv) div Integer(vVMult), SrcCopy)
     else begin
       GetClientRect(vWnd, Client);
 
       {calculate the width and height of the client rectangle, adjusting}
       {for the size of the scaled bitmap}
       CWidth := Client.Right - Client.Left + 1;
-      if (CWidth > LongInt(vScaledWidth - vLeftOfs)) then            
+      if (CWidth > Integer(vScaledWidth - vLeftOfs)) then
         CWidth := (vScaledWidth - vLeftOfs);
       CHeight := Client.Bottom - Client.Top + 1;
-      if (CHeight > LongInt(vScaledHeight - vTopRow)) then           
+      if (CHeight > Integer(vScaledHeight - vTopRow)) then
         CHeight := (vScaledHeight - vTopRow);
 
       BmpDC       := CreateCompatibleDC(PaintDC);
@@ -1882,13 +1882,13 @@ implementation
     apwViewSetFile := ecOK;
   end;
 
-  procedure TViewer.apwViewSetFG(Color : LongInt);
+  procedure TViewer.apwViewSetFG(Color : Integer);
     {-Set the foreground color}
   begin
     vFGColor := Color;
   end;
 
-  procedure TViewer.apwViewSetBG(Color : LongInt);
+  procedure TViewer.apwViewSetBG(Color : Integer);
     {-Set the background color}
   begin
     vBGColor := Color;
@@ -2256,7 +2256,7 @@ implementation
       SetCursor(OldCursor);
     end else if OldWhole and not vLoadWholeFax and (vFileName <> '') then
       for I := 1 to vNumPages do
-        if (vImage^[I].Bitmap <> 0) and (I <> LongInt(vOnPage)) then begin      
+        if (vImage^[I].Bitmap <> 0) and (I <> Integer(vOnPage)) then begin
           DeleteObject(vImage^[I].Bitmap);
           vImage^[I].Bitmap := 0;
         end;
@@ -2279,7 +2279,7 @@ implementation
     EndPaint(vWnd, PS);
   end;
 
-  function TViewer.wmSize(var Msg : wMsg) : LongInt;
+  function TViewer.wmSize(var Msg : wMsg) : Integer;
     {-size the window}
   begin
     wmSize := vDefWndProc(vWnd, Msg.Message, Msg.wParam, Msg.lParam);
@@ -2291,7 +2291,7 @@ implementation
       PostMessage(vWnd, wm_Size, Msg.wParam, Msg.lParam);
   end;
 
-  function TViewer.wmGetDlgCode(var Msg : wMsg) : LongInt;
+  function TViewer.wmGetDlgCode(var Msg : wMsg) : Integer;
     {-respond to query about what input we want}
   var
     Res : Integer;
@@ -2301,7 +2301,7 @@ implementation
     wmGetDlgCode := Res or dlgc_WantArrows;
   end;
 
-  function TViewer.wmKeyDown(var Msg : wMsg) : LongInt;
+  function TViewer.wmKeyDown(var Msg : wMsg) : Integer;
     {-respond to key presses}
   begin
     wmKeyDown := 0;
@@ -2365,7 +2365,7 @@ implementation
     end;
   end;
 
-  function TViewer.wmKeyUp(var Msg : wMsg) : LongInt;
+  function TViewer.wmKeyUp(var Msg : wMsg) : Integer;
     {-respond to key releases}
   begin
     wmKeyUp := 0;
@@ -2659,7 +2659,7 @@ implementation
     FV      : TViewer;
     WM      : wMsg;
 
-    function DefWndFunc : LongInt;
+    function DefWndFunc : Integer;
     begin
       DefWndFunc := FV.vDefWndProc(HWindow, Msg, wParam, lParam);
     end;
@@ -2707,14 +2707,14 @@ implementation
       apw_ViewSetLoadWholeFax: FV.apwViewSetLoadWholeFax(Bool(wParam));
       apw_ViewSetBusyCursor  : FV.apwViewSetBusyCursor(HCursor(wParam));
       apw_ViewGetPageFlags   : Result := FV.apwViewGetPageFlags;
-      apw_ViewGetFileName    : Result := LongInt(@FV.vFileName);
+      apw_ViewGetFileName    : Result := Integer(@FV.vFileName);
 
       {Windows messages}
       wm_Create:
         with PCreate^ do begin
           SetWindowLong(HWindow, gwl_Viewer, 0);
           FV := TViewer.Create(HWindow);
-          SetWindowLong(HWindow, gwl_Viewer, LongInt(FV));
+          SetWindowLong(HWindow, gwl_Viewer, Integer(FV));
           if (FV <> nil) then
             FV.vInitDragDrop(((GetWindowLong(HWindow, gwl_Style) and vws_DragDrop) <> 0));
         end;
@@ -2722,7 +2722,7 @@ implementation
       wm_NCDestroy:
         begin
           FV.Free;
-          SetWindowLong(HWindow, gwl_Viewer, LongInt(nil));
+          SetWindowLong(HWindow, gwl_Viewer, Integer(nil));
         end;
 
       wm_EraseBkgnd : vFaxViewerWndFunc := 1;

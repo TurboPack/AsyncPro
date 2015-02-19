@@ -121,9 +121,9 @@ type {forwards}
 
   protected {property variables}
     FAccount          : AnsiString;
-    FBytesTransferred : Longint;
+    FBytesTransferred : Integer;
     FConnectTimeout   : Integer;
-    FFileLength       : Longint;
+    FFileLength       : Integer;
     FFileType         : TFtpFileType;
     FFtpLog           : TApdFtpLog;
     FLocalFile        : AnsiString;
@@ -131,7 +131,7 @@ type {forwards}
     FPassiveMode      : Boolean;
     FTransferTimeout  : Integer;
     FRemoteFile       : AnsiString;
-    FRestartAt        : Longint;
+    FRestartAt        : Integer;
     FReplyCode        : Integer;
     FUserLoggedIn     : Boolean;
     FUserName         : AnsiString;
@@ -171,7 +171,7 @@ type {forwards}
     procedure SetFtpLog(const NewLog : TApdFtpLog);
     procedure StartTimer;
     procedure StopTimer;
-    procedure TimerTrigger(Msg, wParam : Cardinal; lParam : Longint);
+    procedure TimerTrigger(Msg, wParam : Cardinal; lParam : Integer);
     procedure WsDataAccept(Sender : TObject; Socket : TSocket);
     procedure WsDataDisconnect(Sender : TObject; Socket : TSocket);
     procedure WsDataError(Sender : TObject; Socket : TSocket; ErrorCode : Integer);
@@ -208,17 +208,17 @@ type {forwards}
       read FOnFtpStatus write FOnFtpStatus;
 
   public {run-time properties}
-    property BytesTransferred : Longint
+    property BytesTransferred : Integer
       read FBytesTransferred;
     property Connected : Boolean
       read GetConnected;
     property InProgress : Boolean
       read GetInProgress;
-    property FileLength : Longint
+    property FileLength : Integer
       read FFileLength;
     property ReplyCode : Integer
       read FReplyCode;
-    property RestartAt : Longint
+    property RestartAt : Integer
       read FRestartAt write FRestartAt;
     property UserLoggedIn : Boolean
       read FUserLoggedIn;
@@ -350,8 +350,8 @@ const {FTP commands}
   fcUSER = 'USER';
 
 type {miscellaneous types}
-  wParam = Longint;
-  lParam = Longint;
+  wParam = Integer;
+  lParam = Integer;
 
 const {miscellaneous constants}
   SockNameSize : Integer = SizeOf(TSockAddrIn);
@@ -1170,7 +1170,7 @@ begin
     if (Code = 202) or (Code > 299) then begin
       if Assigned(Info) then
         PData := AnsiStrings.StrNew(Info);
-      PostMessage(hwndFtpEvent, FtpErrorMsg, Integer(Code), Longint(PData));
+      PostMessage(hwndFtpEvent, FtpErrorMsg, Integer(Code), Integer(PData));
     end;
   end;
 end;
@@ -1192,7 +1192,7 @@ begin
   if not NoEvents then begin
     if Assigned(Info) then
       PData := AnsiStrings.StrNew(Info);
-    PostMessage(hwndFtpEvent, FtpStatusMsg, Integer(Code), Longint(PData));
+    PostMessage(hwndFtpEvent, FtpStatusMsg, Integer(Code), Integer(PData));
   end;
 end;
 
@@ -1211,7 +1211,7 @@ end;
 function TApdCustomFtpClient.PutData : Integer;
   {send as much data as possible}
 var
-  N, M : Longint;
+  N, M : Integer;
   Done : Boolean;
 begin
   Result := 0;
@@ -1303,10 +1303,10 @@ begin
   RCode := StrToIntDef(Copy(string(Data), 1, 3), 0);
   PReply := AnsiStrAlloc(Length(Data)+ 1);
   AnsiStrings.StrPCopy(PReply, Data);
-  PostMessage(hwndFtpEvent, FtpReplyMsg, RCode, Longint(PReply));
+  PostMessage(hwndFtpEvent, FtpReplyMsg, RCode, Integer(PReply));
 end;
 
-procedure TApdCustomFtpClient.TimerTrigger(Msg, wParam : Cardinal; lParam : Longint);
+procedure TApdCustomFtpClient.TimerTrigger(Msg, wParam : Cardinal; lParam : Integer);
   {control connection trigger handler}
 begin
   if (Msg = apw_TriggerTimer) and (Integer(wParam) = Timer) then begin

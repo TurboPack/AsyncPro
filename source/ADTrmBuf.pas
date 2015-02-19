@@ -176,7 +176,7 @@ const
 type
   TadtWordArray = array [0..MaxInt div sizeof(word) - 1] of word;
   PadtWordArray = ^TadtWordArray;
-  TadtLongArray = array [0..MaxInt div sizeof(longint) - 1] of longint;
+  TadtLongArray = array [0..MaxInt div sizeof(Integer) - 1] of Integer;
   PadtLongArray = ^TadtLongArray;
 
   TAdTerminalCharAttr = (  {character attributes}
@@ -201,7 +201,7 @@ type
     private
       FActColCount : integer;
       FColCount    : integer;
-      FDefaultItem : longint;
+      FDefaultItem : Integer;
       FItems       : PAnsiChar;
       FItemSize    : integer;
       FRowCount    : integer;
@@ -493,30 +493,30 @@ type
   end;
 
 procedure RaiseTerminalException(aClass : EAdTerminalClass;
-                                 aErrorCode : longint;
+                                 aErrorCode : Integer;
                            const aStrParam1 : string;
                            const aStrParam2 : string;
                            const aStrParam3 : string;
-                                 aIntParam1 : longint;
-                                 aIntParam2 : longint;
-                                 aIntParam3 : longint);
+                                 aIntParam1 : Integer;
+                                 aIntParam2 : Integer;
+                                 aIntParam3 : Integer);
 
 implementation
 
 type
   PByte = ^byte;
   PWord = ^word;
-  PLongint = ^longint;
+  PLongint = ^Integer;
 
 {===Exceptions=======================================================}
 procedure RaiseTerminalException(aClass : EAdTerminalClass;
-                                 aErrorCode : longint;
+                                 aErrorCode : Integer;
                            const aStrParam1 : string;
                            const aStrParam2 : string;
                            const aStrParam3 : string;
-                                 aIntParam1 : longint;
-                                 aIntParam2 : longint;
-                                 aIntParam3 : longint);
+                                 aIntParam1 : Integer;
+                                 aIntParam2 : Integer;
+                                 aIntParam3 : Integer);
 begin
   raise aClass.Create(aErrorCode, false);
 end;
@@ -556,7 +556,7 @@ procedure TadTerminalArray.ClearItems(aRow : integer;
                                       aFromCol, aToCol : integer);
 var
   Walker    : PAnsiChar;
-  Value     : longint;
+  Value     : Integer;
   i         : integer;
 begin
   Walker := @FItems[((aRow * FActColCount) + aFromCol) * ItemSize];
@@ -587,7 +587,7 @@ var
   Distance  : integer;
   FromPtr   : PAnsiChar;
   ToPtr     : PAnsiChar;
-  Value     : longint;
+  Value     : Integer;
   i         : integer;
 begin
   {$IFDEF UseRangeChecks}
@@ -673,7 +673,7 @@ var
   Distance  : integer;
   FromPtr   : PAnsiChar;
   ToPtr     : PAnsiChar;
-  Value     : longint;
+  Value     : Integer;
   i         : integer;
 begin
   {$IFDEF UseRangeChecks}
@@ -729,8 +729,8 @@ procedure TadTerminalArray.ReplaceItems(aOldItem : pointer;
                                                            {new !!.02}
 var
   Walker    : PAnsiChar;
-  OldValue  : longint;
-  NewValue  : longint;
+  OldValue  : Integer;
+  NewValue  : Integer;
   Row       : integer;
   i         : integer;
 begin
@@ -856,7 +856,7 @@ procedure TadTerminalArray.taClearRows(aBuffer : PAnsiChar;
                                        aStartRow, aEndRow : integer);
 var
   Walker     : PAnsiChar;
-  Value      : longint;
+  Value      : Integer;
   DWORDCount : integer;
   i          : integer;
 begin
@@ -979,7 +979,7 @@ procedure TadTerminalArray.WriteDupItems(aItem  : pointer;
                                          aRow, aCol : integer);
 var
   Walker    : PAnsiChar;
-  Value     : longint;
+  Value     : Integer;
   i         : integer;
   ItemCount : integer;
 begin

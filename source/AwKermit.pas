@@ -141,10 +141,10 @@ function kpWindowsUsed(P : PProtocolData) : Byte;
 {Control}
 procedure kpPrepareReceive(P : PProtocolData);
 procedure kpReceive(Msg, wParam : Cardinal;
-                       lParam : LongInt);
+                       lParam : Integer);
 procedure kpPrepareTransmit(P : PProtocolData);
 procedure kpTransmit(Msg, wParam : Cardinal;
-                       lParam : LongInt);
+                       lParam : Integer);
 
 
 implementation
@@ -2347,7 +2347,7 @@ Skip:
   end;
 
   procedure kpReceive(Msg, wParam : Cardinal;
-                     lParam : LongInt);
+                     lParam : Integer);
     {-Performs one increment of a Kermit receive}
   label
     ExitPoint;
@@ -2355,7 +2355,7 @@ Skip:
     TriggerID   : Cardinal absolute wParam;
     P           : PProtocolData;
     Finished    : Bool;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     Dispatcher      : TApdBaseDispatcher;
   begin
     Finished := False;                                                 {!!.01}
@@ -2790,13 +2790,13 @@ Skip:
   end;
 
   procedure kpTransmit(Msg, wParam : Cardinal;
-                      lParam : LongInt);
+                      lParam : Integer);
     {-Performs one increment of a Kermit transmit}
   var
     TriggerID   : Cardinal absolute wParam;
     P           : PProtocolData;
     Finished    : Bool;
-    StatusTicks : LongInt;
+    StatusTicks : Integer;
     Dispatcher      : TApdBaseDispatcher;
   begin
     Finished := False;                                                 {!!.01}

@@ -264,7 +264,7 @@ type
     gpTapi : ITTapi;             { the TAPI interface }
     gpCall : ITBasicCallControl; { the call interface }
     gpAddress : ITAddress;       { the address interface (the H323 device) }
-    gulAdvise : LongInt;
+    gulAdvise : Integer;
     gpTAPIEventNotification : TApdTapiEventSink;
     NotifyRegister : Integer;    { handle to the notification callback }
 

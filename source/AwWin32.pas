@@ -68,7 +68,7 @@ type
   protected
     ReadOL    : TOverLapped;
     WriteOL   : TOverLapped;
-    function EscapeComFunction(Func : Integer) : LongInt; override;
+    function EscapeComFunction(Func : Integer) : Integer; override;
     function FlushCom(Queue : Integer) : Integer; override;
     function GetComError(var Stat : TComStat) : Integer; override;
     function GetComEventMask(EvtMask : Integer) : Cardinal; override;
@@ -188,7 +188,7 @@ end;
     end;                                                                    // SWB
   end;
 
-  function TApdWin32Dispatcher.EscapeComFunction(Func: Integer): LongInt;
+  function TApdWin32Dispatcher.EscapeComFunction(Func: Integer): Integer;
     {-Perform the extended comm function Func}
   begin
     EscapeCommFunction(CidEx, Func);

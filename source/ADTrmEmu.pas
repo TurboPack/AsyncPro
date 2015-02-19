@@ -529,7 +529,7 @@ type
       procedure CNKeyDown(var Msg : TWMKeyDown); message CN_KEYDOWN;
       procedure CNSysKeyDown(var Msg : TWMKeyDown); message CN_SYSKEYDOWN;
       procedure tmBeat(Sender: TObject);
-      procedure tmTriggerHandler(Msg, wParam : Cardinal; lParam : longint);
+      procedure tmTriggerHandler(Msg, wParam : Cardinal; lParam : Integer);
       procedure WMCancelMode(var Msg : TMessage); message WM_CANCELMODE;
       procedure WMCopy(var Msg : TMessage); message WM_COPY;
       procedure WMEraseBkgnd(var Msg : TMessage); message WM_ERASEBKGND;
@@ -752,7 +752,7 @@ type
       procedure KeyPress(var Key : Char); virtual;
       procedure LazyPaint; virtual;
       procedure Paint; virtual;
-      procedure ProcessBlock(aData : pointer; aDataLen : longint;      {!!.04}
+      procedure ProcessBlock(aData : pointer; aDataLen : Integer;      {!!.04}
                              CharSource : TAdCharSource); virtual;     {!!.04}
       procedure GetCursorPos(var aRow, aCol : Integer); virtual;
 
@@ -877,7 +877,7 @@ type
       procedure KeyPress(var Key : Char); override;
       procedure LazyPaint; override;
       procedure Paint; override;
-      procedure ProcessBlock (aData : pointer; aDataLen : longint;     {!!.04}
+      procedure ProcessBlock (aData : pointer; aDataLen : Integer;     {!!.04}
                               CharSource : TAdCharSource); override;   {!!.04}
     published
       property OnProcessChar;                                          {!!.04}
@@ -974,7 +974,7 @@ type
       procedure KeyPress(var Key : Char); override;
       procedure LazyPaint; override;
       procedure Paint; override;
-      procedure ProcessBlock (aData : pointer; aDataLen : longint;     {!!.04}
+      procedure ProcessBlock (aData : pointer; aDataLen : Integer;     {!!.04}
                               CharSource : TAdCharSource); override;   {!!.04}
 
       {modes}
@@ -2149,17 +2149,17 @@ end;
 {--------}
 procedure TAdCustomTerminal.CreateParams(var Params: TCreateParams);
 const
-  BorderStyles : array [TBorderStyle] of longint =
+  BorderStyles : array [TBorderStyle] of Integer =
                  (0, WS_BORDER);
 begin
   inherited CreateParams(Params);
 
   with Params do begin
-    Style := longint(Style) or BorderStyles[FBorderStyle];
+    Style := Integer(Style) or BorderStyles[FBorderStyle];
     if tmNeedHScrollbar then                                             {!!.03}
-      Style := longint(Style) or WS_HSCROLL;
+      Style := Integer(Style) or WS_HSCROLL;
     if tmNeedVScrollbar then                                             {!!.03}
-      Style := longint(Style) or WS_VSCROLL;
+      Style := Integer(Style) or WS_VSCROLL;
   end;
 
   if NewStyleControls and Ctl3D and (FBorderStyle = bsSingle) then begin
@@ -3780,7 +3780,7 @@ begin
 end;
 {--------}
 procedure TAdCustomTerminal.tmTriggerHandler(Msg, wParam : Cardinal;
-                                       lParam : longint);
+                                       lParam : Integer);
 var
   Buffer : pointer;
 begin
@@ -4091,7 +4091,7 @@ begin
 end;
 {--------}
 procedure TAdTerminalEmulator.ProcessBlock (aData      : pointer;      {!!.04}
-                                            aDataLen   : Longint;      {!!.04}
+                                            aDataLen   : Integer;      {!!.04}
                                             CharSource : TAdCharSource);{!!.04}
 begin
   {do nothing}
@@ -4783,7 +4783,7 @@ begin
 end;
 {--------}
 procedure TAdTTYEmulator.ProcessBlock (aData      : pointer;             {!!.04}
-                                       aDataLen   : Longint;             {!!.04}
+                                       aDataLen   : Integer;             {!!.04}
                                        CharSource : TAdCharSource);      {!!.04}
 var
   DataAsChar : PAnsiChar absolute aData;
@@ -5431,7 +5431,7 @@ begin
 end;
 {--------}
 procedure TAdVT100Emulator.ProcessBlock (aData      : pointer;          {!!.04}
-                                         aDataLen   : longint;          {!!.04}
+                                         aDataLen   : Integer;          {!!.04}
                                          CharSource : TAdCharSource);   {!!.04}
 var
   DataAsChar : PAnsiChar absolute aData;

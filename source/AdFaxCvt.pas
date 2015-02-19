@@ -80,7 +80,7 @@ type
 
   TFaxStatusEvent = procedure (F : TObject; Starting, Ending : Boolean;
                               PagesConverted, LinesConverted : Integer;
-                              BytesConverted, BytesToConvert : LongInt;
+                              BytesConverted, BytesToConvert : Integer;
                               var Abort : Boolean) of object;
 
   TFaxOutputLineEvent = procedure(F : TObject; Data : PByteArray; Len : Integer;
@@ -241,7 +241,7 @@ type
     {to be overriden}
     procedure Status(const Starting, Ending : Boolean;
                      const PagesConverted, LinesConverted : Integer;
-                     const BytesToRead, BytesRead : LongInt;
+                     const BytesToRead, BytesRead : Integer;
                      var Abort : Boolean); virtual;
       {-Display conversion status}
     procedure OutputLine(var Data; Len : Integer; EndOfPage, MorePages : Boolean); virtual;
@@ -300,7 +300,7 @@ type
   TUnpackOutputLineEvent = procedure( Sender : TObject; Starting, Ending : Boolean;
                                       Data : PByteArray; Len, PageNum : Integer) of object;
   TUnpackStatusEvent = procedure( Sender : TObject; FName : String; PageNum : Integer;
-                                  BytesUnpacked, BytesToUnpack : LongInt) of object;
+                                  BytesUnpacked, BytesToUnpack : Integer) of object;
 
   {component for unpacking APF files into raster lines}
   TApdCustomFaxUnpacker = class(TApdBaseComponent)
@@ -329,7 +329,7 @@ type
     procedure OutputLine( const Starting, Ending : Boolean;
                           const Data : PByteArray; const Len, PageNum : Cardinal); virtual;
     procedure Status( const FName : String; const PageNum : Cardinal;
-                      const BytesUnpacked, BytesToUnpack : LongInt); virtual;
+                      const BytesUnpacked, BytesToUnpack : Integer); virtual;
 
     {property get/set methods}
     procedure SetHorizMult(const NewHorizMult : Cardinal);
@@ -489,7 +489,7 @@ implementation
 {TApdCustomFaxConverter}
 
   function StatusCallback(Cvt : PAbsFaxCvt; StatFlags : Word;
-    BytesRead, BytesToRead : LongInt) : Bool; far;
+    BytesRead, BytesToRead : Integer) : Bool; far;
   var
     Abort : Boolean;
 
@@ -810,7 +810,7 @@ implementation
 
   procedure TApdCustomFaxConverter.Status( const Starting, Ending : Boolean;
                                            const PagesConverted, LinesConverted : Integer;
-                                           const BytesToRead, BytesRead : LongInt;
+                                           const BytesToRead, BytesRead : Integer;
                                            var Abort : Boolean);
     {-Display conversion status}
   begin
@@ -986,7 +986,7 @@ begin
          WriteProfileString( 'Windows', 'Device', Device );
          StrCopy(Device, 'Windows' );
          { tell everyone that we've changed the default }
-         SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LongInt(@Device));
+         SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, Integer(@Device));
          { make the TPrinter use the device capabilities of the new default}
          SetPrinter(Device, Name, Port, 0);
        end;
@@ -1005,7 +1005,7 @@ begin
       WriteProfileString( 'Windows', 'Device', Device );
       StrCopy(Device, 'Windows' );
       { tell everyone that we've changed the default }
-      SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LongInt(@Device));
+      SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, Integer(@Device));
     end;
   end;
 end;
@@ -1165,7 +1165,7 @@ end;
   end;
 
   procedure UnpackStatusCallback(Unpack : PUnpackFax; FaxFile : string; PageNum : Cardinal;
-                                 BytesUnpacked, BytesToUnpack : LongInt);
+                                 BytesUnpacked, BytesToUnpack : Integer);
   begin
     TApdCustomFaxUnpacker(Unpack^.UserData).Status(
       FaxFile, PageNum, BytesUnpacked, BytesToUnpack);
@@ -1236,7 +1236,7 @@ end;
   end;
 
   procedure TApdCustomFaxUnpacker.Status( const FName : String; const PageNum : Cardinal;
-                                          const BytesUnpacked, BytesToUnpack : LongInt);
+                                          const BytesUnpacked, BytesToUnpack : Integer);
   begin
     if Assigned(FStatus) then
       FStatus(Self, FName, PageNum, BytesUnpacked, BytesToUnpack);

@@ -1870,7 +1870,7 @@ type
 
 // *********************************************************************//
 
-  HSEMAPHORE = Longint;
+  HSEMAPHORE = Integer;
   TReference_Time = Comp;
 
 // *********************************************************************//
@@ -2071,7 +2071,7 @@ type
 
 // *********************************************************************//
 
-  OAHWND = Longint;
+  OAHWND = Integer;
 
 // *********************************************************************//
 
@@ -2080,48 +2080,48 @@ type
     (* IVideoWindow methods *)
     function put_Caption(strCaption: TBSTR): HResult; stdcall;
     function get_Caption(var strCaption: TBSTR): HResult; stdcall;
-    function put_WindowStyle(WindowStyle: Longint): HResult; stdcall;
-    function get_WindowStyle(var WindowStyle: Longint): HResult; stdcall;
-    function put_WindowStyleEx(WindowStyleEx: Longint): HResult; stdcall;
-    function get_WindowStyleEx(var WindowStyleEx: Longint): HResult; stdcall;
+    function put_WindowStyle(WindowStyle: Integer): HResult; stdcall;
+    function get_WindowStyle(var WindowStyle: Integer): HResult; stdcall;
+    function put_WindowStyleEx(WindowStyleEx: Integer): HResult; stdcall;
+    function get_WindowStyleEx(var WindowStyleEx: Integer): HResult; stdcall;
     function put_AutoShow(AutoShow: LongBool): HResult; stdcall;
     function get_AutoShow(var AutoShow: LongBool): HResult; stdcall;
-    function put_WindowState(WindowState: Longint): HResult; stdcall;
-    function get_WindowState(var WindowState: Longint): HResult; stdcall;
-    function put_BackgroundPalette(BackgroundPalette: Longint): HResult; stdcall;
-    function get_BackgroundPalette(var pBackgroundPalette: Longint): HResult; stdcall;
+    function put_WindowState(WindowState: Integer): HResult; stdcall;
+    function get_WindowState(var WindowState: Integer): HResult; stdcall;
+    function put_BackgroundPalette(BackgroundPalette: Integer): HResult; stdcall;
+    function get_BackgroundPalette(var pBackgroundPalette: Integer): HResult; stdcall;
     function put_Visible(Visible: LongBool): HResult; stdcall;
     function get_Visible(var pVisible: LongBool): HResult; stdcall;
-    function put_Left(Left: Longint): HResult; stdcall;
-    function get_Left(var pLeft: Longint): HResult; stdcall;
-    function put_Width(Width: Longint): HResult; stdcall;
-    function get_Width(var pWidth: Longint): HResult; stdcall;
-    function put_Top(Top: Longint): HResult; stdcall;
-    function get_Top(var pTop: Longint): HResult; stdcall;
-    function put_Height(Height: Longint): HResult; stdcall;
-    function get_Height(var pHeight: Longint): HResult; stdcall;
+    function put_Left(Left: Integer): HResult; stdcall;
+    function get_Left(var pLeft: Integer): HResult; stdcall;
+    function put_Width(Width: Integer): HResult; stdcall;
+    function get_Width(var pWidth: Integer): HResult; stdcall;
+    function put_Top(Top: Integer): HResult; stdcall;
+    function get_Top(var pTop: Integer): HResult; stdcall;
+    function put_Height(Height: Integer): HResult; stdcall;
+    function get_Height(var pHeight: Integer): HResult; stdcall;
     function put_Owner(Owner: OAHWND): HResult; stdcall;
     function get_Owner(var Owner: OAHWND): HResult; stdcall;
     function put_MessageDrain(Drain: OAHWND): HResult; stdcall;
     function get_MessageDrain(var Drain: OAHWND): HResult; stdcall;
-    function get_BorderColor(var Color: Longint): HResult; stdcall;
-    function put_BorderColor(Color: Longint): HResult; stdcall;
+    function get_BorderColor(var Color: Integer): HResult; stdcall;
+    function put_BorderColor(Color: Integer): HResult; stdcall;
     function get_FullScreenMode(var FullScreenMode: LongBool): HResult; stdcall;
     function put_FullScreenMode(FullScreenMode: LongBool): HResult; stdcall;
-    function SetWindowForeground(Focus: Longint): HResult; stdcall;
-    function NotifyOwnerMessage(hwnd: Longint; uMsg, wParam, lParam: Longint): HResult; stdcall;
-    function SetWindowPosition(Left, Top, Width, Height: Longint): HResult; stdcall;
-    function GetWindowPosition(var pLeft, pTop, pWidth, pHeight: Longint): HResult; stdcall;
-    function GetMinIdealImageSize(var pWidth, pHeight: Longint): HResult; stdcall;
-    function GetMaxIdealImageSize(var pWidth, pHeight: Longint): HResult; stdcall;
-    function GetRestorePosition(var pLeft, pTop, pWidth, pHeight: Longint): HResult; stdcall;
+    function SetWindowForeground(Focus: Integer): HResult; stdcall;
+    function NotifyOwnerMessage(hwnd: Integer; uMsg, wParam, lParam: Integer): HResult; stdcall;
+    function SetWindowPosition(Left, Top, Width, Height: Integer): HResult; stdcall;
+    function GetWindowPosition(var pLeft, pTop, pWidth, pHeight: Integer): HResult; stdcall;
+    function GetMinIdealImageSize(var pWidth, pHeight: Integer): HResult; stdcall;
+    function GetMaxIdealImageSize(var pWidth, pHeight: Integer): HResult; stdcall;
+    function GetRestorePosition(var pLeft, pTop, pWidth, pHeight: Integer): HResult; stdcall;
     function HideCursor(HideCursor: LongBool): HResult; stdcall;
     function IsCursorHidden(var CursorHidden: LongBool): HResult; stdcall;
   end;
 
 // *********************************************************************//
 
-  OAFilterState = Longint;
+  OAFilterState = Integer;
 
 // *********************************************************************//
 
@@ -2131,7 +2131,7 @@ type
     function Run: HResult; stdcall;
     function Pause: HResult; stdcall;
     function Stop: HResult; stdcall;
-    function GetState(msTimeout: Longint; var pfs: OAFilterState): HResult; stdcall;
+    function GetState(msTimeout: Integer; var pfs: OAFilterState): HResult; stdcall;
     function RenderFile(strFilename: TBSTR): HResult; stdcall;
     function AddSourceFilter(strFilename: TBSTR; ppUnk: IDispatch): HResult; stdcall;
     function get_FilterCollection(out ppUnk: IDispatch): HResult; stdcall;
