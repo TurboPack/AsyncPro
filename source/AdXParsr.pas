@@ -1682,7 +1682,7 @@ begin
     raise EAdParserError.CreateError(FFilter.Line,
                                      FFilter.LinePos,
                                      sUnexpEndOfInput +
-                                     QuotedStr(TempStr));
+                                     QuotedStr(string(TempStr)));
   end;
 end;
 {--------}
@@ -1788,7 +1788,7 @@ begin
   if Length(sVal) > 0 then begin
     PushDocument;
     MemStream := TApdMemoryStream.Create;
-    TempString := WideCharLenToString(Pointer(sVal), Length(sVal));
+    TempString := AnsiString(WideCharLenToString(Pointer(sVal), Length(sVal)));
     MemStream.Write(TempString[1], Length(TempString));
     MemStream.Position := 0;
     FFilter := TApdInCharFilter.Create(MemStream, BufferSize);
@@ -2024,14 +2024,14 @@ begin
       SkipChar;
       if ReadChar(False) = '#' then begin
         SkipChar;
-        if ParseCharRef = TempStr then
+        if ParseCharRef = string(TempStr) then
           Exit;
       end;
     end;
     raise EAdParserError.CreateError(FFilter.Line,
                                      FFilter.LinePos,
                                      sExpectedString +
-                                     QuotedStr(TempStr));
+                                     QuotedStr(string(TempStr)));
   end;
 end;
 {--------}

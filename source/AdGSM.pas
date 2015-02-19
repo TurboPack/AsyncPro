@@ -335,6 +335,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   { +CMS ERROR:  =  Message Service Failure Result Code }
   GSMConfigAvail : array[0..6] of AnsiString =
@@ -411,7 +414,7 @@ const
 
 function TApdSMSMessage.GetMessageAsPDU : AnsiString;
 begin
-  Result := StringToPDU (FMessage);
+  Result := StringToPDU (AnsiString(FMessage));
 end;
 
 function PDUToString (v : AnsiString) : AnsiString;
@@ -456,7 +459,7 @@ end;
 
 procedure TApdSMSMessage.SetMessageAsPDU (v : AnsiString);
 begin
-  FMessage := PDUToString (v);
+  FMessage := string(PDUToString (v));
 end;
 
 function StringToPDU (v : AnsiString) : AnsiString;
@@ -592,8 +595,8 @@ begin
   //Display Message Service Failure Result Code
   Temp := Data;
   if Temp <> '' then begin                                               {!!.06}
-    Temp := Copy(Data, Pos(' ', Data), Length(Data));
-    ErrorCode := -8000 - StrToInt(Temp);
+    Temp := Copy(Data, Pos(' ', string(Data)), Length(Data));
+    ErrorCode := -8000 - StrToInt(string(Temp));
     ErrorMessage := 'Phone error <refer to AdExcept.inc>';               {!!.06}
   end else begin                                                         {!!.06}
     ErrorCode := -8500;                                                  {!!.06}
@@ -621,8 +624,8 @@ begin                                                                    {!!.02}
   if NotifyStr <> '' then begin                                          {!!.02}
     if assigned(FOnNewMessage) then begin                                {!!.02}
       NotifyStr := Copy(NotifyStr,
-        Pos('",', NotifyStr) + 2, Length(NotifyStr));                    {!!.02}
-      MessageIndex := StrToInt(NotifyStr);                               {!!.02}
+        Pos('",', string(NotifyStr)) + 2, Length(NotifyStr));                    {!!.02}
+      MessageIndex := StrToInt(string(NotifyStr));                               {!!.02}
       //if Assigned(FOnNewMessage) then begin                            {!!.02}
       { if OnNewMessage event then PostMessage to Synchronize/ListAllMessages }
       FNeedNewMessage := MessageIndex;                                   {!!.04}
@@ -695,8 +698,8 @@ begin
   ResponsePacket.ComPort := FComPort;
   ResponsePacket.Enabled := True;
   //DelayTicks(4, True);                                                 {!!.04}
-  FComPort.Output := 'AT' + GSMSendMessFromStorage[CmdIndex] +
-                     IntToStr(TheIndex) + #13;
+  FComPort.Output := AnsiString('AT' + string(GSMSendMessFromStorage[CmdIndex]) +
+                     IntToStr(TheIndex) + #13);
   NewTimer(ET, 1080); // 60 second timer
   repeat
     Res := SafeYield;
@@ -880,8 +883,8 @@ procedure TApdCustomGSMPhone.ProcessResponse;
   { Convert String to Integer }
   function GSMStrToInt(Str : AnsiString) : Integer;
   begin
-    while Pos(' ', Str) > 0 do
-      Str[Pos(' ', Str)] := '0';
+    while Pos(' ', string(Str)) > 0 do
+      Str[Pos(' ', string(Str))] := '0';
     Result := StrToInt(string(Str));
   end;
 
@@ -928,7 +931,7 @@ var
       FTempWriteMess := '00'
     else begin
       // Add the length of SMSCenter in octets
-      FTempWriteMess := '0' + IntToStr((TheLength Div 2) + 1);
+      FTempWriteMess := AnsiString('0' + IntToStr((TheLength Div 2) + 1));
       if Length(FSMSCenter) > 10 then begin
         FTempWriteMess := FTempWriteMess + '91'; // International format
       end else begin
@@ -937,19 +940,19 @@ var
       I := 1;
       // Add SMSCenter to PDU message
       while I < Length(FSMSCenter) do begin
-        TheNextOctet := FSMSCenter[I+1] + FSMSCenter[I];
+        TheNextOctet := AnsiString(FSMSCenter[I+1] + FSMSCenter[I]);
         FTempWriteMess := FTempWriteMess + TheNextOctet;
         I := I + 2;
       end;
       if Odd(Length(FSMSCenter)) then
-        FTempWriteMess := FTempWriteMess + 'F' + FSMSCenter[Length(FSMSCenter)];
+        FTempWriteMess := FTempWriteMess + AnsiString('F' + FSMSCenter[Length(FSMSCenter)]);
     end;
     //FirstOctet
     FTempWriteMess := FTempWriteMess + '11';
     // Lets the phone set the message reference number itself
     FTempWriteMess := FTempWriteMess + '00';
     TheLength := Length(FSMSAddress);
-    S := Format ('%02.2x', [TheLength]);
+    S := AnsiString(Format ('%02.2x', [TheLength]));
     FTempWriteMess := FTempWriteMess + S;
     // Add SMSAddress to PDU message
     if Length(FSMSAddress) > 10 then
@@ -958,12 +961,12 @@ var
       FTempWriteMess := FTempWriteMess + '81'; // Let phone handle format
     I := 1;
     while I < Length(FSMSAddress) do begin
-      TheNextOctet := FSMSAddress[I+1] + FSMSAddress[I];
+      TheNextOctet := AnsiString(FSMSAddress[I+1] + FSMSAddress[I]);
       FTempWriteMess := FTempWriteMess + TheNextOctet;
       I := I + 2;
     end;
     if Odd(Length(FSMSAddress)) then
-      FTempWriteMess := FTempWriteMess + 'F' + FSMSAddress[I];
+      FTempWriteMess := FTempWriteMess + AnsiString('F' + FSMSAddress[I]);
     // Protocol identifier
     FTempWriteMess := FTempWriteMess + '00';
     // Datacoding scheme
@@ -973,13 +976,13 @@ var
 
     // Length of SMS message converted to HEX
     TheLength := Length(FMessage);
-    S := Format ('%02.2x', [TheLength]);
+    S := AnsiString(Format ('%02.2x', [TheLength]));
     FTempWriteMess := FTempWriteMess + S;
     T := '';
     // Add SMSMessage after transformation to PDU string
-    S := StringToPDU(FMessage);
+    S := StringToPDU(AnsiString(FMessage));
     for I := 1 to Length(S) do begin
-        T := T + IntToHex(Byte(S[I]), 2);
+        T := T + AnsiString(IntToHex(Byte(S[I]), 2));
     end;
     FTempWriteMess := FTempWriteMess + T;
     PDULength := Length(FTempWriteMess) DIV 2 - 1;
@@ -993,14 +996,14 @@ var
     NumLength, I, TempI, MessageLength : Integer;
   begin
     // Make sure we are not at the end of the last message
-    if Pos (#13#10, S) = 1 then
+    if Pos (#13#10, string(S)) = 1 then
       GetNextField (#13#10);
     // Make sure we are at the beginning of a message
-    if Pos('+CMGL:', S) = 1 then begin
+    if Pos('+CMGL:', string(S)) = 1 then begin
       // Build the SMS message while reading
       TempSMSMessage := TApdSMSMessage.Create;
       // format is +CMGL: Index, status, address, address name, timestamp
-      S := Copy(S, Pos(':', S) + 1, Length(S));
+      S := Copy(S, Pos(':', string(S)) + 1, Length(S));
       // extract the index number
       TempSMSMessage.FMessageIndex := GSMStrToInt(GetNextField(','));
       //Let the phone handle the status
@@ -1008,12 +1011,12 @@ var
       GetNextField(#13#10);
       // Assign PDU stuff to TempS
       TempS := GetNextField(#13#10);
-      NumLength := StrToInt(Copy(TempS, 0, 2));
+      NumLength := StrToInt(Copy(string(TempS), 0, 2));
       I := 0;
       //NumLength is length of center number, in octets
       if NumLength > 0 then begin
         // Next two digits is Type-of-Address octet
-        I := StrToInt(Copy(TempS, 3, 2));
+        I := StrToInt(Copy(string(TempS), 3, 2));
         // I is the Type-of-Address octet
         case I of
           91 : begin
@@ -1038,7 +1041,7 @@ var
         STemp := Copy(STemp, 3, Length(STemp));
       end;
       // TempI = octet is First Octet of SMS-Deliver PDU
-      TempI := StrToInt(Copy(TempS, I, 2));
+      TempI := StrToInt(Copy(string(TempS), I, 2));
       // Get next octet
       TempS := Copy(TempS, I+2, Length(TempS));
       St := Copy(TempS, 0, 2);
@@ -1058,9 +1061,9 @@ var
         end;
       end; // End Case
       //Address-Length. Length of the sender number (0B hex = 11 dec)
-      NumLength := (StrToInt('$' + St));
+      NumLength := (StrToInt('$' + string(St)));
       // Next two digits is Type-of-Address octet
-      I := StrToInt('$' + Copy(TempS, 3, 2));
+      I := StrToInt('$' + Copy(string(TempS), 3, 2));
       case I of
         133 : begin
           // 85 in Hex = Voice mail ?
@@ -1090,7 +1093,7 @@ var
         I := I + 2;
       end;
       // TempStaID is the StationID at this point
-      TempSMSMessage.FAddress := TempStaID;
+      TempSMSMessage.FAddress := string(TempStaID);
       // Protocol identifier of "00" and Data coding scheme of "00"
       // are the 2 octets or the 4 added to I, below
       I := I + 4; // start of time stamp
@@ -1108,12 +1111,12 @@ var
               TempS[I+13] + TempS[I+12];           // Time Zone
         // 14 is length of time stamp - Keeping track where we are in TempS
         TempI := I + 14;
-        TempSMSMessage.FTimeStampStr := St;
+        TempSMSMessage.FTimeStampStr := string(St);
       end;
       // Get next octet
       St := TempS[TempI] + TempS[TempI + 1];
       // MessageLength
-      MessageLength := StrToInt('$' + St);
+      MessageLength := StrToInt('$' + string(St));
       // U is the message
       U := Copy(TempS,TempI+2,Length(TempS));
       // NumLength is the length of the message
@@ -1122,8 +1125,8 @@ var
       I := 1;
       T := '';
       while I < NumLength do begin
-        St := '$' + U[I] + U[I+1];
-        TempI := StrToInt(St);
+        St := AnsiString('$' + string(U[I] + U[I+1]));
+        TempI := StrToInt(string(St));
         T := T + AnsiChar(TempI);
         I := I + 2;
       end;
@@ -1131,25 +1134,25 @@ var
       TheMessage := PDUToString(T);
       if MessageLength = Length(TheMessage) then
         // Store message
-        TempSMSMessage.FMessage := TheMessage;
+        TempSMSMessage.FMessage := string(TheMessage);
     end; // else our PDU should handle longer messages
     if TempSMSMessage.FMessageIndex = FNeedNewMessage then
     // if new message notify wanted, then assign it
       FRecNewMess := TempSMSMessage.Message;
     MessageStore.AddObject(TempSMSMessage.TimeStampStr, TempSMSMessage);
-    Result := Pos('+CMGL:', S) > 0;
+    Result := Pos('+CMGL:', string(S)) > 0;
   end;
 
   { Parse a message }
   function ParseAMessage : Boolean;
   begin
-    if Pos (#13#10, S) = 1 then
+    if Pos (#13#10, string(S)) = 1 then
       GetNextField (#13#10);
-    if Pos('+CMGL:', S) = 1 then begin
+    if Pos('+CMGL:', string(S)) = 1 then begin
       // first line of the message
       // format is +CMGL: Index, status, address, address name, timestamp
       TempSMSMessage := TApdSMSMessage.Create;
-      S := Copy(S, Pos(':', S) + 1, Length(S));
+      S := Copy(S, Pos(':', string(S)) + 1, Length(S));
       // extract the index number
       TempSMSMessage.FMessageIndex := GSMStrToInt(GetNextField(','));
       // extract the status
@@ -1162,11 +1165,11 @@ var
       else TempSMSMessage.FStatus := ssUnknown;                          {!!.01}
 
       // Read the address field with quotes (if any)
-      TempSMSMessage.FAddress := GetNextField( ',' );
+      TempSMSMessage.FAddress := string(GetNextField( ',' ));
       // Name (??) field  followed by ,
-      TempSMSMessage.FName := GetNextField( ',' );
+      TempSMSMessage.FName := string(GetNextField( ',' ));
       // DateTime Field followed by ,
-      TempSMSMessage.FTimeStampStr := GetNextField( ',' );
+      TempSMSMessage.FTimeStampStr := string(GetNextField( ',' ));
       if TempSMSMessage.FTimeStampStr = '' then
         TempSMSMessage.FTimeStampStr := '<no timestamp>';
       // Message Type   followed by ,
@@ -1174,16 +1177,16 @@ var
       // Message Length followed by #13#10
       STemp := GetNextField( #13#10 );
       // Message        followed by #13#10
-      TempSMSMessage.Message := GetNextField( #13#10 );
+      TempSMSMessage.Message := string(GetNextField( #13#10 ));
     end else begin
       // Message more than 1 line???
       TempSMSMessage.Message := TempSMSMessage.Message + #13#10 +
-                      GetNextField( #13#10 );
+                      string(GetNextField( #13#10 ));
     end;
     if TempSMSMessage.FMessageIndex = FNeedNewMessage then               {!!.06}
         FRecNewMess := TempSMSMessage.Message;                           {!!.06}
     MessageStore.AddObject(TempSMSMessage.TimeStampStr, TempSMSMessage);
-    Result := Pos('+CMGL:', S) > 0;                                      {!!.04}
+    Result := Pos('+CMGL:', string(S)) > 0;                                      {!!.04}
   end;
 
 begin
@@ -1219,7 +1222,7 @@ begin
                   STemp := GSMConfigAvail[CmdIndex];                     {!!.06}
                   // Detect, PDU, or Text
                   if STemp = '+CMGF=' then begin                        {!!.PDU}
-                    STemp := Copy(S, Pos('(',S)+1, Length(S));          {!!.PDU}
+                    STemp := Copy(S, Pos('(',string(S))+1, Length(S));          {!!.PDU}
                     if Length(STemp) < 3 then begin                     {!!.PDU}
                       if (FGSMMode = gmPDU) and (STemp[1] = '0') then   {!!.PDU}
                         SetPDUMode(True)                                {!!.PDU}
@@ -1283,10 +1286,10 @@ begin
                   ResponsePacket.Enabled := True;
                   if FPDUMode then begin                                {!!.PDU}
                     BuildPDUMessage;                                    {!!.PDU}
-                    STemp := IntToStr(PDULength);                       {!!.PDU}
+                    STemp := AnsiString(IntToStr(PDULength));                       {!!.PDU}
                   end else begin                                        {!!.PDU}
                     //DelayTicks(4, True);                               {!!.04}
-                    STemp := SMSAddress;
+                    STemp := AnsiString(SMSAddress);
                     if STemp = '' then begin                             {!!.02}
                       DoFail(secBadOperation,-8302);                     {!!.02}
                       Exit;                                              {!!.02}
@@ -1311,7 +1314,7 @@ begin
                     if FPDUMode then begin                              {!!.PDU}
                       STemp := FTempWriteMess;                          {!!.PDU}
                     end else                                            {!!.PDU}
-                      STemp := FMessage;
+                      STemp := AnsiString(FMessage);
                     if STemp[Length(STemp)] <> #26 then
                       STemp := STemp + #26;
                     FComPort.Output := STemp;
@@ -1332,9 +1335,9 @@ begin
                           FSMSCenter := copy(FSMSCenter, 1,              {!!.01}
                                                Length(FSMSCenter)-1);    {!!.01}
                         //end;                                           {!!.01}
-                        FComport.Output := 'AT' +
-                                GSMSendMessageCommands[CmdIndex]+'"'     {!!.01}
-                                           + FSMSCenter + '"' + #13
+                        FComport.Output := AnsiString('AT' +
+                                string(GSMSendMessageCommands[CmdIndex])+'"'     {!!.01}
+                                           + FSMSCenter + '"' + #13)
                       end else begin
                         inc(CmdIndex);
                         ResponsePacket.StartString :=
@@ -1344,9 +1347,9 @@ begin
                         //DelayTicks(4, True);                           {!!.04}
                         if FPDUMode then begin                          {!!.PDU}
                           BuildPDUMessage;                              {!!.PDU}
-                          S := IntToStr(PDULength);                     {!!.PDU}
+                          S := AnsiString(IntToStr(PDULength));                     {!!.PDU}
                         end else begin                                  {!!.PDU}
-                          S := SMSAddress;
+                          S := AnsiString(SMSAddress);
                           if S = '' then begin                           {!!.02}
                             DoFail(secBadOperation,-8302);               {!!.02}
                             Exit;                                        {!!.02}
@@ -1434,7 +1437,7 @@ begin
                 end else
                   if (CmdIndex < High(GSMWriteToMemoryCommands)) then begin
                     BuildPDUMessage;                                    {!!.PDU}
-                    STemp := IntToStr(PDULength);                       {!!.PDU}
+                    STemp := AnsiString(IntToStr(PDULength));                       {!!.PDU}
                     inc(CmdIndex);                                      {!!.PDU}
                     FComPort.Output := 'AT' +
                       GSMWriteToMemoryCommands[CmdIndex] + STemp + #13;
@@ -1505,8 +1508,8 @@ begin
       S := '"' + S + '"';
   end;
   if FGSMMode = gmPDU then begin                                        {!!.PDU}
-    FSMSAddress := Dest;                                                {!!.PDU}
-    FMessage := Msg;                                                    {!!.PDU}
+    FSMSAddress := string(Dest);                                                {!!.PDU}
+    FMessage := string(Msg);                                                    {!!.PDU}
     PostMessage(FHandle, ApdGSMResponse, 0,0);                          {!!.PDU}
     CmdIndex := CmdIndex - 2;                                           {!!.PDU}
   end else begin
@@ -1571,8 +1574,8 @@ begin
   ResponsePacket.EndString := #13#10'OK';
   ResponsePacket.Enabled := True;
   //DelayTicks(4, True);                                                 {!!.04}
-  FComPort.Output := 'AT' + GSMDeleteAMessageCommand[CmdIndex] +
-                     IntToStr(PhoneIndex) + #13;
+  FComPort.Output := AnsiString('AT' + string(GSMDeleteAMessageCommand[CmdIndex]) +
+                     IntToStr(PhoneIndex) + #13);
   // go to process response
   PostMessage(FHandle, ApdGSMResponse, 0,0);                             {!!.06}
 end;

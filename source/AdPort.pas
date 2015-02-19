@@ -756,6 +756,8 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
 
 const
   ComWindowClass = 'awComWindow';
@@ -1005,16 +1007,16 @@ var
                        InitTracing(FTraceSize);
           tlDump   : if (FTracing = tlOn) or (FTracing = tlPause) then begin
                        StartTracing;
-                       DumpTrace(FTraceName, FTraceHex);
+                       DumpTrace(string(FTraceName), FTraceHex);
                      end;
           tlAppend : if (FTracing = tlOn) or (FTracing = tlPause) then begin
                        StartTracing;
-                       AppendTrace(FTraceName, FTraceHex, tlOff);           // SWB
+                       AppendTrace(string(FTraceName), FTraceHex, tlOff);           // SWB
                      end;
           tlAppendAndContinue :                                             // SWB
                      if (FTracing = tlOn) or (FTracing = tlPause) then begin// SWB
                        StartTracing;                                        // SWB
-                       AppendTrace(FTraceName, FTraceHex, FTracing);        // SWB
+                       AppendTrace(string(FTraceName), FTraceHex, FTracing);        // SWB
                      end;                                                   // SWB
           tlPause  : if (FTracing = tlOn) then
                        StopTracing;
@@ -1064,16 +1066,16 @@ var
                        InitLogging(FLogSize);
           tlDump   : if (FLogging = tlOn) or (FLogging = tlPause) then begin
                        StartLogging;
-                       DumpLog(FLogName, FLogHex);
+                       DumpLog(string(FLogName), FLogHex);
                      end;
           tlAppend : if (FLogging = tlOn) or (FLogging = tlPause) then begin
                        StartLogging;
-                       AppendLog(FLogName, FLogHex, tlOff);                 // SWB
+                       AppendLog(string(FLogName), FLogHex, tlOff);                 // SWB
                      end;
           tlAppendAndContinue :                                             // SWB
                      if (FLogging = tlOn) or (FLogging = tlPause) then begin// SWB
                        StartLogging;                                        // SWB
-                       AppendLog(FLogName, FLogHex, FLogging);              // SWB
+                       AppendLog(string(FLogName), FLogHex, FLogging);              // SWB
                      end;                                                   // SWB
           tlPause  : if (FLogging = tlOn) then
                        StopLogging;
@@ -2543,7 +2545,7 @@ var
       Exit;
     end;
     Len:=Length(data);
-    StrPLCopy(P, Data, Length(P) - 1);
+    AnsiStrings.StrPLCopy(P, Data, Length(P) - 1);
     Result := Word(CheckException(Self,
         ValidDispatcher.AddDataTriggerLen(P, IgnoreCase, Len)));
   end;

@@ -307,6 +307,9 @@ type {forwards}
 
 implementation
 
+uses
+  AnsiStrings;
+
 const {file data type constants}
   TypeChar  : array[TFtpFileType] of AnsiChar = ('A', 'I');
 
@@ -534,7 +537,7 @@ begin
     FBytesTransferred := 0;
     if PassiveMode then
       PushCommand(fcPASV);
-    PushCommand(fcType + ' ' + TypeChar[ftAscii]);
+    PushCommand(AnsiString(fcType + ' ') + TypeChar[ftAscii]);
     Result := DataConnect;
   end;
 end;
@@ -588,32 +591,32 @@ begin
     PushCommand(fcRETR + ' ' + RemotePathName);
     FRemoteFile := RemotePathName;
     FLocalFile := LocalPathName;
-    if not FileExists(LocalPathName) then begin
-      FH := FileCreate(LocalPathName);
+    if not FileExists(string(LocalPathName)) then begin
+      FH := FileCreate(string(LocalPathName));
       FileClose(FH);
     end;
     if (RetrieveMode = rmReplace) then begin
-      DeleteFile(LocalPathName);                                         {!!.04}
-      LocalStream := TFileStream.Create(LocalPathName, fmCreate);        {!!.04}
+      DeleteFile(string(LocalPathName));                                         {!!.04}
+      LocalStream := TFileStream.Create(string(LocalPathName), fmCreate);        {!!.04}
       LocalStream.Position := 0;
       PostLog(lcReceive);
     end else if (RetrieveMode = rmAppend) then begin
-      LocalStream := TFileStream.Create(LocalPathName, fmOpenReadWrite);
+      LocalStream := TFileStream.Create(string(LocalPathName), fmOpenReadWrite);
       LocalStream.Position := LocalStream.Size;
       PostLog(lcReceive);
     end else begin {RetrieveMode = rmRestart}
-      LocalStream := TFileStream.Create(LocalPathName, fmOpenReadWrite);
+      LocalStream := TFileStream.Create(string(LocalPathName), fmOpenReadWrite);
       if (FRestartAt > LocalStream.Size) or (FRestartAt < 0) then
         FRestartAt := LocalStream.Size;
       LocalStream.Position := FRestartAt;
-      PushCommand(fcREST + ' ' + IntToStr(FRestartAt));
+      PushCommand(AnsiString(fcREST + ' ' + IntToStr(FRestartAt)));
       PostLog(lcRestart);
     end;
     FBytesTransferred := 0;
     AbortXfer := False;
     if PassiveMode then
       PushCommand(fcPASV);
-    PushCommand(fcType + ' ' + TypeChar[FFileType]);
+    PushCommand(AnsiString(fcType + ' ' + TypeChar[FFileType]));
     Result := DataConnect;
   end;
 end;
@@ -648,14 +651,14 @@ function TApdCustomFtpClient.Store(const RemotePathName, LocalPathName : AnsiStr
   {transfer a file to the server}
 begin
   Result := (ProcessState = psIdle) and
-            (RemotePathName <> '') and FileExists(LocalPathName);
+            (RemotePathName <> '') and FileExists(string(LocalPathName));
   if Result then begin
     ChangeState(psPut);
     FRemoteFile := RemotePathName;
     FLocalFile := LocalPathName;
     if Assigned(LocalStream) then
       LocalStream.Free;
-    LocalStream := TFileStream.Create(LocalPathName, fmOpenRead);
+    LocalStream := TFileStream.Create(string(LocalPathName), fmOpenRead);
     FFileLength := LocalStream.Size;
     LocalStream.Position := 0;
     if (StoreMode = smAppend) then begin
@@ -672,14 +675,14 @@ begin
         FRestartAt := 0;
       LocalStream.Position := FRestartAt;
       PushCommand(fcSTOR + ' ' + RemotePathName);
-      PushCommand(fcREST + ' ' + IntToStr(FRestartAt));
+      PushCommand(AnsiString(fcREST + ' ' + IntToStr(FRestartAt)));
       PostLog(lcRestart);
     end;
     FBytesTransferred := 0;
     AbortXfer := False;
     if PassiveMode then
       PushCommand(fcPASV);
-    PushCommand(fcType + ' ' + TypeChar[FFileType]);
+    PushCommand(AnsiString(fcType + ' ' + TypeChar[FFileType]));
     Result := DataConnect;
   end;
 end;
@@ -763,20 +766,20 @@ begin
   strPortHi := '';
   strPortLo := '';
   for i := 1 to 3 do
-    if Pos(',', strAddr) > 0 then
-      strAddr[Pos(',', strAddr)]  := '.';
-  i := Pos(',', strAddr);
+    if Pos(',', string(strAddr)) > 0 then
+      strAddr[Pos(',', string(strAddr))]  := '.';
+  i := Pos(',', string(strAddr));
   if (i > 0) then begin
     strPort := Copy(strAddr, i+1, Length(strAddr));
     System.Delete(strAddr, i, Length(strAddr));
-    j := Pos(',', strPort);
+    j := Pos(',', string(strPort));
     strPortHi := Copy(strPort, 1, j - 1);
     strPortLo := Copy(strPort, j + 1, Length(strPort));
   end;
-  wPort := (StrToIntDef(strPortHi, 0) shl 8) + StrToIntDef(strPortLo, 0);
+  wPort := (StrToIntDef(string(strPortHi), 0) shl 8) + StrToIntDef(string(strPortLo), 0);
   with DataSocketName do begin
     sin_family := AF_INET;
-    sin_addr := Sock.String2NetAddr(strAddr);
+    sin_addr := Sock.String2NetAddr(string(strAddr));
     sin_port := Sock.htons(wPort);
   end;
   Sock.ConnectSocket(DataSocket, DataSocketName);
@@ -805,10 +808,10 @@ begin
           if (Sock.BindSocket(ListenSocket, ListenName) = 0) then
             if (SockFuncs.GetSockName(ListenSocket, ListenName, SockNameSize) = 0) then begin
               with ListenName do
-                LocalIP := Sock.NetAddr2String(sin_addr) + '.' +
-                  IntToStr(Lo(sin_port)) + '.' + IntToStr(Hi(sin_port));
-              while Pos('.', LocalIP) > 0 do
-                LocalIP[Pos('.', LocalIP)]  := ',';
+                LocalIP := AnsiString(Sock.NetAddr2String(sin_addr) + '.' +
+                  IntToStr(Lo(sin_port)) + '.' + IntToStr(Hi(sin_port)));
+              while Pos('.', string(LocalIP)) > 0 do
+                LocalIP[Pos('.', string(LocalIP))]  := ',';
               SendCommand(fcPORT + ' ' + LocalIP);
               if (Sock.ListenSocket(ListenSocket, 5) = 0) then
                 Result := True;
@@ -931,7 +934,7 @@ begin
   end; {case}
 
   if Assigned(PInfo) then
-    StrDispose(PInfo);
+    AnsiStrings.StrDispose(PInfo);
 end;
 
 procedure TApdCustomFtpClient.FtpReplyHandler(ReplyCode : Integer; PData : PAnsiChar);
@@ -953,22 +956,22 @@ var
 begin
   if not MultiLine then begin
     FillChar(ReplyBuffer, SizeOf(ReplyBuffer), #0);
-    StrCopy(ReplyBuffer, PData);
+    AnsiStrings.StrCopy(ReplyBuffer, PData);
     if (PData[3] = '-') then begin
       MultiLine := True;
-      MultiLineTerm := IntToStr(ReplyCode) + ' ';
+      MultiLineTerm := AnsiString(IntToStr(ReplyCode) + ' ');
       Exit;
     end;
   end else begin
-    if (Pos(MultiLineTerm, StrPas(PData)) <> 1) then begin
-      StrCat(ReplyBuffer, PData);
+    if (Pos(MultiLineTerm, AnsiStrings.StrPas(PData)) <> 1) then begin
+      AnsiStrings.StrCat(ReplyBuffer, PData);
       Exit;
     end else
       MultiLine := False
   end;
   PReply := ReplyBuffer;
   {$IFDEF Debugging}
-  DebugTxt(StrPas(PReply));
+  DebugTxt(AnsiStrings.StrPas(PReply));
   {$ENDIF}
 
   case ProcessState of
@@ -1007,8 +1010,8 @@ begin
           227 :
             begin
               S := PReply;
-              S := Copy(S, Pos('(', S) + 1, Length(S));
-              S := Copy(S, 1, Pos(')', S) - 1);
+              S := Copy(S, Pos('(', string(S)) + 1, Length(S));
+              S := Copy(S, 1, Pos(')', string(S)) - 1);
               DataConnectPASV(S);
               PopCommand;
             end;
@@ -1044,10 +1047,10 @@ begin
           end;
         257 :
           begin
-            S := StrPas(PReply);
-            S := Copy(S, Pos('"', S) + 1, Length(S));
-            S := Copy(S, 1, Pos('"', S) - 1);
-            StrPCopy(PReply, S);
+            S := AnsiStrings.StrPas(PReply);
+            S := Copy(S, Pos('"', string(S)) + 1, Length(S));
+            S := Copy(S, 1, Pos('"', string(S)) - 1);
+            AnsiStrings.StrPCopy(PReply, S);
             PostStatus(scCurrentDir, PReply);
           end;
       else
@@ -1166,7 +1169,7 @@ begin
   if not NoEvents then begin
     if (Code = 202) or (Code > 299) then begin
       if Assigned(Info) then
-        PData := StrNew(Info);
+        PData := AnsiStrings.StrNew(Info);
       PostMessage(hwndFtpEvent, FtpErrorMsg, Integer(Code), Longint(PData));
     end;
   end;
@@ -1188,7 +1191,7 @@ begin
     ChangeState(psIdle);
   if not NoEvents then begin
     if Assigned(Info) then
-      PData := StrNew(Info);
+      PData := AnsiStrings.StrNew(Info);
     PostMessage(hwndFtpEvent, FtpStatusMsg, Integer(Code), Longint(PData));
   end;
 end;
@@ -1297,9 +1300,9 @@ var
   RCode : Integer;
   PReply : PAnsiChar;
 begin
-  RCode := StrToIntDef(Copy(Data, 1, 3), 0);
+  RCode := StrToIntDef(Copy(string(Data), 1, 3), 0);
   PReply := AnsiStrAlloc(Length(Data)+ 1);
-  StrPCopy(PReply, Data);
+  AnsiStrings.StrPCopy(PReply, Data);
   PostMessage(hwndFtpEvent, FtpReplyMsg, RCode, Longint(PReply));
 end;
 
@@ -1327,7 +1330,7 @@ begin
   if (Socket = DataSocket) then begin
     if (ProcessState = psDir) then begin
       PInfo := AnsiStrAlloc(SizeOf(DataBuffer));
-      StrCopy(PInfo, @DataBuffer);
+      AnsiStrings.StrCopy(PInfo, @DataBuffer);
       PostStatus(scDataAvail, PInfo);
     end else if (ProcessState = psGet) or (ProcessState = psPut) then
       PostStatus(scTransferOK, nil);
@@ -1394,7 +1397,7 @@ begin
   if (not FEnabled) or (FFtpHistoryName = '') then
     Exit;
   try
-    AssignFile(F, FFtpHistoryName);
+    AssignFile(F, string(FFtpHistoryName));
     Append(F);
   except
     on E : EInOutError do
@@ -1404,10 +1407,10 @@ begin
         raise;
   end;
 
-  S := DateTimeToStr(Now) + ' : ';
+  S := AnsiString(DateTimeToStr(Now) + ' : ');
   case LogCode of
     lcOpen :
-      S := S + 'Connected to ' + FtpClient.ServerAddress;
+      S := S + AnsiString('Connected to ' + FtpClient.ServerAddress);
     lcClose :
       S := S + 'Disconnected';
     lcLogin :
@@ -1423,11 +1426,11 @@ begin
     lcStore :
       S := S + 'Uploading ' + FtpClient.FLocalFile;
     lcComplete :
-      S := S + 'Transfer complete. ' +
-             IntToStr(FtpClient.FBytesTransferred) + ' bytes Transferred';
+      S := S + AnsiString('Transfer complete. ' +
+             IntToStr(FtpClient.FBytesTransferred) + ' bytes Transferred');
     lcRestart :
-      S := S + 'Attempting re-transfer at ' +
-             IntToStr(FtpClient.FRestartAt) + ' bytes';
+      S := S + AnsiString('Attempting re-transfer at ' +
+             IntToStr(FtpClient.FRestartAt) + ' bytes');
     lcTimeout :
       S := S + 'Transfer timed out';
     lcUserAbort :

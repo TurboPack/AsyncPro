@@ -269,6 +269,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 constructor TApdSocksServerInfo.Create;
 begin
   inherited Create;
@@ -427,7 +430,7 @@ begin
       end;
       TempAddress := (ApdSocket.String2NetAddr(FWsAddress).S_addr);
       if TempAddress = INADDR_NONE then
-        TempAddress := (ApdSocket.LookupName(FWsAddress).S_addr);
+        TempAddress := (ApdSocket.LookupName(AnsiString(FWsAddress)).S_addr);
       if TempAddress = 0 then
         if Assigned(FOnWsError) then begin
           OnWsError(Self, ADWSCANTRESOLVE);
@@ -444,7 +447,7 @@ begin
     { Convert or lookup the port }
     Val(FWsPort, TempPort, ErrCode);
     if ErrCode <> 0 then
-      TempPort := ApdSocket.LookupService(FWsPort);
+      TempPort := ApdSocket.LookupService(AnsiString(FWsPort));
     if TempPort = 0 then
       raise EApdSocketException.CreateTranslate(ADWSINVPORT, 0, 0);
     TempPort := ApdSocket.htons(TempPort);
@@ -588,7 +591,7 @@ begin
   { Convert or lookup the address }
   TempAddress := (ApdSocket.String2NetAddr (WsSocksServerInfo.Address).S_addr);
   if TempAddress = INADDR_NONE then
-    TempAddress := (ApdSocket.LookupName (WsSocksServerInfo.Address).S_addr);
+    TempAddress := (ApdSocket.LookupName (AnsiString(WsSocksServerInfo.Address)).S_addr);
   if TempAddress = 0 then begin
     FSocksComplete := True;
     if Assigned (FOnWsError) then begin
@@ -652,7 +655,7 @@ begin
   { Convert or lookup the port }
   Val (FWsPort, TempPort, ErrCode);
   if ErrCode <> 0 then
-    TempPort := ApdSocket.LookupService (FWsPort);
+    TempPort := ApdSocket.LookupService (AnsiString(FWsPort));
   if TempPort = 0 then
     raise EApdSocketException.CreateTranslate (ADWSINVPORT, 0, 0);
   TempPort := ApdSocket.htons (TempPort);
@@ -662,7 +665,7 @@ begin
     raise EApdSocketException.CreateTranslate (WSAEDESTADDRREQ, 0, 0);
   TempAddress := (ApdSocket.String2NetAddr (FWsAddress).S_addr);
   if TempAddress = INADDR_NONE then
-    TempAddress := (ApdSocket.LookupName (FWsAddress).S_addr);
+    TempAddress := (ApdSocket.LookupName (AnsiString(FWsAddress)).S_addr);
   if TempAddress = 0 then
     if Assigned (FOnWsError) then begin
       OnWsError (Self, ADWSCANTRESOLVE);
@@ -682,7 +685,7 @@ begin
   PutChar (AnsiChar ((TempAddress and $00ff0000) shr 16));
   PutChar (AnsiChar ((TempAddress and $ff000000) shr 24));
 
-  Output := WsSocksServerInfo.UserCode; { USERID - User ID }
+  Output := AnsiString(WsSocksServerInfo.UserCode); { USERID - User ID }
   PutChar (#$00);
 end;
 
@@ -697,7 +700,7 @@ begin
   { Convert or lookup the port }
   Val (FWsPort, TempPort, ErrCode);
   if ErrCode <> 0 then
-    TempPort := ApdSocket.LookupService (FWsPort);
+    TempPort := ApdSocket.LookupService (AnsiString(FWsPort));
   if TempPort = 0 then
     raise EApdSocketException.CreateTranslate (ADWSINVPORT, 0, 0);
   TempPort := ApdSocket.htons (TempPort);
@@ -711,9 +714,9 @@ begin
   PutChar (#$00);
   PutChar (#$00);
   PutChar (#$01);
-  Output := WsSocksServerInfo.UserCode;
+  Output := AnsiString(WsSocksServerInfo.UserCode);
   PutChar (#$00);
-  Output := Self.WsAddress;
+  Output := AnsiString(Self.WsAddress);
   PutChar (#$00);
 end;
 
@@ -791,9 +794,9 @@ begin
   EnableSocks5UserNameReply;
   PutChar (#$05); { VER - Version Number }
   PutChar (AnsiChar (Length (WsSocksServerInfo.UserCode))); { ULEN }
-  Output := WsSocksServerInfo.UserCode; { UNAME }
+  Output := AnsiString(WsSocksServerInfo.UserCode); { UNAME }
   PutChar (AnsiChar (Length (WsSocksServerInfo.Password))); { PLEN }
-  Output := WsSocksServerInfo.Password; { PASSWD }
+  Output := AnsiString(WsSocksServerInfo.Password); { PASSWD }
 end;
 
 procedure TApdCustomWinsockPort.SendSocks5Request;
@@ -808,7 +811,7 @@ begin
   { Convert or lookup the port }
   Val (FWsPort, TempPort, ErrCode);
   if ErrCode <> 0 then
-    TempPort := ApdSocket.LookupService (FWsPort);
+    TempPort := ApdSocket.LookupService (AnsiString(FWsPort));
   if TempPort = 0 then
     raise EApdSocketException.CreateTranslate (ADWSINVPORT, 0, 0);
   TempPort := ApdSocket.htons (TempPort);
@@ -818,7 +821,7 @@ begin
     raise EApdSocketException.CreateTranslate (WSAEDESTADDRREQ, 0, 0);
   TempAddress := (ApdSocket.String2NetAddr (FWsAddress).S_addr);
   if TempAddress = INADDR_NONE then
-    TempAddress := (ApdSocket.LookupName (FWsAddress).S_addr);
+    TempAddress := (ApdSocket.LookupName (AnsiString(FWsAddress)).S_addr);
   if TempAddress = 0 then
     if Assigned (FOnWsError) then begin
       OnWsError (Self, ADWSCANTRESOLVE);

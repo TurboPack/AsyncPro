@@ -674,6 +674,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   {event types}
   etTapiConnect    = 0;
@@ -1054,7 +1057,7 @@ type
 
     if ((P1 and LineCallInfoState_CallerID) <> 0) then begin
       {Generate Caller ID event}
-      TapiCallerID(Trim(CallerID), Trim(CallerIDName));
+      TapiCallerID(string(Trim(CallerID)), string(Trim(CallerIDName)));
     end;
 
     { generate the OnTapiStatus event }
@@ -2066,7 +2069,7 @@ type
             TapiProcesses.Free;
           end;
 
-          StrPCopy(AppName, ChangeFileExt(Application.ExeName, ''));
+          AnsiStrings.StrPCopy(AppName, AnsiString(ChangeFileExt(Application.ExeName, '')));
 
           { Start TAPI and get the number of line devices }
           repeat
@@ -2228,7 +2231,7 @@ type
             {$ENDIF}
 
             {Compare to the selected device}
-            if Name = S then begin
+            if Name = string(S) then begin
               Result := I-1;
               Exit;
             end;
@@ -2342,11 +2345,11 @@ type
     if Assigned(FCallInfo) then begin
       with FCallInfo^ do begin
         if (CalledIDFlags and LINECALLPARTYID_BLOCKED <> 0) then begin
-          Result := AproLoadStr(ecTapiCIDBlocked);
+          Result := AproLoadAnsiStr(ecTapiCIDBlocked);
           Exit;
         end;
         if (CalledIDFlags and LINECALLPARTYID_OUTOFAREA <> 0) then begin
-          Result := AproLoadStr(ecTapiCIDOutOfArea);
+          Result := AproLoadAnsiStr(ecTapiCIDOutOfArea);
           Exit;
         end;
         if (CalledIDFlags and LINECALLPARTYID_UNKNOWN <> 0) then begin
@@ -2375,11 +2378,11 @@ type
       with FCallInfo^ do begin
         if ((CallerIDFlags and LINECALLPARTYID_ADDRESS) = 0) then begin
           if ((CallerIDFlags and LINECALLPARTYID_BLOCKED) <> 0) then begin
-            Result := AproLoadStr(ecTapiCIDBlocked);
+            Result := AproLoadAnsiStr(ecTapiCIDBlocked);
             Exit;
           end;
           if ((CallerIDFlags and LINECALLPARTYID_OUTOFAREA) <> 0) then begin
-            Result := AproLoadStr(ecTapiCIDOutOfArea);
+            Result := AproLoadAnsiStr(ecTapiCIDOutOfArea);
             Exit;
           end;
           if ((CallerIDFlags and LINECALLPARTYID_UNKNOWN) <> 0) then begin
@@ -2407,11 +2410,11 @@ type
     if Assigned(FCallInfo) then begin
       with FCallInfo^ do begin
         if (CallerIDFlags and LINECALLPARTYID_BLOCKED <> 0) then begin
-          Result := AproLoadStr(ecTapiCIDBlocked);
+          Result := AproLoadAnsiStr(ecTapiCIDBlocked);
           Exit;
         end;
         if (CallerIDFlags and LINECALLPARTYID_OUTOFAREA <> 0) then begin
-          Result := AproLoadStr(ecTapiCIDOutOfArea);
+          Result := AproLoadAnsiStr(ecTapiCIDOutOfArea);
           Exit;
         end;
         if (CallerIDFlags and LINECALLPARTYID_UNKNOWN <> 0) then begin
@@ -2693,7 +2696,7 @@ type
     TapiFailFired := False;
     TapiLogging(ltapiDial);
     ReplyResult := WaitForReply(tuLineMakeCall(LineHandle, CallHandle,
-      StrPCopy(NumZ, Number), 0, @CallParams));
+      AnsiStrings.StrPCopy(NumZ, AnsiString(Number)), 0, @CallParams));
     if ReplyResult < 0 then begin
       {Line is not available. Log failure and clean up...}
       FFailCode := ReplyResult;
@@ -2941,7 +2944,7 @@ type
       S[0] := AnsiChar(StringSize);
       Move(StringData[StringOffset], S[1], StringSize);
       Delete(S, 1, 3);
-      Val(S, Result, X);
+      Val(string(S), Result, X);
       if X <> 0 then
         Result := 0;
     end else
@@ -3018,7 +3021,6 @@ type
     Res              : LongInt;
     WaveOutDevCaps   : TWaveOutCaps;
     DeviceId         : DWORD;
-    Temp             : TPathCharArray;
     Flags            : LongInt;
   begin
     if FWaveState = wsRecording then
@@ -3810,7 +3812,7 @@ type
     TranslateOutput : PLineTranslateOutput;
   begin
     Res := tuLineTranslateAddressDyn(LineApp, GetSelectedLine,
-      ApiVersion, CanonicalAddr, 0, LineTranslateOption_CancelCallWaiting,
+      ApiVersion, string(CanonicalAddr), 0, LineTranslateOption_CancelCallWaiting,
       TranslateOutput);
     if (Res <> 0) then
       raise ETapiTranslateFail.Create(ecTapiTranslateFail, True);
@@ -3833,7 +3835,7 @@ type
     TranslateOutput : PLineTranslateOutput;
   begin
     Result := tuLineTranslateAddressDyn(LineApp, GetSelectedLine,
-      ApiVersion, CanonicalAddr, 0, Flags, TranslateOutput);
+      ApiVersion, string(CanonicalAddr), 0, Flags, TranslateOutput);
     if (Result <> 0) then
       FreeMem(TranslateOutput, TranslateOutput^.TotalSize)
     else begin

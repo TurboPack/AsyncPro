@@ -738,6 +738,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 type
   {A list of active TApdXxxFax components}
   PFaxWindowNode = ^TFaxWindowNode;
@@ -1454,7 +1457,7 @@ var
     {-Process the fax finish message}
   begin
     if Fax^.aPData^.aConcatFax then
-      DeleteFile(FTempFile);
+      DeleteFile(string(FTempFile));
     if Assigned(FOnFaxFinish) then
       FOnFaxFinish(CP, ErrorCode);
     Fax^.aPData^.aFaxFileName := '';                                     {!!.04}
@@ -1480,7 +1483,7 @@ var
     P : array[0..MaxMessageLen] of AnsiChar;
   begin
     afStatusMsg(P, Status);
-    Result := StrPas(P);
+    Result := AnsiStrings.StrPas(P);
   end;
 
   function TApdCustomAbstractFax.LogMsg(const LogCode: TFaxLogCode): string;
@@ -2084,7 +2087,7 @@ const
   function TApdCustomSendFax.GetFaxFile : TPassString;
   begin
     if FFaxFileList.Count > 0 then
-      Result := FFaxFileList[0]
+      Result := TPassString(FFaxFileList[0])
     else
       Result := '';
   end;
@@ -2092,7 +2095,7 @@ const
   procedure TApdCustomSendFax.SetFaxFile(const NewFile : TPassString);
   begin
     FFaxFileList.Clear;
-    FFaxFileList.Add(NewFile);
+    FFaxFileList.Add(string(NewFile));
   end;
 
   function TApdCustomSendFax.GetBlindDial : Boolean;
@@ -2282,12 +2285,12 @@ const
     while (I < FFaxFileList.Count)and FileExists(FFaxFileList[I])  do    {!!.02}
       inc(I);                                                            {!!.01}
     if I < FFaxFileList.Count then begin                                 {!!.01}
-      FTempFile := FFaxFileList[I];                                      {!!.01}
+      FTempFile := TPassString(FFaxFileList[I]);                         {!!.01}
       Exit;                                                              {!!.01}
     end;                                                                 {!!.01}
 
     { Create temp file }
-    DestFile := TFileStream.Create(FileName, fmCreate or fmShareExclusive);
+    DestFile := TFileStream.Create(string(FileName), fmCreate or fmShareExclusive);
     try
       { Open first source file }
       SourceFile := TFileStream.Create(FFaxFileList[0], fmOpenRead or fmShareDenyWrite);
@@ -2392,7 +2395,7 @@ const
         {translate the phone number using TAPI }
         FPhoneNumber := FTapiDevice.TranslateAddress(FPhoneNumber);
         { force the low level fax code to use a modified init and skip dial modifiers }
-        PC12FaxData(Fax)^.fcData^.cForcedInit := DefTapiInit;
+        PC12FaxData(Fax)^.fcData^.cForcedInit := TPassString(DefTapiInit);
         PC12FaxData(Fax)^.fcData^.cDialPrefix := '';
         PC12FaxData(Fax)^.fcData^.cDialTonePulse := ' ';
       end;
@@ -2400,7 +2403,7 @@ const
       CheckPort;
 
       if (FFaxFileList.Count > 1) and not Assigned(FOnFaxNext) then begin
-        FTempFile := CreateTempFileName;
+        FTempFile := TPassString(CreateTempFileName());
         ConcatFaxes(FTempFile);
         aPData^.aConcatFax := True;
       end else begin
@@ -2618,8 +2621,8 @@ const
     {Create or open the history file}
     { modified for .02 to check for existence of the file first }
     try
-      AssignFile(HisFile, FFaxHistoryName);
-      if FileExists(FFaxHistoryName) then                                {!!.02}
+      AssignFile(HisFile, string(FFaxHistoryName));
+      if FileExists(string(FFaxHistoryName)) then                                {!!.02}
         Append(HisFile)
       else                                                               {!!.02}
         Rewrite(HisFile);                                                {!!.02}
@@ -2664,7 +2667,7 @@ begin
     Rewrite(OutFile);
     while not EOF(InFile) do begin
       ReadLn(InFile, S);
-      WriteLn(OutFile, afConvertHeaderString(Fax, S));
+      WriteLn(OutFile, afConvertHeaderString(Fax, ShortString(S)));
     end;
   finally
     CloseFile(InFile);

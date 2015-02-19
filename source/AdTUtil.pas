@@ -1725,6 +1725,9 @@ procedure UnloadTapiDLL;
 
 implementation
 
+uses
+  AnsiStrings;
+
 const
   TapiDLL = 'TAPI32';
 
@@ -3055,7 +3058,7 @@ end;
       FillChar(TranslateOutput^, LineTranslateFixed, 0);
       TranslateOutput^.TotalSize := LineTranslateFixed;
       Result := tapiLineTranslateAddress(Line, DeviceID, APIVersion,
-                                         StrPCopy(Temp, AddressIn), Card,
+                                         AnsiStrings.StrPCopy(Temp, AnsiString(AddressIn)), Card,
                                          TranslateOptions, TranslateOutput);
 
       if TranslateOutput^.NeededSize > TranslateOutput^.TotalSize then begin
@@ -3065,7 +3068,7 @@ end;
         TranslateOutput := AllocMem(NewSize);
         TranslateOutput^.TotalSize := NewSize;
         Result := tapiLineTranslateAddress(Line, DeviceID, APIVersion,
-                                           StrPCopy(Temp, AddressIn), Card,
+                                           AnsiStrings.StrPCopy(Temp, AnsiString(AddressIn)), Card,
                                            TranslateOptions, TranslateOutput);
         if Result <> 0 then begin
           FreeMem(TranslateOutput, NewSize);
@@ -3096,7 +3099,7 @@ end;
     end;
     if @tapiLineTranslateDialog <> nil then
       Result := tapiLineTranslateDialog(Line, DeviceID, APIVersion,
-                                        HwndOwner, StrPCopy(Temp, AddressIn));
+                                        HwndOwner, AnsiStrings.StrPCopy(Temp, AnsiString(AddressIn)));
   end;
 
   {begin .06 addition}                                                   {!!.06}

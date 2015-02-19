@@ -139,14 +139,14 @@ implementation
     {-Format TotalSecs as minutes:seconds, leftpadded to 6}
   var
     Min, Sec : LongInt;
-    S : String;
+    S : ShortString;
   begin
     Min := TotalSecs div 60;
     Sec := TotalSecs mod 60;
     Str(Sec:2, S);
     if S[1] = ' ' then
       S[1] := '0';
-    FormatMinSec := LeftPad(IntToStr(Min) + ':' + S, 6);
+    FormatMinSec := LeftPad(IntToStr(Min) + ':' + string(S), 6);
   end;
 
   function FixFileName(const FileName : ShortString) : ShortString;
@@ -154,7 +154,7 @@ implementation
   const
     MaxShowSize  = 20;
   begin
-    Result := ExtractFileName(FileName);
+    Result := ShortString(ExtractFileName(string(FileName)));
     {$IFDEF Win32}
     if Length(Result) > MaxShowSize then begin
       SetLength(Result, MaxShowSize);
@@ -220,21 +220,21 @@ implementation
       {Left top block}
       if Fax is TApdCustomSendFax then begin
         with (Fax as TApdCustomSendFax) do begin
-          fsPhoneNumber.Caption    := PhoneNumber;
-          fsFaxFileName.Caption    := FixFileName(FaxFile);
-          fsCoverFileName.Caption  := FixFileName(CoverFile);
+          fsPhoneNumber.Caption    := string(PhoneNumber);
+          fsFaxFileName.Caption    := string(FixFileName(FaxFile));
+          fsCoverFileName.Caption  := string(FixFileName(CoverFile));
           fsDialAttempt.Caption    := IntToStr(DialAttempt);
         end;
       end else begin
         fsPhoneNumber.Caption      := '';
-        fsFaxFileName.Caption      := FixFileName(FaxFile);
+        fsFaxFileName.Caption      := string(FixFileName(FaxFile));
         fsCoverFileName.Caption    := '';
         fsDialAttempt.Caption      := '1';
       end;
       fsTotalPages.Caption         := IntToStr(TotalPages);
 
       {Right top block}
-      fsRemoteID.Caption           := RemoteID;
+      fsRemoteID.Caption           := string(RemoteID);
       fsConnectBPS.Caption         := IntToStr(SessionBPS);
       fsResolution.Caption         := ResStrings[SessionResolution];
       fsWidth.Caption              := WidthStrings[SessionWidth];
@@ -256,10 +256,10 @@ implementation
 
       {Status message}
       if (FaxProgress = fpBusyWait) then
-        fsStatusMsg.Caption := StatusMsg(FaxProgress) +
+        fsStatusMsg.Caption := string(StatusMsg(FaxProgress)) +
                                FormatMinSec(RemainingTimeInSecs(BusyTimer))
       else
-        fsStatusMsg.Caption := StatusMsg(FaxProgress);
+        fsStatusMsg.Caption := string(StatusMsg(FaxProgress));
 
       {Progress bar}
       if Fax is TApdCustomSendFax then begin

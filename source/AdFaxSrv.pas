@@ -95,8 +95,8 @@ type
   TFaxServerMode = (fsmIdle, fsmSend, fsmReceive);
 
   { predefine the classes }
-  TApdFaxServerManager = class;                                        
-  TApdCustomFaxServer = class;                                         
+  TApdFaxServerManager = class;
+  TApdCustomFaxServer = class;
 
   { event types }
   TFaxServerStatusEvent = procedure(CP : TObject; FaxMode: TFaxServerMode;
@@ -112,15 +112,15 @@ type
     ServerCode : TFaxServerLogCode) of object;
 
   { TApdFaxServerManager events }
-  TFaxServerManagerQueriedEvent = procedure(Mgr : TApdFaxServerManager;  
+  TFaxServerManagerQueriedEvent = procedure(Mgr : TApdFaxServerManager;
     QueryFrom : TApdCustomFaxServer; const JobToSend : string) of object;
-  TManagerUpdateRecipientEvent = procedure (Mgr : TApdFaxServerManager;  
-    JobFile : string; JobHeader : TFaxJobHeaderRec;                      
-    var RecipHeader : TFaxRecipientRec) of object;                       
+  TManagerUpdateRecipientEvent = procedure (Mgr : TApdFaxServerManager;
+    JobFile : string; JobHeader : TFaxJobHeaderRec;
+    var RecipHeader : TFaxRecipientRec) of object;
 
-  TManagerUserGetJobEvent = procedure(Mgr : TApdFaxServerManager;        
-    QueryFrom : TApdCustomFaxServer; var JobFile, FaxFile,               
-    CoverFile : string; var RecipientNum : Integer) of object;           
+  TManagerUserGetJobEvent = procedure(Mgr : TApdFaxServerManager;
+    QueryFrom : TApdCustomFaxServer; var JobFile, FaxFile,
+    CoverFile : string; var RecipientNum : Integer) of object;
 
   { Object used for ApdFaxServerManager.FFaxList to keep track of job files
     only used in ApdFaxServerManager's GetNextFax and UpdateStatus methods}
@@ -166,11 +166,11 @@ type
     {- Resets all status flags in an APJ to stNone}
     procedure ResetAPJStatus(JobFileName: TPassString);
     {- Resets individual recipient with new status, updates job header }
-    procedure ResetRecipientStatus(JobFileName: TPassString;           
-      JobNum, NewStatus: Byte);                                        
+    procedure ResetRecipientStatus(JobFileName: TPassString;
+      JobNum, NewStatus: Byte);
     {- Reschedules a recipient, updates job header }
-    procedure RescheduleJob(JobFileName : TPassString;                 
-      JobNum : Integer; NewSchedDT : TDateTime; ResetStatus: Boolean); 
+    procedure RescheduleJob(JobFileName : TPassString;
+      JobNum : Integer; NewSchedDT : TDateTime; ResetStatus: Boolean);
   end;
 
   { - the ApdFaxServerManager controls the flow of fax jobs to the ApdFaxServer.
@@ -185,12 +185,12 @@ type
     FJobFileExt: TPassString;
     FPaused: Boolean;
     FLockFile: TFileStream;
-    FDeleteOnComplete: Boolean;                                        
+    FDeleteOnComplete: Boolean;
     FFirstGetJob : Boolean;
-    FInGetJob : Boolean;                                               
-    FFaxServerManagerQueriedEvent: TFaxServerManagerQueriedEvent;      
-    FManagerUpdateRecipientEvent: TManagerUpdateRecipientEvent;        
-    FManagerUserGetJobEvent: TManagerUserGetJobEvent;                  
+    FInGetJob : Boolean;
+    FFaxServerManagerQueriedEvent: TFaxServerManagerQueriedEvent;
+    FManagerUpdateRecipientEvent: TManagerUpdateRecipientEvent;
+    FManagerUserGetJobEvent: TManagerUserGetJobEvent;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
@@ -201,7 +201,7 @@ type
     function GetSchedTime(JobFileName: TPassString): TDateTime;
     { - Returns the fax job in Recipient, True if ready, False otherwise }
     function GetJob(var Recipient: TFaxRecipientRec;
-      QueryFrom: TApdCustomFaxServer; var JobFileName, FaxFile,        
+      QueryFrom: TApdCustomFaxServer; var JobFileName, FaxFile,
       CoverFile: TPassString): Boolean;
     { - updates status of individual fax jobs }
     procedure UpdateStatus(JobFileName: TPassString; JobNumber, Result: Word;
@@ -213,8 +213,8 @@ type
       read FFaxList;
   published
     {-  Delete the APJ after all jobs are complete }
-    property DeleteOnComplete: Boolean                                 
-      read FDeleteOnComplete write FDeleteOnComplete;                  
+    property DeleteOnComplete: Boolean
+      read FDeleteOnComplete write FDeleteOnComplete;
     { - The directory where we will look for APJ files }
     property MonitorDir: TPassString
       read FMonitorDir write SetMonitorDir;
@@ -225,20 +225,20 @@ type
     property Paused: Boolean
       read FPaused write FPaused default adfDefFaxServerManagerPaused;
     { - Event generated when GetJob is called }
-    property OnQueried : TFaxServerManagerQueriedEvent                
-      read FFaxServerManagerQueriedEvent                              
-      write FFaxServerManagerQueriedEvent;                            
+    property OnQueried : TFaxServerManagerQueriedEvent
+      read FFaxServerManagerQueriedEvent
+      write FFaxServerManagerQueriedEvent;
     { - Event generated when a recipient is complete (ecOK or failed ) }
-    property OnRecipientComplete : TManagerUpdateRecipientEvent       
-      read FManagerUpdateRecipientEvent                               
-      write FManagerUpdateRecipientEvent;                             
+    property OnRecipientComplete : TManagerUpdateRecipientEvent
+      read FManagerUpdateRecipientEvent
+      write FManagerUpdateRecipientEvent;
     { - Event generated to provide custom scheduling from app }
     { If this event is defined, this event will be responsible for }
     { feeding the fax jobs, the scheduling and queuing built into }
     { the ApdFaxServerManager will not be used }
-    property OnCustomGetJob : TManagerUserGetJobEvent                 
-      read FManagerUserGetJobEvent                                    
-      write FManagerUserGetJobEvent;                                  
+    property OnCustomGetJob : TManagerUserGetJobEvent
+      read FManagerUserGetJobEvent
+      write FManagerUserGetJobEvent;
   end;
 
 
@@ -348,7 +348,7 @@ type
     FSendQueryInterval: Integer;
     FDialAttempts: Word;
     FDialWait: Word;
-    FDialRetryWait: Word;                                              
+    FDialRetryWait: Word;
     FDialPrefix: TModemString;
     FEnhFont: TFont;
     FEnhHeaderFont: TFont;
@@ -362,7 +362,7 @@ type
     FFaxServerAcceptEvent: TFaxServerAcceptEvent;
     FFaxServerNameEvent: TFaxServerNameEvent;
     FFaxServerLogEvent: TFaxServerLogEvent;
-    FSwitchingModes: Boolean;                                          
+    FSwitchingModes: Boolean;
     FWaitForRing: Boolean;
   protected
     { property access methods }
@@ -464,7 +464,7 @@ type
     { - checks the ApdFaxServerManager for ready jobs outside of the query interval }
     procedure ForceSendQuery;
 
-    procedure CancelFax;                                               
+    procedure CancelFax;
 
     { properties }
     property ComPort: TApdCustomComPort
@@ -539,7 +539,7 @@ type
     property SessionECM: Boolean
       read GetSessionECM;
     property SessionResolution: Boolean
-      read GetSessionResolution;                                       
+      read GetSessionResolution;
     property SessionWidth: Boolean
       read GetSessionWidth;
     property SupportedFaxClasses: TFaxClassSet
@@ -556,16 +556,16 @@ type
       read FCoverFile write SetCoverFile;
     property DetectBusy: Boolean
       read FDetectBusy write SetDetectBusy default adfDefDetectBusy;
-    property DialAttempt : Word                                        
-      read GetDialAttempt;                                             
+    property DialAttempt : Word
+      read GetDialAttempt;
     property DialAttempts : Word
-      read GetDialAttempts write SetDialAttempts default adfDefDialAttempts; 
+      read GetDialAttempts write SetDialAttempts default adfDefDialAttempts;
     property DialPrefix: TModemString
       read FDialPrefix write SetDialPrefix;
     property DialWait : Word
       read FDialWait write SetDialWait default adfDefDialWait;
-    property DialRetryWait : Word                                      
-      read FDialRetryWait write FDialRetryWait default adfDefDialRetryWait;  
+    property DialRetryWait : Word
+      read FDialRetryWait write FDialRetryWait default adfDefDialRetryWait;
 
     property HeaderLine: TPassString
       read FHeaderLine write SetHeaderLine;
@@ -656,7 +656,7 @@ type
     property BufferMinimum;
     property DetectBusy;
     property DialWait;
-    property DialRetryWait;                                            
+    property DialRetryWait;
     property DialAttempts;
     property MaxSendCount;
     property SafeMode;
@@ -686,9 +686,12 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 { TApdCustomFaxServer }
 
-procedure TApdCustomFaxServer.CancelFax;                               
+procedure TApdCustomFaxServer.CancelFax;
 begin
   if FFaxServerMode = fsmSend then
     FSendFax.CancelFax
@@ -710,25 +713,25 @@ begin
   if (FTapiDevice <> nil) and (FComPort.TapiMode in [tmOn, tmAuto]) then begin
     { open the device through TAPI if the device isn't already open }
     if not FComPort.Open then begin
-      NewTimer(ET, 91);  { 5 seconds for TAPI to respond }            
+      NewTimer(ET, 91);  { 5 seconds for TAPI to respond }
       WaitingOnTapi := True;
       FTapiDevice.ConfigAndOpen;
       repeat
         DelayTicks(4, True);
-      until (not WaitingOnTapi) or TimerExpired(ET);                   
-      if TimerExpired(ET) then                                         
-        FTapiDevice.CancelCall;                                        
+      until (not WaitingOnTapi) or TimerExpired(ET);
+      if TimerExpired(ET) then
+        FTapiDevice.CancelCall;
       if not FComPort.Open then begin
-        if Assigned(FFaxServerFatalErrorEvent) then                    
-          FFaxServerFatalErrorEvent(Self, TFaxServerMode(FaxMode),     
-            egTapi, FTapiDevice.FailureCode)                           
-        else                                                           
-          raise ETapiCallUnavail.Create(ecCallUnavail, True);          
-      end;                                                             
+        if Assigned(FFaxServerFatalErrorEvent) then
+          FFaxServerFatalErrorEvent(Self, TFaxServerMode(FaxMode),
+            egTapi, FTapiDevice.FailureCode)
+        else
+          raise ETapiCallUnavail.Create(ecCallUnavail, True);
+      end;
 
     end;
-  end else                                                             
-    FComPort.Open := True;                                             
+  end else
+    FComPort.Open := True;
 
   { set up defaults for faxing }
   with FComPort do begin
@@ -800,7 +803,7 @@ begin
   FPageLength := 0;
   FEnhFont := TFont.Create;
   FEnhHeaderFont := TFont.Create;
-  FDialAttempts := adfDefDialAttempts;                                 
+  FDialAttempts := adfDefDialAttempts;
   FDialRetryWait := adfDefDialRetryWait;
   FDialWait := AdfDefDialWait;
 
@@ -808,8 +811,8 @@ begin
   FMonitoring := False;
   FOldMonitoring := False;
   FServerLogCode := fslNone;
-  FSwitchingModes := False;                                            
-  FWaitForRing := False;                                               
+  FSwitchingModes := False;
+  FWaitForRing := False;
 end;
 
 destructor TApdCustomFaxServer.Destroy;
@@ -827,7 +830,7 @@ procedure TApdCustomFaxServer.FInternalFaxAccept(CP: TObject;
   var Accept: Boolean);
 begin
   if Assigned(FFaxServerAcceptEvent) then
-    FFaxServerAcceptEvent(Self, Accept)                                
+    FFaxServerAcceptEvent(Self, Accept)
   else
     Accept := True;
 end;
@@ -842,7 +845,7 @@ begin
     FaxMode := fsmSend
   else if CP = FRecvFax then begin
     FaxMode := fsmReceive;
-    FWaitForRing := False;                                             
+    FWaitForRing := False;
   end else
     FaxMode := fsmIdle;
   if FSwitchingModes then begin
@@ -852,7 +855,7 @@ begin
   try
     if (FaxMode = fsmReceive) and FPrintOnReceive then
       if Assigned(FFaxPrinter) then begin
-        FFaxPrinter.FileName := FFaxFile;
+        FFaxPrinter.FileName := string(FFaxFile);
         FFaxPrinter.PrintFax;
       end;
     { update the APJ to show the status of this transmission }
@@ -861,8 +864,8 @@ begin
       FServerManager.UpdateStatus(CurrentJobFileName, CurrentJobNumber,
         ErrorCode, CurrentRecipient.AttemptNum >= FDialAttempts);
       { delete temp files }
-       DeleteFile(FaxFile);
-       DeleteFile(CoverFile);
+       DeleteFile(string(FaxFile));
+       DeleteFile(string(CoverFile));
     end;
   finally
     FFaxInProgress := False;
@@ -903,16 +906,16 @@ begin
         HangupCode := FRecvFax.HangupCode
       else
         HangupCode := 0;
-      try                                                              
+      try
         FFaxServerFatalErrorEvent(Self, FaxMode, ErrorCode, HangupCode);
-      finally                                                          
+      finally
         { just in case an exception is raised in the event }
-      end;                                                             
+      end;
     end;
   end;
 
   { if where being destroyed, just exit }
-  if csDestroying in ComponentState then                               
+  if csDestroying in ComponentState then
     Exit;
 
   { check for new fax jobs to send }
@@ -951,8 +954,8 @@ begin
   { we need to add our custom log info to the ApdFaxLog file }
   if Assigned(FFaxLog) and (FFaxLog.FaxHistoryName <> '') then begin     {!!.04}
     { a log must be wanted, open or create the log file }
-    AssignFile(HisFile, FFaxLog.FaxHistoryName);
-    if FileExists(FFaxLog.FaxHistoryName) then
+    AssignFile(HisFile, string(FFaxLog.FaxHistoryName));
+    if FileExists(string(FFaxLog.FaxHistoryName)) then
       Append(HisFile)
     else
       Rewrite(HisFile);
@@ -1005,30 +1008,32 @@ procedure TApdCustomFaxServer.FInternalFaxName(CP: TObject;
   var
     I, Y, M, D : Word;
     MM, DD : string[2];
-    S, Num, FName : string;
+    Num: ShortString;
+    S, FName : string;
   begin
     DecodeDate(SysUtils.Date, Y, M, D);
     Str(M:2, MM);
     Str(D:2, DD);
-    FName := MM + DD;
+    FName := string(MM + DD);
     I := 0;
     repeat
       inc(I);
       if I >= 10000 then break;
       Str(I:4, Num);
-      S := FName + Num + '.' + FFaxFileExt;
+      S := FName + string(Num) + '.' + string(FFaxFileExt);
       while Pos(' ', S) > 0 do
         S[Pos(' ', S)] := '0';
-    until not FileExists(AddBackslash(FDestinationDir) + S);           
+    until not FileExists(AddBackslash(string(FDestinationDir)) + S);
     if I < 10000 then
-      Result := AddBackslash(FDestinationDir) + S
+      Result := AddBackslash(string(FDestinationDir)) + S
     else
-      Result := AddBackslash(FDestinationDir) + 'NONAME.APF';          
+      Result := AddBackslash(string(FDestinationDir)) + 'NONAME.APF';
   end;
   function GetFaxNameCount : string;
   var
     I : DWORD;
-    S, Num, FName : string;
+    Num: ShortString;
+    S, FName : string;
   begin
     FName := 'FAX';
     I := 0;
@@ -1036,29 +1041,29 @@ procedure TApdCustomFaxServer.FInternalFaxName(CP: TObject;
       inc(I);
       if I >= 100000 then break;
       Str(I:5, Num);
-      S := FName + Num + '.' + FFaxFileExt;
+      S := FName + string(Num) + '.' + string(FFaxFileExt);
       while Pos(' ', S) > 0 do
         S[Pos(' ', S)] := '0';
-    until not FileExists(AddBackslash(FDestinationDir) + S);           
+    until not FileExists(AddBackslash(string(FDestinationDir)) + S);
     if I < 10000 then
-      Result := AddBackslash(FDestinationDir) + S
+      Result := AddBackslash(string(FDestinationDir)) + S
     else
-      Result := AddBackslash(FDestinationDir) + 'NONAME.APF';
+      Result := AddBackslash(string(FDestinationDir)) + 'NONAME.APF';
   end;
-  
+
 begin
   if Assigned(FFaxServerNameEvent) and (FFaxNameMode = fnNone) then
-    FFaxServerNameEvent(Self, Name) else begin                         
-      {Nothing assigned, use one of the built in methods}              
-      case FFaxNameMode of                                             
-        fnMonthDay :                                                   
-          Name := GetFaxNameMD;                                        
-        fnCount :                                                      
-          Name := GetFaxNameCount;                                     
-        else                                                           
-          Name := AddBackslash(FDestinationDir) + 'NONAME.APF';;       
-      end;                                                             
-    end;                                                               
+    FFaxServerNameEvent(Self, Name) else begin
+      {Nothing assigned, use one of the built in methods}
+      case FFaxNameMode of
+        fnMonthDay :
+          Name := TPassString(GetFaxNameMD());
+        fnCount :
+          Name := TPassString(GetFaxNameCount());
+        else
+          Name := TPassString(AddBackslash(string(FDestinationDir)) + 'NONAME.APF');
+      end;
+    end;
 end;
 
 procedure TApdCustomFaxServer.FInternalFaxStatus(CP: TObject; First,
@@ -1079,7 +1084,7 @@ begin
   if Assigned(FStatusDisplay) then begin
     { update the status display to show info pertinenet to the fax }
     { job instead of the regular send/receive fax info }
-    with TStandardFaxDisplay(FStatusDisplay.Display) do begin          
+    with TStandardFaxDisplay(FStatusDisplay.Display) do begin
       if First then begin
         fsLabel2.Caption := 'Job file name:';
         fsLabel3.Caption := 'Job name:';
@@ -1087,15 +1092,15 @@ begin
         fsLabel2.Caption := 'Fax file name:';
         fsLabel3.Caption := 'Cover file name:';
       end;
-      fsFaxFileName.Caption := CurrentJobFileName;
-      fsCoverFileName.Caption := CurrentJobHeader.JobName;
+      fsFaxFileName.Caption := string(CurrentJobFileName);
+      fsCoverFileName.Caption := string(CurrentJobHeader.JobName);
       fsDialAttempt.Caption := IntToStr(CurrentRecipient.AttemptNum + 1);
     end;
   end;
 
   if Assigned(FFaxServerStatusEvent) then begin
-    if FSwitchingModes then                                            
-      Status := fpSwitchModes                                          
+    if FSwitchingModes then
+      Status := fpSwitchModes
     else if FFaxServerMode = fsmSend then
       Status := FSendFax.FaxProgress
     else if FFaxServerMode = fsmReceive then
@@ -1110,15 +1115,15 @@ procedure TApdCustomFaxServer.FInternalPortToggle(CP: TObject;
   Opening: Boolean);
 begin
   if Assigned(FFaxServerPortOpenCloseEvent) then
-    FFaxServerPortOpenCloseEvent(Self, Opening);                       
+    FFaxServerPortOpenCloseEvent(Self, Opening);
 end;
 
 procedure TApdCustomFaxServer.FInternalSendQueryTimer(Sender: TObject);
 var
-  JobFileName, FaxFileName, CoverFileName: TPassString;                
+  JobFileName, FaxFileName, CoverFileName: TPassString;
   Recipient: TFaxRecipientRec;
 begin
-  if csDestroying in ComponentState then Exit;                         
+  if csDestroying in ComponentState then Exit;
   if FFaxInProgress then
     Exit;
 
@@ -1132,16 +1137,16 @@ begin
       CoverFileName) then begin
 
       { generate the manager's OnQuery event }
-      if Assigned(FServerManager.FFaxServerManagerQueriedEvent) then   
-        FServerManager.FFaxServerManagerQueriedEvent(FServerManager,   
-          Self, JobFileName);
+      if Assigned(FServerManager.FFaxServerManagerQueriedEvent) then
+        FServerManager.FFaxServerManagerQueriedEvent(FServerManager,
+          Self, string(JobFileName));
 
       CurrentJobFileName := JobFileName;
       CurrentJobNumber := Recipient.JobID;
       CurrentRecipient := Recipient;
       FServerManager.GetJobHeader(CurrentJobFileName, CurrentJobHeader);
 
-      HeaderSender := CurrentJobHeader.Sender;                         
+      HeaderSender := CurrentJobHeader.Sender;
       PhoneNumber := Recipient.PhoneNumber;
       HeaderLine := Recipient.HeaderLine;
       HeaderRecipient := Recipient.HeaderRecipient;
@@ -1151,14 +1156,14 @@ begin
 
       CheckPort;
 
-      if not FComPort.Open then begin                                  
+      if not FComPort.Open then begin
         { the port couldn't be opened, so we'll just update the status }
         { so we can try to get the port later }
-        FServerManager.UpdateStatus(CurrentJobFileName,                
-          CurrentJobNumber, Abs(ecCommNotOpen), False);                
-        FSendQueryTimer.Enabled := True;                               
-        Exit;                                                          
-      end;                                                             
+        FServerManager.UpdateStatus(CurrentJobFileName,
+          CurrentJobNumber, Abs(ecCommNotOpen), False);
+        FSendQueryTimer.Enabled := True;
+        Exit;
+      end;
 
       { save Monitoring, we will revert in the FInternalFaxFinish event }
       FOldMonitoring := Monitoring;
@@ -1168,34 +1173,34 @@ begin
         FRecvFax.CancelFax;
         DelayTicks(18, True);
       end else
-        FSwitchingModes := False;                                      
+        FSwitchingModes := False;
       { make sure we don't have any residual input }
-      FComPort.FlushInBuffer;                                          
+      FComPort.FlushInBuffer;
       FaxServerMode := fsmSend;
       FSendFax.StartTransmit;
-    end else begin                                                     
+    end else begin
       { generate the manager's OnQuery event, no job ready }
       if Assigned(FServerManager.FFaxServerManagerQueriedEvent) then
-        FServerManager.FFaxServerManagerQueriedEvent(FServerManager,   
-          Self, '');                                                   
+        FServerManager.FFaxServerManagerQueriedEvent(FServerManager,
+          Self, '');
 
-      if FSendQueryInterval <> 0 then begin                            
-        FSendQueryTimer.Interval := FSendQueryInterval * 1000;         
+      if FSendQueryInterval <> 0 then begin
+        FSendQueryTimer.Interval := FSendQueryInterval * 1000;
         FSendQueryTimer.Enabled := True;
-      end;                                                             
-      if not FMonitoring then begin                                    
-        { done with the port, close it }                               
-        if FComPort.TapiMode = tmOn then                               
-          FTapiDevice.CancelCall                                       
-        else                                                           
-          FComPort.Open := False;                                      
-      end else if not FWaitForRing then begin                          
-        FaxServerMode := fsmReceive;                                   
-        FRecvFax.StartReceive;                                         
-        FWaitForRing := True;                                          
-      end else                                                         
-        FSwitchingModes := False;                                      
-    end;                                                               
+      end;
+      if not FMonitoring then begin
+        { done with the port, close it }
+        if FComPort.TapiMode = tmOn then
+          FTapiDevice.CancelCall
+        else
+          FComPort.Open := False;
+      end else if not FWaitForRing then begin
+        FaxServerMode := fsmReceive;
+        FRecvFax.StartReceive;
+        FWaitForRing := True;
+      end else
+        FSwitchingModes := False;
+    end;
 
 end;
 
@@ -1240,7 +1245,7 @@ begin
     Result := 0;
 end;
 
-function TApdCustomFaxServer.GetDialAttempt: Word;                     
+function TApdCustomFaxServer.GetDialAttempt: Word;
 begin
   if Assigned(FSendFax) then
     Result := FSendFax.DialAttempt
@@ -1248,7 +1253,7 @@ begin
     Result := 0;
 end;
 
-function TApdCustomFaxServer.GetDialAttempts: Word;                    
+function TApdCustomFaxServer.GetDialAttempts: Word;
 begin
   Result := FDialAttempts;
 end;
@@ -1286,9 +1291,9 @@ end;
 function TApdCustomFaxServer.GetModemChip: string;
 begin
   if FFaxServerMode = fsmSend then
-    Result := FSendFax.ModemChip
+    Result := string(FSendFax.ModemChip)
   else if FFaxServerMode = fsmReceive then
-    Result := FRecvFax.ModemChip
+    Result := string(FRecvFax.ModemChip)
   else
     Result := '';
 end;
@@ -1306,9 +1311,9 @@ end;
 function TApdCustomFaxServer.GetModemModel: string;
 begin
   if FFaxServerMode = fsmSend then
-    Result := FSendFax.ModemModel
+    Result := string(FSendFax.ModemModel)
   else if FFaxServerMode = fsmReceive then
-    Result := FRecvFax.ModemModel
+    Result := string(FRecvFax.ModemModel)
   else
     Result := '';
 end;
@@ -1316,9 +1321,9 @@ end;
 function TApdCustomFaxServer.GetModemRevision: string;
 begin
   if FFaxServerMode = fsmSend then
-    Result := FSendFax.ModemRevision
+    Result := string(FSendFax.ModemRevision)
   else if FFaxServerMode = fsmReceive then
-    Result := FRecvFax.ModemRevision
+    Result := string(FRecvFax.ModemRevision)
   else
     Result := ''
 end;
@@ -1329,8 +1334,8 @@ var
 begin
   Result := FPageLength;
   if FPageLength = 0 then
-    if (FFaxFile <> '') and FileExists(FFaxFile) then begin
-      AssignFile(F, FFaxFile);
+    if (FFaxFile <> '') and FileExists(string(FFaxFile)) then begin
+      AssignFile(F, string(FFaxFile));
       Reset(F, 1);
       FPageLength := FileSize(F);
       CloseFile(F);
@@ -1341,9 +1346,9 @@ end;
 function TApdCustomFaxServer.GetRemoteID: string;
 begin
   if FFaxServerMode = fsmSend then
-    Result := FSendFax.RemoteID
+    Result := string(FSendFax.RemoteID)
   else if FFaxServerMode = fsmReceive then
-    Result := FRecvFax.RemoteID
+    Result := string(FRecvFax.RemoteID)
   else
     Result := '';
 end;
@@ -1368,7 +1373,7 @@ begin
     Result := False;
 end;
 
-function TApdCustomFaxServer.GetSessionResolution: Boolean;            
+function TApdCustomFaxServer.GetSessionResolution: Boolean;
 begin
   if FFaxServerMode = fsmSend then
     Result := FSendFax.SessionResolution
@@ -1590,7 +1595,7 @@ end;
 procedure TApdCustomFaxServer.SetDialWait(const Value: Word);
 begin
   FDialWait := Value;
-  if Assigned(FSendFax) then   
+  if Assigned(FSendFax) then
     FSendFax.DialWait := Value;
 end;
 
@@ -1795,10 +1800,10 @@ begin
       CheckPort;
       FaxServerMode := fsmReceive;
 
-      if not FWaitForRing then begin                                   
-        FRecvFax.StartReceive;                                         
-        FWaitForRing := True;                                          
-      end;                                                             
+      if not FWaitForRing then begin
+        FRecvFax.StartReceive;
+        FWaitForRing := True;
+      end;
     end;
     FServerLogCode := fslMonitoringEnabled;
     FInternalFaxLog(Self, lfaxNone);
@@ -1814,7 +1819,7 @@ begin
     if FFaxInProgress then
       FMonitoring := False
     else begin
-      FSwitchingModes := True;                                         
+      FSwitchingModes := True;
       FRecvFax.CancelFax;
       FWaitForRing := False;
       FaxServerMode := fsmIdle;
@@ -1934,7 +1939,7 @@ begin
     if Assigned(FTapiDevice) then begin
       FTapiDevice.OnTapiPortOpen := FInternalTapiPortOpenClose;
       FTapiDevice.OnTapiPortClose := FInternalTapiPortOpenClose;
-      FTapiDevice.OnTapiFail := FInternalTapiFail;                     
+      FTapiDevice.OnTapiFail := FInternalTapiFail;
     end;
   end;
 end;
@@ -1978,7 +1983,7 @@ begin
   FFaxList := TStringList.Create;
   FFaxList.Sorted := False;
   FJobFileExt := adfDefJobFileExt;
-  FFirstGetJob := True;                                                
+  FFirstGetJob := True;
 end;
 
 destructor TApdFaxServerManager.Destroy;
@@ -1989,12 +1994,12 @@ begin
     FFaxList.Objects[I].Free;
   FFaxList.Free;
   FLockFile.Free;
-  DeleteFile(FMonitorDir + ServerManagerLockFileName);
+  DeleteFile(string(FMonitorDir) + ServerManagerLockFileName);
   inherited Destroy;
 end;
 
 function TApdFaxServerManager.GetJob(var Recipient: TFaxRecipientRec;
-  QueryFrom : TApdCustomFaxServer; var JobFileName, FaxFile,           
+  QueryFrom : TApdCustomFaxServer; var JobFileName, FaxFile,
   CoverFile:  TPassString): Boolean;
 { returns the next scheduled fax.  Recipient is updated to reflect the info for
   the job, FaxFile is where the APF data is extracted to, CoverFile is where
@@ -2004,15 +2009,15 @@ var
   JobHeader   : TFaxJobHeaderRec;
   TempDir     : TPathCharArray;
   TempFN      : TFileName;
-  I,                                                                   
-  FileInc,                                                             
-  NextJob     : Integer;                                               
+  I,
+  FileInc,
+  NextJob     : Integer;
   NextSchedDT,
-  EarliestDT  : TDateTime;                                             
-  TempRecip   : TFaxRecipientRec;                                      
-  sJobFile, sFaxFile, sCoverFile : string;                             
+  EarliestDT  : TDateTime;
+  TempRecip   : TFaxRecipientRec;
+  sJobFile, sFaxFile, sCoverFile : string;
 begin
-  if Assigned(FManagerUserGetJobEvent) then begin                      
+  if Assigned(FManagerUserGetJobEvent) then begin
     { if the OnCustomGetJob event is defined, we'll let the application }
     { decide which fax to send next.  JobFileName is the APJ that we're }
     { working with, FaxFile is an extracted APF that we'll send,        }
@@ -2022,20 +2027,20 @@ begin
     { completion }
     { we need to pass a string instead of a ShortString due to a }
     { compiler problem }
-    sJobFile := '';                                                    
-    sFaxFile := '';                                                    
-    sCoverFile := '';                                                  
-    NextJob := 0;                                                      
-    FManagerUserGetJobEvent(Self, QueryFrom, sJobFile, sFaxFile,       
-    sCoverFile, NextJob);                                              
-    JobFileName := sJobFile;                                           
-    FaxFile := sFaxFile;
-    CoverFile := sCoverFile;
-    Result := JobFileName <> '';                                       
-    if Result then                                                     
+    sJobFile := '';
+    sFaxFile := '';
+    sCoverFile := '';
+    NextJob := 0;
+    FManagerUserGetJobEvent(Self, QueryFrom, sJobFile, sFaxFile,
+    sCoverFile, NextJob);
+    JobFileName := TPassString(sJobFile);
+    FaxFile := TPassString(sFaxFile);
+    CoverFile := TPassString(sCoverFile);
+    Result := JobFileName <> '';
+    if Result then
       Result := GetRecipient(JobFileName, NextJob, Recipient) = ecOK;
-    Exit;                                                              
-  end;                                                                 
+    Exit;
+  end;
   if FPaused then begin
     Result := False;
     Exit;
@@ -2043,26 +2048,26 @@ begin
   { wait if we're already in progress }
   while FInGetJob do
     Application.ProcessMessages;
-  FInGetJob := True;                                                   
+  FInGetJob := True;
   JobFileName := GetNextFax;
   if JobFileName = '' then begin
     { a fax is not scheduled to be sent now, return False and exit }
     Result := False;
-    FInGetJob := False;                                                
+    FInGetJob := False;
     Exit;
   end;
   JobStream := nil;
   try
-    try                                                                
-      JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or fmShareDenyWrite);
-    except                                                             
+    try
+      JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or fmShareDenyWrite);
+    except
       { if an exception was raised here, the file was in use.  We'll }
       { just bail out now and try again on the next query }
-      Result := False;                                                 
-      FInGetJob := False;                                              
-      JobFileName := '';                                               
-      Exit;                                                            
-    end;                                                               
+      Result := False;
+      FInGetJob := False;
+      JobFileName := '';
+      Exit;
+    end;
     { read the JobHeader, set Status to stPartial, and write it back }
     JobStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
     JobHeader.Status := stPartial;
@@ -2077,24 +2082,24 @@ begin
     JobStream.WriteBuffer(Recipient, SizeOf(Recipient));
 
     { now, find the next job to send so another fax server can find it }
-    NextJob := 0;                                                      
-    EarliestDT := MaxInt;                                              
-    NextSchedDT := MaxInt;                                             
-    JobStream.Seek(SizeOf(TFaxJobHeaderRec), soFromBeginning);         
-    for I := 0 to pred(JobHeader.NumJobs) do begin                     
+    NextJob := 0;
+    EarliestDT := MaxInt;
+    NextSchedDT := MaxInt;
+    JobStream.Seek(SizeOf(TFaxJobHeaderRec), soFromBeginning);
+    for I := 0 to pred(JobHeader.NumJobs) do begin
       JobStream.ReadBuffer(TempRecip, SizeOf(TFaxRecipientRec));
-      if TempRecip.SchedDT < EarliestDT then begin                     
-        EarliestDT := TempRecip.SchedDT;                               
+      if TempRecip.SchedDT < EarliestDT then begin
+        EarliestDT := TempRecip.SchedDT;
         if TempRecip.Status = stNone then begin                          {!!.05}
-          NextJob := I;                                                
-          NextSchedDT := TempRecip.SchedDT;                            
+          NextJob := I;
+          NextSchedDT := TempRecip.SchedDT;
         end;
       end;                                                               {!!.05}
-    end;                                                               
-    JobHeader.NextJob := NextJob;                                      
-    if NextSchedDT < MaxInt then                                       
-      JobHeader.SchedDT := NextSchedDT;                                
-    JobStream.Seek(0, soFromBeginning);                                
+    end;
+    JobHeader.NextJob := NextJob;
+    if NextSchedDT < MaxInt then
+      JobHeader.SchedDT := NextSchedDT;
+    JobStream.Seek(0, soFromBeginning);
     JobStream.WriteBuffer(JobHeader, SizeOf(TFaxJobHeaderRec));
   finally
     JobStream.Free;
@@ -2104,19 +2109,19 @@ begin
   FillChar(TempDir, SizeOf(TempDir), #0);
   FillChar(TempFN, SizeOf(TempFN), #0);
   GetTempPath(Length(TempDir), TempDir);
-  TempFN := StrPas(TempDir) + FaxFile;
+  TempFN := StrPas(TempDir) + string(FaxFile);
 
   FileInc := 0;
   if FaxFile = '' then begin
-    FaxFile := TempFN + JobHeader.JobName + '.' + adfDefFaxFileExt;
-    while FileExists(FaxFile) do begin                                 
-      FaxFile := TempFN + JobHeader.JobName + IntToHex(FileInc, 2) +   
-        '.' + adfDefFaxFileExt;                                        
-      inc(FileInc);                                                    
-    end;                                                               
+    FaxFile := TPassString(TempFN + string(JobHeader.JobName) + '.' + adfDefFaxFileExt);
+    while FileExists(string(FaxFile)) do begin
+      FaxFile := TPassString(TempFN + string(JobHeader.JobName) + IntToHex(FileInc, 2) +
+        '.' + adfDefFaxFileExt);
+      inc(FileInc);
+    end;
   end;
   if CoverFile = '' then begin
-    CoverFile := ChangeFileExt(FaxFile, '.txt');
+    CoverFile := TPassString(ChangeFileExt(string(FaxFile), '.txt'));
   end;
 
   { extract the APF data to FaxFile }
@@ -2150,7 +2155,7 @@ begin
   end;                                                                   {!!.05}
   { look for new files in MonitorDir }
   FileMask := AddBackSlash(FMonitorDir) + '*.' + FJobFileExt;
-  if SysUtils.FindFirst(FileMask, faAnyFile, SR) = 0 then begin
+  if SysUtils.FindFirst(string(FileMask), faAnyFile, SR) = 0 then begin
     repeat
       { see if the filename is already in our list }
       AddFileInfo := False;
@@ -2169,13 +2174,13 @@ begin
       if AddFileInfo then begin
         NewFaxListObj := TFaxListObj.Create;
         NewFaxListObj.FileTime := SR.Time;
-        GetJobHeader(FMonitorDir + SR.Name, NewFaxListObj.JobHeader);
+        GetJobHeader(TPassString(string(FMonitorDir) + SR.Name), NewFaxListObj.JobHeader);
         if NewFaxListObj.JobHeader.Status = stPartial then begin
           if FFirstGetJob then begin
             { if this is the first time through, reset all of the recipients }
             { that were stPartial to stNone }
-            ResetAPJPartials(FMonitorDir + SR.Name, False);              {!!.03}
-            GetJobHeader(FMonitorDir + SR.Name, NewFaxListObj.JobHeader);
+            ResetAPJPartials(TPassString(string(FMonitorDir) + SR.Name), False);              {!!.03}
+            GetJobHeader(TPassString(string(FMonitorDir) + SR.Name), NewFaxListObj.JobHeader);
           end;
         end;
 
@@ -2195,7 +2200,7 @@ begin
   end;
 
   for I := pred(FFaxList.Count) downto 0 do begin
-    if not FileExists(FMonitorDir + FFaxList[I]) then begin
+    if not FileExists(string(FMonitorDir) + FFaxList[I]) then begin
       { the file has been deleted from the FMonitorDir, delete it from our list }
       FFaxList.Objects[I].Free;
       FFaxList.Delete(I);
@@ -2208,7 +2213,7 @@ begin
       end else
       { finally, strip out the jobs that are in progress }
       if JobHeader.Status = stPartial then
-        if GetRecipientStatus(FMonitorDir + FFaxList[I], JobHeader.NextJob) in
+        if GetRecipientStatus(TPassString(string(FMonitorDir) + FFaxList[I]), JobHeader.NextJob) in
           [stPartial, stComplete, stPaused] then begin
           FFaxList.Objects[I].Free;
           FFaxList.Delete(I);
@@ -2234,7 +2239,7 @@ begin
     with TFaxListObj(FFaxList.Objects[I]) do begin
       if (JobHeader.SchedDT < SchedDT) and
          (JobHeader.Status <> stComplete) then begin
-        Result := FFaxList.Strings[I];
+        Result := TPassString(FFaxList.Strings[I]);
         SchedDT := TFaxListObj(FFaxList.Objects[I]).JobHeader.SchedDT;
       end;
     end;
@@ -2256,7 +2261,7 @@ var
 begin
   FS := nil;
   try
-    FS := TFileStream.Create(JobFileName, fmOpenRead or fmShareDenyNone);
+    FS := TFileStream.Create(string(JobFileName), fmOpenRead or fmShareDenyNone);
     FS.ReadBuffer(JobHeader, SizeOf(JobHeader));
     Result := JobHeader.SchedDT;
   finally
@@ -2279,23 +2284,23 @@ end;
 
 procedure TApdFaxServerManager.SetMonitorDir(const Value: TPassString);
 begin
-  if AnsiUpperCase(AddBackSlash(FMonitorDir)) <>                       
-     AnsiUpperCase(AddBackSlash(Value)) then begin                     
+  if AnsiUpperCase(AddBackSlash(FMonitorDir)) <>
+     AnsiUpperCase(AddBackSlash(Value)) then begin
     {FMonitorDir := AddBackSlash(Value);} {don't need this here}
     if csDesigning in ComponentState then begin
-      FMonitorDir := AnsiUpperCase(Value);                             
+      FMonitorDir := AnsiUpperCase(Value);
       Exit;
     end;
     { free the old lock file, create the new one.  If another ApdFaxServerManager
       is already monitoring this directory an exception will be raised }
     FLockFile.Free;
     try
-      FLockFile := TFileStream.Create(AddBackSlash(Value) +            
+      FLockFile := TFileStream.Create(AddBackSlash(string(Value)) +
         ServerManagerLockFileName, fmCreate or fmShareExclusive);
       { hide the lock file }
-      FileSetAttr(AddBackSlash(Value) + ServerManagerLockFileName, faHidden);
+      FileSetAttr(AddBackSlash(string(Value)) + ServerManagerLockFileName, faHidden);
       { if we got here, an exception was not raised, so accept the value }
-      FMonitorDir := AnsiUpperCase(AddBackSlash(Value));               
+      FMonitorDir := AnsiUpperCase(AddBackSlash(Value));
     except
       { if this exception is raised, the FMonitorDir directory is already being
         monitored by another ApdFaxServerManager.  Only one ApdFaxServerManager
@@ -2314,20 +2319,20 @@ var
   I: Integer;
   JobStatus: Byte;
   FaxListNames: TPassString;
-  NextJob : Integer;                                                   
-  NextSchedDT : TDateTime;                                             
-  AllSuccess : Boolean;                                                
+  NextJob : Integer;
+  NextSchedDT : TDateTime;
+  AllSuccess : Boolean;
 begin
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or fmShareDenyWrite);
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or fmShareDenyWrite);
     JobStream.ReadBuffer(JobHeader, SizeOf(TFaxJobHeaderRec));
     I := SizeOf(TFaxJobHeaderRec) + (JobNumber * SizeOf(TFaxRecipientRec));
     JobStream.Seek(I, soFromBeginning);
     JobStream.ReadBuffer(Recipient, SizeOf(TFaxRecipientRec));
   finally
     { close the file so it could be deleted from the event handler below}
-    JobStream.Free;                                                    
+    JobStream.Free;
   end;
   Recipient.LastResult := Result;
   if Result = ecOK then
@@ -2338,26 +2343,26 @@ begin
     Recipient.Status := stNone;       {fax failed, but we will retry it}
 
   if Recipient.Status = stComplete then
-    if Assigned(FManagerUpdateRecipientEvent) then begin               
+    if Assigned(FManagerUpdateRecipientEvent) then begin
     { generate the OnRecipientComplete event.  Recipient.Status will always }
     { be stComplete (hence the name of the event). If Recipient.LastResult  }
     { the fax was sent successfully to this recipient. Otherwise, LastResult}
     { contains the ErrorCode from the last attempt. You can resubmit the    }
     { recipient by changing Recipient.Status to stNone. The JobFile is      }
     { closed, so it can be deleted from the event handler.                  }
-      FManagerUpdateRecipientEvent(Self, JobFileName,
-        JobHeader, Recipient);                                         
-    end;                                                               
+      FManagerUpdateRecipientEvent(Self, string(JobFileName),
+        JobHeader, Recipient);
+    end;
 
   { if the file was deleted in the event, just exit }
-  if not FileExists(JobFileName) then                                  
-    Exit;                                                              
+  if not FileExists(string(JobFileName)) then
+    Exit;
 
   inc(Recipient.AttemptNum);
 
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName,                       
+    JobStream := TFileStream.Create(string(JobFileName),
       fmOpenReadWrite or fmShareDenyWrite);
 
     JobStream.Seek(I, soFromBeginning);
@@ -2376,19 +2381,19 @@ begin
     else
       JobHeader.Status := stPartial;
 
-    AllSuccess := True;                                                
-    { find the next job }                                              
-    NextJob := 0;                                                      
-    NextSchedDT := MaxInt;                                             
-    JobStream.Seek(SizeOf(TFaxJobHeaderRec), soFromBeginning);         
-    for I := 0 to pred(JobHeader.NumJobs) do begin                     
-      JobStream.Read(Recipient, SizeOf(TFaxRecipientRec));             
+    AllSuccess := True;
+    { find the next job }
+    NextJob := 0;
+    NextSchedDT := MaxInt;
+    JobStream.Seek(SizeOf(TFaxJobHeaderRec), soFromBeginning);
+    for I := 0 to pred(JobHeader.NumJobs) do begin
+      JobStream.Read(Recipient, SizeOf(TFaxRecipientRec));
       { if the job is stNone, we are awaiting retry }
-      if Recipient.Status = stNone then                                
-        if Recipient.SchedDT < NextSchedDT then begin                  
-          NextJob := I;                                                
-          NextSchedDT := Recipient.SchedDT;                            
-        end;                                                           
+      if Recipient.Status = stNone then
+        if Recipient.SchedDT < NextSchedDT then begin
+          NextJob := I;
+          NextSchedDT := Recipient.SchedDT;
+        end;
       { AllSuccess should be True only if the status is complete and }
       { it completed OK }
       AllSuccess := AllSuccess and (Recipient.Status = stComplete) and
@@ -2407,13 +2412,13 @@ begin
   { flag the file in the stringlist if all jobs are complete }
   if JobHeader.Status = stComplete then begin
     FaxListNames := ExtractFileName(JobFileName);
-    I := FFaxList.IndexOf(FaxListNames);
-    if I >= 0 then                                                     
+    I := FFaxList.IndexOf(string(FaxListNames));
+    if I >= 0 then
       TFaxListObj(FFaxList.Objects[I]).JobHeader.Status := stComplete;
     { the job is complete, so delete it if DeleteOnComplete }
     if FDeleteOnComplete and AllSuccess then
-      DeleteFile(JobFileName);                                         
-  end 
+      DeleteFile(string(JobFileName));
+  end
 end;
 
 
@@ -2428,7 +2433,7 @@ var
 begin
   { assume success }
   Result := 0;
-  if not OverWrite and FileExists(DestJob) then begin                  
+  if not OverWrite and FileExists(string(DestJob)) then begin
     Result := -80;    { maps to ERROR_FILE_EXISTS }
     Exit;
   end;
@@ -2436,8 +2441,8 @@ begin
   try
     MS := TMemoryStream.Create;
     try
-      MS.LoadFromFile(SourceJob);
-      MS.SaveToFile(DestJob);
+      MS.LoadFromFile(string(SourceJob));
+      MS.SaveToFile(string(DestJob));
     except
       Result := GetlastError;
     end;
@@ -2531,7 +2536,7 @@ begin
     TempStream := nil;
     try
       TempStream := TMemoryStream.Create;
-      TempStream.LoadFromFile(JobFileName);
+      TempStream.LoadFromFile(string(JobFileName));
       TempStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
       TempStream.Position := 0;
       JobStream.CopyFrom(TempStream, SizeOf(JobHeader) +
@@ -2539,7 +2544,7 @@ begin
       { initialize RecipientInfo and insert it into the stream }
       with RecipientInfo do begin
         Status := 0;  { not sent }
-        JobID := JobHeader.NumJobs;                               
+        JobID := JobHeader.NumJobs;
         AttemptNum := 0;
         LastResult := 0;
         FillChar(Padding, SizeOf(Padding), #0);
@@ -2552,7 +2557,7 @@ begin
     end;
     { update the JobHeader info to reflect new recipient }
     inc(JobHeader.NumJobs);
-    if JobHeader.CoverOfs <> 0 then                                    
+    if JobHeader.CoverOfs <> 0 then
       inc(JobHeader.CoverOfs, SizeOf(TFaxRecipientRec));
     inc(JobHeader.FaxHdrOfs, SizeOf(TFaxRecipientRec));
     if RecipientInfo.SchedDT < JobHeader.SchedDT then begin
@@ -2561,7 +2566,7 @@ begin
     end;
     JobStream.Position := 0;
     JobStream.WriteBuffer(JobHeader, SizeOf(JobHeader));
-    JobStream.SaveToFile(JobFileName);
+    JobStream.SaveToFile(string(JobFileName));
   finally
     JobStream.Free;
   end;
@@ -2577,7 +2582,7 @@ begin
   ResetRecipientStatus(JobFileName, JobNum, stComplete);
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or
       fmShareDenyWrite);
     StreamPos := SizeOf(TFaxJobHeaderRec) + (JobNum * SizeOf(TFaxRecipientRec));
     JobStream.Seek(StreamPos, soFromBeginning);
@@ -2601,10 +2606,10 @@ begin
   SourceFile := nil;
   try
     { Create temp file }
-    DestFile := TFileStream.Create(DestFaxFile, fmCreate or fmShareExclusive);
+    DestFile := TFileStream.Create(string(DestFaxFile), fmCreate or fmShareExclusive);
     try
       { Open first source file }
-      SourceFile := TFileStream.Create(FaxFiles[0], fmOpenRead or fmShareDenyNone);
+      SourceFile := TFileStream.Create(string(FaxFiles[0]), fmOpenRead or fmShareDenyNone);
 
       { Read header of the first APF }
       SourceFile.ReadBuffer(DestHeader, SizeOf(DestHeader));
@@ -2616,7 +2621,7 @@ begin
       SourceFile := nil;
       { Append remaining files in the list }
       for I := 1 to High(FaxFiles) do begin
-        SourceFile := TFileStream.Create(FaxFiles[I], fmOpenRead or fmShareDenyNone);
+        SourceFile := TFileStream.Create(string(FaxFiles[I]), fmOpenRead or fmShareDenyNone);
         SourceFile.ReadBuffer(SourceHeader, SizeOf(SourceHeader));
         if (SourceHeader.Signature <> DefAPFSig) then
           raise EFaxBadFormat.Create(ecFaxBadFormat, False);
@@ -2643,8 +2648,8 @@ begin
   JobStream := nil;
   FaxStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenRead or fmShareDenyNone);
-    FaxStream := TFileStream.Create(FaxName, fmCreate or fmShareExclusive);
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenRead or fmShareDenyNone);
+    FaxStream := TFileStream.Create(string(FaxName), fmCreate or fmShareExclusive);
     JobStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
     JobStream.Seek(JobHeader.FaxHdrOfs, soFromBeginning);
     FaxStream.CopyFrom(JobStream, JobStream.Size - JobStream.Position);
@@ -2663,12 +2668,12 @@ begin
   JobStream := nil;
   CoverStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenRead or fmShareDenyNone);
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenRead or fmShareDenyNone);
     JobStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
     if JobHeader.CoverOfs > 0 then begin
       JobStream.Seek(JobHeader.CoverOfs, soFromBeginning);
       try
-        CoverStream := TFileStream.Create(CoverName, fmCreate or fmShareExclusive);
+        CoverStream := TFileStream.Create(string(CoverName), fmCreate or fmShareExclusive);
         CoverStream.CopyFrom(JobStream, JobHeader.FaxHdrOfs - JobHeader.CoverOfs);
       finally
         CoverStream.Free;
@@ -2688,7 +2693,7 @@ var
 begin
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenRead or fmShareDenyNone);
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenRead or fmShareDenyNone);
     JobStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
   finally
     JobStream.Free;
@@ -2704,7 +2709,7 @@ var
 begin
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenRead or fmShareDenyNone);
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenRead or fmShareDenyNone);
     try
       JobStream.ReadBuffer(JobHeader, SizeOf(JobHeader));
       if Index <= JobHeader.NumJobs then begin
@@ -2743,14 +2748,14 @@ begin
   FaxStream := nil;
   JobStream := nil;
   try
-    FaxStream := TFileStream.Create(FaxName, fmOpenRead or fmShareDenyNone);
+    FaxStream := TFileStream.Create(string(FaxName), fmOpenRead or fmShareDenyNone);
 
     { validate the fax file as a real APF }
     FaxStream.ReadBuffer(FaxHeader, SizeOf(TFaxHeaderRec));              {!!.02}
     if (FaxHeader.Signature <> DefAPFSig) then                           {!!.02}
       raise EFaxBadFormat.Create(ecFaxBadFormat, False);                 {!!.02}
 
-    JobStream := TFileStream.Create(DestName, fmCreate or fmShareDenyWrite);
+    JobStream := TFileStream.Create(string(DestName), fmCreate or fmShareDenyWrite);
     { initialize JobHeader }
     FillChar(JobHeader, SizeOf(JobHeader), #0);
     JobHeader.ID := apfDefJobHeaderID;
@@ -2773,18 +2778,18 @@ begin
     Recipient.LastResult := 0;
     JobStream.WriteBuffer(Recipient, SizeOf(Recipient));
     { add the cover file if available }
-    if (CoverName <> '') and (FileExists(CoverName)) then begin
+    if (CoverName <> '') and (FileExists(string(CoverName))) then begin
       JobHeader.CoverOfs := JobStream.Position;
       CoverStream := nil;
       try
-        CoverStream := TFileStream.Create(CoverName, fmOpenRead or fmShareDenyNone);
+        CoverStream := TFileStream.Create(string(CoverName), fmOpenRead or fmShareDenyNone);
         JobStream.CopyFrom(CoverStream, 0);
       finally
         CoverStream.Free;
       end;
     end;
     { add the APF file if available }
-    if (FaxName <> '') and (FileExists(FaxName)) then begin
+    if (FaxName <> '') and (FileExists(string(FaxName))) then begin
       JobHeader.FaxHdrOfs := JobStream.Position;
       JobStream.CopyFrom(FaxStream, 0);
     end;
@@ -2806,12 +2811,12 @@ var
   StreamPos : Integer;
   JobStatus : Integer;
 begin
-  if not FileExists(JobFileName) then                                  
-    Exit;                                                              
+  if not FileExists(string(JobFileName)) then
+    Exit;
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or    
-      fmShareDenyWrite);                                               
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or
+      fmShareDenyWrite);
 
     { get the job header }
     JobStream.Seek(0, soFromBeginning);
@@ -2866,7 +2871,7 @@ var
 begin
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or
       fmShareDenyWrite);
     JobStream.Seek(0, soFromBeginning);
     JobStream.ReadBuffer(JobInfo, SizeOf(TFaxJobHeaderRec));
@@ -2901,8 +2906,8 @@ var
 begin
   JobStream := nil;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or    
-      fmShareDenyWrite);                                               
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or
+      fmShareDenyWrite);
     JobStream.Seek(0, soFromBeginning);
     JobStream.ReadBuffer(JobInfo, SizeOf(TFaxJobHeaderRec));
     JobInfo.Status := stNone;
@@ -2934,7 +2939,7 @@ begin
   JobStream := nil;
   JobStatus := 0;
   try
-    JobStream := TFileStream.Create(JobFileName, fmOpenReadWrite or
+    JobStream := TFileStream.Create(string(JobFileName), fmOpenReadWrite or
       fmShareDenyWrite);
     { read the job header }
     JobStream.Seek(0, soFromBeginning);

@@ -329,6 +329,9 @@ type
 
 implementation
 
+uses
+  AnsiStrings;
+
 var
   PacketManagerList : TApdDataPacketManagerList;
 
@@ -1183,7 +1186,7 @@ procedure TApdDataPacket.LogPacketEvent(Event : TDispatchSubType; Data :
 var
   NameStr : AnsiString;
 begin
-  NameStr := 'Packet:'+Name;
+  NameStr := AnsiString('Packet:'+ Name);
   if Assigned(fManager.ComPort.Dispatcher) then                          {!!.02}
     if fManager.ComPort.Dispatcher.Logging then begin
       if (Data <> nil) and (DataSize <> 0) then

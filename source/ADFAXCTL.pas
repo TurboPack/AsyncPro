@@ -153,7 +153,7 @@ begin
       eNull : ;
       eStartDoc :
         begin
-          Owner.fDocName := InBuffer.Data;
+          Owner.fDocName := string(InBuffer.Data);
           Synchronize(Owner.NotifyStartDoc);
         end;
       eEndDoc :
@@ -172,7 +172,7 @@ begin
           ResetEvent(Events[1]);
 
           OutBuffer.Event := eSetFileName;
-          OutBuffer.Data := Owner.FileName;
+          OutBuffer.Data := ShortString(Owner.FileName);
 
           Res := WriteFile(
             Pipe,

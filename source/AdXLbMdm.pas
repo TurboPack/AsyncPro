@@ -51,8 +51,8 @@ type
     function ExportDetailXML(Modem : TLmModem) : Integer;
     procedure FixupModemcap(var List : TStringList);
     function ReadLine : AnsiString;
-    procedure WriteLine(const Str : ansistring);
-    procedure WriteLineUni(const Str : string);
+    procedure WriteLine(const Str : ansistring); overload;
+    procedure WriteLine(const Str : string); overload;
     procedure WriteXMLStr(const Str, sVal : string);
 
     function XMLize(const S : string) : string;
@@ -229,12 +229,12 @@ begin
     MemStream.LoadFromFile(ModemDetailFile);
     { search for the beginning of the modem element }
     repeat
-      S := ReadLine;
+      S := string(ReadLine);
       { save the beginning of the entity }
       if (Pos('<Modem', S) > 0) and (Pos('<ModemList', S) = 0) then
         ModemStart := MemStream.Position - Length(S);
       Found := (Pos('FriendlyName =', S) > 0) and
-               (Pos(ModemName, UnXMLize(S)) > 0);
+               (Pos(ModemName, UnXMLize(AnsiString(S))) > 0);
     until Found or (MemStream.Position >= MemStream.Size);
     if not Found then begin
       Result := ecModemNotFound;
@@ -242,7 +242,7 @@ begin
     end;
     { now, search for the end of the modem element }
     repeat
-      S := ReadLine;
+      S := string(ReadLine);
       Found := Pos('</Modem>', S) > 0;
       if Found then
         ModemEnd := MemStream.Position;
@@ -634,64 +634,64 @@ begin
         '">' + XMLize(PLmModemCommand(Modem.Init[I]).Command) + '</Init>');
 
     for I := 0 to pred(Modem.Monitor.Count) do
-      WriteLineUni('    <Monitor Sequence = "' + XMLizeInt(PLmModemCommand(Modem.Monitor[I]).Sequence) +
+      WriteLine('    <Monitor Sequence = "' + XMLizeInt(PLmModemCommand(Modem.Monitor[I]).Sequence) +
         '">' + XMLize(string(PLmModemCommand(Modem.Monitor[I]).Command)) + '</Monitor>');
 
     with Modem.Settings do begin
-      WriteLineUni('    <Settings');
-      WriteLineUni('      Prefix = "' + XMLize(Prefix) + '"');
-      WriteLineUni('      Terminator = "' + XMLize(Terminator) + '"');
-      WriteLineUni('      DialPrefix = "' + XMLize(DialPrefix) + '"');
-      WriteLineUni('      DialSuffix = "' + XMLize(DialSuffix) + '"');
-      WriteLineUni('      SpeakerVolume_High = "' + XMLize(SpeakerVolume_High) + '"');
-      WriteLineUni('      SpeakerVolume_Low = "' + XMLize(SpeakerVolume_Low) + '"');
-      WriteLineUni('      SpeakerVolume_Med = "' + XMLize(SpeakerVolume_Med) + '"');
-      WriteLineUni('      SpeakerMode_Dial = "' + XMLize(SpeakerMode_Dial) + '"');
-      WriteLineUni('      SpeakerMode_Off = "' + XMLize(SpeakerMode_Off) + '"');
-      WriteLineUni('      SpeakerMode_On = "' + XMLize(SpeakerMode_On) + '"');
-      WriteLineUni('      SpeakerMode_Setup = "' + XMLize(SpeakerMode_Setup) + '"');
-      WriteLineUni('      FlowControl_Hard = "' + XMLize(FlowControl_Hard) + '"');
-      WriteLineUni('      FlowControl_Off = "' + XMLize(FlowControl_Off) + '"');
-      WriteLineUni('      FlowControl_Soft = "' + XMLize(FlowControl_Soft) + '"');
-      WriteLineUni('      ErrorControl_Forced = "' + XMLize(ErrorControl_Forced) + '"');
-      WriteLineUni('      ErrorControl_Off = "' + XMLize(ErrorControl_Off) + '"');
-      WriteLineUni('      ErrorControl_On = "' + XMLize(ErrorControl_On) + '"');
-      WriteLineUni('      ErrorControl_Cellular = "' + XMLize(ErrorControl_Cellular) + '"');
-      WriteLineUni('      ErrorControl_Cellular_Forced = "' + XMLize(ErrorControl_Cellular_Forced) + '"');
-      WriteLineUni('      Compression_Off = "' + XMLize(Compression_Off) + '"');
-      WriteLineUni('      Compression_On = "' + XMLize(Compression_On) + '"');
-      WriteLineUni('      Modulation_Bell = "' + XMLize(Modulation_Bell) + '"');
-      WriteLineUni('      Modulation_CCITT = "' + XMLize(Modulation_CCITT) + '"');
-      WriteLineUni('      Modulation_CCITT_V23 = "' + XMLize(Modulation_CCITT_V23) + '"');
-      WriteLineUni('      SpeedNegotiation_On = "' + XMLize(SpeedNegotiation_On) + '"');
-      WriteLineUni('      SpeedNegotiation_Off = "' + XMLize(SpeedNegotiation_Off) + '"');
-      WriteLineUni('      Pulse = "' + XMLize(Pulse) + '"');
-      WriteLineUni('      Tone = "' + XMLize(Tone) + '"');
-      WriteLineUni('      Blind_Off = "' + XMLize(Blind_Off) + '"');
-      WriteLineUni('      Blind_On = "' + XMLize(Blind_On) + '"');
-      WriteLineUni('      CallSetupFailTimer = "' + XMLize(CallSetupFailTimer) + '"');
-      WriteLineUni('      InactivityTimeout = "' + XMLize(InactivityTimeout) + '"');
-      WriteLineUni('      CompatibilityFlags = "' + XMLize(CompatibilityFlags) + '"');
-      WriteLineUni('      ConfigDelay = "' + XMLizeInt(ConfigDelay) + '"/>');
+      WriteLine('    <Settings');
+      WriteLine('      Prefix = "' + XMLize(Prefix) + '"');
+      WriteLine('      Terminator = "' + XMLize(Terminator) + '"');
+      WriteLine('      DialPrefix = "' + XMLize(DialPrefix) + '"');
+      WriteLine('      DialSuffix = "' + XMLize(DialSuffix) + '"');
+      WriteLine('      SpeakerVolume_High = "' + XMLize(SpeakerVolume_High) + '"');
+      WriteLine('      SpeakerVolume_Low = "' + XMLize(SpeakerVolume_Low) + '"');
+      WriteLine('      SpeakerVolume_Med = "' + XMLize(SpeakerVolume_Med) + '"');
+      WriteLine('      SpeakerMode_Dial = "' + XMLize(SpeakerMode_Dial) + '"');
+      WriteLine('      SpeakerMode_Off = "' + XMLize(SpeakerMode_Off) + '"');
+      WriteLine('      SpeakerMode_On = "' + XMLize(SpeakerMode_On) + '"');
+      WriteLine('      SpeakerMode_Setup = "' + XMLize(SpeakerMode_Setup) + '"');
+      WriteLine('      FlowControl_Hard = "' + XMLize(FlowControl_Hard) + '"');
+      WriteLine('      FlowControl_Off = "' + XMLize(FlowControl_Off) + '"');
+      WriteLine('      FlowControl_Soft = "' + XMLize(FlowControl_Soft) + '"');
+      WriteLine('      ErrorControl_Forced = "' + XMLize(ErrorControl_Forced) + '"');
+      WriteLine('      ErrorControl_Off = "' + XMLize(ErrorControl_Off) + '"');
+      WriteLine('      ErrorControl_On = "' + XMLize(ErrorControl_On) + '"');
+      WriteLine('      ErrorControl_Cellular = "' + XMLize(ErrorControl_Cellular) + '"');
+      WriteLine('      ErrorControl_Cellular_Forced = "' + XMLize(ErrorControl_Cellular_Forced) + '"');
+      WriteLine('      Compression_Off = "' + XMLize(Compression_Off) + '"');
+      WriteLine('      Compression_On = "' + XMLize(Compression_On) + '"');
+      WriteLine('      Modulation_Bell = "' + XMLize(Modulation_Bell) + '"');
+      WriteLine('      Modulation_CCITT = "' + XMLize(Modulation_CCITT) + '"');
+      WriteLine('      Modulation_CCITT_V23 = "' + XMLize(Modulation_CCITT_V23) + '"');
+      WriteLine('      SpeedNegotiation_On = "' + XMLize(SpeedNegotiation_On) + '"');
+      WriteLine('      SpeedNegotiation_Off = "' + XMLize(SpeedNegotiation_Off) + '"');
+      WriteLine('      Pulse = "' + XMLize(Pulse) + '"');
+      WriteLine('      Tone = "' + XMLize(Tone) + '"');
+      WriteLine('      Blind_Off = "' + XMLize(Blind_Off) + '"');
+      WriteLine('      Blind_On = "' + XMLize(Blind_On) + '"');
+      WriteLine('      CallSetupFailTimer = "' + XMLize(CallSetupFailTimer) + '"');
+      WriteLine('      InactivityTimeout = "' + XMLize(InactivityTimeout) + '"');
+      WriteLine('      CompatibilityFlags = "' + XMLize(CompatibilityFlags) + '"');
+      WriteLine('      ConfigDelay = "' + XMLizeInt(ConfigDelay) + '"/>');
     end;
 
     with Modem.Hardware do begin
-      WriteLineUni('    <Hardware>');
-      WriteLineUni('      AutoConfigOverride = "' + XMLize(AutoConfigOverride) + '"');
-      WriteLineUni('      ComPort = "' + XMLize(ComPort) + '"');
-      WriteLineUni('      InvalidRDP = "' + XMLize(InvalidRDP) + '"');
-      WriteLineUni('      IoBaseAddress = "' + XMLizeInt(IoBaseAddress) + '"');
-      WriteLineUni('      InterruptNumber = "' + XMLizeInt(InterruptNumber) + '"');
-      WriteLineUni('      PermitShare = "' + XMLizeBool(PermitShare) + '"');
-      WriteLineUni('      RxFIFO = "' + XMLize(RxFIFO) + '"');
-      WriteLineUni('      RxTxBufferSize = "' + XMLizeInt(RxTxBufferSize) + '"');
-      WriteLineUni('      TxFIFO = "' + XMLize(TxFIFO) + '"');
-      WriteLineUni('      Pcmcia = "' + XMLize(Pcmcia) + '"');
-      WriteLineUni('      BusType = "' + XMLize(BusType) + '"');
-      WriteLineUni('      PCCARDAttributeMemoryAddress = "' + XMLizeInt(PCCARDAttributeMemoryAddress) + '"');
-      WriteLineUni('      PCCARDAttributeMemorySize = "' + XMLizeInt(PCCARDAttributeMemorySize) + '"');
-      WriteLineUni('      PCCARDAttributeMemoryOffset = "' + XMLizeInt(PCCARDAttributeMemoryOffset) + '"');
-      WriteLineUni('    </Hardware>');
+      WriteLine('    <Hardware>');
+      WriteLine('      AutoConfigOverride = "' + XMLize(AutoConfigOverride) + '"');
+      WriteLine('      ComPort = "' + XMLize(ComPort) + '"');
+      WriteLine('      InvalidRDP = "' + XMLize(InvalidRDP) + '"');
+      WriteLine('      IoBaseAddress = "' + XMLizeInt(IoBaseAddress) + '"');
+      WriteLine('      InterruptNumber = "' + XMLizeInt(InterruptNumber) + '"');
+      WriteLine('      PermitShare = "' + XMLizeBool(PermitShare) + '"');
+      WriteLine('      RxFIFO = "' + XMLize(RxFIFO) + '"');
+      WriteLine('      RxTxBufferSize = "' + XMLizeInt(RxTxBufferSize) + '"');
+      WriteLine('      TxFIFO = "' + XMLize(TxFIFO) + '"');
+      WriteLine('      Pcmcia = "' + XMLize(Pcmcia) + '"');
+      WriteLine('      BusType = "' + XMLize(BusType) + '"');
+      WriteLine('      PCCARDAttributeMemoryAddress = "' + XMLizeInt(PCCARDAttributeMemoryAddress) + '"');
+      WriteLine('      PCCARDAttributeMemorySize = "' + XMLizeInt(PCCARDAttributeMemorySize) + '"');
+      WriteLine('      PCCARDAttributeMemoryOffset = "' + XMLizeInt(PCCARDAttributeMemoryOffset) + '"');
+      WriteLine('    </Hardware>');
     end;
 
     for I := 0 to pred(Modem.BaudRates.Count) do
@@ -792,7 +792,7 @@ begin
   DetailStream.WriteBuffer(#13#10, 2);
 end;
 
-procedure TApdModemCapDetail.WriteLineUni(const Str: string);
+procedure TApdModemCapDetail.WriteLine(const Str: string);
 begin
   Writeln(AnsiString(Str));
 end;
@@ -811,7 +811,7 @@ begin
     Delete(S, 1, 1);
   Assert(S[1] = '<', 'Need brackets ' + S);
   Insert('/', S, 2);
-  WriteLineUni(Str + XMLize(sVal) + S);
+  WriteLine(Str + XMLize(sVal) + S);
 end;
 
 function TApdModemCapDetail.XMLize(const S: string): string;

@@ -221,7 +221,7 @@ begin
 
           {Add the name our list if it's valid}
           if S <> '' then
-            FPortItemList.Add(Copy(S, 1, Length(S)-1));
+            FPortItemList.Add(string(Copy(S, 1, Length(S)-1)));
         end;
       end;
     end;

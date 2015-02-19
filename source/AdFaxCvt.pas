@@ -609,7 +609,7 @@ implementation
     if (InputDocumentType = idText) then begin
       fcSetTabStop(Data, TabStop);
       fcSetLinesPerPage(Data, LinesPerPage);
-      CheckException(Self, fcLoadFont(Data, StrPCopy(Temp, FontFile),
+      CheckException(Self, fcLoadFont(Data, StrPCopy(Temp, AnsiString(FontFile)),
         FontHandles[FontType], (Resolution = frHigh)));
     end;
     if (InputDocumentType = idTextEx) then begin

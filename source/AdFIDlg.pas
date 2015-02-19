@@ -115,15 +115,16 @@ implementation
 {$R *.DFM}
 
 uses
-  AdFaxSrv, AdExcept;
+  AnsiStrings, AdFaxSrv, AdExcept;
+
 { TAdFIDlgForm }
 
 function TApdFaxJobInfoDialog.ShowDialog(JobFileName, DlgCaption: ShortString): TModalResult;
 begin
-  Caption := DlgCaption;
+  Caption := string(DlgCaption);
   SetDirty(False);
-  lblFileName.Caption := JobFileName;
-  if not(FileExists(JobFileName)) then begin
+  lblFileName.Caption := string(JobFileName);
+  if not(FileExists(string(JobFileName))) then begin
     Result := mrAbort;
     Exit;
   end;
@@ -135,7 +136,7 @@ begin
     try
       JobStream := nil;
       try
-        JobStream := TFileStream.Create(JobFileName,
+        JobStream := TFileStream.Create(string(JobFileName),
           fmOpenRead or fmShareDenyNone);
         lblDateSubmitted.Caption := DateTimeToStr(FileDateToDateTime(
         FileGetDate(JobStream.Handle)));
@@ -163,7 +164,7 @@ begin
     if ModalResult = mrOK then begin
       try
         try
-          JobStream := TFileStream.Create(JobFileName,
+          JobStream := TFileStream.Create(string(JobFileName),
             fmOpenWrite or fmShareDenyWrite);
           JobStream.Position := 0;                                         
           { write the job header }
@@ -193,7 +194,7 @@ begin
     stComplete: lblStatus.Caption := 'All jobs have been handled';
   end;
 
-  lblSender.Caption := JobHeader.Sender;
+  lblSender.Caption := string(JobHeader.Sender);
   lblNumJobs.Caption := IntToStr(JobHeader.NumJobs);
   lblNextJob.Caption := IntToStr(JobHeader.NextJob);
   lblDateNextSend.Caption := DateTimeToStr(JobHeader.SchedDT);
@@ -216,10 +217,10 @@ begin
   edtSchedTime.Text := TimeToStr(JobInfo.SchedDT);
   lblAttemptNum.Caption := IntToStr(JobInfo.AttemptNum);
   lblLastResult.Caption := ErrorMsg(JobInfo.LastResult);
-  edtPhoneNum.Text := JobInfo.PhoneNumber;
-  edtHeaderLine.Text := JobInfo.HeaderLine;
-  edtHeaderRecipient.Text := JobInfo.HeaderRecipient;
-  edtHeaderTitle.Text := JobInfo.HeaderTitle;
+  edtPhoneNum.Text := string(JobInfo.PhoneNumber);
+  edtHeaderLine.Text := string(JobInfo.HeaderLine);
+  edtHeaderRecipient.Text := string(JobInfo.HeaderRecipient);
+  edtHeaderTitle.Text := string(JobInfo.HeaderTitle);
   SetDirty(False);
 end;
 
@@ -260,10 +261,10 @@ begin
   end;
 
   JobInfo.SchedDT := StrToDate(edtSchedDate.Text) + StrToTime(edtSchedTime.Text);
-  JobInfo.PhoneNumber := edtPhoneNum.Text;
-  JobInfo.HeaderLine := edtHeaderLine.Text;
-  JobInfo.HeaderRecipient := edtHeaderRecipient.Text;
-  JobInfo.HeaderTitle := edtHeaderTitle.Text;
+  JobInfo.PhoneNumber := ShortString(edtPhoneNum.Text);
+  JobInfo.HeaderLine := ShortString(edtHeaderLine.Text);
+  JobInfo.HeaderRecipient := ShortString(edtHeaderRecipient.Text);
+  JobInfo.HeaderTitle := ShortString(edtHeaderTitle.Text);
 
   JobInfoStream.Position := CurrentJobNum * SizeOf(TFaxRecipientRec);
   JobInfoStream.WriteBuffer(JobInfo, SizeOf(TFaxRecipientRec));

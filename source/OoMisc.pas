@@ -2928,7 +2928,10 @@ function SafeYield : LongInt;
 function JustName(PathName : String) : String;
   {-Return just the name (no extension, no path) of a pathname}
 
-function AddBackSlash(const DirName : String) : String;
+function AddBackSlash(const DirName : String) : String; overload;
+  {-Add a default backslash to a directory name}
+
+function AddBackSlash(const DirName : AnsiString) : AnsiString; overload;
   {-Add a default backslash to a directory name}
 
 function IsWin2000 : Boolean;
@@ -3958,22 +3961,16 @@ type
   end;
 
   function AddBackSlash(const DirName : String) : String;
-    {-Add a default backslash to a directory name}
-  var
-    IsQuoted : Boolean;
   begin
-    Result := DirName;
-    if DirName = '' then Exit;
-    IsQuoted := DirName[Length(DirName)] = '"';
-    if IsQuoted then
-      Result := Copy(DirName, 1, Length(DirName) - 1);
-    if not CharInSet(Result[Length(Result)], DosDelimSet) then
-      Result := Result+'\';                                            
-    if IsQuoted then                                                   
-      Result := Result + '"';                                          
+    Result := IncludeTrailingPathDelimiter(DirName);
   end;
 
-function IsWin2000 : Boolean;                                          
+  function AddBackSlash(const DirName : AnsiString) : AnsiString;
+  begin
+    Result := AnsiString(IncludeTrailingPathDelimiter(string(DirName)));
+  end;
+
+function IsWin2000 : Boolean;
 //var
 // Osi : TOSVersionInfo;
 begin

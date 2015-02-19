@@ -450,7 +450,7 @@ const
 
 {General purpose}
 
-function Pos(const Substr: string; const S: TModemResponse): Integer;
+function Pos(const Substr: string; const S: TModemResponse): Integer; overload;
 begin
   Result := System.Pos(SubStr, string(S));
 end;
@@ -550,7 +550,7 @@ end;
       if (Name[I] = '.') and (DotPos = 0) then
         DotPos := I;
     HasExtensionS :=
-      (DotPos > 0) and (Pos('\', Copy(Name, Succ(DotPos), 64)) = 0);
+      (DotPos > 0) and (System.Pos('\', Copy(string(Name), Succ(DotPos), 64)) = 0);
   end;
 
   function DefaultExtensionS(Name, Ext : ShortString) : ShortString;
@@ -638,7 +638,7 @@ end;
       cReplyWait      := awfDefCmdTimeout;
       cTransWait      := awfDefTransTimeout;
       cFaxAndData     := '0';
-      cForcedInit     := DefNormalInit;                                  {!!.04}
+      cForcedInit     := ShortString(DefNormalInit);                                  {!!.04}
     end;
     caInitC12EnhFonts(DP);                                          
     cInitC12AbsData   := ecOK;
@@ -866,9 +866,9 @@ end;
         if (Length(S) > 0) then                                          {!!.04}
           if (S[1] in ['A'..'F']) then                                   {!!.04}
             { it's a hex code, convert to the doc'd format }             {!!.04}
-            Result := StrToIntDef(S[2], 0) + 100                         {!!.04}
+            Result := StrToIntDef(string(S[2]), 0) + 100                         {!!.04}
           else                                                           {!!.04}
-            Result := StrToIntDef(S, -0)                                 {!!.04}
+            Result := StrToIntDef(string(S), -0)                                 {!!.04}
         else                                                             {!!.04}
           Result := 0;                                                   {!!.04}
         {Val(S, W, Code);}                                               {!!.04}
@@ -1945,13 +1945,13 @@ end;
     with PC12FaxData(FP)^, fCData^ do begin
       cBlindDial := Blind;
       if not cDetectBusy and cBlindDial then
-        cForcedInit := DefX1Init
+        cForcedInit := ShortString(DefX1Init)
       else if not cDetectBusy then
-        cForcedInit := DefNoDetectBusyInit
+        cForcedInit := ShortString(DefNoDetectBusyInit)
       else if cBlindDial then
-        cForcedInit := DefBlindInit                                 
+        cForcedInit := ShortString(DefBlindInit)
       else
-        cForcedInit := DefNormalInit;
+        cForcedInit := ShortString(DefNormalInit);
     end;
   end;
 
@@ -1960,20 +1960,20 @@ end;
     with PC12FaxData(FP)^, fCData^ do begin
       cDetectBusy := DetectBusySignal;
       if not cDetectBusy and cBlindDial then
-        cForcedInit := DefX1Init
+        cForcedInit := ShortString(DefX1Init)
       else if not cDetectBusy then
-        cForcedInit := DefNoDetectBusyInit
+        cForcedInit := ShortString(DefNoDetectBusyInit)
       else if cBlindDial then
-        cForcedInit := DefBlindInit
+        cForcedInit := ShortString(DefBlindInit)
       else
-        cForcedInit := DefNormalInit;
+        cForcedInit := ShortString(DefNormalInit);
     end;
   end;
 
   procedure fSetTapiDefInit(FP : PFaxRec);
   begin
     with PC12FaxData(FP)^, fCData^ do
-      cForcedInit := DefTapiInit;
+      cForcedInit := ShortString(DefTapiInit);
   end;
 
   procedure fSetToneDial(FP : PFaxRec; Tone : Boolean);
@@ -2133,7 +2133,7 @@ end;
       cInFileName := DefaultExtensionS(Document, aFaxFileExt);
       aSaveMode := FileMode;
       FileMode := fmOpenRead or fmShareDenyWrite;                  
-      Assign(cInFile, cInFileName);
+      Assign(cInFile, string(cInFileName));
       Reset(cInFile, 1);
       FileMode := aSaveMode;
       W := -IOResult;                                               
@@ -2257,7 +2257,7 @@ end;
 
       end else begin
         {Open as text file}
-        fCvrF := TLineReader.Create(TFileStream.Create(aCoverFile,fmOpenRead or fmShareDenyWrite));
+        fCvrF := TLineReader.Create(TFileStream.Create(string(aCoverFile),fmOpenRead or fmShareDenyWrite));
           fCvrOpen := True;
           {If BindFaxFont is undefined, APFAX.FNT must be in
            the current directory.}
@@ -2822,7 +2822,7 @@ end;
               if aSendManual then
                 s := 'ATD'
               else
-                S := 'ATD' + cDialTonePulse + cDialPrefix + aPhoneNum;
+                S := ShortString('ATD') + cDialTonePulse + cDialPrefix + aPhoneNum;
 
               caPutModem(FP, S);
               aPort.SetTimerTrigger(aTimeoutTrigger, cDialWait, True);
@@ -3575,7 +3575,7 @@ end;
             if TriggerID = aDataTrigger then
               if caOkResponse(FP) then begin
                 if cMorePages then
-                  S := 'AT+FET='+ResolutionChangeCode[ResolutionChange]
+                  S := ShortString('AT+FET=') + ResolutionChangeCode[ResolutionChange]
                 else
                   S := 'AT+FET=2';
                 caPutModem(FP, S);
@@ -3710,9 +3710,9 @@ end;
           tf2SendNewParams :
             if cMorePages then begin
               if aClassInUse = ctClass2 then
-                caPutModem(FP, 'AT+FDIS='+cResC)
+                caPutModem(FP, ShortString('AT+FDIS=') + cResC)
               else
-                caPutModem(FP, 'AT+FIS='+cResC);
+                caPutModem(FP, ShortString('AT+FIS=') + cResC);
                fState := tf2GetParams;
             end else
               fState := tfClose;
@@ -4074,7 +4074,7 @@ ExitPoint:
           Exit;
         end;
 
-        if not caProcessModemCmd(FP, 'AT+FAA='+cFaxAndData) then begin
+        if not caProcessModemCmd(FP, ShortString('AT+FAA=') + cFaxAndData) then begin
           CleanUp;
           Exit;
         end;
@@ -4459,7 +4459,7 @@ ExitPoint:
         cFaxHeader.PageCount := 0;
         cFaxHeader.PageOfs   := SizeOf(cFaxHeader);
         afFaxName(FP);
-        Assign(cInFile, aFaxFileName);
+        Assign(cInFile, string(aFaxFileName));
         Rewrite(cInFile, 1);
         aFaxError := -IOResult;
         if aFaxError = ecOK then begin
@@ -5599,7 +5599,7 @@ ExitPoint:
             Cleanup;
             Exit;
           end;
-          if not caProcessModemCmd(FP, 'AT+FAA='+cFaxAndData) then begin
+          if not caProcessModemCmd(FP, ShortString('AT+FAA=') + cFaxAndData) then begin
             Cleanup;
             Exit;
           end;

@@ -53,7 +53,7 @@
                           available at that time.  It also reads any available data
                           every 50 ms just in case we have a misbehaving driver
                           that doesn't provide the EV_RXCHAR event reliably.
-                          All data read is placed onto a queue for TDispThread
+                          All data read is placed onto a QueueProp for TDispThread
                           to process.  This allows TDispThread, and hence any
                           event handlers, to take as much time as they need
                           without worrying about data overruns.
@@ -70,7 +70,7 @@
    4) TDispThread       - This is the original TDispThread from AwUser.  It
                           continues largely unchanged from the original. The
                           only real difference is that it now waits for data to
-                          appear in the queue and reads from the queue rather than
+                          appear in the QueueProp and reads from the QueueProp rather than
                           issuing its own WaitCommEvent and ReadFile calls.
 
    The original serial port dispatcher in AwWin32 can still be used by setting
@@ -107,7 +107,7 @@ type
     property DLoggingOn : Boolean read GetDLoggingOn;
     property GeneralEvent : THandle read GetGeneralEvent;
     property KillThreads : Boolean read GetKillThreads write SetKillThreads;
-    property Queue : TIOQueue read GetQueue;
+    property QueueProp : TIOQueue read GetQueue;
     property SerialEvent : TEvent read GetSerialEvent;
   end;
 
@@ -147,7 +147,7 @@ type
     FSerialEvent    : TEvent;
   protected
     function  EscapeComFunction(Func : Integer) : LongInt; override;
-    function  FlushCom(Queue : Integer) : Integer; override;
+    function  FlushCom(QueueProp : Integer) : Integer; override;
     function  GetComError(var Stat : TComStat) : Integer; override;
     function  GetComEventMask(EvtMask : Integer) : Cardinal; override;
     function  GetComState(var DCB: TDCB): Integer; override;
@@ -340,11 +340,11 @@ begin
     EscapeCommFunction(CidEx, Func);
     Result := 0;
 end;
-// Flush the I/O buffers.  Queue = 0 - flush output queues.  Queue = 1 - flush input.
-function TApdWin32Dispatcher.FlushCom(Queue : Integer) : Integer;
+// Flush the I/O buffers.  QueueProp = 0 - flush output queues.  QueueProp = 1 - flush input.
+function TApdWin32Dispatcher.FlushCom(QueueProp : Integer) : Integer;
 begin
     Result := 0;
-    if ((Queue = 0) and Assigned(OutThread)) then
+    if ((QueueProp = 0) and Assigned(OutThread)) then
     begin
         // Flush output buffers
         EnterCriticalSection(OutputSection);
@@ -361,7 +361,7 @@ begin
         SetEvent(OutFlushEvent);
         WaitForSingleObject(GeneralEvent, 5000);
     end;
-    if (Queue = 1) then
+    if (QueueProp = 1) then
     begin
         // Flush input buffers
         Result := Integer(PurgeComm(CidEx, PURGE_RXABORT or PURGE_RXCLEAR));
@@ -414,8 +414,8 @@ begin
          call GetLastError to get actual error code}
         Result := -1;
 end;
-// Return the number of bytes available to be read from the input queue.  Returns
-// zero if the first buffer on the queue is not a data buffer, returns the number
+// Return the number of bytes available to be read from the input QueueProp.  Returns
+// zero if the first buffer on the QueueProp is not a data buffer, returns the number
 // of bytes available in the first buffer otherwise.
 function TApdWin32Dispatcher.InQueueUsed : Cardinal;
 var
@@ -461,7 +461,7 @@ begin
     Result := 0;
 end;
 //  Rather than reading directly from the serial port, as we used to do, we
-//  now read from the input queue.
+//  now read from the input QueueProp.
 function TApdWin32Dispatcher.ReadCom(Buf : PAnsiChar; Size: Integer) : Integer;
 var
     bfr         : TIOBuffer;
@@ -474,7 +474,7 @@ begin
     while (not done) do
     begin
         bfr := FQueue.Peek;
-        // We can only read if the first buffer on the queue is a data buffer.
+        // We can only read if the first buffer on the QueueProp is a data buffer.
         // If it is a status buffer, it must be processed first.
         if (Assigned(bfr)) then
         begin
@@ -489,8 +489,8 @@ begin
                     BytesRead := BytesRead + bytesToRead;
                     Dec(len, bytesToRead);
                     Inc(Buf, bytesToRead);
-                    // If all data has been read from the buffer, remove it from the queue
-                    // and free it.  Otherwise, leave it on the queue so we can read
+                    // If all data has been read from the buffer, remove it from the QueueProp
+                    // and free it.  Otherwise, leave it on the QueueProp so we can read
                     // the remainder on the next call to this subroutine.
                     if (BytesRead >= BytesUsed) then
                     begin
@@ -608,14 +608,14 @@ var
     SizeAtEnd   : Integer;
     LeftOver    : Integer;
 begin
-    {Add the data to the output queue}
+    {Add the data to the output QueueProp}
     EnterCriticalSection(OutputSection);
     try
         {we already know at this point that there is enough room for the block}
         SizeAtEnd := OutQue - OBufHead;
         if SizeAtEnd >= Size then
         begin
-            {can move data to output queue in one block}
+            {can move data to output QueueProp in one block}
             Move(Buf^, OBuffer^[OBufHead], Size);
             if SizeAtEnd = Size then
                 OBufHead := 0
@@ -722,7 +722,7 @@ begin
 end;
 
 //  TReadThread methods.  This thread does nothing except wait for input
-//  from the comm port.  When input is received it is placed onto the queue
+//  from the comm port.  When input is received it is placed onto the QueueProp
 //  for the dispatcher thread to process.
 procedure TReadThread.Execute;
 var
@@ -767,7 +767,7 @@ begin
                 AddDispatchEntry(dtThread, dstThreadWake, 1, nil, 0);
 {$ENDIF}
             // Was it an input arrival notification?  If so, read the
-            // available input & queue it to the dispatcher thread.
+            // available input & QueueProp it to the dispatcher thread.
             try
                 if (not Assigned(dbfr)) then
                     dbfr := TDataBuffer.Create(IO_BUFFER_SIZE);
@@ -789,7 +789,7 @@ begin
                                      bytesRead);
 {$ENDIF}
                 dbfr.BytesUsed := bytesRead;
-                Queue.Push(dbfr);
+                QueueProp.Push(dbfr);
                 try
                     dbfr := TDataBuffer.Create(IO_BUFFER_SIZE);
                 except
@@ -900,7 +900,7 @@ begin
             if (DLoggingOn) then
                 AddDispatchEntry(dtThread, dstThreadSleep, 3, nil, 0);
 {$ENDIF}
-            // Wait for output to appear in the queue or for a flush request
+            // Wait for output to appear in the QueueProp or for a flush request
             stat := WaitForMultipleObjects(Length(outEvents),
                                            @outEvents[0],
                                            False,
@@ -1001,7 +1001,7 @@ begin
                         Move(OBuffer^[OBufTail], tempBuff^, OutQue - OBufTail);
                         Move(OBuffer^[0], tempBuff^[OutQue - OBufTail], OBufHead);
                     end;
-                    // Reset the queue head and tail
+                    // Reset the QueueProp head and tail
                     OBufHead := 0;
                     OBufTail := 0;
                     OBufFull := False;
@@ -1124,7 +1124,7 @@ begin
 end;
 
 //  TStatusThread methods.  This thread does nothing except wait for line and / or
-//  modem events.  When an event occurs a status buffer is added to the queue
+//  modem events.  When an event occurs a status buffer is added to the QueueProp
 //  for processing by the dispatcher thread.
 procedure TStatusThread.Execute;
 var
@@ -1185,7 +1185,7 @@ begin
             // in the butt.
             if ((evt and EV_RXCHAR) <> 0) then
                 SerialEvent.SetEvent;
-            // Was it a modem or line status change?  If so, queue
+            // Was it a modem or line status change?  If so, QueueProp
             // a status buffer to the dispatcher thread.
             if ((evt and (ModemEvent or LineEvent)) <> 0) then
             begin
@@ -1205,7 +1205,7 @@ begin
                                      SizeOf(evt));
 {$ENDIF}
                 sbfr.Status := evt;
-                Queue.Push(sbfr);
+                QueueProp.Push(sbfr);
                 sbfr := nil;
             end;
         end;
