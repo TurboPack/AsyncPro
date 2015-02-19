@@ -401,10 +401,8 @@ type
       FOriginRow      : integer;
       FScrollback     : boolean;
       FFreezeScrollBack : boolean;                                     
-      {$IFDEF Win32}
       FScrollHorzInfo : TScrollInfo;
       FScrollVertInfo : TScrollInfo;
-      {$ENDIF}
       FShowingCaret   : boolean;
       FTriggerHandlerOn : boolean;
       FUsedRect       : TRect;
@@ -1866,12 +1864,10 @@ begin
   FCharHPadding         := 0;                                            {!!.06}
   FCharVPadding         := 0;                                            {!!.06}
   {miscellaneous}
-  {$IFDEF Win32}
   with FScrollHorzInfo do
     cbSize := sizeof(FScrollHorzInfo);
   with FScrollVertInfo do
     cbSize := sizeof(FScrollVertInfo);
-  {$ENDIF}
 end;
 {--------}
 destructor TAdCustomTerminal.Destroy;
@@ -2028,10 +2024,8 @@ begin
   if (csLoading in ComponentState) or not HandleAllocated then
     Exit;
 
-  {$IFDEF Win32}
   if NewStyleControls and (FBorderStyle = bsSingle) then
     RecreateWnd;
-  {$ENDIF}
 
   inherited;
 end;
@@ -2354,14 +2348,10 @@ begin
 
   if (Button = mbLeft) then begin
     if not Focused then begin
-      {$IFDEF WIN32}
       if CanFocus then
         SetFocus
       else if (Handle <> 0) then
         Windows.SetFocus(Handle);
-      {$ELSE}
-      SetFocus;
-      {$ENDIF}
     end;
     FLButtonDown := true;
     {force mouse position into bounds}
@@ -2424,11 +2414,7 @@ end;
 function TermIntersectRect(var lprcDst : TRect;
                          const lprcSrc1, lprcSrc2: TRect) : boolean;
 begin
-  {$IFDEF Win32}
   Result := IntersectRect(lprcDst, lprcSrc1, lprcSrc2);
-  {$ELSE}
-  Result := IntersectRect(lprcDst, lprcSrc1, lprcSrc2) <> 0;
-  {$ENDIF}
 end;
 {--------}
 procedure TAdCustomTerminal.Paint;
@@ -2894,9 +2880,7 @@ begin
     else begin
       TempFont := TFont.Create;
       TempFont.Assign(Font);
-      {$IFDEF Version3}
       TempFont.CharSet := DEFAULT_CHARSET;
-      {$ENDIF}
       for i := 0 to pred(FontList.Count) do begin
         if (FontList[i] = string(DefaultFontName)) then
           TempFont.Name := Font.Name
@@ -2940,11 +2924,7 @@ var
 begin
   if (FEmulator.Buffer <> nil) then begin
     CharArray := FEmulator.Buffer.GetLineCharPtr(aRow);
-    {$IFDEF Win32}
     SetLength(Result, FEmulator.Buffer.ColCount);
-    {$ELSE}
-    Result [0] := chr(FEmulator.Buffer.ColCount);
-    {$ENDIF}
     Move(CharArray^, Result[1], FEmulator.Buffer.ColCount);
   end
   else
@@ -3094,7 +3074,6 @@ procedure TAdCustomTerminal.tmInitHScrollBar;
 begin
   {Assumptions: FUseHScrollBar = true
                 FClientFullCols < Columns}
-  {$IFDEF Win32}
   with FScrollHorzInfo do begin
     fMask := SIF_ALL;
     nMin := 0;
@@ -3103,18 +3082,12 @@ begin
     nPos := ClientOriginCol-1;
   end;
   SetScrollInfo(Handle, SB_HORZ, FScrollHorzInfo, true);
-  {$ELSE}
-  SetScrollRange(Handle, SB_HORZ, 0, Columns - FClientFullCols, true);
-  SetScrollPos(Handle, SB_HORZ, ClientOriginCol-1, true);
-  {$ENDIF}
 end;
 {--------}
 procedure TAdCustomTerminal.tmInitVScrollBar;
 begin
   {Assumptions: FUseVScrollBar = true AND FClientFullRows < Rows
                 OR ScrollbackRows > Rows}
-  {$IFDEF Win32}
-
   if FUseVScrollBar and (not Scrollback) then begin
     with FScrollVertInfo do begin
       fMask := SIF_ALL;
@@ -3134,15 +3107,6 @@ begin
     end;
   end;
   SetScrollInfo(Handle, SB_VERT, FScrollVertInfo, true);
-  {$ELSE}
-  if FUseVScrollBar and (not Scrollback) then
-    SetScrollRange(Handle, SB_VERT, 0, Rows - FClientFullRows, true)
-  else
-    SetScrollRange(Handle, SB_VERT,
-                   Rows - ScrollbackRows, Rows - FClientFullRows,
-                   true);
-  SetScrollPos(Handle, SB_VERT, ClientOriginRow-1, true);
-  {$ENDIF}
 end;
 {--------}
 procedure TAdCustomTerminal.tmMakeCaret;
@@ -3701,15 +3665,11 @@ begin
     if (OldOrigin <> ClientOriginCol) then begin
       tmScrollHorz((OldOrigin - ClientOriginCol) * GetTotalCharWidth);   {!!.06}
       tmCalcExtent;
-      {$IFDEF Win32}
       with FScrollHorzInfo do begin
         fMask := SIF_POS;
         nPos := ClientOriginCol-1;
       end;
       SetScrollInfo(Handle, SB_HORZ, FScrollHorzInfo, true);
-      {$ELSE}
-      SetScrollPos(Handle, SB_HORZ, ClientOriginCol-1, true);
-      {$ENDIF}
     end;
   end;
 end;
@@ -3743,15 +3703,11 @@ begin
     if (OldOrigin <> ClientOriginRow) then begin
       tmScrollVert((OldOrigin - ClientOriginRow) * GetTotalCharHeight);  {!!.06}
       tmCalcExtent;
-      {$IFDEF Win32}
       with FScrollVertInfo do begin
         fMask := SIF_POS;
         nPos := ClientOriginRow-1;
       end;
       SetScrollInfo(Handle, SB_VERT, FScrollVertInfo, true);
-      {$ELSE}
-      SetScrollPos(Handle, SB_VERT, ClientOriginRow-1, true);
-      {$ENDIF}
     end;
   end;
 end;
@@ -4801,12 +4757,10 @@ begin
     {using the 'dirty' data in the buffer, draw the required
      characters}
     while Buffer.GetInvalidRect(DirtyRect) do begin
-      {$IFDEF Win32}
       if not Terminal.FreezeScrollBack then begin
         Inc (DirtyRect.Top, Terminal.FScrollVertInfo.nPos);
         Inc (DirtyRect.Bottom, Terminal.FScrollVertInfo.nPos + 1);
       end;
-      {$ENDIF}
       for Row := DirtyRect.Top to DirtyRect.Bottom do
         ttyDrawChars(Row, DirtyRect.Left, DirtyRect.Right, true);
     end;
@@ -4842,12 +4796,10 @@ begin
     DirtyRect.Bottom :=
        (pred(DirtyRect.Bottom) div GetTotalCharHeight) + ClientOriginRow;{!!.06}
   end;
-  {$IFDEF Win32}
   if not Terminal.FreezeScrollBack then begin
     Inc (DirtyRect.Top, Terminal.FScrollVertInfo.nPos);
     Inc (DirtyRect.Bottom, Terminal.FScrollVertInfo.nPos + 1);
   end;
-  {$ENDIF}
   for Row := DirtyRect.Top to DirtyRect.Bottom do
     ttyDrawChars(Row, DirtyRect.Left, DirtyRect.Right, true);
 end;
@@ -5462,12 +5414,10 @@ begin
     {using the 'dirty' data in the buffer, draw the required
      characters}
     while Buffer.GetInvalidRect(DirtyRect) do begin
-      {$IFDEF Win32}
       if not Terminal.FreezeScrollBack then begin
         Inc (DirtyRect.Top, Terminal.FScrollVertInfo.nPos);
         Inc (DirtyRect.Bottom, Terminal.FScrollVertInfo.nPos + 1);
       end;
-      {$ENDIF}
       for Row := DirtyRect.Top to DirtyRect.Bottom do
         vttDrawChars(Row, DirtyRect.Left, DirtyRect.Right, true, false);
     end;
@@ -5494,12 +5444,10 @@ begin
     DirtyRect.Bottom :=
        (pred(DirtyRect.Bottom) div GetTotalCharHeight) + ClientOriginRow;{!!.06}
   end;
-  {$IFDEF Win32}
   if not Terminal.FreezeScrollBack then begin
     Inc (DirtyRect.Top, Terminal.FScrollVertInfo.nPos);
     Inc (DirtyRect.Bottom, Terminal.FScrollVertInfo.nPos + 1);
   end;
-  {$ENDIF}
   for Row := DirtyRect.Top to DirtyRect.Bottom do
     vttDrawChars(Row, DirtyRect.Left, DirtyRect.Right, true, false);
 end;
@@ -5987,12 +5935,10 @@ begin
         Canvas.Font := FSecondaryFont;
       end;
       Canvas.Font.Color := ForeColor;
-      {$IFDEF VERSION3}
       if Assigned (Terminal.Font) then                                   {!!.06}
         Canvas.Font.CharSet := Terminal.Font.CharSet                     {!!.06}
       else                                                               {!!.06}
         Canvas.Font.CharSet := DEFAULT_CHARSET;
-      {$ENDIF}
       if DblHeight then
         Canvas.Font.Size := Canvas.Font.Size * 2;
 
@@ -6752,14 +6698,7 @@ end;
 initialization
   TermEmuLink := nil;
   TermEmuLinkFreeList := nil;
-  {$IFDEF Windows}
-  AddExitProc(ADTrmEmuDone);
-  {$ENDIF}
-{--------}
-{$IFDEF Win32}
 finalization
   ADTrmEmuDone;
-{$ENDIF}
-{--------}
 end.
 

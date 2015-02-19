@@ -187,11 +187,7 @@ begin
           {Extract the device name}
           with LineCaps^ do begin
             SetLength(S, LineNameSize);
-            {$IFDEF H+}
-            Move(LineCaps^.Data[LineNameOffset], PAnsiChar(S)^, LineNameSize);
-            {$ELSE}
             Move(LineCaps^.Data[LineNameOffset], S[1], LineNameSize);
-            {$ENDIF}
           end;
 
           if ShowOnlySupported then begin

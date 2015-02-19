@@ -72,13 +72,8 @@ interface
 {$DEFINE CompileDebugCode}
 {$ENDIF}
 
-{$IFDEF Win32}
 {$R ADTRMVT1.R32}
 {$R ADCHSVT1.R32}
-{$ELSE}
-{$R ADTRMVT1.R16}
-{$R ADCHSVT1.R16}
-{$ENDIF}
 
 uses
   SysUtils,
@@ -1203,13 +1198,7 @@ begin
 end;
 {--------}
 initialization
-  {$IFDEF Windows}
-  AddExitProc(ADTrmMapDone);
-  {$ENDIF}
-{--------}
-{$IFDEF Win32}
+
 finalization
   ADTrmMapDone;
-{$ENDIF}
-{--------}
 end.

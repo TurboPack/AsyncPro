@@ -1282,11 +1282,7 @@ Hex:
     I         : Integer;
     Code      : Integer;
     S         : AnsiString;
-    {$IFDEF HugeStr}
     SLen      : Byte;
-    {$ELSE}
-    SLen      : Byte absolute S;
-    {$ENDIF}
     S1        : ShortString;
     S1Len     : Byte absolute S1;
     Name      : ShortString;
@@ -1295,9 +1291,7 @@ Hex:
     with P^ do begin
       {Extract the file name from the data block}
       BlockPos := 1;
-      {$IFDEF HugeStr}
       SetLength(S, 1024);
-      {$ENDIF}
       while (aDataBlock^[BlockPos] <> #0) and (BlockPos < 255) do begin
         S[BlockPos] := aDataBlock^[BlockPos];
         if S[BlockPos] = '/' then
@@ -1305,22 +1299,14 @@ Hex:
         Inc(BlockPos);
       end;
       SLen := BlockPos - 1;
-      {$IFDEF HugeStr}
       SetLength(S, SLen);
-      {$ENDIF}
       if (SLen > 0) and (aUpcaseFileNames) then begin
-        {$IFDEF HugeStr}
         AnsiUpperBuff(PAnsiChar(S), SLen);
-        {$ELSE}
-        AnsiUpperBuff(@S[1], SLen);
-        {$ENDIF}
       end;
 
       {Set Pathname}
-      {$IFDEF Win32}
       if Length(S) > 255 then
         SetLength(S, 255);
-      {$ENDIF}
       AnsiStrings.StrPCopy(aPathname, S);
 
       {Should we use its directory or ours?}
@@ -1441,7 +1427,6 @@ Hex:
       end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -1449,7 +1434,6 @@ Hex:
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Set Trigger_ID directly for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -1457,13 +1441,8 @@ Hex:
         repeat
           try                                                            {!!.01}
             if Dispatcher.Logging then
-              {$IFDEF Win32}
               Dispatcher.AddDispatchEntry(
                 dtZModem,LogZModemState[zZmodemState],GetCurrentThreadID,nil,0);
-              {$ELSE}
-              Dispatcher.AddDispatchEntry(
-                dtZModem,LogZModemState[zZmodemState],0,nil,0);
-              {$ENDIF}
 
             {Check for user abort}
             if aProtocolStatus <> psCancelRequested then begin
@@ -1490,9 +1469,7 @@ Hex:
                 aForceStatus := False;
               end;
               if Integer(TriggerID) = aStatusTrigger then begin
-                {$IFDEF Win32}
                 LeaveCriticalSection(aProtSection);
-                {$ENDIF}
                 Exit;
               end;
             end;
@@ -2089,9 +2066,7 @@ Hex:
           end;                                                           {!!.01}
         until Finished;
       end;
-      {$IFDEF Win32}                                                     {!!.01}
       LeaveCriticalSection(P^.aProtSection);                             {!!.01}
-      {$ENDIF}                                                           {!!.01}
     end;
   end;
 
@@ -2419,7 +2394,6 @@ Hex:
     end;                                                                 {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -2427,7 +2401,6 @@ Hex:
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -2435,13 +2408,8 @@ Hex:
         repeat
           try                                                            {!!.01}
             if Dispatcher.Logging then
-              {$IFDEF Win32}
               Dispatcher.AddDispatchEntry(
                 dtZModem,LogZModemState[zZmodemState],GetCurrentThreadID,nil,0);
-              {$ELSE}
-              Dispatcher.AddDispatchEntry(
-                dtZModem,LogZModemState[zZmodemState],0,nil,0);
-              {$ENDIF}
 
             {Check for user abort (but not twice)}
             if aProtocolStatus <> psCancelRequested then begin
@@ -2476,9 +2444,7 @@ Hex:
               end;
 
               if Integer(TriggerID) = aStatusTrigger then begin
-                {$IFDEF Win32}
                 LeaveCriticalSection(aProtSection);
-                {$ENDIF}
                 Exit;
               end;
             end;
@@ -3041,9 +3007,7 @@ Hex:
             end;                                                         {!!.01}
           end;                                                           {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                     {!!.01}
       LeaveCriticalSection(P^.aProtSection);                             {!!.01}
-      {$ENDIF}                                                           {!!.01}
     end;
 
   end;

@@ -87,32 +87,12 @@ Notes:
   --------------------------------------------------------------------
 }
 
-{$IFDEF Win32}
   {include the resource compiled using BRCC32.EXE and SRMC.EXE}
   {$R ADSRMGR.R32}
-{$ELSE}
-  {include the resource compiled using BRCC.EXE and SRMC.EXE}
-  {$R ADSRMGR.R16}
-{$ENDIF}
 
 {$R-,S-,I-}
 
-{$IFDEF Win32}
-  {$H+} {Long strings}                                                 
-{$ENDIF}
-
-{For BCB 3.0 package support.}
-{$IFDEF VER110}
-  {$ObjExportAll On}
-{$ENDIF}
-
-{$IFNDEF VER80}   {Delphi 1}
- {$IFNDEF VER90}  {Delphi 2}
-  {$IFNDEF VER93} {BCB 1}
-    {$DEFINE VERSION3} { Delphi 3.0 or BCB 3.0 or higher }
-  {$ENDIF}
- {$ENDIF}
-{$ENDIF}
+  {$H+} {Long strings}
 
 unit AdSrMgr;
 
@@ -130,11 +110,7 @@ const
 type
   ETpsStringResourceError = class(Exception);
 
-{$IFDEF Win32}
   TInt32 = Integer;
-{$ELSE}
-  TInt32 = LongInt;
-{$ENDIF}
 
   PIndexRec = ^TIndexRec;
   TIndexRec = record
@@ -178,9 +154,7 @@ type
     function GetString(Ident : TInt32) : string;
     property Strings[Ident : TInt32] : string
       read GetString; default;
-{$IFDEF Win32}
     function GetWideChar(Ident : TInt32; Buffer : PWideChar; BufChars : Integer) : PWideChar;
-{$ENDIF}
 
     property ReportError : Boolean
       read FReportError
@@ -216,7 +190,6 @@ begin
   inherited Destroy;
 end;
 
-{$IFDEF Win32}
 procedure WideCopy(Dest, Src : PWideChar; Len : Integer);
 begin
   while Len > 0 do begin
@@ -316,59 +289,6 @@ begin
   end;
 end;
 
-{$ELSE}
-
-function TAdStringResource.GetAsciiZ(Ident : TInt32;
-  Buffer : PChar; BufChars : Integer) : PChar;
-var
-  OLen : Integer;
-  P : PIndexRec;
-begin
-  srLock;
-  try
-    P := srFindIdent(Ident);
-    if P = nil then
-      Buffer[0] := #0
-    else begin
-      OLen := P^.len;
-      if OLen >= BufChars then
-        OLen := BufChars-1;
-      StrLCopy(Buffer, PChar(srP)+P^.ofs, OLen);
-      Buffer[OLen] := #0;
-    end;
-  finally
-    srUnLock;
-  end;
-
-  Result := Buffer;
-end;
-
-function TAdStringResource.GetString(Ident : TInt32) : string;
-var
-  OLen : Integer;
-  Src : PChar;
-  P : PIndexRec;
-begin
-  srLock;
-  try
-    P := srFindIdent(Ident);
-    if P = nil then
-      Result := ''
-    else begin
-      OLen := P^.len;
-      if OLen > 255 then
-        OLen := 255;
-      Result[0] := Char(OLen);
-      Src := PChar(srP)+P^.ofs;
-      move(Src^, Result[1], OLen);
-    end;
-  finally
-    srUnLock;
-  end;
-end;
-
-{$ENDIF}
-
 procedure TAdStringResource.srCloseResource;
 begin
   while Assigned(srP) do
@@ -417,16 +337,12 @@ var
   Buf : array[0..255] of Char;
 begin
   StrPLCopy(Buf, ResourceName, SizeOf(Buf)-1);
-  {$IFDEF VERSION3}  {resource DLL mechanism started in D3}
   Instance := FindResourceHInstance(Instance);  {get loaded Resource DLL if any}
-  {$ENDIF}
   H := FindResource(Instance, Buf, RT_RCDATA);  {attempt to load resource}
   if H = 0 then begin  {not found}
-    {$IFDEF VERSION3}
     Instance := HInstance;
     H := FindResource(Instance, Buf, RT_RCDATA);{try to find it in the main binary}
     if H = 0 then      {still not found?}
-    {$ENDIF}
       raise ETpsStringResourceError.CreateFmt(TpsResStrings[3], [ResourceName]);  {complain}
   end;
   srHandle := LoadResource(Instance, H);
@@ -464,11 +380,7 @@ end;
 initialization
   TpsResStrings := TAdStringResource.Create(HInstance, 'ADSRMGR_STRINGS');
 
-{$IFDEF Win32}
 finalization
   FreeTpsResStrings;
-{$ELSE}
-  AddExitProc(FreeTpsResStrings);
-{$ENDIF}
 
 end.

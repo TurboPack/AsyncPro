@@ -49,12 +49,8 @@ uses
   Controls,
   Forms,
   Dialogs,
-{$IFDEF Delphi6}
   DesignIntf,
   DesignEditors,
-{$ELSE}
-  DsgnIntf,
-{$ENDIF}
   StdCtrls;
 
 type

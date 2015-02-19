@@ -486,7 +486,6 @@ const
     with P^ do begin
       {Function result is always zero unless the protocol is over}
 
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -494,7 +493,6 @@ const
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -644,9 +642,7 @@ const
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;
 
   end;
@@ -709,7 +705,6 @@ const
     end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -717,7 +712,6 @@ const
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -857,9 +851,7 @@ ExitPoint:
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;                                                {!!.01}
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;                                                               {!!.01}
   end;
 

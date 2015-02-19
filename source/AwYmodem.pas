@@ -234,7 +234,6 @@ const
     end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -242,7 +241,6 @@ const
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
 
         {Set TriggerID directly for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
@@ -550,9 +548,7 @@ const
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;
   end;
 
@@ -590,11 +586,7 @@ const
     C           : AnsiChar;
     F           : File;
     S           : AnsiString;
-    {$IFDEF HugeStr}
     SLen        : Byte;
-    {$ELSE}
-    SLen        : Byte absolute S;
-    {$ENDIF}
     S1          : ShortString;
     S1Len       : Byte absolute S1;
     Name        : String[fsName];
@@ -632,7 +624,6 @@ const
       end;                                                             {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -640,7 +631,6 @@ const
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -802,9 +792,7 @@ const
                       goto ExitPoint;
                     end;
 
-                    {$IFDEF HugeStr}
                     SetLength(S, 1024);
-                    {$ENDIF}
 
                     {Extract the file name from the header}
                     BlockPos := 3;
@@ -820,12 +808,8 @@ const
                     SLen := I;
 
                     if aUpcaseFileNames then begin
-                      {$IFDEF HugeStr}
                       SetLength(S, SLen);
                       AnsiUpperBuff(PAnsiChar(S), SLen);
-                      {$ELSE}
-                      AnsiUpperBuff(@S[1], SLen);
-                      {$ENDIF}
                     end;
                     AnsiStrings.StrPCopy(aPathname, S);
 
@@ -1009,9 +993,7 @@ const
             end;                                                       {!!.01}
           until Finished;
       end;
-      {$IFDEF Win32}                                               {!!.01}
       LeaveCriticalSection(P^.aProtSection);                       {!!.01}
-      {$ENDIF}                                                     {!!.01}
     end;
   end;
 

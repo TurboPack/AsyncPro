@@ -57,11 +57,7 @@ type
    method.}
   TApdMemoryStream = class(TMemoryStream)
   public
-    {$IFDEF VERSIONXE2}
     procedure SetPointer(Ptr: Pointer; const Size: NativeInt);
-    {$ELSE}
-    procedure SetPointer(Ptr : Pointer; Size : Longint);
-    {$ENDIF}
   end;
 
   TApdFileStream = class(TFileStream)
@@ -669,11 +665,7 @@ begin
 end;
 
 {==TApdMemoryStream===================================================}
-{$IFDEF VERSIONXE2}
 procedure TApdMemoryStream.SetPointer(Ptr: Pointer; const Size: NativeInt);
-{$ELSE}
-procedure TApdMemoryStream.SetPointer(Ptr : Pointer; Size : Longint);
-{$ENDIF}
 begin
   Assert(not Assigned(Memory));
   inherited;

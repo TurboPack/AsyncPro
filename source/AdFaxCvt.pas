@@ -1060,9 +1060,7 @@ begin
       try
         Ini.WriteInteger(ApdIniSection, 'ShellHandle', PrnCallbackHandle);
         Ini.WriteString(ApdIniSection, 'ShellName', FOutFileName);
-        {$IFDEF Delphi4}
         Ini.UpdateFile;
-        {$ENDIF}
       finally
         Ini.Free;
       end;
@@ -1114,9 +1112,7 @@ begin
       try                                                                {!!.06}
         Ini.DeleteKey(ApdIniSection, 'ShellHandle');                     {!!.06}
         Ini.DeleteKey(ApdIniSection, 'ShellName');                       {!!.06}
-        {$IFDEF Delphi4}                                                 {!!.06}
         Ini.UpdateFile;                                                  {!!.06}
-        {$ENDIF}                                                         {!!.06}
       finally                                                            {!!.06}
         Ini.Free;                                                        {!!.06}
       end;                                                               {!!.06}

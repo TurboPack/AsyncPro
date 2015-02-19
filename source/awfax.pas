@@ -40,9 +40,7 @@
 
 {Options required for this unit}
 {$A+,F+,I-,R-,S-,V-,X+,T-}
-{$IFDEF Win32}
 {$J+}
-{$ENDIF}
 
 {.$DEFINE DebugFax}
 
@@ -489,7 +487,6 @@ end;
     Result := DateTimeToFileDate(Now);
   end;
 
-  {$IFDEF Win32}
   function RotateByte(Code : AnsiChar) : Byte; assembler; register;
     {-Flip code MSB for LSB}
   asm
@@ -500,18 +497,6 @@ end;
     rcl al,1
     loop @1
   end;
-  {$ELSE}
-  function RotateByte(Code : AnsiChar) : Byte; assembler;
-    {-Flip code MSB for LSB}
-  asm
-    mov dl,Code
-    xor ax,ax
-    mov cx,8
-@1: shr dl,1
-    rcl al,1
-    loop @1
-  end;
-  {$ENDIF}
 
   procedure Merge(var S : TModemResponse; C : AnsiChar);
     {-appends C to S, shifting S if it gets too long}
@@ -2151,11 +2136,7 @@ end;
         Exit;
       end;
 
-      {$IFDEF HugeStr}
       SetLength(S, 6);
-      {$ELSE}
-      S[0] := #6;
-      {$ENDIF}
       Move(cFaxHeader, S[1], 6);
 
       if S <> DefAPFSig then begin
@@ -2638,11 +2619,7 @@ end;
                   end;
 
                   {Verify it's one of ours}
-                  {$IFDEF HugeStr}
                   SetLength(S, 6);
-                  {$ELSE}
-                  S[0] := #6;
-                  {$ENDIF}
                   Move(cFaxHeader, S[1], 6);
 
                   if S <> DefAPFSig then begin

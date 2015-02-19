@@ -72,11 +72,7 @@ uses
 
 { need this for the 16-bit printer drivers }
 {$IFNDEF UseResourceStrings}
-  {$IFDEF Win32}
   {$R APRO.R32}
-  {$ELSE}
-  {$R APRO.R16}
-  {$ENDIF}
 {$ENDIF}
 
 const
@@ -96,19 +92,11 @@ const
   ApdXSLImplementation = 0.0;
   ApdXMLSpecification = '1.0';
 
-  {$IFDEF Win32}
   fsPathName  = 255;
   fsDirectory = 255;
   fsFileName  = 255;
   fsExtension = 255;
   fsName      = 255;
-  {$ELSE}
-  fsPathName  = 79;
-  fsDirectory = 67;
-  fsFileName  = 8;
-  fsExtension = 4;
-  fsName      = 12;
-  {$ENDIF}
 
   {shareable reading file mode}
   ApdShareFileRead = $40;
@@ -139,18 +127,13 @@ const
   {Event codes: (outbound)}
   eSetFileName = 3;
 
-{$IFDEF Win32}
 type
   TPipeEvent = record
     Event : Byte;
     Data : ShortString;
   end;
-  {$IFNDEF Delphi5}
-  TOleEnum = type DWORD;
-  {$ENDIF}
   { XML definitions }
   DOMString = WideString;
-{$ENDIF}
 {$IFNDEF Win32}
 type
   { define some types used by the 16-bit fax printer driver }
@@ -165,17 +148,8 @@ type
 type
   CharSet = set of AnsiChar;
 
-  {$IFDEF AProBCB}
-    {$IFDEF Ver140}
-    TPassString = string;
-    {$ELSE}
-    TPassString = string[255];
-    {$ENDIF}
-  TApdHwnd = Integer;
-  {$ELSE}
   TPassString = string[255];
   TApdHwnd = HWND;
-  {$ENDIF}
 
 
   {Standard event timer record structure used by all timing routines}
@@ -2689,11 +2663,9 @@ type
   PDBuffer = ^TDBuffer;
   TDBuffer = array[0..65527] of AnsiChar;
 
-  {$IFDEF Win32}
   {Output buffer type}
   POBuffer = ^TOBuffer;
   TOBuffer = array[0..pred(High(Integer))] of AnsiChar;
-  {$ENDIF}
 
   {$IFNDEF PrnDrv}
 
@@ -2771,115 +2743,21 @@ type
     }
   {$ENDIF}
 
-{$IFDEF Win32}
 procedure SetFlag(var Flags : Cardinal; FlagMask : Cardinal);
-{$ELSE}
-procedure SetFlag(var Flags : Cardinal; FlagMask : Cardinal);
-  {-Set bit(s) in the parameter Flags. The bits to set are specified in
-  FlagMask.}
-  inline(
-    $58/                     {pop ax        ;FlagMask into AX}
-    $5F/                     {pop di}
-    $07/                     {pop es        ;ES:DI => Flags}
-    $26/$09/$05);            {or es:[di],ax ;Flags := Flags or FlagMask}
-{$ENDIF}
 
-{$IFDEF Win32}
 procedure ClearFlag(var Flags : Cardinal; FlagMask : Cardinal);
-{$ELSE}
-procedure ClearFlag(var Flags : Cardinal; FlagMask : Cardinal);
-  {-Clear bit(s) in the parameter Flags. The bits to clear are specified in
-  Flagmask.}
-  inline(
-    $58/                     {pop ax         ;FlagMask into AX}
-    $5F/                     {pop di}
-    $07/                     {pop es         ;ES:DI => Flags}
-    $F7/$D0/                 {not ax         ;FlagMask := not FlagMask}
-    $26/$21/$05);            {and es:[di],ax ;Flags := Flags and not FlagMask}
-{$ENDIF}
 
-{$IFDEF Win32}
 function FlagIsSet(Flags : Cardinal; FlagMask : Cardinal) : Bool;
-{$ELSE}
-function FlagIsSet(Flags, FlagMask : Cardinal) : Bool;
-  {-Return True if the bit specified by FlagMask is set in Flags.}
-  inline(
-    $5A/                     {pop dx    ;FlagMask into DX}
-    $58/                     {pop ax    ;Flags into AX}
-    $21/$D0/                 {and ax,dx ;Mask out everything not in FlagMask}
-    $74/$03/                 {jz  Exit}
-    $B8/$01/$00);            {mov ax,1  ;AX = Ord(True)}
-                             {Exit:}
-{$ENDIF}
 
-{$IFDEF Win32}
 procedure SetByteFlag(var Flags : Byte; FlagMask : Byte);
-{$ELSE}
-procedure SetByteFlag(var Flags : Byte; FlagMask : Byte);
-  {-Set bit(s) in the parameter Flags. The bits to set are specified in
-  FlagMask.}
-  inline(
-    $58/                     {pop ax        ;FlagMask into AL}
-    $5F/                     {pop di}
-    $07/                     {pop es        ;ES:DI => Flags}
-    $26/$08/$05);            {or es:[di],al ;Flags := Flags or FlagMask}
-{$ENDIF}
 
-{$IFDEF Win32}
 procedure ClearByteFlag(var Flags : Byte; FlagMask : Byte);
-{$ELSE}
-procedure ClearByteFlag(var Flags : Byte; FlagMask : Byte);
-  {-Clear bit(s) in the parameter Flags. The bits to clear are specified in
-  FlagMask.}
-  inline(
-    $58/                     {pop ax         ;FlagMask into AL}
-    $5F/                     {pop di}
-    $07/                     {pop es         ;ES:DI => Flags}
-    $F6/$D0/                 {not al         ;AL := not AL}
-    $26/$20/$05);            {and es:[di],al ;Flags := Flags and not FlagMask}
-{$ENDIF}
 
-{$IFDEF Win32}
 function ByteFlagIsSet(Flags : Byte; FlagMask : Byte) : Bool;
-{$ELSE}
-function ByteFlagIsSet(Flags, FlagMask : Byte) : Bool;
-  {-Return True if the bit specified by FlagMask is set in the Flags
-  parameter.}
-  Inline(
-    $5A/                   {pop dx    ;FlagMask into DL}
-    $58/                   {pop ax    ;Flags into AL}
-    $30/$E4/               {xor ah,ah ;Zero out AH}
-    $20/$D0/               {and al,dl ;Mask out everything not in FlagMask}
-    $74/$02/               {jz  Exit}
-    $B0/$01);              {mov al,1  ;AX = Ord(True)}
-                            {Exit:}
-{$ENDIF}
 
-{$IFDEF Win32}
 function MinWord(A, B : Cardinal) : Cardinal;
-{$ELSE}
-function MinWord(A, B : Cardinal) : Cardinal;
-  {-Return the smaller of A and B.}
-  inline(
-    $58/                     {pop ax}
-    $5B/                     {pop bx}
-    $39/$C3/                 {cmp bx,ax}
-    $73/$02/                 {jae done}
-    $89/$D8);                {mov ax,bx}
-                             {done:}
-{$ENDIF}
 
-{$IFDEF Win32}
 function AddWordToPtr(P : Pointer; W : Cardinal) : Pointer;
-{$ELSE}
-function AddWordToPtr(P : Pointer; W : Cardinal) : Pointer;
-  {-Add a Cardinal to a pointer.}
-  inline(
-    $5B/                     {pop bx     ;bx = W}
-    $58/                     {pop ax     ;ax = Ofs(P^)}
-    $5A/                     {pop dx     ;dx = Seg(P^)}
-    $01/$D8);                {add ax,bx  ;ax = Ofs(P^)+W}
-{$ENDIF}
 
 function AdTimeGetTime : DWord;
 
@@ -3001,22 +2879,18 @@ type
 {$ENDIF}
 
 
-{$IFDEF Win32}
 function ApWinExecAndWait32(FileName : PChar; CommandLine : PChar;
                             Visibility : Integer) : Integer;
-{$ENDIF}
 
 {$IFDEF Apax}
 procedure WriteDebug(const S : string);
 {$ENDIF}
 
-{$IFDEF Delphi6}
 { These methods were overloaded to work around a Delphi 6 bug. }
 procedure AssignFile(var F: File; const FileName: string); overload;
 procedure AssignFile(var F: TextFile; const FileName : string); overload;
 procedure Assign(var F: File; const FileName: string); overload;
 procedure Assign(var F: TextFile; const FileName: string); overload;
-{$ENDIF}
 
 implementation
 
@@ -3061,7 +2935,6 @@ begin
 end;
 {$ENDIF}
 
-{$IFDEF Delphi6}
 procedure AssignFile(var F: File; const FileName: string);
 begin
   System.AssignFile(F, FileName);
@@ -3081,7 +2954,6 @@ procedure Assign(var F: TextFile; const FileName: string);
 begin
   System.Assign(F, FileName);
 end;
-{$ENDIF}
 
 
 const
@@ -3467,7 +3339,6 @@ end;
 {$ENDIF}
 {$ENDIF}
 
-{$IFDEF Win32}
 function MinWord(A, B : Cardinal) : Cardinal;
 begin
   if A < B then
@@ -3510,16 +3381,11 @@ function AddWordToPtr(P : Pointer; W : Cardinal) : Pointer; assembler;
 asm
   add   eax,edx
 end;
-{$ENDIF}
 
 const
   DosDelimSet : set of AnsiChar = ['\', ':', #0];
 
-  {$IFDEF Win32}
   MaxPCharLen = $7FFFFFFF;
-  {$ELSE}
-  MaxPCharLen = $FFFF;
-  {$ENDIF}
 
   function SafeYield : LongInt;
     {-Allow other processes a chance to run}
@@ -4043,7 +3909,6 @@ begin
 end;
 {$ENDIF}
 
-{$IFDEF Win32}
 function ApWinExecAndWait32(FileName : PChar; CommandLine : PChar;
                             Visibility : Integer) : Integer;
  { returns -1 if the Exec failed, otherwise returns the process' exit }
@@ -4059,27 +3924,27 @@ begin
     CmdLine := CmdLine + ' ' + CommandLine;
   FillChar(StartupInfo, Sizeof(StartupInfo),#0);
   StartupInfo.cb := Sizeof(StartupInfo);
-  StartupInfo.dwFlags := STARTF_USESHOWWINDOW;                         
-  StartupInfo.wShowWindow := Visibility;                               
-  if not CreateProcess(nil,                                            
+  StartupInfo.dwFlags := STARTF_USESHOWWINDOW;
+  StartupInfo.wShowWindow := Visibility;
+  if not CreateProcess(nil,
       PChar(CmdLine),        { pointer to command line string }
       nil,                   { pointer to process security attributes }
-      nil,                   { pointer to thread security attributes } 
-      false,                 { handle inheritance flag }               
-      CREATE_NEW_CONSOLE or  { creation flags }                        
+      nil,                   { pointer to thread security attributes }
+      false,                 { handle inheritance flag }
+      CREATE_NEW_CONSOLE or  { creation flags }
       NORMAL_PRIORITY_CLASS,
       nil,                   { pointer to new environment block }
-      nil,                   { pointer to current directory name }     
-      StartupInfo,           { pointer to STARTUPINFO }                
-      ProcessInfo) then      { pointer to PROCESS_INF }                
-        Result := -1                                                   
-  else begin                                                           
-    WaitforSingleObject(ProcessInfo.hProcess,INFINITE);                
+      nil,                   { pointer to current directory name }
+      StartupInfo,           { pointer to STARTUPINFO }
+      ProcessInfo) then      { pointer to PROCESS_INF }
+        Result := -1
+  else begin
+    WaitforSingleObject(ProcessInfo.hProcess,INFINITE);
     GetExitCodeProcess(ProcessInfo.hProcess,Temp);
     CloseHandle(ProcessInfo.hProcess);                                   {!!.02}
     CloseHandle(ProcessInfo.hThread);                                    {!!.02}
-    Result := Integer(Temp);                                           
-  end;                                                                 
+    Result := Integer(Temp);
+  end;
 end;
 
 { SZ - what is this????     removed because of Loader Lock problem FIXME
@@ -4099,7 +3964,6 @@ end;
 
 }                                                                       // SWB
 
-{$ENDIF}
 
 end.
 

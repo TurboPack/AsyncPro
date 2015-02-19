@@ -41,9 +41,7 @@
 {Options required for this unit}
 {$I+,G+,X+,F+,V-,Q-}
 
-{$IFDEF Win32}
 {$J+}
-{$ENDIF}
 
 {$C MOVEABLE,DEMANDLOAD,DISCARDABLE}
 
@@ -940,8 +938,7 @@ var
   end;
 
   function MessageHandler(hWindow : TApdHwnd; Msg, wParam : Integer;
-                          lParam : Longint) : Longint;
-    {$IFDEF Win32} stdcall; export; {$ELSE} export; {$ENDIF}
+                          lParam : Longint) : Longint; stdcall; export;
     {-Window function for all apw_ProtXxx messages}
   var
     P : TApdCustomProtocol;
@@ -1013,14 +1010,10 @@ var
       lpfnWndProc   := @MessageHandler;
       cbClsExtra    := 0;
       cbWndExtra    := 0;
-      {$IFDEF VERSION3}
       if ModuleIsLib and not ModuleIsPackage then
         hInstance   := SysInit.hInstance
       else
         hInstance   := System.MainInstance;
-      {$ELSE}
-      hInstance     := System.hInstance;
-      {$ENDIF}                                                      
       hIcon         := 0;
       hCursor       := 0;
       hbrBackground := 0;
@@ -1038,14 +1031,10 @@ var
     Node : PProtocolWindowNode;
     hInstance : THandle;
   begin
-    {$IFDEF VERSION3}
     if ModuleIsLib and not ModuleIsPackage then
       hInstance   := SysInit.hInstance
     else
       hInstance   := System.MainInstance;
-    {$ELSE}
-    hInstance := System.hInstance;
-    {$ENDIF}                                                        
     FMsgHandler :=
       CreateWindow(MessageHandlerClassName,   {window class name}
       '',                         {caption}
@@ -1262,13 +1251,11 @@ var
     S : TFileName;
   begin
     with PData^ do
-      {$IFDEF Win32}
       if Length(NewFileMask) > 255 then begin
         S := NewFileMask;
         SetLength(S, 255);
         AnsiStrings.StrPCopy(aSearchMask, AnsiString(S));
       end else
-      {$ENDIF}
         AnsiStrings.StrPCopy(aSearchMask, AnsiString(NewFileMask));
   end;
 
@@ -1401,13 +1388,11 @@ var
     case TFileRec(PData^.aWorkFile).Mode of
       fmInput, fmOutput, fmInOut : ;
       else begin
-        {$IFDEF Win32}
         if Length(NewName) > 255 then begin
           S := NewName;
           SetLength(S, 255);
           AnsiStrings.StrPCopy(P, S);
         end else
-        {$ENDIF}
           AnsiStrings.StrPCopy(P, NewName);
         apSetReceiveFileName(PData, P);
       end;
@@ -2471,18 +2456,14 @@ var
       {Force the destination to noprotocol as well}
       ProtocolType := ptNoProtocol;
 
-      {$IFDEF Win32}
       {Free the existing critsection pointer}
       DeleteCriticalSection(PData^.aProtSection);
-      {$ENDIF}
 
       {Assign new property values}
       Move(TApdCustomProtocol(Source).PData^, PData^, SizeOf(TProtocolData));
 
-      {$IFDEF Win32}
       {Overwrite the copied critsection pointer with our own}
       InitializeCriticalSection(PData^.aProtSection);
-      {$ENDIF}
 
       NeedBPS           := TApdCustomProtocol(Source).NeedBPS;
       ProtFunc          := TApdCustomProtocol(Source).ProtFunc;

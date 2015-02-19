@@ -38,15 +38,9 @@ unit AdXParsr;
 interface
 
 uses
-{$IFDEF WIN32}
   Windows,
   Graphics,
   Controls,
-{$ENDIF}
-{$IFDEF LINUX}
-  Libc,
-  Types,
-{$ENDIF}
   SysUtils,
   Classes,
   OOMisc,
@@ -1672,9 +1666,7 @@ begin
     Found := TryRead(s);
   end;
   if (not Found) then begin
-    {$IFDEF DCC4OrLater}
     SetLength(TempStr, Length(S));
-    {$ENDIF}
     for i := 0 to High(S) do begin
       ApxUcs4ToIso88591(s[i], TempChar);
       TempStr[Succ(i)] := TempChar;

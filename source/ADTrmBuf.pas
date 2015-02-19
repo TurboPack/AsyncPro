@@ -165,11 +165,7 @@ const
   adc_TermBufBackColor = clBlack;
   adc_TermBufColCount = 80;
   adc_TermBufRowCount = 24;
-  {$IFDEF Windows}
-  adc_TermBufScrollRowCount = 50;
-  {$ELSE}
   adc_TermBufScrollRowCount = 200;
-  {$ENDIF}
   adc_TermBufUseAbsAddress = true; {use absolute rows/col values}
   adc_TermBufUseAutoWrap = true; {chars wrap at end of line}
   adc_TermBufUseAutoWrapDelay = true; {..but delay slightly}
@@ -298,9 +294,7 @@ type
       FDefCharSet   : byte;     {default charset}
       FDefBackColor : TColor;   {default background color}
       FDefForeColor : TColor;   {default foreground color}
-      {$IFDEF Win32}
       FDefWideChar  : WideChar; {default wide character}
-      {$ENDIF}
       FDisplayOriginCol : integer; {column origin of addressable area}
       FDisplayOriginRow : integer; {row origin of addressable area}
       FDisplayColCount  : integer; {column count in addressable area}
@@ -916,12 +910,6 @@ begin
   if (aRowCount = RowCount) and (aActColCount = FActColCount) then
     Exit;
   {$IFDEF UseRangeChecks}
-  {$IFDEF Windows}
-  {In Delphi 1, range check total memory required}
-  if (longint(aRowCount) * aActColCount * ItemSize > 65535) then
-    raise Exception.Create(
-             'TadTerminalArray.taGrowArray: product of rows, cols and item size is greater than 64KB');
-  {$ENDIF}
   {$ENDIF}
   {at this point we must allocate another array}
   GetMem(NewArray, aRowCount * aActColCount * ItemSize);
@@ -1283,9 +1271,7 @@ begin
   FDefBackColor := adc_TermBufBackColor;
   FDefForeColor := adc_TermBufForeColor;
   FDefAnsiChar := ' ';
-  {$IFDEF Win32}
   FDefWideChar := ' ';
-  {$ENDIF}
   FDefCharSet := 0;
   FDefAttr := [];
 
@@ -1301,13 +1287,11 @@ begin
 
   {set up all the matrices to hold the displayed data}
   {..character matrix}
-  {$IFDEF Win32}
   if aUseWideChars then begin
     FCharMatrix := TAdTerminalArray.Create(sizeof(WideChar));
     FCharMatrix.SetDefaultItem(@FDefWideChar);
   end
   else
-  {$ENDIF}
   begin
     FCharMatrix := TAdTerminalArray.Create(sizeof(AnsiChar));
     FCharMatrix.SetDefaultItem(@FDefAnsiChar);
@@ -1959,12 +1943,10 @@ begin
   FCharSet := FDefCharSet;
 
   {set the various matrices to their 'power-up' values}
-  {$IFDEF Win32}
   if UseWideChars then begin
     FCharMatrix.SetDefaultItem(@FDefWideChar);
   end
   else
-  {$ENDIF}
   begin
     FCharMatrix.SetDefaultItem(@FDefAnsiChar);
   end;
@@ -2592,13 +2574,8 @@ end;
 initialization
   InvRectFreeList := nil;
   InvRectPageList := nil;
-  {$IFDEF Windows}
-  AddExitProc(ADTrmBufDone);
-  {$ENDIF}
 {--------}
-{$IFDEF Win32}
 finalization
   ADTrmBufDone;
-{$ENDIF}
 {--------}
 end.

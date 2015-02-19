@@ -50,12 +50,8 @@ uses
   Controls,
   Forms,
   Dialogs,
-{$IFDEF Delphi6}
   DesignIntf,
   DesignEditors,
-{$ELSE}
-  dsgnintf,
-{$ENDIF}
   StdCtrls;
 
 procedure Register;

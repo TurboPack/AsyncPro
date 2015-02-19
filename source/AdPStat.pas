@@ -131,22 +131,18 @@ uses
     R        : Double;
     CPS      : Double;
     Efficiency : Double;
-    {$IFDEF Win32}
     S        : String;
-    {$ENDIF}
   begin
     with Protocol do begin
       {Left top block}
       psProtocol.Caption        := string(ProtocolName(ProtocolType));
       psBlockCheck.Caption      := string(CheckNameString(BlockCheckMethod));
       psFileName.Caption        := string(ExtractFileName(FileName));
-      {$IFDEF Win32}
       if Length(psFileName.Caption) > MaxShowSize then begin
         S := psFileName.Caption;
         SetLength(S, MaxShowSize);
         psFileName.Caption := S + '...';
       end;
-      {$ENDIF}
       psFileSize.Caption        := IntToStr(FileLength);
       psBlockSize.Caption       := IntToStr(BlockLength);
       if BlockLength = 0 then

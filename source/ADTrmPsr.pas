@@ -169,9 +169,7 @@ type
       destructor Destroy; override;
 
       function ProcessChar(aCh : AnsiChar) : TAdParserCmdType; virtual;
-      {$IFDEF Win32}
       function ProcessWideChar(aCh : WideChar) :TAdParserCmdType; virtual;
-      {$ENDIF}
 
       procedure Clear; virtual;
       procedure ForceCommand (Command : Integer);                        {!!.03}
@@ -210,9 +208,7 @@ type
       destructor Destroy; override;
 
       function ProcessChar(aCh : AnsiChar) : TAdParserCmdType; override;
-      {$IFDEF Win32}
       function ProcessWideChar(aCh : WideChar) :TAdParserCmdType; override;
-      {$ENDIF}
 
       procedure Clear; override;
 
@@ -254,12 +250,10 @@ begin
   Result := pctNone;
 end;
 {--------}
-{$IFDEF Win32}
 function TAdTerminalParser.ProcessWideChar(aCh : WideChar) : TAdParserCmdType;
 begin
   Result := pctNone;
 end;
-{$ENDIF}
 {--------}
 function TAdTerminalParser.tpGetArgument(aInx : integer) : integer;
 begin
@@ -357,11 +351,7 @@ function GetStringFromSeq(aSeq : PSeq) : Ansistring;
 begin
   Result := '';
   if (aSeq <> nil) and (aSeq^.sLen > 0) then begin
-    {$IFDEF Windows}
-    Result[0] := Ansichar(aSeq^.sLen);
-    {$ELSE}
     SetLength(Result, aSeq^.sLen);
-    {$ENDIF}
     Move(aSeq^.sText, Result[1], aSeq^.sLen);
   end;
 end;
@@ -726,12 +716,10 @@ begin
   end;
 end;
 {--------}
-{$IFDEF Win32}
 function TAdVT100Parser.ProcessWideChar(aCh : WideChar) :TAdParserCmdType;
 begin
   Result := pctNone;
 end;
-{$ENDIF}
 {--------}
 function TAdVT100Parser.tpGetArgument(aInx : integer) : integer;
 begin
@@ -1125,13 +1113,8 @@ begin
 end;
 {--------}
 initialization
-  {$IFDEF Windows}
-  AddExitProc(ADTrmPsrDone);
-  {$ENDIF}
-{--------}
-{$IFDEF Win32}
+
 finalization
   ADTrmPsrDone;
-{$ENDIF}
 {--------}
 end.

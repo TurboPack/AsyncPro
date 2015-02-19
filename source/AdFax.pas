@@ -108,14 +108,8 @@ type
                               var ACoverFile : TPassString) of object;
 
   {Modem command string}
-  {$IFDEF AproBCB}                                                       {!!.02}
-  { BCB doesn't like specific length strings in it's properties }        {!BCB6}
-  TModemString = String;                                                 {!!.02}
-  TStationID   = String;                                                 {!!.02}
-  {$ELSE}                                                                {!!.02}
   TModemString = String[40];
   TStationID   = String[20];
-  {$ENDIF}                                                               {!!.02}
 
   {Fax send/receive mode}
   TFaxMode = (fmNone, fmSend, fmReceive);
@@ -852,14 +846,10 @@ var
       lpfnWndProc   := @FaxMessageHandler;
       cbClsExtra    := 0;
       cbWndExtra    := 0;
-      {$IFDEF VERSION3}
       if ModuleIsLib and not ModuleIsPackage then
         hInstance   := SysInit.hInstance
       else
         hInstance   := System.MainInstance;
-      {$ELSE}
-      hInstance := System.hInstance;
-      {$ENDIF}                                                       
       hIcon         := 0;
       hCursor       := 0;
       hbrBackground := 0;
@@ -1533,16 +1523,12 @@ var
     {-Create message handler window}
   var
     Node : PFaxWindowNode;
-    {$IFDEF VERSION3}
     Instance : Integer;
-    {$ENDIF}
   begin
-    {$IFDEF VERSION3}
     if ModuleIsLib and not ModuleIsPackage then
       Instance   := SysInit.hInstance
     else
       Instance   := System.MainInstance;
-    {$ENDIF}
     MsgHandler :=
       CreateWindow(FaxHandlerClassName,        {window class name}
                    '',                         {caption}
@@ -1553,11 +1539,7 @@ var
                    0,                          {height}
                    0,                          {parent}
                    0,                          {menu}
-                   {$IFDEF VERSION3}
                    Instance,
-                   {$ELSE}
-                   System.hInstance,
-                   {$ENDIF}
                    nil);                       {parameter}
 
     if MsgHandler = 0 then

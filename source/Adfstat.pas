@@ -120,19 +120,6 @@ implementation
     SLen := Length(S);
     Result := StringOfChar(' ', SLen - Len) + S;  // Tiburon
 
-(*    SLen := Length(S);
-    if SLen >= Len then
-      LeftPad := S
-    else if SLen < 255 then begin
-      {$IFDEF Win32}
-      SetLength(o, Len);
-      {$ELSE}
-      o[0] := Chr(Len);
-      {$ENDIF}
-      Move(S[1], o[Succ(Word(Len))-SLen], SLen);
-      FillChar(o[1], Len-SLen, ' ');
-      LeftPad := o;
-    end;  *)
   end;
 
   function FormatMinSec(const TotalSecs : LongInt) : String;
@@ -155,12 +142,10 @@ implementation
     MaxShowSize  = 20;
   begin
     Result := ShortString(ExtractFileName(string(FileName)));
-    {$IFDEF Win32}
     if Length(Result) > MaxShowSize then begin
       SetLength(Result, MaxShowSize);
       Result := Result + '...';
     end;
-    {$ENDIF}
   end;
 
 {TStandardStatus}

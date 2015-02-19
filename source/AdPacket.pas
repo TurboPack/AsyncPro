@@ -1150,11 +1150,7 @@ var
 begin
   Esc := False;
   j := 0;
-  {$IFDEF HugeStr}
   SetLength(Mask,Length(MatchString));
-  {$ELSE}
-  Mask[0] := Chr(Length(MatchString));
-  {$ENDIF}
   for i := 1 to Length(MatchString) do
     if Esc then begin
       inc(j);
@@ -1172,13 +1168,8 @@ begin
       else
         Mask[j] := '0';
     end;
-  {$IFDEF HugeStr}
   SetLength(MatchString,j);
   SetLength(Mask,j);
-  {$ELSE}
-  MatchString[0] := Chr(j);
-  Mask[0] := Chr(j);
-  {$ENDIF}
 end;
 
 procedure TApdDataPacket.LogPacketEvent(Event : TDispatchSubType; Data :

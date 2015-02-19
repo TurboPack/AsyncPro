@@ -3629,11 +3629,7 @@ end;
     function HexB(B : Byte) : AnsiString;
       {-Return hex string for byte}
     begin
-      {$IFDEF HugeStr}
       SetLength(Result, 2);
-      {$ELSE}
-      HexB[0] := #2;
-      {$ENDIF}
       HexB[1] := Digits[B shr 4];
       HexB[2] := Digits[B and $F];
     end;
@@ -3963,68 +3959,8 @@ end;
       {$ELSE}
         WriteLn(DumpFile, 'APRO ', ApVersionStr);
         {write compiler version to log}
-        S := 'Unknown';
-        {$IFDEF VER100}
-        S := 'Delphi 3';
-        {$ENDIF}
-        {$IFDEF VER120}
-        S := 'Delphi 4';
-        {$ENDIF}
-        {$IFDEF VER130}
-        S := 'Delphi 5';
-        {$ENDIF}
-        {$IFDEF VER140}
-        S := 'Delphi 6';
-        {$ENDIF}
-        {$IFDEF VER150}
-        S := 'Delphi 7';                                     {!!.06}
-        {$ENDIF}
-        {$IFDEF VER180}	   					                                // KGM
-        S := 'Delphi 2006';                                                 // KGM
-        {$ENDIF}							                                // KGM
-        {$IFDEF VER190}	   					                                // KGM
-        S := 'Delphi 2007';                                                 // KGM
-        {$ENDIF}							                                // KGM
-        {$IFDEF VER200}                                       // --sm
-        S := 'Delphi 2009';
-        {$IFDEF VER210}	   		                                // --sm
-        S := 'Delphi 2010';
-        {$endif}
-        {$IFDEF VER220}
-        S := 'Delphi XE';
-        {$ENDIF}
-        {$IFDEF VER230}
-        S := 'Delphi XE2';
-        {$ENDIF}
-        {$IF compilerversion >= 23}
-        {$MESSAGE ERROR 'Update this code'}
-        {$IFEND}
+        S := 'RAD Studio XEn';
 
-{$ifdef DELPHI_Future}                                // --sm
-          {$define DELPHI_2010_UP}
-          S := 'Delphi 2010 UP';
-
-{$ENDIF}		        {$ENDIF}
-
-        {$IFDEF VER93}
-        S := 'C++ Builder 1';
-        {$ENDIF}
-        {$IFDEF VER110}
-        S := 'C++ Builder 3';
-        {$ENDIF}
-        {$IFDEF VER125}
-        S := 'C++ Builder 4';
-        {$ENDIF}
-        {$IFDEF VER130}
-          {$IFDEF BCB}
-          S := 'C++ Builder 5';
-          {$ENDIF}
-        {$ENDIF}
-        {$IFDEF VER140}                                                  {!!.04}
-          {$IFDEF BCB}                                                   {!!.04}
-          S := 'C++ Builder 6';                                          {!!.04}
-          {$ENDIF}                                                       {!!.04}
-        {$ENDIF}                                                         {!!.04}
         WriteLn(DumpFile, 'Compiler : ', S);
       {$ENDIF}
 

@@ -44,12 +44,8 @@ interface
 uses
   Classes,
   Controls,
-{$IFDEF Delphi6}
   DesignIntf,
   DesignEditors,
-{$ELSE}
-  DsgnIntf,
-{$ENDIF}
   Forms,
   OoMisc,
   AdAbout;

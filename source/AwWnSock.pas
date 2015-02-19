@@ -35,9 +35,7 @@
 
 {Options required for this unit}
 {$X+,F+,K+,B-,T-}
-{$IFDEF Win32}
  {$J+}
-{$ENDIF}
 
 unit AwWnsock;
   { -Device layer for Winsock API }
@@ -168,9 +166,7 @@ type
   TApdDeviceSocket = class(TApdSocket)
   private
     FWsTerminal : ansistring;
-    {$IFDEF Win32}
     SockSection : TRTLCriticalSection;
-    {$ENDIF}
   protected
     function DoDispMessage(Socket : TSocket; Event : Cardinal; LP : LongInt) : LongInt;
     function DoWsMessage(Socket : TSocket; Event : Cardinal; LP : LongInt) : LongInt;
@@ -184,10 +180,8 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
-    {$IFDEF Win32}
     procedure LockList;
     procedure UnLockList;
-    {$ENDIF}
     function FindConnection(Socket : TSocket) : TWsConnection;
     property WsTerminal : Ansistring read FWsTerminal write FWsTerminal;
   end;
@@ -217,10 +211,8 @@ type
     procedure SetMsrShadow(OnOff : Boolean); override;
     {$ENDIF}
     function SetupCom(InSize, OutSize : Integer) : Boolean; override;
-    {$IFDEF Win32}
     function WaitComEvent(var EvtMask : DWORD;
       lpOverlapped : POverlapped) : Boolean; override;
-    {$ENDIF}
     function Dispatcher(Msg : Cardinal;
                          wParam : Cardinal; lParam : LongInt) : Cardinal;
     function OutBufUsed: Cardinal; override;                                // SWB
@@ -523,7 +515,6 @@ var
   CanRead,
   CanRead2 : Cardinal;
 
-  {$IFDEF Win32}
   function MinCard(C1, C2 : Cardinal) : Cardinal; assembler;
   asm
     cmp   eax,edx
@@ -531,17 +522,6 @@ var
     mov   eax,edx
   @1:
   end;
-  {$ELSE}
-  function MinCard(C1, C2 : Cardinal) : Cardinal; assembler;
-  asm
-    mov   ax,C1
-    mov   bx,C2
-    cmp   ax,bx
-    jbe   @1
-    mov   ax,bx
-  @1:
-  end;
-  {$ENDIF}
 
   procedure UpDatePtr(var SPtr : PAnsiChar; Delta : Integer);
   begin
@@ -1019,17 +999,13 @@ constructor TApdDeviceSocket.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
   FWsTerminal := DefWsTerminal;
-  {$IFDEF Win32}
   FillChar(SockSection, SizeOf(SockSection), #0);
   InitializeCriticalSection(SockSection);
-  {$ENDIF}
 end;
 
 destructor TApdDeviceSocket.Destroy;
 begin
-  {$IFDEF Win32}
   DeleteCriticalSection(SockSection);
-  {$ENDIF}
   inherited Destroy;
 end;
 
@@ -1188,7 +1164,6 @@ const
   LastSocket : TSocket = -1;
   LastConnection : TWsConnection = nil;
 
-{$IFDEF Win32}
 procedure TApdDeviceSocket.LockList;
 begin
   EnterCriticalSection(SockSection);
@@ -1198,16 +1173,13 @@ procedure TApdDeviceSocket.UnLockList;
 begin
   LeaveCriticalSection(SockSection);
 end;
-{$ENDIF}
 
 function TApdDeviceSocket.FindConnection(Socket : TSocket) : TWsConnection;
 var
   I : Integer;
 begin
-  {$IFDEF Win32}
   LockList;
   try
-  {$ENDIF}
     if (Socket = LastSocket) and (LastConnection <> nil) then
       Result := LastConnection
     else begin
@@ -1224,11 +1196,9 @@ begin
       end;
       Result := nil;
     end;
-  {$IFDEF Win32}
   finally
     UnlockList;
   end;
-  {$ENDIF}
 end;
 
 function TApdWinsockDispatcher.CheckPort(ComName: PChar): Boolean;
@@ -1244,10 +1214,8 @@ function TApdWinsockDispatcher.CloseCom : Integer;
 var
   Connection : TWsConnection;
 begin
-  {$IFDEF Win32}
   ApdSocket.LockList;
   try
-  {$ENDIF}
     Connection := ApdSocket.FindConnection(CidEx);
     if Assigned(Connection) then
       with Connection do begin
@@ -1257,11 +1225,9 @@ begin
         LastConnection := nil;
       end
     else Result := -1;
-  {$IFDEF Win32}
   finally
     ApdSocket.UnLockList;
   end;
-  {$ENDIF}
 end;
 
 function TApdWinsockDispatcher.EscapeComFunction(Func : Integer) : LongInt;
@@ -1330,16 +1296,12 @@ function TApdWinsockDispatcher.OpenCom(ComName : PChar; InQueue, OutQueue : Card
   { -Open the socket specified by ComName }
 begin
   try
-    {$IFDEF Win32}
     ApdSocket.LockList;
     try
-    {$ENDIF}
       Result := TWsConnection.CreateInit(ApdSocket, InQueue, OutQueue).SocketHandle;
-    {$IFDEF Win32}
     finally
       ApdSocket.UnLockList;
     end;
-    {$ENDIF}
     CidEx := Result;
   except
     Result := -ApdSocket.LastError;
@@ -1475,8 +1437,7 @@ begin
 end;
 
 function WsCommTimer(H : TApdHwnd; Msg, wParam : Cardinal;
-                      lParam : LongInt) : Cardinal;
-                    {$IFDEF Win32} stdcall; export; {$ELSE} export; {$ENDIF}
+                      lParam : LongInt) : Cardinal; stdcall; export;
   {-Dispatch COMM functions}
 var
   I : Integer;
@@ -1532,22 +1493,15 @@ begin
   DispActive := False;
 end;
 
-{$IFDEF Win32}
 function TApdWinsockDispatcher.WaitComEvent(var EvtMask : DWORD;
                                lpOverlapped : POverlapped) : Boolean;
 begin
   { Doesn't apply to Winsock }
   Result := True;
 end;
-{$ENDIF}
 
 function DispatcherWndFunc(hWindow : TApdHwnd; Msg, wParam : Cardinal;
-                           lParam : Longint) : Longint;
-                           {$IFDEF Win32}
-                           stdcall; export;
-                           {$ELSE}
-                           export;
-                           {$ENDIF}
+                           lParam : Longint) : Longint; stdcall; export;
   {-Window function for wm_CommNotify or cw_ApdSocketMessage messages}
 var
   I : Integer;
@@ -1581,14 +1535,10 @@ begin
     lpfnWndProc   := @DispatcherWndFunc;
     cbClsExtra    := 0;
     cbWndExtra    := 0;
-    {$IFDEF VERSION3}
     if ModuleIsLib and not ModuleIsPackage then
       hInstance   := SysInit.hInstance
     else
       hInstance   := System.MainInstance;
-    {$ELSE}
-    hInstance     := System.hInstance;
-    {$ENDIF}
     hIcon         := 0;
     hCursor       := 0;
     hbrBackground := 0;

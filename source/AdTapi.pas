@@ -74,9 +74,7 @@ uses
   Messages,
   Controls,
   Forms,
-  {$IFDEF Delphi6}
   Variants,
-  {$ENDIF}
   ExtCtrls,
   Dialogs,
   MMSystem,

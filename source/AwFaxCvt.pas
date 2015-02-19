@@ -393,11 +393,7 @@ uses
   AnsiStrings;
 
 {$IFDEF BindFaxFont}
-{$IFDEF Win32}
 {$R AWFAXCVT.R32}
-{$ELSE}
-{$R AWFAXCVT.R16}
-{$ENDIF}
 {$ENDIF}
 
 const
@@ -1850,12 +1846,8 @@ end;
     var
       DT : TDateTime;
     begin
-      {$IFDEF Win32}
       DT     := Now;
       Result := DateTimeToFileDate(DT);
-      {$ELSE}
-      Result := NowAsFileDate;
-      {$ENDIF}
     end;
 
     function UpdateMainHeader : Integer;
@@ -2537,7 +2529,6 @@ end;
 
   { Move source to Dest -- doubling each bit.  Count is amount of source }
   { to move -- Dest is assumed to be big enough to handle (Count x 2)    }
-  {$IFDEF Win32}
   procedure StretchMove(const Source; var Dest; Count : Integer); register;
   asm
     push  esi
@@ -2573,34 +2564,6 @@ end;
     pop   edi
     pop   esi
   end;
-  {$ELSE}
-  procedure StretchMove(const Source; var Dest; Count : Integer); assembler;
-  asm
-    push  ds
-    lds   si,[Source]
-    les   di,[Dest]
-    mov   dx,Count
-    cld
-  @@1:
-    lodsb
-    mov   cx,8
-    xor   bx,bx
-  @@2:
-    shl   bx,1
-    shl   bx,1
-    rcl   al,1
-    jnc   @@3
-    add   bx,3  {11b}
-  @@3:
-    loop  @@2
-    mov   ax,bx
-    ror   ax,8
-    stosw
-    dec   dx
-    jnz   @@1
-    pop   ds
-  end;
-  {$ENDIF}
 
   procedure fcRasterizeText(Cvt : PAbsFaxCvt; St : PAnsiChar; Row : Cardinal; var Data);
     {-Turn a row in a string into a raster line}
@@ -2810,22 +2773,14 @@ end;
         FFPos := pos(#12, string(St));
         if (FFPos <> 0) then begin
           Pending := Copy(string(St),FFPos+1,255);
-          {$IFDEF Windows}
-          St[0] := Chr(FFPos-1);
-          {$ELSE}
           SetLength(St,FFPos-1);
-          {$ENDIF}
           FFPending := True;
         end;
         CurRow := 1;
 
         {expand the tabs in the line of text}
         AppendStr(St,#0);
-        {$IFDEF Windows}
-        fcDetab(CurStr, @St[1], TabStop);
-        {$ELSE}
         fcDetab(CurStr, pAnsiChar(St), TabStop, High(CurStr));               {!!.04}
-        {$ENDIF}
 
         if not IsExtended then begin
           {adjust the string length, accounting for margins}
@@ -4104,7 +4059,7 @@ end;
   end;
 
   function bcGetDitheredRasterLine(Cvt : PAbsFaxCvt; var Data; var Len : Integer;
-    var EndOfPage, MorePages : Bool) : Integer; {$IFDEF Windows} far; {$ENDIF}
+    var EndOfPage, MorePages : Bool) : Integer;
     {-Read a raster line from a non-monochrome bitmap and dither it}
   type
     TColorRec = packed record
@@ -4912,7 +4867,6 @@ end;
   procedure upOutputRun(Unpack : PUnpackFax; IsWhite : Bool; Len : Integer);
     {-Output current run}
 
-    {$IFDEF Win32}
     procedure UpdateLinePosition(UP : PUnpackFax; Len : Integer); assembler; register;
     asm
       push  edi
@@ -4998,7 +4952,6 @@ end;
       pop   ebx
       pop   edi
     end;
-    {$ENDIF}
 
   begin
     with Unpack^ do begin

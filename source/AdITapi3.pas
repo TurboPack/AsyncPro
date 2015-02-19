@@ -34,15 +34,11 @@
 {Global defines potentially affecting this unit}
 {$I AWDEFINE.INC}
 
-{$IFDEF AProBCB}
-  {$Warnings Off}  
-{$ENDIF}
 unit AdITapi3;
 
 interface
 
-uses ActiveX, Classes, Graphics, StdVCL, {$IFDEF Delphi6}Variants,{$ENDIF}
-  Windows, OOMisc;
+uses ActiveX, Classes, Graphics, StdVCL, Variants, Windows, OOMisc;
   
 // *********************************************************************//
 // GUIDS declared in the TypeLibrary. Following prefixes are used:

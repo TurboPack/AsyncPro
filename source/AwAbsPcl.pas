@@ -35,9 +35,7 @@
 {Options required for this unit}
 {$V-,I-,B-,F+,X+,Q-,R-,N+}
 
-{$IFDEF Win32}
 {$J+}
-{$ENDIF}
 
 unit AwAbsPcl;
   {-Abstract protocol}
@@ -306,10 +304,8 @@ const
 
     {Initialize the protocol fields}
     with P^ do begin
-      {$IFDEF Win32}
       {Make a critical section object}
       InitializeCriticalSection(aProtSection);
-      {$ENDIF}
 
       {Init values other than zero}
       aHC := H;
@@ -344,10 +340,8 @@ const
   procedure apDoneProtocol(P : PProtocolData);
     {-Destroys a protocol}
   begin
-    {$IFDEF Win32}
     {Free the critical section}
     DeleteCriticalSection(P^.aProtSection);
-    {$ENDIF}
 
     FreeMem(P, SizeOf(TProtocolData));
   end;
@@ -463,10 +457,8 @@ const
         DosError :=
           Abs(FindFirst(string(aSearchMask), AnyFileButDir, aCurRec));
         aFFOpen := True;
-        {$IFDEF WIN32}
         if DosError <> 0 then
           aCurRec.FindHandle := INVALID_HANDLE_VALUE;
-        {$ENDIF}                                                     
         if DosError = 18 then begin
           apProtocolError(P, ecNoMatchingFiles);
           FName[0] := #0;
@@ -1341,19 +1333,13 @@ ExitPoint:
 
   procedure apProtocolError(P : PProtocolData; ErrorCode : Integer);
     {-Sends message and sets aProtocolError}
-  {$IFDEF WIN32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with P^ do begin
-      {$IFDEF WIN32}
       SendMessageTimeout(aHWindow, apw_ProtocolError, Cardinal(ErrorCode),
                          0, SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, apw_ProtocolError, Cardinal(ErrorCode), 0);
-      {$ENDIF}
       aProtocolError := ErrorCode;
     end;
   end;
@@ -1378,11 +1364,7 @@ ExitPoint:
   var
     I : Cardinal;
   begin
-    {$IFDEF HugeStr}
     SetLength(Result, 12);
-    {$ELSE}
-    apOctalStr[0] := #12;
-    {$ENDIF}
     for I := 0 to 11 do begin
       apOctalStr[12-I] := Digits[L and 7];
       L := L shr 3;
@@ -1539,78 +1521,51 @@ ExitPoint:
 
   procedure apMsgStatus(P : PProtocolData; Options : Cardinal);
     {-Send an apw_ProtocolStatus message to the protocol window}
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with P^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, apw_ProtocolStatus, Options,
                          Longint(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, apw_ProtocolStatus, Options, Longint(P));
-      {$ENDIF}
   end;
 
   function apMsgNextFile(P : PProtocolData; FName : PAnsiChar) : Bool;
     {-Virtual method for calling NextFile procedure}
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with P^ do begin
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, apw_ProtocolNextFile, 0,
                          Longint(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
       apMsgNextFile := Res <> 0;
-      {$ELSE}
-      apMsgNextFile :=
-        SendMessage(aHWindow, apw_ProtocolNextFile, 0, LongInt(FName)) <> 0;
-      {$ENDIF}
     end;
   end;
 
   procedure apMsgLog(P : PProtocolData; Log : Cardinal);
     {-Send an apw_ProtocolLog message to the protocol window}
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with P^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, apw_ProtocolLog,
                          Cardinal(Log), Longint(P),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, apw_ProtocolLog, Cardinal(Log), LongInt(P));
-      {$ENDIF}
   end;
 
   function apMsgAcceptFile(P : PProtocolData; FName : PAnsiChar) : Bool;
     {-Send apw_ProtocolAcceptFile message to TProtocolWindow}
   var
-    {$IFDEF Win32}
     Res : DWORD;
-    {$ELSE}
-    Res : Cardinal;
-    {$ENDIF}
   begin
     with P^ do begin
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, apw_ProtocolAcceptFile,
                          0, Longint(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      Res := SendMessage(aHWindow, apw_ProtocolAcceptFile, 0, LongInt(FName));
-      {$ENDIF}
       apMsgAcceptFile := Res = 1;
     end;
   end;
@@ -1672,14 +1627,10 @@ ExitPoint:
       lpfnWndProc   := @DefWindowProc;
       cbClsExtra    := 0;
       cbWndExtra    := SizeOf(Pointer);
-      {$IFDEF VERSION3}
       if ModuleIsLib and not ModuleIsPackage then
         hInstance     := SysInit.hInstance
       else
         hInstance     := System.MainInstance;
-      {$ELSE}
-      hInstance     := System.hInstance;
-      {$ENDIF}
       hIcon         := 0;
       hCursor       := LoadCursor(0, idc_Arrow);
       hbrBackground := hBrush(color_Window + 1);
@@ -1695,7 +1646,6 @@ ExitPoint:
     {nothing}
   end;
 
-  {$IFDEF Win32}
   function apUpdateCrc32(CurByte : Byte; CurCrc : LongInt) : LongInt;
     {-Return the updated 32bit CRC}
     {-Normally a good candidate for basm, but Delphi32's code
@@ -1704,7 +1654,6 @@ ExitPoint:
     apUpdateCrc32 := Crc32Table[Byte(CurCrc xor CurByte)] xor
                      DWORD((CurCrc shr 8) and $00FFFFFF);
   end;
-  {$ENDIF}
 
 procedure InitializeUnit;
 var

@@ -52,11 +52,7 @@ unit AdVoIP;
 interface
 
 uses
-  {$IFDEF Delphi5}
   OleServer,
-  {$ELSE}
-  OleCtrls,
-  {$ENDIF}
   SysUtils, ActiveX, Classes, Windows, Controls, ComObj, Messages, Forms,
   { APRO units }
   OOMisc,

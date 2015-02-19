@@ -646,97 +646,64 @@ uses
   const
     StartMask : array[Boolean] of Word = ($00, $01);
     EndMask   : array[Boolean] of Word = ($00, $02);
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with FP^, aPData^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXSTATUS,
                          StartMask[Starting] or EndMask[Ending],
                          LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, APW_FAXSTATUS,
-                  StartMask[Starting] or EndMask[Ending], LongInt(FP));
-      {$ENDIF}
   end;
 
   function afNextFax(FP : PFaxRec) : Boolean;
     {-Return next number to dial, wParam not used}
     {                             lParam = FP   }
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with FP^, aPData^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXNEXTFILE, 0, LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
-                         2000, Res);                                  
+                         2000, Res);
       afNextFax := Boolean(Res);
-      {$ELSE}
-      afNextFax :=
-        Boolean(SendMessage(aHWindow, APW_FAXNEXTFILE, 0, LongInt(FP)));
-      {$ENDIF}
   end;
 
   procedure afLogFax(FP : PFaxRec; Log : TFaxLogCode);                   {!!.04}
     {-Logs the fax, wParam = logcode, lParam not used }
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with FP^, aPData^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXLOG, Integer(Log), LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, APW_FAXLOG, Integer(Log), LongInt(FP));
-      {$ENDIF}
   end;
 
   procedure afFaxName(FP : PFaxRec);
     {-Call FaxName hook, wParam not used, lParam = FP}
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with FP^, aPData^ do
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXNAME, 0, LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, APW_FAXNAME, 0, LongInt(FP));
-      {$ENDIF}
   end;
 
   function afAcceptFax(FP : PFaxRec; RemoteName : Str20) : Boolean;
     {-Call AcceptFax hook, wParam not used, lParam = FP}
   var
     P : array[0..20] of Char;
-    {$IFDEF Win32}
     Res : DWORD;
-    {$ENDIF}
   begin
     with FP^, aPData^ do begin
       StrPCopy(P, string(RemoteName));
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXACCEPT, 0, LongInt(FP),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
       afAcceptFax := Boolean(Res);
-      {$ELSE}
-      afAcceptFax := Boolean(
-         SendMessage(aHWindow, APW_FAXACCEPT, 0, LongInt(FP)));
-      {$ENDIF}
     end;
   end;
 
@@ -889,20 +856,14 @@ uses
 
   procedure afReportError(FP : PFaxRec; ErrorCode : Integer);
     {-Report the error}
-  {$IFDEF Win32}
   var
     Res : DWORD;
-  {$ENDIF}
   begin
     with FP^, aPData^ do begin
       aFaxError := ErrorCode;
-      {$IFDEF Win32}
       SendMessageTimeout(aHWindow, APW_FAXERROR, ErrorCode, 0,
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, Res);
-      {$ELSE}
-      SendMessage(aHWindow, APW_FAXERROR, ErrorCode, 0);
-      {$ENDIF}
     end;
   end;
 

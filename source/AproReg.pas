@@ -41,12 +41,8 @@ unit APROReg;
 interface
 
 uses
-{$IFDEF Delphi6}
   DesignIntf,
   DesignEditors;
-{$ELSE}
-  DsgnIntf;
-{$ENDIF}
 
 { Constant declarations for IDE palette tab names }
 

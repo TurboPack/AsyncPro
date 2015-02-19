@@ -70,7 +70,6 @@ type
   {$ENDIF}
 
   {Windows message record}
-  {$IFDEF Win32}
   wMsg = record
     hWindow : hWnd;
     Message : UINT;
@@ -78,16 +77,6 @@ type
       0: (wParam : WPARAM; lParam : LPARAM);
       1: (wParamLo, wParamHi : Word; lParamLo, lParamHi : Word);
   end;
-  {$ELSE}
-  wMsg = record
-    hWindow : hWnd;
-    Message : Word;
-    case Integer of
-      0: (wParam : Word; lParam : LongInt);
-      1: (wParamLo, wParamHi : Byte; lParamLo, lParamHi : Word);
-  end;
-
-  {$ENDIF}
   {fax bitmap viewer}
   TViewer = class
       vWnd          : HWnd;             {Window handle}
@@ -2856,11 +2845,7 @@ implementation
     if (Msg.wParam <> sb_EndScroll) then
       vVScrolling := True;
 
-    {$IFDEF Win32}                                                     
-    case Msg.wParamLo of                                               
-    {$ELSE}                                                            
-    case Msg.wParam of
-    {$ENDIF}                                                           
+    case Msg.wParamLo of
       sb_Top          : vHomeVertical;
       sb_Bottom       : vEndVertical;
       sb_LineDown     : vScrollDown;
@@ -2873,11 +2858,7 @@ implementation
         begin
           GetClientRect(vWnd, R);
           Height := Succ(R.Bottom - R.Top + 1);
-          {$IFDEF Win32}                                               
-          Delta := Msg.wParamHi - vTopRow;                             
-          {$ELSE}                                                      
-          Delta  := Msg.lParamLo - vTopRow;
-          {$ENDIF}                                                     
+          Delta := Msg.wParamHi - vTopRow;
 
           {if the amount of change in position is more than}
           {a screenful, reset the top row and redraw the}
@@ -2918,11 +2899,7 @@ implementation
     if (Msg.wParam <> sb_EndScroll) then
       vHScrolling := True;
 
-    {$IFDEF Win32}
     case Msg.wParamLo of
-    {$ELSE}
-    case Msg.wParam of
-    {$ENDIF}
       sb_Top          : vHomeHorizontal;
       sb_Bottom       : vEndHorizontal;
       sb_LineDown     : vScrollRight;
@@ -2935,11 +2912,7 @@ implementation
         begin
           GetClientRect(vWnd, R);
           Width := Succ(R.Right - R.Left + 1);
-          {$IFDEF Win32}
           Delta := Msg.wParamHi - vLeftOfs;
-          {$ELSE}
-          Delta := Msg.lParamLo - vLeftOfs;
-          {$ENDIF}
 
           {if the amount of change in position is more than}
           {a screenful, reset the top row and redraw the}
@@ -3105,13 +3078,8 @@ implementation
       lpfnWndProc   := @vFaxViewerWndFunc;
       cbClsExtra    := 0;
       cbWndExtra    := SizeOf(Pointer);
-      {$IFDEF VERSION3}
       hInstance     := System.MainInstance;
       hIcon         := LoadIcon(System.MainInstance, 'DEFICON');
-      {$ELSE}
-      hInstance     := System.hInstance;
-      hIcon         := LoadIcon(System.hInstance, 'DEFICON');
-      {$ENDIF}
       hCursor       := LoadCursor(0, idc_Arrow);
       hbrBackground := GetStockObject(White_Brush);
       lpszMenuName  := nil;

@@ -897,7 +897,6 @@ const
       {Function result is always zero unless the protocol is over}
       Result := 0;
 
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -906,7 +905,6 @@ const
         Result := 1;
         Exit;
       end;
-      {$ENDIF}
 
         {If it's a TriggerAvail message then force the TriggerID}
         if Msg = apw_TriggerAvail then
@@ -1211,9 +1209,7 @@ const
           end;                                                         {!!.01}
         until Finished;
       end;
-      {$IFDEF Win32}                                               {!!.01}
       LeaveCriticalSection(P^.aProtSection);                       {!!.01}
-      {$ENDIF}                                                     {!!.01}
     end;
   end;
 
@@ -1298,7 +1294,6 @@ const
     end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -1307,7 +1302,6 @@ const
         Result := 1;
         Exit;
       end;
-      {$ENDIF}
         {Set TriggerID directly for TriggerAvail messages}
         if Msg = apw_TriggerAvail then
           TriggerID := aDataTrigger;
@@ -1360,9 +1354,7 @@ const
                     apProtocolError(P, ecNoFilename);
                     xpCancel(P);
                     Cleanup(True);
-                    {$IFDEF Win32}
                     LeaveCriticalSection(aProtSection);
-                    {$ENDIF}
                     Exit;
                   end else if aUpcaseFileNames then
                     AnsiUpper(aPathName);
@@ -1564,9 +1556,7 @@ const
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;
   end;
 

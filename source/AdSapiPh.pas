@@ -56,10 +56,8 @@ uses
   AdTapi,
   AdSapiGr,
   AdISapi,
-  {$IFDEF Delphi6}
   DateUtils,
   Variants,
-  {$ENDIF}
   ActiveX,
   ComObj,
   Dialogs;

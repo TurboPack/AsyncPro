@@ -201,16 +201,12 @@ begin
   Conditions := TStringList.Create;
   AvailableStates := TStringList.Create;
 
-  {$IFDEF Delphi4}
   BorderStyle := bsSizeable;
   ConditionGrid.Anchors := [akLeft,akTop,akRight,akBottom];
   GroupBox2.Anchors := [akLeft,akTop,akRight,akBottom];
   Constraints.MinHeight := btnOK.Height * 9;
   Constraints.MinWidth := btnOK.Width * 4;
   ConditionGrid.Anchors := [akLeft, akTop, akRight, akBottom];
-  {$ELSE}
-  BorderStyle := bsDialog;
-  {$ENDIF}
 end;
 
 procedure TfrmStateEdit.FormDestroy(Sender: TObject);

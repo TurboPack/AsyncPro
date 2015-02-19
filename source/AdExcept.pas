@@ -399,9 +399,7 @@ type
   function AproLoadZ(P : PAnsiChar; Code : Integer) : PAnsiChar;    // --sm ansi
 
   function ErrorMsg(const ErrorCode : SmallInt) : string;
-  {$IFDEF UseResourceStrings}
   function MessageNumberToString(MessageNumber : SmallInt) : string;
-  {$ENDIF}
   {.Z-}
 
 
@@ -411,28 +409,19 @@ var                                                                      {!!.02}
 {$ENDIF}
 implementation
 
-{$IFDEF UseResourceStrings}
 { include AdStrMap here to prevent circular references in AdStrMap }
 uses
   AdStrMap;
-{$ENDIF}
+
   function AproLoadZ(P : PAnsiChar; Code : Integer) : PAnsiChar;
   begin
-    {$IFDEF UseResourceStrings}
     Result := StrPCopy(P, AproLoadAnsiStr(Code));
-    {$ELSE}
-    Result := AproStrRes.GetAsciiZ(Abs(Code), P, MaxMessageLen);
-    {$ENDIF}
   end;
 
   function AproLoadStr(const ErrorCode : SmallInt) : string;
     {-Return an error message for ErrorCode}
   begin
-    {$IFDEF UseResourceStrings}
     Result := MessageNumberToString(ErrorCode);
-    {$ELSE}
-    Result := AproStrRes.GetString(abs(ErrorCode));
-    {$ENDIF}
 
     if Result = '' then
       Result := SysErrorMessage(ErrorCode);
@@ -450,7 +439,6 @@ uses
     Result := AproLoadStr(ErrorCode);
   end;
 
-  {$IFDEF UseResourceStrings}
   function MessageNumberToString(MessageNumber : SmallInt) : string;
   var
     Middle : integer;
@@ -475,7 +463,6 @@ uses
     end;
 
   end;
-  {$ENDIF}
 
   constructor EAPDException.Create(const EC : Integer; PassThru : Boolean);
   begin
@@ -727,22 +714,6 @@ uses
     else
       Result := -9999;
   end;
-
-{$IFNDEF UseResourceStrings}
-procedure FinalizeUnit; far;
-begin
-  AproStrRes.Free;
-  AproStrRes := nil;
-end;
-
-procedure InitializeUnit;
-begin
-  {$IFDEF Windows}
-  AddExitProc(FinalizeUnit);
-  {$ENDIF}
-  AproStrRes := TAdStringResource.Create(HInstance, 'APRO_ERROR_STRINGS_ENGLISH');
-end;
-{$ENDIF}
 
 { EAdStreamError }
 

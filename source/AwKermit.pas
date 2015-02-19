@@ -202,7 +202,6 @@ const
     dstrkGetFile, dstrkCollectFile, dstrkGetData, dstrkCollectData,
     dstrkComplete, dstrkWaitCancel, dstrkError, dstrkDone);          
 
-  {$IFDEF Win32}
   function ToChar(C : AnsiChar) : AnsiChar;
     {-Returns C+$20}
   asm
@@ -251,76 +250,6 @@ const
   asm
     or ax,$80
   end;
-
-  {$ELSE}
-
-  function ToChar(C : AnsiChar) : AnsiChar;
-    {-Returns C+$20}
-    inline(
-      $58/              {POP     AX           ;AX = C}
-      $05/$20/$00);     {ADD     AX,$20       ;AX = C + $20}
-
-  function UnChar(C : AnsiChar) : AnsiChar;
-    {-Returns C-$20}
-    inline(
-      $58/              {POP     AX           ;AX = C}
-      $2D/$20/$00);     {SUB     AX,$20       ;AX = C - $20}
-
-  function Ctl(C : AnsiChar) : AnsiChar;
-    {-Returns C xor $40}
-    inline(
-      $58/              {POP     AX           ;AX = C}
-      $35/$40/$00);     {XOR     AX,$40       ;Toggle bit 6}
-
-  function Inc64(W : Cardinal) : Cardinal;
-    {-Returns (W+1) mod 64}
-    inline(
-      $58/              {POP     AX           ;AX = W}
-      $40/              {INC     AX           ;Inc(AX)}
-      $25/$3F/$00);     {AND     AX,$3F       ;AX mod 64}
-
-  function Dec64(W : Cardinal) : Cardinal;
-    {-Returns (W-1) or 63 if W=0}
-  inline(
-    $58/                {POP     AX           ;AX = W}
-    $48/                {DEC     AX           ;Dec(AX)}
-    $79/$03/            {JNS     Done         ;Done if sign didn't change}
-    $B8/$3F/$00);       {MOV     AX,63        ;else AX := 63}
-                        {Done:}
-
-  function IsCtl(C : AnsiChar) : Bool;
-  Inline(
-    $58/                   {      POP   AX          ;AX = C}
-    $25/$7F/$00/           {      AND   AX, $07F    ;Low 7 bits only}
-    $3D/$20/$00/           {      CMP   AX, $020    ;In 0-31 range?}
-    $7D/$06/               {      JGE   No1         ;No, continue}
-    $B8/$01/$00/           {      MOV   AX,1        ;It's a ctl char}
-    $E9/$0E/$00/           {      JMP   Done        ;Leave}
-                           {      No1:}
-    $3D/$7F/$00/           {      CMP   AX, $07F    ;= 127?}
-    $75/$06/               {      JNE   No2         ;No, continue}
-    $B8/$01/$00/           {      MOV   AX,1        ;It's a ctl char}
-    $E9/$03/$00/           {      JMP   Done        ;Leave}
-                           {      No2:              ;Not a ctl char}
-    $B8/$00/$00);          {      MOV   AX,0        ;}
-                           {      Done:}
-
-  function IsHiBit(C : AnsiChar) : Bool;
-  Inline(
-  $58/                   {POP   AX        ;AX = C}
-  $A9/$80/$00/           {TEST  AX,$80    ;In 0-127 range?}
-  $75/$06/               {JNZ   No1       ;No, continue}
-  $B8/$00/$00/           {MOV   AX,0      ;It's a low-bit char}
-  $E9/$03/$00/           {JMP   Done      ;Leave}
-                         {No1:}
-  $B8/$01/$00);          {MOV   AX,1      ;}
-                         {Done:}
-
-  function HiBit(C : AnsiChar) : AnsiChar;
-  Inline(
-    $58/                   {      POP   AX}
-    $0D/$80/$00);          {      OR    AX, $80}
-  {$ENDIF}
 
   procedure kpFinishWriting(P : PProtocolData);
     {-Handle "discard" option}
@@ -2442,7 +2371,6 @@ Skip:
     end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -2450,7 +2378,6 @@ Skip:
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then begin
           kpFillInBuff(P);
@@ -2468,9 +2395,7 @@ Skip:
             if kKermitState = rkDone then begin
               while kpCharReady(P) do
                 kpGetChar(P);
-              {$IFDEF Win32}
               LeaveCriticalSection(aProtSection);
-              {$ENDIF}
               Exit;
             end;
 
@@ -2500,9 +2425,7 @@ Skip:
                 aForceStatus := False;
               end;
               if Integer(TriggerID) = aStatusTrigger then begin
-                {$IFDEF Win32}
                 LeaveCriticalSection(aProtSection);
-                {$ENDIF}
                 Exit;
               end;
             end;
@@ -2837,9 +2760,7 @@ Skip:
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;
 
   end;
@@ -2891,7 +2812,6 @@ Skip:
     end;                                                               {!!.01}
 
     with P^ do begin
-      {$IFDEF Win32}
       EnterCriticalSection(aProtSection);
 
       {Exit if protocol was cancelled while waiting for crit section}
@@ -2899,7 +2819,6 @@ Skip:
         LeaveCriticalSection(aProtSection);
         Exit;
       end;
-      {$ENDIF}
         {Force TriggerID for TriggerAvail messages}
         if Msg = apw_TriggerAvail then begin
           kpFillInBuff(P);
@@ -2914,9 +2833,7 @@ Skip:
 
             {Nothing to do if state is tkDone}
             if kKermitState = tkDone then begin
-              {$IFDEF Win32}
               LeaveCriticalSection(aProtSection);
-              {$ENDIF}
               Exit;
             end;
 
@@ -2946,9 +2863,7 @@ Skip:
                 aForceStatus := False;
               end;
               if Integer(TriggerID) = aStatusTrigger then begin
-                {$IFDEF Win32}
                 LeaveCriticalSection(aProtSection);
-                {$ENDIF}
                 Exit;
               end;
             end;
@@ -3487,9 +3402,7 @@ Skip:
             end;                                                       {!!.01}
           end;                                                         {!!.01}
         until Finished;
-      {$IFDEF Win32}                                                 {!!.01}
       LeaveCriticalSection(P^.aProtSection);                         {!!.01}
-      {$ENDIF}                                                       {!!.01}
     end;
   end;
 

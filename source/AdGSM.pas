@@ -72,21 +72,6 @@ uses
   Windows, Messages, SysUtils, Classes, Controls, Forms,
   OoMisc, AdPort, AdPacket, AdExcept;
 
-{$IFDEF AproBCB}
-{*$HPPEMIT '' }
-{*$HPPEMIT '#undef GetMessage' }
-{*$HPPEMIT '#undef SendMessage' }
-{*$HPPEMIT '' }
-{$ENDIF}
-{$IFDEF VER110}
-  { BCB3 needs this included here }
-  {$I AdExcept.inc}
-{$ENDIF}
-
-{$IFDEF UNICODEx}      //SZ: no "real" warning left
-  {$WARN IMPLICIT_STRING_CAST OFF}
-  {$WARN IMPLICIT_STRING_CAST_LOSS OFF}
-{$ENDIF}
 const
   ApdGSMResponse = WM_USER + 100;
 
@@ -164,11 +149,7 @@ type
     { private declarations }
     FCapacity : Integer;
     FGSMPhone : TApdCustomGSMPhone;
-    {$IFDEF AproBCB}
-    function GetSMSMessage(Index: Integer): TApdSMSMessage;
-    {$ELSE}
     function GetMessage(Index: Integer): TApdSMSMessage;
-    {$ENDIF}
     procedure SetMessage(Index: Integer; const Value : TApdSMSMessage);
     procedure SetMSCapacity(const Value: Integer);
   protected
@@ -182,13 +163,8 @@ type
     function AddMessage(const Dest, Msg : string) : Integer;
     procedure Clear; override;
     procedure Delete(PhoneIndex: Integer); override;
-    {$IFDEF AproBCB}
-    property Messages[Index: Integer]: TApdSMSMessage
-             read GetSMSMessage write SetMessage; default;
-    {$ELSE}
     property Messages[Index: Integer]: TApdSMSMessage
              read GetMessage write SetMessage; default;
-    {$ENDIF}
     property Capacity : Integer read FCapacity write SetMSCapacity;
   end;
 
@@ -260,11 +236,7 @@ type
     { Public declarations }
     constructor Create(AOwner : TComponent); override;
     destructor Destroy; override;
-    {$IFDEF AproBCB}
-    procedure SendSMSMessage;
-    {$ELSE}
     procedure SendMessage;
-    {$ENDIF}
     procedure SendAllMessages;
     procedure ListAllMessages;
     procedure Connect;
@@ -711,11 +683,7 @@ begin
 end;
 
 { issues +CMGS to send message without placing the message in memory }
-{$IFDEF AproBCB}
-procedure TApdCustomGSMPhone.SendSMSMessage;
-{$ELSE}
 procedure TApdCustomGSMPhone.SendMessage;
-{$ENDIF}
 var
   Res : Integer;
   ET : EventTimer;
@@ -842,11 +810,7 @@ begin
 end;
 
 { Get message number of Index }
-{$IFDEF AproBCB}
-function TApdMessageStore.GetSMSMessage(Index: Integer): TApdSMSMessage;
-{$ELSE}
 function TApdMessageStore.GetMessage(Index: Integer): TApdSMSMessage;
-{$ENDIF}
 begin
   Result := TApdSMSMessage(Objects[Index]);
 end;
@@ -1541,11 +1505,7 @@ begin
       2 : begin
             SetState(gsNone);
             DelayTicks(1, True);
-            {$IFDEF AproBCB}
-            SendSMSMessage;
-            {$ELSE}
             SendMessage;
-            {$ENDIF}
           end;
 {End !!.06}
       end; // End Case

@@ -577,7 +577,6 @@ type
 
     { publishing from TScrollingWinControl }
     property Align;
-    {$IFDEF Delphi5}
     property Anchors;
     property AutoSize;
     property BevelEdges;
@@ -593,7 +592,6 @@ type
     property OnMouseWheelDown;
     property OnMouseWheelUp;
     property OnResize;
-    {$ENDIF}
     property Color;
     property AutoScroll;
     property Ctl3D;
@@ -2079,9 +2077,7 @@ begin
   inherited Notification (AComponent, Operation);
 
   if (csDestroying       in ComponentState) or
-     {$IFDEF VERSION5}
      (csFreeNotification in ComponentState) or
-     {$ENDIF}
      (csLoading          in ComponentState) or
      (csReading          in ComponentState) or
      (csUpdating         in ComponentState) or
@@ -2138,20 +2134,11 @@ begin
     OldColor := Canvas.Brush.Color;
     Canvas.Brush.Color := FLeftBorderFill;
     if FUseLeftBorder then begin
-      {$IFDEF Delphi6}
       Canvas.Rectangle (ClientRect);
-      {$ELSE}
-      Canvas.Rectangle (ClientRect.Left, ClientRect.Top,
-                        ClientRect.Right, ClientRect.Bottom);
-      {$ENDIF}
     end;
     Canvas.Brush.Style := bsClear;
     Canvas.Brush.Color := OldColor;
-    {$IFDEF Delphi6}
     Canvas.Rectangle(R);
-    {$ELSE}
-    Canvas.Rectangle(R.Left, R.Top, R.Right, R.Bottom);
-    {$ENDIF}
   end;
   Canvas.TextRect (Rect (R.Left + 2,
                          2,

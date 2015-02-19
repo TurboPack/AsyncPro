@@ -67,9 +67,7 @@ uses
   ActiveX,
   Classes,
   Graphics,
-  {$IFDEF Delphi5}
   OleServer,
-  {$ENDIF}
   OleCtrls,
   StdVCL,
   SysUtils,
@@ -77,9 +75,7 @@ uses
   OoMisc,
   AdISapi,
   AdSapiGr,
-  {$IFDEF Delphi5}
   Contnrs,
-  {$ENDIF}
   Messages,
   Forms,
   Dialogs,  

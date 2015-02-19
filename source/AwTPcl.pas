@@ -508,9 +508,7 @@ type
     aReplyTimer          : EventTimer;      {Track timeouts waiting replies}
     aDataBlock           : PDataBlock;      {Working data block}
     aCurProtFunc         : TProtocolFunc;   {Protocol function}
-    {$IFDEF Win32}
     aProtSection         : TRTLCriticalSection; {When state machine is busy}
-    {$ENDIF}
 
     {Status...}
     aForceStatus         : Bool;            {Force status update}

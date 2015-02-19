@@ -33,10 +33,6 @@
 {$UNDEF LIVE_SERVER_AT_DESIGN_TIME}
 {$A+}
 
-{$IFDEF AProBCB}
-  {$Warnings Off}
-{$ENDIF}
-
 { This unit contains the type library needed by the Sapi Engine and Sapi
   Phone components }
 
@@ -50,13 +46,9 @@ uses
   Classes,
   Graphics,
   OleCtrls,
-  {$IFDEF Delphi5}
   OleServer,
-  {$ENDIF}
   StdVCL,
-  {$IFDEF Delphi6}
   Variants,
-  {$ENDIF}
   Windows,
   OoMisc;
 
@@ -93,12 +85,8 @@ const
   LANG_LEN     = 64;
 
 type
-  {$IFDEF VERSION4}
   QWORD = Int64;
-  {$ELSE}
-  QWORD = Longint;
   LongWord = Longint; 
-  {$ENDIF}
   SDATA = record
     pData : pointer;
     dwSize : DWORD;
@@ -122,30 +110,20 @@ type
   TSRPhraseW = SRPHRASEW;
 
 const
-  {$IFDEF VERSION4}
   {$EXTERNALSYM CLSID_MMAudioSource}
-  {$ENDIF}
   CLSID_MMAudioSource : TGUID = '{D24FE500-C743-11CD-80E5-00AA003E4B50}';
-  {$IFDEF VERSION4}
   {$EXTERNALSYM CLSID_AudioSourceTel}
-  {$ENDIF} 
   CLSID_AudioSourceTel : TGUID = '{2EC5A8A5-E65B-11D0-8FAC-08002BE4E62A}';
-  {$IFDEF VERSION4}
   {$EXTERNALSYM CLSID_AudioDestTel}
-  {$ENDIF}
   CLSID_AudioDestTel : TGUID = '{2EC5A8A6-E65B-11D0-8FAC-08002BE4E62A}';
 
   SID_IAudioMultiMediaDevice = '{B68AD320-C743-11cd-80E5-00AA003E4B50}';
   SID_IAudioTel              = '{2EC5A8A7-E65B-11D0-8FAC-08002BE4E62A}';
 
-  {$IFDEF VERSION4}
   {$EXTERNALSYM IID_IAudioMultiMediaDevice}
-  {$ENDIF}
   IID_IAudioMultiMediaDevice : TGUID = '{B68AD320-C743-11CD-80E5-00AA003E4B50}';
 
-  {$IFDEF VERSION4}
   {$EXTERNALSYM IID_IAudioTel}
-  {$ENDIF}
   IID_IAudioTel : TGUID = '{2EC5A8A7-E65B-11D0-8FAC-08002BE4E62A}';
 
 type
@@ -254,31 +232,23 @@ type
                  TonguePosn : Smallint; LipTension : Smallint) of object;
 
 type
-  {$IFDEF VERSION4}
   {.$ EXTERNALSYM IAudioMultiMediaDevice}
-  {$ENDIF}
   IAudioMultiMediaDevice = interface (IUnknown)
     [SID_IAudioMultiMediaDevice]
     function CustomMessage (uMsg : UINT; dData : SDATA) : HResult; stdcall;
     function DeviceNumGet (var dwDeviceID : DWORD) : HResult; stdcall;
     function DeviceNumSet (dwDeviceID : DWORD) : HResult; stdcall;
   end; // IAudioMultiMediaDevice
-  {$IFDEF VERSION4}
   {.$ EXTERNALSYM PIAUDIOMULTIMEDIADEVICE}
-  {$ENDIF}
   PIAUDIOMULTIMEDIADEVICE = ^IAudioMultiMediaDevice;
 
-  {$IFDEF VERSION4}
   {.$ EXTERNALSYM IAudioTel}
-  {$ENDIF}
   IAudioTel = interface (IUnknown)
     ['{2EC5A8A7-E65B-11d0-8FAC-08002BE4E62A}']
     function AudioObject (AudioObject : IUnknown) : HResult; stdcall;
     function WaveFormatSet (dWFEX : SDATA) : HResult; stdcall;
   end;
-  {$IFDEF VERSION4}
   {.$ EXTERNALSYM PIAUDIOTEL}
-  {$ENDIF}
   PIAUDIOTEL = ^IAudioTel;
   
   { Forward declarations of types }
@@ -1311,7 +1281,6 @@ const
     $00000001, $00000002, $00000003, $00000004, $00000005, $00000006,
     $00000007, $00000008, $00000009, $0000000A, $0000000B, $0000000C,
     $0000000D, $0000000E, $0000000F, $00000010, $00000011, $00000012);
-  {$IFDEF Delphi5}
   CControlData : TControlData2 = (
     ClassID : '{4E3D9D1F-0C63-11D1-8BFB-0060081841DE}';
     EventIID : '{4E3D9D20-0C63-11D1-8BFB-0060081841DE}';
@@ -1320,22 +1289,10 @@ const
     LicenseKey : nil (*HR:$80004002*);
     Flags : $00000000;
     Version : 401);
-  {$ELSE}
-  CControlData : TControlData = (
-    ClassID : '{4E3D9D1F-0C63-11D1-8BFB-0060081841DE}';
-    EventIID : '{4E3D9D20-0C63-11D1-8BFB-0060081841DE}';
-    EventCount : 18;
-    EventDispIDs : @CEventDispIDs;
-    LicenseKey : nil;
-    Flags : $00000000;
-    Version : 300);
-  {$ENDIF}
 begin
   ControlData := @CControlData;
-  {$IFDEF Delphi5}
   TControlData2 (CControlData).FirstEventOfs := Cardinal (@@FOnClickIn) -
                                                 Cardinal (Self);
-  {$ENDIF}
 end;
 
 procedure TDirectSR.CreateControl;
@@ -1881,7 +1838,6 @@ const
     $00000001, $00000002, $00000003, $00000004, $00000005, $00000006,
     $00000007, $00000008, $00000009, $0000000A, $0000000B, $0000000C,
     $0000000D, $0000000E, $0000000F);
-  {$IFDEF Delphi5}
   CControlData : TControlData2 = (
     ClassID : '{EEE78591-FE22-11D0-8BEF-0060081841DE}';
     EventIID : '{EEE78597-FE22-11D0-8BEF-0060081841DE}';
@@ -1890,22 +1846,10 @@ const
     LicenseKey : nil (*HR:$80004002*);
     Flags : $00000000;
     Version : 401);
-  {$ELSE}
-  CControlData : TControlData = (
-    ClassID : '{EEE78591-FE22-11D0-8BEF-0060081841DE}';
-    EventIID : '{EEE78597-FE22-11D0-8BEF-0060081841DE}';
-    EventCount : 15;
-    EventDispIDs : @CEventDispIDs;
-    LicenseKey : nil;
-    Flags : $00000000;
-    Version : 300);
-  {$ENDIF}
 begin
   ControlData := @CControlData;
-  {$IFDEF Delphi5}
   TControlData2 (CControlData).FirstEventOfs := Cardinal (@@FOnClickIn) -
                                                 Cardinal (Self);
-  {$ENDIF}
 end;
 
 procedure TDirectSS.CreateControl;
