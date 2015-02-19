@@ -293,6 +293,9 @@ type
 
 implementation
 
+uses
+  UITypes;
+
 {TStatusLight}
 
   procedure TApdCustomStatusLight.SetGlyph(const NewGlyph : TBitmap);

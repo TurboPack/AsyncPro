@@ -757,7 +757,7 @@ type
 implementation
 
 uses
-  AnsiStrings;
+  Types, AnsiStrings;
 
 const
   ComWindowClass = 'awComWindow';

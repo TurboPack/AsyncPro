@@ -633,6 +633,9 @@ type
 
 implementation
 
+uses
+  UITypes;
+
 function SearchDataSource (const C : TComponent) : TApdStateCustomDataSource;
   {-Search for a comport in the same form as TComponent}
 
