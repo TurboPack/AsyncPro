@@ -107,7 +107,7 @@ begin
       begin
         inc(i);
         NumStr := '';
-        while (i <= length(S)) and (S[i] in ['$','0'..'9']) do begin
+        while (i <= length(S)) and CharInSet(S[i], ['$','0'..'9']) do begin
           NumStr := NumStr + S[i];
           inc(i);
         end;
@@ -123,7 +123,7 @@ begin
     '^' :
       begin
         inc(i);
-        if not (S[i] in ['A'..'Z','a'..'z']) then
+        if not CharInSet(S[i], ['A'..'Z','a'..'z']) then
           raise Exception.Create('Alpha character excepted after ^');
         Result := Result + chr(ord(UpCase(S[i])) - ord('A') + 1);
         inc(i);
@@ -199,8 +199,8 @@ begin
       rbString.Checked := Packet.StartCond = scString;
       ChkEndString.Checked := ecString in Packet.EndCond;
       ChkCharCount.Checked :=  ecPacketSize in Packet.EndCond;
-      EdtStartString.Text := StrToCtrlStr(Packet.StartString);
-      EdtEndString.Text := StrToCtrlStr(Packet.EndString);
+      EdtStartString.Text := StrToCtrlStr(string(Packet.StartString));
+      EdtEndString.Text := StrToCtrlStr(string(Packet.EndString));
       EdtCharCount.Text := IntToStr(Packet.PacketSize);
       ChkIgnoreCase.Checked := Packet.IgnoreCase;
       ChkAutoEnable.Checked := Packet.AutoEnable;
@@ -214,7 +214,7 @@ begin
             if rbString.Checked then
               begin
                 Packet.StartCond := scString;
-                Packet.StartString := CtrlStrToStr(EdtStartString.Text);
+                Packet.StartString := AnsiString(CtrlStrToStr(EdtStartString.Text));
               end
             else
               begin
@@ -227,7 +227,7 @@ begin
             if ChkEndString.Checked then
               begin
                 Packet.EndCond := Packet.EndCond + [ecString];
-                Packet.EndString := CtrlStrToStr(EdtEndString.Text);
+                Packet.EndString := AnsiString(CtrlStrToStr(EdtEndString.Text));
               end
             else
               Packet.EndString := '';
