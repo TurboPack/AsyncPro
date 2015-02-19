@@ -75,22 +75,6 @@ type
   TFaxClass = (fcUnknown, fcDetect, fcClass1, fcClass2, fcClass2_0);
   TFaxClassSet = set of TFaxClass;
 
-  {$IFNDEF AProBCB}
-  {For passing strings in event handlers}
-  {TPassString = String[255];} {moved to OOMisc}                         {!!.04}
-  {$ENDIF}
-
-  {Definition moved to OOMisc.pas}                                       {!!.04}
-  (*TFaxLogCode = TLogFaxCode;(
-    lfaxNone,               {none}
-    lfaxTransmitStart,      {transmit started}
-    lfaxTransmitOk,         {transmit finished okay}
-    lfaxTransmitFail,       {transmit failed}
-    lfaxReceiveStart,       {receive started}
-    lfaxReceiveOk,          {receive finished okay}
-    lfaxReceiveSkip,        {receive skipped on request}
-    lfaxReceiveFail);       {receive failed}*)
-
   {General fax event handlers}
   TFaxStatusEvent = procedure(CP : TObject; First, Last : Boolean) of object;
   TFaxLogEvent    = procedure(CP : TObject; LogCode : TFaxLogCode) of object;

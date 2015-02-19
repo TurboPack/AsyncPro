@@ -136,11 +136,6 @@ type
                                       Data : Pointer;
                                       SpokenData : string) of object;
 
-  {$IFNDEF Delphi6}
-  PDateTime = ^TDateTime;
-  PBoolean = ^Boolean;
-  {$ENDIF}
-
   ESapiPhoneError = class (EApdSapiEngineException);
 
   TApdSapiGrammarList = class (TStringList)
@@ -640,68 +635,6 @@ begin
   end;
   AddWord (Tokens, WorkString);
 end;
-
-{$IFNDEF Delphi6}
-
-{ Add some general convenience routines }
-
-function DayOfTheWeek (TheDate : TDateTime) : Integer;
-begin
-  Result := (DateTimeToTimeStamp (TheDate).Date - 1) mod 7 + 1;
-end;
-
-function MonthOfTheYear (TheDate : TDateTime) : Word;
-var
-  Year, Day: Word;
-begin
-  DecodeDate (TheDate, Year, Result, Day);
-end;
-
-procedure IncAMonth (var Year, Month, Day : Word; NumMonths : Integer);
-type
-  PMonthDayTable = ^TMonthDayTable;
-  TMonthDayTable = array[1..12] of Word;
-
-const
-  MonthDays: array [Boolean] of TMonthDayTable =
-    ((31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31),
-     (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31));
-var
-  DayTable: PDayTable;
-  Sign: Integer;
-  
-begin
-  if NumMonths >= 0 then
-    Sign := 1
-  else
-    Sign := -1;
-  Year := Year + (NumMonths div 12);
-  NumMonths := NumMonths mod 12;
-  Inc (Month, NumMonths);
-  if Word (Month-1) > 11 then
-  begin
-    Inc (Year, Sign);
-    Inc (Month, -12 * Sign);
-  end;
-  DayTable := @MonthDays[IsLeapYear (Year)];
-  if Day > DayTable^[Month] then
-    Day := DayTable^[Month];
-end;
-
-function IncMonth(const TheDate : TDateTime; NumberOfMonths : Integer) : TDateTime;
-var
-  Year, Month, Day : Word;
-begin
-  DecodeDate (TheDate, Year, Month, Day);
-  IncAMonth (Year, Month, Day, NumberOfMonths);
-  Result := EncodeDate (Year, Month, Day);
-end;
-
-function IncYear (TheDate : TDateTime; NumYears : Integer) : TDateTime;
-begin
-  Result := IncMonth (TheDate, NumYears * 12);
-end;
-{$ENDIF}
 
 { TApdSapiGrammarList }
 procedure TApdSapiGrammarList.ReadSectionValues (Section : string;

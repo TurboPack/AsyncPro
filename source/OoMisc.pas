@@ -44,11 +44,6 @@
 {Global defines potentially affecting this unit}
 {$I AWDEFINE.INC}
 
-{Options required for this unit}
-{$IFNDEF Win32}
-{$L-}
-{$ENDIF}
-
 unit OoMisc;
   {-Unit for miscellaneous routines}
 
@@ -134,17 +129,6 @@ type
   end;
   { XML definitions }
   DOMString = WideString;
-{$IFNDEF Win32}
-type
-  { define some types used by the 16-bit fax printer driver }
-  AnsiChar = System.AnsiChar;
-  PAnsiChar = System.PAnsiChar;
-  AnsiString  = System.AnsiString;
-  ShortString = System.AnsiString;
-  POverlapped = pointer;
-  DWORD = LongInt;
-{$ENDIF}
-
 type
   CharSet = set of AnsiChar;
 
@@ -1813,12 +1797,6 @@ type
   TTermCodeArray   = array[0..MaxCodeTable] of TCodeRec;
   TMakeUpCodeArray = array[0..MaxMUCodeTable] of TCodeRec;
 
-  {generic byte array}
-  {$IFNDEF Win32}
-  PByteArray = ^TByteArray;
-  TByteArray = array[0..$FFF0] of Byte;
-  {$ENDIF}
-
   PBufferedOutputFile = ^TBufferedOutputFile;
   TBufferedOutputFile = record
     BufPos  : Word;
@@ -3125,10 +3103,6 @@ begin
   if Index + (SegLen - 1) > FLen then  { requested segment runs past end of string }
     NewLen := FLen - Index;  { just return up to end of string }
 
-{$ifndef WIN32 }
-  if NewLen > 255 then  { old Pascal strings can contain no more than 255 chars }
-    NewLen := 255;
-{$endif }
   GotoPos(Index);
 
   P := StrAlloc(NewLen + 1);
@@ -3711,45 +3685,11 @@ type
     Result := S;
   end;
 
-  {$IFNDEF Win32}
-  function GetPtr(P : Pointer; O : LongInt) : Pointer; assembler;
-    {-Return a pointer to an offset in a huge memory block}
-  asm
-    mov   dx,Cardinal ptr [O+2]
-    shl   dx,3
-    add   dx,Cardinal ptr [P+2]
-    mov   ax,Cardinal ptr [O]
-    add   ax,Cardinal ptr [P]
-  end;
-  {$ELSE}
   function GetPtr(P : Pointer; O : LongInt) : Pointer; assembler; register;
   asm
     add   eax,edx   {eax = P; edx = Offset}
   end;
-  {$ENDIF}
 
-  {$IFNDEF Win32}
-  procedure NotBuffer(var Buf; Len : Cardinal); assembler;
-  asm
-    push  ds
-    lds   si,Buf                {DS:SI->Buf}
-    xor   ax,ax                 {AX=0}
-    mov   cx,Len                {CX = Length of buffer}
-    shr   cx,1                  {CX = CX / 2}
-    adc   ax,ax                 {AX = remainder from division}
-    jcxz  @2                    {Jump if there are no words to NOT}
-@1: not   Cardinal ptr [si]     {NOT next Cardinal of buffer}
-    inc   si                    {SI += 2}
-    inc   si
-    loop  @1
-
-@2: or    ax,ax                 {jump if no more data}
-    jz    @3
-    not   byte ptr [si]         {NOT last byte of buffer}
-
-@3: pop   ds
-  end;
-  {$ELSE}
   procedure NotBuffer(var Buf; Len : Cardinal); assembler; register;
   asm
     {eax is the pointer to the buffer}
@@ -3778,19 +3718,6 @@ type
 
 @4:
   end;
-  {$ENDIF}
-
-  {$IFNDEF Win32}
-  function Trim(const S : string) : string;
-    {-Remove leading and trailing whitespace from a string}
-  begin
-    Result := S;
-    while (Length(Result) > 0) and (Result[Length(Result)] <= ' ') do
-      Dec(Result[0]);
-    while (Length(Result) > 0) and (Result[1] <= ' ') do
-      Delete(Result, 1, 1);
-  end;
-  {$ENDIF}
 
   function DelayMS(MS : Cardinal) : Cardinal;
   var

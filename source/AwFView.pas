@@ -63,11 +63,7 @@ type
   PFax = ^TFax;
   TFax = array[1..MaxFaxPages] of TMemoryBitmapDesc;
 
-  {$IFNDEF Win32}
-  TViewerWndProc = function (Wnd: hWnd; Msg, wParam: Word; lParam: LongInt): LongInt;
-  {$ELSE}
   TViewerWndProc = function(hWnd: HWND; Msg: UINT; wParam: WPARAM; lParam: LPARAM): LRESULT; stdcall;
-  {$ENDIF}
 
   {Windows message record}
   wMsg = record
@@ -306,20 +302,6 @@ implementation
     GetViewerPtr := TViewer(GetWindowLong(HW, gwl_Viewer));
   end;
 
-  {$IFNDEF Win32}
-  procedure ExchangeInts(var I, J : Integer);
-    {-Exchange the values in two words.}
-    inline(
-      $8C/$DB/                 {mov bx,ds       ;save DS}
-      $5E/                     {pop si}
-      $1F/                     {pop ds          ;DS:SI => J}
-      $5F/                     {pop di}
-      $07/                     {pop es          ;ES:DI => I}
-      $8B/$04/                 {mov ax,[si]     ;AX = J}
-      $26/$87/$05/             {xchg ax,es:[di] ;I = J, AX = I}
-      $89/$04/                 {mov [si],ax     ;J = I}
-      $8E/$DB);                {mov ds,bx       ;restore DS}
-  {$ELSE}
   procedure ExchangeInts(var I, J : Integer); assembler; register;
   asm
     push  ebx
@@ -329,7 +311,6 @@ implementation
     mov   [eax],ecx
     pop   ebx
   end;
-  {$ENDIF}
 
 {******************************************************************************}
 
@@ -896,195 +877,6 @@ implementation
     end;
   end;
 
-  {$IFNDEF Win32}
-  procedure ReverseBits(Dest, Src : Pointer; L : Cardinal); assembler;
-  asm
-    push  ds
-    lds   si,Src          {DS:SI->Src}
-    les   di,Dest         {ES:DI->Dest}
-    mov   cx,L            {Get length of row in CX}
-    add   di,cx           {point ES:DI to end of destination}
-    dec   di
-    dec   di
-    shr   cx,1            {count words, not bytes}
-
-@1: cld                   {go forward}
-    lodsw                 {get next input word}
-    xchg  ah,al           {put bits in proper order}
-
-@2:
-    {put reverse of AL in AH}
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-    shr   ax,1
-    rcl   bx,1
-
-    mov   ax,bx
-    xchg  ah,al
-    std
-    stosw
-    loop  @1
-
-    pop   ds
-  end;
-
-  procedure BitBltRot90(Dest, Src : Pointer; Bit, BytesPerRow, Len : Cardinal); assembler;
-  asm
-    push  ds
-    mov   cx,Bit          {CX is bit offset}
-    inc   cx
-    les   di,Src          {ES:DI->Src}
-    lds   si,Dest         {DS:SI->Dest}
-    mov   bx,Len          {BX = loop counter}
-    shr   bx,1
-
-@1: push  bx              {save loop counter}
-    mov   bx,16           {loop 16 times}
-    mov   ax,es:[di]      {data in AX}
-    add   di,2
-    jc    @7
-@2: xchg  ah,al
-
-@3: xor   dl,dl           {clear DL}
-    shl   ax,1            {get the next bit out of AX}
-    rcr   dl,cl           {rotate the next bit into position in DL for ORing}
-    or    [si],dl         {or the new data into the destination}
-    add   si,BytesPerRow  {find the next line}
-    jc    @5              {do we need to switch segments? jump if so}
-@4: dec   bx              {decrement loop counter}
-    jnz   @3              {loop if more bits}
-
-    pop   bx              {restore main loop counter}
-    dec   bx              {decrement counter}
-    jnz   @1              {any data left? jump if so}
-    jmp   @9              {jump to end of routine}
-
-@5: push  bp              {check to see if this is the last iteration of loop}
-    mov   bp,sp
-    cmp   word ptr [bp+2],1
-    jne   @6
-    pop   bp
-    jmp   @4
-
-@6: pop   bp
-    push  si              {save offset}
-    mov   si,ds           {add SelectorInc (8) to DS}
-    add   si,8
-    mov   ds,si
-    pop   si              {restore offset}
-    jmp   @4              {continue where we left off}
-
-@7: push  bp              {check to see if this is the last iteration of loop}
-    mov   bp,sp
-    cmp   word ptr [bp+2],1
-    jne   @8
-    pop   bp
-    jmp   @2
-
-@8: pop   bp
-    push  di
-    mov   di,es
-    add   di,8
-    mov   es,di
-    pop   di
-    jmp   @2
-
-@9: pop   ds
-  end;
-
-  procedure BitBltRot270(Dest, Src : Pointer; Bit, BytesPerRow, Len : Cardinal); assembler;
-  asm
-    push  ds
-    mov   cx,Bit          {CX is bit offset}
-    inc   cx
-    les   di,Src          {ES:DI->Src}
-    lds   si,Dest         {DS:SI->Dest}
-    mov   bx,Len          {BX = loop counter}
-    shr   bx,1
-
-@1: push  bx              {save loop counter}
-    mov   bx,16           {loop 16 times}
-    mov   ax,es:[di]      {data in AX}
-    add   di,2
-    jc    @7
-@2: xchg  ah,al
-
-@3: xor   dl,dl           {clear DL}
-    shl   ax,1            {get the next bit out of AX}
-    rcr   dl,cl           {rotate the bit into position in DL for ORing}
-    or    [si],dl         {or the data into the destination}
-    sub   si,BytesPerRow
-    jc    @5
-@4: dec   bx              {decrement loop counter}
-    jnz   @3              {loop if more bits}
-
-    pop   bx              {restore main loop counter}
-    dec   bx              {decrement counter}
-    jnz   @1              {any data left? jump if so}
-    jmp   @9              {jump to end of routine}
-
-@5: push  bp              {check to see if this is the last iteration of loop}
-    mov   bp,sp
-    cmp   word ptr [bp+2],1
-    jne   @6
-    pop   bp
-    jmp   @4
-
-@6: pop   bp
-    push  si              {save offset}
-    mov   si,ds           {subtract SelectorInc (8) from DS}
-    sub   si,8
-    mov   ds,si
-    pop   si              {restore offset}
-    jmp   @4              {continue where we left off}
-
-@7: push  bp              {check to see if this is the last iteration of loop}
-    mov   bp,sp
-    cmp   word ptr [bp+2],1
-    jne   @8
-    pop   bp
-    jmp   @2
-
-@8: pop   bp
-    push  di
-    mov   di,es
-    add   di,8
-    mov   es,di
-    pop   di
-    jmp   @2
-
-@9: pop   ds
-  end;
-
-  {$ELSE}
   procedure ReverseBits(Dest, Src : Pointer; L : Cardinal); register; assembler;
   asm
     push  esi
@@ -1407,8 +1199,6 @@ implementation
     pop   ebx
   end;
 
-{$ENDIF}
-
   function TViewer.vRotatePage(const PageNum, Direction : Cardinal) : Integer;
     {-Rotate a page}
   var
@@ -1496,52 +1286,10 @@ implementation
       end;
     end;
 
-    {$IFNDEF Win32}
-    procedure HugeFill(Dest : Pointer; Len : Integer; Value : Byte); assembler;
-    asm
-      mov   dx,Len
-      les   di,Dest
-
-  @1: or    dx,dx
-      jz    @4
-      xor   cx,cx
-      sub   cx,di
-      or    cx,cx
-      jnz   @2
-      mov   cx,dx
-      jmp   @3
-
-  @2: cmp   cx,dx
-      jbe   @3
-      mov   cx,dx
-
-  @3: sub   dx,cx
-      mov   al,Value
-      mov   ah,al
-      shr   cx,1
-      rep   stosw
-      adc   cx,cx
-      rep   stosb
-
-      or    dx,dx
-      jz    @4
-      mov   bx,es
-      add   bx,8
-      mov   es,bx
-      xor   di,di
-      mov   cx,dx
-      shr   cx,1
-      rep   stosw
-      adc   cx,cx
-      rep   stosb
-  @4:
-    end;
-    {$ELSE}
     procedure HugeFill(Dest : Pointer; Len : Integer; Value : Byte);
     begin
       FillChar(Dest^, Len, Value);
     end;
-    {$ENDIF}
 
     procedure Rotate90(var B : TMemoryBitmapDesc);
     var
@@ -1610,22 +1358,6 @@ implementation
         IOfs := LongInt(BytesPerLine) * I;
         JOfs := LongInt(BytesPerLine) * J;
 
-        {$IFNDEF Win32}
-        hmemcpy(SrcBuf, GetPtr(BmpPtr, IOfs), ActBytes);
-        if (Remaining <> 0) then
-          PByteArray(SrcBuf)^[ActBytes-1] := PByteArray(SrcBuf)^[ActBytes-1] or Mask;
-        if (ActBytes <> BytesPerLine) then
-          FillChar(GetPtr(SrcBuf, ActBytes)^, BytesPerLine - ActBytes, $FF);
-        ReverseBits(DestBuf, SrcBuf, BytesPerLine);
-        hmemcpy(SrcBuf, GetPtr(BmpPtr, JOfs), ActBytes);
-        if (Remaining <> 0) then
-          PByteArray(SrcBuf)^[ActBytes-1] := PByteArray(SrcBuf)^[ActBytes-1] or Mask;
-        if (ActBytes <> BytesPerLine) then
-          FillChar(GetPtr(SrcBuf, ActBytes)^, BytesPerLine - ActBytes, $FF);
-        hmemcpy(GetPtr(BmpPtr, JOfs), DestBuf, BytesPerLine);
-        ReverseBits(DestBuf, SrcBuf, BytesPerLine);
-        hmemcpy(GetPtr(BmpPtr, IOfs), DestBuf, BytesPerLine);
-        {$ELSE}
         Move(GetPtr(BmpPtr, IOfs)^, SrcBuf^, ActBytes);
         if (Remaining <> 0) then
           PByteArray(SrcBuf)^[ActBytes-1] := PByteArray(SrcBuf)^[ActBytes-1] or Mask;
@@ -1640,7 +1372,6 @@ implementation
         Move(DestBuf^, GetPtr(BmpPtr, JOfs)^, BytesPerLine);
         ReverseBits(DestBuf, SrcBuf, BytesPerLine);
         Move(DestBuf^, GetPtr(BmpPtr, IOfs)^, BytesPerLine);
-        {$ENDIF}
 
         Inc(I);
         Dec(J);
@@ -1650,15 +1381,6 @@ implementation
       if Odd(B.Height) then begin
         Ofs := LongInt(BytesPerLine) * LongInt(B.Height div 2);   
 
-        {$IFNDEF Win32}
-        hmemcpy(SrcBuf, GetPtr(BmpPtr, Ofs), BytesPerLine);
-        if (Remaining <> 0) then
-          PByteArray(SrcBuf)^[ActBytes-1] := PByteArray(SrcBuf)^[ActBytes-1] or Mask;
-        if (ActBytes <> BytesPerLine) then
-          FillChar(GetPtr(SrcBuf, ActBytes)^, BytesPerLine - ActBytes, $FF);
-        ReverseBits(DestBuf, SrcBuf, BytesPerLine);
-        hmemcpy(GetPtr(BmpPtr, Ofs), DestBuf, BytesPerLine);
-        {$ELSE}
         Move(GetPtr(BmpPtr, Ofs)^, SrcBuf^, BytesPerLine);
         if (Remaining <> 0) then
           PByteArray(SrcBuf)^[ActBytes-1] := PByteArray(SrcBuf)^[ActBytes-1] or Mask;
@@ -1666,7 +1388,6 @@ implementation
           FillChar(GetPtr(SrcBuf, ActBytes)^, BytesPerLine - ActBytes, $FF);
         ReverseBits(DestBuf, SrcBuf, BytesPerLine);
         Move(DestBuf^, GetPtr(BmpPtr, Ofs)^, BytesPerLine);
-        {$ENDIF}
       end;
 
       SetBitmapBits(B.Bitmap, LongInt(BytesPerLine) * LongInt(B.Height), BmpPtr);
@@ -1970,11 +1691,7 @@ implementation
       {if the horizontal fill rectangle intersects with the}
       {vertical fill rectangle, adjust the horizontal rect}
       {accordingly}
-      {$IFNDEF Win32}
-      if (IntersectRect(ISect, HFill, VFill) = 0) then
-      {$ELSE}
       if not IntersectRect(ISect, HFill, VFill) then
-      {$ENDIF}
         {if the intersection is equal to the horizontal rect}
         {then the full rectangle should be filled, otherwise}
         {it is adjusted}
@@ -2070,11 +1787,7 @@ implementation
     Inc(Client.Left, vLeftOfs);
     Inc(Client.Right, vLeftOfs);
 
-    {$IFNDEF Win32}
-    if (IntersectRect(R, Mark, Client) <> 0) then begin
-    {$ELSE}
     if IntersectRect(R, Mark, Client) then begin
-    {$ENDIF}
       Dec(R.Top, vTopRow);
       Dec(R.Bottom, vTopRow);
       Dec(R.Left, vLeftOfs);
@@ -2265,27 +1978,6 @@ implementation
     end;
   end;
 
-  {$IFNDEF Win32}
-  function MaxCard(C1, C2 : Cardinal) : Cardinal; assembler;
-  asm
-    mov   ax,C1
-    mov   bx,C2
-    cmp   ax,bx
-    jae   @1
-    mov   ax,bx
-@1:
-  end;
-
-  function MinCard(C1, C2 : Cardinal) : Cardinal; assembler;
-  asm
-    mov   ax,C1
-    mov   bx,C2
-    cmp   ax,bx
-    jbe   @1
-    mov   ax,bx
-@1:
-  end;
-  {$ELSE}
   function MaxCard(C1, C2 : Cardinal) : Cardinal; assembler;
   asm
     cmp   eax,edx
@@ -2298,10 +1990,9 @@ implementation
   asm
     cmp   eax,edx
     jbe   @1
-    mov   eax,edx                                                   
+    mov   eax,edx
 @1:
   end;
-  {$ENDIF}
 
   function TViewer.apwViewSelect(R : PRect) : Integer;
     {-Select a portion of fax image}
@@ -2960,14 +2651,9 @@ implementation
 
 {Class routines}
 
-  {$IFNDEF Win32}
-  function vFaxViewerWndFunc(HWindow : TApdHwnd; Msg, wParam : Word;
-                             lParam : LongInt) : LongInt; export;
-  {$ELSE}
   function vFaxViewerWndFunc(HWindow : TApdHwnd; Msg : UINT;
                              wParam : WPARAM;
                              lParam : LPARAM) : LRESULT; stdcall export;
-  {$ENDIF}
   var
     PCreate : PCreateStruct absolute lParam;
     FV      : TViewer;

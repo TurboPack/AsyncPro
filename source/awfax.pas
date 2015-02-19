@@ -5611,12 +5611,8 @@ initialization
   Assign(Debug, 'debug.txt');
   Rewrite(Debug);
 
-{$IFNDEF Win32}
-  AddExitProc(FinalizeFax);
-{$ELSE}
 finalization
   FinalizeFax;
-{$ENDIF}
 {$ENDIF DebugFax}
 end.
 

@@ -2855,21 +2855,10 @@ var
     FormatMinSec := LeftPad(AnsiString(IntToStr(Min) + ':' + string(S)), 6);
   end;
 
-{$IFNDEF Win32}
-procedure ProtExitProc; far;
-begin
-  ProtList.Free;
-end;
-{$ENDIF}
-
 initialization
   ProtList := TList.Create;
 
-{$IFNDEF Win32}
-  AddExitProc(ProtExitProc);
-{$ELSE}
 finalization
   ProtList.Free;
-{$ENDIF}
 end.
 

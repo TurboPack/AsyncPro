@@ -296,9 +296,6 @@ type
 
     public                                                             {!!.04}
       constructor Create (AOwner : TPersistent);                       {!!.04}
-      {$IFNDEF VERSION5}                                               {!!.04}
-      procedure Delete (Item : integer);                               {!!.04}
-      {$ENDIF}                                                         {!!.04}
 
       function FindName (AName : string) : Integer;                    {!!.04}
       function GetBooleanValue (AName : string; APosition : Integer;   {!!.04}
@@ -353,9 +350,6 @@ type
 
     public                                                             {!!.04}
       constructor Create (AOwner : TPersistent);                       {!!.04}
-      {$IFNDEF VERSION5}                                               {!!.04}
-      procedure Delete (Item : integer);                               {!!.04}
-      {$ENDIF}                                                         {!!.04}
       function AddCommand (ACommand : TAdEmuCommand) : TAdEmuCommandListItem; {!!.04}
       property Items[Index : Integer] : TAdEmuCommandListItem          {!!.04}
                read GetItem write SetItem;                             {!!.04}
@@ -1171,14 +1165,6 @@ begin                                                                  {!!.04}
 end;                                                                   {!!.04}
 {=====}                                                                {!!.04}
 
-{$IFNDEF VERSION5}                                                     {!!.04}
-procedure TAdEmuCommandParams.Delete(Item: integer);                   {!!.04}
-begin                                                                  {!!.04}
-  GetItem(Item).Free;                                                  {!!.04}
-end;                                                                   {!!.04}
-{=====}                                                                {!!.04}
-{$ENDIF}                                                               {!!.04}
-
 function TAdEmuCommandParams.FindName (AName : string) : Integer;      {!!.04}
 var                                                                    {!!.04}
   i : Integer;                                                         {!!.04}
@@ -1417,14 +1403,6 @@ begin                                                                  {!!.04}
   NewCommand.Command := ACommand;                                      {!!.04}
   Result := NewCommand;                                                {!!.04}     
 end;                                                                   {!!.04}
-
-{$IFNDEF VERSION5}                                                     {!!.04}
-procedure TAdEmuCommandList.Delete(Item: integer);                     {!!.04}
-begin                                                                  {!!.04}
-  GetItem(Item).Free;                                                  {!!.04}
-end;                                                                   {!!.04}
-{=====}                                                                {!!.04}
-{$ENDIF}                                                               {!!.04}
 
 function TAdEmuCommandList.GetItem (Index : Integer) : TAdEmuCommandListItem; {!!.04}
 begin                                                                  {!!.04}

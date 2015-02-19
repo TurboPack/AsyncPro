@@ -1152,7 +1152,6 @@ end;
 
   function UnpackCallback(Unpack : PUnpackFax; plFlags : Word; var Data; Len,
                           PageNum : Cardinal) : Integer;
-  {$IFNDEF Win32} far; {$ENDIF}
   begin
     Result := ecOK;
     try
@@ -1167,7 +1166,6 @@ end;
 
   procedure UnpackStatusCallback(Unpack : PUnpackFax; FaxFile : string; PageNum : Cardinal;
                                  BytesUnpacked, BytesToUnpack : LongInt);
-  {$IFNDEF Win32} far; {$ENDIF}
   begin
     TApdCustomFaxUnpacker(Unpack^.UserData).Status(
       FaxFile, PageNum, BytesUnpacked, BytesToUnpack);

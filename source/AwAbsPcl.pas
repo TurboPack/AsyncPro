@@ -208,42 +208,6 @@ var
   function apUpdateCrc32(CurByte : Byte; CurCrc : LongInt) : LongInt;
     {-Returns an updated crc32}
 
-  {$IFNDEF Win32}
-  { Model for inline code below
-      UpdateCrc32 := Crc32Table[Byte(CurCrc xor LongInt(CurByte))] xor
-                     ((CurCrc shr 8) and $00FFFFFF);
-  }
-  Inline(
-                           {;Get args -- DX:BX = CurCrc, CX = CurByte;}
-    $5B/                   {        POP     BX}
-    $5A/                   {        POP     DX}
-    $59/                   {        POP     CX}
-    $52/                   {        PUSH    DX}
-    $53/                   {        PUSH    BX      ;Save original CurCrc}
-                           {;CX:AX := Get Crc32Table[CurCrc xor CurByte];}
-    $31/$CB/               {        XOR     BX,CX   ;DX:BX = CurCrc xor CurByte}
-    $30/$FF/               {        XOR     BH,BH   ;Byte(DX:BX)}
-    $D1/$E3/               {        SHL     BX,1    ;LongInt index}
-    $D1/$E3/               {        SHL     BX,1}
-    $03/$1E/>CRC32TABLEOFS/{        ADD     BX,[>Crc32TableOfs]}
-    $8B/$07/               {        MOV     AX,[BX]}
-    $8B/$4F/$02/           {        MOV     CX,[BX+2]}
-                           {;DX:BX := (CurCrc shr 8) and $00FFFFFF;}
-    $5B/                   {        POP     BX      ;Get original CurCrc}
-    $5A/                   {        POP     DX}
-    $51/                   {        PUSH    CX      ;Save CX}
-    $B9/$08/$00/           {        MOV     CX,8    ;Shift 8 bits}
-    $D1/$EA/               {C1:     SHR     DX,1    ;Hi reg into carry}
-    $D1/$DB/               {        RCR     BX,1    ;Carry into lo reg}
-    $E2/$FA/               {        LOOP    C1      ; for 8 bits}
-    $81/$E2/$FF/$00/       {        AND     DX,$00FF}
-                           {;DX:AX := ES:AX xor DX:BX (sets function result)}
-    $59/                   {        POP     CX}
-    $31/$D8/               {        XOR     AX,BX}
-    $89/$CB/               {        MOV     BX,CX}
-    $31/$DA);              {        XOR     DX,BX}
-  {$ENDIF}
-
 const
   CrcTable: array[0..255] of Cardinal = (
     $0000,  $1021,  $2042,  $3063,  $4084,  $50a5,  $60c6,  $70e7,
@@ -1666,10 +1630,6 @@ begin
   pSettings.ShortDateFormat := 'mm/dd/yyyy';
   TmpDateTime := StrToDateTime('01/01/1970', pSettings);
   UnixDaysBase := Trunc(TmpDateTime);
-
-  {$IFNDEF Win32}
-  Crc32TableOfs := Ofs(Crc32Table);
-  {$ENDIF}
 
   {Register protocol window class}
   apRegisterProtocolClass;

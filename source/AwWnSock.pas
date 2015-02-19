@@ -199,17 +199,11 @@ type
     function GetComError(var Stat : TComStat) : Integer; override;
     function GetComEventMask(EvtMask : Integer) : Cardinal; override;
     function GetComState(var DCB: TDCB): Integer; override;
-    {$IFNDEF Win32}
-    function SetComEventMask(EvtMask : Cardinal) : PWord; override;
-    {$ENDIF}
     function SetComState(var DCB : TDCB) : Integer; override;
     procedure StartDispatcher; override;
     procedure StopDispatcher; override;
     function ReadCom(Buf : PAnsiChar; Size: Integer) : Integer; override;
     function WriteCom(Buf : PAnsiChar; Size: Integer) : Integer; override;
-    {$IFNDEF Win32}
-    procedure SetMsrShadow(OnOff : Boolean); override;
-    {$ENDIF}
     function SetupCom(InSize, OutSize : Integer) : Boolean; override;
     function WaitComEvent(var EvtMask : DWORD;
       lpOverlapped : POverlapped) : Boolean; override;
@@ -1321,14 +1315,6 @@ begin
     end;
 end;
 
-{$IFNDEF Win32}
-function TApdWinsockDispatcher.SetComEventMask(EvtMask : Cardinal) : PWord;
-  { -Not supported under Winsock }
-begin
-  Result := nil;
-end;
-{$ENDIF}
-
 function TApdWinsockDispatcher.SetComState(var DCB : TDCB) : Integer;
   { -Set the a new communications device state from DCB }
 begin
@@ -1351,14 +1337,6 @@ function TApdWinsockDispatcher.ProcessCommunications : Integer;
 begin
   Result := Dispatcher(0, 1, 0);
 end;
-
-{$IFNDEF Win32}
-procedure TApdWinsockDispatcher.SetMsrShadow(OnOff : Boolean);
-  { -Set MsrShadow option }
-begin
-  { Do nothing -- doesn't apply to Winsock }
-end;
-{$ENDIF}
 
 function TApdWinsockDispatcher.SetupCom(InSize, OutSize : Integer) : Boolean;
   { -Bind Socket, and Connect or Listen }

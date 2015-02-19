@@ -307,9 +307,6 @@ type
     function Add : TApdStateCondition;
     property Items[Index: Integer] : TApdStateCondition
       read GetItem write SetItem; default;
-    {$IFNDEF VERSION5}
-    procedure Delete(Item : Integer);
-    {$ENDIF}
   end;
 
   { TApdCustomStateMachine events }
@@ -2476,13 +2473,6 @@ begin
   FState := State;
   inherited Create(ItemClass);
 end;
-
-{$IFNDEF VERSION5}
-procedure TApdStateConditions.Delete(Item: Integer);
-begin
-  GetItem(Item).Free;
-end;
-{$ENDIF}
 
 function TApdStateConditions.GetItem(Index: Integer): TApdStateCondition;
 begin

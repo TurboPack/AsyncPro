@@ -683,23 +683,6 @@ const
     Width  : 3;
     Height : 16);
 
-  {$IFNDEF Win32}
-  procedure RotateCode(var Code : Word; Sig : Word); assembler;
-    {-Flip code MSB for LSB}
-  asm
-    les   di,Code
-    mov   dx,es:[di]
-    xor   ax,ax
-    mov   cx,16
-@1: shr   dx,1
-    rcl   ax,1
-    loop  @1
-    mov   cx,16
-    sub   cx,Sig
-    shr   ax,cl
-    mov   es:[di],ax
-  end;
-  {$ELSE}
   procedure RotateCode(var Code : Word; Sig : Word); assembler; register;
     {-Flip code MSB for LSB}
   asm
@@ -725,7 +708,6 @@ const
     pop   ebx
     pop   edi
   end;
-  {$ENDIF}
 
 {Miscellaneous}
 
@@ -759,28 +741,6 @@ const
     awIsAnAPFFile := (DefAPFSig = Sig);
   end;
 
-  {$IFNDEF Win32}
-  procedure FastZero(var Buf; Len : Cardinal); assembler;
-  asm
-    cld               {go forward}
-    les   di,Buf      {ES:DI->Buf}
-    mov   cx,Len      {CX = length of buffer}
-    xor   ax,ax       {store zeros}
-    shr   cx,1        {CX = CX/2}
-    rep   stosw       {store zeros by word}
-    adc   cx,cx       {any leftover}
-    rep   stosb       {store zeros by byte}
-  end;
-
-  function MaxCardinal(A, B : Cardinal) : Cardinal; assembler;
-  asm
-    mov ax,a
-    cmp ax,b
-    jae @1
-    mov ax,b
-  @1:
-  end;
-  {$ELSE}
   procedure FastZero(var Buf; Len : Cardinal); assembler; register;
   asm
     push  edi
@@ -811,7 +771,6 @@ const
     mov   eax,edx
   @1:
   end;
-  {$ENDIF}
 
 {Buffered file code}
 
@@ -1115,36 +1074,6 @@ end;
     end;
   end;
 
-  {$IFNDEF Win32}
-  procedure acAddCodePrim(Cvt : PAbsFaxCvt; Code : Word; SignificantBits : Word); assembler;
-    {-Lowlevel routine to add a runlength code to the line buffer}
-  asm
-    les   di,Cvt
-
-    mov   ax,Code
-    xor   dx,dx                            {dx:ax = extended code}
-    mov   cx,TAbsFaxCvt(es:[di]).BitOfs    {cx = bit offset}
-    mov   si,cx                            {save a copy of bit offset}
-    jcxz  @2
-@1: shl   ax,1                             {shift code for bit offset}
-    rcl   dx,1
-    loop  @1
-
-@2: mov   bx,TAbsFaxCvt(es:[di]).ByteOfs   {bx = byte offset}
-    add   si,SignificantBits
-    mov   cx,si
-    shr   cx,3
-    add   TAbsFaxCvt(es:[di]).ByteOfs,cx   {update ByteOfs}
-    and   si,7
-    mov   TAbsFaxCvt(es:[di]).BitOfs,si    {update BitOfs}
-
-    les   di,TAbsFaxCvt(es:[di]).DataLine
-    add   di,bx
-    or    es:[di],ax                       {or new bit pattern in place}
-    or    es:[di+2],dl
-  end;
-
-  {$ELSE}
   procedure acAddCodePrim(Cvt : PAbsFaxCvt; Code : Word; SignificantBits : Word); assembler; register;
     {-Lowlevel routine to add a runlength code to the line buffer}
   asm
@@ -1182,78 +1111,7 @@ end;
     pop   edi
     pop   esi
   end;
-  {$ENDIF}
 
-  {$IFNDEF Win32}
-  procedure acAddCode(Cvt : PAbsFaxCvt; RunLen : Cardinal; IsWhite : Boolean); assembler;
-    {-Adds a code representing RunLen pixels of white (IsWhite=True) or black
-      to the current line buffer}
-  asm
-    mov   ax,word ptr IsWhite
-    mov   bx,RunLen
-
-    {Long run?}
-    cmp   bx,64
-    jb    @2
-
-    {Long white run?}
-    or    al,al
-    jz    @1
-
-    {Long white run}
-    shr   bx,6
-    dec   bx
-    mov   si,offset WhiteMUTable
-    shl   bx,2
-    les   di,Cvt
-    push  es
-    push  di
-    push  word ptr [bx+si]
-    push  word ptr [bx+si+2]
-    call  acAddCodePrim
-    mov   bx,RunLen
-    and   bx,63
-    mov   si,offset WhiteTable
-    jmp   @4
-
-    {Long black run}
-@1: shr   bx,6
-    dec   bx
-    mov   si,offset BlackMUTable
-    shl   bx,2
-    les   di,Cvt
-    push  es
-    push  di
-    push  word ptr [bx+si]
-    push  word ptr [bx+si+2]
-    call  acAddCodePrim
-    mov   bx,RunLen
-    and   bx,63
-    mov   si,offset BlackTable
-    jmp   @4
-
-    {Short white run?}
-@2: or    al,al
-    jz    @3
-
-    {Short white run}
-    mov   si,offset WhiteTable
-    jmp   @4
-
-    {Short black run}
-@3: mov   si,offset BlackTable
-
-    {Add last code}
-@4: shl   bx,2
-    les   di,Cvt
-    push  es
-    push  di
-    push  word ptr [bx+si]
-    push  word ptr [bx+si+2]
-    call  acAddCodePrim
-@5:
-  end;
-  {$ELSE}
   procedure acAddCode(Cvt : PAbsFaxCvt; RunLen : Cardinal; IsWhite : Boolean); assembler; register;
     {-Adds a code representing RunLen pixels of white (IsWhite=True) or black
       to the current line buffer}
@@ -1320,7 +1178,6 @@ end;
 @5: pop   edi
     pop   esi
   end;
-  {$ENDIF}
 
   procedure CountRunsAndAddCodes(Cvt : PAbsFaxCvt; var Buffer);
     {walk the pixel array, counting runlengths and adding codes to match}
@@ -1361,84 +1218,6 @@ end;
       end;
 
       DblWdth := DoubleWidth;{D6}
-
-      {$IFNDEF Win32}
-      asm
-        mov   dl,B
-        mov   dh,$40
-        mov   bl,PrevWhite
-        mov   bh,bl
-        mov   cx,Width
-        sub   cx,Margin
-
-        {get NewWhite}
-    @1: mov   bl,1
-        test  dl,dh
-        jz    @2
-        dec   bl
-
-        {update mask and get new byte if needed}
-    @2: mov   al,dh
-        shr   al,1
-        jnz   @3
-        inc   word ptr P
-        les   di,P
-        mov   dl,es:[di]
-        mov   al,$80
-    @3: mov   dh,al
-
-        {NewWhite = PrevWhite?}
-        cmp   bh,bl
-        jne   @4
-
-        {Last pixel?}
-        cmp   cx,1
-        jne   @5
-        test  DblWdth,1{D6}
-        jz    @4
-        mov   ax,TotalRunWidth
-        sub   ax,TotalRun
-        mov   RunLen,ax
-        shr   RunLen,1
-
-        {Save registers}
-    @4: push  bx
-        push  cx
-        push  dx
-
-        {Add output code}
-        test  DblWdth,1{D6}
-        jz    @6
-        shl   RunLen,1
-    @6:
-        {Increment TotalRun}
-        mov   ax,TotalRun
-        add   ax,RunLen
-        mov   TotalRun,ax
-
-        les   di,Cvt
-        push  es
-        push  di
-        push  RunLen
-        push  word ptr IsWhite
-        call  acAddCode
-
-        {Restore registers}
-        pop   dx
-        pop   cx
-        pop   bx
-
-        {Update state}
-        xor   IsWhite,1
-        mov   RunLen,0
-        mov   bh,bl
-
-        {Increment RunLen and loop}
-    @5: inc   RunLen
-        loop  @1
-      end;
-
-      {$ELSE}
 
       asm
         push  edi
@@ -1519,7 +1298,6 @@ end;
         pop   ebx
         pop   edi
       end;
-      {$ENDIF}
     end;
   end;
 
@@ -1545,20 +1323,6 @@ end;
       P     := PByte(@Buffer);
       Width := ResWidth;
 
-      {$IFNDEF Win32}
-      asm
-        les   di,P
-        xor   al,al
-        mov   cx,Width
-        shr   cx,3
-        cld
-        repe  scasb
-        mov   IsWhite,True
-        je    @1
-        mov   IsWhite,False
-    @1:
-      end;
-      {$ELSE}
       asm
         push  edi
         mov   edi,P
@@ -1572,7 +1336,6 @@ end;
         mov   IsWhite,False
     @1: pop   edi
       end;
-      {$ENDIF}
 
       if IsWhite then
         {yes; add a single code for the all-white line}
@@ -1816,31 +1579,6 @@ end;
   var
     Code : Integer;
 
-    {$IFNDEF Win32}
-    function NowAsFileDate: Longint;
-    var
-      Month, Day, Hour, Min, Sec, HSec: Byte;
-    var
-      Year: Word;
-    begin
-      asm
-        MOV     AH,2AH
-        INT     21H
-        MOV     Year,CX
-        MOV     Month,DH
-        MOV     Day,DL
-        MOV     AH,2CH
-        INT     21H
-        MOV     Hour,CH
-        MOV     Min,CL
-        MOV     Sec,DH
-        MOV     HSec,DL
-      end;
-      LongRec(Result).Lo := (Sec shr 1) or (Min shl 5) or (Hour shl 11);
-      LongRec(Result).Hi := Day or (Month shl 5) or ((Year - 1980) shl 9);
-    end;
-    {$ENDIF}
-
     function GetPackedDateTime : LongInt;
       {-Get the current date and time in BP7 packed date format}
     var
@@ -1924,9 +1662,6 @@ end;
 //          ForceExtensionZ(OutFileName, OutFileName, FaxFileExt);
           OutFileName := ChangeFileExt(FileName, '.' + FaxFileExt);
 
-          {$IFNDEF Win32}
-          OutFileName := AnsiUpperCase(OutFileName);
-          {$ENDIF}
         end else
           DefaultExtensionZ(OutFileName, DestFile, FaxFileExt);
 
@@ -2222,11 +1957,7 @@ end;
       end;
 
       {turn font handle into pointer}
-      {$IFNDEF Win32}
-      P := GlobalLock(MemHandle);
-      {$ELSE}
       P := Pointer(MemHandle);
-      {$ENDIF}
 
       {get data about font}
       if (FontHandle = StandardFont) then begin
@@ -2264,9 +1995,6 @@ end;
           Height := Height * 2;
         end;
 
-      {$IFNDEF Win32}
-      GlobalUnlock(MemHandle);
-      {$ENDIF}
       FreeResource(MemHandle);
 
       FontLoaded := True;
@@ -2420,56 +2148,6 @@ end;
     PTextFaxData(Cvt^.UserData)^.LineCount := LineCount;
   end;
 
-  {$IFNDEF Win32}
-  procedure fcAddRasterChar(var CharData;
-                            var Data;
-                                LPWidth  : Cardinal;
-                            var LByteOfs : Cardinal;
-                            var LBitOfs  : Cardinal); assembler;
-    {-Rasterize one line of one character, adding it to Data}
-  asm
-    les  di,LByteOfs
-    mov  bx,es:[di]
-    les  di,LBitOfs
-    mov  cx,es:[di]
-    les  di,Data
-    add  di,bx
-    mov  dx,LPWidth
-
-    push ds
-    lds  si,CharData
-    cld
-
-@1: lodsb                 {get next byte of character data}
-    xor  ah,ah
-    ror  ax,cl            {rotate by current bit offset}
-    or   es:[di],ax       {OR it into position}
-    mov  ax,dx            {ax = remaining pixels}
-    cmp  ax,8             {at least 8 remaining?}
-    jb   @2               {jump if not}
-    inc  di               {next output byte}
-    sub  dx,8             {update remaining pixels}
-    jnz  @1               {loop if more}
-    jmp  @3               {get out if not}
-@2: sub  dx,ax            {update remaining pixels}
-    add  cx,ax            {update bit offset}
-    mov  ax,cx
-    shr  ax,3
-    add  di,ax            {update byte offset}
-    and  cx,7             {update bit offset}
-    or   dx,dx            {more pixels to merge?}
-    jnz  @1               {jump if so}
-
-@3: pop  ds
-    mov  si,word ptr Data
-    sub  di,si
-    mov  bx,di
-    les  di,LByteOfs
-    mov  es:[di],bx
-    les  di,LBitOfs
-    mov  es:[di],cx
-  end;
-  {$ELSE}
   procedure fcAddRasterChar(var CharData;
                             var Data;
                                 LPWidth  : Cardinal;
@@ -2525,7 +2203,6 @@ end;
     pop   edi
     pop   esi
   end;
-  {$ENDIF}
 
   { Move source to Dest -- doubling each bit.  Count is amount of source }
   { to move -- Dest is assumed to be big enough to handle (Count x 2)    }
@@ -2607,58 +2284,6 @@ end;
     end;
   end;
 
-  {$IFNDEF Win32}
-  function fcDetab(Dest : PAnsiChar; Src : PAnsiChar; TabSize : Byte) : PAnsiChar; assembler;
-    {-Expand tabs in a string to blanks on spacing TabSize}
-  asm
-    push   ds
-    cld
-    xor    cx,cx                    {Default input length = 0}
-    xor    dx,dx                    {Default output length = 0 in DL}
-    lds    si,Src                   {DS:SI => input string}
-    les    di,Dest                  {ES:DI => output string}
-    push   es                       {save ES:DI for function result}
-    push   di
-    xor    bh,bh
-    mov    bl,TabSize               {BX has tab size}
-    or     bl,bl                    {Return zero length string if TabSize = 0}
-    jz     @@Done
-
-    mov    ah,09                    {Store tab in AH}
-
-  @@Next:
-    lodsb                           {Next input character}
-    or     al,al                    {Is it a null?}
-    jz     @@Done
-    cmp    al,ah                    {Is it a tab?}
-    je     @@Tab                    {Yes, compute next tab stop}
-    stosb                           {No, store to output}
-    inc    dx                       {Increment output length}
-    jmp    @@Next                   {Next character}
-
-  @@Tab:
-    push   dx                       {Save output length}
-    mov    ax,dx                    {Current output length in DX:AX}
-    xor    dx,dx
-    div    bx                       {OLen DIV TabSize in AL}
-    inc    ax                       {Round up to next tab position}
-    mul    bx                       {Next tab position in AX}
-    pop    dx                       {Restore output length}
-    sub    ax,dx                    {Count of blanks to insert}
-    add    dx,ax                    {New output length in DL}
-    mov    cx,ax                    {Loop counter for blanks}
-    mov    ax,$0920                 {Tab in AH, Blank in AL}
-    rep    stosb                    {Store blanks}
-    jmp    @@Next                   {Back for next input}
-
-  @@Done:
-    xor    al,al
-    stosb
-    pop    ax                       {function result = Dest}
-    pop    dx
-    pop    ds
-  end;
-  {$ELSE}
   function fcDetab(Dest : PAnsiChar; Src : PAnsiChar; TabSize : Byte;
     BufLen : DWORD) : PAnsiChar; assembler; register;                        {!!.04}
     {-Expand tabs in a string to blanks on spacing TabSize}
@@ -2724,7 +2349,6 @@ end;
     pop   edi
     pop   esi
   end;
-  {$ENDIF}
 
   function fcGetTextRasterLine( Cvt : PAbsFaxCvt; var Data; var Len : Integer;
                                 var EndOfPage, MorePages : Bool) : Integer;
@@ -4209,17 +3833,10 @@ end;
       MorePages := False;
       EndOfPage := (OnLine >= NumLines);
 
-      {$IFNDEF Win32}
-      if (CenterOfs = 0) then
-        hmemcpy(@Data, GetPtr(BitmapBuf, Offset), BytesPerLine)
-      else
-        hmemcpy(@TByteArray(Data)[CenterOfs], GetPtr(BitmapBuf, Offset), BytesPerLine);
-      {$ELSE}
       if (CenterOfs = 0) then
         Move(GetPtr(BitmapBuf, Offset)^, Data, BytesPerLine)
       else
         Move(GetPtr(BitmapBuf, Offset)^, TByteArray(Data)[CenterOfs], BytesPerLine);
-      {$ENDIF}
       Len := ResWidth div 8;
 
                                           { section rewritten }
@@ -4250,105 +3867,6 @@ end;
 
 {utilitarian routines}
 
-  {$IFNDEF Win32}
-  function ActualLen(var Data; Len : Cardinal) : Cardinal; assembler;
-    {-return actual length, in bytes, of a raster line}
-  asm
-    les   di,Data
-    add   di,Len
-    dec   di
-    xor   ax,ax
-    mov   cx,Len
-    std
-    repe  scasb
-    je    @1
-    mov   ax,cx
-    inc   ax
-  @1:
-    cld
-  end;
-
-  function ActualLenInverted(var Data; Len : Cardinal) : Cardinal; assembler;
-    {-return actual length, in bytes, of a raster line}
-  asm
-    les   di,Data
-    add   di,Len
-    dec   di
-    mov   ax,$FFFF
-    mov   cx,Len
-    std
-    repe  scasb
-    je    @1
-    mov   ax,cx
-    inc   ax
-    jmp   @2
-@1: xor   ax,ax
-@2: cld
-  end;
-
-  procedure HalfWidthBuf(var Data; var Len : Cardinal); assembler;
-  asm
-    push  ds
-    lds   si,Data             {DS:SI->Data}
-    mov   bx,si               {BX = offset of output}
-    les   di,Len              {ES:DI->Len}
-    mov   cx,es:[di]          {CX is loop counter}
-    shr   cx,1                {Count by words}
-    mov   es:[di],cx
-    or    cx,cx
-    jz    @2
-
-@1: mov   ax,[si]             {get the next two data bytes}
-    mov   dx,ax
-    mov   ah,al
-    mov   al,dh
-    xor   dx,dx               {clear output data}
-
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-    shr   ax,1
-    rcr   dh,1
-    shr   ax,1
-    rcr   dl,1
-
-    or    dh,dl
-    mov   [bx],dh
-    inc   bx
-    inc   si
-    inc   si
-    dec   cx
-    jnz   @1
-
-@2: pop   ds
-  end;
-
-  {$ELSE}
   function ActualLen(var Data; Len : Cardinal) : Cardinal; assembler; register;
     {-return actual length, in bytes, of a raster line}
   asm
@@ -4454,7 +3972,6 @@ end;
 @2: pop   ebx
     pop   esi
   end;
-  {$ENDIF}
 
 {Fax unpacking}
 
@@ -4958,76 +4475,9 @@ end;
       if Len > 0 then
         if IsWhite then begin
           {update line position; line already filled with zeros}
-          {$IFNDEF Win32}
-          asm
-            les di,Unpack
-            mov bx,es:[di].LineBit
-            add bx,Len
-            mov ax,bx
-            shr ax,3
-            add es:[di].LineOfs,ax
-            and bx,7
-            mov es:[di].LineBit,bx
-          end;
-          {$ELSE}
           UpdateLinePosition(Unpack, Len);
-          {$ENDIF}
         end else begin
-          {$IFNDEF Win32}
-          asm
-            mov cx,Len
-            les di,Unpack
-            mov bx,es:[di].LineBit
-            mov ax,es:[di].LineOfs
-            les di,es:[di].LineBuffer
-            add di,ax
-            cmp bx,0
-            jz  @3
-            mov dx,cx
-            mov al,$80
-            mov cl,bl
-            shr al,cl
-            mov cx,dx
-    @1:     or es:[di],al
-            inc bx
-            shr al,1
-            dec cx
-            cmp bx,8
-            jae @2
-            jcxz @2
-            jmp @1
-    @2:     mov ax,bx
-            shr ax,3
-            add di,ax
-            and bx,7
-    @3:     cmp cx,8
-            jb @4
-            mov dx,cx
-            shr cx,3
-            cld
-            mov al,$FF
-            rep stosb
-            and dx,7
-            mov cx,dx
-    @4:     jcxz @6
-            mov dx,cx
-            mov al,$80
-            mov cl,bl
-            shr al,cl
-            mov cx,dx
-    @5:     or es:[di],al
-            inc bx
-            shr al,1
-            loop @5
-    @6:     mov ax,di
-            les di,Unpack
-            sub ax,word ptr es:[di].LineBuffer
-            mov es:[di].LineOfs,ax
-            mov es:[di].LineBit,bx
-          end;
-          {$ELSE}
           OutputBlackRun(Unpack, Len);
-          {$ENDIF}
         end;
     end;
   end;
@@ -5040,20 +4490,6 @@ end;
                            (Len = (WideWidth     div 8))
   end;
 
-  {$IFNDEF Win32}
-  function LineHasData(var Buf; Len : Cardinal) : Boolean; assembler;
-    {-Return TRUE if raster row contains any non-zero bytes}
-  asm
-    cld
-    les   di,Buf
-    xor   ax,ax
-    mov   cx,Len
-    rep   scasb
-    je    @2
-@1: inc   ax
-@2:
-  end;
-  {$ELSE}
   function LineHasData(var Buf; Len : Cardinal) : Boolean; assembler; register;
     {-Return TRUE if raster row contains any non-zero bytes}
   asm
@@ -5069,7 +4505,6 @@ end;
 @2:
     pop   edi
   end;
-  {$ENDIF}
 
   function upOutputLine(Unpack : PUnpackFax; TheFlags : Cardinal) : Integer;
     {-Output an unpacked raster line}
@@ -5538,11 +4973,7 @@ end;
 
       {output each line of the buffer to the output function}
       for I := 0 to Pred(Height) do begin
-        {$IFNDEF Win32}
-        hmemcpy(LineBuffer, GetPtr(Lines, Width * I), Width);
-        {$ELSE}
         Move(GetPtr(Lines, LongInt(Width) * I)^, LineBuffer^, Width);
-        {$ENDIF}
         Code := upOutputLine(Unpack, 0);
         if (Code < ecOK) then begin
           upOutputBuffer := Code;
@@ -5874,13 +5305,8 @@ end;
 
         Offset := LongInt(Height) * LongInt(MaxWid);
         if (Len > 0) then begin
-          {$IFNDEF Win32}
-          hmemcpy(GetPtr(Lines, Offset), @Data, Len);
-
-          {$ELSE}
           P := GetPtr(Lines, Offset);
           Move(Data, P^, Len);
-          {$ENDIF}
         end else begin
           {fill whitespace buffer}
           if Inverted then
@@ -5888,13 +5314,8 @@ end;
           else
             FillChar(TmpBuffer^, MaxWid, $00);
 
-          {$IFNDEF Win32}
-          hmemcpy(GetPtr(Lines, Offset), TmpBuffer, MaxWid);
-
-          {$ELSE}
           P := GetPtr(Lines, Offset);
           Move(TmpBuffer^, P^, MaxWid);
-          {$ENDIF}
         end;
         Inc(Height);
 
@@ -5934,21 +5355,12 @@ end;
             Src  := GetPtr(Lines, DWORD(I) * MaxWid);
             Dest := GetPtr(Lines, DWORD(I) * W);
 
-            {$IFNDEF Win32}
-            hmemcpy(Dest, Src, Width);
-            if Pad then
-              if Inverted then
-                Byte(GetPtr(Lines, (I * W) + Width)^) := $FF
-              else
-                Byte(GetPtr(Lines, (I * W) + Width)^) := $00;
-            {$ELSE}
             Move(Src^, Dest^, Width);
             if Pad then
               if Inverted then
                 Dest^[Width] := $FF
               else
                 Dest^[Width] := $00;
-            {$ENDIF}
           end;
           Width := W;
 
@@ -6289,104 +5701,6 @@ type
       end;
     end;
 
-    {$IFNDEF Win32}
-    procedure CompressLine(Unpack : PUnpackFax; Data : PPcxUnpackData; OutLine : PByteArray); assembler;
-    asm
-      push  ds
-
-      lds   si,Unpack                           {DS:SI->Unpack}
-      mov   cx,[si].TUnpackFax.Width            {CX = # of input bytes}
-      lds   si,OutLine                          {DS:SI->Input data}
-      les   di,Data                             {ES:DI->PCX pack data struct}
-      add   di,OFFSET TPcxUnpackData.PackBuffer {ES:DI->Data.PackBuffer}
-      mov   bx,di                               {Save BX to count output len}
-
-      or    cx,cx                               {any data to pack?}
-      jz    @7                                  {if not, exit}
-
-      mov   al,[si]                             {get first byte of input}
-      inc   si
-      xor   dx,dx                               {run length of 1}
-      dec   cx
-      jz    @2                                  {jump if no data left}
-
-      {count run loop}
-  @1: cmp   dl,62                               {maximum run length reached?}
-      je    @5                                  {jump if so}
-      cmp   al,[si]                             {still running?}
-      jne   @2                                  {jump if not}
-      inc   si                                  {increment input pointer}
-      inc   dx                                  {increment run counter}
-      dec   cx                                  {one more byte of input used}
-      jz    @5                                  {output run if no more data}
-      jmp   @1
-
-      {output data}
-  @2: or    dx,dx                               {run data to output?}
-      jnz   @5                                  {jump if so}
-      not   al
-      mov   ah,al                               {save data byte}
-      and   al,$C0                              {top two bits on?}
-      cmp   al,$C0
-      jne   @3                                  {if not, just output}
-      mov   byte ptr es:[di],$C1                {output 1-byte run to}
-      inc   di                                  {  avoid misinterp of data}
-  @3: mov   es:[di],ah                          {output data byte}
-      inc   di                                  {increment output pointer}
-      or    cx,cx                               {any data left?}
-      jz    @7                                  {jump if not}
-      mov   al,[si]                             {get next data byte}
-      inc   si                                  {increment input pointer}
-      dec   cx                                  {decrement input counter}
-      jnz   @1                                  {jump if any data left}
-
-      {output last literal data byte}
-      not   al
-      mov   ah,al                               {save data byte}
-      and   al,$C0                              {top two bits on?}
-      cmp   al,$C0
-      jne   @4                                  {if not, just output}
-      mov   byte ptr es:[di],$C1                {output 1-byte run to}
-      inc   di                                  {  avoid misinterp of data}
-  @4: mov   es:[di],ah                          {output data byte}
-      inc   di                                  {increment output counter}
-      jmp   @7
-
-      {output run}
-  @5: inc   dx                                  {increment for actual count}
-      or    dl,$C0                              {mask on two MSBs}
-      mov   es:[di],dl                          {output run code}
-      inc   di                                  {increment output pointer}
-      not   al                                  {invert bits of raster data}
-      mov   es:[di],al                          {output data byte}
-      inc   di                                  {increment output pointer}
-      xor   dx,dx                               {zero run counter}
-      or    cx,cx                               {any data left?}
-      jz    @7                                  {jump if not}
-      mov   al,[si]                             {get next input byte}
-      inc   si
-      dec   cx                                  {decrement input counter}
-      jnz   @1                                  {jump if no any data left}
-
-      {output last literal data byte}
-      not   al
-      mov   ah,al                               {save data byte}
-      and   al,$C0                              {top two bits on?}
-      cmp   al,$C0
-      jne   @6                                  {if not, just output}
-      mov   byte ptr es:[di],$C1                {output 1-byte run to}
-      inc   di                                  {  avoid misinterp of data}
-  @6: mov   es:[di],ah                          {output data byte}
-      inc   di                                  {increment output counter}
-
-      {cleanup}
-  @7: lds   si,Data                             {DS:SI->PCX unpack data}
-      sub   di,bx                               {DI = length of output}
-      mov   [si].TPcxUnpackData.PBOfs,di        {Set output length}
-
-      pop   ds
-    end;
-    {$ELSE}
     procedure CompressLine(Unpack : PUnpackFax; Data : PPcxUnpackData; OutLine : PByteArray); assembler; register;
     asm
       push  edi
@@ -6486,7 +5800,6 @@ type
       pop   esi
       pop   edi
     end;
-    {$ENDIF}
 
   begin
     with Unpack^, Data do begin
@@ -6503,11 +5816,7 @@ type
 
         {go through each line and write it}
         for I := 0 to Pred(Height) do begin
-          {$IFNDEF Win32}
-          hmemcpy(OutLine, GetPtr(Lines, LongInt(Width) * I), Width);
-          {$ELSE}
           Move(GetPtr(Lines, LongInt(Width) * LongInt(I))^, OutLine^, Width);
-          {$ENDIF}
           CompressLine(Unpack, @Data, OutLine);
           Code := WriteOutFile(OutFile, PackBuffer, PBOfs);
           if (Code < ecOK) then begin
@@ -6739,90 +6048,6 @@ type
 
 {Unpack to TIFF routines}
 
-  {$IFNDEF Win32}
-  procedure TiffEncode( var InBuf ;     InLen  : Cardinal;
-                        var OutBuf; var OutLen : Cardinal ); assembler;
-  asm
-    push ds
-
-    mov  ax,InLen                 {get input length}
-    or   ax,ax                    {is it zero?}
-    jnz  @I1                      {jump if not}
-    xor  di,di                    {return zero output length}
-    jmp  @A
-
-@I1:les  di,OutBuf                {di = current output offset}
-    mov  dx,di                    {dx = saved starting output offset}
-    mov  bx,di                    {bx = control byte offset}
-    mov  byte ptr es:[bx],0       {reset initial control byte}
-
-    lds  si,InBuf                 {si = current input offset}
-
-    cmp  ax,1                     {is input length 1?}
-    ja   @I2                      {jump if not}
-
-    mov  al,[si]                  {get first input byte}
-    mov  es:[bx+1],al             {store it past control byte}
-    mov  di,2                     {output length is two}
-    jmp  @A                       {exit}
-
-@I2:cld                           {forward}
-    mov  cx,si
-    add  cx,ax                    {cx = offset just beyond end of input}
-
-    mov  ax,[si]                  {does data start with a run?}
-    cmp  ah,al
-    je   @I3                      {jump if so}
-
-    inc  di                       {prepare to store first input byte}
-    mov  es:[di],al               {store it}
-    inc  di                       {prepare to store next input byte}
-    inc  si                       {we've used first input byte}
-
-@I3:dec  si                       {first time in, adjust for next inc si}
-
-@1: inc  si                       {next input byte}
-    cmp  si,cx
-    jae  @9                       {jump out if done}
-
-    mov  ax,[si]                  {get next two bytes}
-    cmp  ah,al                    {the same?}
-    jne  @5                       {jump if not a run}
-    mov  bx,di                    {save OutPos offset}
-    mov  byte ptr es:[bx],0       {reset control byte}
-    mov  es:[bx+1],al             {store run byte}
-
-@2: inc  si                       {next input byte}
-    cmp  si,cx                    {end of input?}
-    jae  @3                       {jump if so}
-    cmp  [si],al                  {still a run?}
-    jne  @3                       {jump if not}
-    cmp  byte ptr es:[bx],$81     {max run length?}
-    je   @3                       {jump if so}
-    dec  byte ptr es:[bx]         {decrement control byte}
-    jmp  @2                       {loop}
-
-@3: dec  si                       {back up one input character}
-    inc  di                       {step past control and run bytes}
-    inc  di
-    jmp  @1                       {loop}
-
-@5: cmp  byte ptr es:[bx],$7f     {run already in progress?}
-    jb  @6                        {jump if not}
-    mov  bx,di                    {start a new control sequence}
-    mov  byte ptr es:[bx],0       {reset control byte}
-    inc  di                       {next output position}
-    jmp  @7
-@6: inc  byte ptr es:[bx]         {increase non-run length}
-@7: stosb                         {copy input byte to output}
-    jmp  @1
-
-@9: pop  ds
-    sub  di,dx
-@A: les  si,OutLen
-    mov  es:[si],di
-  end;
-  {$ELSE}
   procedure TiffEncode( var InBuf ;     InLen  : Cardinal;
                         var OutBuf; var OutLen : Cardinal ); assembler; register;
   asm
@@ -6909,7 +6134,6 @@ type
     pop   esi
     pop   edi
   end;
-  {$ENDIF}
 
   function OutputToTiff(Unpack : PUnpackFax; InName, OutName : string) : Integer;
   type
@@ -7091,11 +6315,7 @@ type
       FastZero(CompBuf^, Width * 2);
       Bytes := 0;
       for OnLine := 0 to Pred(Height) do begin
-        {$IFNDEF Win32}
-        hmemcpy(OutLine, GetPtr(Lines, LongInt(Width) * OnLine), Width);
-        {$ELSE}
         Move(GetPtr(Lines, LongInt(Width) * LongInt(OnLine))^, OutLine^, Width);
-        {$ENDIF}
         TiffEncode(OutLine^, Width, CompBuf^, CompLen);
         Inc(Bytes, CompLen);
         Code := WriteOutFile(OutFile, CompBuf^, CompLen);
@@ -7227,11 +6447,7 @@ type
       FastZero(OutLine^, LineBytes);
       NotBuffer(OutLine^, LineBytes);
       for OnLine := Pred(Height) downto 0 do begin
-        {$IFNDEF Win32}
-        hmemcpy(OutLine, GetPtr(Lines, LongInt(Width) * OnLine), Width);
-        {$ELSE}
         Move(GetPtr(Lines, LongInt(Width) * Integer(OnLine))^, OutLine^, Width);
-        {$ENDIF}
         NotBuffer(OutLine^, Width);
         Code := WriteOutFile(OutFile, OutLine^, LineBytes);
         if (Code < ecOK) then begin
