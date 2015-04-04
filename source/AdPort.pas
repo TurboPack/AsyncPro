@@ -264,12 +264,12 @@ type
     {Debugging}
     FTracing         : TTraceLogState;      {Controls Tracing state}
     FTraceSize       : Cardinal;            {Number of tracing entries}
-    FTraceName       : TPassString;         {Name of trace file}
+    FTraceName       : string;              {Name of trace file}
     FTraceHex        : Boolean;             {True to dump trace non-printables in hex}
     FTraceAllHex     : Boolean;             {True to dump all trace chars in hex}
     FLogging         : TTraceLogState;      {Controls DispatchLogging state}
     FLogSize         : Cardinal;            {Size, in bytes, of log buffer}
-    FLogName         : TPassString;         {Name of log file}
+    FLogName         : string;              {Name of log file}
     FLogHex          : Boolean;             {True to dump log non-printables in hex}
     FLogAllHex       : Boolean;             {True to dump all log chars in hex}
 
@@ -584,7 +584,7 @@ type
       read FTracing write SetTracing default adpoDefTracing;
     property TraceSize : Cardinal
       read FTraceSize write SetTraceSize default adpoDefTraceSize;
-    property TraceName : TPassString
+    property TraceName : string
       read FTraceName write FTraceName;
     property TraceHex : Boolean
       read FTraceHex write FTraceHex default adpoDefTraceHex;
@@ -595,7 +595,7 @@ type
       read FLogging write SetLogging default adpoDefLogging;
     property LogSize : Cardinal
       read FLogSize write SetLogSize default adpoDefLogSize;
-    property LogName : TPassString
+    property LogName : string
       read FLogName write FLogName;
     property LogHex : Boolean
       read FLogHex write FLogHex default adpoDefLogHex;
@@ -1007,16 +1007,16 @@ var
                        InitTracing(FTraceSize);
           tlDump   : if (FTracing = tlOn) or (FTracing = tlPause) then begin
                        StartTracing;
-                       DumpTrace(string(FTraceName), FTraceHex);
+                       DumpTrace(FTraceName, FTraceHex);
                      end;
           tlAppend : if (FTracing = tlOn) or (FTracing = tlPause) then begin
                        StartTracing;
-                       AppendTrace(string(FTraceName), FTraceHex, tlOff);           // SWB
+                       AppendTrace(FTraceName, FTraceHex, tlOff);           // SWB
                      end;
           tlAppendAndContinue :                                             // SWB
                      if (FTracing = tlOn) or (FTracing = tlPause) then begin// SWB
                        StartTracing;                                        // SWB
-                       AppendTrace(string(FTraceName), FTraceHex, FTracing);        // SWB
+                       AppendTrace(FTraceName, FTraceHex, FTracing);        // SWB
                      end;                                                   // SWB
           tlPause  : if (FTracing = tlOn) then
                        StopTracing;
@@ -1066,16 +1066,16 @@ var
                        InitLogging(FLogSize);
           tlDump   : if (FLogging = tlOn) or (FLogging = tlPause) then begin
                        StartLogging;
-                       DumpLog(string(FLogName), FLogHex);
+                       DumpLog(FLogName, FLogHex);
                      end;
           tlAppend : if (FLogging = tlOn) or (FLogging = tlPause) then begin
                        StartLogging;
-                       AppendLog(string(FLogName), FLogHex, tlOff);                 // SWB
+                       AppendLog(FLogName, FLogHex, tlOff);                 // SWB
                      end;
           tlAppendAndContinue :                                             // SWB
                      if (FLogging = tlOn) or (FLogging = tlPause) then begin// SWB
                        StartLogging;                                        // SWB
-                       AppendLog(string(FLogName), FLogHex, FLogging);              // SWB
+                       AppendLog(FLogName, FLogHex, FLogging);              // SWB
                      end;                                                   // SWB
           tlPause  : if (FLogging = tlOn) then
                        StopLogging;
