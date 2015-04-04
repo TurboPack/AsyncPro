@@ -794,7 +794,7 @@ end;
 
 procedure TApdModemCapDetail.WriteLine(const Str: string);
 begin
-  Writeln(AnsiString(Str));
+  WriteLine(AnsiString(Str));
 end;
 
 procedure TApdModemCapDetail.WriteXMLStr(const Str, sVal : string);
