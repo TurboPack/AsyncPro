@@ -648,7 +648,6 @@ var
   MS        : TMemoryStream;
   ResInfo   : THandle;
   ResHandle : THandle;
-  ResNameZ  : PChar;
   Res       : PByteArray;
   i         : integer;
   Sig       : Integer;
@@ -665,13 +664,7 @@ begin
   {clear the hash table, ready for loading}
   Clear;
   {get the resource info handle}
-  GetMem(ResNameZ, succ(length(aResName)));
-  try
-    StrPCopy(ResNameZ, aResName);
-    ResInfo := FindResource(aInstance, ResNameZ, RT_RCDATA);
-  finally
-    FreeMem(ResNameZ, succ(length(aResName)));
-  end;
+  ResInfo := FindResource(aInstance, PChar(aResName), RT_RCDATA);
   if (ResInfo = 0) then
     Exit;
   {load and lock the resource}
@@ -1086,7 +1079,6 @@ var
   MS        : TMemoryStream;
   ResInfo   : THandle;
   ResHandle : THandle;
-  ResNameZ  : PChar;
   Res       : PByteArray;
   i         : integer;
   Sig       : Integer;
@@ -1105,13 +1097,7 @@ begin
   {clear the hash table, ready for loading}
   Clear;
   {get the resource info handle}
-  GetMem(ResNameZ, succ(length(aResName)));
-  try
-    StrPCopy(ResNameZ, aResName);
-    ResInfo := FindResource(aInstance, ResNameZ, RT_RCDATA);
-  finally
-    FreeMem(ResNameZ, succ(length(aResName)));
-  end;
+  ResInfo := FindResource(aInstance, PChar(aResName), RT_RCDATA);
   if (ResInfo = 0) then
     Exit;
   {load and lock the resource}

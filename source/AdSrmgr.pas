@@ -334,14 +334,12 @@ end;
 procedure TAdStringResource.srLoadResource(Instance : THandle; const ResourceName : string);
 var
   H : THandle;
-  Buf : array[0..255] of Char;
 begin
-  StrPLCopy(Buf, ResourceName, SizeOf(Buf)-1);
   Instance := FindResourceHInstance(Instance);  {get loaded Resource DLL if any}
-  H := FindResource(Instance, Buf, RT_RCDATA);  {attempt to load resource}
+  H := FindResource(Instance, PChar(ResourceName), RT_RCDATA);  {attempt to load resource}
   if H = 0 then begin  {not found}
     Instance := HInstance;
-    H := FindResource(Instance, Buf, RT_RCDATA);{try to find it in the main binary}
+    H := FindResource(Instance, PChar(ResourceName), RT_RCDATA);{try to find it in the main binary}
     if H = 0 then      {still not found?}
       raise ETpsStringResourceError.CreateFmt(TpsResStrings[3], [ResourceName]);  {complain}
   end;
