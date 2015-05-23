@@ -270,6 +270,13 @@ const
       end;
     end;
 
+    //SJB EOF shifted  from using atEOFMarker to using Bytes Remaining
+    //Previous change by SWB left it so that if ASCIISuppressCtrlZ, then ^Z would end the file
+    //This seems to invalidate ASCIISuppressCtrlZ, so I have returned it to a straight suppression function.
+    // and file ONLY ends at actual file end. I think this fits with the lack of an EOFChar property
+    // I use ascii protocol to send binary files ie. all chars must be able to pass through
+    // Not sure if there is anyway for ASCII protocol to do retransmit of blocks.
+    //if so, I am assuming that the protocol will fix up BytesRemaining to compensate somewhere. (I only dump to port)
   begin
     with P^ do begin
       {Assume not finished}
@@ -277,6 +284,9 @@ const
 
       {Send as much data as we can}
       AccumDelay := 0;
+      if (Cardinal(aBytesRemaining)<=aLastBlockSize) then begin //sjb We will end file in this block
+          aLastBlockSize:=aBytesRemaining; //sjb so normal loop compare will stop it.
+      end;
       Finished := sSendIndex >= aLastBlockSize;
       while not Finished do begin
         {Get next character to send}
@@ -285,36 +295,45 @@ const
 
         {Check character before sending}
         case C of
-          {^Z : if FlagIsSet(aFlags, apAsciiSuppressCtrlZ) then begin} 
-                 {spSendBlockPart := True;}
-                 {Exit;}
-               {end;}
 
           ^M : if sCRTransMode = atAddLFAfter then begin
                  aHC.PutString(^M^J);
                  Inc(aBytesTransferred, 2);
-                 Dec(aBytesRemaining, 2);
+                 Dec(aBytesRemaining, 1); //sjb was 2, but wrong if only 1 char consumed
                end else if sCRTransMode <> atStrip then
                  SendChar(^M);
 
           ^J : if sLFTransMode = atAddCRBefore then begin
                  aHC.PutString(^M^J);
                  Inc(aBytesTransferred, 2);
-                 Dec(aBytesRemaining, 2);
+                 Dec(aBytesRemaining, 1); //sjb was 2, but wrong if only 1 char consumed
                end else if sLFTransMode <> atStrip then
                  SendChar(^J);
+//SJ -Old parts below--
+          {^Z : if FlagIsSet(aFlags, apAsciiSuppressCtrlZ) then begin}
+                 {spSendBlockPart := True;}
+                 {Exit;}
+               {end;}
+//           else begin
+//                  if C = atEOFMarker then begin
+//                    if FlagIsSet(aFlags, apAsciiSuppressCtrlZ) then begin
+//                      spSendBlockPart := True;
+//                      aNoMoreData := True;                                  // SWB
+//                      Exit;
+//                    end;
+//                  end;                                                      // SWB
+//                  SendChar(C);                                              // SWB
+//                end; //else
 
-           else begin                                                  
-                  if C = atEOFMarker then begin                        
-                    if FlagIsSet(aFlags, apAsciiSuppressCtrlZ) then begin 
-                      spSendBlockPart := True;                         
-                      aNoMoreData := True;                                  // SWB                         
-                      Exit;
-                    end;
-                  end;                                                      // SWB
-                  SendChar(C);                                              // SWB
-                end;                                                   
-        end;
+          ^Z : if FlagIsSet(aFlags, apAsciiSuppressCtrlZ) then begin  //sjb
+                    Dec(aBytesRemaining, 1);
+                  end else begin
+                    SendChar(C);
+               end;
+           else begin         //sjb
+                  SendChar(C);
+                end; //else
+        end; //case of C
 
         {Check for interline delay}
         if (C = sEOLChar) and (sInterLineDelay > 0) then begin
@@ -337,16 +356,15 @@ const
             Exit;
           end;
         end;
-
         {Set Finished flag}
         Finished := (sSendIndex >= aLastBlockSize) or
                     (AccumDelay > sMaxAccumDelay);
-      end;
-
+      end; //while
       {End of block if we get here}
       spSendBlockPart := True;
-    end;
-  end;
+      aNoMoreData := (aBytesRemaining<=0); //sjb file is done. Set it here AFTER any timer exits
+    end; //with
+  end;//fn
 
   function apCollectBlock(P : PProtocolData; var Block : TDataBlock) : Boolean;
     {-Collect received data into aDataBlock, return True for full block}
