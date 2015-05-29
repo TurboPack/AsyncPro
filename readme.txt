@@ -47,7 +47,7 @@ steps:
 
   3. Add the source subdirectory (e.g., d:\AsyncPro\source) to the
      IDE's library path. For CBuilder, add the hpp subdirectory
-     (e.g., d:\AsyncPro\source\hpp) to the IDE's system include path.
+     (e.g., d:\AsyncPro\source\hpp\Win32\Debug) to the IDE's system include path.
 
   3. Open & compile the runtime package specific to the IDE being
      used.
