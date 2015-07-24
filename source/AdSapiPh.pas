@@ -2083,7 +2083,7 @@ procedure TApdCustomSapiPhone.DoLineCallState (Device, P1, P2, P3 : Integer);
           WaveID.dwSize := SizeOf (TWaveFormatEx);
           FSapiEngine.CheckError (IAT.WaveFormatSet (WaveID));
           FSapiEngine.CheckError (IAT.AudioObject (IAMM));
-          FSapiEngine.DirectSR.InitAudioSourceObject (DWORD (IAT));
+          FSapiEngine.DirectSR.InitAudioSourceObject (NativeUInt (IAT));
         except
           on E:EOleException do begin
             FSapiEngine.CheckError (E.ErrorCode);
@@ -2713,31 +2713,29 @@ var
 begin
   LastRule := 0;
   LastPhrase := '';
-  case Msg.WParam of
-    ApdSapiAskOperator    :
-      LastReply := ptOperator;
-    ApdSapiAskHangUp      :
-      LastReply := ptHangup;
-    ApdSapiAskBack        :
-      LastReply := ptBack;
-    ApdSapiAskWhere       :
-      LastReply := ptWhere;
-    ApdSapiAskHelp        :
-      LastReply := ptHelp;
-    ApdSapiAskRepeat      :
-      LastReply := ptRepeat;
-    ApdSapiAskSpeakFaster :
-      LastReply := ptSpeakFaster;
-    ApdSapiAskSpeakSlower :
-      LastReply := ptSpeakSlower;
-    ApdSapiAbort         :
-      LastReply := ptAbort;
-    else
-      begin
-        LastReply := ptCustom;
-        LastRule := Msg.WParam;
-        LastPhrase := GetPhraseData (Msg.LParam);
-      end;
+  if Msg.WParam = ApdSapiAskOperator then
+    LastReply := ptOperator
+  else if Msg.WParam = ApdSapiAskHangUp then
+    LastReply := ptHangup
+  else if Msg.WParam = ApdSapiAskBack then
+    LastReply := ptBack
+  else if Msg.WParam = ApdSapiAskWhere then
+    LastReply := ptWhere
+  else if Msg.WParam = ApdSapiAskHelp then
+    LastReply := ptHelp
+  else if Msg.WParam = ApdSapiAskRepeat then
+    LastReply := ptRepeat
+  else if Msg.WParam = ApdSapiAskSpeakFaster then
+    LastReply := ptSpeakFaster
+  else if Msg.WParam = ApdSapiAskSpeakSlower then
+    LastReply := ptSpeakSlower
+  else if Msg.WParam = ApdSapiAbort then
+    LastReply := ptAbort
+  else
+  begin
+    LastReply := ptCustom;
+    LastRule := Msg.WParam;
+    LastPhrase := GetPhraseData (Msg.LParam);
   end;
   UpdateStateMachine (LastReply, LastRule, LastPhrase);
 end;

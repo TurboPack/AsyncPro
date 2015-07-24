@@ -18,7 +18,8 @@ Delphi and C++Builder. It provides direct access to serial ports, TAPI, and the
 Microsoft Speech API. It supports faxing, terminal emulation, VOIP, & more.
 
 This is a source-only release of TurboPack AsyncPro. It includes
-designtime and runtime packages for Delphi and C++Builder and supports Win32 and Win64.
+designtime and runtime packages for Delphi and C++Builder and supports Win32.
+Win64 support is experimental!
 
 ==============================================
 

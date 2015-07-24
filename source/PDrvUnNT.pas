@@ -61,7 +61,7 @@ uses
   LZExpand,
   ShellAPI,
   Messages,
-  Dialogs;
+  {$if CompilerVersion >= 23}VCL.Dialogs;{$else}Dialogs;{$endif}
 
 type
   PFileBuf      = ^TFileBuf;
@@ -171,7 +171,7 @@ begin
       Result[Len] := S[I];
       Inc(I);
     end;
-  Result[0] := Char(Len);
+  Result[0] := AnsiChar(Len);
 end;
 
 function WinExecAndWait32(FileName : PChar; CommandLine : PChar;
@@ -248,27 +248,27 @@ end;
 function UniDrvFilesExist : Boolean;
 var
   SizeNeeded : DWORD;                                              
-  StBuf1 : array[0..255] of Char;
-  StBuf2 : array[0..255] of Char;
-  StBuf3 : array[0..255] of Char;
-  SysDir : array[0..255] of Char;
+  StBuf1 : string;//array[0..255] of Char;
+  StBuf2 : string;//array[0..255] of Char;
+  StBuf3 : string;//array[0..255] of Char;
+  SysDir : string;//array[0..255] of Char;
 begin
   UniDrvFilesExist := False;
-
+  SetLength(SysDir,256);
   { get the Windows system directory }
-  if not GetPrinterDriverDirectory(nil, nil, 1, @SysDir, sizeof(SysDir), SizeNeeded) then begin
+  if not GetPrinterDriverDirectory(nil, nil, 1, @SysDir, 256, SizeNeeded) then begin
     MessageDlg('Couldn''t determine the Windows NT printer driver directory',
                mtError, [mbOK], 0);
     Exit;
   end;
 
-  StrCopy(StBuf1, SysDir);
+  StBuf1:= SysDir;//StrCopy(StBuf1, SysDir);
   AddBackSlashZ(StBuf1, StBuf1);
-  StrCopy(StBuf2, StBuf1);
-  StrCopy(StBuf3, StBuf1);
-  StrCat(StBuf1, 'Rasdd.dll');
-  StrCat(StBuf2, 'Rasddui.dll');
-  StrCat(StBuf3, 'Rasddui.hlp');
+  StBuf2:= StBuf1;//StrCopy(StBuf2, StBuf1);
+  StBuf3:= StBuf1;//StrCopy(StBuf3, StBuf1);
+  StBuf1:= StBuf1 + 'Rasdd.dll';//StrCat(StBuf1, 'Rasdd.dll');
+  StBuf2:= StBuf2 + 'Rasddui.dll';//StrCat(StBuf2, 'Rasddui.dll');
+  StBuf3:= StBuf3 + 'Rasddui.hlp';//StrCat(StBuf3, 'Rasddui.hlp');
   UniDrvFilesExist := ExistFileZ(StBuf1) and ExistFileZ(StBuf2) and ExistFileZ(StBuf3);
 end;
 
@@ -286,15 +286,15 @@ type
     RASDDDLL      : ShortString;
     RASDDDLLDNum  : Byte;
     RASDDDLLFile  : ShortString;
-    RASDDDLLDisk  : ShortString;
+    RASDDDLLDisk  : string;
     RASDDUI       : ShortString;
     RASDDUIDNum   : Byte;
     RASDDUIFile   : ShortString;
-    RASDDUIDisk   : ShortString;
+    RASDDUIDisk   : string;
     RASDDHLP      : ShortString;
     RASDDHLPDNum  : Byte;
     RASDDHLPFile  : ShortString;
-    RASDDHLPDisk  : ShortString;
+    RASDDHLPDisk  : string;
 
     WinDir        : array[0..255] of Char;
     SysDir        : array[0..255] of Char;
@@ -316,28 +316,27 @@ var
   function InstallUniFile (SourceName : PChar; DestName : PChar) : Boolean;
     { Copy and uncompress one file }
   var
-    StrBuf      : array[0..255] of Char;
-    StrBuf1     : array[0..255] of Char;
+    StrBuf  : string;//array[0..255] of Char;
+    StrBuf1 : string;//array[0..255] of Char;
   begin
-
     with LocalVars^ do begin
 
-      StrCopy(StrBuf, '');
+      StrBuf:= '';//StrCopy(StrBuf, '');
 
-      StrCat(StrBuf, SourceName);
-      StrCat(StrBuf, ' ');
-      StrCat(StrBuf, DriverDir);
+      StrBuf:= StrBuf + SourceName;//StrCat(StrBuf, SourceName);
+      StrBuf:= StrBuf + ' ';//StrCat(StrBuf, ' ');
+      StrBuf:= StrBuf + DriverDir;//StrCat(StrBuf, DriverDir);
       AddBackSlashZ(StrBuf, StrBuf);
-      StrCat(StrBuf, DestName);
+      StrBuf:= StrBuf + DestName;//StrCat(StrBuf, DestName);
 
-      StrCopy(StrBuf1, '');
-      StrCat(StrBuf1, DriverDir);
+      StrBuf1:= '';//StrCopy(StrBuf1, '');
+      StrBuf1:= StrBuf1 + DriverDir;//StrCat(StrBuf1, DriverDir);
       AddBackSlashZ(StrBuf1, StrBuf1);
-      StrCat(StrBuf1, DestName);
+      StrBuf1:= StrBuf1 + DestName;//StrCat(StrBuf1, DestName);
       if StrPos(SourceName, DestName) = nil then
-        Result := (WinExecAndWait32('expand ', StrBuf, sw_Hide) <> -1)
+        Result := (WinExecAndWait32('expand ', @StrBuf, sw_Hide) <> -1)
       else
-        Result := CopyFile(SourceName, StrBuf1, False);
+        Result := CopyFile(SourceName, @StrBuf1, False);
     end;
   end;
 

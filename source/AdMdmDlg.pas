@@ -38,8 +38,20 @@ unit AdMdmDlg;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  OOMisc, AdMdm, StdCtrls, Buttons, ExtCtrls, ImgList;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Forms,
+  Controls,
+  OOMisc,
+  AdMdm,
+  StdCtrls,
+  Buttons,
+  ExtCtrls,
+  ImgList,
+  ImageList;
 
 type
   TApdModemStatusDialog = class(TForm)

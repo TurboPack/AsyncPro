@@ -2563,11 +2563,7 @@ end;
         Exit;
       end;
 
-      {$IFDEF UseAwWin32}                                                // SWB
-      RefreshStatus;                                                     // SWB
-      {$ELSE}                                                            // SWB
       ComStatus.cbInQue := InQueueUsed;                                  // SWB
-      {$ENDIF}                                  // UseAwWin32            // SWB
       if ComStatus.cbInQue > 0 then begin
         Result := True;
 
@@ -4148,18 +4144,36 @@ end;
 
   function PortIn(Address: Word): Byte;
     {-Use this instead of Port since it works in both 16 and 32-bit mode}
-  begin
     asm
-      mov dx,Address
+      mov dx,ax
       in  al,dx
-      mov @Result,al
     end;
-  end;
+
 
   procedure TApdBaseDispatcher.SetRS485Mode(OnOff : Boolean);
     {-Set/reset the RS485 flag}
   var
     LocalBaseAddress : Word;
+
+    procedure GetLocalBaseAddress;
+    {Undocumented function returns the base address in edx}
+    {$ifndef CPUX64}
+    asm
+      mov    eax,CidEX
+      push   eax
+      push   10
+      call   EscapeCommFunction  //  (CidEx, 10);
+      mov    LocalBaseAddress, dx
+    end;
+    {$else}
+    asm
+      mov    ecx, CidEX
+      mov    rdx,10
+      call   EscapeCommFunction  //  (CidEx, 10);
+      mov    LocalBaseAddress, dx
+    end;
+    {$endif}
+
   begin
     EnterCriticalSection(DataSection);
     try
@@ -4171,11 +4185,7 @@ end;
           OutThread.Priority :=
             TThreadPriority(Ord(tpHigher) + ThreadBoost);
         if Win32Platform <> VER_PLATFORM_WIN32_NT then begin
-          {Undocumented function returns the base address in edx}
-          EscapeCommFunction(CidEx, 10);
-          asm
-            mov  LocalBaseAddress, dx
-          end;
+          GetLocalBaseAddress;
           BaseAddress := LocalBaseAddress;
         end;
       end else begin
@@ -4761,11 +4771,7 @@ end;
             {$ENDIF}
 
             {Wait for either a com event or a timeout}
-            {$IFDEF UseAwWin32}                                             // SWB
-            WaitForSingleObject(ComEvent, 50);                              // SWB
-            {$ELSE}                                                         // SWB
             FQueue.WaitForBuffer(50);                                       // SWB
-            {$ENDIF}                                                        // SWB
             {$IFDEF DebugThreadConsole}
             Writeln(ThreadStatus(DispWake));
             {$ENDIF}

@@ -510,12 +510,21 @@ var
   CanRead2 : Cardinal;
 
   function MinCard(C1, C2 : Cardinal) : Cardinal; assembler;
+  {$ifndef CPUX64}
   asm
     cmp   eax,edx
     jbe   @1
     mov   eax,edx
   @1:
   end;
+  {$else}
+  asm
+    sub   ecx,ecx
+    sbb   eax,eax
+    and   eax,ecx
+    add   eax,edx
+  end;
+  {$endif}
 
   procedure UpDatePtr(var SPtr : PAnsiChar; Delta : Integer);
   begin

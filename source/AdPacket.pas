@@ -115,9 +115,7 @@ type
     HandlerInstalled : Boolean;
     fEnabled : Boolean;
     BufferPtr : Integer;
-{$ifndef UseOldPacket}        // --zer0 to delete UseOldPacket
     fCurBfrOffset: Integer;
-{$endif}
     fDataBuffer : PAnsiChar;    // --sm ansi
     dpDataBufferSize : Integer;
     fCapture : TApdDataPacket;
@@ -439,11 +437,9 @@ var
 begin
   NewStart := Start+Size;
   dec(BufferPtr,NewStart);
-{$ifndef UseOldPacket}
   Dec(fCurBfrOffset, NewStart);
   if (fCurBfrOffset < 0) then
     fCurBfrOffset := -1;
-{$endif}
   if BufferPtr > 0 then begin
     move(fDataBuffer[NewStart],fDataBuffer[0],BufferPtr); // --sm check BufferPtr
   end else
@@ -473,9 +469,6 @@ begin
   end;                                                                   {!!.02}
   fCapture := nil;
   Value.HaveCapture := False;
-{$ifdef UseOldPacket}
-  NotifyData(0);
-{$endif}
 end;
 
 procedure TApdDataPacketManager.SetInEvent(Value : Boolean);
@@ -514,7 +507,6 @@ begin
     exit;
   end;
   if BufferPtr > 0 then
-{$ifndef UseOldPacket}
     fCurBfrOffset := NewDataStart;
     while (fCurBfrOffset < BufferPtr) do
     begin
@@ -552,29 +544,6 @@ begin
         if not Interest then
             DisposeBuffer;
     end;
-{$else}     {UseOldPacket}
-    if assigned(fCapture) then
-      fCapture.ProcessData(NewDataStart)
-    else begin
-      for i := 0 to pred(PacketList.Count) do begin
-        TApdDataPacket(PacketList[i]).ProcessData(NewDataStart);
-        if assigned(fCapture) then break;
-        if not assigned(fDataBuffer) then
-          exit;
-      end;
-      if not assigned(fCapture) then begin
-        Interest := False;
-        for i := 0 to pred(PacketList.Count) do
-          with TApdDataPacket(PacketList[i]) do
-            if Enabled and (Mode <> dpIdle) and (BeginMatch <> -1) then begin
-              Interest := True;
-              break;
-            end;
-        if not Interest then
-          DisposeBuffer;
-      end;
-    end;
-{$endif}    {UseOldPacket}
 end;
 
 procedure TApdDataPacketManager.EnablePackets;
@@ -842,7 +811,6 @@ begin
   end;
 end;
 
-{$ifndef UseOldPacket}
 // A replacement for the old packet matching logic.  This versions strives to
 // work in a way that is more in conformance with the documentation.
 // We do this by calling the routine for each character in the current
@@ -1018,119 +986,6 @@ begin
       end;
     end;
 end;
-{$else}     {UseOldPacket}
-procedure TApdDataPacket.ProcessData(StartPtr : Integer);
-var
-  I,J : Integer;
-  C : AnsiChar;
-  Match : Boolean;
-begin
-  if Enabled then begin
-    I := StartPtr;
-    while (Assigned(Manager)) and (I < Manager.BufferPtr) do begin
-      if Mode = dpIdle then
-        if WillCollect then begin
-          Mode := dpCollecting;
-          WillCollect := False;
-        end else
-          break;
-      C := Manager.DataBuffer[I];
-      if Mode <> dpCollecting then
-        begin
-          if (WildStartString[StartMatchPos] = '1')
-          or (not IgnoreCase and (C = InternalStartString[StartMatchPos]))
-          or (IgnoreCase and (UpCase(C) = InternalStartString[StartMatchPos])) then begin
-            if BeginMatch = -1 then
-              fBeginMatch := I;
-            if StartMatchPos = Length(InternalStartString) then begin
-              Mode := dpCollecting;                                         // SWB
-              if ((EndCond = []) or                                         // SWB
-                  ((ecPacketSize in EndCond) and                            // SWB
-                   (Length(InternalStartString) = LocalPacketSize))) then   // SWB
-              begin                                                         // SWB
-                fDataSize := I - BeginMatch + 1;
-                Packet(ecPacketSize);
-                Exit;                                                       // SWB
-              end;                                                          // SWB
-            end else
-              inc(StartMatchPos);
-          end else if BeginMatch <> -1 then begin
-            I := BeginMatch + 1;
-            StartMatchPos := 1;
-            fBeginMatch := -1;
-            continue;
-          end;
-        end
-      else
-        begin
-          if BeginMatch = -1 then
-            fBeginMatch := I;
-          if (ecPacketSize in EndCond)
-          and ((I - BeginMatch) + 1 >= LocalPacketSize) then begin
-            fDataSize := (I - BeginMatch) + 1;
-            Packet(ecPacketSize);
-            exit;
-          end else
-          if (ecString in EndCond) then begin
-              if (WildEndString[EndMatchPos] = '1')
-              or (not IgnoreCase and (C = InternalEndString[EndMatchPos]))
-              or (IgnoreCase and (UpCase(C) = InternalEndString[EndMatchPos])) then begin
-                if EndMatchPos = Length(InternalEndString) then begin
-                  fDataSize := I - BeginMatch + 1;
-                  Packet(ecString);
-                  exit;
-                end else
-                  inc(EndMatchPos);
-              end else begin
-                {No match here, but we may already have seen part of the string}
-                if EndMatchPos > 1 then begin
-                  Match := False;
-                  EndMatchStart := I-1;
-                  for j := 2 to EndMatchPos do begin
-                    EndMatchPos := J - 1;
-                    Match := True;
-                    repeat
-                      if (WildEndString[EndMatchPos] = '1')
-                      or (not IgnoreCase
-                          and (Manager.DataBuffer[EndMatchStart + EndMatchPos]
-                            = InternalEndString[EndMatchPos]))
-                      or (IgnoreCase
-                          and (UpCase(Manager.DataBuffer[EndMatchStart + EndMatchPos])
-                            = InternalEndString[EndMatchPos])) then
-                        inc(EndMatchPos)
-                      else
-                        Match := False;
-                      if Match and (EndMatchPos > Length(InternalEndString)) then begin
-                        fDataSize := (EndMatchStart + EndMatchPos) - BeginMatch {+1};{!!.02}
-                        Packet(ecString);
-                        exit;
-                      end;
-                    until not Match
-                      or (EndMatchPos > Length(InternalEndString))
-                      or ((EndMatchStart + EndMatchPos) > Manager.BufferPtr - 1);
-                    if Match then begin
-                      inc(EndMatchPos);
-                      break;
-                    end
-                  end;
-                  if not Match then begin
-                    EndMatchPos := 1;
-                    EndMatchStart := -1;
-                  end;
-                end else begin
-                  EndMatchPos := 1;
-                  EndMatchStart := -1;
-                end;
-              end;
-            end;
-        end;
-      if Manager.DataBuffer = nil then
-        break;
-      inc(I);
-    end;
-  end;
-end;
-{$endif}        {UseOldPacket}
 procedure TApdDataPacket.Loaded;
 begin
   inherited Loaded;

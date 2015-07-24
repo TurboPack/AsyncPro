@@ -46,8 +46,15 @@ interface
 
 uses
   {-----RTL}
-  SysUtils, Windows, Messages, Classes, Graphics, Controls,
-  Forms, Dialogs, ShellAPI,
+  SysUtils,
+  Windows,
+  Messages,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  ShellAPI,
   {-----APD}
   OoMisc,
   AdExcept,

@@ -275,7 +275,7 @@ begin
   { component editors }
   RegisterComponentEditor(TApdDataPacket, TApdPacketEditor);
   RegisterComponentEditor(TApdCustomState, TApdStateEditor);
-  RegisterComponentEditor(TApdCustomVoip, TapdVoipAudioVideoEditor); 
+  RegisterComponentEditor(TApdCustomVoip, TapdVoipAudioVideoEditor);
 end;
 
 function TApdValidEnumProperty.GetAttributes: TPropertyAttributes;

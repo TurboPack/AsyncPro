@@ -37,8 +37,16 @@ unit AdVoipEd;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  StdCtrls, AdVoip;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  StdCtrls,
+  AdVoip;
 
 type
   TVoipAudioVideoEditor = class(TForm)

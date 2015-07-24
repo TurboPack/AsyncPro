@@ -37,8 +37,20 @@ unit AdMdm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  OOMisc, AdPort, AdPacket, AdLibMdm, AdExcept, FileCtrl;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  OOMisc,
+  AdPort,
+  AdPacket,
+  AdLibMdm,
+  AdExcept,
+  FileCtrl;
 
 const
   ApxDefModemCapFolder = '';                                             {!!.04}

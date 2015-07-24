@@ -207,36 +207,52 @@ const
 
   function ToChar(C : AnsiChar) : AnsiChar;
     {-Returns C+$20}
-  asm
-    add al,$20;
+//  asm
+//    add al,$20;
+//  end;
+  begin
+    Result:= AnsiChar(byte(C)+$20);
   end;
 
   function UnChar(C : AnsiChar) : AnsiChar;
     {-Returns C-$20}
-  asm
-    sub al,$20
+//  asm
+//    sub al,$20
+//  end;
+  begin
+    Result:= AnsiChar(byte(C)-$20);
   end;
 
   function Ctl(C : AnsiChar) : AnsiChar;
     {-Returns C xor $40}
-  asm
-    xor al,$40
+//  asm
+//    xor al,$40
+//  end;
+  begin
+    Result:= AnsiChar(Byte(c) xor $40);
   end;
 
   function Inc64(W : Cardinal) : Cardinal;
     {-Returns (W+1) mod 64}
-  asm
-    inc ax
-    and ax,$3F
+//  asm
+//    inc ax
+//    and ax,$3F
+//  end;
+  begin
+    Result:= (W+1) and $3F;
   end;
 
   function Dec64(W : Cardinal) : Cardinal;
     {-Returns (W-1) or 63 if W=0}
-  asm
-    dec ax
-    jns @@done
-    mov ax,63
-    @@done:
+//  asm
+//    dec ax
+//    jns @@done
+//    mov ax,63
+//    @@done:
+//  end;
+  begin
+    Result:= W-1;
+    if Integer(Result) < 0 then Result:= 63;
   end;
 
   function IsCtl(C : AnsiChar) : Bool;
@@ -250,8 +266,11 @@ const
   end;
 
   function HiBit(C : AnsiChar) : AnsiChar;
-  asm
-    or ax,$80
+//  asm
+//    or ax,$80
+//  end;
+  begin
+    Result:= AnsiChar(byte(c) or $80);
   end;
 
   procedure kpFinishWriting(P : PProtocolData);

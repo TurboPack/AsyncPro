@@ -39,9 +39,18 @@ unit AdXLbMdm;
 interface
 
 uses
-  SysUtils, Classes, Controls, Forms, Dialogs,
-  StdCtrls, ExtCtrls,
-  OOMisc, AdXBase, AdXParsr, AdExcept, AdLibMdm;
+  SysUtils,
+  Classes,
+  Controls,
+  Forms,
+  Dialogs,
+  StdCtrls,
+  ExtCtrls,
+  OOMisc,
+  AdXBase,
+  AdXParsr,
+  AdExcept,
+  AdLibMdm;
 
 type
   TApdModemCapDetail = class(TApdBaseComponent)

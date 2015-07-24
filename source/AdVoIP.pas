@@ -53,7 +53,14 @@ interface
 
 uses
   OleServer,
-  SysUtils, ActiveX, Classes, Windows, Controls, ComObj, Messages, Forms,
+  SysUtils,
+  ActiveX,
+  Classes,
+  Windows,
+  Controls,
+  ComObj,
+  Messages,
+  Forms,
   { APRO units }
   OOMisc,
   AdExcept,

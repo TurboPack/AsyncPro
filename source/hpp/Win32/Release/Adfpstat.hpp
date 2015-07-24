@@ -19,10 +19,10 @@
 #include <System.Classes.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.Controls.hpp>
-#include <Vcl.StdCtrls.hpp>
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.Buttons.hpp>
 #include <AdFaxPrn.hpp>
+#include <Vcl.StdCtrls.hpp>
 
 //-- user supplied -----------------------------------------------------------
 

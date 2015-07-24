@@ -69,8 +69,16 @@ unit adgsm;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Controls, Forms,
-  OoMisc, AdPort, AdPacket, AdExcept;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Controls,
+  Forms,
+  OoMisc,
+  AdPort,
+  AdPacket,
+  AdExcept;
 
 const
   ApdGSMResponse = WM_USER + 100;
@@ -980,16 +988,16 @@ var
       //NumLength is length of center number, in octets
       if NumLength > 0 then begin
         // Next two digits is Type-of-Address octet
-        I := StrToInt(Copy(string(TempS), 3, 2));
+//        I := StrToInt(Copy(string(TempS), 3, 2));
         // I is the Type-of-Address octet
-        case I of
-          91 : begin
-
-          end;
-          81 : begin
-
-          end;
-        end; // End Case
+//        case I of
+//          91 : begin
+//
+//          end;
+//          81 : begin
+//
+//          end;
+//        end; // End Case
         // NumLength = length of center phone number
         TempStaID := '';
         I := 5;
@@ -1027,21 +1035,21 @@ var
       //Address-Length. Length of the sender number (0B hex = 11 dec)
       NumLength := (StrToInt('$' + string(St)));
       // Next two digits is Type-of-Address octet
-      I := StrToInt('$' + Copy(string(TempS), 3, 2));
-      case I of
-        133 : begin
-          // 85 in Hex = Voice mail ?
-        end;
-        145 : begin
-          // 91 in Hex
-        end;
-        129 : begin
-          // 81 in Hex
-        end;
-        200 : begin
-          // C8 in Hex
-        end;
-      end; // End Case
+//      I := StrToInt('$' + Copy(string(TempS), 3, 2));
+//      case I of
+//        133 : begin
+//          // 85 in Hex = Voice mail ?
+//        end;
+//        145 : begin
+//          // 91 in Hex
+//        end;
+//        129 : begin
+//          // 81 in Hex
+//        end;
+//        200 : begin
+//          // C8 in Hex
+//        end;
+//      end; // End Case
       // NumLength = Length of phone number
       TempStaID := '';
       if Odd(NumLength) then

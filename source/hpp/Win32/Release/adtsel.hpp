@@ -18,7 +18,6 @@
 #include <Winapi.Messages.hpp>
 #include <System.SysUtils.hpp>
 #include <System.Classes.hpp>
-#include <Vcl.Controls.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.StdCtrls.hpp>
@@ -30,6 +29,7 @@
 #include <OoMisc.hpp>
 #include <AdSelCom.hpp>
 #include <LNSWin32.hpp>
+#include <Vcl.Controls.hpp>
 
 //-- user supplied -----------------------------------------------------------
 

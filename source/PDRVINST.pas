@@ -257,7 +257,7 @@ var
           end;
           NextNode^.Next := nil;
           BlockRead(F, NextNode^.Tag[1], B);
-          NextNode^.Tag[0] := Chr(B);
+          NextNode^.Tag[0] := AnsiChar(Chr(B));
           NextNode^.Id := pred(RN.rnID and $7FFF) * 16 + i;
         end;
       end;
@@ -520,8 +520,8 @@ function InstalledOk : Boolean;
   { Try to create an IC for the print driver to see if it installed ok }
 var
   pdrvHandle : THandle;
-  StrBuf1    : array[0..255] of Char;
-  StrBuf2    : array[0..255] of Char;
+  StrBuf1    : string;//array[0..255] of Char;
+  StrBuf2    : string;//array[0..255] of Char;
 
 begin
   with PrinterStrings^ do begin
@@ -529,9 +529,14 @@ begin
     TimesChecked := 0;
     InstalledOk := False;
 
-    GetSystemDirectory(StrBuf1, 256);
-    pdrvHandle := LoadLibrary(StrCat(OoMisc.AddBackSlashZ(StrBuf1, StrBuf1),
-                                     StrPCopy(StrBuf2, pDriverFileName)));
+    SetLength(StrBuf1,256);
+    GetSystemDirectory(@StrBuf1, 256);
+    StrBuf2:= pDriverFileName;
+    AddBackSlashZ(StrBuf1, StrBuf1);
+    StrBuf1:= StrBuf1 + StrBuf2;
+    //pdrvHandle := LoadLibrary(StrCat(OoMisc.AddBackSlashZ(StrBuf1, StrBuf1),
+    //                                 StrPCopy(StrBuf2, pDriverFileName)));
+    pdrvHandle:= LoadLibrary(@StrBuf1);
     if (pdrvHandle > 32) then begin
       zDriverFile := StrAlloc(255);
       StrPCopy(zDriverFile, pDriverFileBase);

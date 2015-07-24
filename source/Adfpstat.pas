@@ -45,10 +45,10 @@ uses
   Classes,
   Forms,
   Controls,
-  StdCtrls,
   Dialogs,
   Buttons,
-  AdFaxPrn;
+  AdFaxPrn,
+  StdCtrls;
 
 type
   TStandardFaxPrinterStatusDisplay = class(TForm)

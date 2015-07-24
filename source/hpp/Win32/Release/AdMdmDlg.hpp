@@ -19,15 +19,15 @@
 #include <System.SysUtils.hpp>
 #include <System.Classes.hpp>
 #include <Vcl.Graphics.hpp>
-#include <Vcl.Controls.hpp>
 #include <Vcl.Forms.hpp>
-#include <Vcl.Dialogs.hpp>
+#include <Vcl.Controls.hpp>
 #include <OoMisc.hpp>
 #include <AdMdm.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Buttons.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.ImgList.hpp>
+#include <System.ImageList.hpp>
 
 //-- user supplied -----------------------------------------------------------
 

@@ -78,7 +78,6 @@ begin
 end;
 
 {TSelectedDeviceProperty (editor)}
-
   procedure TSelectedDeviceProperty.Edit;
   begin
     with (GetComponent(0) as TApdCustomTapiDevice) do

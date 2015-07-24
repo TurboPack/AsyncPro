@@ -78,7 +78,7 @@ uses
   Contnrs,
   Messages,
   Forms,
-  Dialogs,  
+  Dialogs,
   AdExcept,
   ComObj;
 

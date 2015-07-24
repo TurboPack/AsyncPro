@@ -660,7 +660,7 @@ begin
       4 : Result := @FItems[(aRow * FActColCount * 4) + (aCol * 4)];
     else
       raise Exception.Create('TadTerminalArray.GetItemPtr: invalid item size');
-      Result := nil;
+//      Result := nil;
     end;{case}
   end;
 end;

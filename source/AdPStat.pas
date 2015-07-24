@@ -49,7 +49,7 @@ uses
   Classes,
   Graphics,
   Controls,
-  Forms,               
+  Forms,
   Dialogs,
   ExtCtrls,
   StdCtrls,

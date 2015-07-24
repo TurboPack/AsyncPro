@@ -37,9 +37,20 @@ unit AdMdmCfg;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, ExtCtrls,
-  AdLibMdm, AdMdm, AdPort;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  StdCtrls,
+  ComCtrls,
+  ExtCtrls,
+  AdLibMdm,
+  AdMdm,
+  AdPort;
 
 
 type

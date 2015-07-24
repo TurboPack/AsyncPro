@@ -38,7 +38,14 @@ unit AdITapi3;
 
 interface
 
-uses ActiveX, Classes, Graphics, StdVCL, Variants, Windows, OOMisc;
+uses
+  ActiveX,
+  Classes,
+  Graphics,
+  StdVCL,
+  Variants,
+  Windows,
+  OOMisc;
   
 // *********************************************************************//
 // GUIDS declared in the TypeLibrary. Following prefixes are used:

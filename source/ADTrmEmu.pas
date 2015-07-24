@@ -77,11 +77,23 @@ unit ADTrmEmu;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, ExtCtrls,
-  Forms, Dialogs, ClipBrd, Menus,
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  ExtCtrls,
+  Forms,
+  Dialogs,
+  ClipBrd,
+  Menus,
   OOMisc,
-  ADPort, ADExcept,
-  ADTrmPsr, ADTrmMap, ADTrmBuf;
+  ADPort,
+  ADExcept,
+  ADTrmPsr,
+  ADTrmMap,
+  ADTrmBuf;
 
 type
   TAdCharSource = (csUnknown, csKeyboard, csPort, csWriteChar);        {!!.04}

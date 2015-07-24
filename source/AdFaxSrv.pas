@@ -73,8 +73,22 @@ unit AdFaxSrv;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
-  ExtCtrls, OoMisc, AdFax, AdPort, AdTapi, AdFaxPrn, AdExcept, AdFStat,
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  ExtCtrls,
+  OoMisc,
+  AdFax,
+  AdPort,
+  AdTapi,
+  AdFaxPrn,
+  AdExcept,
+  AdFStat,
   AdFIDlg {used for TShowJobInfoDialog};
 
 const

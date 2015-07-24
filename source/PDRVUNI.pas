@@ -59,6 +59,7 @@ uses
   WinTypes,
   Messages,
   CommDlg;
+  //AnsiStrings;
 
 type
   PFileBuf      = ^TFileBuf;
@@ -168,7 +169,7 @@ begin
       Result[Len] := S[I];
       Inc(I);
     end;
-  Result[0] := Char(Len);
+  Result[0] := AnsiChar(Len);
 end;
 
 function WinExecAndWait32(FileName : PChar; CommandLine : PChar;
@@ -245,11 +246,11 @@ end;
 
 function UniDrvFilesExist : Boolean;
 var
-  StBuf1 : array[0..255] of Char;
-  StBuf2 : array[0..255] of Char;
+  StBuf1 : string;//array[0..255] of Char;
+  StBuf2 : string;//array[0..255] of Char;
 
 var
-  SysDir        : array[0..255] of Char;
+  SysDir : array[0..255] of Char;
 
 begin
   UniDrvFilesExist := False;
@@ -260,11 +261,11 @@ begin
     Exit;
   end;
 
-  StrCopy(StBuf1, SysDir);
+  StBuf1:= SysDir;//StrCopy(StBuf1, SysDir);
   AddBackSlashZ(StBuf1, StBuf1);
-  StrCopy(StBuf2, StBuf1);
-  StrCat(StBuf1, 'unidrv.dll');
-  StrCat(StBuf2, 'unidrv.hlp');
+  StBuf2:= StBuf2; //StrCopy(StBuf2, StBuf1);
+  StBuf1:= StBuf1 + 'unidrv.dll';//StrCat(StBuf1, 'unidrv.dll');
+  StBuf2:= StBuf2 + 'unidrv.hlp';//StrCat(StBuf2, 'unidrv.hlp');
   UniDrvFilesExist := ExistFileZ(StBuf1) and ExistFileZ(StBuf2);
 end;
 
@@ -317,40 +318,40 @@ var
     ofStrDst    : TOFStruct;
     hfSrcFile   : Integer;
     hfDstFile   : Integer;
-    StrBuf      : array[0..255] of Char;
+    StrBuf      : string;//array[0..255] of Char;
   begin
 
     with LocalVars^ do
       if Win95Layout then begin
-        StrCopy(StrBuf, ' /c extract.exe /Y /L ');                   
-        StrCat(StrBuf, SysDir);
-        StrCat(StrBuf, ' ');
-        StrCat(StrBuf, SourceName);
-        StrCat(StrBuf, ' ');
-        StrCat(StrBuf, DestName);
+        StrBuf:= ' /c extract.exe /Y /L ';//StrCopy(StrBuf, ' /c extract.exe /Y /L ');
+        StrBuf:= StrBuf + SysDir;//StrCat(StrBuf, SysDir);
+        StrBuf:= StrBuf + ' ';//StrCat(StrBuf, ' ');
+        StrBuf:= StrBuf + SourceName; //StrCat(StrBuf, SourceName);
+        StrBuf:= StrBuf + ' ';//StrCat(StrBuf, ' ');
+        StrBuf:= StrBuf + DestName;//StrCat(StrBuf, DestName);
         InstallUniFile :=
-          (WinExecAndWait32('command.com', StrBuf, sw_Hide) <> -1);
+          (WinExecAndWait32('command.com', @StrBuf, sw_Hide) <> -1);
 
         if not(FileExists(StrPas(SysDir) + '\' + StrPas(DestName))) then
           { file was not in specified CAB, if additional cabs are found }
           { we assume cabs are on CD, so we search all cabs for files   }
           if FileExists(ExtractFilePath(StrPas(SourceName)) + 'WIN95_02.CAB') then begin
-            StrCopy(StrBuf, ' /c extract.exe /A /Y /L ');
-            StrCat(StrBuf, SysDir);
-            StrCat(StrBuf, ' ');
-            StrCat(StrBuf, 'WIN95_02.CAB');
-            StrCat(StrBuf, ' ');
-            StrCat(StrBuf, DestName);
-            Result := (WinExecAndWait32('command.com', StrBuf, sw_Hide) <> -1);
+            StrBuf:= ' /c extract.exe /A /Y /L ';//StrCopy(StrBuf, ' /c extract.exe /A /Y /L ');
+            StrBuf:= StrBuf + SysDir;//StrCat(StrBuf, SysDir);
+            StrBuf:= StrBuf + ' ';//StrCat(StrBuf, ' ');
+            StrBuf:= StrBuf + 'WIN95_02.CAB';//StrCat(StrBuf, 'WIN95_02.CAB');
+            StrBuf:= StrBuf + ' ';//StrCat(StrBuf, ' ');
+            StrBuf:= StrBuf + DestName;//StrCat(StrBuf, DestName);
+            Result := (WinExecAndWait32('command.com', @StrBuf, sw_Hide) <> -1);
           end;
 
       end else begin
         InstallUniFile := False;
-        StrCopy(StrBuf, SysDir);
+        StrBuf:= SysDir;//StrCopy(StrBuf, SysDir);
         AddBackSlashZ(StrBuf, StrBuf);
-        StrCat(StrBuf, DestName);
+        StrBuf:= StrBuf + DestName;//StrCat(StrBuf, DestName);
         hfSrcFile := LZOpenFile(SourceName, ofStrSrc, OF_READ);
-        hfDstFile := LZOpenFile(StrBuf, ofStrDst, OF_CREATE);
+        hfDstFile := LZOpenFile(@StrBuf, ofStrDst, OF_CREATE);
         if (hfSrcFile <> -1) and (hfDstFile <> -1) then
           InstallUniFile := (LZCopy(hfSrcFile, hfDstFile) <> -1);
         LZClose(hfSrcFile);

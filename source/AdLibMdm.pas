@@ -38,8 +38,18 @@ unit AdLibMdm;
 interface
 
 uses
-  Windows, SysUtils, Classes, Controls, Forms, Dialogs, StdCtrls, ExtCtrls,
-  OOMisc, AdXBase, AdXParsr, AdExcept;
+  Windows,
+  SysUtils,
+  Classes,
+  Controls,
+  Forms,
+  Dialogs,
+  StdCtrls,
+  ExtCtrls,
+  OOMisc,
+  AdXBase,
+  AdXParsr,
+  AdExcept;
 
 type
   { LibModem type definitions }

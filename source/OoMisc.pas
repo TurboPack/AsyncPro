@@ -51,16 +51,12 @@ interface
 
 uses
   Windows,
-  {$IFNDEF PrnDrv}
   Classes,
   Controls,
   ShellAPI,
   OleCtrls,
   Forms,
-  {$IFNDEF DrvInst}
   Graphics,
-  {$ENDIF}
-  {$ENDIF}
   MMSystem,
   SysUtils,
   Messages;
@@ -2768,7 +2764,9 @@ function GetPtr(P : Pointer; O : Integer) : Pointer;
 procedure NotBuffer(var Buf; Len : Cardinal);
 
 {$IFNDEF Win32}
+{$IFNDEF Win64}
 function Trim(const S : string) : string;
+{$ENDIF}
 {$ENDIF}
 
 function DelayMS(MS : Cardinal) : Cardinal;

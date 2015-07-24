@@ -46,23 +46,17 @@ uses
   Messages,
   SysUtils,
   Classes,
-  Controls,
   Forms,
   Dialogs,
   StdCtrls,
   Buttons,
-  AwUser,                                                         
+  AwUser,
   AdPort,
   AdExcept,
   AdTUtil,
   OOMisc,
   AdSelCom,
-{$IFNDEF UseAwWin32}
-  LnsWin32;
-{$ELSE}
-  AwWin32;
-{$ENDIF}
-
+  LnsWin32, Controls;
 type
   TDeviceSelectionForm = class(TForm)
     dsfComboBox    : TComboBox;

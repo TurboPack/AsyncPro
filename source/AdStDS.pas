@@ -48,7 +48,7 @@ uses
   ExtCtrls,
   Graphics,
   Forms,
-  Dialogs,       
+  Dialogs,
   StdCtrls,
   AdStMach;
 

@@ -37,8 +37,16 @@ unit AdStatE0;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, AdStMach;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  StdCtrls,
+  AdStMach;
 
 type
   TfrmConditionEdit = class(TForm)

@@ -37,8 +37,17 @@ unit AdStatEd;
 interface
 
 uses
-  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
-  Dialogs, Grids, StdCtrls, AdStMach;
+  Windows,
+  Messages,
+  SysUtils,
+  Classes,
+  Graphics,
+  Controls,
+  Forms,
+  Dialogs,
+  Grids,
+  StdCtrls,
+  AdStMach;
 
 type
   TApdStringGrid = class(TStringGrid)
