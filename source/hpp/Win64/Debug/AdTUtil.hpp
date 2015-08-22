@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdTUtil.pas' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdTUtil.pas' rev: 30.00 (Windows)
 
 #ifndef AdtutilHPP
 #define AdtutilHPP
@@ -45,6 +45,8 @@ typedef TVarString *PVarString;
 
 struct DECLSPEC_DRECORD TVarString
 {
+	
+public:
 	union
 	{
 		struct 
@@ -105,6 +107,8 @@ public:
 	int NumCountries;
 	int CountryListSize;
 	int CountryListOffset;
+	
+public:
 	union
 	{
 		struct 
@@ -136,6 +140,8 @@ typedef TLineDevCaps *PLineDevCaps;
 
 struct DECLSPEC_DRECORD TLineDevCaps
 {
+	
+public:
 	union
 	{
 		struct 
@@ -206,6 +212,8 @@ typedef TLineAddressCaps *PLineAddressCaps;
 
 struct DECLSPEC_DRECORD TLineAddressCaps
 {
+	
+public:
 	union
 	{
 		struct 
@@ -339,6 +347,8 @@ typedef TLineDevStatus *PLineDevStatus;
 
 struct DECLSPEC_DRECORD TLineDevStatus
 {
+	
+public:
 	union
 	{
 		struct 
@@ -392,6 +402,8 @@ typedef TCallInfo *PCallInfo;
 
 struct DECLSPEC_DRECORD TCallInfo
 {
+	
+public:
 	union
 	{
 		struct 
@@ -482,6 +494,8 @@ typedef TCallStatus *PCallStatus;
 
 struct DECLSPEC_DRECORD TCallStatus
 {
+	
+public:
 	union
 	{
 		struct 
@@ -510,6 +524,8 @@ typedef TLineTranslateOutput *PLineTranslateOutput;
 
 struct DECLSPEC_DRECORD TLineTranslateOutput
 {
+	
+public:
 	union
 	{
 		struct 
@@ -539,6 +555,8 @@ typedef TLineTranslateCaps *PLineTranslateCaps;
 
 struct DECLSPEC_DRECORD TLineTranslateCaps
 {
+	
+public:
 	union
 	{
 		struct 

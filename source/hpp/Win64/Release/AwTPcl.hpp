@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwTPcl.pas' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwTPcl.pas' rev: 30.00 (Windows)
 
 #ifndef AwtpclHPP
 #define AwtpclHPP
@@ -261,6 +261,8 @@ public:
 	PrepFinishProc apFinishWriting;
 	System::file aWorkFile;
 	Oomisc::TDirCharArray aDestDir;
+	
+public:
 	union
 	{
 		struct 

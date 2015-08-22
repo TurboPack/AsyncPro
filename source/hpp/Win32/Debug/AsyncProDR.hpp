@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AsyncProDR.dpk' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AsyncProDR.dpk' rev: 30.00 (Windows)
 
 #ifndef AsyncprodrHPP
 #define AsyncprodrHPP
@@ -97,6 +97,7 @@
 #include <LnsQueue.hpp>
 #include <AdAnsiStrings.hpp>
 #include <Winapi.Windows.hpp>	// (rtl)
+#include <System.Character.hpp>	// (rtl)
 #include <System.Internal.ExcUtils.hpp>	// (rtl)
 #include <System.SysUtils.hpp>	// (rtl)
 #include <System.VarUtils.hpp>	// (rtl)
@@ -130,6 +131,7 @@
 #include <Winapi.FlatSB.hpp>	// (rtl)
 #include <Vcl.Forms.hpp>	// (vcl)
 #include <Vcl.Menus.hpp>	// (vcl)
+#include <Winapi.MsCTF.hpp>	// (rtl)
 #include <Vcl.Controls.hpp>	// (vcl)
 #include <Vcl.AxCtrls.hpp>	// (vcl)
 #include <Vcl.OleCtrls.hpp>	// (vcl)

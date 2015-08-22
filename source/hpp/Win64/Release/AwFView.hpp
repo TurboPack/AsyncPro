@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwFView.pas' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwFView.pas' rev: 30.00 (Windows)
 
 #ifndef AwfviewHPP
 #define AwfviewHPP
@@ -41,6 +41,8 @@ struct DECLSPEC_DRECORD wMsg
 public:
 	HWND hWindow;
 	unsigned Message;
+	
+public:
 	union
 	{
 		struct 

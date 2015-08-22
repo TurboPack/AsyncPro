@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 30.00 (Windows)
 
 #ifndef OomiscHPP
 #define OomiscHPP
@@ -656,6 +656,8 @@ typedef TInAddr *PInAddr;
 #pragma pack(push,1)
 struct DECLSPEC_DRECORD TInAddr
 {
+	
+public:
 	union
 	{
 		struct 
@@ -790,6 +792,8 @@ public:
 	System::UnicodeString Pending;
 	bool FFPending;
 	TFontRecord FontRec;
+	
+public:
 	union
 	{
 		struct 
