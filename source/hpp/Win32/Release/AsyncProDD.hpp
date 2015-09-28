@@ -90,7 +90,6 @@
 #include <AdWUtil.hpp>	// (AsyncProDR)
 #include <AwWnsock.hpp>	// (AsyncProDR)
 #include <AdPacket.hpp>	// (AsyncProDR)
-#include <AwAbsFax.hpp>	// (AsyncProDR)
 #include <AwFaxCvt.hpp>	// (AsyncProDR)
 #include <AdTUtil.hpp>	// (AsyncProDR)
 #include <AdFax.hpp>	// (AsyncProDR)

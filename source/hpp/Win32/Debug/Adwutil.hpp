@@ -74,7 +74,6 @@ typedef TAliasArray *PAliasArray;
 
 typedef THostEnt *PHostEnt;
 
-#pragma pack(push,1)
 struct DECLSPEC_DRECORD THostEnt
 {
 public:
@@ -84,7 +83,6 @@ public:
 	short h_length;
 	TAddrArray *h_addr_list;
 };
-#pragma pack(pop)
 
 
 typedef TNetEnt *PNetEnt;

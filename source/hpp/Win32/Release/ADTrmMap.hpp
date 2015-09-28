@@ -52,7 +52,6 @@ public:
 	void __fastcall LoadFromFile(const System::UnicodeString aFileName);
 	void __fastcall LoadFromRes(NativeUInt aInstance, const System::UnicodeString aResName);
 	void __fastcall StoreToBinFile(const System::UnicodeString aFileName);
-	void __fastcall DebugPrint(const System::UnicodeString aFileName);
 	__property int Count = {read=FCount, nodefault};
 };
 
@@ -87,7 +86,6 @@ public:
 	void __fastcall LoadFromFile(const System::UnicodeString aFileName);
 	void __fastcall LoadFromRes(NativeUInt aInstance, const System::UnicodeString aResName);
 	void __fastcall StoreToBinFile(const System::UnicodeString aFileName);
-	void __fastcall DebugPrint(const System::UnicodeString aFileName);
 	__property int Count = {read=FCount, nodefault};
 };
 

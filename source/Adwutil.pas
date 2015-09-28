@@ -397,7 +397,7 @@ type
   { Host Entity }
 
   PHostEnt = ^THostEnt;
-  THostEnt = packed record
+  THostEnt = record
     h_name : PAnsiChar;                 { Official name of host }
     h_aliases : PAliasArray;            { Alias list }
     h_addrtype : SmallInt;              { Host address type }
