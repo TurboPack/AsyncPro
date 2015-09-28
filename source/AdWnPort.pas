@@ -41,6 +41,7 @@
 
 {Options required for this unit}
 {$G+,X+,F+}
+{$A4}
 {$C MOVEABLE,DEMANDLOAD,DISCARDABLE}
 
 unit AdWnPort;
