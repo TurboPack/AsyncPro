@@ -1033,7 +1033,7 @@ type
 implementation
 
 uses
-  AnsiStrings;
+  Types, AnsiStrings;
 
 const
   BeatInterval = 100;
@@ -5041,7 +5041,7 @@ begin
                WorkRect.Top,
                ETO_OPAQUE,
                @WorkRect,
-               PChar(FDisplayStr),
+               string(FDisplayStr),
                TextStrLen,
                @FCellWidths^);
 

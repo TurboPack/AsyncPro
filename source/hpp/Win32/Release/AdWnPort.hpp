@@ -78,6 +78,7 @@ typedef void __fastcall (__closure *TWsAcceptEvent)(System::TObject* Sender, Oom
 
 typedef void __fastcall (__closure *TWsErrorEvent)(System::TObject* Sender, int ErrCode);
 
+#pragma pack(push,4)
 class PASCALIMPLEMENTATION TApdCustomWinsockPort : public Adport::TApdCustomComPort
 {
 	typedef Adport::TApdCustomComPort inherited;
@@ -154,7 +155,9 @@ public:
 	__fastcall virtual ~TApdCustomWinsockPort(void);
 };
 
+#pragma pack(pop)
 
+#pragma pack(push,4)
 class PASCALIMPLEMENTATION TApdWinsockPort : public TApdCustomWinsockPort
 {
 	typedef TApdCustomWinsockPort inherited;
@@ -223,6 +226,7 @@ public:
 	
 };
 
+#pragma pack(pop)
 
 //-- var, const, procedure ---------------------------------------------------
 static const Adsocket::TWsMode adwDefWsMode = (Adsocket::TWsMode)(0);

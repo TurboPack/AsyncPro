@@ -39,6 +39,7 @@ class DELPHICLASS TApdWinsockPort;
 //-- type declarations -------------------------------------------------------
 enum DECLSPEC_DENUM TApdSocksVersion : unsigned char { svNone, svSocks4, svSocks4a, svSocks5 };
 
+#pragma pack(push,4)
 class PASCALIMPLEMENTATION TApdSocksServerInfo : public System::Classes::TPersistent
 {
 	typedef System::Classes::TPersistent inherited;
@@ -71,11 +72,13 @@ public:
 	
 };
 
+#pragma pack(pop)
 
 typedef void __fastcall (__closure *TWsAcceptEvent)(System::TObject* Sender, Oomisc::TInAddr Addr, bool &Accept);
 
 typedef void __fastcall (__closure *TWsErrorEvent)(System::TObject* Sender, int ErrCode);
 
+#pragma pack(push,4)
 class PASCALIMPLEMENTATION TApdCustomWinsockPort : public Adport::TApdCustomComPort
 {
 	typedef Adport::TApdCustomComPort inherited;
@@ -152,7 +155,9 @@ public:
 	__fastcall virtual ~TApdCustomWinsockPort(void);
 };
 
+#pragma pack(pop)
 
+#pragma pack(push,4)
 class PASCALIMPLEMENTATION TApdWinsockPort : public TApdCustomWinsockPort
 {
 	typedef TApdCustomWinsockPort inherited;
@@ -221,6 +226,7 @@ public:
 	
 };
 
+#pragma pack(pop)
 
 //-- var, const, procedure ---------------------------------------------------
 static const Adsocket::TWsMode adwDefWsMode = (Adsocket::TWsMode)(0);
