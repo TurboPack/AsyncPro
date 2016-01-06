@@ -5937,7 +5937,7 @@ begin
                  WorkRect.Top,
                  ETO_OPAQUE,
                  @WorkRect,
-                 PChar(FDisplayStr),
+                 string(FDisplayStr),
                  PartTextLen,
                  @FCellWidths^);
 
