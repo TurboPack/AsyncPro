@@ -481,9 +481,11 @@ var
   Node : PKBHashNode;
   Temp : PKBHashNode;
 begin
-  for i := 0 to pred(KBHashTableSize) do begin
+  for i := 0 to pred(KBHashTableSize) do
+  begin
     Node := FTable[i];
-    while (Node <> nil) do begin
+    while (Node <> nil) do
+    begin
       Temp := Node;
       Node := Node^.kbnNext;
       FreeKeyString(Temp^.kbnKey);
@@ -665,51 +667,51 @@ begin
   Clear;
   {get the resource info handle}
   ResInfo := FindResource(aInstance, PChar(aResName), RT_RCDATA);
-  if (ResInfo = 0) then
+  if ResInfo = 0 then
     Exit;
+
   {load and lock the resource}
   ResHandle := LoadResource(aInstance, ResInfo);
-  if (ResHandle = 0) then
+  if ResHandle = 0 then
     Exit;
+
   Res := LockResource(ResHandle);
-  if (Res = nil) then begin
-    FreeResource(ResHandle);
+  if Res = nil then
     Exit;
-  end;
+
+  {create a memory stream}
+  MS := TMemoryStream.Create;
   try
-    {create a memory stream}
-    MS := TMemoryStream.Create;
-    try
-      {copy the resource to our memory stream}
-      MS.Write(Res^, SizeOfResource(aInstance, ResInfo));
-      MS.Position := 0;
-      {read the header signature, get out if it's not ours}
-      BytesRead := MS.Read(Sig, sizeof(Sig));
-      if (BytesRead <> sizeof(Sig)) or (Sig <> OurSignature) then
-        Exit;
-      {read the count of key/value string pairs in the resource}
-      MS.Read(ResCount, sizeof(ResCount));
-      {read that number of key/value string pairs and add them to the
-       hash table}
-      for i := 0 to pred(ResCount) do begin
-        MS.Read(Key[0], 1);
-        MS.Read(Key[1], ord(Key[0]));
-        MS.Read(Value[0], 1);
-        MS.Read(Value[1], ord(Value[0]));
-        Add(Key, Value);
-      end;
-      {read the footer signature, clear and get out if it's not ours}
-      BytesRead := MS.Read(Sig, sizeof(Sig));
-      if (BytesRead <> sizeof(Sig)) or (Sig <> OurSignature) then begin
-        Clear;
-        Exit;
-      end;
-    finally
-      MS.Free;
+    {copy the resource to our memory stream}
+    MS.Write(Res^, SizeOfResource(aInstance, ResInfo));
+    MS.Position := 0;
+
+    {read the header signature, get out if it's not ours}
+    BytesRead := MS.Read(Sig, sizeof(Sig));
+    if (BytesRead <> sizeof(Sig)) or (Sig <> OurSignature) then
+      Exit;
+
+    {read the count of key/value string pairs in the resource}
+    MS.Read(ResCount, sizeof(ResCount));
+    {read that number of key/value string pairs and add them to the
+     hash table}
+    for i := 0 to pred(ResCount) do
+    begin
+      MS.Read(Key[0], 1);
+      MS.Read(Key[1], ord(Key[0]));
+      MS.Read(Value[0], 1);
+      MS.Read(Value[1], ord(Value[0]));
+      Add(Key, Value);
+    end;
+    {read the footer signature, clear and get out if it's not ours}
+    BytesRead := MS.Read(Sig, sizeof(Sig));
+    if (BytesRead <> sizeof(Sig)) or (Sig <> OurSignature) then
+    begin
+      Clear;
+      Exit;
     end;
   finally
-    UnlockResource(ResHandle);
-    FreeResource(ResHandle);
+    MS.Free;
   end;
 end;
 {--------}
