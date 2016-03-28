@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXParsr.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXParsr.pas' rev: 31.00 (Windows)
 
 #ifndef AdxparsrHPP
 #define AdxparsrHPP
@@ -133,7 +133,7 @@ protected:
 	bool __fastcall ParsePIEx(void);
 	void __fastcall ParsePrim(void);
 	void __fastcall ParseProlog(void);
-	void __fastcall ParseUntil(int const *S, const int S_High);
+	void __fastcall ParseUntil(const int *S, const int S_High);
 	void __fastcall ParseWhitespace(void);
 	void __fastcall ParseXMLDeclaration(void);
 	void __fastcall PopDocument(void);
@@ -143,7 +143,7 @@ protected:
 	void __fastcall ReadExternalIds(bool bInNotation, StringIds &sIds);
 	System::WideString __fastcall ReadLiteral(int wFlags, bool &HasEntRef);
 	System::WideString __fastcall ReadNameToken(bool aValFirst);
-	void __fastcall Require(int const *S, const int S_High);
+	void __fastcall Require(const int *S, const int S_High);
 	void __fastcall RequireWhitespace(void);
 	void __fastcall SetAttribute(const System::WideString sElemName, const System::WideString sName, int wType, const System::WideString sEnum, const System::WideString sValue, int wValueType);
 	void __fastcall SetElement(const System::WideString sName, int wType, const System::WideString sContentModel);
@@ -152,7 +152,7 @@ protected:
 	void __fastcall SetNotation(const System::WideString sNotationName, const System::WideString sPublicId, const System::WideString sSystemId);
 	void __fastcall SkipChar(void);
 	void __fastcall SkipWhitespace(bool aNextDoc);
-	bool __fastcall TryRead(int const *S, const int S_High);
+	bool __fastcall TryRead(const int *S, const int S_High);
 	void __fastcall ValidateAttribute(const System::WideString aValue, bool HasEntRef);
 	void __fastcall ValidateCData(const System::WideString CDATA);
 	void __fastcall ValidateElementName(const System::WideString aName);

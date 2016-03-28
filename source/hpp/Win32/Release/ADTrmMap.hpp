@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'ADTrmMap.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'ADTrmMap.pas' rev: 31.00 (Windows)
 
 #ifndef AdtrmmapHPP
 #define AdtrmmapHPP
@@ -52,6 +52,7 @@ public:
 	void __fastcall LoadFromFile(const System::UnicodeString aFileName);
 	void __fastcall LoadFromRes(NativeUInt aInstance, const System::UnicodeString aResName);
 	void __fastcall StoreToBinFile(const System::UnicodeString aFileName);
+	void __fastcall DebugPrint(const System::UnicodeString aFileName);
 	__property int Count = {read=FCount, nodefault};
 };
 
@@ -86,6 +87,7 @@ public:
 	void __fastcall LoadFromFile(const System::UnicodeString aFileName);
 	void __fastcall LoadFromRes(NativeUInt aInstance, const System::UnicodeString aResName);
 	void __fastcall StoreToBinFile(const System::UnicodeString aFileName);
+	void __fastcall DebugPrint(const System::UnicodeString aFileName);
 	__property int Count = {read=FCount, nodefault};
 };
 

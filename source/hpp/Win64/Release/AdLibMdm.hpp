@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdLibMdm.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdLibMdm.pas' rev: 31.00 (Windows)
 
 #ifndef AdlibmdmHPP
 #define AdlibmdmHPP
@@ -439,7 +439,7 @@ class PASCALIMPLEMENTATION TApdLmModemCollection : public System::Classes::TColl
 	typedef System::Classes::TCollection inherited;
 	
 public:
-	TApdLmModemCollectionItem* operator[](int Index) { return Items[Index]; }
+	TApdLmModemCollectionItem* operator[](int Index) { return this->Items[Index]; }
 	
 private:
 	HIDESBASE TApdLmModemCollectionItem* __fastcall GetItem(int Index);

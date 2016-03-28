@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdTapi.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdTapi.pas' rev: 31.00 (Windows)
 
 #ifndef AdtapiHPP
 #define AdtapiHPP
@@ -243,7 +243,7 @@ public:
 	bool __fastcall CancelCall(void);
 	void __fastcall CopyCallInfo(Adtutil::PCallInfo &CallInfo);
 	Oomisc::TTapiConfigRec __fastcall GetDevConfig(void);
-	int __fastcall MontorTones(Adtutil::TLineMonitorTones const *Tones, const int Tones_High);
+	int __fastcall MontorTones(const Adtutil::TLineMonitorTones *Tones, const int Tones_High);
 	void __fastcall SetDevConfig(const Oomisc::TTapiConfigRec &Config);
 	void __fastcall PlayWaveFile(System::UnicodeString FileName);
 	void __fastcall StopWaveFile(void);

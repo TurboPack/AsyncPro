@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStMach.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStMach.pas' rev: 31.00 (Windows)
 
 #ifndef AdstmachHPP
 #define AdstmachHPP
@@ -237,7 +237,7 @@ class PASCALIMPLEMENTATION TApdStateConditions : public System::Classes::TCollec
 	typedef System::Classes::TCollection inherited;
 	
 public:
-	TApdStateCondition* operator[](int Index) { return Items[Index]; }
+	TApdStateCondition* operator[](int Index) { return this->Items[Index]; }
 	
 private:
 	HIDESBASE TApdStateCondition* __fastcall GetItem(int Index);

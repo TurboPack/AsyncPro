@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'adgsm.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'adgsm.pas' rev: 31.00 (Windows)
 
 #ifndef AdgsmHPP
 #define AdgsmHPP
@@ -89,7 +89,7 @@ class PASCALIMPLEMENTATION TApdMessageStore : public System::Classes::TStringLis
 	typedef System::Classes::TStringList inherited;
 	
 public:
-	TApdSMSMessage* operator[](int Index) { return Messages[Index]; }
+	TApdSMSMessage* operator[](int Index) { return this->Messages[Index]; }
 	
 private:
 	int FCapacity;

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdExcept.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdExcept.pas' rev: 31.00 (Windows)
 
 #ifndef AdexceptHPP
 #define AdexceptHPP
@@ -238,17 +238,17 @@ public:
 	__classmethod System::Word __fastcall MapCodeToStringID(const int Code);
 	__property int ErrorCode = {read=FErrorCode, write=FErrorCode, nodefault};
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAPDException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAPDException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAPDException(NativeUInt Ident)/* overload */ : System::Sysutils::Exception(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAPDException(System::PResStringRec ResStringRec)/* overload */ : System::Sysutils::Exception(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAPDException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAPDException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAPDException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAPDException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAPDException(const System::UnicodeString Msg, int AHelpContext) : System::Sysutils::Exception(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAPDException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAPDException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAPDException(NativeUInt Ident, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAPDException(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAPDException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAPDException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAPDException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAPDException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAPDException(void) { }
 	
 };
@@ -265,17 +265,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EGeneral(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EGeneral(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EGeneral(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EGeneral(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EGeneral(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGeneral(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGeneral(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGeneral(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGeneral(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EGeneral(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EGeneral(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EGeneral(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGeneral(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGeneral(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGeneral(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGeneral(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGeneral(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGeneral(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EGeneral(void) { }
 	
 };
@@ -292,17 +292,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EOpenComm(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EOpenComm(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EOpenComm(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EOpenComm(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EOpenComm(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EOpenComm(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EOpenComm(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EOpenComm(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EOpenComm(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EOpenComm(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EOpenComm(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EOpenComm(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EOpenComm(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EOpenComm(void) { }
 	
 };
@@ -319,17 +319,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ESerialIO(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ESerialIO(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ESerialIO(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ESerialIO(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESerialIO(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESerialIO(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ESerialIO(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ESerialIO(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ESerialIO(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESerialIO(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESerialIO(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESerialIO(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESerialIO(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ESerialIO(void) { }
 	
 };
@@ -346,17 +346,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModem(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModem(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModem(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModem(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModem(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModem(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModem(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModem(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModem(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModem(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModem(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModem(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModem(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModem(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModem(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModem(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModem(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModem(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModem(void) { }
 	
 };
@@ -373,17 +373,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETrigger(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETrigger(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETrigger(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETrigger(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETrigger(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETrigger(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETrigger(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETrigger(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETrigger(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETrigger(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETrigger(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETrigger(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETrigger(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETrigger(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETrigger(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETrigger(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETrigger(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETrigger(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETrigger(void) { }
 	
 };
@@ -400,17 +400,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EPacket(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EPacket(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EPacket(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EPacket(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EPacket(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPacket(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPacket(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPacket(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPacket(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EPacket(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EPacket(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EPacket(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPacket(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPacket(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPacket(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPacket(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPacket(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPacket(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EPacket(void) { }
 	
 };
@@ -427,17 +427,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EProtocol(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EProtocol(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EProtocol(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EProtocol(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EProtocol(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EProtocol(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EProtocol(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EProtocol(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EProtocol(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EProtocol(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EProtocol(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EProtocol(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EProtocol(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EProtocol(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EProtocol(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EProtocol(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EProtocol(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EProtocol(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EProtocol(void) { }
 	
 };
@@ -454,17 +454,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EINI(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EINI(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EINI(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EINI(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EINI(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EINI(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EINI(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EINI(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EINI(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EINI(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EINI(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EINI(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EINI(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EINI(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EINI(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EINI(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EINI(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EINI(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EINI(void) { }
 	
 };
@@ -481,17 +481,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFax(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFax(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFax(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFax(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFax(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFax(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFax(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFax(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFax(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFax(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFax(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFax(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFax(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFax(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFax(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFax(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFax(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFax(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFax(void) { }
 	
 };
@@ -508,17 +508,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapi(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapi(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapi(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapi(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapi(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapi(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapi(void) { }
 	
 };
@@ -535,17 +535,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ERas(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ERas(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ERas(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ERas(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ERas(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERas(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERas(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERas(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERas(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ERas(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ERas(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ERas(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERas(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERas(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERas(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERas(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERas(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERas(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ERas(void) { }
 	
 };
@@ -562,17 +562,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTerminal(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTerminal(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTerminal(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdTerminal(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTerminal(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTerminal(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTerminal(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTerminal(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdTerminal(void) { }
 	
 };
@@ -589,17 +589,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EXML(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EXML(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EXML(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EXML(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EXML(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EXML(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EXML(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EXML(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EXML(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EXML(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EXML(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EXML(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EXML(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EXML(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EXML(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EXML(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EXML(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EXML(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EXML(void) { }
 	
 };
@@ -616,17 +616,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EStateMachine(const System::UnicodeString Msg, System::Byte Dummy) : EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EStateMachine(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EStateMachine(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EStateMachine(NativeUInt Ident)/* overload */ : EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec)/* overload */ : EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EStateMachine(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EStateMachine(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EStateMachine(const System::UnicodeString Msg, int AHelpContext) : EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EStateMachine(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EStateMachine(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EStateMachine(NativeUInt Ident, int AHelpContext)/* overload */ : EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EStateMachine(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EStateMachine(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EStateMachine(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EStateMachine(void) { }
 	
 };
@@ -643,17 +643,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadArgument(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadArgument(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadArgument(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadArgument(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadArgument(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadArgument(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadArgument(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadArgument(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadArgument(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadArgument(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadArgument(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadArgument(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadArgument(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadArgument(void) { }
 	
 };
@@ -670,17 +670,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EGotQuitMsg(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGotQuitMsg(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGotQuitMsg(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EGotQuitMsg(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGotQuitMsg(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGotQuitMsg(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGotQuitMsg(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGotQuitMsg(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EGotQuitMsg(void) { }
 	
 };
@@ -697,17 +697,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBufferTooBig(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBufferTooBig(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBufferTooBig(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBufferTooBig(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBufferTooBig(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferTooBig(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferTooBig(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferTooBig(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBufferTooBig(void) { }
 	
 };
@@ -724,17 +724,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EPortNotAssigned(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPortNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPortNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EPortNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPortNotAssigned(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPortNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPortNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPortNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EPortNotAssigned(void) { }
 	
 };
@@ -751,17 +751,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EInternal(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EInternal(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EInternal(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EInternal(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EInternal(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInternal(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInternal(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInternal(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInternal(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EInternal(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EInternal(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EInternal(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInternal(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInternal(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInternal(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInternal(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInternal(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInternal(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EInternal(void) { }
 	
 };
@@ -778,17 +778,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotAssigned(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotAssigned(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemNotAssigned(void) { }
 	
 };
@@ -805,17 +805,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EPhonebookNotAssigned(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPhonebookNotAssigned(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPhonebookNotAssigned(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EPhonebookNotAssigned(void) { }
 	
 };
@@ -832,17 +832,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, System::Byte Dummy) : EGeneral(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EGeneral(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident)/* overload */ : EGeneral(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec)/* overload */ : EGeneral(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EGeneral(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, int AHelpContext) : EGeneral(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ECannotUseWithWinSock(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EGeneral(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident, int AHelpContext)/* overload */ : EGeneral(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EGeneral(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECannotUseWithWinSock(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECannotUseWithWinSock(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EGeneral(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ECannotUseWithWinSock(void) { }
 	
 };
@@ -859,17 +859,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadId(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadId(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadId(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadId(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadId(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadId(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadId(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadId(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadId(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadId(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadId(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadId(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadId(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadId(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadId(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadId(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadId(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadId(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadId(void) { }
 	
 };
@@ -886,17 +886,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBaudRate(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBaudRate(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBaudRate(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBaudRate(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBaudRate(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBaudRate(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBaudRate(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBaudRate(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBaudRate(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBaudRate(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBaudRate(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBaudRate(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBaudRate(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBaudRate(void) { }
 	
 };
@@ -913,17 +913,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EByteSize(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EByteSize(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EByteSize(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EByteSize(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EByteSize(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EByteSize(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EByteSize(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EByteSize(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EByteSize(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EByteSize(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EByteSize(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EByteSize(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EByteSize(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EByteSize(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EByteSize(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EByteSize(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EByteSize(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EByteSize(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EByteSize(void) { }
 	
 };
@@ -940,17 +940,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EDefault(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EDefault(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EDefault(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EDefault(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EDefault(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDefault(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDefault(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDefault(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDefault(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EDefault(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EDefault(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EDefault(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDefault(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDefault(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDefault(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDefault(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDefault(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDefault(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EDefault(void) { }
 	
 };
@@ -967,17 +967,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EHardware(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EHardware(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EHardware(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EHardware(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EHardware(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EHardware(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EHardware(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EHardware(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EHardware(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EHardware(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EHardware(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EHardware(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EHardware(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EHardware(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EHardware(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EHardware(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EHardware(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EHardware(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EHardware(void) { }
 	
 };
@@ -994,17 +994,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EMemory(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EMemory(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EMemory(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EMemory(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EMemory(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EMemory(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EMemory(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EMemory(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EMemory(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EMemory(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EMemory(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EMemory(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EMemory(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EMemory(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EMemory(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EMemory(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EMemory(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EMemory(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EMemory(void) { }
 	
 };
@@ -1021,17 +1021,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ECommNotOpen(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECommNotOpen(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECommNotOpen(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ECommNotOpen(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECommNotOpen(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECommNotOpen(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECommNotOpen(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECommNotOpen(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ECommNotOpen(void) { }
 	
 };
@@ -1048,17 +1048,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyOpen(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyOpen(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyOpen(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyOpen(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyOpen(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyOpen(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyOpen(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyOpen(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAlreadyOpen(void) { }
 	
 };
@@ -1075,17 +1075,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoHandles(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoHandles(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoHandles(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoHandles(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoHandles(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoHandles(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoHandles(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoHandles(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoHandles(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoHandles(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoHandles(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoHandles(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoHandles(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoHandles(void) { }
 	
 };
@@ -1102,17 +1102,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoTimers(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoTimers(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoTimers(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoTimers(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoTimers(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoTimers(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoTimers(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoTimers(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoTimers(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoTimers(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoTimers(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoTimers(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoTimers(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoTimers(void) { }
 	
 };
@@ -1129,17 +1129,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoPortSelected(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoPortSelected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoPortSelected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoPortSelected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoPortSelected(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoPortSelected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoPortSelected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoPortSelected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoPortSelected(void) { }
 	
 };
@@ -1156,17 +1156,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, System::Byte Dummy) : EOpenComm(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EOpenComm(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident)/* overload */ : EOpenComm(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec)/* overload */ : EOpenComm(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EOpenComm(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, int AHelpContext) : EOpenComm(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENotOpenedByTapi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EOpenComm(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident, int AHelpContext)/* overload */ : EOpenComm(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENotOpenedByTapi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENotOpenedByTapi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EOpenComm(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENotOpenedByTapi(void) { }
 	
 };
@@ -1183,17 +1183,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENullApi(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENullApi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENullApi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENullApi(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENullApi(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENullApi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENullApi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENullApi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENullApi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENullApi(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENullApi(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENullApi(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENullApi(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENullApi(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENullApi(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENullApi(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENullApi(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENullApi(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENullApi(void) { }
 	
 };
@@ -1210,17 +1210,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ERegisterHandlerFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERegisterHandlerFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERegisterHandlerFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ERegisterHandlerFailed(void) { }
 	
 };
@@ -1237,17 +1237,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EPutBlockFail(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPutBlockFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPutBlockFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EPutBlockFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPutBlockFail(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EPutBlockFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPutBlockFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EPutBlockFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EPutBlockFail(void) { }
 	
 };
@@ -1264,17 +1264,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EGetBlockFail(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGetBlockFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGetBlockFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EGetBlockFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGetBlockFail(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EGetBlockFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGetBlockFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EGetBlockFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EGetBlockFail(void) { }
 	
 };
@@ -1291,17 +1291,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EOutputBufferTooSmall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EOutputBufferTooSmall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EOutputBufferTooSmall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EOutputBufferTooSmall(void) { }
 	
 };
@@ -1318,17 +1318,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBufferIsEmpty(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBufferIsEmpty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBufferIsEmpty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBufferIsEmpty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBufferIsEmpty(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferIsEmpty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferIsEmpty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBufferIsEmpty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBufferIsEmpty(void) { }
 	
 };
@@ -1345,17 +1345,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETracingNotEnabled(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETracingNotEnabled(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETracingNotEnabled(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETracingNotEnabled(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETracingNotEnabled(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETracingNotEnabled(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETracingNotEnabled(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETracingNotEnabled(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETracingNotEnabled(void) { }
 	
 };
@@ -1372,17 +1372,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ELoggingNotEnabled(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ELoggingNotEnabled(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ELoggingNotEnabled(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ELoggingNotEnabled(void) { }
 	
 };
@@ -1399,17 +1399,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, System::Byte Dummy) : ESerialIO(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ESerialIO(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident)/* overload */ : ESerialIO(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec)/* overload */ : ESerialIO(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ESerialIO(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, int AHelpContext) : ESerialIO(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBaseAddressNotSet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ESerialIO(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident, int AHelpContext)/* overload */ : ESerialIO(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBaseAddressNotSet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBaseAddressNotSet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ESerialIO(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBaseAddressNotSet(void) { }
 	
 };
@@ -1426,17 +1426,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotStarted(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotStarted(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotStarted(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotStarted(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotStarted(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotStarted(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotStarted(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotStarted(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemNotStarted(void) { }
 	
 };
@@ -1453,17 +1453,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemBusy(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemBusy(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemBusy(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemBusy(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemBusy(void) { }
 	
 };
@@ -1480,17 +1480,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotDialing(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotDialing(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemNotDialing(void) { }
 	
 };
@@ -1507,17 +1507,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotResponding(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotResponding(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotResponding(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemNotResponding(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotResponding(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotResponding(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotResponding(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemNotResponding(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemNotResponding(void) { }
 	
 };
@@ -1534,17 +1534,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemRejectedCommand(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemRejectedCommand(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemRejectedCommand(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemRejectedCommand(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemRejectedCommand(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemRejectedCommand(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemRejectedCommand(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemRejectedCommand(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemRejectedCommand(void) { }
 	
 };
@@ -1561,17 +1561,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemStatusMismatch(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemStatusMismatch(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemStatusMismatch(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemStatusMismatch(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemStatusMismatch(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemStatusMismatch(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemStatusMismatch(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemStatusMismatch(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemStatusMismatch(void) { }
 	
 };
@@ -1588,17 +1588,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyDialing(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyDialing(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAlreadyDialing(void) { }
 	
 };
@@ -1615,17 +1615,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENotDialing(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENotDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENotDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENotDialing(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENotDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENotDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENotDialing(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENotDialing(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENotDialing(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENotDialing(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENotDialing(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENotDialing(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENotDialing(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENotDialing(void) { }
 	
 };
@@ -1642,17 +1642,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EDeviceNotSelected(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDeviceNotSelected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDeviceNotSelected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EDeviceNotSelected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDeviceNotSelected(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDeviceNotSelected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDeviceNotSelected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDeviceNotSelected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EDeviceNotSelected(void) { }
 	
 };
@@ -1669,17 +1669,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EModemDetectedBusy(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemDetectedBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemDetectedBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EModemDetectedBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemDetectedBusy(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EModemDetectedBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemDetectedBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EModemDetectedBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EModemDetectedBusy(void) { }
 	
 };
@@ -1696,17 +1696,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoDialtone(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoDialtone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoDialtone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoDialtone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoDialtone(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoDialtone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoDialtone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoDialtone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoDialtone(void) { }
 	
 };
@@ -1723,17 +1723,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoCarrier(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoCarrier(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoCarrier(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoCarrier(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoCarrier(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoCarrier(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoCarrier(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoCarrier(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoCarrier(void) { }
 	
 };
@@ -1750,17 +1750,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, System::Byte Dummy) : EModem(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EModem(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoAnswer(NativeUInt Ident)/* overload */ : EModem(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec)/* overload */ : EModem(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoAnswer(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoAnswer(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EModem(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, int AHelpContext) : EModem(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoAnswer(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EModem(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoAnswer(NativeUInt Ident, int AHelpContext)/* overload */ : EModem(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EModem(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoAnswer(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoAnswer(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoAnswer(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EModem(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoAnswer(void) { }
 	
 };
@@ -1777,17 +1777,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, System::Byte Dummy) : ETrigger(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoMoreTriggers(NativeUInt Ident)/* overload */ : ETrigger(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec)/* overload */ : ETrigger(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoMoreTriggers(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoMoreTriggers(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, int AHelpContext) : ETrigger(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoMoreTriggers(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoMoreTriggers(NativeUInt Ident, int AHelpContext)/* overload */ : ETrigger(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETrigger(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoMoreTriggers(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoMoreTriggers(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoMoreTriggers(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoMoreTriggers(void) { }
 	
 };
@@ -1804,17 +1804,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, System::Byte Dummy) : ETrigger(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETriggerTooLong(NativeUInt Ident)/* overload */ : ETrigger(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec)/* overload */ : ETrigger(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETriggerTooLong(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETriggerTooLong(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, int AHelpContext) : ETrigger(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETriggerTooLong(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETriggerTooLong(NativeUInt Ident, int AHelpContext)/* overload */ : ETrigger(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETrigger(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETriggerTooLong(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETriggerTooLong(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETriggerTooLong(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETriggerTooLong(void) { }
 	
 };
@@ -1831,17 +1831,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETrigger(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETrigger(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadTriggerHandle(NativeUInt Ident)/* overload */ : ETrigger(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec)/* overload */ : ETrigger(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadTriggerHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadTriggerHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETrigger(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, int AHelpContext) : ETrigger(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadTriggerHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETrigger(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadTriggerHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETrigger(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETrigger(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadTriggerHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadTriggerHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadTriggerHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETrigger(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadTriggerHandle(void) { }
 	
 };
@@ -1858,17 +1858,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, System::Byte Dummy) : EPacket(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EPacket(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EPacket(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EInvalidProperty(NativeUInt Ident)/* overload */ : EPacket(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec)/* overload */ : EPacket(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInvalidProperty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EPacket(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EPacket(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInvalidProperty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EPacket(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EPacket(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, int AHelpContext) : EPacket(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EPacket(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EInvalidProperty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EPacket(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInvalidProperty(NativeUInt Ident, int AHelpContext)/* overload */ : EPacket(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EPacket(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidProperty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidProperty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidProperty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EInvalidProperty(void) { }
 	
 };
@@ -1885,17 +1885,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, System::Byte Dummy) : EPacket(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EPacket(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EPacket(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EStringSizeError(NativeUInt Ident)/* overload */ : EPacket(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec)/* overload */ : EPacket(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EStringSizeError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EPacket(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EPacket(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EStringSizeError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EPacket(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EPacket(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, int AHelpContext) : EPacket(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EPacket(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EStringSizeError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EPacket(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EStringSizeError(NativeUInt Ident, int AHelpContext)/* overload */ : EPacket(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EPacket(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EStringSizeError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EStringSizeError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EStringSizeError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EPacket(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EStringSizeError(void) { }
 	
 };
@@ -1912,17 +1912,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETimeout(const System::UnicodeString Msg, System::Byte Dummy) : EProtocol(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETimeout(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETimeout(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETimeout(NativeUInt Ident)/* overload */ : EProtocol(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETimeout(System::PResStringRec ResStringRec)/* overload */ : EProtocol(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETimeout(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETimeout(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETimeout(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETimeout(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETimeout(const System::UnicodeString Msg, int AHelpContext) : EProtocol(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETimeout(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETimeout(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETimeout(NativeUInt Ident, int AHelpContext)/* overload */ : EProtocol(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETimeout(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EProtocol(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETimeout(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETimeout(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETimeout(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETimeout(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETimeout(void) { }
 	
 };
@@ -1939,17 +1939,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, System::Byte Dummy) : EProtocol(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETooManyErrors(NativeUInt Ident)/* overload */ : EProtocol(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec)/* overload */ : EProtocol(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETooManyErrors(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETooManyErrors(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, int AHelpContext) : EProtocol(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETooManyErrors(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETooManyErrors(NativeUInt Ident, int AHelpContext)/* overload */ : EProtocol(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EProtocol(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETooManyErrors(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETooManyErrors(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETooManyErrors(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETooManyErrors(void) { }
 	
 };
@@ -1966,17 +1966,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ESequenceError(const System::UnicodeString Msg, System::Byte Dummy) : EProtocol(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ESequenceError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ESequenceError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EProtocol(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ESequenceError(NativeUInt Ident)/* overload */ : EProtocol(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec)/* overload */ : EProtocol(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESequenceError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESequenceError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EProtocol(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ESequenceError(const System::UnicodeString Msg, int AHelpContext) : EProtocol(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ESequenceError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ESequenceError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EProtocol(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESequenceError(NativeUInt Ident, int AHelpContext)/* overload */ : EProtocol(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EProtocol(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESequenceError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESequenceError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESequenceError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EProtocol(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ESequenceError(void) { }
 	
 };
@@ -1993,17 +1993,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EKeyTooLong(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EKeyTooLong(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EKeyTooLong(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EKeyTooLong(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EKeyTooLong(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EKeyTooLong(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EKeyTooLong(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EKeyTooLong(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EKeyTooLong(void) { }
 	
 };
@@ -2020,17 +2020,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EDataTooLarge(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDataTooLarge(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDataTooLarge(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EDataTooLarge(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDataTooLarge(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDataTooLarge(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDataTooLarge(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDataTooLarge(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EDataTooLarge(void) { }
 	
 };
@@ -2047,17 +2047,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EIniWrite(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EIniWrite(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EIniWrite(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EIniWrite(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EIniWrite(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EIniWrite(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EIniWrite(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EIniWrite(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EIniWrite(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EIniWrite(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EIniWrite(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EIniWrite(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EIniWrite(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EIniWrite(void) { }
 	
 };
@@ -2074,17 +2074,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EIniRead(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EIniRead(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EIniRead(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EIniRead(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EIniRead(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EIniRead(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EIniRead(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EIniRead(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EIniRead(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EIniRead(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EIniRead(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EIniRead(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EIniRead(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EIniRead(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EIniRead(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EIniRead(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EIniRead(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EIniRead(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EIniRead(void) { }
 	
 };
@@ -2101,17 +2101,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ERecordExists(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ERecordExists(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ERecordExists(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ERecordExists(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERecordExists(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERecordExists(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ERecordExists(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ERecordExists(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ERecordExists(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERecordExists(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordExists(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordExists(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordExists(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ERecordExists(void) { }
 	
 };
@@ -2128,17 +2128,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ERecordNotFound(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERecordNotFound(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERecordNotFound(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ERecordNotFound(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERecordNotFound(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordNotFound(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordNotFound(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERecordNotFound(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ERecordNotFound(void) { }
 	
 };
@@ -2155,17 +2155,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EDatabaseFull(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDatabaseFull(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDatabaseFull(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EDatabaseFull(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDatabaseFull(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseFull(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseFull(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseFull(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EDatabaseFull(void) { }
 	
 };
@@ -2182,17 +2182,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EDatabaseEmpty(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDatabaseEmpty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDatabaseEmpty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EDatabaseEmpty(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDatabaseEmpty(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseEmpty(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseEmpty(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EDatabaseEmpty(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EDatabaseEmpty(void) { }
 	
 };
@@ -2209,17 +2209,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadFieldList(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadFieldList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadFieldList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadFieldList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadFieldList(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadFieldList(void) { }
 	
 };
@@ -2236,17 +2236,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, System::Byte Dummy) : EINI(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EINI(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadFieldForIndex(NativeUInt Ident)/* overload */ : EINI(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec)/* overload */ : EINI(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadFieldForIndex(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadFieldForIndex(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EINI(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, int AHelpContext) : EINI(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadFieldForIndex(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EINI(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadFieldForIndex(NativeUInt Ident, int AHelpContext)/* overload */ : EINI(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EINI(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldForIndex(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldForIndex(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadFieldForIndex(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EINI(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadFieldForIndex(void) { }
 	
 };
@@ -2263,17 +2263,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadFormat(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadFormat(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadFormat(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadFormat(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadFormat(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadFormat(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadFormat(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadFormat(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxBadFormat(void) { }
 	
 };
@@ -2290,17 +2290,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EBadGraphicsFormat(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadGraphicsFormat(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EBadGraphicsFormat(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EBadGraphicsFormat(void) { }
 	
 };
@@ -2317,17 +2317,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EConvertAbort(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EConvertAbort(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EConvertAbort(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EConvertAbort(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EConvertAbort(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EConvertAbort(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EConvertAbort(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EConvertAbort(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EConvertAbort(void) { }
 	
 };
@@ -2344,17 +2344,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EUnpackAbort(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EUnpackAbort(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EUnpackAbort(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EUnpackAbort(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EUnpackAbort(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EUnpackAbort(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EUnpackAbort(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EUnpackAbort(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EUnpackAbort(void) { }
 	
 };
@@ -2371,17 +2371,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ECantMakeBitmap(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECantMakeBitmap(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECantMakeBitmap(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ECantMakeBitmap(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECantMakeBitmap(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ECantMakeBitmap(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECantMakeBitmap(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ECantMakeBitmap(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ECantMakeBitmap(void) { }
 	
 };
@@ -2398,17 +2398,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoImageLoaded(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoImageLoaded(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoImageLoaded(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoImageLoaded(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoImageLoaded(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageLoaded(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageLoaded(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageLoaded(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoImageLoaded(void) { }
 	
 };
@@ -2425,17 +2425,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ENoImageBlockMarked(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageBlockMarked(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ENoImageBlockMarked(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ENoImageBlockMarked(void) { }
 	
 };
@@ -2452,17 +2452,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EInvalidPageNumber(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInvalidPageNumber(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInvalidPageNumber(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EInvalidPageNumber(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInvalidPageNumber(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidPageNumber(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidPageNumber(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EInvalidPageNumber(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EInvalidPageNumber(void) { }
 	
 };
@@ -2479,17 +2479,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadMachine(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadMachine(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadMachine(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadMachine(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadMachine(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadMachine(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadMachine(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadMachine(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxBadMachine(void) { }
 	
 };
@@ -2506,17 +2506,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadModemResult(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadModemResult(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadModemResult(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBadModemResult(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadModemResult(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadModemResult(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadModemResult(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBadModemResult(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxBadModemResult(void) { }
 	
 };
@@ -2533,17 +2533,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxTrainError(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxTrainError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxTrainError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxTrainError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxTrainError(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxTrainError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxTrainError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxTrainError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxTrainError(void) { }
 	
 };
@@ -2560,17 +2560,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxInitError(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxInitError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxInitError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxInitError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxInitError(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxInitError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxInitError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxInitError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxInitError(void) { }
 	
 };
@@ -2587,17 +2587,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBusy(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBusy(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxBusy(void) { }
 	
 };
@@ -2614,17 +2614,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxVoiceCall(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxVoiceCall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxVoiceCall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxVoiceCall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxVoiceCall(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxVoiceCall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxVoiceCall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxVoiceCall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxVoiceCall(void) { }
 	
 };
@@ -2641,17 +2641,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxDataCall(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxDataCall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxDataCall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxDataCall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxDataCall(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxDataCall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxDataCall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxDataCall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxDataCall(void) { }
 	
 };
@@ -2668,17 +2668,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxNoDialTone(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxNoDialTone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxNoDialTone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxNoDialTone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxNoDialTone(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoDialTone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoDialTone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoDialTone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxNoDialTone(void) { }
 	
 };
@@ -2695,17 +2695,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxNoCarrier(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxNoCarrier(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxNoCarrier(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxNoCarrier(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxNoCarrier(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoCarrier(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoCarrier(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxNoCarrier(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxNoCarrier(void) { }
 	
 };
@@ -2722,17 +2722,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxSessionError(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxSessionError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxSessionError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxSessionError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxSessionError(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxSessionError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxSessionError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxSessionError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxSessionError(void) { }
 	
 };
@@ -2749,17 +2749,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxPageError(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxPageError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxPageError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EFaxPageError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxPageError(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxPageError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxPageError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EFaxPageError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EFaxPageError(void) { }
 	
 };
@@ -2776,17 +2776,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, System::Byte Dummy) : EFax(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EFax(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyMonitored(NativeUInt Ident)/* overload */ : EFax(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec)/* overload */ : EFax(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyMonitored(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyMonitored(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EFax(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, int AHelpContext) : EFax(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAlreadyMonitored(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EFax(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyMonitored(NativeUInt Ident, int AHelpContext)/* overload */ : EFax(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EFax(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyMonitored(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyMonitored(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAlreadyMonitored(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EFax(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAlreadyMonitored(void) { }
 	
 };
@@ -2803,17 +2803,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiAllocated(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiAllocated(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiAllocated(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiAllocated(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiAllocated(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAllocated(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAllocated(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAllocated(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiAllocated(void) { }
 	
 };
@@ -2830,17 +2830,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBadDeviceID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBadDeviceID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBadDeviceID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiBadDeviceID(void) { }
 	
 };
@@ -2857,17 +2857,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBearerModeUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBearerModeUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBearerModeUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiBearerModeUnavail(void) { }
 	
 };
@@ -2884,17 +2884,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiCallUnavail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiCallUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiCallUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiCallUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiCallUnavail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCallUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCallUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCallUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiCallUnavail(void) { }
 	
 };
@@ -2911,17 +2911,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiCompletionOverrun(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCompletionOverrun(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiCompletionOverrun(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiCompletionOverrun(void) { }
 	
 };
@@ -2938,17 +2938,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiConferenceFull(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiConferenceFull(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiConferenceFull(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiConferenceFull(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiConferenceFull(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiConferenceFull(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiConferenceFull(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiConferenceFull(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiConferenceFull(void) { }
 	
 };
@@ -2965,17 +2965,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialBilling(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialBilling(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialBilling(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialBilling(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialBilling(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialBilling(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialBilling(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialBilling(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiDialBilling(void) { }
 	
 };
@@ -2992,17 +2992,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialDialtone(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialDialtone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialDialtone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialDialtone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialDialtone(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialDialtone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialDialtone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialDialtone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiDialDialtone(void) { }
 	
 };
@@ -3019,17 +3019,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialPrompt(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialPrompt(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialPrompt(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialPrompt(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialPrompt(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialPrompt(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialPrompt(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialPrompt(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiDialPrompt(void) { }
 	
 };
@@ -3046,17 +3046,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialQuiet(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialQuiet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialQuiet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiDialQuiet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialQuiet(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialQuiet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialQuiet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiDialQuiet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiDialQuiet(void) { }
 	
 };
@@ -3073,17 +3073,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleApiVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiIncompatibleApiVersion(void) { }
 	
 };
@@ -3100,17 +3100,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIncompatibleExtVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiIncompatibleExtVersion(void) { }
 	
 };
@@ -3127,17 +3127,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiIniFileCorrupt(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIniFileCorrupt(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiIniFileCorrupt(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiIniFileCorrupt(void) { }
 	
 };
@@ -3154,17 +3154,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInUse(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInUse(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInUse(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInUse(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInUse(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInUse(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInUse(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInUse(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInUse(void) { }
 	
 };
@@ -3181,17 +3181,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddress(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddress(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddress(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddress(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddress(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddress(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddress(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddress(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAddress(void) { }
 	
 };
@@ -3208,17 +3208,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAddressID(void) { }
 	
 };
@@ -3235,17 +3235,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAddressMode(void) { }
 	
 };
@@ -3262,17 +3262,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAddressState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAddressState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAddressState(void) { }
 	
 };
@@ -3289,17 +3289,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAppHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAppHandle(void) { }
 	
 };
@@ -3316,17 +3316,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAppName(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppName(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppName(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalAppName(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAppName(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppName(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppName(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalAppName(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalAppName(void) { }
 	
 };
@@ -3343,17 +3343,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalBearerMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalBearerMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalBearerMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalBearerMode(void) { }
 	
 };
@@ -3370,17 +3370,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallComplMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallComplMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallComplMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallComplMode(void) { }
 	
 };
@@ -3397,17 +3397,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallHandle(void) { }
 	
 };
@@ -3424,17 +3424,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallParams(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallParams(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallParams(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallParams(void) { }
 	
 };
@@ -3451,17 +3451,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallPrivilege(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallPrivilege(void) { }
 	
 };
@@ -3478,17 +3478,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallSelect(void) { }
 	
 };
@@ -3505,17 +3505,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallState(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallState(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallState(void) { }
 	
 };
@@ -3532,17 +3532,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCallStatelist(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallStatelist(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCallStatelist(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCallStatelist(void) { }
 	
 };
@@ -3559,17 +3559,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCard(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCard(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCard(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCard(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCard(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCard(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCard(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCard(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCard(void) { }
 	
 };
@@ -3586,17 +3586,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCompletionID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCompletionID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCompletionID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCompletionID(void) { }
 	
 };
@@ -3613,17 +3613,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConfCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalConfCallHandle(void) { }
 	
 };
@@ -3640,17 +3640,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalConsultCallHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalConsultCallHandle(void) { }
 	
 };
@@ -3667,17 +3667,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalCountryCode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCountryCode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalCountryCode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalCountryCode(void) { }
 	
 };
@@ -3694,17 +3694,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDeviceClass(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceClass(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceClass(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDeviceClass(void) { }
 	
 };
@@ -3721,17 +3721,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDeviceHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDeviceHandle(void) { }
 	
 };
@@ -3748,17 +3748,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDialParams(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDialParams(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDialParams(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDialParams(void) { }
 	
 };
@@ -3775,17 +3775,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigitList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDigitList(void) { }
 	
 };
@@ -3802,17 +3802,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigitMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigitMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDigitMode(void) { }
 	
 };
@@ -3829,17 +3829,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigits(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigits(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigits(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalDigits(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigits(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigits(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigits(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalDigits(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalDigits(void) { }
 	
 };
@@ -3856,17 +3856,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalExtVersion(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalExtVersion(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalExtVersion(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalExtVersion(void) { }
 	
 };
@@ -3883,17 +3883,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalGroupID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalGroupID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalGroupID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalGroupID(void) { }
 	
 };
@@ -3910,17 +3910,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLineHandle(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineHandle(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineHandle(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalLineHandle(void) { }
 	
 };
@@ -3937,17 +3937,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLineState(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLineState(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLineState(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineState(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineState(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLineState(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalLineState(void) { }
 	
 };
@@ -3964,17 +3964,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLocation(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLocation(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLocation(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalLocation(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLocation(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLocation(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLocation(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalLocation(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalLocation(void) { }
 	
 };
@@ -3991,17 +3991,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMediaList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalMediaList(void) { }
 	
 };
@@ -4018,17 +4018,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMediaMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMediaMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalMediaMode(void) { }
 	
 };
@@ -4045,17 +4045,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalMessageID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMessageID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalMessageID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalMessageID(void) { }
 	
 };
@@ -4072,17 +4072,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParam(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParam(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParam(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParam(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParam(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParam(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParam(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParam(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalParam(void) { }
 	
 };
@@ -4099,17 +4099,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParkID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParkID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParkID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalParkID(void) { }
 	
 };
@@ -4126,17 +4126,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalParkMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalParkMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalParkMode(void) { }
 	
 };
@@ -4153,17 +4153,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalPointer(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPointer(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPointer(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalPointer(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalPointer(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPointer(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPointer(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPointer(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalPointer(void) { }
 	
 };
@@ -4180,17 +4180,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalPrivSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPrivSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalPrivSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalPrivSelect(void) { }
 	
 };
@@ -4207,17 +4207,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalRate(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRate(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRate(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalRate(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalRate(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRate(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRate(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRate(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalRate(void) { }
 	
 };
@@ -4234,17 +4234,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalRequestMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRequestMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalRequestMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalRequestMode(void) { }
 	
 };
@@ -4261,17 +4261,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTerminalID(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalID(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalID(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalTerminalID(void) { }
 	
 };
@@ -4288,17 +4288,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTerminalMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTerminalMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalTerminalMode(void) { }
 	
 };
@@ -4315,17 +4315,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTimeout(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTimeout(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTimeout(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalTimeout(void) { }
 	
 };
@@ -4342,17 +4342,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTone(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTone(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTone(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTone(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTone(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTone(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalTone(void) { }
 	
 };
@@ -4369,17 +4369,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalToneList(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalToneList(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalToneList(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneList(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneList(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneList(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalToneList(void) { }
 	
 };
@@ -4396,17 +4396,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalToneMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalToneMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalToneMode(void) { }
 	
 };
@@ -4423,17 +4423,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalTransferMode(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTransferMode(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalTransferMode(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalTransferMode(void) { }
 	
 };
@@ -4450,17 +4450,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiLineMapperFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLineMapperFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLineMapperFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiLineMapperFailed(void) { }
 	
 };
@@ -4477,17 +4477,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoConference(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoConference(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoConference(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoConference(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoConference(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoConference(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoConference(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoConference(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoConference(void) { }
 	
 };
@@ -4504,17 +4504,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoDevice(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDevice(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDevice(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoDevice(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoDevice(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDevice(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDevice(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDevice(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoDevice(void) { }
 	
 };
@@ -4531,17 +4531,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoDriver(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDriver(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDriver(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoDriver(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoDriver(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDriver(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDriver(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoDriver(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoDriver(void) { }
 	
 };
@@ -4558,17 +4558,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoMem(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMem(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMem(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoMem(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoMem(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMem(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMem(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMem(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoMem(void) { }
 	
 };
@@ -4585,17 +4585,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoRequest(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoRequest(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoRequest(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoRequest(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoRequest(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoRequest(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoRequest(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoRequest(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoRequest(void) { }
 	
 };
@@ -4612,17 +4612,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotOwner(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotOwner(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotOwner(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotOwner(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotOwner(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotOwner(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotOwner(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotOwner(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNotOwner(void) { }
 	
 };
@@ -4639,17 +4639,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotRegistered(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotRegistered(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotRegistered(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotRegistered(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotRegistered(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotRegistered(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotRegistered(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotRegistered(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNotRegistered(void) { }
 	
 };
@@ -4666,17 +4666,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiOperationFailed(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiOperationFailed(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiOperationFailed(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationFailed(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationFailed(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationFailed(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiOperationFailed(void) { }
 	
 };
@@ -4693,17 +4693,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiOperationUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiOperationUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiOperationUnavail(void) { }
 	
 };
@@ -4720,17 +4720,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiRateUnavail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiRateUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiRateUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiRateUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiRateUnavail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRateUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRateUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRateUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiRateUnavail(void) { }
 	
 };
@@ -4747,17 +4747,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiResourceUnavail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiResourceUnavail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiResourceUnavail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiResourceUnavail(void) { }
 	
 };
@@ -4774,17 +4774,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiRequestOverrun(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRequestOverrun(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiRequestOverrun(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiRequestOverrun(void) { }
 	
 };
@@ -4801,17 +4801,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiStructureTooSmall(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiStructureTooSmall(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiStructureTooSmall(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiStructureTooSmall(void) { }
 	
 };
@@ -4828,17 +4828,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTargetNotFound(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetNotFound(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetNotFound(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiTargetNotFound(void) { }
 	
 };
@@ -4855,17 +4855,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTargetSelf(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetSelf(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetSelf(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTargetSelf(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTargetSelf(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetSelf(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetSelf(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTargetSelf(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiTargetSelf(void) { }
 	
 };
@@ -4882,17 +4882,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUninitialized(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUninitialized(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUninitialized(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUninitialized(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUninitialized(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUninitialized(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUninitialized(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUninitialized(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiUninitialized(void) { }
 	
 };
@@ -4909,17 +4909,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUserUserInfoTooBig(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiUserUserInfoTooBig(void) { }
 	
 };
@@ -4936,17 +4936,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiReinit(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiReinit(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiReinit(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiReinit(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiReinit(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiReinit(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiReinit(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiReinit(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiReinit(void) { }
 	
 };
@@ -4963,17 +4963,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiAddressBlocked(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAddressBlocked(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiAddressBlocked(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiAddressBlocked(void) { }
 	
 };
@@ -4990,17 +4990,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBillingRejected(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBillingRejected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBillingRejected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBillingRejected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBillingRejected(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBillingRejected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBillingRejected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBillingRejected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiBillingRejected(void) { }
 	
 };
@@ -5017,17 +5017,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalFeature(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalFeature(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalFeature(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiInvalFeature(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalFeature(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalFeature(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalFeature(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiInvalFeature(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiInvalFeature(void) { }
 	
 };
@@ -5044,17 +5044,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoMultipleInstance(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMultipleInstance(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoMultipleInstance(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoMultipleInstance(void) { }
 	
 };
@@ -5071,17 +5071,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBusy(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiBusy(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBusy(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBusy(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBusy(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiBusy(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiBusy(void) { }
 	
 };
@@ -5098,17 +5098,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotSet(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotSet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotSet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNotSet(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotSet(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotSet(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotSet(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNotSet(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNotSet(void) { }
 	
 };
@@ -5125,17 +5125,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoSelect(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiNoSelect(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoSelect(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoSelect(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoSelect(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiNoSelect(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiNoSelect(void) { }
 	
 };
@@ -5152,17 +5152,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiLoadFail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiLoadFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiLoadFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiLoadFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiLoadFail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLoadFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLoadFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiLoadFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiLoadFail(void) { }
 	
 };
@@ -5179,17 +5179,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiGetAddrFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiGetAddrFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiGetAddrFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiGetAddrFail(void) { }
 	
 };
@@ -5206,17 +5206,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUnexpected(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUnexpected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUnexpected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiUnexpected(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUnexpected(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUnexpected(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUnexpected(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiUnexpected(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiUnexpected(void) { }
 	
 };
@@ -5233,17 +5233,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiVoiceNotSupported(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiVoiceNotSupported(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiVoiceNotSupported(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiVoiceNotSupported(void) { }
 	
 };
@@ -5260,17 +5260,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiWaveFail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiWaveFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiWaveFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiWaveFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiWaveFail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiWaveFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiWaveFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiWaveFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiWaveFail(void) { }
 	
 };
@@ -5287,17 +5287,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTranslateFail(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTranslateFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTranslateFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ETapiTranslateFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTranslateFail(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTranslateFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTranslateFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ETapiTranslateFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ETapiTranslateFail(void) { }
 	
 };
@@ -5314,17 +5314,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, System::Byte Dummy) : ETapi(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ETapi(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EVoIPNotSupported(NativeUInt Ident)/* overload */ : ETapi(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec)/* overload */ : ETapi(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EVoIPNotSupported(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EVoIPNotSupported(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ETapi(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, int AHelpContext) : ETapi(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EVoIPNotSupported(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ETapi(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EVoIPNotSupported(NativeUInt Ident, int AHelpContext)/* overload */ : ETapi(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ETapi(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EVoIPNotSupported(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EVoIPNotSupported(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EVoIPNotSupported(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ETapi(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EVoIPNotSupported(void) { }
 	
 };
@@ -5341,17 +5341,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, System::Byte Dummy) : ERas(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : ERas(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : ERas(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ERasLoadFail(NativeUInt Ident)/* overload */ : ERas(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec)/* overload */ : ERas(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERasLoadFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : ERas(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : ERas(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERasLoadFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : ERas(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : ERas(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, int AHelpContext) : ERas(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : ERas(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ERasLoadFail(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : ERas(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERasLoadFail(NativeUInt Ident, int AHelpContext)/* overload */ : ERas(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : ERas(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ERas(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ERasLoadFail(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : ERas(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERasLoadFail(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ERas(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ERasLoadFail(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : ERas(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ERasLoadFail(void) { }
 	
 };
@@ -5370,17 +5370,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, System::Byte Dummy) : EAdTerminal(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermRangeError(NativeUInt Ident)/* overload */ : EAdTerminal(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec)/* overload */ : EAdTerminal(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermRangeError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermRangeError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, int AHelpContext) : EAdTerminal(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermRangeError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermRangeError(NativeUInt Ident, int AHelpContext)/* overload */ : EAdTerminal(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermRangeError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermRangeError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermRangeError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdTermRangeError(void) { }
 	
 };
@@ -5397,17 +5397,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, System::Byte Dummy) : EAdTerminal(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident)/* overload */ : EAdTerminal(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec)/* overload */ : EAdTerminal(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, int AHelpContext) : EAdTerminal(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermInvalidParameter(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident, int AHelpContext)/* overload */ : EAdTerminal(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermInvalidParameter(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermInvalidParameter(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdTermInvalidParameter(void) { }
 	
 };
@@ -5424,17 +5424,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, System::Byte Dummy) : EAdTerminal(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAdTerminal(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermTooLarge(NativeUInt Ident)/* overload */ : EAdTerminal(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec)/* overload */ : EAdTerminal(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermTooLarge(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermTooLarge(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, int AHelpContext) : EAdTerminal(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdTermTooLarge(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAdTerminal(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermTooLarge(NativeUInt Ident, int AHelpContext)/* overload */ : EAdTerminal(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermTooLarge(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermTooLarge(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdTermTooLarge(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdTerminal(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdTermTooLarge(void) { }
 	
 };
@@ -5455,17 +5455,17 @@ public:
 __published:
 	__property int ErrorCode = {read=FErrorCode, nodefault};
 public:
-	/* Exception.CreateFmt */ inline __fastcall EApdPagerException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EApdPagerException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EApdPagerException(NativeUInt Ident)/* overload */ : System::Sysutils::Exception(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec)/* overload */ : System::Sysutils::Exception(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdPagerException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdPagerException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EApdPagerException(const System::UnicodeString Msg, int AHelpContext) : System::Sysutils::Exception(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EApdPagerException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EApdPagerException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdPagerException(NativeUInt Ident, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdPagerException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdPagerException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdPagerException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EApdPagerException(void) { }
 	
 };
@@ -5486,17 +5486,17 @@ public:
 __published:
 	__property int ErrorCode = {read=FErrorCode, nodefault};
 public:
-	/* Exception.CreateFmt */ inline __fastcall EApdGSMPhoneException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EApdGSMPhoneException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : System::Sysutils::Exception(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident)/* overload */ : System::Sysutils::Exception(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec)/* overload */ : System::Sysutils::Exception(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EApdGSMPhoneException(const System::UnicodeString Msg, int AHelpContext) : System::Sysutils::Exception(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EApdGSMPhoneException(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EApdGSMPhoneException(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : System::Sysutils::Exception(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdGSMPhoneException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdGSMPhoneException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EApdGSMPhoneException(void) { }
 	
 };
@@ -5519,17 +5519,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, System::Byte Dummy) : EXML(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EXML(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EXML(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdStreamError(NativeUInt Ident)/* overload */ : EXML(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec)/* overload */ : EXML(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdStreamError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EXML(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EXML(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdStreamError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EXML(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EXML(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, int AHelpContext) : EXML(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EXML(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdStreamError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EXML(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdStreamError(NativeUInt Ident, int AHelpContext)/* overload */ : EXML(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EXML(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EXML(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdStreamError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EXML(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdStreamError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EXML(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdStreamError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EXML(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdStreamError(void) { }
 	
 };
@@ -5556,17 +5556,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, System::Byte Dummy) : EAdStreamError(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAdStreamError(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAdStreamError(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdFilterError(NativeUInt Ident)/* overload */ : EAdStreamError(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec)/* overload */ : EAdStreamError(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdFilterError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdStreamError(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdStreamError(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdFilterError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdStreamError(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdStreamError(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, int AHelpContext) : EAdStreamError(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAdStreamError(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdFilterError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAdStreamError(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdFilterError(NativeUInt Ident, int AHelpContext)/* overload */ : EAdStreamError(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAdStreamError(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdStreamError(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdFilterError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdStreamError(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdFilterError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdStreamError(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdFilterError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdStreamError(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdFilterError(void) { }
 	
 };
@@ -5585,17 +5585,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EAdParserError(const System::UnicodeString Msg, System::Byte Dummy) : EAdFilterError(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EAdParserError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : EAdFilterError(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EAdParserError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : EAdFilterError(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EAdParserError(NativeUInt Ident)/* overload */ : EAdFilterError(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec)/* overload */ : EAdFilterError(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdParserError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdFilterError(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : EAdFilterError(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdParserError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdFilterError(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : EAdFilterError(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EAdParserError(const System::UnicodeString Msg, int AHelpContext) : EAdFilterError(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EAdParserError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : EAdFilterError(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EAdParserError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : EAdFilterError(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdParserError(NativeUInt Ident, int AHelpContext)/* overload */ : EAdFilterError(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : EAdFilterError(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdFilterError(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EAdParserError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : EAdFilterError(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdParserError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdFilterError(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EAdParserError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : EAdFilterError(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EAdParserError(void) { }
 	
 };

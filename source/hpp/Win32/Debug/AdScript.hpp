@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdScript.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdScript.pas' rev: 31.00 (Windows)
 
 #ifndef AdscriptHPP
 #define AdscriptHPP
@@ -51,17 +51,17 @@ public:
 	/* EAPDException.CreateUnknown */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, System::Byte Dummy) : Adexcept::EAPDException(Msg, Dummy) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : Adexcept::EAPDException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : Adexcept::EAPDException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall EApdScriptError(NativeUInt Ident)/* overload */ : Adexcept::EAPDException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec)/* overload */ : Adexcept::EAPDException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdScriptError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : Adexcept::EAPDException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : Adexcept::EAPDException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdScriptError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : Adexcept::EAPDException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : Adexcept::EAPDException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, int AHelpContext) : Adexcept::EAPDException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : Adexcept::EAPDException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall EApdScriptError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : Adexcept::EAPDException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdScriptError(NativeUInt Ident, int AHelpContext)/* overload */ : Adexcept::EAPDException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : Adexcept::EAPDException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~EApdScriptError(void) { }
 	
 };

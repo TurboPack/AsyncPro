@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdSapiPh.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdSapiPh.pas' rev: 31.00 (Windows)
 
 #ifndef AdsapiphHPP
 #define AdsapiphHPP
@@ -78,17 +78,17 @@ public:
 	/* EApdSapiEngineException.Create */ inline __fastcall ESapiPhoneError(const int ErrCode, const System::UnicodeString Msg) : Adsapien::EApdSapiEngineException(ErrCode, Msg) { }
 	
 public:
-	/* Exception.CreateFmt */ inline __fastcall ESapiPhoneError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High) : Adsapien::EApdSapiEngineException(Msg, Args, Args_High) { }
+	/* Exception.CreateFmt */ inline __fastcall ESapiPhoneError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High) : Adsapien::EApdSapiEngineException(Msg, Args, Args_High) { }
 	/* Exception.CreateRes */ inline __fastcall ESapiPhoneError(NativeUInt Ident)/* overload */ : Adsapien::EApdSapiEngineException(Ident) { }
 	/* Exception.CreateRes */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESapiPhoneError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High)/* overload */ : Adsapien::EApdSapiEngineException(Ident, Args, Args_High) { }
-	/* Exception.CreateResFmt */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESapiPhoneError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High)/* overload */ : Adsapien::EApdSapiEngineException(Ident, Args, Args_High) { }
+	/* Exception.CreateResFmt */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, Args, Args_High) { }
 	/* Exception.CreateHelp */ inline __fastcall ESapiPhoneError(const System::UnicodeString Msg, int AHelpContext) : Adsapien::EApdSapiEngineException(Msg, AHelpContext) { }
-	/* Exception.CreateFmtHelp */ inline __fastcall ESapiPhoneError(const System::UnicodeString Msg, System::TVarRec const *Args, const int Args_High, int AHelpContext) : Adsapien::EApdSapiEngineException(Msg, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateFmtHelp */ inline __fastcall ESapiPhoneError(const System::UnicodeString Msg, const System::TVarRec *Args, const int Args_High, int AHelpContext) : Adsapien::EApdSapiEngineException(Msg, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESapiPhoneError(NativeUInt Ident, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(Ident, AHelpContext) { }
 	/* Exception.CreateResHelp */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, Args, Args_High, AHelpContext) { }
-	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(NativeUInt Ident, System::TVarRec const *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(Ident, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, Args, Args_High, AHelpContext) { }
+	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(Ident, Args, Args_High, AHelpContext) { }
 	/* Exception.Destroy */ inline __fastcall virtual ~ESapiPhoneError(void) { }
 	
 };
@@ -105,6 +105,9 @@ public:
 public:
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(void)/* overload */ : System::Classes::TStringList() { }
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(bool OwnsObjects)/* overload */ : System::Classes::TStringList(OwnsObjects) { }
+	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::WideChar QuoteChar, System::WideChar Delimiter)/* overload */ : System::Classes::TStringList(QuoteChar, Delimiter) { }
+	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::WideChar QuoteChar, System::WideChar Delimiter, System::Classes::TStringsOptions Options)/* overload */ : System::Classes::TStringList(QuoteChar, Delimiter, Options) { }
+	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::Types::TDuplicates Duplicates, bool Sorted, bool CaseSensitive)/* overload */ : System::Classes::TStringList(Duplicates, Sorted, CaseSensitive) { }
 	/* TStringList.Destroy */ inline __fastcall virtual ~TApdSapiGrammarList(void) { }
 	
 };

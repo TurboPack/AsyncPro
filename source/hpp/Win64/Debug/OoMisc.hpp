@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 31.00 (Windows)
 
 #ifndef OomiscHPP
 #define OomiscHPP
@@ -706,7 +706,7 @@ class PASCALIMPLEMENTATION TAdStr : public System::TObject
 	typedef System::TObject inherited;
 	
 public:
-	System::WideChar operator[](unsigned Index) { return Chars[Index]; }
+	System::WideChar operator[](unsigned Index) { return this->Chars[Index]; }
 	
 private:
 	int FMaxLen;

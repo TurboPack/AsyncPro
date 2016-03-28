@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdITapi3.pas' rev: 30.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdITapi3.pas' rev: 31.00 (Windows)
 
 #ifndef Aditapi3HPP
 #define Aditapi3HPP
@@ -261,7 +261,7 @@ __interface  INTERFACE_UUID("{5EC5ACF2-9C02-11D0-8362-00AA003CCABD}") ITCollecti
 {
 	
 public:
-	System::OleVariant operator[](int Index) { return Item[Index]; }
+	System::OleVariant operator[](int Index) { return this->Item[Index]; }
 	virtual HRESULT __safecall Get_Count(int &__Get_Count_result) = 0 ;
 	virtual HRESULT __safecall Get_Item(int Index, System::OleVariant &__Get_Item_result) = 0 ;
 	virtual HRESULT __safecall Get__NewEnum(System::_di_IInterface &__Get__NewEnum_result) = 0 ;
