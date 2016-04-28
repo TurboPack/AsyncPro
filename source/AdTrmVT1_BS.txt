@@ -1,0 +1,375 @@
+ ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is TurboPower Async Professional
+ *
+ * The Initial Developer of the Original Code is
+ * TurboPower Software
+ *
+ * Portions created by the Initial Developer are Copyright (C) 1991-2002
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ * ***** END LICENSE BLOCK *****
+
+**********************************************************************
+* Async Professional: ADTRMVT1.TXT 4.06                              *
+**********************************************************************
+* Terminal: VT100 keyboard map (with VT52 mappings)                  *
+**********************************************************************
+
+* Notes: this file defines three sets of mappings
+*          - virtual key code --> virtual key name (VK_xxx)
+*          - shifted virtual key name --> VT key name
+*          - VT key name --> escape sequence
+*
+*        For example, the virtual key code for the F2 key on a PC key-
+*        board is $71. This is linked to the virtual key name VK_F2.
+*        This in turn is identified with the keyname DEC_PF2. This
+*        keyname is linked to the ESC O Q sequence. Hence, when the
+*        user hits the F2 key on his keyboard, the keyboard emulator
+*        converts it to the DEC_PF2 mnemonic and thence to the
+*        Esc O Q sequence which the terminal component then sends
+*        to the server.
+
+*        This process is complicated a little by the use of
+*        application modes since they alter the escape sequence sent
+*        by the terminal. What happens here is that the keyboard
+*        emulator affixes a digit representing the mode onto the key
+*        name and this is looked up:
+*             Suffix  Mode
+*             0       VT52 cursor mode
+*             1       ANSI with cursor key mode reset
+*             2       ANSI with cursor key mode set
+*             3       VT52 numeric mode
+*             4       VT52 application mode
+*             5       ANSI numeric mode
+*             6       ANSI application mode
+*        If the key name ends in a 'c', the keyboard emulator replaces
+*        it with 0, 1, 2 depending on the active mode before using it
+*        as a lookup. If it ends with a 'k', the emulator replaces it
+*        with 3, 4, 5, 6 before using it as a lookup.
+
+*        The only keys converted by this process are: the numeric
+*        keypad keys, the cursor movement keys and the function keys.
+*        All other keys on the main keyboard generate the standard
+*        characters and these are passed straight through.
+
+*        The file consists of three tables: the table of virtual key
+*        codes and their standard names (which should not be altered,
+*        unless you are adding more mappings), the table of VT key
+*        names and escape sequences (which should not be changed) and
+*        the table of virtual key names and VT key names (which can be
+*        changed to suit whichever key mapping you wish to use).
+
+* The format of this file is as follows
+*   - any completely blank line is ignored
+*   - any line starting with a * is a comment
+*   - any line starting with at least one space is a detail line. A
+*     detail line consists of two 'words', where a word is a set of up
+*     to 63 characters without a space, case sensitive. Words are
+*     separated by spaces (NOT tabs).
+*     \e in a word means Escape; \xnn, where nn is a hex number,
+*     represents that ASCII character. For the shifted virtual key
+*     declarations, you can also use the mnemonics shift, ctrl, alt
+*     with the + sign to denote shifted virtual keys. For example
+*     shift+VK_F1 means a shifted F1 key, alt+VK_F1 means an alt-
+*     shifted F1 key and so on.
+*     Any other characters after the two words is a comment and is
+*     ignored.
+*     Any detail line that cannot be parsed is simply ignored.
+*   - any line that doesn't match the above is ignored.
+
+* Warning: notice that the parser that reads this file does not emit
+*          any warnings or errors whatsoever. It will just ignore
+*          anything it doesn't understand. So, if something is not
+*          working in the terminal keyboard emulation, check the
+*          format of this file first.
+
+* Hint: since the keypad Enter key has the same virtual key code as
+*       the main keyboard Enter key, the emulator will alter the
+*       virtual key code for the former to $2B (VK_EXECUTE) prior
+*       to using it.
+
+
+*=====================================================================
+* Virtual key code to virtual key name table
+* (taken from the Microsoft documentation; note that some virtual key
+* codes are not available on normal keyboards)
+
+  \x08  VK_BACK
+  \x09  VK_TAB
+  \x0C  VK_CLEAR
+  \x0D  VK_RETURN
+  \x13  VK_PAUSE
+  \x14  VK_CAPITAL
+  \x1B  VK_ESCAPE
+  \x20  VK_SPACE
+  \x21  VK_PRIOR      Page Up key
+  \x22  VK_NEXT       Page Down key
+  \x23  VK_END
+  \x24  VK_HOME
+  \x25  VK_LEFT
+  \x26  VK_UP
+  \x27  VK_RIGHT
+  \x28  VK_DOWN
+  \x29  VK_SELECT
+  \x2B  VK_EXECUTE    Numeric keypad Enter key
+  \x2C  VK_SNAPSHOT   PrtScrn key
+  \x2D  VK_INSERT
+  \x2E  VK_DELETE
+  \x2F  VK_HELP
+  \x30  VK_0
+  \x31  VK_1
+  \x32  VK_2
+  \x33  VK_3
+  \x34  VK_4
+  \x35  VK_5
+  \x36  VK_6
+  \x37  VK_7
+  \x38  VK_8
+  \x39  VK_9
+  \x41  VK_A
+  \x42  VK_B
+  \x43  VK_C
+  \x44  VK_D
+  \x45  VK_E
+  \x46  VK_F
+  \x47  VK_G
+  \x48  VK_H
+  \x49  VK_I
+  \x4A  VK_J
+  \x4B  VK_K
+  \x4C  VK_L
+  \x4D  VK_M
+  \x4E  VK_N
+  \x4F  VK_O
+  \x50  VK_P
+  \x51  VK_Q
+  \x52  VK_R
+  \x53  VK_S
+  \x54  VK_T
+  \x55  VK_U
+  \x56  VK_V
+  \x57  VK_W
+  \x58  VK_X
+  \x59  VK_Y
+  \x5A  VK_Z
+  \x60  VK_NUMPAD0
+  \x61  VK_NUMPAD1
+  \x62  VK_NUMPAD2
+  \x63  VK_NUMPAD3
+  \x64  VK_NUMPAD4
+  \x65  VK_NUMPAD5
+  \x66  VK_NUMPAD6
+  \x67  VK_NUMPAD7
+  \x68  VK_NUMPAD8
+  \x69  VK_NUMPAD9
+  \x6A  VK_MULTIPLY   Numeric keypad *
+  \x6B  VK_ADD        Numeric keypad +
+  \x6C  VK_SEPARATOR
+  \x6D  VK_SUBTRACT   Numeric keypad -
+  \x6E  VK_DECIMAL    Numeric keypad .
+  \x6F  VK_DIVIDE     Numeric keypad /
+  \x70  VK_F1
+  \x71  VK_F2
+  \x72  VK_F3
+  \x73  VK_F4
+  \x74  VK_F5
+  \x75  VK_F6
+  \x76  VK_F7
+  \x77  VK_F8
+  \x78  VK_F9
+  \x79  VK_F10
+  \x7A  VK_F11
+  \x7B  VK_F12
+  \x7C  VK_F13
+  \x7D  VK_F14
+  \x7E  VK_F15
+  \x7F  VK_F16
+  \x80  VK_F17
+  \x81  VK_F18
+  \x82  VK_F19
+  \x83  VK_F20
+  \x84  VK_F21
+  \x85  VK_F22
+  \x86  VK_F23
+  \x87  VK_F24
+  \x90  VK_NUMLOCK
+  \x91  VK_SCROLL     Scroll Lock key
+
+
+*=====================================================================
+* VT key name to escape sequence table
+* (taken from DEC documentation)
+
+* Standard keys (non-mode specific)
+  DEC_BS     \x08
+  DEC_LF     \x0A
+  DEC_NULL   \x00
+  DEC_DEL    \x7F
+*sjb added
+  DEC_CRLF   \x0D\x0A
+  DEC_ETX    \x03
+  DEC_ABC    ABC
+
+* The cursor movement keys for VT52 mode (suffix 0)
+  DEC_UP0    \eA
+  DEC_DOWN0  \eB
+  DEC_RIGHT0 \eC
+  DEC_LEFT0  \eD
+
+* The cursor movement keys for ANSI & cursor key mode reset (suffix 1)
+  DEC_UP1    \e[A
+  DEC_DOWN1  \e[B
+  DEC_RIGHT1 \e[C
+  DEC_LEFT1  \e[D
+
+* The cursor movement keys for ANSI & cursor key mode set (suffix 2)
+  DEC_UP2    \eOA
+  DEC_DOWN2  \eOB
+  DEC_RIGHT2 \eOC
+  DEC_LEFT2  \eOD
+
+* The keypad keys for VT52 numeric mode (suffix 3)
+  DEC_KP03   0      zero
+  DEC_KP13   1      one
+  DEC_KP23   2      two
+  DEC_KP33   3      three
+  DEC_KP43   4      four
+  DEC_KP53   5      five
+  DEC_KP63   6      six
+  DEC_KP73   7      seven
+  DEC_KP83   8      eight
+  DEC_KP93   9      nine
+  DEC_KP-3   -      minus
+  DEC_KP,3   ,      comma
+  DEC_KP.3   .      period
+  DEC_KPE3   \x0D   Enter
+  DEC_PF13   \eP    PF1
+  DEC_PF23   \eQ    PF2
+  DEC_PF33   \eR    PF3
+  DEC_PF43   \eS    PF4
+
+* The keypad keys for VT52 application mode (suffix 4)
+  DEC_KP04   \e?p   zero
+  DEC_KP14   \e?q   one
+  DEC_KP24   \e?r   two
+  DEC_KP34   \e?s   three
+  DEC_KP44   \e?t   four
+  DEC_KP54   \e?u   five
+  DEC_KP64   \e?v   six
+  DEC_KP74   \e?w   seven
+  DEC_KP84   \e?x   eight
+  DEC_KP94   \e?y   nine
+  DEC_KP-4   \e?m   minus
+  DEC_KP,4   \e?l   comma
+  DEC_KP.4   \e?n   period
+  DEC_KPE4   \e?M   Enter
+  DEC_PF14   \eP    PF1
+  DEC_PF24   \eQ    PF2
+  DEC_PF34   \eR    PF3
+  DEC_PF44   \eS    PF4
+
+* The keypad keys for ANSI numeric mode (suffix 5)
+  DEC_KP05   0      zero
+  DEC_KP15   1      one
+  DEC_KP25   2      two
+  DEC_KP35   3      three
+  DEC_KP45   4      four
+  DEC_KP55   5      five
+  DEC_KP65   6      six
+  DEC_KP75   7      seven
+  DEC_KP85   8      eight
+  DEC_KP95   9      nine
+  DEC_KP-5   -      minus
+  DEC_KP,5   ,      comma
+  DEC_KP.5   .      period
+  DEC_KPE5   \x0D   Enter
+  DEC_PF15   \eOP   PF1
+  DEC_PF25   \eOQ   PF2
+  DEC_PF35   \eOR   PF3
+  DEC_PF45   \eOS   PF4
+
+* The keypad keys for ANSI application mode (suffix 6)
+  DEC_KP06   \eOp   zero
+  DEC_KP16   \eOq   one
+  DEC_KP26   \eOr   two
+  DEC_KP36   \eOs   three
+  DEC_KP46   \eOt   four
+  DEC_KP56   \eOu   five
+  DEC_KP66   \eOv   six
+  DEC_KP76   \eOw   seven
+  DEC_KP86   \eOx   eight
+  DEC_KP96   \eOy   nine
+  DEC_KP-6   \eOm   minus
+  DEC_KP,6   \eOl   comma
+  DEC_KP.6   \eOn   period
+  DEC_KPE6   \eOM   Enter
+  DEC_PF16   \eOP   PF1
+  DEC_PF26   \eOQ   PF2
+  DEC_PF36   \eOR   PF3
+  DEC_PF46   \eOS   PF4
+
+
+*=====================================================================
+* Virtual key name to VT key name table
+* (this is just one view--can be altered to suit application)
+
+*sjb change to actually do backspace from bs key instead of DEL...
+*  VK_BACK          DEC_DEL     Backspace -> DEL character
+*  shift+VK_BACK    DEC_BS      shift+Backspace -> backspace character
+  VK_BACK          DEC_BS       Backspace
+  shift+VK_BACK    DEC_DEL      shift+Backspace -> DEL
+  VK_DELETE         DEC_DEL      DEL
+
+  shift+VK_RETURN  DEC_CRLF      shift+Enter -> linefeed character
+  shift+VK_EXECUTE DEC_LF      shift+Numpad Enter -> linefeed
+  VK_F11           DEC_BS      F11 -> backspace character
+  VK_F12           DEC_LF      F22 -> linefeed character
+ *sjb added NULL key
+  ctrl+VK_SPACE    DEC_NULL    ctrl+space -> null character
+  alt+VK_F8     DEC_ABC         experiment
+
+  VK_F1            DEC_PF1k    F1 -> PF1
+  VK_F2            DEC_PF2k    F2 -> PF2
+  VK_F3            DEC_PF3k    F3 -> PF3
+  VK_F4            DEC_PF4k    F4 -> PF4
+
+  VK_NUMLOCK       DEC_PF1k    NumLock key -> PF1
+  VK_DIVIDE        DEC_PF2k    Numeric keypad / -> PF2
+  VK_MULTIPLY      DEC_PF3k    Numeric keypad * -> PF3
+  VK_SUBTRACT      DEC_PF4k    Numeric keypad - -> PF4
+
+  VK_NUMPAD0       DEC_KP0k    Numeric keypad 0 -> VT keypad 0
+  VK_NUMPAD1       DEC_KP1k    Numeric keypad 1 -> VT keypad 1
+  VK_NUMPAD2       DEC_KP2k    Numeric keypad 2 -> VT keypad 2
+  VK_NUMPAD3       DEC_KP3k    Numeric keypad 3 -> VT keypad 3
+  VK_NUMPAD4       DEC_KP4k    Numeric keypad 4 -> VT keypad 4
+  VK_NUMPAD5       DEC_KP5k    Numeric keypad 5 -> VT keypad 5
+  VK_NUMPAD6       DEC_KP6k    Numeric keypad 6 -> VT keypad 6
+  VK_NUMPAD7       DEC_KP7k    Numeric keypad 7 -> VT keypad 7
+  VK_NUMPAD8       DEC_KP8k    Numeric keypad 8 -> VT keypad 8
+  VK_NUMPAD9       DEC_KP9k    Numeric keypad 9 -> VT keypad 9
+
+  VK_ADD           DEC_KP-k    Numeric keypad + -> VT keypad minus
+  ctrl+VK_DECIMAL  DEC_KP,k    Shift Numeric . + -> VT keypad comma
+  VK_DECIMAL       DEC_KP.k    Numeric keypad . -> VT keypad period
+  VK_EXECUTE       DEC_KPEk    Numeric keypad Enter -> VT keypad Enter
+
+  VK_UP            DEC_UPc     Up arrow
+  VK_DOWN          DEC_DOWNc   Down arrow
+  VK_RIGHT         DEC_RIGHTc  Right arrow
+  VK_LEFT          DEC_LEFTc   Left arrow
+
