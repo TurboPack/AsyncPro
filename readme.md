@@ -2,7 +2,7 @@
 
 Updated for 10.3 Rio / VER330 / PKG 260
 
-You can still find [10.2 Tokyo](https://github.com/TurboPack/AsyncPro/releases/tag/102Tokyo) and [10.1 Berlin](https://github.com/TurboPack/AsyncPro/releases/tag/101Berlin) still too.
+You can still access [10.2 Tokyo](https://github.com/TurboPack/AsyncPro/releases/tag/102Tokyo) and [10.1 Berlin](https://github.com/TurboPack/AsyncPro/releases/tag/101Berlin) too.
 
 ## Table of contents
 
