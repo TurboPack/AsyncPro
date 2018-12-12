@@ -26,7 +26,7 @@ package AsyncProDR;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'TurboPack Async Professional Delphi Runtime Package'}
-{$LIBSUFFIX '240'}
+{$LIBSUFFIX '250'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 

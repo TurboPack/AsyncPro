@@ -26,7 +26,7 @@ package AsyncProDD;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'TurboPack Async Professional Delphi Designtime Package'}
-{$LIBSUFFIX '240'}
+{$LIBSUFFIX '250'}
 {$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 

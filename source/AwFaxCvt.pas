@@ -6632,55 +6632,52 @@ end;
 function upUnpackFileToDcx(Unpack: PUnpackFax; FName, OutName: string): Integer;
 { -Unpack an APF file to a DCX file }
 var
-  Code: Integer;
   I: Cardinal;
   Data: PDcxUnpackData;
 
 begin
-  with Unpack^ do begin
-    Code:= ecOK; { !!.04 }
+  Result := ecOK;
+  with Unpack^ do
+  begin
     try { !!.04 }
       { read the fax file header }
-      Code:= upGetFaxHeader(Unpack, FName, FaxHeader);
-      if (Code < ecOK) then begin
-        upUnpackFileToDcx:= Code;
+      Result := upGetFaxHeader(Unpack, FName, FaxHeader);
+      if Result < ecOK then
         Exit;
-      end;
 
       { create the output file }
-      Code:= CreateDCXFile(Unpack, FName, OutName, Data);
-      if (Code < ecOK) then begin
-        upUnpackFileToDcx:= Code;
+      Result := CreateDCXFile(Unpack, FName, OutName, Data);
+      if Result < ecOK then
         Exit;
-      end;
 
-      Code:= upInitFileUnpack(Unpack, FName);
-      if (Code < ecOK) then begin
+      Result:= upInitFileUnpack(Unpack, FName);
+      if Result < ecOK then
+      begin
         FreeMem(Data, SizeOf(TDcxUnpackData));
-        upUnpackFileToDcx:= Code;
         Exit;
       end;
 
       { output each page as a PCX image }
-      for I:= 1 to FaxHeader.PageCount do begin
-        Code:= upUnpackPageToBuffer(Unpack, FName, I, True);
-        if (Code = ecOK) then Code:= OutputPageToDcx(Unpack, Data);
+      for I:= 1 to FaxHeader.PageCount do
+      begin
+        Result := upUnpackPageToBuffer(Unpack, FName, I, True);
+        if Result = ecOK then
+          Result := OutputPageToDcx(Unpack, Data);
 
-        if (Code < ecOK) then begin
+        if Result < ecOK then
+        begin
           FreeMem(Data, SizeOf(TDcxUnpackData));
-          upUnpackFileToDcx:= Code;
           Exit;
         end;
       end;
 
     finally { !!.04 }
       { close the output file }
-      if Code = ecOK then { !!.04 }
-          Code:= CloseDcxFile(Unpack, Data) { !!.04 }
+      if Result = ecOK then { !!.04 }
+        Result := CloseDcxFile(Unpack, Data) { !!.04 }
       else { !!.04 }
         { an error occured, preserve the return value }
           CloseDcxFile(Unpack, Data); { !!.04 }
-      upUnpackFileToDcx:= Code; { !!.04 }
     end; { !!.04 }
   end;
 end;

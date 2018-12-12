@@ -112,7 +112,6 @@ var
 begin
   DetailStream := nil;
   try
-    Result := ecFileNotFound;
     DetailStream := TFileStream.Create(ModemDetailFile, fmOpenReadWrite);
     { find the space between the last </Modem> and the final </ModemList> }
     I := DetailStream.Size;
@@ -124,7 +123,8 @@ begin
       Found := Pos('</ModemList>', S) > 0;
     until Found or (I = 0);
     DetailStream.Position := I - 1;
-    if not Found then begin
+    if not Found then
+    begin
       Result := ecInvalidFile;
       Exit;
     end;
@@ -225,7 +225,6 @@ begin
   DetailStream := nil;
   MemStream := nil;
   try
-    Result := ecOK;
     ModemStart := 0;
     ModemEnd := 0;
     if not FileExists(ModemDetailFile) then begin
@@ -297,7 +296,6 @@ begin
   if FileExists(ModemCapIndex) then begin
     List := nil;
     try
-      Result := ecInvalidFile;
       List := TStringList.Create;
       List.LoadFromFile(ModemCapIndex);
       { find the modem }
