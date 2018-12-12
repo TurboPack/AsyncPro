@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdMdmCfg.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdMdmCfg.pas' rev: 33.00 (Windows)
 
 #ifndef AdmdmcfgHPP
 #define AdmdmcfgHPP
@@ -89,7 +89,7 @@ __published:
 	
 private:
 	Adlibmdm::TLmModem FLmModem;
-	Admdm::TApdModemConfig __fastcall GetModemConfig(void);
+	Admdm::TApdModemConfig __fastcall GetModemConfig();
 	void __fastcall SetLmModem(const Adlibmdm::TLmModem &Value);
 	void __fastcall SetModemConfig(const Admdm::TApdModemConfig &Value);
 	
@@ -99,7 +99,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TApdModemConfigDialog(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TApdModemConfigDialog(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdModemConfigDialog(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdModemConfigDialog() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdModemConfigDialog(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

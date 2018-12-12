@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStProt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStProt.pas' rev: 33.00 (Windows)
 
 #ifndef AdstprotHPP
 #define AdstprotHPP
@@ -50,7 +50,7 @@ private:
 	TApdOnFileXfrComplete FOnFileXfrComplete;
 	
 protected:
-	virtual void __fastcall Activate(void);
+	virtual void __fastcall Activate();
 	void __fastcall SetOutputOnError(const System::UnicodeString v);
 	void __fastcall SetOutputOnOK(const System::UnicodeString v);
 	void __fastcall SetProtocol(Adprotcl::TApdProtocol* v);
@@ -77,7 +77,7 @@ __published:
 	__property OnStateActivate;
 	__property OnStateFinish;
 public:
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSendFileState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSendFileState() { }
 	
 };
 
@@ -94,7 +94,7 @@ private:
 	TApdOnFileXfrComplete FOnFileXfrComplete;
 	
 protected:
-	virtual void __fastcall Activate(void);
+	virtual void __fastcall Activate();
 	void __fastcall SetOutputOnError(const System::UnicodeString v);
 	void __fastcall SetOutputOnOK(const System::UnicodeString v);
 	void __fastcall SetProtocol(Adprotcl::TApdProtocol* v);
@@ -121,7 +121,7 @@ __published:
 	__property OnStateActivate;
 	__property OnStateFinish;
 public:
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdReceiveFileState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdReceiveFileState() { }
 	
 };
 

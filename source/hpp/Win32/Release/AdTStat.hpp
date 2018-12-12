@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdTStat.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdTStat.pas' rev: 33.00 (Windows)
 
 #ifndef AdtstatHPP
 #define AdtstatHPP
@@ -64,7 +64,7 @@ __published:
 	
 private:
 	System::Word LabCount;
-	void __fastcall ClearStatusMessages(void);
+	void __fastcall ClearStatusMessages();
 	void __fastcall AddStatusLine(const System::UnicodeString S);
 	void __fastcall Mode(const System::UnicodeString S);
 	void __fastcall UpdateStatusLine(const System::UnicodeString S);
@@ -77,7 +77,7 @@ public:
 	__fastcall virtual TApdStandardTapiDisplay(System::Classes::TComponent* AOwner);
 public:
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TApdStandardTapiDisplay(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdStandardTapiDisplay(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdStandardTapiDisplay() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdStandardTapiDisplay(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }
@@ -90,12 +90,12 @@ class PASCALIMPLEMENTATION TApdTapiStatus : public Adtapi::TApdAbstractTapiStatu
 	typedef Adtapi::TApdAbstractTapiStatus inherited;
 	
 __published:
-	DYNAMIC void __fastcall CreateDisplay(void);
-	DYNAMIC void __fastcall DestroyDisplay(void);
+	DYNAMIC void __fastcall CreateDisplay();
+	DYNAMIC void __fastcall DestroyDisplay();
 	virtual void __fastcall UpdateDisplay(bool First, bool Last, unsigned Device, unsigned Message, unsigned Param1, unsigned Param2, unsigned Param3);
 public:
 	/* TApdAbstractTapiStatus.Create */ inline __fastcall virtual TApdTapiStatus(System::Classes::TComponent* AOwner) : Adtapi::TApdAbstractTapiStatus(AOwner) { }
-	/* TApdAbstractTapiStatus.Destroy */ inline __fastcall virtual ~TApdTapiStatus(void) { }
+	/* TApdAbstractTapiStatus.Destroy */ inline __fastcall virtual ~TApdTapiStatus() { }
 	
 };
 

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStatEd.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStatEd.pas' rev: 33.00 (Windows)
 
 #ifndef AdstatedHPP
 #define AdstatedHPP
@@ -43,7 +43,7 @@ public:
 	virtual void __fastcall DrawCell(int ACol, int ARow, const System::Types::TRect &ARect, Vcl::Grids::TGridDrawState AState);
 public:
 	/* TStringGrid.Create */ inline __fastcall virtual TApdStringGrid(System::Classes::TComponent* AOwner) : Vcl::Grids::TStringGrid(AOwner) { }
-	/* TStringGrid.Destroy */ inline __fastcall virtual ~TApdStringGrid(void) { }
+	/* TStringGrid.Destroy */ inline __fastcall virtual ~TApdStringGrid() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdStringGrid(HWND ParentWindow) : Vcl::Grids::TStringGrid(ParentWindow) { }
@@ -82,7 +82,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TfrmStateEdit(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TfrmStateEdit(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TfrmStateEdit(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TfrmStateEdit() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TfrmStateEdit(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

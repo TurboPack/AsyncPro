@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXProt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXProt.pas' rev: 33.00 (Windows)
 
 #ifndef AdxprotHPP
 #define AdxprotHPP
@@ -79,13 +79,13 @@ private:
 	bool Executed;
 	
 protected:
-	Adprotcl::TApdProtocol* __fastcall GetProtocol(void);
+	Adprotcl::TApdProtocol* __fastcall GetProtocol();
 	void __fastcall SetProtocol(Adprotcl::TApdProtocol* NewProtocol);
 	
 public:
 	__fastcall virtual TProtocolOptions(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TProtocolOptions(void);
-	bool __fastcall Execute(void);
+	__fastcall virtual ~TProtocolOptions();
+	bool __fastcall Execute();
 	__property Adprotcl::TApdProtocol* Protocol = {read=GetProtocol, write=SetProtocol};
 public:
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TProtocolOptions(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }

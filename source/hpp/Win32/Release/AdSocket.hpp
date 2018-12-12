@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdSocket.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdSocket.pas' rev: 33.00 (Windows)
 
 #ifndef AdsocketHPP
 #define AdsocketHPP
@@ -64,7 +64,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall EApdSocketException(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdSocketException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdSocketException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~EApdSocketException(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~EApdSocketException() { }
 	
 };
 
@@ -91,12 +91,12 @@ protected:
 	bool asDllLoaded;
 	int asStartErrorCode;
 	Adwutil::TwsaData asWSData;
-	System::UnicodeString __fastcall GetDescription(void);
-	HWND __fastcall GetHandle(void);
-	int __fastcall GetLastError(void);
-	System::UnicodeString __fastcall GetLocalHost(void);
-	System::UnicodeString __fastcall GetLocalAddress(void);
-	System::UnicodeString __fastcall GetSystemStatus(void);
+	System::UnicodeString __fastcall GetDescription();
+	HWND __fastcall GetHandle();
+	int __fastcall GetLastError();
+	System::UnicodeString __fastcall GetLocalHost();
+	System::UnicodeString __fastcall GetLocalAddress();
+	System::UnicodeString __fastcall GetSystemStatus();
 	MESSAGE void __fastcall CMAPDSocketMessage(TCMAPDSocketMessage &Message);
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
 	DYNAMIC void __fastcall ShowErrorMessage(int Err);
@@ -109,8 +109,8 @@ protected:
 	
 public:
 	__fastcall virtual TApdSocket(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdSocket(void);
-	void __fastcall CheckLoaded(void);
+	__fastcall virtual ~TApdSocket();
+	void __fastcall CheckLoaded();
 	virtual void __fastcall DefaultHandler(void *Message);
 	int __fastcall htonl(int HostLong);
 	System::Word __fastcall htons(System::Word HostShort);
@@ -128,7 +128,7 @@ public:
 	bool __fastcall CanWriteSocket(int Socket, int WaitTime);
 	int __fastcall CloseSocket(int Socket);
 	int __fastcall ConnectSocket(int Socket, const Adwutil::TSockAddrIn &Address);
-	int __fastcall CreateSocket(void);
+	int __fastcall CreateSocket();
 	int __fastcall ListenSocket(int Socket, int Backlog);
 	int __fastcall ReadSocket(int Socket, void *Buf, int BufSize, int Flags);
 	int __fastcall ShutdownSocket(int Socket, int How);

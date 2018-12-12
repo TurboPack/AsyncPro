@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwUser.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwUser.pas' rev: 33.00 (Windows)
 
 #ifndef AwuserHPP
 #define AwuserHPP
@@ -45,7 +45,7 @@ private:
 	unsigned pTrigger;
 	int plParam;
 	Oomisc::TApdNotifyEvent pTriggerEvent;
-	void __fastcall SyncEvent(void);
+	void __fastcall SyncEvent();
 	
 protected:
 	TApdBaseDispatcher* H;
@@ -56,7 +56,7 @@ public:
 	void __fastcall Sync(System::Classes::TThreadMethod Method);
 	__property ReturnValue;
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TApdDispatcherThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TApdDispatcherThread() { }
 	
 };
 
@@ -66,12 +66,12 @@ class PASCALIMPLEMENTATION TOutThread : public TApdDispatcherThread
 	typedef TApdDispatcherThread inherited;
 	
 public:
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TOutThread(TApdBaseDispatcher* Disp) : TApdDispatcherThread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TOutThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TOutThread() { }
 	
 };
 
@@ -81,12 +81,12 @@ class PASCALIMPLEMENTATION TComThread : public TApdDispatcherThread
 	typedef TApdDispatcherThread inherited;
 	
 public:
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TComThread(TApdBaseDispatcher* Disp) : TApdDispatcherThread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TComThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TComThread() { }
 	
 };
 
@@ -96,12 +96,12 @@ class PASCALIMPLEMENTATION TDispThread : public TApdDispatcherThread
 	typedef TApdDispatcherThread inherited;
 	
 public:
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TDispThread(TApdBaseDispatcher* Disp) : TApdDispatcherThread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TDispThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TDispThread() { }
 	
 };
 
@@ -208,34 +208,34 @@ protected:
 	virtual int __fastcall WriteCom(char * Buf, int Size) = 0 ;
 	virtual bool __fastcall WaitComEvent(unsigned &EvtMask, Winapi::Windows::POverlapped lpOverlapped) = 0 ;
 	virtual bool __fastcall SetupCom(int InSize, int OutSize) = 0 ;
-	bool __fastcall CheckReceiveTriggers(void);
-	bool __fastcall CheckStatusTriggers(void);
-	bool __fastcall CheckTimerTriggers(void);
-	bool __fastcall CheckTriggers(void);
-	void __fastcall CreateDispatcherWindow(void);
-	virtual void __fastcall DonePortPrim(void);
+	bool __fastcall CheckReceiveTriggers();
+	bool __fastcall CheckStatusTriggers();
+	bool __fastcall CheckTimerTriggers();
+	bool __fastcall CheckTriggers();
+	void __fastcall CreateDispatcherWindow();
+	virtual void __fastcall DonePortPrim();
 	int __fastcall DumpDispatchLogPrim(System::UnicodeString FName, bool AppendFile, bool InHex, bool AllHex);
 	int __fastcall DumpTracePrim(System::UnicodeString FName, bool AppendFile, bool InHex, bool AllHex);
-	bool __fastcall ExtractData(void);
+	bool __fastcall ExtractData();
 	int __fastcall FindTriggerFromHandle(unsigned TriggerHandle, bool Delete, Oomisc::TTriggerType &T, void * &Trigger);
-	unsigned __fastcall GetDispatchTime(void);
+	unsigned __fastcall GetDispatchTime();
 	System::Byte __fastcall GetModemStatusPrim(System::Byte ClearMask);
-	unsigned __fastcall GetTriggerHandle(void);
+	unsigned __fastcall GetTriggerHandle();
 	void __fastcall MapEventsToMS(int Events);
 	int __fastcall PeekBlockPrim(char * Block, unsigned Offset, unsigned Len, unsigned &NewTail);
 	int __fastcall PeekCharPrim(char &C, unsigned Count);
-	void __fastcall RefreshStatus(void);
-	void __fastcall ResetStatusHits(void);
-	void __fastcall ResetDataTriggers(void);
+	void __fastcall RefreshStatus();
+	void __fastcall ResetStatusHits();
+	void __fastcall ResetDataTriggers();
 	bool __fastcall SendNotify(unsigned Msg, unsigned Trigger, unsigned Data);
 	int __fastcall SetCommStateFix(_DCB &DCB);
-	virtual void __fastcall StartDispatcher(void) = 0 ;
-	virtual void __fastcall StopDispatcher(void) = 0 ;
+	virtual void __fastcall StartDispatcher() = 0 ;
+	virtual void __fastcall StopDispatcher() = 0 ;
 	void __fastcall ThreadGone(System::TObject* Sender);
 	void __fastcall ThreadStart(System::TObject* Sender);
-	void __fastcall WaitTxSent(void);
-	virtual unsigned __fastcall OutBufUsed(void) = 0 ;
-	virtual unsigned __fastcall InQueueUsed(void);
+	void __fastcall WaitTxSent();
+	virtual unsigned __fastcall OutBufUsed() = 0 ;
+	virtual unsigned __fastcall InQueueUsed();
 	
 public:
 	Oomisc::TDataPointerArray DataPointers;
@@ -247,7 +247,7 @@ public:
 	void __fastcall AddStringToLog(System::AnsiString S);
 	__property int ComHandle = {read=CidEx, nodefault};
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue) = 0 ;
-	virtual int __fastcall CloseCom(void) = 0 ;
+	virtual int __fastcall CloseCom() = 0 ;
 	virtual bool __fastcall CheckPort(System::WideChar * ComName) = 0 ;
 	__property unsigned DispatcherWindow = {read=fDispatcherWindow, nodefault};
 	__property TDispThread* DispThread = {read=fDispThread};
@@ -255,54 +255,54 @@ public:
 	__property int Handle = {read=fHandle, nodefault};
 	__property System::TObject* Owner = {read=fOwner};
 	__fastcall TApdBaseDispatcher(System::TObject* Owner);
-	__fastcall virtual ~TApdBaseDispatcher(void);
-	void __fastcall AbortDispatchLogging(void);
-	void __fastcall AbortTracing(void);
+	__fastcall virtual ~TApdBaseDispatcher();
+	void __fastcall AbortDispatchLogging();
+	void __fastcall AbortTracing();
 	int __fastcall AddDataTrigger(char * Data, bool IgnoreCase);
 	int __fastcall AddDataTriggerLen(char * Data, bool IgnoreCase, unsigned Len);
 	int __fastcall AddStatusTrigger(unsigned SType);
-	int __fastcall AddTimerTrigger(void);
+	int __fastcall AddTimerTrigger();
 	void __fastcall AddTraceEntry(char CurEntry, char CurCh);
 	int __fastcall AppendDispatchLog(System::UnicodeString FName, bool InHex, bool AllHex);
 	int __fastcall AppendTrace(System::UnicodeString FName, bool InHex, bool AllHEx);
 	void __fastcall BufferSizes(unsigned &InSize, unsigned &OutSize);
 	int __fastcall ChangeBaud(int NewBaud);
 	void __fastcall ChangeLengthTrigger(unsigned Length);
-	bool __fastcall CheckCTS(void);
-	bool __fastcall CheckDCD(void);
-	bool __fastcall CheckDeltaCTS(void);
-	bool __fastcall CheckDeltaDSR(void);
-	bool __fastcall CheckDeltaRI(void);
-	bool __fastcall CheckDeltaDCD(void);
-	bool __fastcall CheckDSR(void);
-	bool __fastcall CheckLineBreak(void);
-	bool __fastcall CheckRI(void);
+	bool __fastcall CheckCTS();
+	bool __fastcall CheckDCD();
+	bool __fastcall CheckDeltaCTS();
+	bool __fastcall CheckDeltaDSR();
+	bool __fastcall CheckDeltaRI();
+	bool __fastcall CheckDeltaDCD();
+	bool __fastcall CheckDSR();
+	bool __fastcall CheckLineBreak();
+	bool __fastcall CheckRI();
 	unsigned __fastcall ClassifyStatusTrigger(unsigned TriggerHandle);
-	void __fastcall ClearDispatchLogging(void);
+	void __fastcall ClearDispatchLogging();
 	__classmethod void __fastcall ClearSaveBuffers(Oomisc::TTriggerSave &Save);
-	int __fastcall ClearTracing(void);
+	int __fastcall ClearTracing();
 	void __fastcall DeregisterWndTriggerHandler(HWND HW);
 	void __fastcall DeregisterProcTriggerHandler(Oomisc::TApdNotifyProc NP);
 	void __fastcall DeregisterEventTriggerHandler(Oomisc::TApdNotifyEvent NP);
-	void __fastcall DonePort(void);
+	void __fastcall DonePort();
 	int __fastcall DumpDispatchLog(System::UnicodeString FName, bool InHex, bool AllHex);
 	int __fastcall DumpTrace(System::UnicodeString FName, bool InHex, bool AllHex);
 	int __fastcall ExtendTimer(unsigned TriggerHandle, int Ticks);
-	int __fastcall FlushInBuffer(void);
-	int __fastcall FlushOutBuffer(void);
-	bool __fastcall CharReady(void);
-	System::Word __fastcall GetBaseAddress(void);
+	int __fastcall FlushInBuffer();
+	int __fastcall FlushOutBuffer();
+	bool __fastcall CharReady();
+	System::Word __fastcall GetBaseAddress();
 	int __fastcall GetBlock(char * Block, unsigned Len);
 	int __fastcall GetChar(char &C);
 	int __fastcall GetDataPointer(void * &P, unsigned Index);
 	int __fastcall GetFlowOptions(unsigned &HWOpts, unsigned &SWOpts, unsigned &BufferFull, unsigned &BufferResume, char &OnChar, char &OffChar);
 	void __fastcall GetLine(int &Baud, System::Word &Parity, Oomisc::TDatabits &DataBits, Oomisc::TStopbits &StopBits);
-	int __fastcall GetLineError(void);
-	System::Byte __fastcall GetModemStatus(void);
+	int __fastcall GetLineError();
+	System::Byte __fastcall GetModemStatus();
 	int __fastcall HWFlowOptions(unsigned BufferFull, unsigned BufferResume, unsigned Options);
-	int __fastcall HWFlowState(void);
-	unsigned __fastcall InBuffUsed(void);
-	unsigned __fastcall InBuffFree(void);
+	int __fastcall HWFlowState();
+	unsigned __fastcall InBuffUsed();
+	unsigned __fastcall InBuffFree();
 	void __fastcall InitDispatchLogging(unsigned QueueSize);
 	int __fastcall InitPort(System::WideChar * AComName, int Baud, unsigned Parity, Oomisc::TDatabits DataBits, Oomisc::TStopbits StopBits, unsigned InSize, unsigned OutSize, unsigned FlowOpts);
 	int __fastcall InitSocket(unsigned InSize, unsigned OutSize);
@@ -310,11 +310,11 @@ public:
 	bool __fastcall OptionsAreOn(unsigned Options);
 	void __fastcall OptionsOn(unsigned Options);
 	void __fastcall OptionsOff(unsigned Options);
-	unsigned __fastcall OutBuffUsed(void);
-	unsigned __fastcall OutBuffFree(void);
+	unsigned __fastcall OutBuffUsed();
+	unsigned __fastcall OutBuffFree();
 	int __fastcall PeekBlock(char * Block, unsigned Len);
 	int __fastcall PeekChar(char &C, unsigned Count);
-	virtual int __fastcall ProcessCommunications(void) = 0 ;
+	virtual int __fastcall ProcessCommunications() = 0 ;
 	int __fastcall PutBlock(const void *Block, unsigned Len);
 	int __fastcall PutChar(char C);
 	int __fastcall PutString(System::AnsiString S);
@@ -322,7 +322,7 @@ public:
 	void __fastcall RegisterProcTriggerHandler(Oomisc::TApdNotifyProc NP);
 	void __fastcall RegisterSyncEventTriggerHandler(Oomisc::TApdNotifyEvent NP);
 	void __fastcall RegisterEventTriggerHandler(Oomisc::TApdNotifyEvent NP);
-	void __fastcall RemoveAllTriggers(void);
+	void __fastcall RemoveAllTriggers();
 	int __fastcall RemoveTrigger(unsigned TriggerHandle);
 	void __fastcall RestoreTriggers(Oomisc::TTriggerSave &Save);
 	void __fastcall SaveTriggers(Oomisc::TTriggerSave &Save);
@@ -340,14 +340,14 @@ public:
 	int __fastcall SetStatusTrigger(unsigned TriggerHandle, unsigned Value, bool Activate);
 	int __fastcall SetTimerTrigger(unsigned TriggerHandle, int Ticks, bool Activate);
 	int __fastcall SetCommBuffers(int InSize, int OutSize);
-	void __fastcall StartDispatchLogging(void);
-	void __fastcall StartTracing(void);
-	void __fastcall StopDispatchLogging(void);
-	void __fastcall StopTracing(void);
+	void __fastcall StartDispatchLogging();
+	void __fastcall StartTracing();
+	void __fastcall StopDispatchLogging();
+	void __fastcall StopTracing();
 	int __fastcall SWFlowChars(char OnChar, char OffChar);
-	int __fastcall SWFlowDisable(void);
+	int __fastcall SWFlowDisable();
 	int __fastcall SWFlowEnable(unsigned BufferFull, unsigned BufferResume, unsigned Options);
-	int __fastcall SWFlowState(void);
+	int __fastcall SWFlowState();
 	int __fastcall TimerTicksRemaining(unsigned TriggerHandle, int &TicksRemaining);
 	virtual void __fastcall UpdateHandlerFlags(TApHandlerFlagUpdate FlagUpdate);
 };

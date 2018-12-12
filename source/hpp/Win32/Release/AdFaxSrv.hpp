@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFaxSrv.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFaxSrv.pas' rev: 33.00 (Windows)
 
 #ifndef AdfaxsrvHPP
 #define AdfaxsrvHPP
@@ -76,8 +76,8 @@ public:
 	int FileTime;
 	Oomisc::TFaxJobHeaderRec JobHeader;
 public:
-	/* TObject.Create */ inline __fastcall TFaxListObj(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TFaxListObj(void) { }
+	/* TObject.Create */ inline __fastcall TFaxListObj() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TFaxListObj() { }
 	
 };
 
@@ -104,7 +104,7 @@ public:
 	void __fastcall RescheduleJob(Oomisc::TPassString &JobFileName, int JobNum, System::TDateTime NewSchedDT, bool ResetStatus);
 public:
 	/* TComponent.Create */ inline __fastcall virtual TApdFaxJobHandler(System::Classes::TComponent* AOwner) : Oomisc::TApdBaseComponent(AOwner) { }
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxJobHandler(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxJobHandler() { }
 	
 };
 
@@ -128,12 +128,12 @@ private:
 	
 public:
 	__fastcall virtual TApdFaxServerManager(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdFaxServerManager(void);
-	Oomisc::TPassString __fastcall GetNextFax(void);
+	__fastcall virtual ~TApdFaxServerManager();
+	Oomisc::TPassString __fastcall GetNextFax();
 	System::TDateTime __fastcall GetSchedTime(Oomisc::TPassString &JobFileName);
 	bool __fastcall GetJob(Oomisc::TFaxRecipientRec &Recipient, TApdCustomFaxServer* QueryFrom, Oomisc::TPassString &JobFileName, Oomisc::TPassString &FaxFile, Oomisc::TPassString &CoverFile);
 	void __fastcall UpdateStatus(Oomisc::TPassString &JobFileName, System::Word JobNumber, System::Word Result, bool Failed);
-	void __fastcall Reset(void);
+	void __fastcall Reset();
 	void __fastcall SetMonitorDir(const Oomisc::TPassString &Value);
 	__property System::Classes::TStringList* FaxList = {read=FFaxList};
 	
@@ -158,22 +158,22 @@ private:
 	Oomisc::TPassString FCoverFileName;
 	Oomisc::TPassString FJobFileName;
 	Oomisc::TPassString FFaxFileName;
-	System::TDateTime __fastcall GetScheduleDateTime(void);
+	System::TDateTime __fastcall GetScheduleDateTime();
 	void __fastcall SetHeaderLine(const Oomisc::TPassString &Value);
 	void __fastcall SetHeaderRecipient(const Oomisc::TPassString &Value);
 	void __fastcall SetHeaderTitle(const Oomisc::TPassString &Value);
 	void __fastcall SetPhoneNumber(const Oomisc::TPassString &Value);
 	void __fastcall SetScheduleDateTime(const System::TDateTime Value);
-	Oomisc::TPassString __fastcall GetHeaderLine(void);
-	Oomisc::TPassString __fastcall GetHeaderRecipient(void);
-	Oomisc::TPassString __fastcall GetHeaderTitle(void);
-	Oomisc::TPassString __fastcall GetPhoneNumber(void);
+	Oomisc::TPassString __fastcall GetHeaderLine();
+	Oomisc::TPassString __fastcall GetHeaderRecipient();
+	Oomisc::TPassString __fastcall GetHeaderTitle();
+	Oomisc::TPassString __fastcall GetPhoneNumber();
 	
 public:
 	Oomisc::TFaxRecipientRec Recipient;
 	__fastcall virtual TApdFaxClient(System::Classes::TComponent* AOwner);
 	int __fastcall CopyJobToServer(Oomisc::TPassString &SourceJob, Oomisc::TPassString &DestJob, bool OverWrite);
-	void __fastcall MakeFaxJob(void);
+	void __fastcall MakeFaxJob();
 	__property System::TDateTime ScheduleDateTime = {read=GetScheduleDateTime, write=SetScheduleDateTime};
 	
 __published:
@@ -187,7 +187,7 @@ __published:
 	__property Oomisc::TPassString HeaderRecipient = {read=GetHeaderRecipient, write=SetHeaderRecipient};
 	__property Oomisc::TPassString HeaderTitle = {read=GetHeaderTitle, write=SetHeaderTitle};
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxClient(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxClient() { }
 	
 };
 
@@ -307,26 +307,26 @@ protected:
 	void __fastcall SetEnhHeaderFont(Vcl::Graphics::TFont* const Value);
 	void __fastcall SetEnhTextEnabled(const bool Value);
 	void __fastcall SetTapiDevice(Adtapi::TApdCustomTapiDevice* const Value);
-	HIDESBASE int __fastcall GetPageLength(void);
-	HIDESBASE int __fastcall GetBytesTransferred(void);
-	HIDESBASE System::Word __fastcall GetCurrentPage(void);
-	System::Word __fastcall GetDialAttempt(void);
-	System::Word __fastcall GetDialAttempts(void);
-	HIDESBASE unsigned __fastcall GetElapsedTime(void);
-	HIDESBASE System::Word __fastcall GetFaxProgress(void);
-	HIDESBASE System::Word __fastcall GetHangupCode(void);
-	HIDESBASE int __fastcall GetModemBPS(void);
-	HIDESBASE System::UnicodeString __fastcall GetModemChip(void);
-	HIDESBASE bool __fastcall GetModemECM(void);
-	HIDESBASE System::UnicodeString __fastcall GetModemModel(void);
-	HIDESBASE System::UnicodeString __fastcall GetModemRevision(void);
-	HIDESBASE System::UnicodeString __fastcall GetRemoteID(void);
-	HIDESBASE System::Word __fastcall GetSessionBPS(void);
-	HIDESBASE bool __fastcall GetSessionECM(void);
-	HIDESBASE bool __fastcall GetSessionResolution(void);
-	HIDESBASE bool __fastcall GetSessionWidth(void);
-	HIDESBASE Adfax::TFaxClassSet __fastcall GetSupportedFaxClasses(void);
-	HIDESBASE System::Word __fastcall GetTotalPages(void);
+	HIDESBASE int __fastcall GetPageLength();
+	HIDESBASE int __fastcall GetBytesTransferred();
+	HIDESBASE System::Word __fastcall GetCurrentPage();
+	System::Word __fastcall GetDialAttempt();
+	System::Word __fastcall GetDialAttempts();
+	HIDESBASE unsigned __fastcall GetElapsedTime();
+	HIDESBASE System::Word __fastcall GetFaxProgress();
+	HIDESBASE System::Word __fastcall GetHangupCode();
+	HIDESBASE int __fastcall GetModemBPS();
+	HIDESBASE System::UnicodeString __fastcall GetModemChip();
+	HIDESBASE bool __fastcall GetModemECM();
+	HIDESBASE System::UnicodeString __fastcall GetModemModel();
+	HIDESBASE System::UnicodeString __fastcall GetModemRevision();
+	HIDESBASE System::UnicodeString __fastcall GetRemoteID();
+	HIDESBASE System::Word __fastcall GetSessionBPS();
+	HIDESBASE bool __fastcall GetSessionECM();
+	HIDESBASE bool __fastcall GetSessionResolution();
+	HIDESBASE bool __fastcall GetSessionWidth();
+	HIDESBASE Adfax::TFaxClassSet __fastcall GetSupportedFaxClasses();
+	HIDESBASE System::Word __fastcall GetTotalPages();
 	void __fastcall FInternalFaxFinish(System::TObject* CP, int ErrorCode);
 	void __fastcall FInternalFaxStatus(System::TObject* CP, bool First, bool Last);
 	void __fastcall FInternalSendQueryTimer(System::TObject* Sender);
@@ -337,7 +337,7 @@ protected:
 	void __fastcall FInternalFaxName(System::TObject* CP, Oomisc::TPassString &Name);
 	void __fastcall FInternalFaxLog(System::TObject* CP, Oomisc::TFaxLogCode LogCode);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	HIDESBASE void __fastcall CheckPort(void);
+	HIDESBASE void __fastcall CheckPort();
 	
 public:
 	Oomisc::TPassString CurrentJobFileName;
@@ -345,10 +345,10 @@ public:
 	Oomisc::TFaxRecipientRec CurrentRecipient;
 	Oomisc::TFaxJobHeaderRec CurrentJobHeader;
 	__fastcall virtual TApdCustomFaxServer(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomFaxServer(void);
-	bool __fastcall StartTransmitSingle(void);
-	void __fastcall ForceSendQuery(void);
-	HIDESBASE void __fastcall CancelFax(void);
+	__fastcall virtual ~TApdCustomFaxServer();
+	bool __fastcall StartTransmitSingle();
+	void __fastcall ForceSendQuery();
+	HIDESBASE void __fastcall CancelFax();
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=SetComPort};
 	__property Adtapi::TApdCustomTapiDevice* TapiDevice = {read=FTapiDevice, write=SetTapiDevice};
 	__property TApdFaxServerManager* ServerManager = {read=FServerManager, write=SetServerManager};
@@ -476,7 +476,7 @@ __published:
 	__property OnFaxServerLog;
 public:
 	/* TApdCustomFaxServer.Create */ inline __fastcall virtual TApdFaxServer(System::Classes::TComponent* AOwner) : TApdCustomFaxServer(AOwner) { }
-	/* TApdCustomFaxServer.Destroy */ inline __fastcall virtual ~TApdFaxServer(void) { }
+	/* TApdCustomFaxServer.Destroy */ inline __fastcall virtual ~TApdFaxServer() { }
 	
 };
 

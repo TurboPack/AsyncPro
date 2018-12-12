@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStFax.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStFax.pas' rev: 33.00 (Windows)
 
 #ifndef AdstfaxHPP
 #define AdstfaxHPP
@@ -53,7 +53,7 @@ private:
 	TApdOnFaxXfrComplete FOnFaxXfrComplete;
 	
 protected:
-	virtual void __fastcall Activate(void);
+	virtual void __fastcall Activate();
 	void __fastcall SetManualTransmit(const bool v);
 	void __fastcall SetOutputOnError(const System::UnicodeString v);
 	void __fastcall SetOutputOnOK(const System::UnicodeString v);
@@ -82,7 +82,7 @@ __published:
 	__property OnStateActivate;
 	__property OnStateFinish;
 public:
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSendFaxState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSendFaxState() { }
 	
 };
 
@@ -101,7 +101,7 @@ private:
 	TApdOnSetupReceiveFax FOnSetupFax;
 	
 protected:
-	virtual void __fastcall Activate(void);
+	virtual void __fastcall Activate();
 	void __fastcall SetManualReceive(const bool v);
 	void __fastcall SetOutputOnError(const System::UnicodeString v);
 	void __fastcall SetOutputOnOK(const System::UnicodeString v);
@@ -132,7 +132,7 @@ __published:
 	__property OnStateActivate;
 	__property OnStateFinish;
 public:
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdReceiveFaxState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdReceiveFaxState() { }
 	
 };
 

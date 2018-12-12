@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXUp.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXUp.pas' rev: 33.00 (Windows)
 
 #ifndef AdxupHPP
 #define AdxupHPP
@@ -48,16 +48,16 @@ __published:
 	void __fastcall CancelClick(System::TObject* Sender);
 	
 public:
-	Adprotcl::TProtocolType __fastcall GetProtocol(void);
+	Adprotcl::TProtocolType __fastcall GetProtocol();
 	void __fastcall SetProtocol(Adprotcl::TProtocolType NewProt);
-	System::UnicodeString __fastcall GetMask(void);
+	System::UnicodeString __fastcall GetMask();
 	void __fastcall SetMask(System::UnicodeString NewMask);
 	__property Adprotcl::TProtocolType Protocol = {read=GetProtocol, write=SetProtocol, nodefault};
 	__property System::UnicodeString Mask = {read=GetMask, write=SetMask};
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TUploadDialog(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TUploadDialog(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TUploadDialog(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TUploadDialog() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TUploadDialog(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

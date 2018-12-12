@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStSt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStSt.pas' rev: 33.00 (Windows)
 
 #ifndef AdststHPP
 #define AdststHPP
@@ -46,20 +46,20 @@ private:
 	TApdOnSelectNextState FOnSelectNextState;
 	
 protected:
-	virtual void __fastcall Activate(void);
-	virtual void __fastcall Deactivate(void);
+	virtual void __fastcall Activate();
+	virtual void __fastcall Deactivate();
 	virtual void __fastcall FinishAction(int NextState);
-	System::Uitypes::TColor __fastcall GetTitleColor(void);
+	System::Uitypes::TColor __fastcall GetTitleColor();
 	void __fastcall SetTitle(const System::UnicodeString v);
 	void __fastcall SetTitleColor(const System::Uitypes::TColor v);
 	void __fastcall SetTitleFont(Vcl::Graphics::TFont* const v);
-	virtual void __fastcall StartAction(void) = 0 ;
+	virtual void __fastcall StartAction() = 0 ;
 	
 public:
 	__fastcall virtual TApdCustomActionState(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomActionState(void);
+	__fastcall virtual ~TApdCustomActionState();
 	void __fastcall AutoSelectNextState(bool Error);
-	virtual void __fastcall Paint(void);
+	virtual void __fastcall Paint();
 	__property System::UnicodeString Title = {read=FTitle, write=SetTitle};
 	__property System::Uitypes::TColor TitleColor = {read=GetTitleColor, write=SetTitleColor, nodefault};
 	__property Vcl::Graphics::TFont* TitleFont = {read=FTitleFont, write=SetTitleFont};
@@ -95,7 +95,7 @@ __published:
 	__property OutputOnActivate = {default=0};
 public:
 	/* TApdCustomActionState.Create */ inline __fastcall virtual TApdActionState(System::Classes::TComponent* AOwner) : TApdCustomActionState(AOwner) { }
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdActionState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdActionState() { }
 	
 };
 

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXChrFlt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXChrFlt.pas' rev: 33.00 (Windows)
 
 #ifndef AdxchrfltHPP
 #define AdxchrfltHPP
@@ -45,12 +45,12 @@ protected:
 	System::Classes::TStream* FStream;
 	int FStreamPos;
 	int FStreamSize;
-	virtual int __fastcall csGetSize(void);
+	virtual int __fastcall csGetSize();
 	virtual void __fastcall csSetFormat(const TApdStreamFormat aValue) = 0 ;
 	
 public:
 	__fastcall virtual TApdBaseCharFilter(System::Classes::TStream* aStream, const int aBufSize);
-	__fastcall virtual ~TApdBaseCharFilter(void);
+	__fastcall virtual ~TApdBaseCharFilter();
 	__property int BufSize = {read=FBufSize, nodefault};
 	__property bool FreeStream = {read=FFreeStream, write=FFreeStream, nodefault};
 	__property System::Classes::TStream* Stream = {read=FStream};
@@ -74,13 +74,13 @@ private:
 	bool FInTryRead;
 	
 protected:
-	void __fastcall csAdvanceLine(void);
-	void __fastcall csAdvanceLinePos(void);
+	void __fastcall csAdvanceLine();
+	void __fastcall csAdvanceLinePos();
 	void __fastcall csGetCharPrim(int &aCh, bool &aIsLiteral);
-	bool __fastcall csGetNextBuffer(void);
+	bool __fastcall csGetNextBuffer();
 	bool __fastcall csGetTwoAnsiChars(void *Buffer);
-	int __fastcall csGetUtf8Char(void);
-	void __fastcall csIdentifyFormat(void);
+	int __fastcall csGetUtf8Char();
+	void __fastcall csIdentifyFormat();
 	void __fastcall csPushCharPrim(int aCh);
 	virtual void __fastcall csSetFormat(const TApdStreamFormat aValue);
 	void __fastcall csGetChar(int &aCh, bool &aIsLiteral);
@@ -89,14 +89,14 @@ public:
 	__fastcall virtual TApdInCharFilter(System::Classes::TStream* aStream, const int aBufSize);
 	__property TApdStreamFormat Format = {read=FFormat, write=csSetFormat, nodefault};
 	__property bool EOF = {read=FEOF, nodefault};
-	void __fastcall SkipChar(void);
+	void __fastcall SkipChar();
 	bool __fastcall TryRead(const int *S, const int S_High);
-	System::WideChar __fastcall ReadChar(void);
-	System::WideChar __fastcall ReadAndSkipChar(void);
+	System::WideChar __fastcall ReadChar();
+	System::WideChar __fastcall ReadAndSkipChar();
 	__property int Line = {read=FLine, nodefault};
 	__property int LinePos = {read=FLinePos, nodefault};
 public:
-	/* TApdBaseCharFilter.Destroy */ inline __fastcall virtual ~TApdInCharFilter(void) { }
+	/* TApdBaseCharFilter.Destroy */ inline __fastcall virtual ~TApdInCharFilter() { }
 	
 };
 
@@ -110,18 +110,18 @@ class PASCALIMPLEMENTATION TApdOutCharFilter : public TApdBaseCharFilter
 protected:
 	TApdStreamFormat FFormat;
 	bool FSetUTF8Sig;
-	virtual int __fastcall csGetSize(void);
+	virtual int __fastcall csGetSize();
 	void __fastcall csPutUtf8Char(const int aCh);
 	virtual void __fastcall csSetFormat(const TApdStreamFormat aValue);
-	void __fastcall csWriteBuffer(void);
+	void __fastcall csWriteBuffer();
 	
 public:
 	__fastcall virtual TApdOutCharFilter(System::Classes::TStream* aStream, const int aBufSize);
-	__fastcall virtual ~TApdOutCharFilter(void);
+	__fastcall virtual ~TApdOutCharFilter();
 	void __fastcall PutUCS4Char(int aCh);
 	bool __fastcall PutChar(System::WideChar aCh1, System::WideChar aCh2, bool &aBothUsed);
 	bool __fastcall PutString(const System::WideString aText);
-	int __fastcall Position(void);
+	int __fastcall Position();
 	__property TApdStreamFormat Format = {read=FFormat, write=csSetFormat, nodefault};
 	__property bool WriteUTF8Signature = {read=FSetUTF8Sig, write=FSetUTF8Sig, nodefault};
 	__property int Size = {read=csGetSize, nodefault};

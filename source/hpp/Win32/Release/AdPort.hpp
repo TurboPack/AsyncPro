@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdPort.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdPort.pas' rev: 33.00 (Windows)
 
 #ifndef AdportHPP
 #define AdportHPP
@@ -98,7 +98,7 @@ class PASCALIMPLEMENTATION TApdCustomComPort : public Oomisc::TApdBaseComponent
 	typedef Oomisc::TApdBaseComponent inherited;
 	
 private:
-	int __fastcall GetLastWinError(void);
+	int __fastcall GetLastWinError();
 	
 protected:
 	bool Force;
@@ -179,7 +179,7 @@ protected:
 	void __fastcall SetLogSize(const unsigned NewSize);
 	void __fastcall SetOpen(const bool Enable);
 	void __fastcall SetHWFlowOptions(const THWFlowOptionSet NewOpts);
-	TFlowControlState __fastcall GetFlowState(void);
+	TFlowControlState __fastcall GetFlowState();
 	void __fastcall SetSWFlowOptions(const TSWFlowOptions NewOpts);
 	void __fastcall SetXonChar(const char NewChar);
 	void __fastcall SetXoffChar(const char NewChar);
@@ -198,73 +198,73 @@ protected:
 	void __fastcall SetOnTriggerOutbuffFree(const System::Classes::TNotifyEvent Value);
 	void __fastcall SetOnTriggerOutbuffUsed(const System::Classes::TNotifyEvent Value);
 	void __fastcall SetOnTriggerOutSent(const System::Classes::TNotifyEvent Value);
-	System::Word __fastcall GetBaseAddress(void);
-	Awuser::TApdBaseDispatcher* __fastcall GetDispatcher(void);
-	System::Byte __fastcall GetModemStatus(void);
-	bool __fastcall GetDSR(void);
-	bool __fastcall GetCTS(void);
-	bool __fastcall GetRI(void);
-	bool __fastcall GetDCD(void);
-	bool __fastcall GetDeltaDSR(void);
-	bool __fastcall GetDeltaCTS(void);
-	bool __fastcall GetDeltaRI(void);
-	bool __fastcall GetDeltaDCD(void);
-	System::Word __fastcall GetLineError(void);
-	bool __fastcall GetLineBreak(void);
-	System::Word __fastcall GetInBuffUsed(void);
-	System::Word __fastcall GetInBuffFree(void);
-	System::Word __fastcall GetOutBuffUsed(void);
-	System::Word __fastcall GetOutBuffFree(void);
+	System::Word __fastcall GetBaseAddress();
+	Awuser::TApdBaseDispatcher* __fastcall GetDispatcher();
+	System::Byte __fastcall GetModemStatus();
+	bool __fastcall GetDSR();
+	bool __fastcall GetCTS();
+	bool __fastcall GetRI();
+	bool __fastcall GetDCD();
+	bool __fastcall GetDeltaDSR();
+	bool __fastcall GetDeltaCTS();
+	bool __fastcall GetDeltaRI();
+	bool __fastcall GetDeltaDCD();
+	System::Word __fastcall GetLineError();
+	bool __fastcall GetLineBreak();
+	System::Word __fastcall GetInBuffUsed();
+	System::Word __fastcall GetInBuffFree();
+	System::Word __fastcall GetOutBuffUsed();
+	System::Word __fastcall GetOutBuffFree();
 	void __fastcall SetUseEventWord(bool NewUse);
 	void __fastcall SetCommNotificationLevel(System::Word NewLevel);
 	void __fastcall SetRS485Mode(bool NewMode);
 	void __fastcall SetBaseAddress(System::Word NewBaseAddress);
 	void __fastcall SetThreadBoost(TApThreadBoost NewBoost);
-	virtual Awuser::TApdBaseDispatcher* __fastcall ActivateDeviceLayer(void);
-	virtual void __fastcall DeviceLayerChanged(void);
-	virtual int __fastcall InitializePort(void);
-	virtual void __fastcall Loaded(void);
+	virtual Awuser::TApdBaseDispatcher* __fastcall ActivateDeviceLayer();
+	virtual void __fastcall DeviceLayerChanged();
+	virtual int __fastcall InitializePort();
+	virtual void __fastcall Loaded();
 	virtual void __fastcall RegisterComPort(bool Enabling);
-	virtual void __fastcall ValidateComport(void);
+	virtual void __fastcall ValidateComport();
 	virtual void __fastcall SetUseMSRShadow(bool NewUse);
 	virtual void __fastcall Trigger(System::Word Msg, System::Word TriggerHandle, System::Word Data);
 	virtual void __fastcall TriggerAvail(System::Word Count);
 	virtual void __fastcall TriggerData(System::Word TriggerHandle);
 	virtual void __fastcall TriggerStatus(System::Word TriggerHandle);
 	virtual void __fastcall TriggerTimer(System::Word TriggerHandle);
-	virtual void __fastcall UpdateHandlerFlag(void);
-	DYNAMIC void __fastcall PortOpen(void);
-	DYNAMIC void __fastcall PortClose(void);
-	DYNAMIC void __fastcall PortClosing(void);
+	virtual void __fastcall UpdateHandlerFlag();
+	DYNAMIC void __fastcall PortOpen();
+	DYNAMIC void __fastcall PortClose();
+	DYNAMIC void __fastcall PortClosing();
 	virtual void __fastcall TriggerLineError(const System::Word Error, const bool LineBreak);
-	virtual void __fastcall TriggerModemStatus(void);
-	virtual void __fastcall TriggerOutbuffFree(void);
-	virtual void __fastcall TriggerOutbuffUsed(void);
-	virtual void __fastcall TriggerOutSent(void);
+	virtual void __fastcall TriggerModemStatus();
+	virtual void __fastcall TriggerOutbuffFree();
+	virtual void __fastcall TriggerOutbuffUsed();
+	virtual void __fastcall TriggerOutSent();
 	virtual void __fastcall WaitChar(char C);
 	void __fastcall InitTracing(const unsigned NumEntries);
 	void __fastcall DumpTrace(const System::UnicodeString FName, const bool InHex);
 	void __fastcall AppendTrace(const System::UnicodeString FName, const bool InHex, const TTraceLogState NewState);
-	void __fastcall ClearTracing(void);
-	void __fastcall AbortTracing(void);
-	void __fastcall StartTracing(void);
-	void __fastcall StopTracing(void);
+	void __fastcall ClearTracing();
+	void __fastcall AbortTracing();
+	void __fastcall StartTracing();
+	void __fastcall StopTracing();
 	void __fastcall InitLogging(const unsigned Size);
 	void __fastcall DumpLog(const System::UnicodeString FName, const bool InHex);
 	void __fastcall AppendLog(const System::UnicodeString FName, const bool InHex, const TTraceLogState NewState);
-	void __fastcall ClearLogging(void);
-	void __fastcall AbortLogging(void);
-	void __fastcall StartLogging(void);
-	void __fastcall StopLogging(void);
+	void __fastcall ClearLogging();
+	void __fastcall AbortLogging();
+	void __fastcall StartLogging();
+	void __fastcall StopLogging();
 	
 public:
 	bool OverrideLine;
 	__fastcall virtual TApdCustomComPort(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomComPort(void);
-	DYNAMIC void __fastcall InitPort(void);
-	virtual void __fastcall DonePort(void);
+	__fastcall virtual ~TApdCustomComPort();
+	DYNAMIC void __fastcall InitPort();
+	virtual void __fastcall DonePort();
 	virtual void __fastcall Assign(System::Classes::TPersistent* Source);
-	void __fastcall ForcePortOpen(void);
+	void __fastcall ForcePortOpen();
 	void __fastcall SendBreak(System::Word Ticks, bool Yield);
 	void __fastcall SetBreak(bool BreakOn);
 	void __fastcall RegisterUser(const NativeUInt H);
@@ -274,19 +274,19 @@ public:
 	void __fastcall DeregisterUser(const NativeUInt H);
 	void __fastcall DeregisterUserCallback(TPortCallback CallBack);
 	void __fastcall DeregisterUserCallbackEx(TPortCallbackEx CallBackEx);
-	virtual void __fastcall ProcessCommunications(void);
-	void __fastcall FlushInBuffer(void);
-	void __fastcall FlushOutBuffer(void);
+	virtual void __fastcall ProcessCommunications();
+	void __fastcall FlushInBuffer();
+	void __fastcall FlushOutBuffer();
 	System::Word __fastcall AddDataTrigger(const System::ShortString &Data, const bool IgnoreCase);
-	System::Word __fastcall AddTimerTrigger(void);
+	System::Word __fastcall AddTimerTrigger();
 	System::Word __fastcall AddStatusTrigger(const System::Word SType);
 	void __fastcall RemoveTrigger(const System::Word Handle);
-	void __fastcall RemoveAllTriggers(void);
+	void __fastcall RemoveAllTriggers();
 	void __fastcall SetTimerTrigger(const System::Word Handle, const int Ticks, const bool Activate);
 	void __fastcall SetStatusTrigger(const System::Word Handle, const System::Word Value, const bool Activate);
-	bool __fastcall CharReady(void);
+	bool __fastcall CharReady();
 	char __fastcall PeekChar(const System::Word Count);
-	char __fastcall GetChar(void);
+	char __fastcall GetChar();
 	void __fastcall PeekBlock(void *Block, const System::Word Len);
 	void __fastcall GetBlock(void *Block, const System::Word Len);
 	void __fastcall PutChar(const char C);
@@ -296,7 +296,7 @@ public:
 	bool __fastcall CheckForString(System::Byte &Index, char C, const System::AnsiString S, bool IgnoreCase);
 	bool __fastcall WaitForString(const System::AnsiString S, const int Timeout, const bool Yield, const bool IgnoreCase);
 	int __fastcall WaitForMultiString(const System::AnsiString S, const int Timeout, const bool Yield, const bool IgnoreCase, const char SepChar);
-	void __fastcall PrepareWait(void);
+	void __fastcall PrepareWait();
 	__property System::Word ComNumber = {read=FComNumber, write=SetComNumber, default=0};
 	__property TActivationProcedure CustomDispatcher = {read=fCustomDispatcher, write=fCustomDispatcher};
 	__property TDeviceLayer DeviceLayer = {read=FDeviceLayer, write=SetDeviceLayer, default=0};
@@ -357,7 +357,7 @@ public:
 	__property System::AnsiString Output = {write=PutString};
 	__property System::UnicodeString OutputUni = {write=PutString};
 	__property Awuser::TApdBaseDispatcher* Dispatcher = {read=GetDispatcher};
-	Awuser::TApdBaseDispatcher* __fastcall ValidDispatcher(void);
+	Awuser::TApdBaseDispatcher* __fastcall ValidDispatcher();
 	__property System::Byte ModemStatus = {read=GetModemStatus, nodefault};
 	__property bool DSR = {read=GetDSR, nodefault};
 	__property bool CTS = {read=GetCTS, nodefault};
@@ -431,7 +431,7 @@ __published:
 	__property Tag = {default=0};
 public:
 	/* TApdCustomComPort.Create */ inline __fastcall virtual TApdComPort(System::Classes::TComponent* AOwner) : TApdCustomComPort(AOwner) { }
-	/* TApdCustomComPort.Destroy */ inline __fastcall virtual ~TApdComPort(void) { }
+	/* TApdCustomComPort.Destroy */ inline __fastcall virtual ~TApdComPort() { }
 	
 };
 

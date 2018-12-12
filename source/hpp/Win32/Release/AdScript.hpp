@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdScript.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdScript.pas' rev: 33.00 (Windows)
 
 #ifndef AdscriptHPP
 #define AdscriptHPP
@@ -62,7 +62,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : Adexcept::EAPDException(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdScriptError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adexcept::EAPDException(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~EApdScriptError(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~EApdScriptError() { }
 	
 };
 
@@ -86,7 +86,7 @@ public:
 	unsigned Condition;
 	__fastcall TApdScriptNode(TApdScriptCommand ACommand, TOption AnOption, const System::AnsiString AData, const System::AnsiString ADataEx, unsigned ATimeout, unsigned ACondition);
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdScriptNode(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdScriptNode() { }
 	
 };
 
@@ -148,11 +148,11 @@ protected:
 	TScriptExceptionEvent FOnScriptException;
 	void __fastcall SetScriptFile(const System::UnicodeString NewFile);
 	void __fastcall SetScriptCommands(System::Classes::TStrings* Values);
-	void __fastcall ValidateLabels(void);
+	void __fastcall ValidateLabels();
 	virtual void __fastcall CreateCommand(TApdScriptCommand CmdType, const System::AnsiString Data1, const System::AnsiString Data2);
 	virtual void __fastcall AddToScript(const System::AnsiString S);
-	bool __fastcall CheckProtocol(void);
-	bool __fastcall CheckWinsockPort(void);
+	bool __fastcall CheckProtocol();
+	bool __fastcall CheckWinsockPort();
 	System::AnsiString __fastcall ValidateBaud(const System::AnsiString Baud);
 	System::AnsiString __fastcall ValidateDataBits(const System::AnsiString DataBits);
 	System::AnsiString __fastcall ValidateFlow(const System::AnsiString Flow);
@@ -160,11 +160,11 @@ protected:
 	System::AnsiString __fastcall ValidateStopBits(const System::AnsiString StopBits);
 	void __fastcall AllTriggers(System::TObject* CP, System::Word Msg, System::Word TriggerHandle, System::Word Data);
 	virtual void __fastcall ExecuteExternal(const System::UnicodeString S, bool Wait);
-	void __fastcall GoContinue(void);
+	void __fastcall GoContinue();
 	void __fastcall ParseURL(const System::UnicodeString URL, System::UnicodeString &Addr, System::UnicodeString &Port);
 	void __fastcall LogCommand(unsigned Index, TApdScriptCommand Command, TApdScriptNode* const Node);
-	void __fastcall ProcessNextCommand(void);
-	void __fastcall ProcessTillWait(void);
+	void __fastcall ProcessNextCommand();
+	void __fastcall ProcessTillWait();
 	void __fastcall ScriptProtocolFinish(System::TObject* CP, int ErrorCode);
 	void __fastcall SetFlow(const System::UnicodeString FlowOpt);
 	void __fastcall SetParity(const System::UnicodeString ParityOpt);
@@ -174,16 +174,16 @@ protected:
 	void __fastcall ScriptDisplay(const System::AnsiString Msg);
 	bool __fastcall GenerateScriptException(System::Sysutils::Exception* E, TApdScriptNode* Command);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall Loaded(void);
+	virtual void __fastcall Loaded();
 	void __fastcall AddDispatchLogEntry(const System::AnsiString Msg);
 	
 public:
 	__fastcall virtual TApdCustomScript(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomScript(void);
-	void __fastcall PrepareScript(void);
-	void __fastcall StartScript(void);
+	__fastcall virtual ~TApdCustomScript();
+	void __fastcall PrepareScript();
+	void __fastcall StartScript();
 	void __fastcall StopScript(int Condition);
-	void __fastcall CancelScript(void);
+	void __fastcall CancelScript();
 	__property bool InProgress = {read=FInProgress, nodefault};
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=FComPort};
 	__property Adprotcl::TApdCustomProtocol* Protocol = {read=FProtocol, write=FProtocol};
@@ -220,7 +220,7 @@ __published:
 	__property OnScriptUserFunction;
 public:
 	/* TApdCustomScript.Create */ inline __fastcall virtual TApdScript(System::Classes::TComponent* AOwner) : TApdCustomScript(AOwner) { }
-	/* TApdCustomScript.Destroy */ inline __fastcall virtual ~TApdScript(void) { }
+	/* TApdCustomScript.Destroy */ inline __fastcall virtual ~TApdScript() { }
 	
 };
 

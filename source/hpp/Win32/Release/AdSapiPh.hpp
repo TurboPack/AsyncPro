@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdSapiPh.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdSapiPh.pas' rev: 33.00 (Windows)
 
 #ifndef AdsapiphHPP
 #define AdsapiphHPP
@@ -89,7 +89,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall ESapiPhoneError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : Adsapien::EApdSapiEngineException(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~ESapiPhoneError(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~ESapiPhoneError() { }
 	
 };
 
@@ -103,12 +103,12 @@ public:
 	void __fastcall ReadSectionValues(System::UnicodeString Section, System::Classes::TStringList* List);
 	bool __fastcall SectionExists(System::UnicodeString Section);
 public:
-	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(void)/* overload */ : System::Classes::TStringList() { }
+	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList()/* overload */ : System::Classes::TStringList() { }
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(bool OwnsObjects)/* overload */ : System::Classes::TStringList(OwnsObjects) { }
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::WideChar QuoteChar, System::WideChar Delimiter)/* overload */ : System::Classes::TStringList(QuoteChar, Delimiter) { }
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::WideChar QuoteChar, System::WideChar Delimiter, System::Classes::TStringsOptions Options)/* overload */ : System::Classes::TStringList(QuoteChar, Delimiter, Options) { }
 	/* TStringList.Create */ inline __fastcall TApdSapiGrammarList(System::Types::TDuplicates Duplicates, bool Sorted, bool CaseSensitive)/* overload */ : System::Classes::TStringList(Duplicates, Sorted, CaseSensitive) { }
-	/* TStringList.Destroy */ inline __fastcall virtual ~TApdSapiGrammarList(void) { }
+	/* TStringList.Destroy */ inline __fastcall virtual ~TApdSapiGrammarList() { }
 	
 };
 
@@ -175,7 +175,7 @@ protected:
 	void __fastcall SetWhere2(System::UnicodeString v);
 	
 public:
-	__fastcall TApdSapiPhonePrompts(void);
+	__fastcall TApdSapiPhonePrompts();
 	System::UnicodeString __fastcall GenerateGrammar(System::UnicodeString NewPrompt1, System::UnicodeString NewPrompt2, System::UnicodeString NewHelp1, System::UnicodeString NewHelp2, System::UnicodeString NewWhere1, System::UnicodeString NewWhere2);
 	System::UnicodeString __fastcall GenerateExtensionGrammar(System::UnicodeString NewTooFewDigits, System::UnicodeString NewTooManyDigits);
 	System::UnicodeString __fastcall GeneratePhoneNumberGrammar(System::UnicodeString NewAskAreaCode, System::UnicodeString NewAskNextThree, System::UnicodeString NewAskLastFour);
@@ -208,7 +208,7 @@ __published:
 	__property System::UnicodeString Where = {read=FWhere, write=SetWhere};
 	__property System::UnicodeString Where2 = {read=FWhere2, write=SetWhere2};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdSapiPhonePrompts(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdSapiPhonePrompts() { }
 	
 };
 
@@ -239,7 +239,7 @@ protected:
 	bool __fastcall AnalyzeRule(System::Classes::TStringList* Tokens, System::UnicodeString CurrentRule, TApdSapiGrammarList* INIFile, System::Classes::TStringList* CurrentSection, int &CurrentWord, System::UnicodeString &MatchingKey);
 	bool __fastcall RecurseRules(System::Classes::TStringList* Tokens, TApdSapiGrammarList* INIFile, System::UnicodeString CurrentSection, int &CurrentWord, System::UnicodeString &MatchingKey);
 	System::UnicodeString __fastcall LocateRule(System::Classes::TStringList* Tokens);
-	void __fastcall InitializeMainGrammar(void);
+	void __fastcall InitializeMainGrammar();
 	virtual void __fastcall SapiPhraseFinishHook(System::TObject* Sender, System::UnicodeString Phrase, int Results);
 	void __fastcall SetAskForGrammar(System::Classes::TStringList* v);
 	void __fastcall SetMainGrammar(System::Classes::TStringList* v);
@@ -247,9 +247,9 @@ protected:
 	void __fastcall SetReplyHandle(NativeUInt v);
 	
 public:
-	__fastcall TApdSapiAskForInfo(void);
-	__fastcall virtual ~TApdSapiAskForInfo(void);
-	void __fastcall AskFor(void);
+	__fastcall TApdSapiAskForInfo();
+	__fastcall virtual ~TApdSapiAskForInfo();
+	void __fastcall AskFor();
 	TApdPhraseType __fastcall DeterminePhraseType(System::UnicodeString Phrase);
 	System::UnicodeString __fastcall FindGrammarRule(System::UnicodeString &Phrase);
 	
@@ -330,8 +330,8 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomSapiPhone(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomSapiPhone(void);
-	void __fastcall AbortAskFor(void);
+	__fastcall virtual ~TApdCustomSapiPhone();
+	void __fastcall AbortAskFor();
 	void __fastcall AskForDate(System::UnicodeString NewPrompt1);
 	void __fastcall AskForDateEx(System::UnicodeString NewPrompt1, System::UnicodeString NewPrompt2, System::UnicodeString NewHelp1, System::UnicodeString NewHelp2, System::UnicodeString NewWhere1, System::UnicodeString NewWhere2);
 	void __fastcall AskForExtension(System::UnicodeString NewPrompt1);
@@ -422,7 +422,7 @@ __published:
 	__property OnTapiWaveSilence;
 public:
 	/* TApdCustomSapiPhone.Create */ inline __fastcall virtual TApdSapiPhone(System::Classes::TComponent* AOwner) : TApdCustomSapiPhone(AOwner) { }
-	/* TApdCustomSapiPhone.Destroy */ inline __fastcall virtual ~TApdSapiPhone(void) { }
+	/* TApdCustomSapiPhone.Destroy */ inline __fastcall virtual ~TApdSapiPhone() { }
 	
 };
 

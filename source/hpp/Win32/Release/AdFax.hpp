@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFax.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFax.pas' rev: 33.00 (Windows)
 
 #ifndef AdfaxHPP
 #define AdfaxHPP
@@ -104,66 +104,66 @@ protected:
 	TFaxLogEvent FOnFaxLog;
 	TFaxErrorEvent FOnFaxError;
 	TFaxFinishEvent FOnFaxFinish;
-	unsigned __fastcall GetElapsedTime(void);
-	virtual Oomisc::TPassString __fastcall GetFaxFile(void);
+	unsigned __fastcall GetElapsedTime();
+	virtual Oomisc::TPassString __fastcall GetFaxFile();
 	virtual void __fastcall SetFaxFile(const Oomisc::TPassString &NewFile);
-	int __fastcall GetInitBaud(void);
+	int __fastcall GetInitBaud();
 	void __fastcall SetInitBaud(const int NewBaud);
-	bool __fastcall GetInProgress(void);
-	int __fastcall GetNormalBaud(void);
+	bool __fastcall GetInProgress();
+	int __fastcall GetNormalBaud();
 	void __fastcall SetNormalBaud(const int NewBaud);
-	TFaxClass __fastcall GetFaxClass(void);
+	TFaxClass __fastcall GetFaxClass();
 	void __fastcall SetFaxClass(const TFaxClass NewClass);
-	TModemString __fastcall GetModemInit(void);
+	TModemString __fastcall GetModemInit();
 	void __fastcall SetModemInit(const TModemString &NewInit);
-	TStationID __fastcall GetStationID(void);
+	TStationID __fastcall GetStationID();
 	void __fastcall SetStationID(const TStationID &NewID);
 	void __fastcall SetComPort(Adport::TApdCustomComPort* const NewPort);
 	void __fastcall SetStatusDisplay(TApdAbstractFaxStatus* const NewDisplay);
 	void __fastcall SetFaxLog(TApdFaxLog* const NewLog);
-	TStationID __fastcall GetRemoteID(void);
-	TFaxClassSet __fastcall GetSupportedFaxClasses(void);
-	System::Word __fastcall GetFaxProgress(void);
-	int __fastcall GetFaxError(void);
-	System::Word __fastcall GetSessionBPS(void);
-	bool __fastcall GetSessionResolution(void);
-	bool __fastcall GetSessionWidth(void);
-	bool __fastcall GetSessionECM(void);
-	System::Word __fastcall GetHangupCode(void);
-	bool __fastcall GetLastPageStatus(void);
-	Oomisc::TPassString __fastcall GetModemModel(void);
-	Oomisc::TPassString __fastcall GetModemRevision(void);
-	Oomisc::TPassString __fastcall GetModemChip(void);
-	int __fastcall GetModemBPS(void);
-	bool __fastcall GetModemECM(void);
-	System::Word __fastcall GetTotalPages(void);
-	System::Word __fastcall GetCurrentPage(void);
-	int __fastcall GetBytesTransferred(void);
-	int __fastcall GetPageLength(void);
-	bool __fastcall GetAbortNoConnect(void);
+	TStationID __fastcall GetRemoteID();
+	TFaxClassSet __fastcall GetSupportedFaxClasses();
+	System::Word __fastcall GetFaxProgress();
+	int __fastcall GetFaxError();
+	System::Word __fastcall GetSessionBPS();
+	bool __fastcall GetSessionResolution();
+	bool __fastcall GetSessionWidth();
+	bool __fastcall GetSessionECM();
+	System::Word __fastcall GetHangupCode();
+	bool __fastcall GetLastPageStatus();
+	Oomisc::TPassString __fastcall GetModemModel();
+	Oomisc::TPassString __fastcall GetModemRevision();
+	Oomisc::TPassString __fastcall GetModemChip();
+	int __fastcall GetModemBPS();
+	bool __fastcall GetModemECM();
+	System::Word __fastcall GetTotalPages();
+	System::Word __fastcall GetCurrentPage();
+	int __fastcall GetBytesTransferred();
+	int __fastcall GetPageLength();
+	bool __fastcall GetAbortNoConnect();
 	void __fastcall SetAbortNoConnect(bool NewValue);
-	bool __fastcall GetExitOnError(void);
+	bool __fastcall GetExitOnError();
 	void __fastcall SetExitOnError(bool NewValue);
-	bool __fastcall GetSoftwareFlow(void);
+	bool __fastcall GetSoftwareFlow();
 	void __fastcall SetSoftwareFlow(bool NewValue);
-	System::Word __fastcall GetStatusInterval(void);
+	System::Word __fastcall GetStatusInterval();
 	void __fastcall SetStatusInterval(System::Word NewValue);
-	System::Word __fastcall GetDesiredBPS(void);
+	System::Word __fastcall GetDesiredBPS();
 	void __fastcall SetDesiredBPS(System::Word NewBPS);
-	bool __fastcall GetDesiredECM(void);
+	bool __fastcall GetDesiredECM();
 	void __fastcall SetDesiredECM(bool NewECM);
-	Oomisc::TPassString __fastcall GetFaxFileExt(void);
+	Oomisc::TPassString __fastcall GetFaxFileExt();
 	void __fastcall SetFaxFileExt(const Oomisc::TPassString &NewExt);
-	void __fastcall CheckPort(void);
-	void __fastcall CreateFaxMessageHandler(void);
+	void __fastcall CheckPort();
+	void __fastcall CreateFaxMessageHandler();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall PrepareTapi(void);
-	virtual void __fastcall UnprepareTapi(void);
-	void __fastcall OpenTapiPort(void);
-	void __fastcall CloseTapiPort(void);
-	void __fastcall WaitForTapi(void);
+	virtual void __fastcall PrepareTapi();
+	virtual void __fastcall UnprepareTapi();
+	void __fastcall OpenTapiPort();
+	void __fastcall CloseTapiPort();
+	void __fastcall WaitForTapi();
 	void __fastcall FaxTapiPortOpenClose(System::TObject* Sender);
-	virtual void __fastcall Loaded(void);
+	virtual void __fastcall Loaded();
 	void __fastcall ReadVersionCheck(System::Classes::TReader* Reader);
 	void __fastcall WriteVersionCheck(System::Classes::TWriter* Writer);
 	virtual void __fastcall DefineProperties(System::Classes::TFiler* Filer);
@@ -216,8 +216,8 @@ public:
 	__property unsigned ElapsedTime = {read=GetElapsedTime, nodefault};
 	__property bool InProgress = {read=GetInProgress, nodefault};
 	__fastcall virtual TApdCustomAbstractFax(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomAbstractFax(void);
-	void __fastcall CancelFax(void);
+	__fastcall virtual ~TApdCustomAbstractFax();
+	void __fastcall CancelFax();
 	Oomisc::TPassString __fastcall StatusMsg(const System::Word Status);
 	System::UnicodeString __fastcall LogMsg(const Oomisc::TFaxLogCode LogCode);
 };
@@ -238,16 +238,16 @@ protected:
 	void __fastcall SetPosition(const Vcl::Forms::TPosition NewPosition);
 	void __fastcall SetCtl3D(const bool NewCtl3D);
 	void __fastcall SetVisible(const bool NewVisible);
-	void __fastcall GetProperties(void);
+	void __fastcall GetProperties();
 	void __fastcall SetCaption(const Vcl::Controls::TCaption NewCaption);
-	void __fastcall Show(void);
+	void __fastcall Show();
 	
 public:
 	__fastcall virtual TApdAbstractFaxStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdAbstractFaxStatus(void);
+	__fastcall virtual ~TApdAbstractFaxStatus();
 	virtual void __fastcall UpdateDisplay(const bool First, const bool Last) = 0 ;
-	DYNAMIC void __fastcall CreateDisplay(void) = 0 ;
-	DYNAMIC void __fastcall DestroyDisplay(void) = 0 ;
+	DYNAMIC void __fastcall CreateDisplay() = 0 ;
+	DYNAMIC void __fastcall DestroyDisplay() = 0 ;
 	__property Vcl::Forms::TForm* Display = {read=FDisplay, write=FDisplay};
 	
 __published:
@@ -277,7 +277,7 @@ __published:
 	__property Oomisc::TPassString FaxHistoryName = {read=FFaxHistoryName, write=FFaxHistoryName};
 	__property TApdCustomAbstractFax* Fax = {read=FFax, write=FFax};
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxLog(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxLog() { }
 	
 };
 
@@ -310,7 +310,7 @@ __published:
 	__property OnFaxFinish;
 public:
 	/* TApdCustomAbstractFax.Create */ inline __fastcall virtual TApdAbstractFax(System::Classes::TComponent* AOwner) : TApdCustomAbstractFax(AOwner) { }
-	/* TApdCustomAbstractFax.Destroy */ inline __fastcall virtual ~TApdAbstractFax(void) { }
+	/* TApdCustomAbstractFax.Destroy */ inline __fastcall virtual ~TApdAbstractFax() { }
 	
 };
 
@@ -324,15 +324,15 @@ protected:
 	System::Word RingCount;
 	TFaxAcceptEvent FOnFaxAccept;
 	TFaxNameEvent FOnFaxName;
-	System::Word __fastcall GetAnswerOnRing(void);
+	System::Word __fastcall GetAnswerOnRing();
 	void __fastcall SetAnswerOnRing(const System::Word NewVal);
-	bool __fastcall GetFaxAndData(void);
+	bool __fastcall GetFaxAndData();
 	void __fastcall SetFaxAndData(const bool NewVal);
-	bool __fastcall GetOneFax(void);
+	bool __fastcall GetOneFax();
 	void __fastcall SetOneFax(bool NewValue);
-	bool __fastcall GetConstantStatus(void);
+	bool __fastcall GetConstantStatus();
 	void __fastcall SetConstantStatus(const bool NewValue);
-	Oomisc::TPassString __fastcall GetDestinationDir(void);
+	Oomisc::TPassString __fastcall GetDestinationDir();
 	void __fastcall SetDestinationDir(const Oomisc::TPassString &NewDir);
 	virtual void __fastcall apwFaxAccept(System::TObject* CP, bool &Accept);
 	virtual void __fastcall apwFaxName(System::TObject* CP, Oomisc::TPassString &Name);
@@ -346,15 +346,15 @@ public:
 	__property Oomisc::TPassString DestinationDir = {read=GetDestinationDir, write=SetDestinationDir};
 	__property TFaxAcceptEvent OnFaxAccept = {read=FOnFaxAccept, write=FOnFaxAccept};
 	__property TFaxNameEvent OnFaxName = {read=FOnFaxName, write=FOnFaxName};
-	virtual void __fastcall PrepareTapi(void);
-	virtual void __fastcall UnprepareTapi(void);
-	void __fastcall TapiPassiveAnswer(void);
+	virtual void __fastcall PrepareTapi();
+	virtual void __fastcall UnprepareTapi();
+	void __fastcall TapiPassiveAnswer();
 	void __fastcall FaxTapiStatus(System::TObject* CP, bool First, bool Last, int Device, int Message, int Param1, int Param2, int Param3);
 	__fastcall virtual TApdCustomReceiveFax(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomReceiveFax(void);
-	void __fastcall InitModemForFaxReceive(void);
-	void __fastcall PrepareConnectInProgress(void);
-	void __fastcall StartReceive(void);
+	__fastcall virtual ~TApdCustomReceiveFax();
+	void __fastcall InitModemForFaxReceive();
+	void __fastcall PrepareConnectInProgress();
+	void __fastcall StartReceive();
 	void __fastcall StartManualReceive(bool SendATAToModem);
 };
 
@@ -374,7 +374,7 @@ __published:
 	__property OnFaxName;
 public:
 	/* TApdCustomReceiveFax.Create */ inline __fastcall virtual TApdReceiveFax(System::Classes::TComponent* AOwner) : TApdCustomReceiveFax(AOwner) { }
-	/* TApdCustomReceiveFax.Destroy */ inline __fastcall virtual ~TApdReceiveFax(void) { }
+	/* TApdCustomReceiveFax.Destroy */ inline __fastcall virtual ~TApdReceiveFax() { }
 	
 };
 
@@ -389,45 +389,45 @@ protected:
 	System::Classes::TStringList* FFaxFileList;
 	Oomisc::TPassString FPhoneNumber;
 	TFaxNextEvent FOnFaxNext;
-	bool __fastcall GetFastPage(void);
+	bool __fastcall GetFastPage();
 	void __fastcall SetFastPage(const bool NewVal);
-	bool __fastcall GetEnhTextEnabled(void);
+	bool __fastcall GetEnhTextEnabled();
 	void __fastcall SetEnhTextEnabled(const bool NewVal);
-	Vcl::Graphics::TFont* __fastcall GetEnhHeaderFont(void);
+	Vcl::Graphics::TFont* __fastcall GetEnhHeaderFont();
 	void __fastcall SetEnhHeaderFont(Vcl::Graphics::TFont* const NewVal);
-	Vcl::Graphics::TFont* __fastcall GetEnhFont(void);
+	Vcl::Graphics::TFont* __fastcall GetEnhFont();
 	void __fastcall SetEnhFont(Vcl::Graphics::TFont* const NewVal);
 	void __fastcall SetFaxFileList(System::Classes::TStringList* const NewVal);
-	virtual Oomisc::TPassString __fastcall GetFaxFile(void);
+	virtual Oomisc::TPassString __fastcall GetFaxFile();
 	virtual void __fastcall SetFaxFile(const Oomisc::TPassString &NewFile);
-	bool __fastcall GetBlindDial(void);
+	bool __fastcall GetBlindDial();
 	void __fastcall SetBlindDial(const bool NewVal);
-	bool __fastcall GetDetectBusy(void);
+	bool __fastcall GetDetectBusy();
 	void __fastcall SetDetectBusy(const bool NewVal);
-	bool __fastcall GetToneDial(void);
+	bool __fastcall GetToneDial();
 	void __fastcall SetToneDial(const bool NewVal);
-	TModemString __fastcall GetDialPrefix(void);
+	TModemString __fastcall GetDialPrefix();
 	void __fastcall SetDialPrefix(const TModemString &NewPrefix);
-	System::Word __fastcall GetDialWait(void);
+	System::Word __fastcall GetDialWait();
 	void __fastcall SetDialWait(const System::Word NewWait);
-	System::Word __fastcall GetDialAttempts(void);
+	System::Word __fastcall GetDialAttempts();
 	void __fastcall SetDialAttempts(const System::Word NewAttempts);
-	System::Word __fastcall GetDialRetryWait(void);
+	System::Word __fastcall GetDialRetryWait();
 	void __fastcall SetDialRetryWait(const System::Word NewWait);
-	System::Word __fastcall GetMaxSendCount(void);
+	System::Word __fastcall GetMaxSendCount();
 	void __fastcall SetMaxSendCount(const System::Word NewCount);
-	System::Word __fastcall GetBufferMinimum(void);
+	System::Word __fastcall GetBufferMinimum();
 	void __fastcall SetBufferMinimum(const System::Word NewMin);
-	Oomisc::TPassString __fastcall GetHeaderLine(void);
+	Oomisc::TPassString __fastcall GetHeaderLine();
 	void __fastcall SetHeaderLine(const Oomisc::TPassString &S);
-	System::Word __fastcall GetDialAttempt(void);
-	bool __fastcall GetSafeMode(void);
+	System::Word __fastcall GetDialAttempt();
+	bool __fastcall GetSafeMode();
 	void __fastcall SetSafeMode(bool NewMode);
-	Oomisc::TPassString __fastcall GetHeaderSender(void);
+	Oomisc::TPassString __fastcall GetHeaderSender();
 	void __fastcall SetHeaderSender(const Oomisc::TPassString &NewSender);
-	Oomisc::TPassString __fastcall GetHeaderRecipient(void);
+	Oomisc::TPassString __fastcall GetHeaderRecipient();
 	void __fastcall SetHeaderRecipient(const Oomisc::TPassString &NewRecipient);
-	Oomisc::TPassString __fastcall GetHeaderTitle(void);
+	Oomisc::TPassString __fastcall GetHeaderTitle();
 	void __fastcall SetHeaderTitle(const Oomisc::TPassString &NewTitle);
 	virtual void __fastcall apwFaxNext(System::TObject* CP, Oomisc::TPassString &APhoneNumber, Oomisc::TPassString &AFaxFile, Oomisc::TPassString &ACoverFile);
 	
@@ -456,11 +456,11 @@ public:
 	__property System::Word DialAttempt = {read=GetDialAttempt, nodefault};
 	__property TFaxNextEvent OnFaxNext = {read=FOnFaxNext, write=FOnFaxNext};
 	__fastcall virtual TApdCustomSendFax(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomSendFax(void);
+	__fastcall virtual ~TApdCustomSendFax();
 	void __fastcall ConvertCover(const System::UnicodeString InCover, const System::UnicodeString OutCover);
 	void __fastcall ConcatFaxes(Oomisc::TPassString &FileName);
-	void __fastcall StartTransmit(void);
-	void __fastcall StartManualTransmit(void);
+	void __fastcall StartTransmit();
+	void __fastcall StartManualTransmit();
 };
 
 
@@ -493,7 +493,7 @@ __published:
 	__property HeaderTitle = {default=0};
 public:
 	/* TApdCustomSendFax.Create */ inline __fastcall virtual TApdSendFax(System::Classes::TComponent* AOwner) : TApdCustomSendFax(AOwner) { }
-	/* TApdCustomSendFax.Destroy */ inline __fastcall virtual ~TApdSendFax(void) { }
+	/* TApdCustomSendFax.Destroy */ inline __fastcall virtual ~TApdSendFax() { }
 	
 };
 

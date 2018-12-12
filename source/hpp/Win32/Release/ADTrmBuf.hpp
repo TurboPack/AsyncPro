@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'ADTrmBuf.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'ADTrmBuf.pas' rev: 33.00 (Windows)
 
 #ifndef AdtrmbufHPP
 #define AdtrmbufHPP
@@ -68,8 +68,8 @@ protected:
 	
 public:
 	__fastcall TadTerminalArray(int aItemSize);
-	__fastcall virtual ~TadTerminalArray(void);
-	void __fastcall Clear(void);
+	__fastcall virtual ~TadTerminalArray();
+	void __fastcall Clear();
 	void __fastcall ClearItems(int aRow, int aFromCol, int aToCol);
 	void __fastcall DeleteItems(int aCount, int aRow, int aCol);
 	void * __fastcall GetItemPtr(int aRow, int aCol);
@@ -134,10 +134,10 @@ private:
 	NativeUInt FTerminalHandle;
 	
 protected:
-	int __fastcall tbGetCol(void);
-	int __fastcall tbGetOriginCol(void);
-	int __fastcall tbGetOriginRow(void);
-	int __fastcall tbGetRow(void);
+	int __fastcall tbGetCol();
+	int __fastcall tbGetOriginCol();
+	int __fastcall tbGetOriginRow();
+	int __fastcall tbGetRow();
 	void __fastcall tbSetBackColor(System::Uitypes::TColor aValue);
 	void __fastcall tbSetCharSet(System::Byte aValue);
 	void __fastcall tbSetDefAnsiChar(char aValue);
@@ -155,16 +155,16 @@ protected:
 	int __fastcall tbCvtToInternalRow(int aRow, bool aAbsolute);
 	int __fastcall tbCvtToExternalCol(int aCol, bool aAbsolute);
 	int __fastcall tbCvtToExternalRow(int aRow, bool aAbsolute);
-	bool __fastcall tbAtLastColumn(void);
+	bool __fastcall tbAtLastColumn();
 	void __fastcall tbMoveCursorLeftRight(int aDirection, bool aWrap, bool aScroll);
 	void __fastcall tbMoveCursorUpDown(int aDirection, bool aScroll);
 	void __fastcall tbReallocBuffers(int aNewRowCount, int aNewColCount);
 	void __fastcall tbScrollRows(int aCount, int aTop, int aBottom);
-	void __fastcall tbFireOnCursorMovedEvent(void);
+	void __fastcall tbFireOnCursorMovedEvent();
 	
 public:
 	__fastcall TAdTerminalBuffer(bool aUseWideChars);
-	__fastcall virtual ~TAdTerminalBuffer(void);
+	__fastcall virtual ~TAdTerminalBuffer();
 	void __fastcall GetCharAttrs(TAdTerminalCharAttrs &aValue);
 	void __fastcall GetDefCharAttrs(TAdTerminalCharAttrs &aValue);
 	void __fastcall SetDefCharAttrs(const TAdTerminalCharAttrs aValue);
@@ -178,42 +178,42 @@ public:
 	void __fastcall DeleteLines(int aCount);
 	void __fastcall InsertChars(int aCount);
 	void __fastcall InsertLines(int aCount);
-	void __fastcall EraseAll(void);
+	void __fastcall EraseAll();
 	void __fastcall EraseChars(int aCount);
-	void __fastcall EraseFromBOW(void);
-	void __fastcall EraseFromBOL(void);
-	void __fastcall EraseLine(void);
-	void __fastcall EraseScreen(void);
-	void __fastcall EraseToEOL(void);
-	void __fastcall EraseToEOW(void);
-	void __fastcall SetHorzTabStop(void);
-	void __fastcall ClearHorzTabStop(void);
-	void __fastcall ClearAllHorzTabStops(void);
-	void __fastcall DoHorzTab(void);
-	void __fastcall DoBackHorzTab(void);
-	void __fastcall SetVertTabStop(void);
-	void __fastcall ClearVertTabStop(void);
-	void __fastcall ClearAllVertTabStops(void);
-	void __fastcall DoVertTab(void);
-	void __fastcall DoBackVertTab(void);
+	void __fastcall EraseFromBOW();
+	void __fastcall EraseFromBOL();
+	void __fastcall EraseLine();
+	void __fastcall EraseScreen();
+	void __fastcall EraseToEOL();
+	void __fastcall EraseToEOW();
+	void __fastcall SetHorzTabStop();
+	void __fastcall ClearHorzTabStop();
+	void __fastcall ClearAllHorzTabStops();
+	void __fastcall DoHorzTab();
+	void __fastcall DoBackHorzTab();
+	void __fastcall SetVertTabStop();
+	void __fastcall ClearVertTabStop();
+	void __fastcall ClearAllVertTabStops();
+	void __fastcall DoVertTab();
+	void __fastcall DoBackVertTab();
 	void __fastcall SetScrollRegion(int aTopRow, int aBottomRow);
 	void __fastcall WriteChar(char aCh);
 	void __fastcall WriteString(const System::UnicodeString aSt)/* overload */;
 	void __fastcall WriteString(const System::AnsiString aSt)/* overload */;
-	void __fastcall DoBackspace(void);
-	void __fastcall DoCarriageReturn(void);
-	void __fastcall DoLineFeed(void);
-	void __fastcall Reset(void);
+	void __fastcall DoBackspace();
+	void __fastcall DoCarriageReturn();
+	void __fastcall DoLineFeed();
+	void __fastcall Reset();
 	void * __fastcall GetLineCharPtr(int aRow);
 	void * __fastcall GetLineAttrPtr(int aRow);
 	void * __fastcall GetLineForeColorPtr(int aRow);
 	void * __fastcall GetLineBackColorPtr(int aRow);
 	void * __fastcall GetLineCharSetPtr(int aRow);
-	bool __fastcall HasCursorMoved(void);
-	bool __fastcall HasDisplayChanged(void);
+	bool __fastcall HasCursorMoved();
+	bool __fastcall HasDisplayChanged();
 	bool __fastcall GetInvalidRect(System::Types::TRect &aRect);
 	void __fastcall RegisterTerminalHandle(NativeUInt AHandle);
-	void __fastcall DeregisterTerminalHandle(void);
+	void __fastcall DeregisterTerminalHandle();
 	__property System::Uitypes::TColor BackColor = {read=FBackColor, write=tbSetBackColor, nodefault};
 	__property System::Byte CharSet = {read=FCharSet, write=tbSetCharSet, nodefault};
 	__property char DefAnsiChar = {read=FDefAnsiChar, write=tbSetDefAnsiChar, nodefault};

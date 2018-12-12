@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'ADTrmMap.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'ADTrmMap.pas' rev: 33.00 (Windows)
 
 #ifndef AdtrmmapHPP
 #define AdtrmmapHPP
@@ -44,10 +44,10 @@ protected:
 	bool __fastcall kbmFindPrim(const TAdKeyString &aKey, int &aInx, void * &aNode);
 	
 public:
-	__fastcall TAdKeyboardMapping(void);
-	__fastcall virtual ~TAdKeyboardMapping(void);
+	__fastcall TAdKeyboardMapping();
+	__fastcall virtual ~TAdKeyboardMapping();
 	bool __fastcall Add(const TAdKeyString &aKey, const TAdKeyString &aValue);
-	void __fastcall Clear(void);
+	void __fastcall Clear();
 	TAdKeyString __fastcall Get(const TAdKeyString &aKey);
 	void __fastcall LoadFromFile(const System::UnicodeString aFileName);
 	void __fastcall LoadFromRes(NativeUInt aInstance, const System::UnicodeString aResName);
@@ -73,13 +73,13 @@ private:
 protected:
 	void __fastcall csmAddScriptNode(PadKeyString aFont);
 	bool __fastcall csmFindPrim(const TAdKeyString &aCharSet, char aChar, int &aInx, void * &aNode);
-	void __fastcall csmFreeScript(void);
+	void __fastcall csmFreeScript();
 	
 public:
-	__fastcall TAdCharSetMapping(void);
-	__fastcall virtual ~TAdCharSetMapping(void);
+	__fastcall TAdCharSetMapping();
+	__fastcall virtual ~TAdCharSetMapping();
 	bool __fastcall Add(const TAdKeyString &aCharSet, char aFromCh, char aToCh, const TAdKeyString &aFont, char aGlyph);
-	void __fastcall Clear(void);
+	void __fastcall Clear();
 	void __fastcall GetFontNames(System::Classes::TStrings* aList);
 	void __fastcall GenerateDrawScript(const TAdKeyString &aCharSet, char * aText);
 	bool __fastcall GetNextDrawCommand(TAdKeyString &aFont, char * aText);

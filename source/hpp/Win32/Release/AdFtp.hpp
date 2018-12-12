@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFtp.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFtp.pas' rev: 33.00 (Windows)
 
 #ifndef AdftpHPP
 #define AdftpHPP
@@ -107,30 +107,30 @@ protected:
 	TFtpLogEvent FOnFtpLog;
 	TFtpReplyEvent FOnFtpReply;
 	void __fastcall ChangeState(TFtpProcessState NewState);
-	bool __fastcall DataConnect(void);
+	bool __fastcall DataConnect();
 	void __fastcall DataConnectPASV(System::AnsiString IP);
 	void __fastcall DataDisconnect(bool FlushBuffer);
-	void __fastcall DataShutDown(void);
-	virtual void __fastcall DoConnect(void);
-	virtual void __fastcall DoDisconnect(void);
+	void __fastcall DataShutDown();
+	virtual void __fastcall DoConnect();
+	virtual void __fastcall DoDisconnect();
 	void __fastcall FtpEventHandler(Winapi::Messages::TMessage &Msg);
 	void __fastcall FtpReplyHandler(int ReplyCode, char * PData);
-	bool __fastcall GetConnected(void);
-	int __fastcall GetData(void);
-	bool __fastcall GetInProgress(void);
+	bool __fastcall GetConnected();
+	int __fastcall GetData();
+	bool __fastcall GetInProgress();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	System::AnsiString __fastcall PopCommand(void);
+	System::AnsiString __fastcall PopCommand();
 	void __fastcall PostError(int Code, char * Info);
 	void __fastcall PostLog(TFtpLogCode Code);
 	void __fastcall PostStatus(TFtpStatusCode Code, char * Info);
 	void __fastcall PushCommand(const System::AnsiString Cmd);
-	int __fastcall PutData(void);
+	int __fastcall PutData();
 	void __fastcall ReplyPacketHandler(System::TObject* Sender, System::AnsiString Data);
-	void __fastcall ResetTimer(void);
+	void __fastcall ResetTimer();
 	void __fastcall SendCommand(const System::AnsiString Cmd);
 	void __fastcall SetFtpLog(TApdFtpLog* const NewLog);
-	void __fastcall StartTimer(void);
-	void __fastcall StopTimer(void);
+	void __fastcall StartTimer();
+	void __fastcall StopTimer();
 	void __fastcall TimerTrigger(unsigned Msg, unsigned wParam, int lParam);
 	void __fastcall WsDataAccept(System::TObject* Sender, int Socket);
 	void __fastcall WsDataDisconnect(System::TObject* Sender, int Socket);
@@ -160,15 +160,15 @@ public:
 	__property int RestartAt = {read=FRestartAt, write=FRestartAt, nodefault};
 	__property bool UserLoggedIn = {read=FUserLoggedIn, nodefault};
 	__fastcall virtual TApdCustomFtpClient(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomFtpClient(void);
-	bool __fastcall Abort(void);
+	__fastcall virtual ~TApdCustomFtpClient();
+	bool __fastcall Abort();
 	bool __fastcall ChangeDir(const System::AnsiString RemotePathName);
-	bool __fastcall CurrentDir(void);
+	bool __fastcall CurrentDir();
 	bool __fastcall Delete(const System::AnsiString RemotePathName);
 	bool __fastcall ListDir(const System::AnsiString RemotePathName, bool FullList);
 	bool __fastcall Help(const System::AnsiString Command);
-	bool __fastcall Login(void);
-	bool __fastcall Logout(void);
+	bool __fastcall Login();
+	bool __fastcall Logout();
 	bool __fastcall MakeDir(const System::AnsiString RemotePathName);
 	bool __fastcall RemoveDir(const System::AnsiString RemotePathName);
 	bool __fastcall Rename(const System::AnsiString RemotePathName, const System::AnsiString NewPathName);
@@ -191,7 +191,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdFtpLog(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdFtpLog(void);
+	__fastcall virtual ~TApdFtpLog();
 	virtual void __fastcall UpdateLog(const TFtpLogCode LogCode);
 	
 __published:
@@ -231,7 +231,7 @@ __published:
 	__property OnWsError;
 public:
 	/* TApdCustomFtpClient.Create */ inline __fastcall virtual TApdFtpClient(System::Classes::TComponent* AOwner) : TApdCustomFtpClient(AOwner) { }
-	/* TApdCustomFtpClient.Destroy */ inline __fastcall virtual ~TApdFtpClient(void) { }
+	/* TApdCustomFtpClient.Destroy */ inline __fastcall virtual ~TApdFtpClient() { }
 	
 };
 

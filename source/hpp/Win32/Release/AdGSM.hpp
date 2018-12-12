@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'adgsm.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'adgsm.pas' rev: 33.00 (Windows)
 
 #ifndef AdgsmHPP
 #define AdgsmHPP
@@ -65,7 +65,7 @@ private:
 	System::TDateTime FTimeStamp;
 	
 protected:
-	System::AnsiString __fastcall GetMessageAsPDU(void);
+	System::AnsiString __fastcall GetMessageAsPDU();
 	void __fastcall SetMessageAsPDU(System::AnsiString v);
 	
 public:
@@ -78,8 +78,8 @@ public:
 	__property System::TDateTime TimeStamp = {read=FTimeStamp, write=FTimeStamp};
 	__property System::UnicodeString TimeStampStr = {read=FTimeStampStr, write=FTimeStampStr};
 public:
-	/* TObject.Create */ inline __fastcall TApdSMSMessage(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdSMSMessage(void) { }
+	/* TObject.Create */ inline __fastcall TApdSMSMessage() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdSMSMessage() { }
 	
 };
 
@@ -100,18 +100,18 @@ private:
 	
 protected:
 	bool JustClearStore;
-	virtual int __fastcall GetCapacity(void);
-	void __fastcall ClearStore(void);
+	virtual int __fastcall GetCapacity();
+	void __fastcall ClearStore();
 	
 public:
 	__fastcall TApdMessageStore(TApdCustomGSMPhone* GSMPhone);
 	int __fastcall AddMessage(const System::UnicodeString Dest, const System::UnicodeString Msg);
-	virtual void __fastcall Clear(void);
+	virtual void __fastcall Clear();
 	virtual void __fastcall Delete(int PhoneIndex);
 	__property TApdSMSMessage* Messages[int Index] = {read=GetMessage, write=SetMessage/*, default*/};
 	__property int Capacity = {read=FCapacity, write=SetMSCapacity, nodefault};
 public:
-	/* TStringList.Destroy */ inline __fastcall virtual ~TApdMessageStore(void) { }
+	/* TStringList.Destroy */ inline __fastcall virtual ~TApdMessageStore() { }
 	
 };
 
@@ -157,13 +157,13 @@ protected:
 	System::AnsiString ResponseStr;
 	System::AnsiString NotifyStr;
 	TGSMModeSet FSupportedGSMModes;
-	void __fastcall CheckPort(void);
+	void __fastcall CheckPort();
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall ResponseStringPacket(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall NotifyStringPacket(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall SetPDUMode(bool v);
-	TGSMMode __fastcall GetGSMMode(void);
+	TGSMMode __fastcall GetGSMMode();
 	void __fastcall ErrorStringPacket(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall DoFail(const System::UnicodeString Msg, const int ErrCode);
 	void __fastcall DeleteFromMemoryIndex(int PhoneIndex);
@@ -172,16 +172,16 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomGSMPhone(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomGSMPhone(void);
-	void __fastcall SendMessage(void);
-	void __fastcall SendAllMessages(void);
-	void __fastcall ListAllMessages(void);
-	void __fastcall Connect(void);
+	__fastcall virtual ~TApdCustomGSMPhone();
+	void __fastcall SendMessage();
+	void __fastcall SendAllMessages();
+	void __fastcall ListAllMessages();
+	void __fastcall Connect();
 	void __fastcall SendFromMemory(int TheIndex);
 	void __fastcall WriteToMemory(const System::AnsiString Dest, const System::AnsiString Msg);
-	void __fastcall ProcessResponse(void);
-	void __fastcall Synchronize(void);
-	void __fastcall QueryModem(void);
+	void __fastcall ProcessResponse();
+	void __fastcall Synchronize();
+	void __fastcall QueryModem();
 	System::AnsiString __fastcall StatusToStr(TApdSMSStatus StatusString);
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=FComPort};
 	__property System::UnicodeString SMSAddress = {read=FSMSAddress, write=FSMSAddress};
@@ -206,7 +206,7 @@ class PASCALIMPLEMENTATION TApdGSMPhone : public TApdCustomGSMPhone
 	
 public:
 	__fastcall virtual TApdGSMPhone(System::Classes::TComponent* Owner);
-	__fastcall virtual ~TApdGSMPhone(void);
+	__fastcall virtual ~TApdGSMPhone();
 	
 __published:
 	__property ComPort;

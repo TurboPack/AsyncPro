@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdTSel.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdTSel.pas' rev: 33.00 (Windows)
 
 #ifndef AdtselHPP
 #define AdtselHPP
@@ -64,9 +64,9 @@ private:
 	bool FEnableVoice;
 	
 public:
-	void __fastcall EnumComPorts(void);
-	void __fastcall EnumTapiPorts(void);
-	void __fastcall EnumAllPorts(void);
+	void __fastcall EnumComPorts();
+	void __fastcall EnumTapiPorts();
+	void __fastcall EnumAllPorts();
 	__fastcall virtual TDeviceSelectionForm(System::Classes::TComponent* AOwner);
 	__property System::Classes::TStringList* PortItemList = {read=FPortItemList, write=FPortItemList};
 	__property Adport::TTapiMode TapiMode = {read=FTapiMode, write=FTapiMode, nodefault};
@@ -78,7 +78,7 @@ public:
 	__property bool ShowOnlySupported = {read=FShowOnlySupported, write=FShowOnlySupported, nodefault};
 public:
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TDeviceSelectionForm(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TDeviceSelectionForm(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TDeviceSelectionForm() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TDeviceSelectionForm(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

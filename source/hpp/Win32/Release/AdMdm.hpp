@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdMdm.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdMdm.pas' rev: 33.00 (Windows)
 
 #ifndef AdmdmHPP
 #define AdmdmHPP
@@ -99,17 +99,17 @@ private:
 	
 public:
 	virtual void __fastcall Assign(System::Classes::TPersistent* Source);
-	void __fastcall Clear(void);
+	void __fastcall Clear();
 	
 __published:
 	__property System::UnicodeString Manufacturer = {read=FManufacturer, write=SetManufacturer};
 	__property System::UnicodeString Name = {read=FName, write=SetName};
 	__property System::UnicodeString ModemFile = {read=FModemFile, write=SetModemFile};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdModemNameProp(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdModemNameProp() { }
 	
 public:
-	/* TObject.Create */ inline __fastcall TApdModemNameProp(void) : System::Classes::TPersistent() { }
+	/* TObject.Create */ inline __fastcall TApdModemNameProp() : System::Classes::TPersistent() { }
 	
 };
 
@@ -169,8 +169,8 @@ private:
 	NativeUInt FHandle;
 	System::Byte FPortWasOpen;
 	Adport::TTriggerEvent FSavedOnTrigger;
-	unsigned __fastcall GetElapsedTime(void);
-	System::Classes::TStringList* __fastcall GetNegotiationResponses(void);
+	unsigned __fastcall GetElapsedTime();
+	System::Classes::TStringList* __fastcall GetNegotiationResponses();
 	void __fastcall SetAnswerOnRing(const int Value);
 	void __fastcall SetComPort(Adport::TApdCustomComPort* const Value);
 	void __fastcall SetDialTimeout(const int Value);
@@ -178,7 +178,7 @@ private:
 	void __fastcall SetRingWaitTimeout(const unsigned Value);
 	void __fastcall SetSelectedDevice(TApdModemNameProp* const Value);
 	void __fastcall SetStatusDisplay(TAdAbstractModemStatus* const Value);
-	bool __fastcall GetDeviceSelected(void);
+	bool __fastcall GetDeviceSelected();
 	void __fastcall PortOpenCloseEx(System::TObject* CP, Adport::TApdCallbackType CallbackType);
 	
 protected:
@@ -194,14 +194,14 @@ protected:
 	System::Word DcdTrigger;
 	System::Word StatusTimerTrigger;
 	bool FCallerIDProvided;
-	void __fastcall CheckReady(void);
-	void __fastcall DoCallerID(void);
-	void __fastcall DoConnect(void);
-	void __fastcall DoDisconnect(void);
+	void __fastcall CheckReady();
+	void __fastcall DoCallerID();
+	void __fastcall DoConnect();
+	void __fastcall DoDisconnect();
 	void __fastcall DoFail(int Failure);
 	void __fastcall DoLog(TApdModemLogCode LogCode);
 	void __fastcall DoStatus(TApdModemState NewModemState);
-	void __fastcall Initialize(void);
+	void __fastcall Initialize();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall ModemMessage(Winapi::Messages::TMessage &Message);
 	void __fastcall PrepForConnect(bool EnableTriggers);
@@ -219,7 +219,7 @@ public:
 	Adlibmdm::TLmModem LmModem;
 	Adlibmdm::TApdLibModem* LibModem;
 	__fastcall virtual TAdCustomModem(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TAdCustomModem(void);
+	__fastcall virtual ~TAdCustomModem();
 	__property int AnswerOnRing = {read=FAnswerOnRing, write=SetAnswerOnRing, default=2};
 	__property unsigned BPSRate = {read=FBPSRate, nodefault};
 	__property TApdCallerIDInfo CallerIDInfo = {read=FCallerIDInfo, write=FCallerIDInfo};
@@ -238,19 +238,19 @@ public:
 	__property unsigned RingWaitTimeout = {read=FRingWaitTimeout, write=SetRingWaitTimeout, default=1200};
 	__property TApdModemNameProp* SelectedDevice = {read=FSelectedDevice, write=SetSelectedDevice};
 	__property TAdAbstractModemStatus* StatusDisplay = {read=FStatusDisplay, write=SetStatusDisplay};
-	void __fastcall AutoAnswer(void);
-	void __fastcall CancelCall(void);
-	void __fastcall ConfigAndOpen(void);
-	TApdModemConfig __fastcall DefaultDeviceConfig(void);
+	void __fastcall AutoAnswer();
+	void __fastcall CancelCall();
+	void __fastcall ConfigAndOpen();
+	TApdModemConfig __fastcall DefaultDeviceConfig();
 	void __fastcall Dial(const System::UnicodeString ANumber);
 	System::UnicodeString __fastcall FailureCodeMsg(const int FailureCode);
-	TApdModemConfig __fastcall GetDevConfig(void);
+	TApdModemConfig __fastcall GetDevConfig();
 	System::UnicodeString __fastcall ModemLogToString(TApdModemLogCode LogCode);
 	System::UnicodeString __fastcall ModemStatusMsg(TApdModemState Status);
-	bool __fastcall SelectDevice(void);
+	bool __fastcall SelectDevice();
 	bool __fastcall SendCommand(const System::UnicodeString Command);
 	void __fastcall SetDevConfig(const TApdModemConfig &Config);
-	bool __fastcall ShowConfigDialog(void);
+	bool __fastcall ShowConfigDialog();
 	System::UnicodeString __fastcall ConvertXML(const System::UnicodeString S);
 	System::UnicodeString __fastcall StripXML(const System::UnicodeString S);
 	__property TModemCallerIDEvent OnModemCallerID = {read=FOnModemCallerID, write=FOnModemCallerID};
@@ -282,7 +282,7 @@ __published:
 	__property OnModemStatus;
 public:
 	/* TAdCustomModem.Create */ inline __fastcall virtual TAdModem(System::Classes::TComponent* AOwner) : TAdCustomModem(AOwner) { }
-	/* TAdCustomModem.Destroy */ inline __fastcall virtual ~TAdModem(void) { }
+	/* TAdCustomModem.Destroy */ inline __fastcall virtual ~TAdModem() { }
 	
 };
 
@@ -302,7 +302,7 @@ private:
 	
 public:
 	__fastcall virtual TAdAbstractModemStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TAdAbstractModemStatus(void);
+	__fastcall virtual ~TAdAbstractModemStatus();
 	__property Vcl::Forms::TForm* StatusDialog = {read=FStatusDialog, write=FStatusDialog};
 	__property System::UnicodeString Caption = {read=FCaption, write=SetCaption};
 	__property TAdCustomModem* Modem = {read=FModem, write=SetModem};
@@ -320,7 +320,7 @@ __published:
 	__property Modem;
 public:
 	/* TAdAbstractModemStatus.Create */ inline __fastcall virtual TAdModemStatus(System::Classes::TComponent* AOwner) : TAdAbstractModemStatus(AOwner) { }
-	/* TAdAbstractModemStatus.Destroy */ inline __fastcall virtual ~TAdModemStatus(void) { }
+	/* TAdAbstractModemStatus.Destroy */ inline __fastcall virtual ~TAdModemStatus() { }
 	
 };
 

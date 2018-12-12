@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'ADTrmEmu.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'ADTrmEmu.pas' rev: 33.00 (Windows)
 
 #ifndef AdtrmemuHPP
 #define AdtrmemuHPP
@@ -77,7 +77,7 @@ private:
 	
 public:
 	__fastcall virtual TAdEmuCommandParamsItem(System::Classes::TCollection* Collection);
-	__fastcall virtual ~TAdEmuCommandParamsItem(void);
+	__fastcall virtual ~TAdEmuCommandParamsItem();
 	
 __published:
 	__property TAdEmuCommandParams* Collection = {read=FCollection, write=FCollection};
@@ -97,7 +97,7 @@ private:
 	
 protected:
 	HIDESBASE TAdEmuCommandParamsItem* __fastcall GetItem(int Index);
-	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner(void);
+	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner();
 	HIDESBASE void __fastcall SetItem(int Index, TAdEmuCommandParamsItem* Value);
 	
 public:
@@ -109,7 +109,7 @@ public:
 	System::Uitypes::TColor __fastcall GetTColorValue(System::UnicodeString AName, int APosition, System::Uitypes::TColor ADefault);
 	__property TAdEmuCommandParamsItem* Items[int Index] = {read=GetItem, write=SetItem};
 public:
-	/* TCollection.Destroy */ inline __fastcall virtual ~TAdEmuCommandParams(void) { }
+	/* TCollection.Destroy */ inline __fastcall virtual ~TAdEmuCommandParams() { }
 	
 };
 
@@ -127,7 +127,7 @@ private:
 	
 public:
 	__fastcall virtual TAdEmuCommandListItem(System::Classes::TCollection* Collection);
-	__fastcall virtual ~TAdEmuCommandListItem(void);
+	__fastcall virtual ~TAdEmuCommandListItem();
 	void __fastcall AddBooleanArg(bool v);
 	void __fastcall AddIntegerArg(int v);
 	void __fastcall AddNamedBooleanArg(System::UnicodeString AName, bool v);
@@ -155,7 +155,7 @@ private:
 	
 protected:
 	HIDESBASE TAdEmuCommandListItem* __fastcall GetItem(int Index);
-	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner(void);
+	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner();
 	HIDESBASE void __fastcall SetItem(int Index, TAdEmuCommandListItem* Value);
 	
 public:
@@ -163,7 +163,7 @@ public:
 	TAdEmuCommandListItem* __fastcall AddCommand(TAdEmuCommand ACommand);
 	__property TAdEmuCommandListItem* Items[int Index] = {read=GetItem, write=SetItem};
 public:
-	/* TCollection.Destroy */ inline __fastcall virtual ~TAdEmuCommandList(void) { }
+	/* TCollection.Destroy */ inline __fastcall virtual ~TAdEmuCommandList() { }
 	
 };
 
@@ -236,17 +236,17 @@ private:
 	int FCharVPadding;
 	
 protected:
-	virtual void __fastcall Loaded(void);
-	void __fastcall tmFollowCursor(void);
+	virtual void __fastcall Loaded();
+	void __fastcall tmFollowCursor();
 	Adtrmbuf::TAdTerminalCharAttrs __fastcall tmGetAttributes(int aRow, int aCol);
 	System::Uitypes::TColor __fastcall tmGetBackColor(int aRow, int aCol);
 	System::Byte __fastcall tmGetCharSet(int aRow, int aCol);
-	int __fastcall tmGetColumns(void);
-	TAdTerminalEmulator* __fastcall tmGetEmulator(void);
+	int __fastcall tmGetColumns();
+	TAdTerminalEmulator* __fastcall tmGetEmulator();
 	System::Uitypes::TColor __fastcall tmGetForeColor(int aRow, int aCol);
 	System::AnsiString __fastcall tmGetLine(int aRow);
-	int __fastcall tmGetRows(void);
-	int __fastcall tmGetScrollbackRows(void);
+	int __fastcall tmGetRows();
+	int __fastcall tmGetScrollbackRows();
 	void __fastcall tmSetActive(bool aValue);
 	void __fastcall tmSetAttributes(int aRow, int aCol, const Adtrmbuf::TAdTerminalCharAttrs aAttr);
 	void __fastcall tmSetAutoCopy(const bool v);
@@ -280,23 +280,23 @@ protected:
 	void __fastcall tmSetUseLazyDisplay(bool aValue);
 	void __fastcall tmSetWantAllKeys(bool aValue);
 	void __fastcall tmSetFreezeScrollBack(bool v);
-	void __fastcall tmDrawDefaultText(void);
-	void __fastcall tmAttachToComPort(void);
-	void __fastcall tmCalcExtent(void);
-	void __fastcall tmDetachFromComPort(void);
-	void __fastcall tmGetFontInfo(void);
+	void __fastcall tmDrawDefaultText();
+	void __fastcall tmAttachToComPort();
+	void __fastcall tmCalcExtent();
+	void __fastcall tmDetachFromComPort();
+	void __fastcall tmGetFontInfo();
 	void __fastcall tmInvalidateRow(int aRow);
-	void __fastcall tmFreeCaret(void);
-	void __fastcall tmHideCaret(void);
-	void __fastcall tmMakeCaret(void);
-	void __fastcall tmPositionCaret(void);
-	void __fastcall tmShowCaret(void);
-	void __fastcall tmInitHScrollBar(void);
-	void __fastcall tmInitVScrollBar(void);
-	bool __fastcall tmNeedHScrollbar(void);
-	bool __fastcall tmNeedVScrollbar(void);
-	void __fastcall tmRemoveHScrollBar(void);
-	void __fastcall tmRemoveVScrollBar(void);
+	void __fastcall tmFreeCaret();
+	void __fastcall tmHideCaret();
+	void __fastcall tmMakeCaret();
+	void __fastcall tmPositionCaret();
+	void __fastcall tmShowCaret();
+	void __fastcall tmInitHScrollBar();
+	void __fastcall tmInitVScrollBar();
+	bool __fastcall tmNeedHScrollbar();
+	bool __fastcall tmNeedVScrollbar();
+	void __fastcall tmRemoveHScrollBar();
+	void __fastcall tmRemoveVScrollBar();
 	void __fastcall tmScrollHorz(int aDist);
 	void __fastcall tmScrollVert(int aDist);
 	void __fastcall tmGrowSelect(int X, int Y);
@@ -335,27 +335,27 @@ protected:
 	HIDESBASE MESSAGE void __fastcall WMSetFocus(Winapi::Messages::TWMSetFocus &Msg);
 	HIDESBASE MESSAGE void __fastcall WMSize(Winapi::Messages::TWMSize &Msg);
 	HIDESBASE MESSAGE void __fastcall WMVScroll(Winapi::Messages::TWMScroll &Msg);
-	void __fastcall Paint(void);
+	void __fastcall Paint();
 	
 public:
 	__fastcall virtual TAdCustomTerminal(System::Classes::TComponent* aOwner);
-	__fastcall virtual ~TAdCustomTerminal(void);
+	__fastcall virtual ~TAdCustomTerminal();
 	virtual void __fastcall CreateParams(Vcl::Controls::TCreateParams &Params);
-	virtual void __fastcall CreateWnd(void);
-	virtual void __fastcall DestroyWnd(void);
-	void __fastcall Clear(void);
-	void __fastcall ClearAll(void);
-	void __fastcall CopyToClipboard(void);
-	int __fastcall GetTotalCharWidth(void);
-	int __fastcall GetTotalCharHeight(void);
-	void __fastcall HideSelection(void);
+	virtual void __fastcall CreateWnd();
+	virtual void __fastcall DestroyWnd();
+	void __fastcall Clear();
+	void __fastcall ClearAll();
+	void __fastcall CopyToClipboard();
+	int __fastcall GetTotalCharWidth();
+	int __fastcall GetTotalCharHeight();
+	void __fastcall HideSelection();
 	void __fastcall WriteChar(char aCh);
 	void __fastcall WriteString(const System::UnicodeString aSt)/* overload */;
 	void __fastcall WriteString(const System::AnsiString aSt)/* overload */;
 	void __fastcall WriteCharSource(char aCh, TAdCharSource Source);
 	void __fastcall WriteStringSource(const System::AnsiString aSt, TAdCharSource Source);
-	bool __fastcall HasFocus(void);
-	void __fastcall PasteFromClipboard(void);
+	bool __fastcall HasFocus();
+	void __fastcall PasteFromClipboard();
 	__property Adtrmbuf::TAdTerminalCharAttrs Attributes[int aRow][int aCol] = {read=tmGetAttributes, write=tmSetAttributes};
 	__property System::Uitypes::TColor BackColor[int aRow][int aCol] = {read=tmGetBackColor, write=tmSetBackColor};
 	__property Color = {default=-16777211};
@@ -429,31 +429,31 @@ private:
 	
 protected:
 	virtual void __fastcall DefineProperties(System::Classes::TFiler* Filer);
-	bool __fastcall IsAnswerbackStored(void);
+	bool __fastcall IsAnswerbackStored();
 	void __fastcall ReadAnswerback(System::Classes::TReader* Reader);
 	void __fastcall WriteAnswerback(System::Classes::TWriter* Writer);
-	virtual bool __fastcall teGetNeedsUpdate(void);
+	virtual bool __fastcall teGetNeedsUpdate();
 	virtual void __fastcall teSetTerminal(TAdCustomTerminal* aValue);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall teClear(void);
-	virtual void __fastcall teClearAll(void);
+	virtual void __fastcall teClear();
+	virtual void __fastcall teClearAll();
 	virtual void __fastcall teSendChar(char aCh, bool aCanEcho, TAdCharSource CharSource);
 	void __fastcall teHandleCursorMovement(System::TObject* Sender, int Row, int Col);
-	void __fastcall teClearCommandList(void);
+	void __fastcall teClearCommandList();
 	void __fastcall teProcessCommand(TAdEmuCommand Command, TAdEmuCommandParams* Params);
 	void __fastcall teProcessCommandList(TAdEmuCommandList* CommandList);
 	__property Adtrmbuf::TAdTerminalBuffer* TerminalBuffer = {read=FTerminalBuffer, write=FTerminalBuffer};
 	
 public:
 	__fastcall virtual TAdTerminalEmulator(System::Classes::TComponent* aOwner);
-	__fastcall virtual ~TAdTerminalEmulator(void);
+	__fastcall virtual ~TAdTerminalEmulator();
 	virtual void __fastcall BlinkPaint(bool aVisible);
 	void __fastcall ExecuteTerminalCommands(TAdEmuCommandList* CommandList);
-	virtual bool __fastcall HasBlinkingText(void);
+	virtual bool __fastcall HasBlinkingText();
 	virtual void __fastcall KeyDown(System::Word &Key, System::Classes::TShiftState Shift);
 	virtual void __fastcall KeyPress(System::WideChar &Key);
-	virtual void __fastcall LazyPaint(void);
-	virtual void __fastcall Paint(void);
+	virtual void __fastcall LazyPaint();
+	virtual void __fastcall Paint();
 	virtual void __fastcall ProcessBlock(void * aData, int aDataLen, TAdCharSource CharSource);
 	virtual void __fastcall GetCursorPos(int &aRow, int &aCol);
 	__property System::UnicodeString Answerback = {read=FAnswerback, write=FAnswerback};
@@ -525,7 +525,7 @@ __published:
 	__property OnMouseUp;
 public:
 	/* TAdCustomTerminal.Create */ inline __fastcall virtual TAdTerminal(System::Classes::TComponent* aOwner) : TAdCustomTerminal(aOwner) { }
-	/* TAdCustomTerminal.Destroy */ inline __fastcall virtual ~TAdTerminal(void) { }
+	/* TAdCustomTerminal.Destroy */ inline __fastcall virtual ~TAdTerminal() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TAdTerminal(HWND ParentWindow) : TAdCustomTerminal(ParentWindow) { }
@@ -545,23 +545,23 @@ private:
 	bool FRefresh;
 	
 protected:
-	virtual bool __fastcall teGetNeedsUpdate(void);
-	virtual void __fastcall teClear(void);
-	virtual void __fastcall teClearAll(void);
+	virtual bool __fastcall teGetNeedsUpdate();
+	virtual void __fastcall teClear();
+	virtual void __fastcall teClearAll();
 	virtual void __fastcall teSetTerminal(TAdCustomTerminal* aValue);
 	TAdEmuCommand __fastcall ttyCharToCommand(char aCh);
 	void __fastcall ttyDrawChars(int aRow, int aStartCol, int aEndCol, bool aVisible);
 	void __fastcall ttyExecutePaintScript(int aRow, void * aScript);
-	void __fastcall ttyFreeAllPaintNodes(void);
+	void __fastcall ttyFreeAllPaintNodes();
 	void __fastcall ttyFreePaintNode(void * aNode);
-	void * __fastcall ttyNewPaintNode(void);
+	void * __fastcall ttyNewPaintNode();
 	
 public:
 	__fastcall virtual TAdTTYEmulator(System::Classes::TComponent* aOwner);
-	__fastcall virtual ~TAdTTYEmulator(void);
+	__fastcall virtual ~TAdTTYEmulator();
 	virtual void __fastcall KeyPress(System::WideChar &Key);
-	virtual void __fastcall LazyPaint(void);
-	virtual void __fastcall Paint(void);
+	virtual void __fastcall LazyPaint();
+	virtual void __fastcall Paint();
 	virtual void __fastcall ProcessBlock(void * aData, int aDataLen, TAdCharSource CharSource);
 	
 __published:
@@ -603,40 +603,40 @@ private:
 	int FG1CharSet;
 	
 protected:
-	virtual bool __fastcall teGetNeedsUpdate(void);
+	virtual bool __fastcall teGetNeedsUpdate();
 	void __fastcall vttSetCol132Mode(bool aValue);
 	void __fastcall vttSetRelOriginMode(bool aValue);
 	void __fastcall vttSetRevScreenMode(bool aValue);
-	virtual void __fastcall teClear(void);
-	virtual void __fastcall teClearAll(void);
+	virtual void __fastcall teClear();
+	virtual void __fastcall teClearAll();
 	virtual void __fastcall teSetTerminal(TAdCustomTerminal* aValue);
 	void __fastcall vttDrawChars(int aRow, int aStartVal, int aEndVal, bool aVisible, bool aCharValues);
-	void __fastcall vttProcessCommand(void);
+	void __fastcall vttProcessCommand();
 	System::UnicodeString __fastcall vttGenerateDECREPTPARM(int aArg);
 	void __fastcall vttInvalidateRow(int aRow);
 	void __fastcall vttProcess8bitChar(char aCh);
 	void __fastcall vttScrollRowsHandler(System::TObject* aSender, int aCount, int aTop, int aBottom);
-	void __fastcall vttToggleNumLock(void);
-	void __fastcall vttCalcBlinkScript(void);
-	void __fastcall vttClearBlinkScript(void);
+	void __fastcall vttToggleNumLock();
+	void __fastcall vttCalcBlinkScript();
+	void __fastcall vttClearBlinkScript();
 	void __fastcall vttDrawBlinkOffCycle(int aRow, int aStartCh, int aEndCh);
-	void __fastcall vttFreeAllBlinkNodes(void);
+	void __fastcall vttFreeAllBlinkNodes();
 	void __fastcall vttFreeBlinkNode(void * aNode);
-	void * __fastcall vttNewBlinkNode(void);
+	void * __fastcall vttNewBlinkNode();
 	void __fastcall vttExecutePaintScript(int aRow, void * aScript);
-	void __fastcall vttFreeAllPaintNodes(void);
+	void __fastcall vttFreeAllPaintNodes();
 	void __fastcall vttFreePaintNode(void * aNode);
-	void * __fastcall vttNewPaintNode(void);
+	void * __fastcall vttNewPaintNode();
 	
 public:
 	__fastcall virtual TAdVT100Emulator(System::Classes::TComponent* aOwner);
-	__fastcall virtual ~TAdVT100Emulator(void);
+	__fastcall virtual ~TAdVT100Emulator();
 	virtual void __fastcall BlinkPaint(bool aVisible);
-	virtual bool __fastcall HasBlinkingText(void);
+	virtual bool __fastcall HasBlinkingText();
 	virtual void __fastcall KeyDown(System::Word &Key, System::Classes::TShiftState Shift);
 	virtual void __fastcall KeyPress(System::WideChar &Key);
-	virtual void __fastcall LazyPaint(void);
-	virtual void __fastcall Paint(void);
+	virtual void __fastcall LazyPaint();
+	virtual void __fastcall Paint();
 	virtual void __fastcall ProcessBlock(void * aData, int aDataLen, TAdCharSource CharSource);
 	__property bool ANSIMode = {read=FANSIMode, write=FANSIMode, nodefault};
 	__property bool AppKeyMode = {read=FAppKeyMode, write=FAppKeyMode, nodefault};

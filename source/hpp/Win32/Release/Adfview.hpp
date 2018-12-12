@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFView.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFView.pas' rev: 33.00 (Windows)
 
 #ifndef AdfviewHPP
 #define AdfviewHPP
@@ -71,7 +71,7 @@ protected:
 	System::Classes::TNotifyEvent FPageChange;
 	TViewerErrorEvent FViewerError;
 	bool HasBeenCreated;
-	virtual void __fastcall CreateWnd(void);
+	virtual void __fastcall CreateWnd();
 	virtual void __fastcall CreateParams(Vcl::Controls::TCreateParams &Params);
 	virtual void __fastcall SetName(const System::Classes::TComponentName NewName);
 	void __fastcall SetBorderStyle(const Vcl::Forms::TBorderStyle NewStyle);
@@ -95,12 +95,12 @@ protected:
 	void __fastcall SetBusyCursor(const System::Uitypes::TCursor NewBusyCursor);
 	void __fastcall SetActivePage(const unsigned NewPage);
 	Vcl::Graphics::TBitmap* __fastcall GetPageBitmaps(const int PageNum);
-	unsigned __fastcall GetNumPages(void);
-	unsigned __fastcall GetActivePage(void);
-	unsigned __fastcall GetPageWidth(void);
-	unsigned __fastcall GetPageHeight(void);
-	System::Word __fastcall GetPageFlags(void);
-	virtual void __fastcall FileDropped(void);
+	unsigned __fastcall GetNumPages();
+	unsigned __fastcall GetActivePage();
+	unsigned __fastcall GetPageWidth();
+	unsigned __fastcall GetPageHeight();
+	System::Word __fastcall GetPageFlags();
+	virtual void __fastcall FileDropped();
 	MESSAGE void __fastcall PageChange(Winapi::Messages::TMessage &Msg);
 	MESSAGE void __fastcall ViewerError(Winapi::Messages::TMessage &Msg);
 	void __fastcall FillScaleSettings(Oomisc::TScaleSettings &Settings);
@@ -109,15 +109,15 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomFaxViewer(System::Classes::TComponent* AOwner);
-	void __fastcall BeginUpdate(void);
-	void __fastcall EndUpdate(void);
-	void __fastcall FirstPage(void);
-	void __fastcall LastPage(void);
-	void __fastcall NextPage(void);
-	void __fastcall PrevPage(void);
+	void __fastcall BeginUpdate();
+	void __fastcall EndUpdate();
+	void __fastcall FirstPage();
+	void __fastcall LastPage();
+	void __fastcall NextPage();
+	void __fastcall PrevPage();
 	void __fastcall SelectRegion(const System::Types::TRect &R);
-	void __fastcall SelectImage(void);
-	void __fastcall CopyToClipBoard(void);
+	void __fastcall SelectImage();
+	void __fastcall CopyToClipBoard();
 	__property Vcl::Forms::TBorderStyle BorderStyle = {read=FBorderStyle, write=SetBorderStyle, default=1};
 	__property System::Uitypes::TColor FGColor = {read=FFGColor, write=SetFGColor, default=0};
 	__property System::Uitypes::TColor BGColor = {read=FBGColor, write=SetBGColor, default=16777215};
@@ -148,7 +148,7 @@ public:
 	__property TViewerErrorEvent OnViewerError = {read=FViewerError, write=FViewerError};
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdCustomFaxViewer(HWND ParentWindow) : Oomisc::TApdBaseWinControl(ParentWindow) { }
-	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdCustomFaxViewer(void) { }
+	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdCustomFaxViewer() { }
 	
 };
 
@@ -205,7 +205,7 @@ public:
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdFaxViewer(HWND ParentWindow) : TApdCustomFaxViewer(ParentWindow) { }
-	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdFaxViewer(void) { }
+	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdFaxViewer() { }
 	
 };
 

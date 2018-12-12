@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LnsQueue.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'LnsQueue.pas' rev: 33.00 (Windows)
 
 #ifndef LnsqueueHPP
 #define LnsqueueHPP
@@ -45,8 +45,8 @@ public:
 	__property bool InUse = {read=FInUse, write=FInUse, nodefault};
 	__property int Size = {read=FDataSize, nodefault};
 public:
-	/* TObject.Create */ inline __fastcall TIOBuffer(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TIOBuffer(void) { }
+	/* TObject.Create */ inline __fastcall TIOBuffer() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TIOBuffer() { }
 	
 };
 
@@ -64,7 +64,7 @@ private:
 	
 public:
 	__fastcall TDataBuffer(int size);
-	__fastcall virtual ~TDataBuffer(void);
+	__fastcall virtual ~TDataBuffer();
 	__property char * Data = {read=FData, write=FData};
 	__property int BytesUsed = {read=FDataUsed, write=FDataUsed, nodefault};
 	__property int BytesRead = {read=FDataRead, write=FDataRead, nodefault};
@@ -83,8 +83,8 @@ private:
 public:
 	__property unsigned Status = {read=FStatus, write=FStatus, nodefault};
 public:
-	/* TObject.Create */ inline __fastcall TStatusBuffer(void) : TIOBuffer() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TStatusBuffer(void) { }
+	/* TObject.Create */ inline __fastcall TStatusBuffer() : TIOBuffer() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TStatusBuffer() { }
 	
 };
 
@@ -101,11 +101,11 @@ private:
 	unsigned FTime;
 	unsigned FData;
 	char *FBuffer;
-	unsigned __fastcall GetMoreData(void);
+	unsigned __fastcall GetMoreData();
 	
 public:
 	__fastcall TLogBuffer(Oomisc::TDispatchType typ, Oomisc::TDispatchSubType styp, unsigned tim, unsigned data, char * bfr, int bfrLen);
-	__fastcall virtual ~TLogBuffer(void);
+	__fastcall virtual ~TLogBuffer();
 	__property Oomisc::TDispatchType drType = {read=FType, nodefault};
 	__property Oomisc::TDispatchSubType drSubType = {read=FSubType, nodefault};
 	__property unsigned drTime = {read=FTime, nodefault};
@@ -127,11 +127,11 @@ private:
 	int FBytesQueued;
 	
 public:
-	__fastcall TIOQueue(void);
-	__fastcall virtual ~TIOQueue(void);
-	virtual void __fastcall Clear(void);
-	TIOBuffer* __fastcall Peek(void);
-	TIOBuffer* __fastcall Pop(void);
+	__fastcall TIOQueue();
+	__fastcall virtual ~TIOQueue();
+	virtual void __fastcall Clear();
+	TIOBuffer* __fastcall Peek();
+	TIOBuffer* __fastcall Pop();
 	void __fastcall Push(TIOBuffer* item);
 	System::Types::TWaitResult __fastcall WaitForBuffer(int tmo);
 	__property int BytesQueued = {read=FBytesQueued, nodefault};

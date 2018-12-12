@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdRas.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdRas.pas' rev: 33.00 (Windows)
 
 #ifndef AdrasHPP
 #define AdrasHPP
@@ -82,20 +82,20 @@ protected:
 	TApdRasStatusEvent FOnDialStatus;
 	TApdRasErrorEvent FOnDialError;
 	System::Classes::TNotifyEvent FOnDisconnected;
-	Adrasutl::PRasDialExtensions __fastcall AssembleDialExtensions(void);
-	Adrasutl::PRasDialParams __fastcall AssembleDialParams(void);
+	Adrasutl::PRasDialExtensions __fastcall AssembleDialExtensions();
+	Adrasutl::PRasDialParams __fastcall AssembleDialParams();
 	void __fastcall DialEventWindowProc(Winapi::Messages::TMessage &Msg);
 	void __fastcall DoOnDialError(int Error);
 	void __fastcall DoOnDialStatus(int Status);
-	void __fastcall DoOnConnected(void);
-	void __fastcall DoOnDisconnected(void);
+	void __fastcall DoOnConnected();
+	void __fastcall DoOnDisconnected();
 	void __fastcall DoDisconnectTimer(System::TObject* Sender);
-	NativeUInt __fastcall GetConnection(void);
-	int __fastcall GetConnectState(void);
-	System::UnicodeString __fastcall GetDeviceName(void);
-	System::UnicodeString __fastcall GetDeviceType(void);
+	NativeUInt __fastcall GetConnection();
+	int __fastcall GetConnectState();
+	System::UnicodeString __fastcall GetDeviceName();
+	System::UnicodeString __fastcall GetDeviceType();
 	int __fastcall GetFullConnectStatus(Adrasutl::PRasConnStatus PRCS);
-	bool __fastcall GetIsRasAvailable(void);
+	bool __fastcall GetIsRasAvailable();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall SetEntryName(System::UnicodeString Value);
 	__property System::UnicodeString CallBackNumber = {read=FCallBackNumber, write=FCallBackNumber};
@@ -124,25 +124,25 @@ public:
 	__property unsigned PlatformID = {read=FPlatformID, nodefault};
 	__property bool IsRasAvailable = {read=GetIsRasAvailable, nodefault};
 	__fastcall virtual TApdCustomRasDialer(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomRasDialer(void);
+	__fastcall virtual ~TApdCustomRasDialer();
 	int __fastcall AddPhonebookEntry(System::UnicodeString PBEntryName, const Oomisc::TRasEntry &RasEntry, const Oomisc::TTapiConfigRec &TapiConfigRec);
-	int __fastcall CreatePhonebookEntry(void);
-	int __fastcall DeletePhonebookEntry(void);
-	int __fastcall Dial(void);
-	int __fastcall DialDlg(void);
-	int __fastcall EditPhonebookEntry(void);
-	int __fastcall ClearConnectionStatistics(void);
+	int __fastcall CreatePhonebookEntry();
+	int __fastcall DeletePhonebookEntry();
+	int __fastcall Dial();
+	int __fastcall DialDlg();
+	int __fastcall EditPhonebookEntry();
+	int __fastcall ClearConnectionStatistics();
 	int __fastcall GetConnectionStatistics(Oomisc::TRasStatistics &Statistics);
 	System::UnicodeString __fastcall GetErrorText(int Error);
 	int __fastcall GetPhonebookEntry(System::UnicodeString PBEntryName, Oomisc::TRasEntry &RasEntry, Oomisc::TTapiConfigRec &TapiConfigRec);
 	System::UnicodeString __fastcall GetStatusText(int Status);
-	void __fastcall Hangup(void);
+	void __fastcall Hangup();
 	int __fastcall ListConnections(System::Classes::TStrings* List);
 	int __fastcall ListEntries(System::Classes::TStrings* List);
-	int __fastcall MonitorDlg(void);
-	int __fastcall PhonebookDlg(void);
-	int __fastcall GetDialParameters(void);
-	int __fastcall SetDialParameters(void);
+	int __fastcall MonitorDlg();
+	int __fastcall PhonebookDlg();
+	int __fastcall GetDialParameters();
+	int __fastcall SetDialParameters();
 	int __fastcall ValidateEntryName(System::UnicodeString EntryName);
 };
 
@@ -163,9 +163,9 @@ protected:
 public:
 	__property Vcl::Forms::TForm* Display = {read=FDisplay, write=FDisplay};
 	__fastcall virtual TApdAbstractRasStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdAbstractRasStatus(void);
+	__fastcall virtual ~TApdAbstractRasStatus();
 	DYNAMIC void __fastcall CreateDisplay(const System::UnicodeString EntryName) = 0 ;
-	DYNAMIC void __fastcall DestroyDisplay(void) = 0 ;
+	DYNAMIC void __fastcall DestroyDisplay() = 0 ;
 	virtual void __fastcall UpdateDisplay(const System::UnicodeString StatusMsg) = 0 ;
 	
 __published:
@@ -199,7 +199,7 @@ __published:
 	__property UserName = {default=0};
 public:
 	/* TApdCustomRasDialer.Create */ inline __fastcall virtual TApdRasDialer(System::Classes::TComponent* AOwner) : TApdCustomRasDialer(AOwner) { }
-	/* TApdCustomRasDialer.Destroy */ inline __fastcall virtual ~TApdRasDialer(void) { }
+	/* TApdCustomRasDialer.Destroy */ inline __fastcall virtual ~TApdRasDialer() { }
 	
 };
 

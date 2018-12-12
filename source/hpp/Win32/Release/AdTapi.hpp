@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdTapi.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdTapi.pas' rev: 33.00 (Windows)
 
 #ifndef AdtapiHPP
 #define AdtapiHPP
@@ -179,40 +179,40 @@ protected:
 	int __fastcall WaitForCallState(int DesiredCallState);
 	int __fastcall WaitForReply(int ID);
 	void __fastcall SetOpen(bool NewOpen);
-	void __fastcall AssureTapiReady(void);
-	int __fastcall CidFromTapiDevice(void);
-	void __fastcall CheckVoiceCapable(void);
+	void __fastcall AssureTapiReady();
+	int __fastcall CidFromTapiDevice();
+	void __fastcall CheckVoiceCapable();
 	void __fastcall CheckWaveException(int ErrorCode, int Mode);
-	void __fastcall CheckWaveInSilence(void);
-	bool __fastcall CloseTapiPort(void);
-	void __fastcall CloseWaveFile(void);
-	void __fastcall CreateDialTimer(void);
+	void __fastcall CheckWaveInSilence();
+	bool __fastcall CloseTapiPort();
+	void __fastcall CloseWaveFile();
+	void __fastcall CreateDialTimer();
 	int __fastcall DeviceIDFromName(const System::UnicodeString Name);
 	void __fastcall DialPrim(bool PassThru);
-	void __fastcall EnumLineDevices(void);
-	void __fastcall FreeWaveInBuffers(void);
-	void __fastcall FreeWaveOutBuffer(void);
-	int __fastcall GetSelectedLine(void);
+	void __fastcall EnumLineDevices();
+	void __fastcall FreeWaveInBuffers();
+	void __fastcall FreeWaveOutBuffer();
+	int __fastcall GetSelectedLine();
 	unsigned __fastcall GetWaveDeviceId(const bool Play);
-	void __fastcall LoadWaveOutBuffer(void);
+	void __fastcall LoadWaveOutBuffer();
 	void __fastcall MonitorDTMF(int &CallHandle, const int DTMFMode);
-	void __fastcall OpenTapiPort(void);
-	void __fastcall OpenWaveFile(void);
-	void __fastcall PlayWaveOutBuffer(void);
-	void __fastcall PrepareWaveInHeader(void);
-	bool __fastcall StartTapi(void);
-	bool __fastcall StopTapi(void);
+	void __fastcall OpenTapiPort();
+	void __fastcall OpenWaveFile();
+	void __fastcall PlayWaveOutBuffer();
+	void __fastcall PrepareWaveInHeader();
+	bool __fastcall StartTapi();
+	bool __fastcall StopTapi();
 	void __fastcall TapiDialTimer(System::TObject* Sender);
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
-	void __fastcall WriteWaveBuffer(void);
-	unsigned __fastcall GetBPSRate(void);
-	System::UnicodeString __fastcall GetCalledID(void);
-	System::AnsiString __fastcall GetCalledIDName(void);
-	System::AnsiString __fastcall GetCallerID(void);
-	System::AnsiString __fastcall GetCallerIDName(void);
-	int __fastcall GetComNumber(void);
-	HWND __fastcall GetParentHWnd(void);
-	TTapiState __fastcall GetTapiState(void);
+	void __fastcall WriteWaveBuffer();
+	unsigned __fastcall GetBPSRate();
+	System::UnicodeString __fastcall GetCalledID();
+	System::AnsiString __fastcall GetCalledIDName();
+	System::AnsiString __fastcall GetCallerID();
+	System::AnsiString __fastcall GetCallerIDName();
+	int __fastcall GetComNumber();
+	HWND __fastcall GetParentHWnd();
+	TTapiState __fastcall GetTapiState();
 	void __fastcall SetStatusDisplay(TApdAbstractTapiStatus* const NewDisplay);
 	void __fastcall SetTapiLog(TApdTapiLog* const NewLog);
 	void __fastcall SetTapiDevices(System::Classes::TStrings* const Values);
@@ -223,42 +223,42 @@ protected:
 	__property bool Open = {read=FOpen, write=SetOpen, nodefault};
 	void __fastcall TapiStatus(bool First, bool Last, unsigned Device, unsigned Message, unsigned Param1, unsigned Param2, unsigned Param3);
 	void __fastcall TapiLogging(TTapiLogCode Log);
-	void __fastcall TapiPortOpen(void);
-	void __fastcall TapiPortClose(void);
-	void __fastcall TapiConnect(void);
-	void __fastcall TapiFail(void);
+	void __fastcall TapiPortOpen();
+	void __fastcall TapiPortClose();
+	void __fastcall TapiConnect();
+	void __fastcall TapiFail();
 	void __fastcall TapiDTMF(System::WideChar Digit, int ErrorCode);
 	void __fastcall TapiCallerID(System::UnicodeString ID, System::UnicodeString IDName);
 	void __fastcall TapiWave(TWaveMessage Msg);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall Loaded(void);
+	virtual void __fastcall Loaded();
 	
 public:
 	__fastcall virtual TApdCustomTapiDevice(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomTapiDevice(void);
+	__fastcall virtual ~TApdCustomTapiDevice();
 	virtual void __fastcall Assign(System::Classes::TPersistent* Source);
 	void __fastcall Dial(System::UnicodeString ANumber);
-	void __fastcall AutoAnswer(void);
-	void __fastcall ConfigAndOpen(void);
-	bool __fastcall CancelCall(void);
+	void __fastcall AutoAnswer();
+	void __fastcall ConfigAndOpen();
+	bool __fastcall CancelCall();
 	void __fastcall CopyCallInfo(Adtutil::PCallInfo &CallInfo);
-	Oomisc::TTapiConfigRec __fastcall GetDevConfig(void);
+	Oomisc::TTapiConfigRec __fastcall GetDevConfig();
 	int __fastcall MontorTones(const Adtutil::TLineMonitorTones *Tones, const int Tones_High);
 	void __fastcall SetDevConfig(const Oomisc::TTapiConfigRec &Config);
 	void __fastcall PlayWaveFile(System::UnicodeString FileName);
-	void __fastcall StopWaveFile(void);
-	void __fastcall StartWaveRecord(void);
-	void __fastcall StopWaveRecord(void);
+	void __fastcall StopWaveFile();
+	void __fastcall StartWaveRecord();
+	void __fastcall StopWaveRecord();
 	void __fastcall SaveWaveFile(System::UnicodeString FileName, bool Overwrite);
 	void __fastcall SetRecordingParams(System::Byte NumChannels, int NumSamplesPerSecond, System::Byte NumBitsPerSample);
-	void __fastcall ShowConfigDialog(void);
+	void __fastcall ShowConfigDialog();
 	Oomisc::TTapiConfigRec __fastcall ShowConfigDialogEdit(const Oomisc::TTapiConfigRec &Init);
-	System::Uitypes::TModalResult __fastcall SelectDevice(void);
+	System::Uitypes::TModalResult __fastcall SelectDevice();
 	void __fastcall SendTone(System::UnicodeString Digits, int Duration = 0x0);
 	void __fastcall Transfer(System::UnicodeString aNumber);
-	void __fastcall HoldCall(void);
-	void __fastcall UnHoldCall(void);
-	void __fastcall AutomatedVoicetoComms(void);
+	void __fastcall HoldCall();
+	void __fastcall UnHoldCall();
+	void __fastcall AutomatedVoicetoComms();
 	System::UnicodeString __fastcall TapiStatusMsg(const unsigned Message, const unsigned State, const unsigned Reason);
 	System::UnicodeString __fastcall FailureCodeMsg(const int FailureCode);
 	System::AnsiString __fastcall TranslateAddress(System::AnsiString CanonicalAddr);
@@ -326,7 +326,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdTapiLog(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdTapiLog(void);
+	__fastcall virtual ~TApdTapiLog();
 	virtual void __fastcall UpdateLog(const TTapiLogCode Log);
 	
 __published:
@@ -352,15 +352,15 @@ protected:
 	void __fastcall SetCtl3D(const bool NewCtl3D);
 	void __fastcall SetVisible(const bool NewVisible);
 	void __fastcall SetCaption(const Vcl::Controls::TCaption NewCaption);
-	void __fastcall GetProperties(void);
-	void __fastcall Show(void);
+	void __fastcall GetProperties();
+	void __fastcall Show();
 	
 public:
 	__fastcall virtual TApdAbstractTapiStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdAbstractTapiStatus(void);
+	__fastcall virtual ~TApdAbstractTapiStatus();
 	virtual void __fastcall UpdateDisplay(bool First, bool Last, unsigned Device, unsigned Message, unsigned Param1, unsigned Param2, unsigned Param3) = 0 ;
-	DYNAMIC void __fastcall CreateDisplay(void) = 0 ;
-	DYNAMIC void __fastcall DestroyDisplay(void) = 0 ;
+	DYNAMIC void __fastcall CreateDisplay() = 0 ;
+	DYNAMIC void __fastcall DestroyDisplay() = 0 ;
 	__property bool Answering = {read=FAnswering, write=FAnswering, nodefault};
 	__property Vcl::Forms::TForm* Display = {read=FDisplay, write=FDisplay};
 	
@@ -401,7 +401,7 @@ __published:
 	__property OnTapiWaveSilence;
 public:
 	/* TApdCustomTapiDevice.Create */ inline __fastcall virtual TApdTapiDevice(System::Classes::TComponent* AOwner) : TApdCustomTapiDevice(AOwner) { }
-	/* TApdCustomTapiDevice.Destroy */ inline __fastcall virtual ~TApdTapiDevice(void) { }
+	/* TApdCustomTapiDevice.Destroy */ inline __fastcall virtual ~TApdTapiDevice() { }
 	
 };
 

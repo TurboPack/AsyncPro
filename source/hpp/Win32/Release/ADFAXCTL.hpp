@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFaxCtl.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFaxCtl.pas' rev: 33.00 (Windows)
 
 #ifndef AdfaxctlHPP
 #define AdfaxctlHPP
@@ -43,11 +43,12 @@ public:
 	NativeUInt Semaphore;
 	System::StaticArray<NativeUInt, 2> Events;
 	bool ThreadCompleted;
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 public:
-	/* TThread.Create */ inline __fastcall TMonitorThread(void)/* overload */ : System::Classes::TThread() { }
+	/* TThread.Create */ inline __fastcall TMonitorThread()/* overload */ : System::Classes::TThread() { }
 	/* TThread.Create */ inline __fastcall TMonitorThread(bool CreateSuspended)/* overload */ : System::Classes::TThread(CreateSuspended) { }
-	/* TThread.Destroy */ inline __fastcall virtual ~TMonitorThread(void) { }
+	/* TThread.Create */ inline __fastcall TMonitorThread(bool CreateSuspended, NativeUInt ReservedStackSize)/* overload */ : System::Classes::TThread(CreateSuspended, ReservedStackSize) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TMonitorThread() { }
 	
 };
 
@@ -68,12 +69,12 @@ private:
 	
 protected:
 	void __fastcall WndProc(Winapi::Messages::TMessage &Msg);
-	virtual void __fastcall NotifyStartDoc(void);
-	virtual void __fastcall NotifyEndDoc(void);
+	virtual void __fastcall NotifyStartDoc();
+	virtual void __fastcall NotifyEndDoc();
 	
 public:
 	__fastcall virtual TApdFaxDriverInterface(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdFaxDriverInterface(void);
+	__fastcall virtual ~TApdFaxDriverInterface();
 	__property System::UnicodeString DocName = {read=fDocName};
 	
 __published:

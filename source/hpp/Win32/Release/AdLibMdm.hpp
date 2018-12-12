@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdLibMdm.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdLibMdm.pas' rev: 33.00 (Windows)
 
 #ifndef AdlibmdmHPP
 #define AdlibmdmHPP
@@ -391,8 +391,8 @@ class PASCALIMPLEMENTATION TLmModemClass : public System::TObject
 public:
 	TLmModem LmModem;
 public:
-	/* TObject.Create */ inline __fastcall TLmModemClass(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TLmModemClass(void) { }
+	/* TObject.Create */ inline __fastcall TLmModemClass() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TLmModemClass() { }
 	
 };
 
@@ -409,8 +409,8 @@ public:
 	System::UnicodeString Model;
 	System::UnicodeString ModemFile;
 public:
-	/* TObject.Create */ inline __fastcall TApdLmModemNameClass(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdLmModemNameClass(void) { }
+	/* TObject.Create */ inline __fastcall TApdLmModemNameClass() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdLmModemNameClass() { }
 	
 };
 
@@ -434,7 +434,7 @@ __published:
 	__property System::UnicodeString ModemFile = {read=FModemFile, write=FModemFile};
 public:
 	/* TCollectionItem.Create */ inline __fastcall virtual TApdLmModemCollectionItem(System::Classes::TCollection* Collection) : System::Classes::TCollectionItem(Collection) { }
-	/* TCollectionItem.Destroy */ inline __fastcall virtual ~TApdLmModemCollectionItem(void) { }
+	/* TCollectionItem.Destroy */ inline __fastcall virtual ~TApdLmModemCollectionItem() { }
 	
 };
 
@@ -453,11 +453,11 @@ private:
 	HIDESBASE void __fastcall SetItem(int Index, TApdLmModemCollectionItem* const Value);
 	
 public:
-	HIDESBASE TApdLmModemCollectionItem* __fastcall Add(void);
+	HIDESBASE TApdLmModemCollectionItem* __fastcall Add();
 	__property TApdLmModemCollectionItem* Items[int Index] = {read=GetItem, write=SetItem/*, default*/};
 public:
 	/* TCollection.Create */ inline __fastcall TApdLmModemCollection(System::Classes::TCollectionItemClass ItemClass) : System::Classes::TCollection(ItemClass) { }
-	/* TCollection.Destroy */ inline __fastcall virtual ~TApdLmModemCollection(void) { }
+	/* TCollection.Destroy */ inline __fastcall virtual ~TApdLmModemCollection() { }
 	
 };
 
@@ -503,16 +503,16 @@ protected:
 	void __fastcall LoadModemElementEnd(System::TObject* oOwner, System::WideString sValue);
 	int __fastcall GetXMLInteger(System::UnicodeString Value, int Default);
 	bool __fastcall GetXMLBoolean(System::UnicodeString Value, bool Default);
-	void __fastcall LoadModemList(void);
-	void __fastcall FreeModemList(void);
-	PLmModem __fastcall CreateModem(void);
+	void __fastcall LoadModemList();
+	void __fastcall FreeModemList();
+	PLmModem __fastcall CreateModem();
 	void __fastcall FreeModemEntry(int Value);
-	void __fastcall FreeModem(void);
+	void __fastcall FreeModem();
 	void __fastcall LoadModem(System::UnicodeString FileName, bool Append);
 	
 public:
 	__fastcall virtual TApdLibModem(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdLibModem(void);
+	__fastcall virtual ~TApdLibModem();
 	bool __fastcall SelectModem(System::UnicodeString &ModemFile, System::UnicodeString &ModemManufacturer, System::UnicodeString &ModemName, TLmModem &LmModem);
 	bool __fastcall IsModemValid(System::UnicodeString ModemFile, System::UnicodeString ModemName);
 	int __fastcall CreateNewDetailFile(const System::UnicodeString ModemDetailFile);
@@ -522,7 +522,7 @@ public:
 	System::Classes::TStringList* __fastcall GetModems(const System::UnicodeString ModemDetailFile);
 	int __fastcall AddModemRecord(const TLmModemName &ModemRecord);
 	int __fastcall DeleteModemRecord(const TLmModemName &ModemRecord);
-	TApdLmModemCollection* __fastcall GetModemRecords(void);
+	TApdLmModemCollection* __fastcall GetModemRecords();
 	__property System::Classes::TList* Modem = {read=FModem, write=FModem};
 	
 __published:
@@ -569,7 +569,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TApdModemSelectionDialog(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TApdModemSelectionDialog(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdModemSelectionDialog(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TApdModemSelectionDialog() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdModemSelectionDialog(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStSapi.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStSapi.pas' rev: 33.00 (Windows)
 
 #ifndef AdstsapiHPP
 #define AdstsapiHPP
@@ -51,7 +51,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdSAPISpeakState(System::Classes::TComponent* AOwner);
-	virtual void __fastcall Activate(void);
+	virtual void __fastcall Activate();
 	
 __published:
 	__property Adsapien::TApdSapiEngine* SapiEngine = {read=FSapiEngine, write=SetSapiEngine};
@@ -72,7 +72,7 @@ __published:
 	__property OnStateFinish;
 	__property OnSelectNextState;
 public:
-	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSAPISpeakState(void) { }
+	/* TApdCustomActionState.Destroy */ inline __fastcall virtual ~TApdSAPISpeakState() { }
 	
 };
 

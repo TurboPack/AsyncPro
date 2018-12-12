@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwWin32.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwWin32.pas' rev: 33.00 (Windows)
 
 #ifndef Awwin32HPP
 #define Awwin32HPP
@@ -47,19 +47,19 @@ protected:
 	virtual int __fastcall ReadCom(char * Buf, int Size);
 	virtual int __fastcall WriteCom(char * Buf, int Size);
 	virtual bool __fastcall SetupCom(int InSize, int OutSize);
-	virtual void __fastcall StartDispatcher(void);
-	virtual void __fastcall StopDispatcher(void);
+	virtual void __fastcall StartDispatcher();
+	virtual void __fastcall StopDispatcher();
 	virtual bool __fastcall WaitComEvent(unsigned &EvtMask, Winapi::Windows::POverlapped lpOverlapped);
-	virtual unsigned __fastcall OutBufUsed(void);
+	virtual unsigned __fastcall OutBufUsed();
 	
 public:
-	virtual int __fastcall CloseCom(void);
+	virtual int __fastcall CloseCom();
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue);
-	virtual int __fastcall ProcessCommunications(void);
+	virtual int __fastcall ProcessCommunications();
 	virtual bool __fastcall CheckPort(System::WideChar * ComName);
 public:
 	/* TApdBaseDispatcher.Create */ inline __fastcall TApdWin32Dispatcher(System::TObject* Owner) : Awuser::TApdBaseDispatcher(Owner) { }
-	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdWin32Dispatcher(void) { }
+	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdWin32Dispatcher() { }
 	
 };
 
@@ -74,7 +74,7 @@ public:
 	__fastcall TApdTAPI32Dispatcher(System::TObject* Owner, int InCid);
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue);
 public:
-	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdTAPI32Dispatcher(void) { }
+	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdTAPI32Dispatcher() { }
 	
 };
 

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdSrMgr.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdSrMgr.pas' rev: 33.00 (Windows)
 
 #ifndef AdsrmgrHPP
 #define AdsrmgrHPP
@@ -46,7 +46,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall ETpsStringResourceError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall ETpsStringResourceError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall ETpsStringResourceError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~ETpsStringResourceError(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~ETpsStringResourceError() { }
 	
 };
 
@@ -90,16 +90,16 @@ private:
 	bool FReportError;
 	NativeUInt srHandle;
 	TResourceRec *srP;
-	void __fastcall srCloseResource(void);
+	void __fastcall srCloseResource();
 	PIndexRec __fastcall srFindIdent(int Ident);
-	void __fastcall srLock(void);
+	void __fastcall srLock();
 	void __fastcall srLoadResource(NativeUInt Instance, const System::UnicodeString ResourceName);
 	void __fastcall srOpenResource(NativeUInt Instance, const System::UnicodeString ResourceName);
-	void __fastcall srUnLock(void);
+	void __fastcall srUnLock();
 	
 public:
 	__fastcall virtual TAdStringResource(NativeUInt Instance, const System::UnicodeString ResourceName);
-	__fastcall virtual ~TAdStringResource(void);
+	__fastcall virtual ~TAdStringResource();
 	void __fastcall ChangeResource(NativeUInt Instance, const System::UnicodeString ResourceName);
 	char * __fastcall GetAsciiZ(int Ident, char * Buffer, int BufChars);
 	System::UnicodeString __fastcall GetString(int Ident);

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdPacket.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdPacket.pas' rev: 33.00 (Windows)
 
 #ifndef AdpacketHPP
 #define AdpacketHPP
@@ -51,8 +51,8 @@ private:
 	System::Classes::TList* ManagerList;
 	
 public:
-	__fastcall TApdDataPacketManagerList(void);
-	__fastcall virtual ~TApdDataPacketManagerList(void);
+	__fastcall TApdDataPacketManagerList();
+	__fastcall virtual ~TApdDataPacketManagerList();
 	void __fastcall Insert(TApdDataPacketManager* Value);
 	void __fastcall Remove(TApdDataPacketManager* Value);
 	TApdDataPacketManager* __fastcall GetPortManager(Adport::TApdCustomComPort* ComPort);
@@ -85,10 +85,10 @@ private:
 	
 protected:
 	void __fastcall WndProc(Winapi::Messages::TMessage &Msg);
-	void __fastcall DisposeBuffer(void);
+	void __fastcall DisposeBuffer();
 	void __fastcall NotifyData(int NewDataStart);
-	void __fastcall EnablePackets(void);
-	void __fastcall DisablePackets(void);
+	void __fastcall EnablePackets();
+	void __fastcall DisablePackets();
 	void __fastcall PacketTriggerHandler(unsigned Msg, unsigned wParam, int lParam);
 	void __fastcall PortOpenClose(System::TObject* CP, bool Opening);
 	void __fastcall PortOpenCloseEx(System::TObject* CP, Adport::TApdCallbackType CallbackType);
@@ -97,10 +97,10 @@ protected:
 	
 public:
 	__fastcall TApdDataPacketManager(Adport::TApdCustomComPort* ComPort);
-	__fastcall virtual ~TApdDataPacketManager(void);
-	void __fastcall Enable(void);
-	void __fastcall EnableIfPending(void);
-	void __fastcall Disable(void);
+	__fastcall virtual ~TApdDataPacketManager();
+	void __fastcall Enable();
+	void __fastcall EnableIfPending();
+	void __fastcall Disable();
 	void __fastcall Insert(TApdDataPacket* Value);
 	void __fastcall Remove(TApdDataPacket* Value);
 	void __fastcall RemoveData(int Start, int Size);
@@ -173,24 +173,24 @@ protected:
 	void __fastcall SetFlushOnTimeout(const bool v);
 	void __fastcall ProcessData(int StartPtr);
 	void __fastcall Packet(TPacketEndCond Reason);
-	void __fastcall TimedOut(void);
-	void __fastcall DoTimeout(void);
-	void __fastcall DoPacket(void);
+	void __fastcall TimedOut();
+	void __fastcall DoTimeout();
+	void __fastcall DoPacket();
 	void __fastcall NotifyRemove(int Data);
-	void __fastcall Resync(void);
-	void __fastcall CancelMatch(void);
-	virtual void __fastcall Loaded(void);
+	void __fastcall Resync();
+	void __fastcall CancelMatch();
+	virtual void __fastcall Loaded();
 	void __fastcall LogPacketEvent(Oomisc::TDispatchSubType Event, void * Data, int DataSize);
 	__property int BeginMatch = {read=fBeginMatch, nodefault};
 	__property TApdDataPacketManager* Manager = {read=fManager, write=fManager};
 	__property TPacketMode Mode = {read=fMode, write=SetMode, nodefault};
-	void __fastcall Enable(void);
-	void __fastcall Disable(void);
+	void __fastcall Enable();
+	void __fastcall Disable();
 	void __fastcall TriggerHandler(unsigned Msg, unsigned wParam, int lParam);
 	
 public:
 	__fastcall virtual TApdDataPacket(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdDataPacket(void);
+	__fastcall virtual ~TApdDataPacket();
 	void __fastcall GetCollectedString(System::AnsiString &Data);
 	void __fastcall GetCollectedData(void * &Data, int &Size);
 	__property TApdDataPacketManager* InternalManager = {read=fManager};

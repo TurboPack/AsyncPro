@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdWnPort.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdWnPort.pas' rev: 33.00 (Windows)
 
 #ifndef AdwnportHPP
 #define AdwnportHPP
@@ -59,7 +59,7 @@ protected:
 	void __fastcall SetUserCode(System::UnicodeString v);
 	
 public:
-	__fastcall TApdSocksServerInfo(void);
+	__fastcall TApdSocksServerInfo();
 	
 __published:
 	__property System::UnicodeString Address = {read=FAddress, write=SetAddress};
@@ -68,7 +68,7 @@ __published:
 	__property TApdSocksVersion SocksVersion = {read=FSocksVersion, write=SetSocksVersion, default=0};
 	__property System::UnicodeString UserCode = {read=FUserCode, write=SetUserCode};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdSocksServerInfo(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdSocksServerInfo() { }
 	
 };
 
@@ -101,38 +101,38 @@ protected:
 	bool FSocksComplete;
 	int FTimer;
 	bool FConnectFired;
-	virtual Awuser::TApdBaseDispatcher* __fastcall ActivateDeviceLayer(void);
-	virtual void __fastcall DeviceLayerChanged(void);
+	virtual Awuser::TApdBaseDispatcher* __fastcall ActivateDeviceLayer();
+	virtual void __fastcall DeviceLayerChanged();
 	virtual bool __fastcall DoAccept(int Addr);
-	virtual void __fastcall DoConnect(void);
-	virtual void __fastcall DoDisconnect(void);
+	virtual void __fastcall DoConnect();
+	virtual void __fastcall DoDisconnect();
 	virtual void __fastcall DoError(int ErrCode);
-	void __fastcall EnumHostAddresses(void);
-	virtual int __fastcall InitializePort(void);
-	DYNAMIC void __fastcall PortOpen(void);
-	DYNAMIC void __fastcall PortClose(void);
-	virtual void __fastcall ValidateComport(void);
+	void __fastcall EnumHostAddresses();
+	virtual int __fastcall InitializePort();
+	DYNAMIC void __fastcall PortOpen();
+	DYNAMIC void __fastcall PortClose();
+	virtual void __fastcall ValidateComport();
 	virtual void __fastcall SetUseMSRShadow(bool NewUse);
 	void __fastcall SetWsAddress(System::UnicodeString Value);
 	void __fastcall SetWsLocalAddresses(System::Classes::TStringList* Value);
-	System::Classes::TStringList* __fastcall GetWsLocalAddresses(void);
+	System::Classes::TStringList* __fastcall GetWsLocalAddresses();
 	void __fastcall SetWsLocalAddressIndex(int Value);
 	void __fastcall SetWsMode(Adsocket::TWsMode Value);
 	void __fastcall SetWsPort(System::UnicodeString Value);
 	void __fastcall SockWndProc(Winapi::Messages::TMessage &Message);
-	int __fastcall OpenSocksConnection(void);
-	int __fastcall OpenSocksSocket(void);
-	void __fastcall ContinueSocksNegotiation(void);
-	void __fastcall ConnectToSocks4(void);
-	void __fastcall ConnectToSocks4a(void);
-	void __fastcall ConnectToSocks5(void);
-	void __fastcall EnableSocks4Reply(void);
-	void __fastcall EnableSocks5Reply(void);
-	void __fastcall EnableSocks5UserNameReply(void);
-	void __fastcall EnableSocks5RequestReply(void);
+	int __fastcall OpenSocksConnection();
+	int __fastcall OpenSocksSocket();
+	void __fastcall ContinueSocksNegotiation();
+	void __fastcall ConnectToSocks4();
+	void __fastcall ConnectToSocks4a();
+	void __fastcall ConnectToSocks5();
+	void __fastcall EnableSocks4Reply();
+	void __fastcall EnableSocks5Reply();
+	void __fastcall EnableSocks5UserNameReply();
+	void __fastcall EnableSocks5RequestReply();
 	void __fastcall EnableSocks5RequestEndReply(int Len);
-	void __fastcall SendSocks5UserName(void);
-	void __fastcall SendSocks5Request(void);
+	void __fastcall SendSocks5UserName();
+	void __fastcall SendSocks5Request();
 	void __fastcall Socks4Packet(System::TObject* Sender, void * Data, int Size);
 	void __fastcall Socks5Packet(System::TObject* Sender, void * Data, int Size);
 	void __fastcall Socks5UserNamePacket(System::TObject* Sender, void * Data, int Size);
@@ -152,7 +152,7 @@ public:
 	__property System::Classes::TNotifyEvent OnWsDisconnect = {read=FOnWsDisconnect, write=FOnWsDisconnect};
 	__property TWsErrorEvent OnWsError = {read=FOnWsError, write=FOnWsError};
 	__fastcall virtual TApdCustomWinsockPort(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomWinsockPort(void);
+	__fastcall virtual ~TApdCustomWinsockPort();
 };
 
 #pragma pack(pop)
@@ -222,7 +222,7 @@ __published:
 	__property OnWaitChar;
 public:
 	/* TApdCustomWinsockPort.Create */ inline __fastcall virtual TApdWinsockPort(System::Classes::TComponent* AOwner) : TApdCustomWinsockPort(AOwner) { }
-	/* TApdCustomWinsockPort.Destroy */ inline __fastcall virtual ~TApdWinsockPort(void) { }
+	/* TApdCustomWinsockPort.Destroy */ inline __fastcall virtual ~TApdWinsockPort() { }
 	
 };
 

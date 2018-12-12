@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStDS.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStDS.pas' rev: 33.00 (Windows)
 
 #ifndef AdstdsHPP
 #define AdstdsHPP
@@ -74,19 +74,19 @@ private:
 	
 public:
 	__fastcall virtual TApdStateGenericSource(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdStateGenericSource(void);
+	__fastcall virtual ~TApdStateGenericSource();
 	void __fastcall ChangeState(int ConditionIndex);
 	virtual void __fastcall Output(System::UnicodeString AString);
 	virtual void __fastcall OutputBlock(void * ABlock, int ASize);
-	virtual void __fastcall Pause(void);
-	virtual void __fastcall Resume(void);
+	virtual void __fastcall Pause();
+	virtual void __fastcall Resume();
 	virtual void __fastcall StateActivate(Adstmach::TApdCustomState* State);
 	virtual void __fastcall StateChange(Adstmach::TApdCustomState* OldState, Adstmach::TApdCustomState* NewState);
 	virtual void __fastcall StateDeactivate(Adstmach::TApdCustomState* State);
 	virtual void __fastcall StateMachineActivate(Adstmach::TApdCustomState* State, Adstmach::TApdStateCondition* Condition, int Index);
 	virtual void __fastcall StateMachineDeactivate(Adstmach::TApdCustomState* State);
 	virtual void __fastcall StateMachineStart(Adstmach::TApdCustomStateMachine* AOwner);
-	virtual void __fastcall StateMachineStop(void);
+	virtual void __fastcall StateMachineStop();
 	
 __published:
 	__property TApdOnDSOutputBlock OnOutputBlock = {read=FOnOutputBlock, write=FOnOutputBlock};

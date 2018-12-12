@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFStat.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFStat.pas' rev: 33.00 (Windows)
 
 #ifndef AdfstatHPP
 #define AdfstatHPP
@@ -78,7 +78,7 @@ private:
 	bool BusyTiming;
 public:
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TStandardFaxDisplay(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TStandardFaxDisplay(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TStandardFaxDisplay() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TStandardFaxDisplay(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }
@@ -91,12 +91,12 @@ class PASCALIMPLEMENTATION TApdFaxStatus : public Adfax::TApdAbstractFaxStatus
 	typedef Adfax::TApdAbstractFaxStatus inherited;
 	
 __published:
-	DYNAMIC void __fastcall CreateDisplay(void);
-	DYNAMIC void __fastcall DestroyDisplay(void);
+	DYNAMIC void __fastcall CreateDisplay();
+	DYNAMIC void __fastcall DestroyDisplay();
 	virtual void __fastcall UpdateDisplay(const bool First, const bool Last);
 public:
 	/* TApdAbstractFaxStatus.Create */ inline __fastcall virtual TApdFaxStatus(System::Classes::TComponent* AOwner) : Adfax::TApdAbstractFaxStatus(AOwner) { }
-	/* TApdAbstractFaxStatus.Destroy */ inline __fastcall virtual ~TApdFaxStatus(void) { }
+	/* TApdAbstractFaxStatus.Destroy */ inline __fastcall virtual ~TApdFaxStatus() { }
 	
 };
 

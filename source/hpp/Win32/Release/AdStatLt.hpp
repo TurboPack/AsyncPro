@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStatLt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStatLt.pas' rev: 33.00 (Windows)
 
 #ifndef AdstatltHPP
 #define AdstatltHPP
@@ -51,14 +51,14 @@ protected:
 	void __fastcall SetLit(const bool IsLit);
 	void __fastcall SetLitColor(const System::Uitypes::TColor NewColor);
 	void __fastcall SetNotLitColor(const System::Uitypes::TColor NewColor);
-	HIDESBASE System::UnicodeString __fastcall GetVersion(void);
+	HIDESBASE System::UnicodeString __fastcall GetVersion();
 	HIDESBASE void __fastcall SetVersion(const System::UnicodeString Value);
-	virtual void __fastcall Paint(void);
-	virtual void __fastcall Loaded(void);
+	virtual void __fastcall Paint();
+	virtual void __fastcall Loaded();
 	
 public:
 	__fastcall virtual TApdCustomStatusLight(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomStatusLight(void);
+	__fastcall virtual ~TApdCustomStatusLight();
 	virtual void __fastcall SetBounds(int ALeft, int ATop, int AWidth, int AHeight);
 	__property System::UnicodeString Version = {read=GetVersion, write=SetVersion, stored=false};
 	__property Vcl::Graphics::TBitmap* Glyph = {read=FGlyph, write=SetGlyph};
@@ -80,7 +80,7 @@ __published:
 	__property NotLitColor = {default=32768};
 public:
 	/* TApdCustomStatusLight.Create */ inline __fastcall virtual TApdStatusLight(System::Classes::TComponent* AOwner) : TApdCustomStatusLight(AOwner) { }
-	/* TApdCustomStatusLight.Destroy */ inline __fastcall virtual ~TApdStatusLight(void) { }
+	/* TApdCustomStatusLight.Destroy */ inline __fastcall virtual ~TApdStatusLight() { }
 	
 };
 
@@ -101,7 +101,7 @@ protected:
 	TApdCustomStatusLight* FBREAKLight;
 	
 public:
-	__fastcall TLightSet(void);
+	__fastcall TLightSet();
 	void __fastcall InitLights(Adport::TApdCustomComPort* const ComPort, bool Monitoring);
 	
 __published:
@@ -114,7 +114,7 @@ __published:
 	__property TApdCustomStatusLight* ERRORLight = {read=FERRORLight, write=FERRORLight};
 	__property TApdCustomStatusLight* BREAKLight = {read=FBREAKLight, write=FBREAKLight};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TLightSet(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TLightSet() { }
 	
 };
 
@@ -147,23 +147,23 @@ protected:
 	int TxdOnTrig;
 	int TxdOffTrig;
 	int RingOffTrig;
-	bool __fastcall GetHaveCTSLight(void);
-	bool __fastcall GetHaveDSRLight(void);
-	bool __fastcall GetHaveDCDLight(void);
-	bool __fastcall GetHaveRINGLight(void);
-	bool __fastcall GetHaveTXDLight(void);
-	bool __fastcall GetHaveRXDLight(void);
-	bool __fastcall GetHaveERRORLight(void);
-	bool __fastcall GetHaveBREAKLight(void);
+	bool __fastcall GetHaveCTSLight();
+	bool __fastcall GetHaveDSRLight();
+	bool __fastcall GetHaveDCDLight();
+	bool __fastcall GetHaveRINGLight();
+	bool __fastcall GetHaveTXDLight();
+	bool __fastcall GetHaveRXDLight();
+	bool __fastcall GetHaveERRORLight();
+	bool __fastcall GetHaveBREAKLight();
 	void __fastcall SetComPort(Adport::TApdCustomComPort* const NewPort);
 	void __fastcall SetLights(TLightSet* const NewLights);
 	void __fastcall SetMonitoring(const bool NewMon);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall Loaded(void);
-	void __fastcall InitTriggers(void);
-	void __fastcall AddTriggers(void);
-	void __fastcall RemoveTriggers(void);
-	void __fastcall InitLights(void);
+	virtual void __fastcall Loaded();
+	void __fastcall InitTriggers();
+	void __fastcall AddTriggers();
+	void __fastcall RemoveTriggers();
+	void __fastcall InitLights();
 	void __fastcall CheckLight(const bool CurStat, TApdCustomStatusLight* const Light);
 	void __fastcall StatTriggerAvail(System::TObject* CP, System::Word Count);
 	void __fastcall StatTriggerStatus(System::TObject* CP, System::Word TriggerHandle);
@@ -180,7 +180,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomSLController(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomSLController(void);
+	__fastcall virtual ~TApdCustomSLController();
 	__property bool Monitoring = {read=FMonitoring, write=SetMonitoring, nodefault};
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=SetComPort};
 	__property int ErrorOffTimeout = {read=FErrorOffTimeout, write=FErrorOffTimeout, default=36};
@@ -206,7 +206,7 @@ __published:
 	__property Lights;
 public:
 	/* TApdCustomSLController.Create */ inline __fastcall virtual TApdSLController(System::Classes::TComponent* AOwner) : TApdCustomSLController(AOwner) { }
-	/* TApdCustomSLController.Destroy */ inline __fastcall virtual ~TApdSLController(void) { }
+	/* TApdCustomSLController.Destroy */ inline __fastcall virtual ~TApdSLController() { }
 	
 };
 

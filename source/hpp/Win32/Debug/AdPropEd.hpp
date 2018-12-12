@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'Adproped.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'Adproped.pas' rev: 33.00 (Windows)
 
 #ifndef AdpropedHPP
 #define AdpropedHPP
@@ -51,11 +51,11 @@ class PASCALIMPLEMENTATION TApdPacketStringProperty : public Designeditors::TStr
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual System::UnicodeString __fastcall GetValue(void);
+	virtual System::UnicodeString __fastcall GetValue();
 	virtual void __fastcall SetValue(const System::UnicodeString Value)/* overload */;
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdPacketStringProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdPacketStringProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdPacketStringProperty() { }
 	
 	/* Hoisted overloads: */
 	
@@ -74,12 +74,12 @@ class PASCALIMPLEMENTATION TApdPacketEditor : public Designeditors::TDefaultEdit
 public:
 	virtual void __fastcall ExecuteVerb(int Index);
 	virtual System::UnicodeString __fastcall GetVerb(int Index);
-	virtual int __fastcall GetVerbCount(void);
+	virtual int __fastcall GetVerbCount();
 public:
 	/* TComponentEditor.Create */ inline __fastcall virtual TApdPacketEditor(System::Classes::TComponent* AComponent, Designintf::_di_IDesigner ADesigner) : Designeditors::TDefaultEditor(AComponent, ADesigner) { }
 	
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdPacketEditor(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdPacketEditor() { }
 	
 };
 
@@ -93,12 +93,12 @@ class PASCALIMPLEMENTATION TApdVoipAudioVideoEditor : public Designeditors::TDef
 public:
 	virtual void __fastcall ExecuteVerb(int Index);
 	virtual System::UnicodeString __fastcall GetVerb(int Index);
-	virtual int __fastcall GetVerbCount(void);
+	virtual int __fastcall GetVerbCount();
 public:
 	/* TComponentEditor.Create */ inline __fastcall virtual TApdVoipAudioVideoEditor(System::Classes::TComponent* AComponent, Designintf::_di_IDesigner ADesigner) : Designeditors::TDefaultEditor(AComponent, ADesigner) { }
 	
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdVoipAudioVideoEditor(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdVoipAudioVideoEditor() { }
 	
 };
 
@@ -110,11 +110,11 @@ class PASCALIMPLEMENTATION TApdVersionProperty : public Designeditors::TStringPr
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
-	virtual void __fastcall Edit(void);
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
+	virtual void __fastcall Edit();
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdVersionProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdVersionProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdVersionProperty() { }
 	
 };
 
@@ -126,11 +126,11 @@ class PASCALIMPLEMENTATION TApdValidEnumProperty : public Designeditors::TEnumPr
 	typedef Designeditors::TEnumProperty inherited;
 	
 public:
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
 	virtual void __fastcall GetValues(System::Classes::TGetStrProc Proc);
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdValidEnumProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TEnumProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdValidEnumProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdValidEnumProperty() { }
 	
 };
 
@@ -144,12 +144,12 @@ class PASCALIMPLEMENTATION TApdStateEditor : public Designeditors::TDefaultEdito
 public:
 	virtual void __fastcall ExecuteVerb(int Index);
 	virtual System::UnicodeString __fastcall GetVerb(int Index);
-	virtual int __fastcall GetVerbCount(void);
+	virtual int __fastcall GetVerbCount();
 public:
 	/* TComponentEditor.Create */ inline __fastcall virtual TApdStateEditor(System::Classes::TComponent* AComponent, Designintf::_di_IDesigner ADesigner) : Designeditors::TDefaultEditor(AComponent, ADesigner) { }
 	
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdStateEditor(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdStateEditor() { }
 	
 };
 
@@ -161,11 +161,11 @@ class PASCALIMPLEMENTATION TApdGenericFileNameProperty : public Designeditors::T
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
-	virtual void __fastcall Edit(void);
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
+	virtual void __fastcall Edit();
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdGenericFileNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdGenericFileNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdGenericFileNameProperty() { }
 	
 };
 
@@ -178,7 +178,7 @@ class PASCALIMPLEMENTATION TApdAPFFileNameProperty : public TApdGenericFileNameP
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdAPFFileNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdAPFFileNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdAPFFileNameProperty() { }
 	
 };
 
@@ -191,7 +191,7 @@ class PASCALIMPLEMENTATION TApdConverterNameProperty : public TApdGenericFileNam
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdConverterNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdConverterNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdConverterNameProperty() { }
 	
 };
 
@@ -204,7 +204,7 @@ class PASCALIMPLEMENTATION TApdLogNameProperty : public TApdGenericFileNamePrope
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdLogNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdLogNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdLogNameProperty() { }
 	
 };
 
@@ -217,7 +217,7 @@ class PASCALIMPLEMENTATION TApdTraceNameProperty : public TApdGenericFileNamePro
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdTraceNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdTraceNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdTraceNameProperty() { }
 	
 };
 
@@ -230,7 +230,7 @@ class PASCALIMPLEMENTATION TApdHistoryNameProperty : public TApdGenericFileNameP
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdHistoryNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdHistoryNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdHistoryNameProperty() { }
 	
 };
 
@@ -243,7 +243,7 @@ class PASCALIMPLEMENTATION TApdCaptureNameProperty : public TApdGenericFileNameP
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdCaptureNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdCaptureNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdCaptureNameProperty() { }
 	
 };
 
@@ -256,7 +256,7 @@ class PASCALIMPLEMENTATION TApdAPJNameProperty : public TApdGenericFileNamePrope
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdAPJNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdAPJNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdAPJNameProperty() { }
 	
 };
 
@@ -269,7 +269,7 @@ class PASCALIMPLEMENTATION TApdFaxCoverNameProperty : public TApdGenericFileName
 	
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdFaxCoverNameProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : TApdGenericFileNameProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdFaxCoverNameProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdFaxCoverNameProperty() { }
 	
 };
 
@@ -281,11 +281,11 @@ class PASCALIMPLEMENTATION TApdDirectoryProperty : public Designeditors::TString
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
-	virtual void __fastcall Edit(void);
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
+	virtual void __fastcall Edit();
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdDirectoryProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdDirectoryProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdDirectoryProperty() { }
 	
 };
 
@@ -297,11 +297,11 @@ class PASCALIMPLEMENTATION TApdVoipAudioVideoProperty : public Designeditors::TS
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
-	virtual void __fastcall Edit(void);
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
+	virtual void __fastcall Edit();
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TApdVoipAudioVideoProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdVoipAudioVideoProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TApdVoipAudioVideoProperty() { }
 	
 };
 

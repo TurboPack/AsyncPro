@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXLbMdm.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXLbMdm.pas' rev: 33.00 (Windows)
 
 #ifndef AdxlbmdmHPP
 #define AdxlbmdmHPP
@@ -40,10 +40,10 @@ class PASCALIMPLEMENTATION TApdModemCapDetail : public Oomisc::TApdBaseComponent
 	
 private:
 	System::Classes::TFileStream* DetailStream;
-	bool __fastcall AtEOF(void);
+	bool __fastcall AtEOF();
 	int __fastcall ExportDetailXML(const Adlibmdm::TLmModem &Modem);
 	void __fastcall FixupModemcap(System::Classes::TStringList* &List);
-	System::AnsiString __fastcall ReadLine(void);
+	System::AnsiString __fastcall ReadLine();
 	void __fastcall WriteLine(const System::AnsiString Str)/* overload */;
 	void __fastcall WriteLine(const System::UnicodeString Str)/* overload */;
 	void __fastcall WriteXMLStr(const System::UnicodeString Str, const System::UnicodeString sVal);
@@ -54,7 +54,7 @@ private:
 	
 public:
 	__fastcall virtual TApdModemCapDetail(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdModemCapDetail(void);
+	__fastcall virtual ~TApdModemCapDetail();
 	int __fastcall CreateNewDetailFile(const System::UnicodeString ModemDetailFile);
 	int __fastcall AddModem(const System::UnicodeString ModemDetailFile, const Adlibmdm::TLmModem &Modem);
 	int __fastcall DeleteModem(const System::UnicodeString ModemDetailFile, const System::UnicodeString ModemName);

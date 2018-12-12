@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwFView.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwFView.pas' rev: 33.00 (Windows)
 
 #ifndef AwfviewHPP
 #define AwfviewHPP
@@ -108,37 +108,37 @@ public:
 	bool vUpdating;
 	bool vDesigning;
 	__fastcall TViewer(HWND AWnd);
-	__fastcall virtual ~TViewer(void);
+	__fastcall virtual ~TViewer();
 	void __fastcall vAllocFax(unsigned NumPages);
-	void __fastcall vDisposeFax(void);
-	void __fastcall vInitScrollbars(void);
+	void __fastcall vDisposeFax();
+	void __fastcall vInitScrollbars();
 	void __fastcall vUpdateScrollThumb(System::LongBool Vert);
-	void __fastcall vCalcMaxScrollPos(void);
+	void __fastcall vCalcMaxScrollPos();
 	void __fastcall vScrollUpPrim(unsigned Delta);
 	void __fastcall vScrollDownPrim(unsigned Delta);
 	void __fastcall vScrollLeftPrim(unsigned Delta);
 	void __fastcall vScrollRightPrim(unsigned Delta);
-	void __fastcall vScrollUp(void);
-	void __fastcall vScrollDown(void);
-	void __fastcall vScrollLeft(void);
-	void __fastcall vScrollRight(void);
-	void __fastcall vJumpUp(void);
-	void __fastcall vJumpDown(void);
-	void __fastcall vJumpLeft(void);
-	void __fastcall vJumpRight(void);
-	void __fastcall vHomeVertical(void);
-	void __fastcall vEndVertical(void);
-	void __fastcall vHomeHorizontal(void);
-	void __fastcall vEndHorizontal(void);
-	void __fastcall vInitPage(void);
-	void __fastcall vPageUp(void);
-	void __fastcall vPageDown(void);
-	void __fastcall vFirstPage(void);
-	void __fastcall vLastPage(void);
+	void __fastcall vScrollUp();
+	void __fastcall vScrollDown();
+	void __fastcall vScrollLeft();
+	void __fastcall vScrollRight();
+	void __fastcall vJumpUp();
+	void __fastcall vJumpDown();
+	void __fastcall vJumpLeft();
+	void __fastcall vJumpRight();
+	void __fastcall vHomeVertical();
+	void __fastcall vEndVertical();
+	void __fastcall vHomeHorizontal();
+	void __fastcall vEndHorizontal();
+	void __fastcall vInitPage();
+	void __fastcall vPageUp();
+	void __fastcall vPageDown();
+	void __fastcall vFirstPage();
+	void __fastcall vLastPage();
 	int __fastcall vRotatePage(const unsigned PageNum, const unsigned Direction);
 	void __fastcall vUpdateMarkRect(const System::Types::TRect &Client, int X, int Y);
-	void __fastcall vCopyToClipboard(void);
-	void __fastcall vInvalidateAll(void);
+	void __fastcall vCopyToClipboard();
+	void __fastcall vInvalidateAll();
 	void __fastcall vPaint(HDC PaintDC, tagPAINTSTRUCT &PaintInfo);
 	void __fastcall vGetMarkClientIntersection(System::Types::TRect &R, const System::Types::TRect &Mark);
 	void __fastcall vInitDragDrop(System::LongBool Enabled);
@@ -148,21 +148,21 @@ public:
 	void __fastcall apwViewSetScale(Oomisc::PScaleSettings Settings);
 	int __fastcall apwViewSetWhitespace(unsigned FromLines, unsigned ToLines);
 	void __fastcall apwViewSetScroll(unsigned HScroll, unsigned VScroll);
-	int __fastcall apwViewSelectAll(void);
+	int __fastcall apwViewSelectAll();
 	int __fastcall apwViewSelect(System::Types::PRect R);
-	int __fastcall apwViewCopy(void);
+	int __fastcall apwViewCopy();
 	HBITMAP __fastcall apwViewGetBitmap(unsigned Page, System::Types::PPoint Point);
-	unsigned __fastcall apwViewGetNumPages(void);
-	void __fastcall apwViewStartUpdate(void);
-	void __fastcall apwViewEndUpdate(void);
+	unsigned __fastcall apwViewGetNumPages();
+	void __fastcall apwViewStartUpdate();
+	void __fastcall apwViewEndUpdate();
 	void __fastcall apwViewSetWndProc(wMsg &Msg);
 	int __fastcall apwViewGotoPage(unsigned Page);
-	int __fastcall apwViewGetCurPage(void);
+	int __fastcall apwViewGetCurPage();
 	void __fastcall apwViewSetDesignMode(System::WideChar * Name);
 	int __fastcall apwViewSetRotation(unsigned Direction);
 	void __fastcall apwViewSetAutoScale(System::Word Kind);
 	void __fastcall apwViewGetPageDim(System::Types::PRect R);
-	System::Word __fastcall apwViewGetPageFlags(void);
+	System::Word __fastcall apwViewGetPageFlags();
 	int __fastcall apwViewSetLoadWholeFax(System::LongBool LoadWhole);
 	void __fastcall apwViewSetBusyCursor(HICON NewCursor);
 	void __fastcall wmPaint(wMsg &Msg);

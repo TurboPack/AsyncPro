@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXBase.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXBase.pas' rev: 33.00 (Windows)
 
 #ifndef AdxbaseHPP
 #define AdxbaseHPP
@@ -43,10 +43,10 @@ class PASCALIMPLEMENTATION TApdMemoryStream : public System::Classes::TMemoryStr
 public:
 	HIDESBASE void __fastcall SetPointer(void * Ptr, const NativeInt Size);
 public:
-	/* TMemoryStream.Destroy */ inline __fastcall virtual ~TApdMemoryStream(void) { }
+	/* TMemoryStream.Destroy */ inline __fastcall virtual ~TApdMemoryStream() { }
 	
 public:
-	/* TObject.Create */ inline __fastcall TApdMemoryStream(void) : System::Classes::TMemoryStream() { }
+	/* TObject.Create */ inline __fastcall TApdMemoryStream() : System::Classes::TMemoryStream() { }
 	
 };
 
@@ -64,7 +64,7 @@ public:
 public:
 	/* TFileStream.Create */ inline __fastcall TApdFileStream(const System::UnicodeString AFileName, System::Word Mode)/* overload */ : System::Classes::TFileStream(AFileName, Mode) { }
 	/* TFileStream.Create */ inline __fastcall TApdFileStream(const System::UnicodeString AFileName, System::Word Mode, unsigned Rights)/* overload */ : System::Classes::TFileStream(AFileName, Mode, Rights) { }
-	/* TFileStream.Destroy */ inline __fastcall virtual ~TApdFileStream(void) { }
+	/* TFileStream.Destroy */ inline __fastcall virtual ~TApdFileStream() { }
 	
 };
 

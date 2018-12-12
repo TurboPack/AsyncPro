@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdPEditT.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdPEditT.pas' rev: 33.00 (Windows)
 
 #ifndef AdpedittHPP
 #define AdpedittHPP
@@ -39,11 +39,11 @@ class PASCALIMPLEMENTATION TSelectedDeviceProperty : public Designeditors::TStri
 	typedef Designeditors::TStringProperty inherited;
 	
 public:
-	virtual void __fastcall Edit(void);
-	virtual Designintf::TPropertyAttributes __fastcall GetAttributes(void);
+	virtual void __fastcall Edit();
+	virtual Designintf::TPropertyAttributes __fastcall GetAttributes();
 public:
 	/* TPropertyEditor.Create */ inline __fastcall virtual TSelectedDeviceProperty(const Designintf::_di_IDesigner ADesigner, int APropCount) : Designeditors::TStringProperty(ADesigner, APropCount) { }
-	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TSelectedDeviceProperty(void) { }
+	/* TPropertyEditor.Destroy */ inline __fastcall virtual ~TSelectedDeviceProperty() { }
 	
 };
 

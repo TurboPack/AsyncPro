@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFaxPrn.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFaxPrn.pas' rev: 33.00 (Windows)
 
 #ifndef AdfaxprnHPP
 #define AdfaxprnHPP
@@ -63,7 +63,7 @@ public:
 	__property TApdCustomFaxPrinter* FaxPrinter = {read=FFaxPrinter};
 	__property System::UnicodeString LogFileName = {read=FLogFileName, write=FLogFileName};
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdCustomFaxPrinterLog(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdCustomFaxPrinterLog() { }
 	
 };
 
@@ -80,8 +80,8 @@ protected:
 	System::Word FHeight;
 	
 public:
-	__fastcall virtual TApdCustomFaxPrinterMargin(void);
-	__fastcall virtual ~TApdCustomFaxPrinterMargin(void);
+	__fastcall virtual TApdCustomFaxPrinterMargin();
+	__fastcall virtual ~TApdCustomFaxPrinterMargin();
 	void __fastcall SetFont(Vcl::Graphics::TFont* const NewFont);
 	__property System::UnicodeString Caption = {read=FCaption, write=FCaption};
 	__property bool Enabled = {read=FEnabled, write=FEnabled, nodefault};
@@ -106,15 +106,15 @@ protected:
 	void __fastcall SetCtl3D(const bool Value);
 	void __fastcall SetVisible(const bool Value);
 	void __fastcall SetCaption(const System::UnicodeString Value);
-	void __fastcall GetProperties(void);
-	void __fastcall Show(void);
+	void __fastcall GetProperties();
+	void __fastcall Show();
 	
 public:
 	__fastcall virtual TApdAbstractFaxPrinterStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdAbstractFaxPrinterStatus(void);
+	__fastcall virtual ~TApdAbstractFaxPrinterStatus();
 	virtual void __fastcall UpdateDisplay(bool First, bool Last) = 0 ;
-	DYNAMIC void __fastcall CreateDisplay(void) = 0 ;
-	DYNAMIC void __fastcall DestroyDisplay(void) = 0 ;
+	DYNAMIC void __fastcall CreateDisplay() = 0 ;
+	DYNAMIC void __fastcall DestroyDisplay() = 0 ;
 	__property Vcl::Forms::TForm* Display = {read=FDisplay, write=FDisplay};
 	__property TApdCustomFaxPrinter* FaxPrinter = {read=FFaxPrinter};
 	
@@ -136,7 +136,7 @@ public:
 	/* TApdCustomFaxPrinterLog.Create */ inline __fastcall virtual TApdFaxPrinterLog(System::Classes::TComponent* AOwner) : TApdCustomFaxPrinterLog(AOwner) { }
 	
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxPrinterLog(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdFaxPrinterLog() { }
 	
 };
 
@@ -151,8 +151,8 @@ __published:
 	__property Enabled;
 	__property Font;
 public:
-	/* TApdCustomFaxPrinterMargin.Create */ inline __fastcall virtual TApdFaxPrinterMargin(void) : TApdCustomFaxPrinterMargin() { }
-	/* TApdCustomFaxPrinterMargin.Destroy */ inline __fastcall virtual ~TApdFaxPrinterMargin(void) { }
+	/* TApdCustomFaxPrinterMargin.Create */ inline __fastcall virtual TApdFaxPrinterMargin() : TApdCustomFaxPrinterMargin() { }
+	/* TApdCustomFaxPrinterMargin.Destroy */ inline __fastcall virtual ~TApdFaxPrinterMargin() { }
 	
 };
 
@@ -186,7 +186,7 @@ public:
 protected:
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall SetCaption(const System::UnicodeString Value);
-	System::UnicodeString __fastcall GetCaption(void);
+	System::UnicodeString __fastcall GetCaption();
 	void __fastcall SetFaxFileName(const System::UnicodeString Value);
 	void __fastcall SetStatusDisplay(TApdAbstractFaxPrinterStatus* const Value);
 	void __fastcall SetFaxPrintLog(TApdFaxPrinterLog* const Value);
@@ -198,10 +198,10 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomFaxPrinter(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomFaxPrinter(void);
-	bool __fastcall PrintSetup(void);
-	void __fastcall PrintFax(void);
-	void __fastcall PrintAbort(void);
+	__fastcall virtual ~TApdCustomFaxPrinter();
+	bool __fastcall PrintSetup();
+	void __fastcall PrintFax();
+	void __fastcall PrintAbort();
 	__property Adfaxcvt::TFaxWidth FaxWidth = {read=FFaxWidth, default=0};
 	__property Adfaxcvt::TFaxResolution FaxResolution = {read=FFaxResolution, default=0};
 	__property System::Word TotalFaxPages = {read=FTotalFaxPages, default=0};
@@ -241,7 +241,7 @@ __published:
 	__property OnFaxPrintStatus;
 public:
 	/* TApdCustomFaxPrinter.Create */ inline __fastcall virtual TApdFaxPrinter(System::Classes::TComponent* AOwner) : TApdCustomFaxPrinter(AOwner) { }
-	/* TApdCustomFaxPrinter.Destroy */ inline __fastcall virtual ~TApdFaxPrinter(void) { }
+	/* TApdCustomFaxPrinter.Destroy */ inline __fastcall virtual ~TApdFaxPrinter() { }
 	
 };
 

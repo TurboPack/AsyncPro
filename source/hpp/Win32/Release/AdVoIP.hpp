@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdVoIP.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdVoIP.pas' rev: 33.00 (Windows)
 
 #ifndef AdvoipHPP
 #define AdvoipHPP
@@ -113,7 +113,7 @@ class PASCALIMPLEMENTATION TApdTerminals : public System::Classes::TCollection
 	
 public:
 	/* TCollection.Create */ inline __fastcall TApdTerminals(System::Classes::TCollectionItemClass ItemClass) : System::Classes::TCollection(ItemClass) { }
-	/* TCollection.Destroy */ inline __fastcall virtual ~TApdTerminals(void) { }
+	/* TCollection.Destroy */ inline __fastcall virtual ~TApdTerminals() { }
 	
 };
 
@@ -132,11 +132,11 @@ private:
 public:
 	__fastcall TApdTapiEventSink(TApdCustomVoIP* AOwner);
 	HRESULT __stdcall QueryInterface(const GUID &IID, /* out */ void *Obj);
-	int __stdcall _AddRef(void);
-	int __stdcall _Release(void);
+	int __stdcall _AddRef();
+	int __stdcall _Release();
 	HRESULT __stdcall Event(Winapi::Activex::TOleEnum TapiEvent, const _di_IDispatch pEvent);
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdTapiEventSink(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdTapiEventSink() { }
 	
 private:
 	void *__ITTAPIEventNotification;	// Aditapi3::ITTAPIEventNotification 
@@ -181,7 +181,7 @@ private:
 	TApdTerminalMediaType FMediaType;
 	TApdTerminalType FTerminalType;
 	TApdTerminalState FTerminalState;
-	bool __fastcall GetDeviceInUse(void);
+	bool __fastcall GetDeviceInUse();
 	
 __published:
 	__property TApdTerminalDeviceClass DeviceClass = {read=FTerminalDeviceClass, nodefault};
@@ -193,7 +193,7 @@ __published:
 	__property TApdTerminalState TerminalState = {read=FTerminalState, nodefault};
 public:
 	/* TCollectionItem.Create */ inline __fastcall virtual TApdVoIPTerminal(System::Classes::TCollection* Collection) : System::Classes::TCollectionItem(Collection) { }
-	/* TCollectionItem.Destroy */ inline __fastcall virtual ~TApdVoIPTerminal(void) { }
+	/* TCollectionItem.Destroy */ inline __fastcall virtual ~TApdVoIPTerminal() { }
 	
 };
 
@@ -211,17 +211,17 @@ private:
 	
 public:
 	void __fastcall AddLogString(bool Verbose, const System::AnsiString S);
-	void __fastcall ClearLog(void);
+	void __fastcall ClearLog();
 	
 __published:
 	__property System::UnicodeString LogName = {read=FLogName, write=FLogName};
 	__property bool VerboseLog = {read=FVerboseLog, write=FVerboseLog, nodefault};
 	__property bool Enabled = {read=FEnabled, write=FEnabled, nodefault};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdVoIPLog(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdVoIPLog() { }
 	
 public:
-	/* TObject.Create */ inline __fastcall TApdVoIPLog(void) : System::Classes::TPersistent() { }
+	/* TObject.Create */ inline __fastcall TApdVoIPLog() : System::Classes::TPersistent() { }
 	
 };
 
@@ -258,7 +258,7 @@ private:
 	System::UnicodeString FCallDisplayableAddress;
 	System::UnicodeString FCallCallingPartyID;
 	int FConnectTimeout;
-	TApdVoIPCallInfo __fastcall GetCallInfo(void);
+	TApdVoIPCallInfo __fastcall GetCallInfo();
 	void __fastcall SetPreviewWindow(Vcl::Controls::TWinControl* const Value);
 	void __fastcall SetVideoOutDevice(Vcl::Controls::TWinControl* const Value);
 	void __fastcall SetEnablePreview(const bool Value);
@@ -268,7 +268,7 @@ private:
 	void __fastcall SetEnableVideo(const bool Value);
 	void __fastcall SetVideoOutWindowAutoSize(const bool Value);
 	void __fastcall SetPreviewWindowAutoSize(const bool Value);
-	Aditapi3::_di_ITCallInfo __fastcall GetCallInfoInterface(void);
+	Aditapi3::_di_ITCallInfo __fastcall GetCallInfoInterface();
 	
 protected:
 	Aditapi3::_di_ITTAPI gpTapi;
@@ -281,44 +281,44 @@ protected:
 	int FErrorCode;
 	bool FTapiInitialized;
 	NativeUInt FConnectTimer;
-	void __fastcall DoConnectEvent(void);
-	void __fastcall DoDisconnectEvent(void);
-	void __fastcall DoFailEvent(void);
-	void __fastcall DoIncomingCallEvent(void);
+	void __fastcall DoConnectEvent();
+	void __fastcall DoDisconnectEvent();
+	void __fastcall DoFailEvent();
+	void __fastcall DoIncomingCallEvent();
 	void __fastcall DoStatusEvent(System::Word TapiEvent, System::Word Status, System::Word SubStatus);
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
 	void __fastcall ProcessTapiEvent(Winapi::Activex::TOleEnum TapiEvent, _di_IDispatch pEvent);
 	bool __fastcall AddressSupportsMediaType(Aditapi3::_di_ITAddress pAddress, Winapi::Activex::TOleEnum lMediaType);
-	HRESULT __fastcall AnswerTheCall(void);
+	HRESULT __fastcall AnswerTheCall();
 	unsigned __fastcall DetermineAddressType(const System::UnicodeString Addr);
-	HRESULT __fastcall DisconnectTheCall(void);
+	HRESULT __fastcall DisconnectTheCall();
 	HRESULT __fastcall EnablePreviewWindow(Aditapi3::_di_ITAddress pAddress, Aditapi3::_di_ITStream pStream);
 	HRESULT __fastcall FindTerminal(System::UnicodeString DevName, Winapi::Activex::TOleEnum MediaType, Winapi::Activex::TOleEnum MediaDir, Aditapi3::_di_ITTerminal &ppTerminal);
-	HRESULT __fastcall FindTheAddress(void);
+	HRESULT __fastcall FindTheAddress();
 	HRESULT __fastcall GetTerminal(Aditapi3::_di_ITAddress pAddress, Aditapi3::_di_ITStream pStream, Aditapi3::_di_ITTerminal &ppTerminal);
 	HRESULT __fastcall GetVideoRenderTerminal(Aditapi3::_di_ITAddress pAddress, Aditapi3::_di_ITTerminal &ppTerminal);
 	HRESULT __fastcall GetVideoRenderTerminalFromStream(Aditapi3::_di_ITCallMediaEvent pCallMediaEvent, Aditapi3::_di_ITTerminal &ppTerminal, bool &pfRenderStream);
 	void __fastcall HostWindow(Aditapi3::_di_IVideoWindow pVideoWindow, bool IsRenderStream);
-	HRESULT __fastcall InitializeTapi(void);
+	HRESULT __fastcall InitializeTapi();
 	bool __fastcall IsAudioCaptureStream(Aditapi3::_di_ITStream pStream);
 	bool __fastcall IsAudioRenderStream(Aditapi3::_di_ITStream pStream);
 	bool __fastcall IsVideoCaptureStream(Aditapi3::_di_ITStream pStream);
 	bool __fastcall IsVideoRenderStream(Aditapi3::_di_ITStream pStream);
-	void __fastcall LoadTerminals(void);
+	void __fastcall LoadTerminals();
 	bool __fastcall MakeTheCall(unsigned dwAddressType, System::WideString szAddressToCall);
-	HRESULT __fastcall RegisterTapiEventInterface(void);
-	void __fastcall ReleaseTheCall(void);
+	HRESULT __fastcall RegisterTapiEventInterface();
+	void __fastcall ReleaseTheCall();
 	HRESULT __fastcall SelectTerminalOnCall(Aditapi3::_di_ITAddress pAddress, Aditapi3::_di_ITBasicCallControl pCall);
-	void __fastcall ShutDownTapi(void);
+	void __fastcall ShutDownTapi();
 	
 public:
 	__fastcall virtual TApdCustomVoIP(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomVoIP(void);
-	virtual void __fastcall Loaded(void);
+	__fastcall virtual ~TApdCustomVoIP();
+	virtual void __fastcall Loaded();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	void __fastcall CancelCall(void);
+	void __fastcall CancelCall();
 	void __fastcall Connect(System::UnicodeString DestAddr);
-	bool __fastcall ShowMediaSelectionDialog(void);
+	bool __fastcall ShowMediaSelectionDialog();
 	__property TApdTerminals* AvailableTerminalDevices = {read=FAvailableTerminalDevices};
 	__property System::UnicodeString CallComment = {read=FCallComment, write=FCallComment};
 	__property System::UnicodeString CallDisplayableAddress = {read=FCallDisplayableAddress, write=FCallDisplayableAddress};
@@ -374,7 +374,7 @@ __published:
 	__property OnStatus;
 public:
 	/* TApdCustomVoIP.Create */ inline __fastcall virtual TApdVoIP(System::Classes::TComponent* AOwner) : TApdCustomVoIP(AOwner) { }
-	/* TApdCustomVoIP.Destroy */ inline __fastcall virtual ~TApdVoIP(void) { }
+	/* TApdCustomVoIP.Destroy */ inline __fastcall virtual ~TApdVoIP() { }
 	
 };
 

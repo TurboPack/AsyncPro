@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdITapi3.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdITapi3.pas' rev: 33.00 (Windows)
 
 #ifndef Aditapi3HPP
 #define Aditapi3HPP
@@ -27,162 +27,162 @@
 namespace Aditapi3
 {
 //-- forward type declarations -----------------------------------------------
-__interface ITTAPI;
+__interface DELPHIINTERFACE ITTAPI;
 typedef System::DelphiInterface<ITTAPI> _di_ITTAPI;
-__interface ITDispatchMapper;
+__interface DELPHIINTERFACE ITDispatchMapper;
 typedef System::DelphiInterface<ITDispatchMapper> _di_ITDispatchMapper;
-__interface ITRequest;
+__interface DELPHIINTERFACE ITRequest;
 typedef System::DelphiInterface<ITRequest> _di_ITRequest;
-__interface ITCollection;
+__interface DELPHIINTERFACE ITCollection;
 typedef System::DelphiInterface<ITCollection> _di_ITCollection;
-__interface ITCallStateEvent;
+__interface DELPHIINTERFACE ITCallStateEvent;
 typedef System::DelphiInterface<ITCallStateEvent> _di_ITCallStateEvent;
-__interface ITCallInfo;
+__interface DELPHIINTERFACE ITCallInfo;
 typedef System::DelphiInterface<ITCallInfo> _di_ITCallInfo;
-__interface ITAddress;
+__interface DELPHIINTERFACE ITAddress;
 typedef System::DelphiInterface<ITAddress> _di_ITAddress;
-__interface IEnumAddress;
+__interface DELPHIINTERFACE IEnumAddress;
 typedef System::DelphiInterface<IEnumAddress> _di_IEnumAddress;
-__interface IEnumCallHub;
+__interface DELPHIINTERFACE IEnumCallHub;
 typedef System::DelphiInterface<IEnumCallHub> _di_IEnumCallHub;
-__interface ITCallHub;
+__interface DELPHIINTERFACE ITCallHub;
 typedef System::DelphiInterface<ITCallHub> _di_ITCallHub;
-__interface IEnumCall;
+__interface DELPHIINTERFACE IEnumCall;
 typedef System::DelphiInterface<IEnumCall> _di_IEnumCall;
-__interface IEnumUnknown;
+__interface DELPHIINTERFACE IEnumUnknown;
 typedef System::DelphiInterface<IEnumUnknown> _di_IEnumUnknown;
-__interface ITBasicCallControl;
+__interface DELPHIINTERFACE ITBasicCallControl;
 typedef System::DelphiInterface<ITBasicCallControl> _di_ITBasicCallControl;
-__interface ITForwardInformation;
+__interface DELPHIINTERFACE ITForwardInformation;
 typedef System::DelphiInterface<ITForwardInformation> _di_ITForwardInformation;
-__interface ITCallNotificationEvent;
+__interface DELPHIINTERFACE ITCallNotificationEvent;
 typedef System::DelphiInterface<ITCallNotificationEvent> _di_ITCallNotificationEvent;
-__interface ITTAPIEventNotification;
+__interface DELPHIINTERFACE ITTAPIEventNotification;
 typedef System::DelphiInterface<ITTAPIEventNotification> _di_ITTAPIEventNotification;
-__interface ITBasicAudioTerminal;
+__interface DELPHIINTERFACE ITBasicAudioTerminal;
 typedef System::DelphiInterface<ITBasicAudioTerminal> _di_ITBasicAudioTerminal;
-__interface ITCallHubEvent;
+__interface DELPHIINTERFACE ITCallHubEvent;
 typedef System::DelphiInterface<ITCallHubEvent> _di_ITCallHubEvent;
-__interface ITAddressCapabilities;
+__interface DELPHIINTERFACE ITAddressCapabilities;
 typedef System::DelphiInterface<ITAddressCapabilities> _di_ITAddressCapabilities;
-__interface IEnumBstr;
+__interface DELPHIINTERFACE IEnumBstr;
 typedef System::DelphiInterface<IEnumBstr> _di_IEnumBstr;
-__interface ITQOSEvent;
+__interface DELPHIINTERFACE ITQOSEvent;
 typedef System::DelphiInterface<ITQOSEvent> _di_ITQOSEvent;
-__interface ITAddressEvent;
+__interface DELPHIINTERFACE ITAddressEvent;
 typedef System::DelphiInterface<ITAddressEvent> _di_ITAddressEvent;
-__interface ITTerminal;
+__interface DELPHIINTERFACE ITTerminal;
 typedef System::DelphiInterface<ITTerminal> _di_ITTerminal;
-__interface ITCallMediaEvent;
+__interface DELPHIINTERFACE ITCallMediaEvent;
 typedef System::DelphiInterface<ITCallMediaEvent> _di_ITCallMediaEvent;
-__interface ITStream;
+__interface DELPHIINTERFACE ITStream;
 typedef System::DelphiInterface<ITStream> _di_ITStream;
-__interface IEnumTerminal;
+__interface DELPHIINTERFACE IEnumTerminal;
 typedef System::DelphiInterface<IEnumTerminal> _di_IEnumTerminal;
-__interface ITTAPIObjectEvent;
+__interface DELPHIINTERFACE ITTAPIObjectEvent;
 typedef System::DelphiInterface<ITTAPIObjectEvent> _di_ITTAPIObjectEvent;
-__interface ITAddressTranslation;
+__interface DELPHIINTERFACE ITAddressTranslation;
 typedef System::DelphiInterface<ITAddressTranslation> _di_ITAddressTranslation;
-__interface ITAddressTranslationInfo;
+__interface DELPHIINTERFACE ITAddressTranslationInfo;
 typedef System::DelphiInterface<ITAddressTranslationInfo> _di_ITAddressTranslationInfo;
-__interface IEnumLocation;
+__interface DELPHIINTERFACE IEnumLocation;
 typedef System::DelphiInterface<IEnumLocation> _di_IEnumLocation;
-__interface ITLocationInfo;
+__interface DELPHIINTERFACE ITLocationInfo;
 typedef System::DelphiInterface<ITLocationInfo> _di_ITLocationInfo;
-__interface IEnumCallingCard;
+__interface DELPHIINTERFACE IEnumCallingCard;
 typedef System::DelphiInterface<IEnumCallingCard> _di_IEnumCallingCard;
-__interface ITCallingCard;
+__interface DELPHIINTERFACE ITCallingCard;
 typedef System::DelphiInterface<ITCallingCard> _di_ITCallingCard;
-__interface ITAgent;
+__interface DELPHIINTERFACE ITAgent;
 typedef System::DelphiInterface<ITAgent> _di_ITAgent;
-__interface IEnumAgentSession;
+__interface DELPHIINTERFACE IEnumAgentSession;
 typedef System::DelphiInterface<IEnumAgentSession> _di_IEnumAgentSession;
-__interface ITAgentSession;
+__interface DELPHIINTERFACE ITAgentSession;
 typedef System::DelphiInterface<ITAgentSession> _di_ITAgentSession;
-__interface ITACDGroup;
+__interface DELPHIINTERFACE ITACDGroup;
 typedef System::DelphiInterface<ITACDGroup> _di_ITACDGroup;
-__interface IEnumQueue;
+__interface DELPHIINTERFACE IEnumQueue;
 typedef System::DelphiInterface<IEnumQueue> _di_IEnumQueue;
-__interface ITQueue;
+__interface DELPHIINTERFACE ITQueue;
 typedef System::DelphiInterface<ITQueue> _di_ITQueue;
-__interface ITAgentEvent;
+__interface DELPHIINTERFACE ITAgentEvent;
 typedef System::DelphiInterface<ITAgentEvent> _di_ITAgentEvent;
-__interface ITAgentSessionEvent;
+__interface DELPHIINTERFACE ITAgentSessionEvent;
 typedef System::DelphiInterface<ITAgentSessionEvent> _di_ITAgentSessionEvent;
-__interface ITACDGroupEvent;
+__interface DELPHIINTERFACE ITACDGroupEvent;
 typedef System::DelphiInterface<ITACDGroupEvent> _di_ITACDGroupEvent;
-__interface ITQueueEvent;
+__interface DELPHIINTERFACE ITQueueEvent;
 typedef System::DelphiInterface<ITQueueEvent> _di_ITQueueEvent;
-__interface ITTAPICallCenter;
+__interface DELPHIINTERFACE ITTAPICallCenter;
 typedef System::DelphiInterface<ITTAPICallCenter> _di_ITTAPICallCenter;
-__interface IEnumAgentHandler;
+__interface DELPHIINTERFACE IEnumAgentHandler;
 typedef System::DelphiInterface<IEnumAgentHandler> _di_IEnumAgentHandler;
-__interface ITAgentHandler;
+__interface DELPHIINTERFACE ITAgentHandler;
 typedef System::DelphiInterface<ITAgentHandler> _di_ITAgentHandler;
-__interface IEnumACDGroup;
+__interface DELPHIINTERFACE IEnumACDGroup;
 typedef System::DelphiInterface<IEnumACDGroup> _di_IEnumACDGroup;
-__interface ITAgentHandlerEvent;
+__interface DELPHIINTERFACE ITAgentHandlerEvent;
 typedef System::DelphiInterface<ITAgentHandlerEvent> _di_ITAgentHandlerEvent;
-__interface ITCallInfoChangeEvent;
+__interface DELPHIINTERFACE ITCallInfoChangeEvent;
 typedef System::DelphiInterface<ITCallInfoChangeEvent> _di_ITCallInfoChangeEvent;
-__interface ITRequestEvent;
+__interface DELPHIINTERFACE ITRequestEvent;
 typedef System::DelphiInterface<ITRequestEvent> _di_ITRequestEvent;
-__interface ITMediaSupport;
+__interface DELPHIINTERFACE ITMediaSupport;
 typedef System::DelphiInterface<ITMediaSupport> _di_ITMediaSupport;
-__interface ITTerminalSupport;
+__interface DELPHIINTERFACE ITTerminalSupport;
 typedef System::DelphiInterface<ITTerminalSupport> _di_ITTerminalSupport;
-__interface IEnumTerminalClass;
+__interface DELPHIINTERFACE IEnumTerminalClass;
 typedef System::DelphiInterface<IEnumTerminalClass> _di_IEnumTerminalClass;
-__interface ITStreamControl;
+__interface DELPHIINTERFACE ITStreamControl;
 typedef System::DelphiInterface<ITStreamControl> _di_ITStreamControl;
-__interface IEnumStream;
+__interface DELPHIINTERFACE IEnumStream;
 typedef System::DelphiInterface<IEnumStream> _di_IEnumStream;
-__interface ITSubStreamControl;
+__interface DELPHIINTERFACE ITSubStreamControl;
 typedef System::DelphiInterface<ITSubStreamControl> _di_ITSubStreamControl;
-__interface ITSubStream;
+__interface DELPHIINTERFACE ITSubStream;
 typedef System::DelphiInterface<ITSubStream> _di_ITSubStream;
-__interface IEnumSubStream;
+__interface DELPHIINTERFACE IEnumSubStream;
 typedef System::DelphiInterface<IEnumSubStream> _di_IEnumSubStream;
-__interface ITLegacyAddressMediaControl;
+__interface DELPHIINTERFACE ITLegacyAddressMediaControl;
 typedef System::DelphiInterface<ITLegacyAddressMediaControl> _di_ITLegacyAddressMediaControl;
-__interface ITLegacyCallMediaControl;
+__interface DELPHIINTERFACE ITLegacyCallMediaControl;
 typedef System::DelphiInterface<ITLegacyCallMediaControl> _di_ITLegacyCallMediaControl;
-__interface ITDigitDetectionEvent;
+__interface DELPHIINTERFACE ITDigitDetectionEvent;
 typedef System::DelphiInterface<ITDigitDetectionEvent> _di_ITDigitDetectionEvent;
-__interface ITDigitGenerationEvent;
+__interface DELPHIINTERFACE ITDigitGenerationEvent;
 typedef System::DelphiInterface<ITDigitGenerationEvent> _di_ITDigitGenerationEvent;
-__interface ITPrivateEvent;
+__interface DELPHIINTERFACE ITPrivateEvent;
 typedef System::DelphiInterface<ITPrivateEvent> _di_ITPrivateEvent;
-__interface IReferenceClock;
+__interface DELPHIINTERFACE IReferenceClock;
 typedef System::DelphiInterface<IReferenceClock> _di_IReferenceClock;
-__interface IMediaFilter;
+__interface DELPHIINTERFACE IMediaFilter;
 typedef System::DelphiInterface<IMediaFilter> _di_IMediaFilter;
 struct TAM_Media_Type;
 struct TPin_Info;
-__interface IEnumMediaTypes;
+__interface DELPHIINTERFACE IEnumMediaTypes;
 typedef System::DelphiInterface<IEnumMediaTypes> _di_IEnumMediaTypes;
-__interface IPin;
+__interface DELPHIINTERFACE IPin;
 typedef System::DelphiInterface<IPin> _di_IPin;
-__interface IEnumPins;
+__interface DELPHIINTERFACE IEnumPins;
 typedef System::DelphiInterface<IEnumPins> _di_IEnumPins;
 struct TFilterInfo;
-__interface IBaseFilter;
+__interface DELPHIINTERFACE IBaseFilter;
 typedef System::DelphiInterface<IBaseFilter> _di_IBaseFilter;
-__interface IEnumFilters;
+__interface DELPHIINTERFACE IEnumFilters;
 typedef System::DelphiInterface<IEnumFilters> _di_IEnumFilters;
-__interface IFilterGraph;
+__interface DELPHIINTERFACE IFilterGraph;
 typedef System::DelphiInterface<IFilterGraph> _di_IFilterGraph;
-__interface IGraphBuilder;
+__interface DELPHIINTERFACE IGraphBuilder;
 typedef System::DelphiInterface<IGraphBuilder> _di_IGraphBuilder;
-__interface IFileSinkFilter;
+__interface DELPHIINTERFACE IFileSinkFilter;
 typedef System::DelphiInterface<IFileSinkFilter> _di_IFileSinkFilter;
-__interface IAMCopyCaptureFileProgress;
+__interface DELPHIINTERFACE IAMCopyCaptureFileProgress;
 typedef System::DelphiInterface<IAMCopyCaptureFileProgress> _di_IAMCopyCaptureFileProgress;
-__interface ICaptureGraphBuilder2;
+__interface DELPHIINTERFACE ICaptureGraphBuilder2;
 typedef System::DelphiInterface<ICaptureGraphBuilder2> _di_ICaptureGraphBuilder2;
-__interface IVideoWindow;
+__interface DELPHIINTERFACE IVideoWindow;
 typedef System::DelphiInterface<IVideoWindow> _di_IVideoWindow;
-__interface IMediaControl;
+__interface DELPHIINTERFACE IMediaControl;
 typedef System::DelphiInterface<IMediaControl> _di_IMediaControl;
 //-- type declarations -------------------------------------------------------
 typedef Winapi::Activex::TOleEnum ADDRESS_STATE;
@@ -314,10 +314,10 @@ __interface  INTERFACE_UUID("{350F85D1-1227-11D3-83D4-00C04FB6809F}") ITCallInfo
 	virtual HRESULT __safecall Get_CallInfoString(Winapi::Activex::TOleEnum CallInfoString, System::WideString &__Get_CallInfoString_result) = 0 ;
 	virtual HRESULT __safecall Set_CallInfoString(Winapi::Activex::TOleEnum CallInfoString, const System::WideString ppCallInfoString) = 0 ;
 	virtual HRESULT __safecall Get_CallInfoBuffer(Winapi::Activex::TOleEnum CallInfoBuffer, System::OleVariant &__Get_CallInfoBuffer_result) = 0 ;
-	virtual HRESULT __safecall Set_CallInfoBuffer(Winapi::Activex::TOleEnum CallInfoBuffer, const System::OleVariant ppCallInfoBuffer) = 0 ;
+	virtual HRESULT __safecall Set_CallInfoBuffer(Winapi::Activex::TOleEnum CallInfoBuffer, System::OleVariant ppCallInfoBuffer) = 0 ;
 	virtual HRESULT __safecall GetCallInfoBuffer(Winapi::Activex::TOleEnum CallInfoBuffer, /* out */ unsigned &pdwSize, /* out */ PByte1 &ppCallInfoBuffer) = 0 ;
 	virtual HRESULT __safecall SetCallInfoBuffer(Winapi::Activex::TOleEnum CallInfoBuffer, unsigned dwSize, System::Byte &pCallInfoBuffer) = 0 ;
-	virtual HRESULT __safecall ReleaseUserUserInfo(void) = 0 ;
+	virtual HRESULT __safecall ReleaseUserUserInfo() = 0 ;
 	#pragma option push -w-inl
 	/* safecall wrapper */ inline _di_ITAddress _scw_Get_Address() { _di_ITAddress __r; HRESULT __hr = Get_Address(__r); System::CheckSafecallResult(__hr); return __r; }
 	#pragma option pop
@@ -405,15 +405,15 @@ __interface  INTERFACE_UUID("{B1EFC386-9355-11D0-835C-00AA003CCABD}") ITAddress 
 
 __interface  INTERFACE_UUID("{B1EFC382-9355-11D0-835C-00AA003CCABD}") ITTAPI  : public IDispatch 
 {
-	virtual HRESULT __safecall Initialize(void) = 0 ;
-	virtual HRESULT __safecall Shutdown(void) = 0 ;
+	virtual HRESULT __safecall Initialize() = 0 ;
+	virtual HRESULT __safecall Shutdown() = 0 ;
 	virtual HRESULT __safecall Get_Addresses(System::OleVariant &__Get_Addresses_result) = 0 ;
 	virtual HRESULT __safecall EnumerateAddresses(_di_IEnumAddress &__EnumerateAddresses_result) = 0 ;
 	virtual HRESULT __safecall RegisterCallNotifications(const _di_ITAddress pAddress, System::WordBool fMonitor, System::WordBool fOwner, int lMediaTypes, int lCallbackInstance, int &__RegisterCallNotifications_result) = 0 ;
 	virtual HRESULT __safecall UnregisterNotifications(int lRegister) = 0 ;
 	virtual HRESULT __safecall Get_CallHubs(System::OleVariant &__Get_CallHubs_result) = 0 ;
 	virtual HRESULT __safecall EnumerateCallHubs(_di_IEnumCallHub &__EnumerateCallHubs_result) = 0 ;
-	virtual HRESULT __safecall SetCallHubTracking(const System::OleVariant pAddresses, System::WordBool bTracking) = 0 ;
+	virtual HRESULT __safecall SetCallHubTracking(System::OleVariant pAddresses, System::WordBool bTracking) = 0 ;
 	virtual HRESULT __safecall EnumeratePrivateTAPIObjects(/* out */ _di_IEnumUnknown &ppEnumUnknown) = 0 ;
 	virtual HRESULT __safecall Get_PrivateTAPIObjects(System::OleVariant &__Get_PrivateTAPIObjects_result) = 0 ;
 	virtual HRESULT __safecall RegisterRequestRecipient(int lRegistrationInstance, int lRequestMode, System::WordBool fEnable) = 0 ;
@@ -442,7 +442,7 @@ __interface  INTERFACE_UUID("{B1EFC382-9355-11D0-835C-00AA003CCABD}") ITTAPI  : 
 __interface  INTERFACE_UUID("{1666FCA1-9363-11D0-835C-00AA003CCABD}") IEnumAddress  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITAddress &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumAddress &ppEnum) = 0 ;
 };
@@ -450,14 +450,14 @@ __interface  INTERFACE_UUID("{1666FCA1-9363-11D0-835C-00AA003CCABD}") IEnumAddre
 __interface  INTERFACE_UUID("{A3C15450-5B92-11D1-8F4E-00C04FB6809F}") IEnumCallHub  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITCallHub &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumCallHub &ppEnum) = 0 ;
 };
 
 __interface  INTERFACE_UUID("{A3C1544E-5B92-11D1-8F4E-00C04FB6809F}") ITCallHub  : public IDispatch 
 {
-	virtual HRESULT __safecall Clear(void) = 0 ;
+	virtual HRESULT __safecall Clear() = 0 ;
 	virtual HRESULT __safecall EnumerateCalls(_di_IEnumCall &__EnumerateCalls_result) = 0 ;
 	virtual HRESULT __safecall Get_Calls(System::OleVariant &__Get_Calls_result) = 0 ;
 	virtual HRESULT __safecall Get_NumCalls(int &__Get_NumCalls_result) = 0 ;
@@ -479,7 +479,7 @@ __interface  INTERFACE_UUID("{A3C1544E-5B92-11D1-8F4E-00C04FB6809F}") ITCallHub 
 __interface  INTERFACE_UUID("{AE269CF6-935E-11D0-835C-00AA003CCABD}") IEnumCall  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITCallInfo &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumCall &ppEnum) = 0 ;
 };
@@ -488,14 +488,14 @@ __interface  INTERFACE_UUID("{00000100-0000-0000-C000-000000000046}") IEnumUnkno
 {
 	virtual HRESULT __stdcall RemoteNext(unsigned celt, /* out */ System::_di_IInterface &rgelt, /* out */ unsigned &pceltFetched) = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumUnknown &ppEnum) = 0 ;
 };
 
 __interface  INTERFACE_UUID("{B1EFC389-9355-11D0-835C-00AA003CCABD}") ITBasicCallControl  : public IDispatch 
 {
 	virtual HRESULT __safecall Connect(System::WordBool fSync) = 0 ;
-	virtual HRESULT __safecall Answer(void) = 0 ;
+	virtual HRESULT __safecall Answer() = 0 ;
 	virtual HRESULT __safecall Disconnect(Winapi::Activex::TOleEnum code) = 0 ;
 	virtual HRESULT __safecall Hold(System::WordBool fHold) = 0 ;
 	virtual HRESULT __safecall HandoffDirect(const System::WideString pApplicationName) = 0 ;
@@ -506,12 +506,12 @@ __interface  INTERFACE_UUID("{B1EFC389-9355-11D0-835C-00AA003CCABD}") ITBasicCal
 	virtual HRESULT __safecall SwapHold(const _di_ITBasicCallControl pCall) = 0 ;
 	virtual HRESULT __safecall ParkDirect(const System::WideString pParkAddress) = 0 ;
 	virtual HRESULT __safecall ParkIndirect(System::WideString &__ParkIndirect_result) = 0 ;
-	virtual HRESULT __safecall Unpark(void) = 0 ;
+	virtual HRESULT __safecall Unpark() = 0 ;
 	virtual HRESULT __safecall SetQOS(int lMediaType, Winapi::Activex::TOleEnum ServiceLevel) = 0 ;
 	virtual HRESULT __safecall Pickup(const System::WideString pGroupID) = 0 ;
 	virtual HRESULT __safecall Dial(const System::WideString pDestAddress) = 0 ;
 	virtual HRESULT __safecall Finish(Winapi::Activex::TOleEnum finishMode) = 0 ;
-	virtual HRESULT __safecall RemoveFromConference(void) = 0 ;
+	virtual HRESULT __safecall RemoveFromConference() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{449F659E-88A3-11D1-BB5D-00C04FB6809F}") ITForwardInformation  : public IDispatch 
@@ -522,7 +522,7 @@ __interface  INTERFACE_UUID("{449F659E-88A3-11D1-BB5D-00C04FB6809F}") ITForwardI
 	virtual HRESULT __safecall Get_ForwardTypeDestination(int ForwardType, System::WideString &__Get_ForwardTypeDestination_result) = 0 ;
 	virtual HRESULT __safecall Get_ForwardTypeCaller(int ForwardType, System::WideString &__Get_ForwardTypeCaller_result) = 0 ;
 	virtual HRESULT __safecall GetForwardType(int ForwardType, /* out */ System::WideString &ppDestinationAddress, /* out */ System::WideString &ppCallerAddress) = 0 ;
-	virtual HRESULT __safecall Clear(void) = 0 ;
+	virtual HRESULT __safecall Clear() = 0 ;
 	#pragma option push -w-inl
 	/* safecall wrapper */ inline int _scw_Get_NumRingsNoAnswer() { int __r; HRESULT __hr = Get_NumRingsNoAnswer(__r); System::CheckSafecallResult(__hr); return __r; }
 	#pragma option pop
@@ -619,7 +619,7 @@ __interface  INTERFACE_UUID("{8DF232F5-821B-11D1-BB5C-00C04FB6809F}") ITAddressC
 __interface  INTERFACE_UUID("{35372049-0BC6-11D2-A033-00C04FB6809F}") IEnumBstr  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ System::WideString &ppStrings, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumBstr &ppEnum) = 0 ;
 };
@@ -711,9 +711,9 @@ __interface  INTERFACE_UUID("{EE3BD605-3868-11D2-A045-00C04FB6809F}") ITStream  
 	virtual HRESULT __safecall Get_MediaType(int &__Get_MediaType_result) = 0 ;
 	virtual HRESULT __safecall Get_Direction(Winapi::Activex::TOleEnum &__Get_Direction_result) = 0 ;
 	virtual HRESULT __safecall Get_Name(System::WideString &__Get_Name_result) = 0 ;
-	virtual HRESULT __safecall StartStream(void) = 0 ;
-	virtual HRESULT __safecall PauseStream(void) = 0 ;
-	virtual HRESULT __safecall StopStream(void) = 0 ;
+	virtual HRESULT __safecall StartStream() = 0 ;
+	virtual HRESULT __safecall PauseStream() = 0 ;
+	virtual HRESULT __safecall StopStream() = 0 ;
 	virtual HRESULT __safecall SelectTerminal(const _di_ITTerminal pTerminal) = 0 ;
 	virtual HRESULT __safecall UnselectTerminal(const _di_ITTerminal pTerminal) = 0 ;
 	virtual HRESULT __safecall EnumerateTerminals(/* out */ _di_IEnumTerminal &ppEnumTerminal) = 0 ;
@@ -739,7 +739,7 @@ __interface  INTERFACE_UUID("{EE3BD605-3868-11D2-A045-00C04FB6809F}") ITStream  
 __interface  INTERFACE_UUID("{AE269CF4-935E-11D0-835C-00AA003CCABD}") IEnumTerminal  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITTerminal &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumTerminal &ppEnum) = 0 ;
 };
@@ -818,7 +818,7 @@ __interface  INTERFACE_UUID("{AFC15945-8D40-11D1-A09E-00805FC147D3}") ITAddressT
 __interface  INTERFACE_UUID("{0C4D8F01-8DDB-11D1-A09E-00805FC147D3}") IEnumLocation  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITLocationInfo &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumLocation &ppEnum) = 0 ;
 };
@@ -885,7 +885,7 @@ __interface  INTERFACE_UUID("{0C4D8EFF-8DDB-11D1-A09E-00805FC147D3}") ITLocation
 __interface  INTERFACE_UUID("{0C4D8F02-8DDB-11D1-A09E-00805FC147D3}") IEnumCallingCard  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITCallingCard &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumCallingCard &ppEnum) = 0 ;
 };
@@ -1001,7 +1001,7 @@ __interface  INTERFACE_UUID("{5770ECE5-4B27-11D1-BF80-00805FC147D3}") ITAgent  :
 __interface  INTERFACE_UUID("{5AFC314E-4BCC-11D1-BF80-00805FC147D3}") IEnumAgentSession  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITAgentSession &ppElements, /* out */ unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumAgentSession &ppEnum) = 0 ;
 };
@@ -1109,7 +1109,7 @@ __interface  INTERFACE_UUID("{5AFC3148-4BCC-11D1-BF80-00805FC147D3}") ITACDGroup
 __interface  INTERFACE_UUID("{5AFC3158-4BCC-11D1-BF80-00805FC147D3}") IEnumQueue  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITQueue &ppElements, /* out */ unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumQueue &ppEnum) = 0 ;
 };
@@ -1243,7 +1243,7 @@ __interface  INTERFACE_UUID("{5AFC3154-4BCC-11D1-BF80-00805FC147D3}") ITTAPICall
 __interface  INTERFACE_UUID("{587E8C28-9802-11D1-A0A4-00805FC147D3}") IEnumAgentHandler  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITAgentHandler &ppElements, /* out */ unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumAgentHandler &ppEnum) = 0 ;
 };
@@ -1274,7 +1274,7 @@ __interface  INTERFACE_UUID("{587E8C22-9802-11D1-A0A4-00805FC147D3}") ITAgentHan
 __interface  INTERFACE_UUID("{5AFC3157-4BCC-11D1-BF80-00805FC147D3}") IEnumACDGroup  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITACDGroup &ppElements, /* out */ unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumACDGroup &ppEnum) = 0 ;
 };
@@ -1341,7 +1341,7 @@ __interface  INTERFACE_UUID("{B1EFC385-9355-11D0-835C-00AA003CCABD}") ITTerminal
 __interface  INTERFACE_UUID("{AE269CF5-935E-11D0-835C-00AA003CCABD}") IEnumTerminalClass  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ GUID &pElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumTerminalClass &ppEnum) = 0 ;
 };
@@ -1361,7 +1361,7 @@ __interface  INTERFACE_UUID("{EE3BD604-3868-11D2-A045-00C04FB6809F}") ITStreamCo
 __interface  INTERFACE_UUID("{EE3BD606-3868-11D2-A045-00C04FB6809F}") IEnumStream  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITStream &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumStream &ppEnum) = 0 ;
 };
@@ -1380,9 +1380,9 @@ __interface  INTERFACE_UUID("{EE3BD607-3868-11D2-A045-00C04FB6809F}") ITSubStrea
 
 __interface  INTERFACE_UUID("{EE3BD608-3868-11D2-A045-00C04FB6809F}") ITSubStream  : public IDispatch 
 {
-	virtual HRESULT __safecall StartSubStream(void) = 0 ;
-	virtual HRESULT __safecall PauseSubStream(void) = 0 ;
-	virtual HRESULT __safecall StopSubStream(void) = 0 ;
+	virtual HRESULT __safecall StartSubStream() = 0 ;
+	virtual HRESULT __safecall PauseSubStream() = 0 ;
+	virtual HRESULT __safecall StopSubStream() = 0 ;
 	virtual HRESULT __safecall SelectTerminal(const _di_ITTerminal pTerminal) = 0 ;
 	virtual HRESULT __safecall UnselectTerminal(const _di_ITTerminal pTerminal) = 0 ;
 	virtual HRESULT __safecall EnumerateTerminals(/* out */ _di_IEnumTerminal &ppEnumTerminal) = 0 ;
@@ -1401,7 +1401,7 @@ __interface  INTERFACE_UUID("{EE3BD608-3868-11D2-A045-00C04FB6809F}") ITSubStrea
 __interface  INTERFACE_UUID("{EE3BD609-3868-11D2-A045-00C04FB6809F}") IEnumSubStream  : public System::IInterface 
 {
 	virtual HRESULT __stdcall Next(unsigned celt, /* out */ _di_ITSubStream &ppElements, unsigned &pceltFetched) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned celt) = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumSubStream &ppEnum) = 0 ;
 };
@@ -1510,8 +1510,8 @@ enum DECLSPEC_DENUM TFilter_State : unsigned char { State_Stopped, State_Paused,
 
 __interface  INTERFACE_UUID("{56A86899-0AD4-11CE-B03A-0020AF0BA770}") IMediaFilter  : public IPersist 
 {
-	virtual HRESULT __stdcall Stop(void) = 0 ;
-	virtual HRESULT __stdcall Pause(void) = 0 ;
+	virtual HRESULT __stdcall Stop() = 0 ;
+	virtual HRESULT __stdcall Pause() = 0 ;
 	virtual HRESULT __stdcall Run(System::Comp tStart) = 0 ;
 	virtual HRESULT __stdcall GetState(unsigned dwMilliSecsTimeout, TFilter_State &State) = 0 ;
 	virtual HRESULT __stdcall SetSyncSource(_di_IReferenceClock pClock) = 0 ;
@@ -1550,7 +1550,7 @@ __interface  INTERFACE_UUID("{89C31040-846B-11CE-97D3-00AA0055595A}") IEnumMedia
 {
 	virtual HRESULT __stdcall Next(unsigned cMediaTypes, PAM_Media_Type &ppMediaTypes, unsigned &pcFetched) = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned cMediaTypes) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumMediaTypes &ppEnum) = 0 ;
 };
 
@@ -1558,7 +1558,7 @@ __interface  INTERFACE_UUID("{56A86891-0AD4-11CE-B03A-0020AF0BA770}") IPin  : pu
 {
 	virtual HRESULT __stdcall Connect(_di_IPin pReceivePin, const TAM_Media_Type &pmt) = 0 ;
 	virtual HRESULT __stdcall ReceiveConnection(_di_IPin pConnector, const TAM_Media_Type &pmt) = 0 ;
-	virtual HRESULT __stdcall Disconnect(void) = 0 ;
+	virtual HRESULT __stdcall Disconnect() = 0 ;
 	virtual HRESULT __stdcall ConnectedTo(/* out */ _di_IPin &pPin) = 0 ;
 	virtual HRESULT __stdcall ConnectionMediaType(TAM_Media_Type &pmt) = 0 ;
 	virtual HRESULT __stdcall QueryPinInfo(TPin_Info &pInfo) = 0 ;
@@ -1567,9 +1567,9 @@ __interface  INTERFACE_UUID("{56A86891-0AD4-11CE-B03A-0020AF0BA770}") IPin  : pu
 	virtual HRESULT __stdcall QueryAccept(const TAM_Media_Type &pmt) = 0 ;
 	virtual HRESULT __stdcall EnumMediaTypes(/* out */ _di_IEnumMediaTypes &ppEnum) = 0 ;
 	virtual HRESULT __stdcall QueryInternalConnections(/* out */ _di_IPin &apPin, unsigned &nPin) = 0 ;
-	virtual HRESULT __stdcall EndOfStream(void) = 0 ;
-	virtual HRESULT __stdcall BeginFlush(void) = 0 ;
-	virtual HRESULT __stdcall EndFlush(void) = 0 ;
+	virtual HRESULT __stdcall EndOfStream() = 0 ;
+	virtual HRESULT __stdcall BeginFlush() = 0 ;
+	virtual HRESULT __stdcall EndFlush() = 0 ;
 	virtual HRESULT __stdcall NewSegment(System::Comp tStart, System::Comp tStop, double dRate) = 0 ;
 };
 
@@ -1577,7 +1577,7 @@ __interface  INTERFACE_UUID("{56A86892-0AD4-11CE-B03A-0020AF0BA770}") IEnumPins 
 {
 	virtual HRESULT __stdcall Next(unsigned cPins, /* out */ _di_IPin &ppPins, unsigned &pcFetched) = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned cPins) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumPins &ppEnum) = 0 ;
 };
 
@@ -1602,7 +1602,7 @@ __interface  INTERFACE_UUID("{56A86893-0AD4-11CE-B03A-0020AF0BA770}") IEnumFilte
 {
 	virtual HRESULT __stdcall Next(unsigned cFilters, /* out */ _di_IBaseFilter &ppFilter, unsigned &pcFetched) = 0 ;
 	virtual HRESULT __stdcall Skip(unsigned cFilters) = 0 ;
-	virtual HRESULT __stdcall Reset(void) = 0 ;
+	virtual HRESULT __stdcall Reset() = 0 ;
 	virtual HRESULT __stdcall Clone(/* out */ _di_IEnumFilters &ppEnum) = 0 ;
 };
 
@@ -1615,7 +1615,7 @@ __interface  INTERFACE_UUID("{56A8689F-0AD4-11CE-B03A-0020AF0BA770}") IFilterGra
 	virtual HRESULT __stdcall ConnectDirect(_di_IPin ppinOut, _di_IPin ppinIn, const TAM_Media_Type &pmt) = 0 ;
 	virtual HRESULT __stdcall Reconnect(_di_IPin ppin) = 0 ;
 	virtual HRESULT __stdcall Disconnect(_di_IPin ppin) = 0 ;
-	virtual HRESULT __stdcall SetDefaultSyncSource(void) = 0 ;
+	virtual HRESULT __stdcall SetDefaultSyncSource() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{56A868A9-0AD4-11CE-B03A-0020AF0BA770}") IGraphBuilder  : public IFilterGraph 
@@ -1625,8 +1625,8 @@ __interface  INTERFACE_UUID("{56A868A9-0AD4-11CE-B03A-0020AF0BA770}") IGraphBuil
 	virtual HRESULT __stdcall RenderFile(System::WideChar * lpcwstrFile, System::WideChar * lpcwstrPlayList) = 0 ;
 	virtual HRESULT __stdcall AddSourceFilter(System::WideChar * lpcwstrFileName, System::WideChar * lpcwstrFilterName, /* out */ _di_IBaseFilter &ppFilter) = 0 ;
 	virtual HRESULT __stdcall SetLogFile(NativeUInt hFile) = 0 ;
-	virtual HRESULT __stdcall Abort(void) = 0 ;
-	virtual HRESULT __stdcall ShouldOperationContinue(void) = 0 ;
+	virtual HRESULT __stdcall Abort() = 0 ;
+	virtual HRESULT __stdcall ShouldOperationContinue() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{A2104830-7C70-11CF-8BCE-00AA00A3F1A6}") IFileSinkFilter  : public System::IInterface 
@@ -1702,15 +1702,15 @@ typedef int OAFilterState;
 
 __interface  INTERFACE_UUID("{56A868B1-0AD4-11CE-B03A-0020AF0BA770}") IMediaControl  : public IDispatch 
 {
-	virtual HRESULT __stdcall Run(void) = 0 ;
-	virtual HRESULT __stdcall Pause(void) = 0 ;
-	virtual HRESULT __stdcall Stop(void) = 0 ;
+	virtual HRESULT __stdcall Run() = 0 ;
+	virtual HRESULT __stdcall Pause() = 0 ;
+	virtual HRESULT __stdcall Stop() = 0 ;
 	virtual HRESULT __stdcall GetState(int msTimeout, int &pfs) = 0 ;
 	virtual HRESULT __stdcall RenderFile(System::WideChar * strFilename) = 0 ;
 	virtual HRESULT __stdcall AddSourceFilter(System::WideChar * strFilename, _di_IDispatch ppUnk) = 0 ;
 	virtual HRESULT __stdcall get_FilterCollection(/* out */ _di_IDispatch &ppUnk) = 0 ;
 	virtual HRESULT __stdcall get_RegFilterCollection(/* out */ _di_IDispatch &ppUnk) = 0 ;
-	virtual HRESULT __stdcall StopWhenReady(void) = 0 ;
+	virtual HRESULT __stdcall StopWhenReady() = 0 ;
 };
 
 //-- var, const, procedure ---------------------------------------------------

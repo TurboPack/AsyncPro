@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXPort.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXPort.pas' rev: 33.00 (Windows)
 
 #ifndef AdxportHPP
 #define AdxportHPP
@@ -70,13 +70,13 @@ private:
 	bool Executed;
 	
 protected:
-	Adport::TApdComPort* __fastcall GetComPort(void);
+	Adport::TApdComPort* __fastcall GetComPort();
 	void __fastcall SetComPort(Adport::TApdComPort* NewPort);
 	
 public:
 	__fastcall virtual TComPortOptions(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TComPortOptions(void);
-	bool __fastcall Execute(void);
+	__fastcall virtual ~TComPortOptions();
+	bool __fastcall Execute();
 	__property Adport::TApdComPort* ComPort = {read=GetComPort, write=SetComPort};
 	__property System::UnicodeString TapiDevice = {read=FTapiDevice, write=FTapiDevice};
 	__property bool ShowTapiDevices = {read=FShowTapiDevices, write=FShowTapiDevices, nodefault};

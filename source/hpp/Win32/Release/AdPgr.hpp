@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdPgr.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdPgr.pas' rev: 33.00 (Windows)
 
 #ifndef AdpgrHPP
 #define AdpgrHPP
@@ -73,14 +73,14 @@ private:
 public:
 	__fastcall TApdPgrLog(TApdCustomPager* Owner);
 	void __fastcall AddLogString(bool Verbose, const System::UnicodeString StatusString);
-	void __fastcall ClearLog(void);
+	void __fastcall ClearLog();
 	
 __published:
 	__property System::UnicodeString LogName = {read=FLogName, write=FLogName};
 	__property bool VerboseLog = {read=FVerboseLog, write=FVerboseLog, nodefault};
 	__property bool Enabled = {read=FEnabled, write=FEnabled, nodefault};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdPgrLog(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdPgrLog() { }
 	
 };
 
@@ -171,23 +171,23 @@ private:
 	bool FPortOpenedByUser;
 	System::UnicodeString FPageMode;
 	System::UnicodeString FLogName;
-	void __fastcall DoDial(void);
-	void __fastcall DoInitializePort(void);
+	void __fastcall DoDial();
+	void __fastcall DoInitializePort();
 	void __fastcall DoPortOpenCloseEx(System::TObject* CP, Adport::TApdCallbackType CallbackType);
-	void __fastcall InitCallStateFlags(void);
+	void __fastcall InitCallStateFlags();
 	void __fastcall SetUseEscapes(bool UseEscapesVal);
-	void __fastcall AddInitModemDataTrigs(void);
-	void __fastcall SetPortOpts(void);
-	void __fastcall DoOpenPort(void);
-	void __fastcall BuildTapMessages(void);
+	void __fastcall AddInitModemDataTrigs();
+	void __fastcall SetPortOpts();
+	void __fastcall DoOpenPort();
+	void __fastcall BuildTapMessages();
 	void __fastcall ModemInitTimerOnTimer(System::TObject* Sender);
 	void __fastcall PingTimerOnTimer(System::TObject* Sender);
 	void __fastcall WaitTimerOnTimer(System::TObject* Sender);
-	void __fastcall DoneModemInitTimer(void);
-	void __fastcall DonePingTimer(void);
+	void __fastcall DoneModemInitTimer();
+	void __fastcall DonePingTimer();
 	void __fastcall FreeTrigger(Adport::TApdCustomComPort* Port, System::Word &Trigger);
-	void __fastcall FreePackets(void);
-	void __fastcall InitPackets(void);
+	void __fastcall FreePackets();
+	void __fastcall InitPackets();
 	void __fastcall DoLoginString(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall DoServerSucc(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall DoServerDataMsg(System::TObject* Sender, System::AnsiString Data);
@@ -195,7 +195,7 @@ private:
 	void __fastcall DoServerFatalError(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall DoLogoutString(System::TObject* Sender, System::AnsiString Data);
 	void __fastcall PutString(const System::AnsiString S);
-	void __fastcall DoMultiLine(void);
+	void __fastcall DoMultiLine();
 	void __fastcall MakePacket(Adpacket::TApdDataPacket* ThePacket, System::UnicodeString StartStr, System::UnicodeString EndStr, Adpacket::TStringPacketNotifyEvent HandlerMethod);
 	
 protected:
@@ -206,31 +206,31 @@ protected:
 	void __fastcall DoPageError(int Error);
 	__property NativeUInt Handle = {read=FHandle, nodefault};
 	void __fastcall WndProc(Winapi::Messages::TMessage &Message);
-	void __fastcall DoStartCall(void);
-	void __fastcall TerminatePage(void);
-	void __fastcall DoFailedToSend(void);
-	void __fastcall LogOutTAP(void);
+	void __fastcall DoStartCall();
+	void __fastcall TerminatePage();
+	void __fastcall DoFailedToSend();
+	void __fastcall LogOutTAP();
 	void __fastcall DataTriggerHandler(unsigned Msg, unsigned wParam, int lParam);
 	void __fastcall DoPageStatusTrig(unsigned Trig);
-	void __fastcall FreeLoginTriggers(void);
-	void __fastcall FreeLogoutTriggers(void);
-	void __fastcall FreeMsgTriggers(void);
-	void __fastcall FreeResponseTriggers(void);
-	void __fastcall InitLoginTriggers(void);
-	void __fastcall InitLogoutTriggers(void);
-	void __fastcall InitMsgTriggers(void);
-	void __fastcall DoCurMessageBlock(void);
-	void __fastcall DoFirstMessageBlock(void);
-	void __fastcall DoNextMessageBlock(void);
+	void __fastcall FreeLoginTriggers();
+	void __fastcall FreeLogoutTriggers();
+	void __fastcall FreeMsgTriggers();
+	void __fastcall FreeResponseTriggers();
+	void __fastcall InitLoginTriggers();
+	void __fastcall InitLogoutTriggers();
+	void __fastcall InitMsgTriggers();
+	void __fastcall DoCurMessageBlock();
+	void __fastcall DoFirstMessageBlock();
+	void __fastcall DoNextMessageBlock();
 	__property System::UnicodeString ServerInitString = {read=FServerInitString, write=FServerInitString};
 	__property System::UnicodeString ServerSuccessString = {read=FServerSuccStr, write=FServerSuccStr};
 	__property System::UnicodeString ServerDataInput = {read=FServerDataInp, write=FServerDataInp};
 	__property System::UnicodeString ServerResponseFailContinue = {read=FServerRespFailCont, write=FServerRespFailCont};
 	__property System::UnicodeString ServerResponseFailTerminate = {read=FServerRespFailTerm, write=FServerRespFailTerm};
 	__property System::UnicodeString ServerDoneString = {read=FServerDoneString, write=FServerDoneString};
-	virtual void __fastcall PutMessage(void);
-	virtual void __fastcall PutSend(void);
-	virtual void __fastcall PutQuit(void);
+	virtual void __fastcall PutMessage();
+	virtual void __fastcall PutSend();
+	virtual void __fastcall PutQuit();
 	
 public:
 	__property System::Classes::TStrings* Message = {read=FMessage, write=SetMessage};
@@ -245,10 +245,10 @@ public:
 	__property System::UnicodeString LogName = {read=FLogName, write=FLogName};
 	__property System::UnicodeString Password = {read=FPassword, write=FPassword};
 	__fastcall virtual TApdCustomPager(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomPager(void);
-	void __fastcall Send(void);
-	void __fastcall Disconnect(void);
-	void __fastcall CancelCall(void);
+	__fastcall virtual ~TApdCustomPager();
+	void __fastcall Send();
+	void __fastcall Disconnect();
+	void __fastcall CancelCall();
 	__property System::Word DialAttempts = {read=FDialAttempts, write=FDialAttempts, nodefault};
 	__property System::UnicodeString PhoneNumber = {read=FPhoneNumber, write=FPhoneNumber};
 	__property bool ToneDial = {read=FToneDial, write=FToneDial, nodefault};
@@ -259,7 +259,7 @@ public:
 	__property bool BlindDial = {read=FBlindDial, write=FBlindDial, nodefault};
 	__property int TapWait = {read=FTapWait, write=FTapWait, nodefault};
 	__property int MaxMessageLength = {read=FMaxMessageLength, write=FMaxMessageLength, nodefault};
-	void __fastcall Quit(void);
+	void __fastcall Quit();
 	__property TApdPgrLog* EventLog = {read=FEventLog, write=FEventLog};
 	__property TPageStatusEvent OnPageStatus = {read=FOnPageStatus, write=FOnPageStatus};
 	__property TPageFinishEvent OnPageFinish = {read=FOnPageFinish, write=FOnPageFinish};
@@ -275,27 +275,27 @@ class PASCALIMPLEMENTATION TApdTapProperties : public System::Classes::TPersiste
 	
 private:
 	TApdCustomPager* FOwner;
-	int __fastcall GetTapWait(void);
+	int __fastcall GetTapWait();
 	void __fastcall SetTapWait(const int Value);
-	Adtapi::TApdTapiDevice* __fastcall GetTapiDevice(void);
+	Adtapi::TApdTapiDevice* __fastcall GetTapiDevice();
 	void __fastcall SetTapiDevice(Adtapi::TApdTapiDevice* const Value);
-	System::UnicodeString __fastcall GetModemInit(void);
+	System::UnicodeString __fastcall GetModemInit();
 	void __fastcall SetModemInit(const System::UnicodeString Value);
-	System::UnicodeString __fastcall GetModemHangup(void);
+	System::UnicodeString __fastcall GetModemHangup();
 	void __fastcall SetModemHangup(const System::UnicodeString Value);
-	System::Word __fastcall GetDialAttempts(void);
+	System::Word __fastcall GetDialAttempts();
 	void __fastcall SetDialAttempts(const System::Word Value);
-	System::UnicodeString __fastcall GetDialPrefix(void);
+	System::UnicodeString __fastcall GetDialPrefix();
 	void __fastcall SetDialPrefix(const System::UnicodeString Value);
-	bool __fastcall GetTapHotLine(void);
+	bool __fastcall GetTapHotLine();
 	void __fastcall SetTapHotLine(const bool Value);
-	bool __fastcall GetBlindDial(void);
+	bool __fastcall GetBlindDial();
 	void __fastcall SetBlindDial(const bool Value);
-	bool __fastcall GetToneDial(void);
+	bool __fastcall GetToneDial();
 	void __fastcall SetToneDial(const bool Value);
-	int __fastcall GetMaxMessageLength(void);
+	int __fastcall GetMaxMessageLength();
 	void __fastcall SetMaxMessageLength(const int Value);
-	TPortOpts __fastcall GetPortOpts(void);
+	TPortOpts __fastcall GetPortOpts();
 	void __fastcall SetPortOpts(const TPortOpts Value);
 	
 public:
@@ -314,7 +314,7 @@ __published:
 	__property System::UnicodeString ModemInit = {read=GetModemInit, write=SetModemInit};
 	__property TPortOpts PortOpts = {read=GetPortOpts, write=SetPortOpts, nodefault};
 public:
-	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdTapProperties(void) { }
+	/* TPersistent.Destroy */ inline __fastcall virtual ~TApdTapProperties() { }
 	
 };
 
@@ -329,7 +329,7 @@ private:
 	
 public:
 	__fastcall virtual TApdPager(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdPager(void);
+	__fastcall virtual ~TApdPager();
 	
 __published:
 	__property Port;

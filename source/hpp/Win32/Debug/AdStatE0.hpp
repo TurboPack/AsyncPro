@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStatE0.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStatE0.pas' rev: 33.00 (Windows)
 
 #ifndef Adstate0HPP
 #define Adstate0HPP
@@ -74,14 +74,14 @@ private:
 	void __fastcall SetAvailStates(System::Classes::TStringList* const Value);
 	
 public:
-	void __fastcall Clear(void);
+	void __fastcall Clear();
 	void __fastcall SetNextState(System::UnicodeString S);
 	HIDESBASE void __fastcall SetColor(System::UnicodeString C);
 	__property System::Classes::TStringList* AvailStates = {read=FAvailStates, write=SetAvailStates};
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TfrmConditionEdit(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TfrmConditionEdit(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TfrmConditionEdit(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TfrmConditionEdit() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TfrmConditionEdit(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'OoMisc.pas' rev: 33.00 (Windows)
 
 #ifndef OomiscHPP
 #define OomiscHPP
@@ -690,15 +690,15 @@ protected:
 	System::Classes::TStream* fStream;
 	int fBytesRead;
 	int fFileSize;
-	void __fastcall ReadPage(void);
+	void __fastcall ReadPage();
 	
 public:
 	__property int BytesRead = {read=fBytesRead, nodefault};
 	__fastcall TLineReader(System::Classes::TStream* Stream);
-	__fastcall virtual ~TLineReader(void);
+	__fastcall virtual ~TLineReader();
 	__property bool EOLF = {read=fEOLF, nodefault};
 	__property int FileSize = {read=fFileSize, nodefault};
-	System::AnsiString __fastcall NextLine(void);
+	System::AnsiString __fastcall NextLine();
 };
 
 #pragma pack(pop)
@@ -719,17 +719,17 @@ private:
 	
 protected:
 	void __fastcall SetLen(int NewLen);
-	int __fastcall GetLen(void);
+	int __fastcall GetLen();
 	void __fastcall SetMaxLen(int NewMaxLen);
-	int __fastcall GetMaxLen(void);
-	int __fastcall GetBuffLen(void);
+	int __fastcall GetMaxLen();
+	int __fastcall GetBuffLen();
 	void __fastcall SetChar(unsigned Index, System::WideChar Value);
 	System::WideChar __fastcall GetChar(unsigned Index);
-	System::WideChar __fastcall GetCurChar(void);
+	System::WideChar __fastcall GetCurChar();
 	
 public:
 	__fastcall TAdStr(unsigned AMaxLen);
-	__fastcall virtual ~TAdStr(void);
+	__fastcall virtual ~TAdStr();
 	void __fastcall Assign(TAdStr* Source);
 	__property int Len = {read=GetLen, write=SetLen, nodefault};
 	__property int MaxLen = {read=GetMaxLen, write=SetMaxLen, nodefault};
@@ -738,17 +738,17 @@ public:
 	__property System::WideChar CurChar = {read=GetCurChar, nodefault};
 	__property System::WideChar * Str = {read=FString};
 	__property System::WideChar * Cur = {read=FCur};
-	void __fastcall First(void);
+	void __fastcall First();
 	void __fastcall GotoPos(unsigned Index);
-	void __fastcall Last(void);
+	void __fastcall Last();
 	void __fastcall MoveBy(int IndexBy);
-	void __fastcall Next(void);
-	void __fastcall Prev(void);
+	void __fastcall Next();
+	void __fastcall Prev();
 	void __fastcall Append(const System::UnicodeString Text)/* overload */;
 	void __fastcall Append(const System::AnsiString Text)/* overload */;
 	void __fastcall AppendTAdStr(TAdStr* TS);
 	void __fastcall AppendBuff(System::WideChar * Buff);
-	void __fastcall Clear(void);
+	void __fastcall Clear();
 	System::UnicodeString __fastcall Copy(int Index, int SegLen)/* overload */;
 	System::AnsiString __fastcall CopyAnsi(int Index, int SegLen)/* overload */;
 	void __fastcall Delete(int Index, int SegLen);
@@ -769,8 +769,8 @@ class PASCALIMPLEMENTATION TAdStrCur : public System::TObject
 	typedef System::TObject inherited;
 	
 public:
-	/* TObject.Create */ inline __fastcall TAdStrCur(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TAdStrCur(void) { }
+	/* TObject.Create */ inline __fastcall TAdStrCur() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TAdStrCur() { }
 	
 };
 
@@ -1156,14 +1156,14 @@ class PASCALIMPLEMENTATION TApdBaseComponent : public System::Classes::TComponen
 	typedef System::Classes::TComponent inherited;
 	
 protected:
-	System::UnicodeString __fastcall GetVersion(void);
+	System::UnicodeString __fastcall GetVersion();
 	void __fastcall SetVersion(const System::UnicodeString Value);
 	
 __published:
 	__property System::UnicodeString Version = {read=GetVersion, write=SetVersion, stored=false};
 public:
 	/* TComponent.Create */ inline __fastcall virtual TApdBaseComponent(System::Classes::TComponent* AOwner) : System::Classes::TComponent(AOwner) { }
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdBaseComponent(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdBaseComponent() { }
 	
 };
 
@@ -1173,7 +1173,7 @@ class PASCALIMPLEMENTATION TApdBaseWinControl : public Vcl::Controls::TWinContro
 	typedef Vcl::Controls::TWinControl inherited;
 	
 protected:
-	System::UnicodeString __fastcall GetVersion(void);
+	System::UnicodeString __fastcall GetVersion();
 	void __fastcall SetVersion(const System::UnicodeString Value);
 	
 __published:
@@ -1181,7 +1181,7 @@ __published:
 public:
 	/* TWinControl.Create */ inline __fastcall virtual TApdBaseWinControl(System::Classes::TComponent* AOwner) : Vcl::Controls::TWinControl(AOwner) { }
 	/* TWinControl.CreateParented */ inline __fastcall TApdBaseWinControl(HWND ParentWindow) : Vcl::Controls::TWinControl(ParentWindow) { }
-	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdBaseWinControl(void) { }
+	/* TWinControl.Destroy */ inline __fastcall virtual ~TApdBaseWinControl() { }
 	
 };
 
@@ -1191,14 +1191,14 @@ class PASCALIMPLEMENTATION TApdBaseOleControl : public Vcl::Olectrls::TOleContro
 	typedef Vcl::Olectrls::TOleControl inherited;
 	
 protected:
-	System::UnicodeString __fastcall GetVersion(void);
+	System::UnicodeString __fastcall GetVersion();
 	void __fastcall SetVersion(const System::UnicodeString Value);
 	
 __published:
 	__property System::UnicodeString Version = {read=GetVersion, write=SetVersion, stored=false};
 public:
 	/* TOleControl.Create */ inline __fastcall virtual TApdBaseOleControl(System::Classes::TComponent* AOwner) : Vcl::Olectrls::TOleControl(AOwner) { }
-	/* TOleControl.Destroy */ inline __fastcall virtual ~TApdBaseOleControl(void) { }
+	/* TOleControl.Destroy */ inline __fastcall virtual ~TApdBaseOleControl() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdBaseOleControl(HWND ParentWindow) : Vcl::Olectrls::TOleControl(ParentWindow) { }
@@ -1211,14 +1211,14 @@ class PASCALIMPLEMENTATION TApdBaseGraphicControl : public Vcl::Controls::TGraph
 	typedef Vcl::Controls::TGraphicControl inherited;
 	
 protected:
-	System::UnicodeString __fastcall GetVersion(void);
+	System::UnicodeString __fastcall GetVersion();
 	void __fastcall SetVersion(const System::UnicodeString Value);
 	
 __published:
 	__property System::UnicodeString Version = {read=GetVersion, write=SetVersion, stored=false};
 public:
 	/* TGraphicControl.Create */ inline __fastcall virtual TApdBaseGraphicControl(System::Classes::TComponent* AOwner) : Vcl::Controls::TGraphicControl(AOwner) { }
-	/* TGraphicControl.Destroy */ inline __fastcall virtual ~TApdBaseGraphicControl(void) { }
+	/* TGraphicControl.Destroy */ inline __fastcall virtual ~TApdBaseGraphicControl() { }
 	
 };
 
@@ -1228,14 +1228,14 @@ class PASCALIMPLEMENTATION TApdBaseScrollingWinControl : public Vcl::Forms::TScr
 	typedef Vcl::Forms::TScrollingWinControl inherited;
 	
 protected:
-	System::UnicodeString __fastcall GetVersion(void);
+	System::UnicodeString __fastcall GetVersion();
 	void __fastcall SetVersion(const System::UnicodeString Value);
 	
 __published:
 	__property System::UnicodeString Version = {read=GetVersion, write=SetVersion, stored=false};
 public:
 	/* TScrollingWinControl.Create */ inline __fastcall virtual TApdBaseScrollingWinControl(System::Classes::TComponent* AOwner) : Vcl::Forms::TScrollingWinControl(AOwner) { }
-	/* TScrollingWinControl.Destroy */ inline __fastcall virtual ~TApdBaseScrollingWinControl(void) { }
+	/* TScrollingWinControl.Destroy */ inline __fastcall virtual ~TApdBaseScrollingWinControl() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdBaseScrollingWinControl(HWND ParentWindow) : Vcl::Forms::TScrollingWinControl(ParentWindow) { }

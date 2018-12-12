@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdSapiEn.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdSapiEn.pas' rev: 33.00 (Windows)
 
 #ifndef AdsapienHPP
 #define AdsapienHPP
@@ -145,7 +145,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall EApdSapiEngineException(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdSapiEngineException(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdSapiEngineException(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~EApdSapiEngineException(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~EApdSapiEngineException() { }
 	
 };
 
@@ -166,8 +166,8 @@ private:
 protected:
 	bool __fastcall CheckIndex(int x);
 	TApdTTSAge __fastcall GetAge(int x);
-	int __fastcall GetCount(void);
-	int __fastcall GetCurrentVoice(void);
+	int __fastcall GetCount();
+	int __fastcall GetCurrentVoice();
 	System::UnicodeString __fastcall GetDialect(int x);
 	int __fastcall GetEngineFeatures(int x);
 	System::UnicodeString __fastcall GetEngineID(int x);
@@ -204,8 +204,8 @@ __published:
 	__property int Count = {read=GetCount, nodefault};
 	__property int CurrentVoice = {read=GetCurrentVoice, write=SetCurrentVoice, nodefault};
 public:
-	/* TObject.Create */ inline __fastcall TApdSSVoices(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdSSVoices(void) { }
+	/* TObject.Create */ inline __fastcall TApdSSVoices() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdSSVoices() { }
 	
 };
 
@@ -225,8 +225,8 @@ private:
 	
 protected:
 	bool __fastcall CheckIndex(int x);
-	int __fastcall GetCount(void);
-	int __fastcall GetCurrentEngine(void);
+	int __fastcall GetCount();
+	int __fastcall GetCurrentEngine();
 	System::UnicodeString __fastcall GetDialect(int x);
 	int __fastcall GetEngineFeatures(int x);
 	System::UnicodeString __fastcall GetEngineId(int x);
@@ -263,8 +263,8 @@ __published:
 	__property int Count = {read=GetCount, nodefault};
 	__property int CurrentEngine = {read=GetCurrentEngine, write=SetCurrentEngine, nodefault};
 public:
-	/* TObject.Create */ inline __fastcall TApdSREngines(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TApdSREngines(void) { }
+	/* TObject.Create */ inline __fastcall TApdSREngines() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TApdSREngines() { }
 	
 };
 
@@ -308,10 +308,10 @@ private:
 	TApdSRVUMeterEvent FOnVUMeter;
 	
 protected:
-	System::Word __fastcall GetSRAmplitude(void);
-	int __fastcall GetSRAutoGain(void);
+	System::Word __fastcall GetSRAmplitude();
+	int __fastcall GetSRAutoGain();
 	void __fastcall InitializeSpeaking(int &CSet, int &Options);
-	virtual void __fastcall Loaded(void);
+	virtual void __fastcall Loaded();
 	void __fastcall SetAutoTrain(bool v);
 	void __fastcall SetCharSet(TApdCharacterSet v);
 	void __fastcall SetDictation(bool v);
@@ -342,19 +342,19 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomSapiEngine(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomSapiEngine(void);
+	__fastcall virtual ~TApdCustomSapiEngine();
 	void __fastcall CheckError(unsigned ErrorCode);
 	void __fastcall DeRegisterPhraseFinishHook(TApdPhraseFinishMethod PhraseFinishMethod);
-	void __fastcall InitializeSapi(void);
-	void __fastcall InitializeSR(void);
-	void __fastcall InitializeSS(void);
-	bool __fastcall IsSapi4Installed(void);
-	void __fastcall Listen(void);
-	void __fastcall PauseListening(void);
-	void __fastcall PauseSpeaking(void);
+	void __fastcall InitializeSapi();
+	void __fastcall InitializeSR();
+	void __fastcall InitializeSS();
+	bool __fastcall IsSapi4Installed();
+	void __fastcall Listen();
+	void __fastcall PauseListening();
+	void __fastcall PauseSpeaking();
 	void __fastcall RegisterPhraseFinishHook(TApdPhraseFinishMethod PhraseFinishMethod);
-	void __fastcall ResumeListening(void);
-	void __fastcall ResumeSpeaking(void);
+	void __fastcall ResumeListening();
+	void __fastcall ResumeSpeaking();
 	void __fastcall ShowAboutDlg(const System::UnicodeString Caption);
 	void __fastcall ShowGeneralDlg(const System::UnicodeString Caption);
 	void __fastcall ShowLexiconDlg(const System::UnicodeString Caption);
@@ -372,9 +372,9 @@ public:
 	void __fastcall SpeakFileToFile(const System::UnicodeString InFile, const System::UnicodeString OutFile);
 	void __fastcall SpeakStream(System::Classes::TStream* Stream, System::UnicodeString FileName);
 	void __fastcall SpeakToFile(const System::UnicodeString Text, const System::UnicodeString FileName);
-	void __fastcall StopListening(void);
-	void __fastcall StopSpeaking(void);
-	void __fastcall WaitUntilDoneSpeaking(void);
+	void __fastcall StopListening();
+	void __fastcall StopSpeaking();
+	void __fastcall WaitUntilDoneSpeaking();
 	__property Adisapi::TDirectSR* DirectSR = {read=FiDirectSR, write=FiDirectSR};
 	__property Adisapi::TDirectSS* DirectSS = {read=FiDirectSS, write=FiDirectSS};
 	__property bool InitSR = {read=FInitSR, write=SetInitSR, default=1};
@@ -433,7 +433,7 @@ __published:
 	__property OnVUMeter;
 public:
 	/* TApdCustomSapiEngine.Create */ inline __fastcall virtual TApdSapiEngine(System::Classes::TComponent* AOwner) : TApdCustomSapiEngine(AOwner) { }
-	/* TApdCustomSapiEngine.Destroy */ inline __fastcall virtual ~TApdSapiEngine(void) { }
+	/* TApdCustomSapiEngine.Destroy */ inline __fastcall virtual ~TApdSapiEngine() { }
 	
 };
 

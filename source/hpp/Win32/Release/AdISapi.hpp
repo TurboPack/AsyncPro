@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdISapi.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdISapi.pas' rev: 33.00 (Windows)
 
 #ifndef AdisapiHPP
 #define AdisapiHPP
@@ -35,13 +35,13 @@ namespace Adisapi
 struct SDATA;
 struct LANGUAGEW;
 struct SRPHRASEW;
-__interface IAudioMultiMediaDevice;
+__interface DELPHIINTERFACE IAudioMultiMediaDevice;
 typedef System::DelphiInterface<IAudioMultiMediaDevice> _di_IAudioMultiMediaDevice;
-__interface IAudioTel;
+__interface DELPHIINTERFACE IAudioTel;
 typedef System::DelphiInterface<IAudioTel> _di_IAudioTel;
-__interface IDirectSR;
+__interface DELPHIINTERFACE IDirectSR;
 typedef System::DelphiInterface<IDirectSR> _di_IDirectSR;
-__interface IDirectSS;
+__interface DELPHIINTERFACE IDirectSS;
 typedef System::DelphiInterface<IDirectSS> _di_IDirectSS;
 class DELPHICLASS TDirectSR;
 class DELPHICLASS TDirectSS;
@@ -158,7 +158,7 @@ typedef void __fastcall (__closure *TDirectSSVisualFuture)(System::TObject* Send
 
 __interface  INTERFACE_UUID("{B68AD320-C743-11CD-80E5-00AA003E4B50}") IAudioMultiMediaDevice  : public System::IInterface 
 {
-	virtual HRESULT __stdcall CustomMessage(unsigned uMsg, const SDATA dData) = 0 ;
+	virtual HRESULT __stdcall CustomMessage(unsigned uMsg, SDATA dData) = 0 ;
 	virtual HRESULT __stdcall DeviceNumGet(unsigned &dwDeviceID) = 0 ;
 	virtual HRESULT __stdcall DeviceNumSet(unsigned dwDeviceID) = 0 ;
 };
@@ -168,7 +168,7 @@ typedef _di_IAudioMultiMediaDevice *PIAUDIOMULTIMEDIADEVICE;
 __interface  INTERFACE_UUID("{2EC5A8A7-E65B-11D0-8FAC-08002BE4E62A}") IAudioTel  : public System::IInterface 
 {
 	virtual HRESULT __stdcall AudioObject(System::_di_IInterface AudioObject) = 0 ;
-	virtual HRESULT __stdcall WaveFormatSet(const SDATA dWFEX) = 0 ;
+	virtual HRESULT __stdcall WaveFormatSet(SDATA dWFEX) = 0 ;
 };
 
 typedef _di_IAudioTel *PIAUDIOTEL;
@@ -189,8 +189,8 @@ __interface  INTERFACE_UUID("{4E3D9D1E-0C63-11D1-8BFB-0060081841DE}") IDirectSR 
 	virtual HRESULT __safecall Set_debug(short pVal) = 0 ;
 	virtual HRESULT __safecall Get_Initialized(short &__Get_Initialized_result) = 0 ;
 	virtual HRESULT __safecall Set_Initialized(short pVal) = 0 ;
-	virtual HRESULT __safecall Deactivate(void) = 0 ;
-	virtual HRESULT __safecall Activate(void) = 0 ;
+	virtual HRESULT __safecall Deactivate() = 0 ;
+	virtual HRESULT __safecall Activate() = 0 ;
 	virtual HRESULT __safecall Get_LastHeard(System::WideString &__Get_LastHeard_result) = 0 ;
 	virtual HRESULT __safecall Set_LastHeard(const System::WideString pVal) = 0 ;
 	virtual HRESULT __safecall GrammarFromString(const System::WideString grammar) = 0 ;
@@ -227,8 +227,8 @@ __interface  INTERFACE_UUID("{4E3D9D1E-0C63-11D1-8BFB-0060081841DE}") IDirectSR 
 	virtual HRESULT __safecall Get_MinCompleteTimeOut(int &__Get_MinCompleteTimeOut_result) = 0 ;
 	virtual HRESULT __safecall Get_MaxIncompleteTimeOut(int &__Get_MaxIncompleteTimeOut_result) = 0 ;
 	virtual HRESULT __safecall Get_MinIncompleteTimeOut(int &__Get_MinIncompleteTimeOut_result) = 0 ;
-	virtual HRESULT __safecall Pause(void) = 0 ;
-	virtual HRESULT __safecall Resume(void) = 0 ;
+	virtual HRESULT __safecall Pause() = 0 ;
+	virtual HRESULT __safecall Resume() = 0 ;
 	virtual HRESULT __safecall PosnGet(/* out */ int &hi, /* out */ int &lo) = 0 ;
 	virtual HRESULT __safecall AboutDlg(int hwnd, const System::WideString title) = 0 ;
 	virtual HRESULT __safecall GeneralDlg(int hwnd, const System::WideString title) = 0 ;
@@ -240,7 +240,7 @@ __interface  INTERFACE_UUID("{4E3D9D1E-0C63-11D1-8BFB-0060081841DE}") IDirectSR 
 	virtual HRESULT __safecall Get_CreateResultsObject(int results, int &__Get_CreateResultsObject_result) = 0 ;
 	virtual HRESULT __safecall DestroyResultsObject(int resobj) = 0 ;
 	virtual HRESULT __safecall Select(int index) = 0 ;
-	virtual HRESULT __safecall Listen(void) = 0 ;
+	virtual HRESULT __safecall Listen() = 0 ;
 	virtual HRESULT __safecall SelectEngine(int index) = 0 ;
 	virtual HRESULT __safecall FindEngine(const System::WideString EngineId, const System::WideString MfgName, const System::WideString ProductName, const System::WideString ModeID, const System::WideString ModeName, int LanguageID, const System::WideString dialect, int Sequencing, int MaxWordsVocab, int MaxWordsState, int Grammars, int Features, int Interfaces, int EngineFeatures, int RankEngineID, int RankMfgName, int RankProductName, int RankModeID, int RankModeName, int RankLanguage, int RankDialect, int RankSequencing, int RankMaxWordsVocab, int RankMaxWordsState, int RankGrammars, int RankFeatures, int RankInterfaces, int RankEngineFeatures, int &__FindEngine_result) = 0 ;
 	virtual HRESULT __safecall Get_CountEngines(int &__Get_CountEngines_result) = 0 ;
@@ -304,7 +304,7 @@ __interface  INTERFACE_UUID("{4E3D9D1E-0C63-11D1-8BFB-0060081841DE}") IDirectSR 
 	virtual HRESULT __safecall Get_GraphDWORDGet(int results, int id, const System::WideString Attrib, int &__Get_GraphDWORDGet_result) = 0 ;
 	virtual HRESULT __safecall RenameSpeaker(const System::WideString OldName, const System::WideString newName) = 0 ;
 	virtual HRESULT __safecall DeleteSpeaker(const System::WideString Speaker) = 0 ;
-	virtual HRESULT __safecall CommitSpeaker(void) = 0 ;
+	virtual HRESULT __safecall CommitSpeaker() = 0 ;
 	virtual HRESULT __safecall RevertSpeaker(const System::WideString Speaker) = 0 ;
 	virtual HRESULT __safecall Get_SpeakerInfoChanged(int &filetimehi, int &filetimelo, int &__Get_SpeakerInfoChanged_result) = 0 ;
 	virtual HRESULT __safecall TrainPhrasesDlg(int hwnd, const System::WideString title) = 0 ;
@@ -535,11 +535,11 @@ private:
 	TDirectSRError FOnError;
 	TDirectSRwarning FOnwarning;
 	_di_IDirectSR FIntf;
-	_di_IDirectSR __fastcall GetControlInterface(void);
+	_di_IDirectSR __fastcall GetControlInterface();
 	
 protected:
-	HIDESBASE void __fastcall CreateControl(void);
-	virtual void __fastcall InitControlData(void);
+	HIDESBASE void __fastcall CreateControl();
+	virtual void __fastcall InitControlData();
 	int __fastcall Get_Wave(int results);
 	System::WideString __fastcall Get_Phrase(int results, int rank);
 	int __fastcall Get_CreateResultsObject(int results);
@@ -564,14 +564,14 @@ protected:
 	int __fastcall Get_SpeakerInfoChanged(int &filetimehi, int &filetimelo);
 	
 public:
-	void __fastcall Deactivate(void);
-	void __fastcall Activate(void);
+	void __fastcall Deactivate();
+	void __fastcall Activate();
 	void __fastcall GrammarFromString(const System::WideString grammar);
 	void __fastcall GrammarFromFile(const System::WideString FileName);
 	void __fastcall GrammarFromResource(int Instance, int ResID);
 	void __fastcall GrammarFromStream(int Stream);
-	void __fastcall Pause(void);
-	void __fastcall Resume(void);
+	void __fastcall Pause();
+	void __fastcall Resume();
 	void __fastcall PosnGet(/* out */ int &hi, /* out */ int &lo);
 	void __fastcall AboutDlg(int hwnd, const System::WideString title);
 	void __fastcall GeneralDlg(int hwnd, const System::WideString title);
@@ -580,7 +580,7 @@ public:
 	void __fastcall TrainMicDlg(int hwnd, const System::WideString title);
 	void __fastcall DestroyResultsObject(int resobj);
 	void __fastcall Select(int index);
-	void __fastcall Listen(void);
+	void __fastcall Listen();
 	void __fastcall SelectEngine(int index);
 	int __fastcall FindEngine(const System::WideString EngineId, const System::WideString MfgName, const System::WideString ProductName, const System::WideString ModeID, const System::WideString ModeName, int LanguageID, const System::WideString dialect, int Sequencing, int MaxWordsVocab, int MaxWordsState, int Grammars, int Features, int Interfaces, int EngineFeatures, int RankEngineID, int RankMfgName, int RankProductName, int RankModeID, int RankModeName, int RankLanguage, int RankDialect, int RankSequencing, int RankMaxWordsVocab, int RankMaxWordsState, int RankGrammars, int RankFeatures, int RankInterfaces, int RankEngineFeatures);
 	System::WideString __fastcall ModeName(int index);
@@ -616,7 +616,7 @@ public:
 	void __fastcall GetAllNodes(int results, int &Nodes, int &countnodes);
 	void __fastcall RenameSpeaker(const System::WideString OldName, const System::WideString newName);
 	void __fastcall DeleteSpeaker(const System::WideString Speaker);
-	void __fastcall CommitSpeaker(void);
+	void __fastcall CommitSpeaker();
 	void __fastcall RevertSpeaker(const System::WideString Speaker);
 	void __fastcall TrainPhrasesDlg(int hwnd, const System::WideString title);
 	void __fastcall LexAddTo(int lex, int charset, const System::WideString text, const System::WideString pronounce, int partofspeech, int EngineInfo, int engineinfosize);
@@ -712,7 +712,7 @@ __published:
 	__property TDirectSRwarning Onwarning = {read=FOnwarning, write=FOnwarning};
 public:
 	/* TOleControl.Create */ inline __fastcall virtual TDirectSR(System::Classes::TComponent* AOwner) : Vcl::Olectrls::TOleControl(AOwner) { }
-	/* TOleControl.Destroy */ inline __fastcall virtual ~TDirectSR(void) { }
+	/* TOleControl.Destroy */ inline __fastcall virtual ~TDirectSR() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TDirectSR(HWND ParentWindow) : Vcl::Olectrls::TOleControl(ParentWindow) { }
@@ -766,9 +766,9 @@ __interface  INTERFACE_UUID("{EEE78590-FE22-11D0-8BEF-0060081841DE}") IDirectSS 
 	virtual HRESULT __safecall Get_MaxRealTime(int &__Get_MaxRealTime_result) = 0 ;
 	virtual HRESULT __safecall Get_MinRealTime(int &__Get_MinRealTime_result) = 0 ;
 	virtual HRESULT __safecall Set_MinRealTime(int pVal) = 0 ;
-	virtual HRESULT __safecall AudioPause(void) = 0 ;
-	virtual HRESULT __safecall AudioReset(void) = 0 ;
-	virtual HRESULT __safecall AudioResume(void) = 0 ;
+	virtual HRESULT __safecall AudioPause() = 0 ;
+	virtual HRESULT __safecall AudioReset() = 0 ;
+	virtual HRESULT __safecall AudioResume() = 0 ;
 	virtual HRESULT __safecall Inject(const System::WideString value) = 0 ;
 	virtual HRESULT __safecall Get_Tagged(int &__Get_Tagged_result) = 0 ;
 	virtual HRESULT __safecall Set_Tagged(int pVal) = 0 ;
@@ -1031,11 +1031,11 @@ private:
 	TDirectSSwarning FOnwarning;
 	TDirectSSVisualFuture FOnVisualFuture;
 	_di_IDirectSS FIntf;
-	_di_IDirectSS __fastcall GetControlInterface(void);
+	_di_IDirectSS __fastcall GetControlInterface();
 	
 protected:
-	HIDESBASE void __fastcall CreateControl(void);
-	virtual void __fastcall InitControlData(void);
+	HIDESBASE void __fastcall CreateControl();
+	virtual void __fastcall InitControlData();
 	int __fastcall Get_Attributes(int Attrib);
 	void __fastcall Set_Attributes(int Attrib, int pVal);
 	System::WideString __fastcall Get_AttributeString(int Attrib);
@@ -1061,9 +1061,9 @@ public:
 	int __fastcall EngineFeatures(int index);
 	int __fastcall LanguageID(int index);
 	System::WideString __fastcall Dialect(int index);
-	void __fastcall AudioPause(void);
-	void __fastcall AudioReset(void);
-	void __fastcall AudioResume(void);
+	void __fastcall AudioPause();
+	void __fastcall AudioReset();
+	void __fastcall AudioResume();
 	void __fastcall Inject(const System::WideString value);
 	System::WideString __fastcall Phonemes(int charset, int Flags, const System::WideString input);
 	void __fastcall PosnGet(int &hi, int &lo);
@@ -1160,7 +1160,7 @@ __published:
 	__property TDirectSSwarning Onwarning = {read=FOnwarning, write=FOnwarning};
 	__property TDirectSSVisualFuture OnVisualFuture = {read=FOnVisualFuture, write=FOnVisualFuture};
 public:
-	/* TOleControl.Destroy */ inline __fastcall virtual ~TDirectSS(void) { }
+	/* TOleControl.Destroy */ inline __fastcall virtual ~TDirectSS() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TDirectSS(HWND ParentWindow) : Vcl::Olectrls::TOleControl(ParentWindow) { }

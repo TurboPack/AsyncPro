@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdPStat.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdPStat.pas' rev: 33.00 (Windows)
 
 #ifndef AdpstatHPP
 #define AdpstatHPP
@@ -74,7 +74,7 @@ public:
 	__fastcall virtual TStandardDisplay(System::Classes::TComponent* Owner);
 public:
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TStandardDisplay(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TStandardDisplay(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TStandardDisplay() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TStandardDisplay(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }
@@ -87,12 +87,12 @@ class PASCALIMPLEMENTATION TApdProtocolStatus : public Adprotcl::TApdAbstractSta
 	typedef Adprotcl::TApdAbstractStatus inherited;
 	
 __published:
-	DYNAMIC void __fastcall CreateDisplay(void);
-	DYNAMIC void __fastcall DestroyDisplay(void);
+	DYNAMIC void __fastcall CreateDisplay();
+	DYNAMIC void __fastcall DestroyDisplay();
 	virtual void __fastcall UpdateDisplay(bool First, bool Last);
 public:
 	/* TApdAbstractStatus.Create */ inline __fastcall virtual TApdProtocolStatus(System::Classes::TComponent* AOwner) : Adprotcl::TApdAbstractStatus(AOwner) { }
-	/* TApdAbstractStatus.Destroy */ inline __fastcall virtual ~TApdProtocolStatus(void) { }
+	/* TApdAbstractStatus.Destroy */ inline __fastcall virtual ~TApdProtocolStatus() { }
 	
 };
 

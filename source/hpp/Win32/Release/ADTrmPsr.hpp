@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'ADTrmPsr.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'ADTrmPsr.pas' rev: 33.00 (Windows)
 
 #ifndef AdtrmpsrHPP
 #define AdtrmpsrHPP
@@ -48,14 +48,14 @@ private:
 	
 protected:
 	virtual int __fastcall tpGetArgument(int aInx);
-	virtual System::AnsiString __fastcall tpGetSequence(void);
+	virtual System::AnsiString __fastcall tpGetSequence();
 	
 public:
 	__fastcall TAdTerminalParser(bool aUseWideChar);
-	__fastcall virtual ~TAdTerminalParser(void);
+	__fastcall virtual ~TAdTerminalParser();
 	virtual TAdParserCmdType __fastcall ProcessChar(char aCh);
 	virtual TAdParserCmdType __fastcall ProcessWideChar(System::WideChar aCh);
-	virtual void __fastcall Clear(void);
+	virtual void __fastcall Clear();
 	void __fastcall ForceCommand(int Command);
 	__property int Argument[int aInx] = {read=tpGetArgument};
 	__property int ArgumentCount = {read=FArgCount, nodefault};
@@ -81,19 +81,19 @@ private:
 	
 protected:
 	virtual int __fastcall tpGetArgument(int aInx);
-	virtual System::AnsiString __fastcall tpGetSequence(void);
-	bool __fastcall vtpGetArguments(void);
+	virtual System::AnsiString __fastcall tpGetSequence();
+	bool __fastcall vtpGetArguments();
 	TAdParserCmdType __fastcall vtpParseANSISeq(char aCh);
 	TAdParserCmdType __fastcall vtpProcessVT52(char aCh);
 	bool __fastcall vtpValidateArgsPrim(int aMinArgs, int aMaxArgs, int aDefault);
-	void __fastcall vtpGrowArgs(void);
+	void __fastcall vtpGrowArgs();
 	
 public:
 	__fastcall TAdVT100Parser(bool aUseWideChar);
-	__fastcall virtual ~TAdVT100Parser(void);
+	__fastcall virtual ~TAdVT100Parser();
 	virtual TAdParserCmdType __fastcall ProcessChar(char aCh);
 	virtual TAdParserCmdType __fastcall ProcessWideChar(System::WideChar aCh);
-	virtual void __fastcall Clear(void);
+	virtual void __fastcall Clear();
 	__property bool InVT52Mode = {read=FInVT52Mode, nodefault};
 };
 

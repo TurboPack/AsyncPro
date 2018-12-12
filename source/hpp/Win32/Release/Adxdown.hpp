@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXDown.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXDown.pas' rev: 33.00 (Windows)
 
 #ifndef AdxdownHPP
 #define AdxdownHPP
@@ -51,11 +51,11 @@ __published:
 	void __fastcall ProtocolsClick(System::TObject* Sender);
 	
 public:
-	System::UnicodeString __fastcall GetDestDirectory(void);
+	System::UnicodeString __fastcall GetDestDirectory();
 	void __fastcall SetDestDirectory(System::UnicodeString NewDir);
-	System::UnicodeString __fastcall GetReceiveName(void);
+	System::UnicodeString __fastcall GetReceiveName();
 	void __fastcall SetReceiveName(System::UnicodeString NewName);
-	Adprotcl::TProtocolType __fastcall GetProtocol(void);
+	Adprotcl::TProtocolType __fastcall GetProtocol();
 	void __fastcall SetProtocol(Adprotcl::TProtocolType NewProt);
 	__property System::UnicodeString DestDirectory = {read=GetDestDirectory, write=SetDestDirectory};
 	__property System::UnicodeString ReceiveName = {read=GetReceiveName, write=SetReceiveName};
@@ -63,7 +63,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TDownloadDialog(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TDownloadDialog(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TDownloadDialog(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TDownloadDialog() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TDownloadDialog(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }

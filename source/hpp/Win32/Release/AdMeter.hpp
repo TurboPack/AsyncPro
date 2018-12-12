@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdMeter.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdMeter.pas' rev: 33.00 (Windows)
 
 #ifndef AdmeterHPP
 #define AdmeterHPP
@@ -60,8 +60,8 @@ private:
 	void __fastcall SetStep(int Value);
 	
 protected:
-	DYNAMIC void __fastcall DoOnPosChange(void);
-	virtual void __fastcall Paint(void);
+	DYNAMIC void __fastcall DoOnPosChange();
+	virtual void __fastcall Paint();
 	void __fastcall UpdatePosition(bool Force);
 	
 public:
@@ -95,7 +95,7 @@ __published:
 	__property OnMouseUp;
 	__property OnStartDrag;
 public:
-	/* TGraphicControl.Destroy */ inline __fastcall virtual ~TApdMeter(void) { }
+	/* TGraphicControl.Destroy */ inline __fastcall virtual ~TApdMeter() { }
 	
 };
 

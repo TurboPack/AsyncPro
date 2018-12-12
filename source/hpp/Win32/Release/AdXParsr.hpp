@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdXParsr.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdXParsr.pas' rev: 33.00 (Windows)
 
 #ifndef AdxparsrHPP
 #define AdxparsrHPP
@@ -91,12 +91,12 @@ protected:
 	bool FIsStandAlone;
 	bool FHasExternals;
 	bool FXMLDecParsed;
-	void __fastcall Cleanup(void);
+	void __fastcall Cleanup();
 	void __fastcall CheckParamEntityNesting(const System::WideString aString);
 	void __fastcall DataBufferAppend(const System::WideString sVal);
-	void __fastcall DataBufferFlush(void);
-	void __fastcall DataBufferNormalize(void);
-	System::WideString __fastcall DataBufferToString(void);
+	void __fastcall DataBufferFlush();
+	void __fastcall DataBufferNormalize();
+	System::WideString __fastcall DataBufferToString();
 	System::Classes::TStringList* __fastcall DeclaredAttributes(const System::WideString sName, int aIdx);
 	int __fastcall GetAttributeDefaultValueType(const System::WideString sElemName, const System::WideString sAttrName);
 	System::WideString __fastcall GetAttributeExpandedValue(const System::WideString sElemName, const System::WideString sAttrName, int aIdx);
@@ -108,49 +108,49 @@ protected:
 	System::WideString __fastcall GetEntitySystemId(const System::WideString sEntityName);
 	int __fastcall GetEntityType(const System::WideString sEntityName, bool aPEAllowed);
 	System::WideString __fastcall GetEntityValue(const System::WideString sEntityName, bool aPEAllowed);
-	int __fastcall GetErrorCount(void);
+	int __fastcall GetErrorCount();
 	System::WideString __fastcall GetExternalTextEntityValue(const System::WideString sName, const System::WideString sPublicId, System::WideString sSystemId);
-	Adxbase::TApdCharEncoding __fastcall GetInCharSet(void);
-	void __fastcall Initialize(void);
-	bool __fastcall IsEndDocument(void);
+	Adxbase::TApdCharEncoding __fastcall GetInCharSet();
+	void __fastcall Initialize();
+	bool __fastcall IsEndDocument();
 	bool __fastcall IsWhitespace(const System::WideChar cVal);
 	bool __fastcall LoadDataSource(System::UnicodeString sSrcName, System::Classes::TStringList* oErrors);
 	System::WideString __fastcall ParseAttribute(const System::WideString sName);
 	System::WideString __fastcall ParseEntityRef(bool bPEAllowed);
-	void __fastcall ParseCDSect(void);
-	System::WideChar __fastcall ParseCharRef(void);
-	void __fastcall ParseComment(void);
-	void __fastcall ParseContent(void);
-	void __fastcall ParseDocTypeDecl(void);
-	void __fastcall ParseDocument(void);
-	void __fastcall ParseEndTag(void);
-	void __fastcall ParseEq(void);
-	void __fastcall ParseElement(void);
-	void __fastcall ParseMisc(void);
+	void __fastcall ParseCDSect();
+	System::WideChar __fastcall ParseCharRef();
+	void __fastcall ParseComment();
+	void __fastcall ParseContent();
+	void __fastcall ParseDocTypeDecl();
+	void __fastcall ParseDocument();
+	void __fastcall ParseEndTag();
+	void __fastcall ParseEq();
+	void __fastcall ParseElement();
+	void __fastcall ParseMisc();
 	System::WideString __fastcall ParseParameterEntityRef(bool aPEAllowed, bool bSkip);
 	void __fastcall ParsePCData(bool aInEntityRef);
-	void __fastcall ParsePI(void);
-	bool __fastcall ParsePIEx(void);
-	void __fastcall ParsePrim(void);
-	void __fastcall ParseProlog(void);
+	void __fastcall ParsePI();
+	bool __fastcall ParsePIEx();
+	void __fastcall ParsePrim();
+	void __fastcall ParseProlog();
 	void __fastcall ParseUntil(const int *S, const int S_High);
-	void __fastcall ParseWhitespace(void);
-	void __fastcall ParseXMLDeclaration(void);
-	void __fastcall PopDocument(void);
-	void __fastcall PushDocument(void);
+	void __fastcall ParseWhitespace();
+	void __fastcall ParseXMLDeclaration();
+	void __fastcall PopDocument();
+	void __fastcall PushDocument();
 	void __fastcall PushString(const System::WideString sVal);
 	System::WideChar __fastcall ReadChar(const bool UpdatePos);
 	void __fastcall ReadExternalIds(bool bInNotation, StringIds &sIds);
 	System::WideString __fastcall ReadLiteral(int wFlags, bool &HasEntRef);
 	System::WideString __fastcall ReadNameToken(bool aValFirst);
 	void __fastcall Require(const int *S, const int S_High);
-	void __fastcall RequireWhitespace(void);
+	void __fastcall RequireWhitespace();
 	void __fastcall SetAttribute(const System::WideString sElemName, const System::WideString sName, int wType, const System::WideString sEnum, const System::WideString sValue, int wValueType);
 	void __fastcall SetElement(const System::WideString sName, int wType, const System::WideString sContentModel);
 	void __fastcall SetEntity(const System::WideString sEntityName, int wClass, const System::WideString sPublicId, const System::WideString sSystemId, const System::WideString sValue, const System::WideString sNotationName, bool aIsPE);
 	void __fastcall SetInternalEntity(const System::WideString sName, const System::WideString sValue, bool aIsPE);
 	void __fastcall SetNotation(const System::WideString sNotationName, const System::WideString sPublicId, const System::WideString sSystemId);
-	void __fastcall SkipChar(void);
+	void __fastcall SkipChar();
 	void __fastcall SkipWhitespace(bool aNextDoc);
 	bool __fastcall TryRead(const int *S, const int S_High);
 	void __fastcall ValidateAttribute(const System::WideString aValue, bool HasEntRef);
@@ -166,7 +166,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdParser(System::Classes::TComponent* oOwner);
-	__fastcall virtual ~TApdParser(void);
+	__fastcall virtual ~TApdParser();
 	System::WideString __fastcall GetErrorMsg(int wIdx);
 	bool __fastcall ParseDataSource(const System::UnicodeString sSource);
 	bool __fastcall ParseMemory(void *aBuffer, int aSize);

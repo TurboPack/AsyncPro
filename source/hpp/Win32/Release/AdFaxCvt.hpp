@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdFaxCvt.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdFaxCvt.pas' rev: 33.00 (Windows)
 
 #ifndef AdfaxcvtHPP
 #define AdfaxcvtHPP
@@ -96,8 +96,8 @@ protected:
 	bool FResetShellTimer;
 	int FShellPageCount;
 	bool FPadPage;
-	void __fastcall CreateData(void);
-	void __fastcall DestroyData(void);
+	void __fastcall CreateData();
+	void __fastcall DestroyData();
 	void __fastcall SetCvtOptions(const TFaxCvtOptionsSet NewOpts);
 	void __fastcall SetDocumentFile(const System::UnicodeString NewFile);
 	void __fastcall SetEnhFont(Vcl::Graphics::TFont* Value);
@@ -109,7 +109,7 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomFaxConverter(System::Classes::TComponent* Owner);
-	__fastcall virtual ~TApdCustomFaxConverter(void);
+	__fastcall virtual ~TApdCustomFaxConverter();
 	__property TFaxInputDocumentType InputDocumentType = {read=FInputDocumentType, write=FInputDocumentType, default=0};
 	__property TFaxCvtOptionsSet Options = {read=FOptions, write=SetCvtOptions, default=13};
 	__property TFaxResolution Resolution = {read=FResolution, write=FResolution, default=0};
@@ -131,20 +131,20 @@ public:
 	__property TFaxOpenFileEvent OnOpenUserFile = {read=FOpenUserFile, write=FOpenUserFile};
 	__property TFaxCloseFileEvent OnCloseUserFile = {read=FCloseUserFile, write=FCloseUserFile};
 	__property TFaxReadLineEvent OnReadUserLine = {read=FReadUserLine, write=FReadUserLine};
-	void __fastcall ConvertToFile(void);
-	void __fastcall Convert(void);
+	void __fastcall ConvertToFile();
+	void __fastcall Convert();
 	void __fastcall ConvertBitmapToFile(Vcl::Graphics::TBitmap* const Bmp);
 	void __fastcall ConvertToHighRes(const System::UnicodeString FileName);
 	void __fastcall ConvertToLowRes(const System::UnicodeString FileName);
-	void __fastcall OpenFile(void);
-	void __fastcall CloseFile(void);
+	void __fastcall OpenFile();
+	void __fastcall CloseFile();
 	void __fastcall GetRasterLine(void *Buffer, int &BufLen, bool &EndOfPage, bool &MorePages);
 	void __fastcall CompressRasterLine(void *Buffer, void *OutputData, int &OutLen);
 	void __fastcall MakeEndOfPage(void *Buffer, int &BufLen);
 	virtual void __fastcall Status(const bool Starting, const bool Ending, const int PagesConverted, const int LinesConverted, const int BytesToRead, const int BytesRead, bool &Abort);
 	virtual void __fastcall OutputLine(void *Data, int Len, bool EndOfPage, bool MorePages);
 	virtual void __fastcall OpenUserFile(const System::UnicodeString FName);
-	virtual void __fastcall CloseUserFile(void);
+	virtual void __fastcall CloseUserFile();
 	void __fastcall ReadUserLine(void *Data, int &Len, bool &EndOfPage, bool &MorePages);
 };
 
@@ -175,7 +175,7 @@ __published:
 	__property OnReadUserLine;
 public:
 	/* TApdCustomFaxConverter.Create */ inline __fastcall virtual TApdFaxConverter(System::Classes::TComponent* Owner) : TApdCustomFaxConverter(Owner) { }
-	/* TApdCustomFaxConverter.Destroy */ inline __fastcall virtual ~TApdFaxConverter(void) { }
+	/* TApdCustomFaxConverter.Destroy */ inline __fastcall virtual ~TApdFaxConverter() { }
 	
 };
 
@@ -210,37 +210,37 @@ protected:
 	TUnpackOutputLineEvent FOutputLine;
 	TUnpackStatusEvent FStatus;
 	Oomisc::TUnpackFax *Data;
-	void __fastcall CreateData(void);
-	void __fastcall DestroyData(void);
+	void __fastcall CreateData();
+	void __fastcall DestroyData();
 	virtual void __fastcall OutputLine(const bool Starting, const bool Ending, const System::Sysutils::PByteArray Data, const unsigned Len, const unsigned PageNum);
 	virtual void __fastcall Status(const System::UnicodeString FName, const unsigned PageNum, const int BytesUnpacked, const int BytesToUnpack);
 	void __fastcall SetHorizMult(const unsigned NewHorizMult);
 	void __fastcall SetHorizDiv(const unsigned NewHorizDiv);
 	void __fastcall SetVertMult(const unsigned NewVertMult);
 	void __fastcall SetVertDiv(const unsigned NewVertDiv);
-	unsigned __fastcall GetNumPages(void);
-	TFaxResolution __fastcall GetFaxResolution(void);
-	TFaxWidth __fastcall GetFaxWidth(void);
+	unsigned __fastcall GetNumPages();
+	TFaxResolution __fastcall GetFaxResolution();
+	TFaxWidth __fastcall GetFaxWidth();
 	void __fastcall SetInFileName(const System::UnicodeString NewName);
 	void __fastcall SetUnpackerOptions(const TUnpackerOptionsSet NewUnpackerOptions);
-	System::UnicodeString __fastcall InFNameZ(void);
-	System::UnicodeString __fastcall OutFNameZ(void);
+	System::UnicodeString __fastcall InFNameZ();
+	System::UnicodeString __fastcall OutFNameZ();
 	
 public:
 	__fastcall virtual TApdCustomFaxUnpacker(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomFaxUnpacker(void);
+	__fastcall virtual ~TApdCustomFaxUnpacker();
 	void __fastcall UnpackPage(const unsigned Page);
-	void __fastcall UnpackFile(void);
+	void __fastcall UnpackFile();
 	Vcl::Graphics::TBitmap* __fastcall UnpackPageToBitmap(const unsigned Page);
-	Vcl::Graphics::TBitmap* __fastcall UnpackFileToBitmap(void);
+	Vcl::Graphics::TBitmap* __fastcall UnpackFileToBitmap();
 	void __fastcall UnpackPageToPcx(const unsigned Page);
-	void __fastcall UnpackFileToPcx(void);
+	void __fastcall UnpackFileToPcx();
 	void __fastcall UnpackPageToDcx(const unsigned Page);
-	void __fastcall UnpackFileToDcx(void);
+	void __fastcall UnpackFileToDcx();
 	void __fastcall UnpackPageToTiff(const unsigned Page);
-	void __fastcall UnpackFileToTiff(void);
+	void __fastcall UnpackFileToTiff();
 	void __fastcall UnpackPageToBmp(const unsigned Page);
-	void __fastcall UnpackFileToBmp(void);
+	void __fastcall UnpackFileToBmp();
 	void __fastcall ExtractPage(const unsigned Page);
 	__property TUnpackerOptionsSet Options = {read=FOptions, write=SetUnpackerOptions, default=1};
 	__property bool WhitespaceCompression = {read=FWhitespaceCompression, write=FWhitespaceCompression, default=0};
@@ -284,7 +284,7 @@ __published:
 	__property OnStatus;
 public:
 	/* TApdCustomFaxUnpacker.Create */ inline __fastcall virtual TApdFaxUnpacker(System::Classes::TComponent* AOwner) : TApdCustomFaxUnpacker(AOwner) { }
-	/* TApdCustomFaxUnpacker.Destroy */ inline __fastcall virtual ~TApdFaxUnpacker(void) { }
+	/* TApdCustomFaxUnpacker.Destroy */ inline __fastcall virtual ~TApdFaxUnpacker() { }
 	
 };
 
@@ -307,7 +307,7 @@ public:
 	/* Exception.CreateResHelp */ inline __fastcall EApdAPFGraphicError(System::PResStringRec ResStringRec, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdAPFGraphicError(System::PResStringRec ResStringRec, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(ResStringRec, Args, Args_High, AHelpContext) { }
 	/* Exception.CreateResFmtHelp */ inline __fastcall EApdAPFGraphicError(NativeUInt Ident, const System::TVarRec *Args, const int Args_High, int AHelpContext)/* overload */ : System::Sysutils::Exception(Ident, Args, Args_High, AHelpContext) { }
-	/* Exception.Destroy */ inline __fastcall virtual ~EApdAPFGraphicError(void) { }
+	/* Exception.Destroy */ inline __fastcall virtual ~EApdAPFGraphicError() { }
 	
 };
 
@@ -325,20 +325,20 @@ private:
 	
 protected:
 	virtual void __fastcall Draw(Vcl::Graphics::TCanvas* ACanvas, const System::Types::TRect &Rect);
-	void __fastcall FreeImages(void);
-	virtual bool __fastcall GetEmpty(void);
-	virtual int __fastcall GetHeight(void);
-	int __fastcall GetNumPages(void);
+	void __fastcall FreeImages();
+	virtual bool __fastcall GetEmpty();
+	virtual int __fastcall GetHeight();
+	int __fastcall GetNumPages();
 	Vcl::Graphics::TBitmap* __fastcall GetPage(int x);
-	virtual int __fastcall GetWidth(void);
+	virtual int __fastcall GetWidth();
 	void __fastcall SetCurrentPage(int v);
 	virtual void __fastcall SetHeight(int v);
 	void __fastcall SetPage(int x, Vcl::Graphics::TBitmap* v);
 	virtual void __fastcall SetWidth(int v);
 	
 public:
-	__fastcall virtual TApdAPFGraphic(void);
-	__fastcall virtual ~TApdAPFGraphic(void);
+	__fastcall virtual TApdAPFGraphic();
+	__fastcall virtual ~TApdAPFGraphic();
 	virtual void __fastcall Assign(System::Classes::TPersistent* Source);
 	virtual void __fastcall AssignTo(System::Classes::TPersistent* Dest);
 	virtual void __fastcall LoadFromClipboardFormat(System::Word AFormat, NativeUInt AData, HPALETTE APalette);

@@ -1,0 +1,12 @@
+
+*.stat
+__history
+*.local
+*.identcache
+*.dcu
+*.dsk
+*.~*
+*.obj
+Release
+Debug
+*.tmp

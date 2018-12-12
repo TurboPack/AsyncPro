@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LNSWin32.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'LNSWin32.pas' rev: 33.00 (Windows)
 
 #ifndef Lnswin32HPP
 #define Lnswin32HPP
@@ -39,12 +39,12 @@ class PASCALIMPLEMENTATION TApdWin32Thread : public Awuser::TApdDispatcherThread
 	typedef Awuser::TApdDispatcherThread inherited;
 	
 private:
-	NativeUInt __fastcall GetComHandle(void);
-	bool __fastcall GetDLoggingOn(void);
-	NativeUInt __fastcall GetGeneralEvent(void);
-	bool __fastcall GetKillThreads(void);
-	Lnsqueue::TIOQueue* __fastcall GetQueue(void);
-	System::Syncobjs::TEvent* __fastcall GetSerialEvent(void);
+	NativeUInt __fastcall GetComHandle();
+	bool __fastcall GetDLoggingOn();
+	NativeUInt __fastcall GetGeneralEvent();
+	bool __fastcall GetKillThreads();
+	Lnsqueue::TIOQueue* __fastcall GetQueue();
+	System::Syncobjs::TEvent* __fastcall GetSerialEvent();
 	void __fastcall SetKillThreads(bool value);
 	void __fastcall ThreadGone(System::TObject* Sender);
 	void __fastcall ThreadStart(System::TObject* Sender);
@@ -62,7 +62,7 @@ public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TApdWin32Thread(Awuser::TApdBaseDispatcher* Disp) : Awuser::TApdDispatcherThread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TApdWin32Thread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TApdWin32Thread() { }
 	
 };
 
@@ -72,13 +72,13 @@ class PASCALIMPLEMENTATION TReadThread : public TApdWin32Thread
 	typedef TApdWin32Thread inherited;
 	
 protected:
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 	int __fastcall ReadSerial(char * Buf, int Size, Winapi::Windows::POverlapped ovl);
 public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TReadThread(Awuser::TApdBaseDispatcher* Disp) : TApdWin32Thread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TReadThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TReadThread() { }
 	
 };
 
@@ -88,12 +88,12 @@ class PASCALIMPLEMENTATION TWriteThread : public TApdWin32Thread
 	typedef TApdWin32Thread inherited;
 	
 private:
-	NativeUInt __fastcall GetOutFlushEvent(void);
-	NativeUInt __fastcall GetOutputEvent(void);
+	NativeUInt __fastcall GetOutFlushEvent();
+	NativeUInt __fastcall GetOutputEvent();
 	
 protected:
-	bool __fastcall DataInBuffer(void);
-	virtual void __fastcall Execute(void);
+	bool __fastcall DataInBuffer();
+	virtual void __fastcall Execute();
 	virtual int __fastcall WaitForOverlapped(Winapi::Windows::POverlapped ovl);
 	int __fastcall WriteSerial(Winapi::Windows::POverlapped ovl);
 	__property NativeUInt OutFlushEvent = {read=GetOutFlushEvent, nodefault};
@@ -102,7 +102,7 @@ public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TWriteThread(Awuser::TApdBaseDispatcher* Disp) : TApdWin32Thread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TWriteThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TWriteThread() { }
 	
 };
 
@@ -115,13 +115,13 @@ private:
 	unsigned LastMask;
 	
 protected:
-	virtual void __fastcall Execute(void);
+	virtual void __fastcall Execute();
 	int __fastcall WaitSerialEvent(unsigned &EvtMask, Winapi::Windows::POverlapped ovl);
 public:
 	/* TApdDispatcherThread.Create */ inline __fastcall TStatusThread(Awuser::TApdBaseDispatcher* Disp) : TApdWin32Thread(Disp) { }
 	
 public:
-	/* TThread.Destroy */ inline __fastcall virtual ~TStatusThread(void) { }
+	/* TThread.Destroy */ inline __fastcall virtual ~TStatusThread() { }
 	
 };
 
@@ -140,22 +140,22 @@ protected:
 	virtual int __fastcall GetComError(_COMSTAT &Stat);
 	virtual unsigned __fastcall GetComEventMask(int EvtMask);
 	virtual int __fastcall GetComState(_DCB &DCB);
-	virtual unsigned __fastcall InQueueUsed(void);
-	virtual unsigned __fastcall OutBufUsed(void);
+	virtual unsigned __fastcall InQueueUsed();
+	virtual unsigned __fastcall OutBufUsed();
 	virtual int __fastcall ReadCom(char * Buf, int Size);
 	virtual int __fastcall SetComState(_DCB &DCB);
 	virtual bool __fastcall SetupCom(int InSize, int OutSize);
-	virtual void __fastcall StartDispatcher(void);
-	virtual void __fastcall StopDispatcher(void);
+	virtual void __fastcall StartDispatcher();
+	virtual void __fastcall StopDispatcher();
 	virtual bool __fastcall WaitComEvent(unsigned &EvtMask, Winapi::Windows::POverlapped lpOverlapped);
 	virtual int __fastcall WriteCom(char * Buf, int Size);
 	
 public:
 	__fastcall TApdWin32Dispatcher(System::TObject* Owner);
-	__fastcall virtual ~TApdWin32Dispatcher(void);
-	virtual int __fastcall CloseCom(void);
+	__fastcall virtual ~TApdWin32Dispatcher();
+	virtual int __fastcall CloseCom();
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue);
-	virtual int __fastcall ProcessCommunications(void);
+	virtual int __fastcall ProcessCommunications();
 	virtual bool __fastcall CheckPort(System::WideChar * ComName);
 };
 
@@ -170,7 +170,7 @@ public:
 	__fastcall TApdTAPI32Dispatcher(System::TObject* Owner, int InCid);
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue);
 public:
-	/* TApdWin32Dispatcher.Destroy */ inline __fastcall virtual ~TApdTAPI32Dispatcher(void) { }
+	/* TApdWin32Dispatcher.Destroy */ inline __fastcall virtual ~TApdTAPI32Dispatcher() { }
 	
 };
 

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AwWnsock.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AwWnsock.pas' rev: 33.00 (Windows)
 
 #ifndef AwwnsockHPP
 #define AwwnsockHPP
@@ -76,17 +76,17 @@ private:
 	TTelnetOpt FOptEcho;
 	
 protected:
-	bool __fastcall GetConnected(void);
-	unsigned __fastcall GetInChars(void);
-	unsigned __fastcall GetOutChars(void);
+	bool __fastcall GetConnected();
+	unsigned __fastcall GetInChars();
+	unsigned __fastcall GetOutChars();
 	void __fastcall SetConnectionState(TWsConnectionState Value);
 	
 public:
 	__fastcall virtual TWsConnection(System::Classes::TComponent* AOwner, unsigned InSize, unsigned OutSize);
-	__fastcall virtual ~TWsConnection(void);
+	__fastcall virtual ~TWsConnection();
 	char * __fastcall FindIAC(char * Start, unsigned Size);
-	void __fastcall FlushInBuffer(void);
-	void __fastcall FlushOutBuffer(void);
+	void __fastcall FlushInBuffer();
+	void __fastcall FlushOutBuffer();
 	bool __fastcall HandleCommand(char Command, char Option);
 	int __fastcall ProcessCommands(char * Dest, unsigned Size);
 	int __fastcall ReadBuf(void *Buf, int Size);
@@ -94,8 +94,8 @@ public:
 	void __fastcall SendDont(char Option);
 	void __fastcall SendWill(char Option);
 	void __fastcall SendWont(char Option);
-	void __fastcall SendTerminal(void);
-	int __fastcall Shutdown(void);
+	void __fastcall SendTerminal();
+	int __fastcall Shutdown();
 	int __fastcall WriteBuf(void *Buf, int Size);
 	__property int CommSocket = {read=FCommSocket, nodefault};
 	__property bool Connected = {read=GetConnected, nodefault};
@@ -134,9 +134,9 @@ protected:
 	
 public:
 	__fastcall virtual TApdDeviceSocket(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdDeviceSocket(void);
-	void __fastcall LockList(void);
-	void __fastcall UnLockList(void);
+	__fastcall virtual ~TApdDeviceSocket();
+	void __fastcall LockList();
+	void __fastcall UnLockList();
 	TWsConnection* __fastcall FindConnection(int Socket);
 	__property System::AnsiString WsTerminal = {read=FWsTerminal, write=FWsTerminal};
 };
@@ -161,25 +161,25 @@ protected:
 	virtual unsigned __fastcall GetComEventMask(int EvtMask);
 	virtual int __fastcall GetComState(_DCB &DCB);
 	virtual int __fastcall SetComState(_DCB &DCB);
-	virtual void __fastcall StartDispatcher(void);
-	virtual void __fastcall StopDispatcher(void);
+	virtual void __fastcall StartDispatcher();
+	virtual void __fastcall StopDispatcher();
 	virtual int __fastcall ReadCom(char * Buf, int Size);
 	virtual int __fastcall WriteCom(char * Buf, int Size);
 	virtual bool __fastcall SetupCom(int InSize, int OutSize);
 	virtual bool __fastcall WaitComEvent(unsigned &EvtMask, Winapi::Windows::POverlapped lpOverlapped);
 	unsigned __fastcall Dispatcher(unsigned Msg, unsigned wParam, int lParam);
-	virtual unsigned __fastcall OutBufUsed(void);
-	virtual unsigned __fastcall InQueueUsed(void);
+	virtual unsigned __fastcall OutBufUsed();
+	virtual unsigned __fastcall InQueueUsed();
 	
 public:
-	virtual int __fastcall CloseCom(void);
+	virtual int __fastcall CloseCom();
 	void __fastcall InitSocketData(int LocalAddress, int Address, unsigned Port, bool IsClient, bool IsTelnet);
 	virtual int __fastcall OpenCom(System::WideChar * ComName, unsigned InQueue, unsigned OutQueue);
-	virtual int __fastcall ProcessCommunications(void);
+	virtual int __fastcall ProcessCommunications();
 	virtual bool __fastcall CheckPort(System::WideChar * ComName);
 public:
 	/* TApdBaseDispatcher.Create */ inline __fastcall TApdWinsockDispatcher(System::TObject* Owner) : Awuser::TApdBaseDispatcher(Owner) { }
-	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdWinsockDispatcher(void) { }
+	/* TApdBaseDispatcher.Destroy */ inline __fastcall virtual ~TApdWinsockDispatcher() { }
 	
 };
 

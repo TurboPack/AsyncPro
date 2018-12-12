@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdProtcl.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdProtcl.pas' rev: 33.00 (Windows)
 
 #ifndef AdprotclHPP
 #define AdprotclHPP
@@ -115,121 +115,121 @@ protected:
 	TProtocolNextFileEvent FOnProtocolNextFile;
 	TProtocolResumeEvent FOnProtocolResume;
 	TProtocolStatusEvent FOnProtocolStatus;
-	void __fastcall CreateMessageHandler(void);
-	void __fastcall CheckPort(void);
+	void __fastcall CreateMessageHandler();
+	void __fastcall CheckPort();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall SetComPort(Adport::TApdCustomComPort* const NewComPort);
 	void __fastcall SetProtocolType(const TProtocolType NewProtocol);
-	System::AnsiString __fastcall GetDestinationDirectory(void);
+	System::AnsiString __fastcall GetDestinationDirectory();
 	void __fastcall SetDestinationDirectory(const System::AnsiString NewDir);
-	System::Sysutils::TFileName __fastcall GetFileMask(void);
+	System::Sysutils::TFileName __fastcall GetFileMask();
 	void __fastcall SetFileMask(const System::Sysutils::TFileName NewFileMask);
-	bool __fastcall GetBatch(void);
-	TBlockCheckMethod __fastcall GetBlockCheckMethod(void);
+	bool __fastcall GetBatch();
+	TBlockCheckMethod __fastcall GetBlockCheckMethod();
 	void __fastcall SetBlockCheckMethod(const TBlockCheckMethod NewMethod);
-	unsigned __fastcall GetHandshakeRetry(void);
+	unsigned __fastcall GetHandshakeRetry();
 	void __fastcall SetHandshakeRetry(const unsigned NewRetry);
-	unsigned __fastcall GetHandshakeWait(void);
+	unsigned __fastcall GetHandshakeWait();
 	void __fastcall SetHandshakeWait(const unsigned NewWait);
-	unsigned __fastcall GetBlockLength(void);
-	unsigned __fastcall GetBlockNumber(void);
-	unsigned __fastcall GetTransmitTimeout(void);
+	unsigned __fastcall GetBlockLength();
+	unsigned __fastcall GetBlockNumber();
+	unsigned __fastcall GetTransmitTimeout();
 	void __fastcall SetTransmitTimeout(const unsigned NewTimeout);
-	unsigned __fastcall GetFinishWait(void);
+	unsigned __fastcall GetFinishWait();
 	void __fastcall SetFinishWait(const unsigned NewWait);
-	int __fastcall GetActualBPS(void);
+	int __fastcall GetActualBPS();
 	void __fastcall SetActualBPS(const int NewBPS);
-	unsigned __fastcall GetTurnDelay(void);
+	unsigned __fastcall GetTurnDelay();
 	void __fastcall SetTurnDelay(const unsigned NewDelay);
-	unsigned __fastcall GetOverhead(void);
+	unsigned __fastcall GetOverhead();
 	void __fastcall SetOverhead(const unsigned NewOverhead);
-	TWriteFailAction __fastcall GetWriteFailAction(void);
+	TWriteFailAction __fastcall GetWriteFailAction();
 	void __fastcall SetWriteFailAction(const TWriteFailAction NewAction);
-	unsigned __fastcall GetProtocolStatus(void);
-	short __fastcall GetProtocolError(void);
-	int __fastcall GetFileLength(void);
-	System::TDateTime __fastcall GetFileDate(void);
-	int __fastcall GetInitialPosition(void);
-	unsigned __fastcall GetStatusInterval(void);
+	unsigned __fastcall GetProtocolStatus();
+	short __fastcall GetProtocolError();
+	int __fastcall GetFileLength();
+	System::TDateTime __fastcall GetFileDate();
+	int __fastcall GetInitialPosition();
+	unsigned __fastcall GetStatusInterval();
 	void __fastcall SetStatusInterval(const unsigned NewInterval);
 	void __fastcall SetStatusDisplay(TApdAbstractStatus* const NewDisplay);
 	void __fastcall SetProtocolLog(TApdProtocolLog* const NewLog);
-	bool __fastcall GetInProgress(void);
-	unsigned __fastcall GetBlockErrors(void);
-	unsigned __fastcall GetTotalErrors(void);
-	int __fastcall GetBytesRemaining(void);
-	int __fastcall GetBytesTransferred(void);
-	int __fastcall GetElapsedTicks(void);
-	System::AnsiString __fastcall GetFileName(void);
+	bool __fastcall GetInProgress();
+	unsigned __fastcall GetBlockErrors();
+	unsigned __fastcall GetTotalErrors();
+	int __fastcall GetBytesRemaining();
+	int __fastcall GetBytesTransferred();
+	int __fastcall GetElapsedTicks();
+	System::AnsiString __fastcall GetFileName();
 	void __fastcall SetFileName(const System::AnsiString NewName);
-	unsigned __fastcall GetXYmodemBlockWait(void);
+	unsigned __fastcall GetXYmodemBlockWait();
 	void __fastcall SetXYmodemBlockWait(const unsigned NewWait);
-	bool __fastcall GetYModem128ByteBlocks(void);
+	bool __fastcall GetYModem128ByteBlocks();
 	void __fastcall SetYModem128ByteBlocks(const bool Value);
-	bool __fastcall GetZmodemOptionOverride(void);
+	bool __fastcall GetZmodemOptionOverride();
 	void __fastcall SetZmodemOptionOverride(const bool NewOverride);
-	bool __fastcall GetZmodemSkipNoFile(void);
+	bool __fastcall GetZmodemSkipNoFile();
 	void __fastcall SetZmodemSkipNoFile(const bool NewSkip);
-	TZmodemFileOptions __fastcall GetZmodemFileOption(void);
+	TZmodemFileOptions __fastcall GetZmodemFileOption();
 	void __fastcall SetZmodemFileOption(const TZmodemFileOptions NewOpt);
-	bool __fastcall GetZmodemRecover(void);
+	bool __fastcall GetZmodemRecover();
 	void __fastcall SetZmodemRecover(const bool NewRecover);
-	bool __fastcall GetZmodem8K(void);
+	bool __fastcall GetZmodem8K();
 	void __fastcall SetZmodem8K(const bool New8K);
-	int __fastcall GetZmodemZRQINITValue(void);
+	int __fastcall GetZmodemZRQINITValue();
 	void __fastcall SetZmodemZRQINITValue(const int NewZRQINITValue);
-	unsigned __fastcall GetZmodemFinishRetry(void);
+	unsigned __fastcall GetZmodemFinishRetry();
 	void __fastcall SetZmodemFinishRetry(const unsigned NewRetry);
-	bool __fastcall GetZmodemEscControl(void);
+	bool __fastcall GetZmodemEscControl();
 	void __fastcall SetZmodemEscControl(const bool newEsc);
-	unsigned __fastcall GetKermitMaxLen(void);
+	unsigned __fastcall GetKermitMaxLen();
 	void __fastcall SetKermitMaxLen(const unsigned NewLen);
-	unsigned __fastcall GetKermitMaxWindows(void);
+	unsigned __fastcall GetKermitMaxWindows();
 	void __fastcall SetKermitMaxWindows(const unsigned NewMax);
-	unsigned __fastcall GetKermitSWCTurnDelay(void);
+	unsigned __fastcall GetKermitSWCTurnDelay();
 	void __fastcall SetKermitSWCTurnDelay(const unsigned NewDelay);
-	unsigned __fastcall GetKermitTimeoutSecs(void);
+	unsigned __fastcall GetKermitTimeoutSecs();
 	void __fastcall SetKermitTimeoutSecs(const unsigned NewTimeout);
-	char __fastcall GetKermitPadCharacter(void);
+	char __fastcall GetKermitPadCharacter();
 	void __fastcall SetKermitPadCharacter(char NewChar);
-	unsigned __fastcall GetKermitPadCount(void);
+	unsigned __fastcall GetKermitPadCount();
 	void __fastcall SetKermitPadCount(unsigned NewCount);
-	char __fastcall GetKermitTerminator(void);
+	char __fastcall GetKermitTerminator();
 	void __fastcall SetKermitTerminator(const char NewTerminator);
-	char __fastcall GetKermitCtlPrefix(void);
+	char __fastcall GetKermitCtlPrefix();
 	void __fastcall SetKermitCtlPrefix(const char NewPrefix);
-	char __fastcall GetKermitHighbitPrefix(void);
+	char __fastcall GetKermitHighbitPrefix();
 	void __fastcall SetKermitHighbitPrefix(const char NewPrefix);
-	char __fastcall GetKermitRepeatPrefix(void);
+	char __fastcall GetKermitRepeatPrefix();
 	void __fastcall SetKermitRepeatPrefix(const char NewPrefix);
-	unsigned __fastcall GetKermitWindowsTotal(void);
-	unsigned __fastcall GetKermitWindowsUsed(void);
-	bool __fastcall GetKermitLongBlocks(void);
-	unsigned __fastcall GetAsciiCharDelay(void);
+	unsigned __fastcall GetKermitWindowsTotal();
+	unsigned __fastcall GetKermitWindowsUsed();
+	bool __fastcall GetKermitLongBlocks();
+	unsigned __fastcall GetAsciiCharDelay();
 	void __fastcall SetAsciiCharDelay(const unsigned NewDelay);
-	unsigned __fastcall GetAsciiLineDelay(void);
+	unsigned __fastcall GetAsciiLineDelay();
 	void __fastcall SetAsciiLineDelay(const unsigned NewDelay);
-	char __fastcall GetAsciiEOLChar(void);
+	char __fastcall GetAsciiEOLChar();
 	void __fastcall SetAsciiEOLChar(const char NewChar);
-	TAsciiEOLTranslation __fastcall GetAsciiCRTranslation(void);
+	TAsciiEOLTranslation __fastcall GetAsciiCRTranslation();
 	void __fastcall SetAsciiCRTranslation(const TAsciiEOLTranslation NewTrans);
-	TAsciiEOLTranslation __fastcall GetAsciiLFTranslation(void);
+	TAsciiEOLTranslation __fastcall GetAsciiLFTranslation();
 	void __fastcall SetAsciiLFTranslation(const TAsciiEOLTranslation NewTrans);
-	unsigned __fastcall GetAsciiEOFTimeout(void);
+	unsigned __fastcall GetAsciiEOFTimeout();
 	void __fastcall SetAsciiEOFTimeout(const unsigned NewTimeout);
-	bool __fastcall GetHonorDirectory(void);
+	bool __fastcall GetHonorDirectory();
 	void __fastcall SetHonorDirectory(const bool NewOpt);
-	bool __fastcall GetIncludeDirectory(void);
+	bool __fastcall GetIncludeDirectory();
 	void __fastcall SetIncludeDirectory(const bool NewOpt);
-	bool __fastcall GetRTSLowForWrite(void);
+	bool __fastcall GetRTSLowForWrite();
 	void __fastcall SetRTSLowForWrite(const bool NewOpt);
-	bool __fastcall GetAbortNoCarrier(void);
+	bool __fastcall GetAbortNoCarrier();
 	void __fastcall SetAbortNoCarrier(const bool NewOpt);
-	bool __fastcall GetBP2KTransmit(void);
+	bool __fastcall GetBP2KTransmit();
 	void __fastcall SetBP2KTransmit(const bool NewOpt);
-	bool __fastcall GetAsciiSuppressCtrlZ(void);
+	bool __fastcall GetAsciiSuppressCtrlZ();
 	void __fastcall SetAsciiSuppressCtrlZ(const bool NewOpt);
-	bool __fastcall GetUpcaseFileNames(void);
+	bool __fastcall GetUpcaseFileNames();
 	void __fastcall SetUpcaseFileNames(bool NewUpcase);
 	void __fastcall apwPortCallbackEx(System::TObject* CP, Adport::TApdCallbackType CallbackType);
 	virtual void __fastcall apwProtocolAccept(System::TObject* CP, bool &Accept, Oomisc::TPassString &FName);
@@ -243,13 +243,13 @@ protected:
 public:
 	Awtpcl::TProtocolData *PData;
 	__fastcall virtual TApdCustomProtocol(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomProtocol(void);
+	__fastcall virtual ~TApdCustomProtocol();
 	virtual void __fastcall Assign(System::Classes::TPersistent* Source);
 	int __fastcall EstimateTransferSecs(const int Size);
 	System::AnsiString __fastcall StatusMsg(const unsigned Status);
-	void __fastcall StartTransmit(void);
-	void __fastcall StartReceive(void);
-	void __fastcall CancelProtocol(void);
+	void __fastcall StartTransmit();
+	void __fastcall StartReceive();
+	void __fastcall CancelProtocol();
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=SetComPort};
 	__property TProtocolType ProtocolType = {read=FProtocolType, write=SetProtocolType, nodefault};
 	__property System::AnsiString DestinationDirectory = {read=GetDestinationDirectory, write=SetDestinationDirectory};
@@ -343,15 +343,15 @@ protected:
 	void __fastcall SetCtl3D(const bool NewCtl3D);
 	void __fastcall SetVisible(const bool NewVisible);
 	void __fastcall SetCaption(const Vcl::Controls::TCaption NewCaption);
-	void __fastcall GetProperties(void);
-	void __fastcall Show(void);
+	void __fastcall GetProperties();
+	void __fastcall Show();
 	
 public:
 	__fastcall virtual TApdAbstractStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdAbstractStatus(void);
+	__fastcall virtual ~TApdAbstractStatus();
 	virtual void __fastcall UpdateDisplay(bool First, bool Last) = 0 ;
-	DYNAMIC void __fastcall CreateDisplay(void) = 0 ;
-	DYNAMIC void __fastcall DestroyDisplay(void) = 0 ;
+	DYNAMIC void __fastcall CreateDisplay() = 0 ;
+	DYNAMIC void __fastcall DestroyDisplay() = 0 ;
 	__property Vcl::Forms::TForm* Display = {read=FDisplay, write=FDisplay};
 	
 __published:
@@ -382,7 +382,7 @@ __published:
 	__property TDeleteFailed DeleteFailed = {read=FDeleteFailed, write=FDeleteFailed, default=2};
 	__property System::AnsiString HistoryName = {read=FHistoryName, write=FHistoryName};
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdProtocolLog(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdProtocolLog() { }
 	
 };
 
@@ -448,7 +448,7 @@ __published:
 	__property OnProtocolStatus;
 public:
 	/* TApdCustomProtocol.Create */ inline __fastcall virtual TApdProtocol(System::Classes::TComponent* AOwner) : TApdCustomProtocol(AOwner) { }
-	/* TApdCustomProtocol.Destroy */ inline __fastcall virtual ~TApdProtocol(void) { }
+	/* TApdCustomProtocol.Destroy */ inline __fastcall virtual ~TApdProtocol() { }
 	
 };
 

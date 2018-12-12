@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdStMach.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdStMach.pas' rev: 33.00 (Windows)
 
 #ifndef AdstmachHPP
 #define AdstmachHPP
@@ -75,7 +75,7 @@ private:
 	TApdOnDataSourceGetDataString FOnGetDataString;
 	
 protected:
-	bool __fastcall GetPaused(void);
+	bool __fastcall GetPaused();
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	TApdCustomStateMachine* __fastcall SearchStateMachine(System::Classes::TComponent* const C);
 	__property TApdCustomStateMachine* StateMachine = {read=FStateMachine};
@@ -86,18 +86,18 @@ public:
 	__fastcall virtual TApdStateCustomDataSource(System::Classes::TComponent* AOwner);
 	virtual void __fastcall Output(System::UnicodeString AString) = 0 ;
 	virtual void __fastcall OutputBlock(void * ABlock, int ASize) = 0 ;
-	virtual void __fastcall Pause(void);
-	virtual void __fastcall Resume(void);
+	virtual void __fastcall Pause();
+	virtual void __fastcall Resume();
 	virtual void __fastcall StateActivate(TApdCustomState* State) = 0 ;
 	virtual void __fastcall StateChange(TApdCustomState* OldState, TApdCustomState* NewState) = 0 ;
 	virtual void __fastcall StateDeactivate(TApdCustomState* State) = 0 ;
 	virtual void __fastcall StateMachineActivate(TApdCustomState* State, TApdStateCondition* Condition, int Index) = 0 ;
 	virtual void __fastcall StateMachineDeactivate(TApdCustomState* State) = 0 ;
 	virtual void __fastcall StateMachineStart(TApdCustomStateMachine* AOwner);
-	virtual void __fastcall StateMachineStop(void);
+	virtual void __fastcall StateMachineStop();
 	__property bool Paused = {read=GetPaused, nodefault};
 public:
-	/* TComponent.Destroy */ inline __fastcall virtual ~TApdStateCustomDataSource(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TApdStateCustomDataSource() { }
 	
 };
 
@@ -121,18 +121,18 @@ protected:
 	
 public:
 	__fastcall virtual TApdStateComPortSource(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdStateComPortSource(void);
+	__fastcall virtual ~TApdStateComPortSource();
 	virtual void __fastcall Output(System::UnicodeString AString);
 	virtual void __fastcall OutputBlock(void * ABlock, int ASize);
-	virtual void __fastcall Pause(void);
-	virtual void __fastcall Resume(void);
+	virtual void __fastcall Pause();
+	virtual void __fastcall Resume();
 	virtual void __fastcall StateActivate(TApdCustomState* State);
 	virtual void __fastcall StateDeactivate(TApdCustomState* State);
 	virtual void __fastcall StateMachineActivate(TApdCustomState* State, TApdStateCondition* Condition, int Index);
 	virtual void __fastcall StateMachineDeactivate(TApdCustomState* State);
 	virtual void __fastcall StateChange(TApdCustomState* OldState, TApdCustomState* NewState);
 	virtual void __fastcall StateMachineStart(TApdCustomStateMachine* AOwner);
-	virtual void __fastcall StateMachineStop(void);
+	virtual void __fastcall StateMachineStop();
 	
 __published:
 	__property Adport::TApdCustomComPort* ComPort = {read=FComPort, write=SetComPort};
@@ -160,14 +160,14 @@ private:
 	
 protected:
 	virtual void __fastcall DefineProperties(System::Classes::TFiler* Filer);
-	bool __fastcall IsCaptionStored(void);
+	bool __fastcall IsCaptionStored();
 	void __fastcall ReadCaption(System::Classes::TReader* Reader);
 	void __fastcall WriteCaption(System::Classes::TWriter* Writer);
 	
 public:
 	__fastcall TApdStateConnectoid(TApdStateCondition* AOwner);
-	__fastcall virtual ~TApdStateConnectoid(void);
-	void __fastcall Changed(void);
+	__fastcall virtual ~TApdStateConnectoid();
+	void __fastcall Changed();
 	
 __published:
 	__property Vcl::Controls::TCaption Caption = {read=FCaption, write=SetCaption};
@@ -184,7 +184,7 @@ class PASCALIMPLEMENTATION TApdStateCondition : public System::Classes::TCollect
 	typedef System::Classes::TCollectionItem inherited;
 	
 protected:
-	virtual System::UnicodeString __fastcall GetDisplayName(void);
+	virtual System::UnicodeString __fastcall GetDisplayName();
 	
 private:
 	int FPacketSize;
@@ -202,9 +202,9 @@ private:
 	void __fastcall SetConnectoid(TApdStateConnectoid* const Value);
 	
 protected:
-	Vcl::Controls::TCaption __fastcall GetCaption(void);
-	System::Uitypes::TColor __fastcall GetColor(void);
-	Vcl::Graphics::TFont* __fastcall GetFont(void);
+	Vcl::Controls::TCaption __fastcall GetCaption();
+	System::Uitypes::TColor __fastcall GetColor();
+	Vcl::Graphics::TFont* __fastcall GetFont();
 	void __fastcall SetCaption(const Vcl::Controls::TCaption v);
 	void __fastcall SetColor(const System::Uitypes::TColor v);
 	void __fastcall SetDefaultError(const bool v);
@@ -214,8 +214,8 @@ protected:
 	
 public:
 	__fastcall virtual TApdStateCondition(System::Classes::TCollection* Collection);
-	__fastcall virtual ~TApdStateCondition(void);
-	HIDESBASE void __fastcall Changed(void);
+	__fastcall virtual ~TApdStateCondition();
+	HIDESBASE void __fastcall Changed();
 	
 __published:
 	__property bool DefaultError = {read=FDefaultError, write=SetDefaultError, nodefault};
@@ -250,15 +250,15 @@ private:
 	
 protected:
 	TApdCustomState* FState;
-	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner(void);
+	DYNAMIC System::Classes::TPersistent* __fastcall GetOwner();
 	
 public:
 	__fastcall TApdStateConditions(TApdCustomState* State, System::Classes::TCollectionItemClass ItemClass);
 	virtual void __fastcall Update(System::Classes::TCollectionItem* Item);
-	HIDESBASE TApdStateCondition* __fastcall Add(void);
+	HIDESBASE TApdStateCondition* __fastcall Add();
 	__property TApdStateCondition* Items[int Index] = {read=GetItem, write=SetItem/*, default*/};
 public:
-	/* TCollection.Destroy */ inline __fastcall virtual ~TApdStateConditions(void) { }
+	/* TCollection.Destroy */ inline __fastcall virtual ~TApdStateConditions() { }
 	
 };
 
@@ -295,9 +295,9 @@ private:
 	TApdOnConnectoidClickEvent FConnectoidClickEvent;
 	bool FMovableStates;
 	TAdConnectoidClickStyles FConnectoidClickStyle;
-	Adport::TApdCustomComPort* __fastcall GetComPort(void);
-	TApdStateCustomDataSource* __fastcall GetDataSource(void);
-	TApdStateCustomDataSource* __fastcall GetLiveDataSource(void);
+	Adport::TApdCustomComPort* __fastcall GetComPort();
+	TApdStateCustomDataSource* __fastcall GetDataSource();
+	TApdStateCustomDataSource* __fastcall GetLiveDataSource();
 	void __fastcall SetStartState(TApdCustomState* const Value);
 	void __fastcall SetTerminalState(TApdCustomState* const Value);
 	void __fastcall SetComPort(Adport::TApdCustomComPort* const Value);
@@ -305,10 +305,10 @@ private:
 	void __fastcall SetMovableStates(const bool v);
 	HIDESBASE MESSAGE void __fastcall WMNCHitTest(Winapi::Messages::TMessage &Message);
 	HIDESBASE MESSAGE void __fastcall CMCtl3DChanged(Winapi::Messages::TMessage &Message);
-	void * __fastcall GetData(void);
-	int __fastcall GetDataSize(void);
-	System::UnicodeString __fastcall GetDataString(void);
-	System::Classes::TStringList* __fastcall GetStateNames(void);
+	void * __fastcall GetData();
+	int __fastcall GetDataSize();
+	System::UnicodeString __fastcall GetDataString();
+	System::Classes::TStringList* __fastcall GetStateNames();
 	void __fastcall SetCaption(const Vcl::Controls::TCaption Value);
 	void __fastcall SetConnectoidClickStyle(const TAdConnectoidClickStyles v);
 	
@@ -319,9 +319,9 @@ protected:
 	virtual void __fastcall PaintWindow(HDC DC);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	void __fastcall DoActivate(TApdCustomState* NewState);
-	void __fastcall DoDeactivate(void);
+	void __fastcall DoDeactivate();
 	MESSAGE void __fastcall DoStateChange(Winapi::Messages::TMessage &M);
-	bool __fastcall GetPaused(void);
+	bool __fastcall GetPaused();
 	void __fastcall RenderConnectoid(TApdStateConnectoid* Connectoid, TApdCustomState* State, TApdCustomState* DestState);
 	void __fastcall SetData(void * NewData, System::UnicodeString NewDataString, int NewDataSize);
 	void __fastcall SetDataSource(TApdStateCustomDataSource* const v);
@@ -331,14 +331,14 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomStateMachine(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomStateMachine(void);
-	virtual void __fastcall Loaded(void);
-	void __fastcall StateMachinePaint(void);
+	__fastcall virtual ~TApdCustomStateMachine();
+	virtual void __fastcall Loaded();
+	void __fastcall StateMachinePaint();
 	void __fastcall ChangeState(int ConditionIndex);
-	void __fastcall Pause(void);
-	void __fastcall Resume(void);
-	void __fastcall Start(void);
-	void __fastcall Cancel(void);
+	void __fastcall Pause();
+	void __fastcall Resume();
+	void __fastcall Start();
+	void __fastcall Cancel();
 	__property void * Data = {read=GetData};
 	__property int DataSize = {read=GetDataSize, nodefault};
 	__property System::UnicodeString DataString = {read=GetDataString};
@@ -403,14 +403,14 @@ protected:
 	bool FUseLeftBorder;
 	int FLeftBorderWidth;
 	System::Uitypes::TColor FLeftBorderFill;
-	virtual void __fastcall Activate(void);
-	virtual void __fastcall Deactivate(void);
+	virtual void __fastcall Activate();
+	virtual void __fastcall Deactivate();
 	DYNAMIC void __fastcall MouseDown(System::Uitypes::TMouseButton Button, System::Classes::TShiftState Shift, int X, int Y);
 	DYNAMIC void __fastcall MouseMove(System::Classes::TShiftState Shift, int X, int Y);
 	DYNAMIC void __fastcall MouseUp(System::Uitypes::TMouseButton Button, System::Classes::TShiftState Shift, int X, int Y);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	virtual void __fastcall SetParent(Vcl::Controls::TWinControl* AParent);
-	TApdCustomStateMachine* __fastcall FindStateMachine(void);
+	TApdCustomStateMachine* __fastcall FindStateMachine();
 	void __fastcall WMEraseBackground(Winapi::Messages::TWMEraseBkgnd &Msg);
 	__property bool ActionState = {read=FActionState, write=SetActionState, nodefault};
 	__property TApdOnStateGetData OnGetData = {read=FOnGetData, write=FOnGetData};
@@ -418,12 +418,12 @@ protected:
 	
 public:
 	__fastcall virtual TApdCustomState(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdCustomState(void);
-	int __fastcall FindDefaultError(void);
-	int __fastcall FindDefaultNext(void);
-	virtual void __fastcall Loaded(void);
+	__fastcall virtual ~TApdCustomState();
+	int __fastcall FindDefaultError();
+	int __fastcall FindDefaultNext();
+	virtual void __fastcall Loaded();
 	virtual void __fastcall SetBounds(int ALeft, int ATop, int AWidth, int AHeight);
-	virtual void __fastcall Paint(void);
+	virtual void __fastcall Paint();
 	virtual void __fastcall Terminate(int ErrorCode);
 	__property Vcl::Controls::TCaption Caption = {read=FCaption, write=SetCaption};
 	__property bool Active = {read=FActive, nodefault};
@@ -488,7 +488,7 @@ __published:
 	__property OnMouseUp;
 public:
 	/* TApdCustomStateMachine.Create */ inline __fastcall virtual TApdStateMachine(System::Classes::TComponent* AOwner) : TApdCustomStateMachine(AOwner) { }
-	/* TApdCustomStateMachine.Destroy */ inline __fastcall virtual ~TApdStateMachine(void) { }
+	/* TApdCustomStateMachine.Destroy */ inline __fastcall virtual ~TApdStateMachine() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TApdStateMachine(HWND ParentWindow) : TApdCustomStateMachine(ParentWindow) { }
@@ -516,7 +516,7 @@ __published:
 	__property OnStateFinish;
 public:
 	/* TApdCustomState.Create */ inline __fastcall virtual TApdState(System::Classes::TComponent* AOwner) : TApdCustomState(AOwner) { }
-	/* TApdCustomState.Destroy */ inline __fastcall virtual ~TApdState(void) { }
+	/* TApdCustomState.Destroy */ inline __fastcall virtual ~TApdState() { }
 	
 };
 

@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'AdRStat.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'AdRStat.pas' rev: 33.00 (Windows)
 
 #ifndef AdrstatHPP
 #define AdrstatHPP
@@ -49,7 +49,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TRasStatusDisplay(System::Classes::TComponent* AOwner) : Vcl::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TRasStatusDisplay(System::Classes::TComponent* AOwner, int Dummy) : Vcl::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TRasStatusDisplay(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TRasStatusDisplay() { }
 	
 public:
 	/* TWinControl.CreateParented */ inline __fastcall TRasStatusDisplay(HWND ParentWindow) : Vcl::Forms::TForm(ParentWindow) { }
@@ -67,9 +67,9 @@ protected:
 	
 public:
 	__fastcall virtual TApdRasStatus(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TApdRasStatus(void);
+	__fastcall virtual ~TApdRasStatus();
 	DYNAMIC void __fastcall CreateDisplay(const System::UnicodeString EntryName);
-	DYNAMIC void __fastcall DestroyDisplay(void);
+	DYNAMIC void __fastcall DestroyDisplay();
 	virtual void __fastcall UpdateDisplay(const System::UnicodeString StatusMsg);
 	__property HWND Handle = {read=FHandle, write=FHandle, nodefault};
 };
