@@ -262,6 +262,7 @@ type
       function ReadCom(Buf : PAnsiChar; Size: Integer) : Integer; virtual; abstract;
       function SetComState(var DCB : TDCB) : Integer; virtual; abstract;
       function WriteCom(Buf : PAnsiChar; Size: Integer) : Integer; virtual; abstract;
+      function WriteComSafe(ABuf: PAnsiChar; ASize: Integer): Integer;
       function WaitComEvent(var EvtMask : DWORD;
         lpOverlapped : POverlapped) : Boolean; virtual; abstract;
       function SetupCom(InSize, OutSize : Integer) : Boolean; virtual; abstract;
@@ -1168,6 +1169,16 @@ end;
       Inc(MilliSecs);
     Sleep(MilliSecs);
   end;
+
+function TApdBaseDispatcher.WriteComSafe(ABuf: PAnsiChar; ASize: Integer): Integer;
+begin
+  try
+    Result := WriteCom(ABuf, ASize);
+  except
+    on E: EAccessViolation do
+      Result := 0;
+  end;
+end;
 
   function TApdBaseDispatcher.SetLine(
                     Baud : Integer;
