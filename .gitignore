@@ -11,3 +11,4 @@ Release
 Debug
 *.tmp
 *.hpp
+*.tvsconfig
