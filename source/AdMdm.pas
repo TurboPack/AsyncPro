@@ -1452,6 +1452,10 @@ end;
 function TAdCustomModem.SelectDevice: Boolean;
   { display the modem selection dialog }
 begin
+{$IF COMPILERVERSION < 32}
+  Result := False;
+{$ENDIF}
+
   try
     if not SysUtils.DirectoryExists(FModemCapFolder) then                         {!!.06}
       raise EInOutError.CreateFmt(                                       {!!.06}
