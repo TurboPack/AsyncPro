@@ -339,6 +339,8 @@ type
     function GetBytesTransferred : Integer;
     function GetElapsedTicks : Integer;
     function GetFileName : AnsiString;
+    function GetEofTimerRemaining : LongInt;   //codeshark mods
+    function GetProtocolState : TAsciiState;   //codeshark mods
     procedure SetFileName(const NewName : AnsiString);
     function GetXYmodemBlockWait : Cardinal;
     procedure SetXYmodemBlockWait(const NewWait : Cardinal);
@@ -537,9 +539,12 @@ type
       read GetBytesTransferred;
     property ElapsedTicks : Integer
       read GetElapsedTicks;
-    property FileName : AnsiString
+    property FileName : AnsiString     
       read GetFileName write SetFileName;
-
+    property EofTimerRemaining : LongInt  //codeshark mods
+      read GetEofTimerRemaining;
+    property ProtocolState : TAsciiState  //codeshark mods
+      read GetProtocolState;
     {Xmodem/Ymodem properties}
     property XYmodemBlockWait : Cardinal
       read GetXYmodemBlockWait write SetXYmodemBlockWait
@@ -1377,6 +1382,21 @@ var
   begin
     Result := AnsiStrings.StrPas(PData^.aPathname);
   end;
+  
+ function TApdCustomProtocol.GetEofTimerRemaining : LongInt;  //codeshark mods
+ {  -Return the ticks remaining until EOF raised for recieve operation}
+ begin
+   PData^.aHc.ValidDispatcher.TimerTicksRemaining(PData^.aTimeoutTrigger, Result);
+ end;
+
+
+ function TApdCustomProtocol.GetProtocolState : TAsciiState;  //codeshark mods
+ {-Return the protocol state}
+ begin
+   Result := PData^.sAsciiState;
+ end;
+  
+  
 
   procedure TApdCustomProtocol.SetFileName(const NewName : AnsiString);
     {-Set/change the incoming file name}
