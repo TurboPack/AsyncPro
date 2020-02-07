@@ -1298,10 +1298,10 @@ ExitPoint:
   procedure apProtocolError(P : PProtocolData; ErrorCode : Integer);
     {-Sends message and sets aProtocolError}
   var
-    Res : DWORD;
+    Res : LRESULT;
   begin
     with P^ do begin
-      SendMessageTimeout(aHWindow, apw_ProtocolError, Cardinal(ErrorCode),
+      SendMessageTimeout(aHWindow, apw_ProtocolError, WPARAM(ErrorCode),
                          0, SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, @Res);
       aProtocolError := ErrorCode;
@@ -1486,22 +1486,22 @@ ExitPoint:
   procedure apMsgStatus(P : PProtocolData; Options : Cardinal);
     {-Send an apw_ProtocolStatus message to the protocol window}
   var
-    Res : DWORD;
+    Res : LRESULT;
   begin
     with P^ do
-      SendMessageTimeout(aHWindow, apw_ProtocolStatus, Options,
-                         Integer(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
+      SendMessageTimeout(aHWindow, apw_ProtocolStatus, WPARAM(Options),
+                         LPARAM(P), SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, @Res);
   end;
 
   function apMsgNextFile(P : PProtocolData; FName : PAnsiChar) : Bool;
     {-Virtual method for calling NextFile procedure}
   var
-    Res : DWORD;
+    Res : LRESULT;
   begin
     with P^ do begin
       SendMessageTimeout(aHWindow, apw_ProtocolNextFile, 0,
-                         Integer(FName),
+                         LPARAM(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, @Res);
       apMsgNextFile := Res <> 0;
@@ -1511,11 +1511,11 @@ ExitPoint:
   procedure apMsgLog(P : PProtocolData; Log : Cardinal);
     {-Send an apw_ProtocolLog message to the protocol window}
   var
-    Res : DWORD;
+    Res : LRESULT;
   begin
     with P^ do
       SendMessageTimeout(aHWindow, apw_ProtocolLog,
-                         Cardinal(Log), Integer(P),
+                         WPARAM(Log), LPARAM(P),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, @Res);
   end;
@@ -1523,11 +1523,11 @@ ExitPoint:
   function apMsgAcceptFile(P : PProtocolData; FName : PAnsiChar) : Bool;
     {-Send apw_ProtocolAcceptFile message to TProtocolWindow}
   var
-    Res : DWORD;
+    Res : LRESULT;
   begin
     with P^ do begin
       SendMessageTimeout(aHWindow, apw_ProtocolAcceptFile,
-                         0, Integer(FName),
+                         0, LPARAM(FName),
                          SMTO_ABORTIFHUNG + SMTO_BLOCK,
                          1000, @Res);
       apMsgAcceptFile := Res = 1;
