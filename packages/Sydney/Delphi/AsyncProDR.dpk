@@ -1,0 +1,122 @@
+package AsyncProDR;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'TurboPack Async Professional Delphi Runtime Package'}
+{$LIBSUFFIX '270'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  vclx;
+
+contains
+  ADEXCEPT in '..\..\..\source\ADEXCEPT.pas',
+  AdFax in '..\..\..\source\AdFax.pas',
+  ADFAXCTL in '..\..\..\source\ADFAXCTL.pas',
+  AdFaxCvt in '..\..\..\source\AdFaxCvt.pas',
+  AdFaxPrn in '..\..\..\source\AdFaxPrn.pas',
+  AdFaxSrv in '..\..\..\source\AdFaxSrv.pas',
+  AdFIDlg in '..\..\..\source\AdFIDlg.pas',
+  Adfpstat in '..\..\..\source\Adfpstat.pas',
+  Adfstat in '..\..\..\source\Adfstat.pas',
+  AdFtp in '..\..\..\source\AdFtp.pas',
+  Adfview in '..\..\..\source\Adfview.pas',
+  AdGSM in '..\..\..\source\AdGSM.pas',
+  AdLibMdm in '..\..\..\source\AdLibMdm.pas',
+  AdMdm in '..\..\..\source\AdMdm.pas',
+  AdMdmCfg in '..\..\..\source\AdMdmCfg.pas',
+  AdMdmDlg in '..\..\..\source\AdMdmDlg.pas',
+  AdMeter in '..\..\..\source\AdMeter.pas',
+  AdPacket in '..\..\..\source\AdPacket.pas',
+  AdPager in '..\..\..\source\AdPager.pas',
+  AdPort in '..\..\..\source\AdPort.pas',
+  AdProtcl in '..\..\..\source\AdProtcl.pas',
+  ADPSTAT in '..\..\..\source\ADPSTAT.pas',
+  AdRas in '..\..\..\source\AdRas.pas',
+  AdRasUtl in '..\..\..\source\AdRasUtl.pas',
+  AdRStat in '..\..\..\source\AdRStat.pas',
+  AdScript in '..\..\..\source\AdScript.pas',
+  AdSelCom in '..\..\..\source\AdSelCom.pas',
+  AdSocket in '..\..\..\source\AdSocket.pas',
+  AdSrmgr in '..\..\..\source\AdSrmgr.pas',
+  AdStatLt in '..\..\..\source\AdStatLt.pas',
+  AdStMach in '..\..\..\source\AdStMach.pas',
+  AdTapi in '..\..\..\source\AdTapi.pas',
+  ADTrmBuf in '..\..\..\source\ADTrmBuf.pas',
+  ADTrmEmu in '..\..\..\source\ADTrmEmu.pas',
+  ADTrmMap in '..\..\..\source\ADTrmMap.pas',
+  ADTrmPsr in '..\..\..\source\ADTrmPsr.pas',
+  adtsel in '..\..\..\source\adtsel.pas',
+  AdTStat in '..\..\..\source\AdTStat.pas',
+  AdTUtil in '..\..\..\source\AdTUtil.pas',
+  AdWnPort in '..\..\..\source\AdWnPort.pas',
+  Adwutil in '..\..\..\source\Adwutil.pas',
+  AdXBase in '..\..\..\source\AdXBase.pas',
+  AdXChrFlt in '..\..\..\source\AdXChrFlt.pas',
+  Adxdial in '..\..\..\source\Adxdial.pas',
+  Adxdown in '..\..\..\source\Adxdown.pas',
+  AdXLbMdm in '..\..\..\source\AdXLbMdm.pas',
+  AdXParsr in '..\..\..\source\AdXParsr.pas',
+  Adxport in '..\..\..\source\Adxport.pas',
+  Adxprot in '..\..\..\source\Adxprot.pas',
+  Adxup in '..\..\..\source\Adxup.pas',
+  OoMisc in '..\..\..\source\OoMisc.pas',
+  AWABSPCL in '..\..\..\source\AWABSPCL.pas',
+  AwAscii in '..\..\..\source\AwAscii.pas',
+  awfax in '..\..\..\source\awfax.pas',
+  Awfaxcvt in '..\..\..\source\Awfaxcvt.pas',
+  AwFView in '..\..\..\source\AwFView.pas',
+  AwKermit in '..\..\..\source\AwKermit.pas',
+  AwTPcl in '..\..\..\source\AwTPcl.pas',
+  AwUser in '..\..\..\source\AwUser.pas',
+  AwWin32 in '..\..\..\source\AwWin32.pas',
+  AwWnSock in '..\..\..\source\AwWnSock.pas',
+  AwXmodem in '..\..\..\source\AwXmodem.pas',
+  AwYmodem in '..\..\..\source\AwYmodem.pas',
+  awzmodem in '..\..\..\source\awzmodem.pas',
+  Awabsfax in '..\..\..\source\Awabsfax.pas',
+  AdSapiEn in '..\..\..\source\AdSapiEn.pas',
+  AdISapi in '..\..\..\source\AdISapi.pas',
+  AdSapiGr in '..\..\..\source\AdSapiGr.pas',
+  AdVoIP in '..\..\..\source\AdVoIP.pas',
+  AdITapi3 in '..\..\..\source\AdITapi3.pas',
+  AdSapiPh in '..\..\..\source\AdSapiPh.pas',
+  AdVoIPEd in '..\..\..\source\AdVoIPEd.pas' {VoipAudioVideoEditor},
+  AdStrMap in '..\..\..\source\AdStrMap.pas',
+  AdStDS in '..\..\..\source\AdStDS.pas',
+  AdPgr in '..\..\..\source\AdPgr.pas',
+  AdStFax in '..\..\..\source\AdStFax.pas',
+  AdStProt in '..\..\..\source\AdStProt.pas',
+  AdStSapi in '..\..\..\source\AdStSapi.pas',
+  adstst in '..\..\..\source\adstst.pas',
+  LNSWin32 in '..\..\..\source\LNSWin32.pas',
+  LNSQueue in '..\..\..\source\LNSQueue.pas',
+  AdAnsiStrings in '..\..\..\source\AdAnsiStrings.pas';
+
+end.
