@@ -39,10 +39,10 @@ uses
   FtpLoginFrm in 'FtpLoginFrm.pas' {FtpLoginForm},
   FtpProgressFrm in 'FtpProgressFrm.pas' {FtpProgressForm},
   XferOptFrm in 'XferOptFrm.pas' {XferOptForm},
-  AboutDlg in 'AboutDlg.pas' {AboutDialog},
-  About in 'C:\Program Files\Borland\Delphi5\Objrepos\about.pas' {AboutBox};
+  AboutDlg in 'AboutDlg.pas' {AboutDialog};
 
-{$R *.RES}
+{$R *.res}
+
 begin
   Application.Initialize;
   Application.Title := 'APro Terminal Emulator';

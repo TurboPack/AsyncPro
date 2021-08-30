@@ -78,9 +78,6 @@
 			<DCCReference Include="AboutDlg.pas">
 				<Form>AboutDialog</Form>
 			</DCCReference>
-			<DCCReference Include="C:\Program Files\Borland\Delphi5\Objrepos\about.pas">
-				<Form>AboutBox</Form>
-			</DCCReference>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
 			</BuildConfiguration>
