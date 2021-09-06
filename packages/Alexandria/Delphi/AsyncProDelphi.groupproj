@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AB4D99F2-4D2F-4359-81C9-6D3DD97F94BE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AsyncProDR.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AsyncProDD.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AsyncProDR">
+        <MSBuild Projects="AsyncProDR.dproj"/>
+    </Target>
+    <Target Name="AsyncProDR:Clean">
+        <MSBuild Projects="AsyncProDR.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsyncProDR:Make">
+        <MSBuild Projects="AsyncProDR.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AsyncProDD">
+        <MSBuild Projects="AsyncProDD.dproj"/>
+    </Target>
+    <Target Name="AsyncProDD:Clean">
+        <MSBuild Projects="AsyncProDD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsyncProDD:Make">
+        <MSBuild Projects="AsyncProDD.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AsyncProDR;AsyncProDD"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AsyncProDR:Clean;AsyncProDD:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AsyncProDR:Make;AsyncProDD:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
