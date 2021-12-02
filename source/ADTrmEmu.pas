@@ -573,11 +573,9 @@ type
       function GetTotalCharWidth : Integer;                              {!!.06}
       function GetTotalCharHeight : Integer;                             {!!.06}
       procedure HideSelection;
-      procedure WriteBytes(const ABytes: TBytes);
       procedure WriteChar(aCh : AnsiChar);
       procedure WriteString(const aSt : string); overload;
       procedure WriteString(const aSt : AnsiString); overload;
-      procedure WriteStringUTF8(const AValue: string);
       procedure WriteCharSource(aCh : AnsiChar; Source:TAdCharSource);      // SWB
       procedure WriteStringSource(const aSt : AnsiString; Source:TAdCharSource);// SWB
       function HasFocus : Boolean;
@@ -3965,16 +3963,6 @@ begin
   if (NewPos <> ClientOriginRow) then
     ClientOriginRow := NewPos;
 end;
-
-procedure TAdCustomTerminal.WriteBytes(const ABytes: TBytes);
-begin
-  {stuff the data into the byte queue}
-  TaaByteQueue(FByteQueue).Put(ABytes[0], Length(ABytes));
-  {tell ourselves that we have more data}
-  PostMessage (Handle, APW_TERMSTUFF,                                  {!!.04}
-               Integer (TAdCharSource (csWriteChar)), 0);              {!!.04}
-end;
-
 {--------}
 procedure TAdCustomTerminal.WriteChar(aCh : AnsiChar);
 begin
@@ -3998,15 +3986,6 @@ begin
   PostMessage (Handle, APW_TERMSTUFF,                                  {!!.04}
                Integer (TAdCharSource (csWriteChar)), 0);              {!!.04}
 end;
-
-procedure TAdCustomTerminal.WriteStringUTF8(const AValue: string);
-var
-  lBytes: TBytes;
-begin
-  lBytes := TEncoding.UTF8.GetBytes(AValue);
-  WriteBytes(lBytes);
-end;
-
 {--------}                                                                  // SWB
 procedure TAdCustomTerminal.WriteCharSource(aCh : AnsiChar;                 // SWB
                                             Source:TAdCharSource);          // SWB
