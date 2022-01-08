@@ -586,7 +586,10 @@ end;
     except                                                                  // SWB
       on E : Exception do                                                   // SWB
       begin                                                                 // SWB
-        if Assigned(GShowExceptionHandler) then GShowExceptionHandler(E, ExceptAddr);
+        if Assigned(GShowExceptionHandler) then
+          GShowExceptionHandler(E, ExceptAddr)
+        else
+          ShowException(ExceptObject, ExceptAddr);
       end;                                                                  // SWB
     end;                                                                    // SWB
 
@@ -4491,7 +4494,10 @@ end;
       end;
       H.ThreadGone(Self);
     except
-      if Assigned(GShowExceptionHandler) then GShowExceptionHandler(ExceptObject,ExceptAddr);
+      if Assigned(GShowExceptionHandler) then
+        GShowExceptionHandler(ExceptObject, ExceptAddr)
+      else
+        ShowException(ExceptObject, ExceptAddr);
     end;
   end;
 
@@ -4628,7 +4634,10 @@ end;
       CloseHandle(ComOL.hEvent);
       H.ThreadGone(Self);
     except
-      if Assigned(GShowExceptionHandler) then GShowExceptionHandler(ExceptObject,ExceptAddr);
+      if Assigned(GShowExceptionHandler) then
+        GShowExceptionHandler(ExceptObject, ExceptAddr)
+      else
+        ShowException(ExceptObject, ExceptAddr);
     end;
   end;
 
@@ -4829,7 +4838,10 @@ end;
         end;
       end;
     except
-      if Assigned(GShowExceptionHandler) then GShowExceptionHandler(ExceptObject,ExceptAddr);
+      if Assigned(GShowExceptionHandler) then
+        GShowExceptionHandler(ExceptObject, ExceptAddr)
+      else
+        ShowException(ExceptObject, ExceptAddr);
     end;
   end;
 
@@ -4855,8 +4867,6 @@ begin
 
   FillChar(PortListSection, SizeOf(PortListSection), 0);
   InitializeCriticalSection(PortListSection);
-
-  GShowExceptionHandler := SysUtils.ShowException;
 end;
 
 initialization            // SZ FIXME loader lock
