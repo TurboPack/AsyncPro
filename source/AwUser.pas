@@ -584,12 +584,12 @@ end;
         CheckException(TComponent(Owner),                                   // SWB
                        TApdDispatcherThread(Sender).ReturnValue);           // SWB
     except                                                                  // SWB
-      on E : Exception do                                                   // SWB
+      on E: Exception do                                                    // SWB
       begin                                                                 // SWB
         if Assigned(GShowExceptionHandler) then
           GShowExceptionHandler(E, ExceptAddr)
         else
-          ShowException(ExceptObject, ExceptAddr);
+          ShowException(E, ExceptAddr);
       end;                                                                  // SWB
     end;                                                                    // SWB
 
