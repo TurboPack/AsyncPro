@@ -12,3 +12,4 @@ Debug
 *.tmp
 *.hpp
 *.tvsconfig
+*.bak
