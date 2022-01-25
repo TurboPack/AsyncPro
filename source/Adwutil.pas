@@ -51,8 +51,8 @@ uses
   OOMisc;
 
 type
-  TSocket = Integer;
-
+//njs  TSocket = Integer;
+       TSocket = NativeInt;   //njs actaully needs to be sized as pointer but causes issues in AwWnsock
 const
   { Version of Winsock that we support }
   Sock_Version = $0101;
@@ -763,8 +763,23 @@ procedure WinsockExit; //SZ made public
 implementation
 
 const
-  SockDLL = 'WSOCK32';
+//njs     SockDLL = 'WSOCK32';
+{
+From  https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc958787(v=technet.10)?redirectedfrom=MSDN
+Winsock Architecture
 
+Winsock 2.0 is a Windows Open Systems Architecture (WOSA)–compliant interface that enables a front-end application and a back-end service to communicate.
+The Winsock 2.0 interface includes the following components:
+
+    The Winsock 1.1 Application Programming Interface (API)
+
+    The Winsock 2.0 Application Programming Interface (API)
+
+    The Winsock 2.0 Transport Service Providers
+
+    Layered Service Providers
+}
+      SockDLL = 'Ws2_32';  //njs
 var
   SocketModule : THandle;
 
