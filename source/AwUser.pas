@@ -910,11 +910,18 @@ end;
 
     {Ask Windows to open the comm port}
     CidEx := OpenCom(AComName, InSize, OutSize);
-    if CidEx < 0 then begin
+    if CidEx < 0 then
+    begin
       if CidEx = ecOutOfMemory then
         Result := ecOutOfMemory
       else
         Result := -Integer(GetLastError);
+      CloseHandle(ComEvent);
+      CloseHandle(ReadyEvent);
+      CloseHandle(GeneralEvent);
+      CloseHandle(OutputEvent);
+      CloseHandle(SentEvent);
+      CloseHandle(OutFlushEvent);
       DonePort;
       Exit;
     end;
