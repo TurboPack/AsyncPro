@@ -3106,7 +3106,7 @@ implementation
         with PCreate^ do begin
           SetWindowLong(HWindow, gwl_Viewer, 0);
           FV := TViewer.Create(HWindow);
-          SetWindowLong(HWindow, gwl_Viewer, Integer(FV));
+          SetWindowLong(HWindow, gwl_Viewer, NativeInt(FV));
           if (FV <> nil) then
             FV.vInitDragDrop(((GetWindowLong(HWindow, gwl_Style) and vws_DragDrop) <> 0));
         end;
@@ -3114,7 +3114,7 @@ implementation
       wm_NCDestroy:
         begin
           FV.Free;
-          SetWindowLong(HWindow, gwl_Viewer, Integer(nil));
+          SetWindowLong(HWindow, gwl_Viewer, NativeInt(nil));
         end;
 
       wm_EraseBkgnd : vFaxViewerWndFunc := 1;

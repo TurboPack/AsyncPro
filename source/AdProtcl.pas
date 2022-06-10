@@ -942,8 +942,7 @@ var
     Result := nil;
   end;
 
-  function MessageHandler(hWindow : TApdHwnd; Msg, wParam : Integer;
-                          lParam : Integer) : Integer; stdcall; export;
+  function MessageHandler(AWindow: HWND; AMsg: UINT; AWParam: WPARAM; ALParam: LPARAM): Integer; stdcall;
     {-Window function for all apw_ProtXxx messages}
   var
     P : TApdCustomProtocol;
@@ -953,51 +952,51 @@ var
 
   begin
     Result := 0;
-    P := FindProtocol(hWindow);
+    P := FindProtocol(AWindow);
     if Assigned(P) then begin
       with P do begin
-        case Msg of
+        case AMsg of
           APW_PROTOCOLSTATUS      :
-            apwProtocolStatus(P, wParam);
+            apwProtocolStatus(P, AWParam);
           APW_PROTOCOLLOG         :
-            apwProtocolLog(P, wParam);
+            apwProtocolLog(P, AWParam);
           APW_PROTOCOLNEXTFILE    :
             begin
               FName := '';
               apwProtocolNextFile(P, FName);
               if FName <> '' then begin
-                AnsiStrings.StrPCopy(PAnsiChar(lParam), FName);  // SZ: 30.01.2010 (http://www.delphimaster.ru/cgi-bin/forum.pl?id=1263549006&n=3)
+                AnsiStrings.StrPCopy(PAnsiChar(ALParam), FName);  // SZ: 30.01.2010 (http://www.delphimaster.ru/cgi-bin/forum.pl?id=1263549006&n=3)
                 Result := 1;
               end else
                 Result := 0;
             end;
           APW_PROTOCOLACCEPTFILE  :
             begin
-              FName := AnsiStrings.StrPas(PAnsiChar(lParam));     //SZ: 30.01.2010 (as reported by mail from Kolan)
+              FName := AnsiStrings.StrPas(PAnsiChar(ALParam));     //SZ: 30.01.2010 (as reported by mail from Kolan)
               apwProtocolAccept(P, Accept, FName);
               if Accept then begin
                 if FileName <> '' then
-                  AnsiStrings.StrPCopy(PAnsiChar(lParam), FName);
+                  AnsiStrings.StrPCopy(PAnsiChar(ALParam), FName);
                 Result := 1;
               end else
                 Result := 0;
             end;
           APW_PROTOCOLFINISH      :
-            apwProtocolFinish(P, SmallInt(wParam));
+            apwProtocolFinish(P, SmallInt(AWParam));
           APW_PROTOCOLRESUME      :
             begin
-              Temp := TWriteFailAction(wParam);
+              Temp := TWriteFailAction(AWParam);
               apwProtocolResume(P, Temp);
-              MessageHandler := wParam;
+              MessageHandler := AWParam;
             end;
           APW_PROTOCOLERROR       :
-            apwProtocolError(P, SmallInt(wParam));
+            apwProtocolError(P, SmallInt(AWParam));
           else
-            MessageHandler := DefWindowProc(hWindow, Msg, wParam, lParam);
+            MessageHandler := DefWindowProc(AWindow, AMsg, AWParam, ALParam);
         end;
       end;
     end else
-      MessageHandler := DefWindowProc(hWindow, Msg, wParam, lParam);
+      MessageHandler := DefWindowProc(AWindow, AMsg, AWParam, ALParam);
   end;
 
   procedure RegisterMessageHandlerClass;

@@ -1487,24 +1487,23 @@ begin
   Result := True;
 end;
 
-function DispatcherWndFunc(hWindow : TApdHwnd; Msg, wParam : Cardinal;
-                           lParam : Integer) : Integer; stdcall; export;
+function DispatcherWndFunc(AWindow: HWND; AMsg: UINT; AWParam: WPARAM; ALParam: LPARAM): Integer; stdcall;
   {-Window function for wm_CommNotify or cw_ApdSocketMessage messages}
 var
   I : Integer;
 begin
   Result := 0;
-  if Msg = cm_ApdSocketMessage then begin
+  if AMsg = cm_ApdSocketMessage then begin
     for I := 0 to pred(PortList.Count) do begin
       if (I < PortList.Count) and (PortList[i] <> nil) then
         with TApdWinsockDispatcher(PortList[i]) do
-          if (CidEx = Integer(wParam)) then begin
-            Result := Dispatcher(Msg, 0, lParam);
+          if (CidEx = Integer(AWParam)) then begin
+            Result := Dispatcher(AMsg, 0, ALParam);
             break;
           end;
     end;
   end else
-    Result := DefWindowProc(hWindow, Msg, wParam, lParam);
+    Result := DefWindowProc(AWindow, AMsg, AWParam, ALParam);
 end;
 
 procedure RegisterDispatcherClass;

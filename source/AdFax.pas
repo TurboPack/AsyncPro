@@ -749,8 +749,7 @@ var
     Result := nil;
   end;
 
-  function FaxMessageHandler(hWindow : TApdHwnd; Msg, wParam : Integer;
-                             lParam : Integer) : Integer; stdcall; export;
+  function FaxMessageHandler(AWindow: HWND; AMsg: UINT; AWParam: WPARAM; ALParam: LPARAM): Integer; stdcall;
     {-Window procedure for all APW_FAXXxx messages}
   const
     BoolRes : array[Boolean] of Integer = (0, 1);
@@ -763,20 +762,20 @@ var
     ErrorCode : Integer;
     Temp      : SmallInt;
   begin
-    Temp := word(wParam);
+    Temp := word(AWParam);
     ErrorCode := Temp;
 
-    P := FindFax(hWindow);
+    P := FindFax(AWindow);
     if Assigned(P) then begin
       Result := 0;
-      case Msg of
+      case AMsg of
         {General events}
         APW_FAXSTATUS :
           with P do
-            apwFaxStatus(P, wParam = 1, wParam = 2);
+            apwFaxStatus(P, AWParam = 1, AWParam = 2);
         APW_FAXLOG :
           with P do
-            apwFaxLog(P, TFaxLogCode(wParam));
+            apwFaxLog(P, TFaxLogCode(AWParam));
         APW_FAXERROR :
           with P do
             apwFaxError(P, ErrorCode);
@@ -809,10 +808,10 @@ var
               Result := 0;
           end;
         else
-          Result := DefWindowProc(hWindow, Msg, wParam, lParam);
+          Result := DefWindowProc(AWindow, AMsg, AWParam, ALParam);
       end;
     end else
-      Result :=  DefWindowProc(hWindow, Msg, wParam, lParam);
+      Result :=  DefWindowProc(AWindow, AMsg, AWParam, ALParam);
   end;
 
   procedure RegisterFaxMessageHandlerClass;

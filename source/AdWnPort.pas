@@ -497,7 +497,7 @@ begin
   if (Assigned(FSockInstance)) then                                         // SWB
     FreeObjectInstance(FSockInstance);                                      // SWB
   FSockInstance := MakeObjectInstance(SockWndProc);
-  FComWindowProc := Pointer(SetWindowLong(ComWindow, GWL_WNDPROC, Integer(FSockInstance)));
+  FComWindowProc := Pointer(SetWindowLong(ComWindow, GWL_WNDPROC, NativeInt(FSockInstance)));
   { Perform the SOCKS negotiation }
   if WsSocksServerInfo.SocksVersion <> svNone then
     ContinueSocksNegotiation;

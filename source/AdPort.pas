@@ -764,9 +764,8 @@ const
 
   {Main trigger handler}
 
-  function ComWindowProc(hWindow : TApdHwnd; Msg, wParam : Word;
-                         lParam : Integer) : Integer;
-                         stdcall; export;
+  function ComWindowProc(AWindow: HWND; AMsg: UINT; AWParam: WPARAM; ALParam: LPARAM): Integer; stdcall;
+
     {-Receives all triggers, dispatches to event handlers}
   type
     lParamCast = record
@@ -774,18 +773,18 @@ const
       Dispatcher : Word;
     end;
   var
-    LP         : lParamCast absolute lParam;
-    TrigHandle : Word absolute wParam;
-    Count      : Word absolute wParam;
+    LP         : lParamCast absolute ALParam;
+    TrigHandle : Word absolute AWParam;
+    Count      : Word absolute AWParam;
     CP         : TApdCustomComPort;
     D          : Pointer;
   begin
-    case Msg of
+    case AMsg of
     APW_CLOSEPENDING, APW_TRIGGERAVAIL, APW_TRIGGERDATA,
     APW_TRIGGERSTATUS, APW_TRIGGERTIMER : ;
     else
-      ComWindowProc := DefWindowProc(hWindow, Msg, wParam, lParam);
-      exit;
+      ComWindowProc := DefWindowProc(AWindow, AMsg, AWParam, ALParam);
+      Exit;
     end;
     LockPortList;
     try
@@ -798,15 +797,15 @@ const
           CP := nil;
         if Assigned(CP) then with CP do begin
           try
-            if Msg = APW_TRIGGERAVAIL then
-              Trigger(Msg, TrigHandle, Count)
+            if AMsg = APW_TRIGGERAVAIL then
+              Trigger(AMsg, TrigHandle, Count)
             else
-              Trigger(Msg, TrigHandle, LP.Data);
-            case Msg of
+              Trigger(AMsg, TrigHandle, LP.Data);
+            case AMsg of
               APW_CLOSEPENDING :
                 begin
                   if FDispatcher.Active then begin
-                    PostMessage(FComWindow,APW_CLOSEPENDING,0,lparam);
+                    PostMessage(FComWindow,APW_CLOSEPENDING, 0, ALParam);
                   end else begin
                     {Get rid of the trigger handler}
                     RegisterComPort(False);
