@@ -796,7 +796,7 @@ begin
       DataSocket := Sock.CreateSocket;
       Result := (DataSocket <> Invalid_Socket);
       Sock.SetAsyncStyles(DataSocket, FD_CLOSE or FD_READ or FD_WRITE);
-      SendCommand(PopCommand);
+      PopCommand;
     end else begin
       if (SockFuncs.GetSockName(Dispatcher.ComHandle, ListenName, SockNameSize) = 0) then begin
         if (ListenSocket = Invalid_Socket) then
@@ -1188,7 +1188,10 @@ var
 begin
   PData := nil;
   if (Code > scLogin) and (Code <> scProgress) then
+  begin
+   if not (ProcessState in [psGet, psPut, psDir]) then
     ChangeState(psIdle);
+  end;
   if not NoEvents then begin
     if Assigned(Info) then
       PData := AnsiStrings.StrNew(Info);
