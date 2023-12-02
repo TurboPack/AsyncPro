@@ -329,7 +329,7 @@ implementation
     HasBeenCreated := True;
 
     if csDesigning in ComponentState then
-      SendMessage(Handle, apw_ViewSetDesignMode, 0, Integer(StrPCopy(TempZ, Name)));
+      SendMessage(Handle, apw_ViewSetDesignMode, 0, LPARAM(StrPCopy(TempZ, Name)));
 
     SendMessage(Handle, apw_ViewSetFG, 0, FGColor);
     SendMessage(Handle, apw_ViewSetBG, 0, BGColor);
@@ -337,7 +337,7 @@ implementation
     if not (csDesigning in ComponentState) then begin
       if FScaling then begin
         FillScaleSettings(Settings);
-        SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings));
+        SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings));
       end;
       if FWhitespaceCompression then
         SendMessage(Handle, apw_ViewSetWhitespace, FWhitespaceFrom, FWhitespaceTo);
@@ -352,7 +352,7 @@ implementation
       SendMessage(Handle, apw_ViewSetAutoScale, Opt, 0);
 
       if not (csDesigning in ComponentState) then
-        CheckException(Self, SendMessage(Handle, apw_ViewSetFile, 0, Integer(StrPCopy(TempZ, FFileName))));
+        CheckException(Self, SendMessage(Handle, apw_ViewSetFile, 0, LPARAM(StrPCopy(TempZ, FFileName))));
 
       SendMessage(Handle, apw_ViewsetLoadWholeFax, Ord(FLoadWholeFax), 0);
       SendMessage(Handle, apw_ViewSetBusyCursor, Screen.Cursors[BusyCursor], 0);
@@ -384,7 +384,7 @@ implementation
     inherited SetName(NewName);
 
     if (csDesigning in ComponentState) and HasBeenCreated then
-      SendMessage(Handle, apw_ViewSetDesignMode, 0, Integer(StrPCopy(TempZ, NewName)));
+      SendMessage(Handle, apw_ViewSetDesignMode, 0, LPARAM(StrPCopy(TempZ, NewName)));
   end;
 
   procedure TApdCustomFaxViewer.SetBorderStyle(const NewStyle : TBorderStyle);
@@ -433,7 +433,7 @@ implementation
       else
         FillScaleSettings(Settings);
 
-      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings)));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings)));
     end;
   end;
 
@@ -450,7 +450,7 @@ implementation
     if FScaling then begin
       FillScaleSettings(Settings);
       Settings.HMult := NewHorizMult;
-      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings)));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings)));
     end;
   end;
 
@@ -467,7 +467,7 @@ implementation
     if FScaling then begin
       FillScaleSettings(Settings);
       Settings.HDiv := NewHorizDiv;
-      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings)));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings)));
     end;
   end;
 
@@ -484,7 +484,7 @@ implementation
     if FScaling then begin
       FillScaleSettings(Settings);
       Settings.VMult := NewVertMult;
-      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings)));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings)));
     end;
   end;
 
@@ -501,7 +501,7 @@ implementation
     if FScaling then begin
       FillScaleSettings(Settings);
       Settings.VDiv := NewVertDiv;
-      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, Integer(@Settings)));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetScale, 0, LPARAM(@Settings)));
     end;
   end;
 
@@ -593,7 +593,7 @@ implementation
     FFileName := NewFileName;
 
     if not (csDesigning in ComponentState) then begin
-      CheckException(Self, SendMessage(Handle, apw_ViewSetFile, 0, Integer(StrPCopy(FNameZ, FFileName))));
+      CheckException(Self, SendMessage(Handle, apw_ViewSetFile, 0, LPARAM(StrPCopy(FNameZ, FFileName))));
 
       FRotation  := vr0;
       FHorizMult := 1;
@@ -640,7 +640,7 @@ implementation
     if (PageNum = 0) or (PageNum > Integer(NumPages)) then           
       CheckException(Self, ecBadArgument);
 
-    H := SendMessage(Handle, apw_ViewGetBitmap, PageNum, Integer(@P));
+    H := SendMessage(Handle, apw_ViewGetBitmap, PageNum, LPARAM(@P));
     if (H = 0) then
       Result := nil
     else begin
@@ -664,7 +664,7 @@ implementation
     R : TRect;
 
   begin
-    SendMessage(Handle, apw_ViewGetPageDim, 0, Integer(@R));
+    SendMessage(Handle, apw_ViewGetPageDim, 0, LPARAM(@R));
     Result := Succ(R.Right);
   end;
 
@@ -673,7 +673,7 @@ implementation
     R : TRect;
 
   begin
-    SendMessage(Handle, apw_ViewGetPageDim, 0, Integer(@R));
+    SendMessage(Handle, apw_ViewGetPageDim, 0, LPARAM(@R));
     Result := Succ(R.Bottom);
   end;
 
@@ -805,7 +805,7 @@ implementation
   procedure TApdCustomFaxViewer.SelectRegion(const R : TRect);
     {-Select the image bounded by R}
   begin
-    SendMessage(Handle, apw_ViewSelect, 0, Integer(@R));
+    SendMessage(Handle, apw_ViewSelect, 0, LPARAM(@R));
   end;
 
   procedure TApdCustomFaxViewer.SelectImage;

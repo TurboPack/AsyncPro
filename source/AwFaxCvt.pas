@@ -1713,7 +1713,7 @@ begin
 
   with Cvt^ do begin
     if (StatusWnd <> 0) then begin
-      if (SendMessage(StatusWnd, apw_FaxCvtStatus, StatFlags, Integer(Cvt)) <> 0) then
+      if (SendMessage(StatusWnd, apw_FaxCvtStatus, StatFlags, LPARAM(Cvt)) <> 0) then
           acConvertStatus:= ecConvertAbort;
     end else if (@StatusFunc <> nil) then
       if StatusFunc(Cvt, StatFlags, BytesRead, BytesToRead) then acConvertStatus:= ecConvertAbort;

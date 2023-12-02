@@ -963,7 +963,7 @@ procedure TApdCustomFaxConverter.ChangeDefPrinter(UseFax: Boolean);
 const
   DefPrn : string = '';
 var
-  Device, Name, Port : array[0..255] of char;
+  Device, Name, Port : string;
   DevMode : THandle;
   N, Last : integer;
 begin
@@ -981,15 +981,12 @@ begin
          { get the required info }
          Printer.GetPrinter(Device, Name, Port, DevMode);
          { concatenate the strings }
-         StrCat(Device, ',');
-         StrCat(Device, Name);
-         StrCat(Device, ',');
-         StrCat(Device, Port);
+         Device := Device + ';' + Name + ',' + Port;
          { write the string to the ini/registry }
-         WriteProfileString( 'Windows', 'Device', Device );
-         StrCopy(Device, 'Windows' );
+         WriteProfileString('Windows', 'Device', PChar(Device));
+         Device := 'Windows';
          { tell everyone that we've changed the default }
-         SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, Integer(@Device));
+         SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LPARAM(@Device));
          { make the TPrinter use the device capabilities of the new default}
          SetPrinter(Device, Name, Port, 0);
        end;
@@ -1000,15 +997,12 @@ begin
       Printer.PrinterIndex := N;
       Printer.GetPrinter(Device, Name, Port, DevMode);
       { concatenate the strings }
-      StrCat(Device, ',');
-      StrCat(Device, Name);
-      StrCat(Device, ',');
-      StrCat(Device, Port);
+      Device := Device + ','+ Name + ',' + Port;
       { write the string to the ini/registry }
-      WriteProfileString( 'Windows', 'Device', Device );
-      StrCopy(Device, 'Windows' );
+      WriteProfileString('Windows', 'Device', PChar(Device));
+      Device := 'Windows';
       { tell everyone that we've changed the default }
-      SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, Integer(@Device));
+      SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, LPARAM(@Device));
     end;
   end;
 end;
