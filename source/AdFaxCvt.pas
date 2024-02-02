@@ -489,6 +489,46 @@ implementation
 uses
   AnsiStrings;
 
+{$IF CompilerVersion < 36.0}
+type
+  TAdvPrinterHelper = class helper for TPrinter
+  public
+    procedure GetPrinter(var ADevice, ADriver, APort: string; var ADeviceMode: THandle); overload;
+    procedure SetPrinter(const ADevice, ADriver, APort: string; ADeviceMode: THandle); overload;
+  end;
+
+  TAdvPrinterDevice = class(TObject)
+  private
+    Driver: string;
+    Device: string;
+    Port: string;
+  end;
+{$IFEND}
+
+{ TAdvPrinterHelper }
+
+{$IF CompilerVersion < 36.0}
+procedure TAdvPrinterHelper.GetPrinter(var ADevice, ADriver, APort: string; var ADeviceMode: THandle);
+var
+  lBuffer: array[0..255] of Char;
+begin
+  //Ugly, but there seems to be no other way to get the DeviceMode
+  GetPrinter(lBuffer, lBuffer, lBuffer, ADeviceMode);
+
+  with TAdvPrinterDevice(Printers.Objects[PrinterIndex]) do
+  begin
+    ADevice := Device;
+    ADriver := Driver;
+    APort := Port;
+  end;
+end;
+
+procedure TAdvPrinterHelper.SetPrinter(const ADevice, ADriver, APort: string; ADeviceMode: THandle);
+begin
+  SetPrinter(PChar(ADevice), PChar(ADriver), PChar(APort), ADeviceMode);
+end;
+{$IFEND}
+
 {TApdCustomFaxConverter}
 
   function StatusCallback(Cvt : PAbsFaxCvt; StatFlags : Word;
